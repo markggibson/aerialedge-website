@@ -1,0 +1,58 @@
+---
+// [slug].astro — single-work portfolio page.
+//
+// Replaces v1 _layouts/work.html driven by collection "works" with permalink
+// /portfolio/:name/. The new URL pattern /portfolio/<slug>/ matches v1 1:1 —
+// see plan §10 URL inventory.
+//
+// Migration plan §4 hardest-template-3 + P4-B (pre-approved 2026-05-15):
+//   prev/next nav sorted by `date` frontmatter, matching v1's implicit
+//   Jekyll order. Computed at build time in getStaticPaths() and passed
+//   to WorkLayout via props.
+
+import { getCollection } from 'astro:content';
+import WorkLayout from '../../layouts/WorkLayout.astro';
+import { render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const works = await getCollection('works');
+
+  // Sort by date frontmatter (P4-B). Dates are stored as free-text strings
+  // in v1 (e.g. "January, 2023"); Date.parse handles them well enough for
+  // sort ordering. Ties fall back to slug for stability.
+  const sorted = [...works].sort((a, b) => {
+    const ad = Date.parse(String(a.data.date ?? ''));
+    const bd = Date.parse(String(b.data.date ?? ''));
+    if (!isNaN(ad) && !isNaN(bd) && ad !== bd) return ad - bd;
+    return a.data.slug.localeCompare(b.data.slug);
+  });
+
+  return sorted.map((work, i) => {
+    const prev = i > 0 ? sorted[i - 1] : null;
+    const next = i < sorted.length - 1 ? sorted[i + 1] : null;
+    return {
+      params: { slug: work.data.slug },
+      props: {
+        work,
+        previousUrl: prev ? `/portfolio/${prev.data.slug}/` : undefined,
+        nextUrl: next ? `/portfolio/${next.data.slug}/` : undefined,
+      },
+    };
+  });
+}
+
+const { work, previousUrl, nextUrl } = Astro.props;
+const { Content } = await render(work);
+---
+<WorkLayout
+  title={work.data.title}
+  categories={work.data.categories}
+  slides={work.data.slides}
+  client={work.data.client}
+  date={work.data.date}
+  link={work.data.link}
+  previousUrl={previousUrl}
+  nextUrl={nextUrl}
+>
+  <Content />
+</WorkLayout>

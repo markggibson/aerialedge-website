@@ -3,8 +3,11 @@
 //
 // Renders the post date / author / categories line under a blog post hero.
 // Categories link to /blog/categories/#<slug>. Slug derivation here follows
-// the same lower-kebab pattern Jekyll's `slugify` filter produces (Phase 4
-// wires the categories index page itself).
+// the same lower-kebab pattern Jekyll's `slugify` filter produces.
+//
+// P4-E (Mark pre-approved 2026-05-15): drop the dead
+// `<a href="javascript:void()">` author wrapper from v1. Author renders as
+// plain text now. v1's anchor went nowhere; this was dead code.
 
 export interface Props {
   date: Date | string;
@@ -28,7 +31,7 @@ function slugify(s: string): string {
   <span>{formatDate(date)}</span>
   {author && (
     <>
-      {' '}/ <span>by <a href="javascript:void()">{author}</a></span>
+      {' '}/ <span>by {author}</span>
     </>
   )}
 

@@ -1,17 +1,19 @@
 ---
 // FooterMenu.astro — replaces v1 _includes/footer-menu.html.
 //
+// P4-A (Mark approved 2026-05-15): v1 hard-coded absolute aerialedge.co.uk
+// URLs in every footer link; on the new build these are root-relative so
+// the same markup works on the staging subfolder and post-cutover root.
+//
 // Lift-and-shift quirks preserved:
-//   - v1 hard-codes absolute aerialedge.co.uk URLs in every footer link.
-//     Kept verbatim; rewriting to root-relative is a "while we're at it"
-//     trap and out of scope for Phase 3.
 //   - "Youth Circus Performance Programme" link is commented out in v1.
 //     Carried across as an HTML comment for fidelity.
 //
 // v1 also looped through `_data/assets.yml` js: list and emitted a <script>
-// tag per file. Phase 3 strips Bower entirely (P3-C lean): jQuery, Foundation
-// JS, terrific, slick, etc. are NOT loaded on the Safeguarding page (no live
-// behaviour). The only script loaded here is the new vanilla menu toggler.
+// tag per file. Phase 3 stripped Bower entirely (P3-C lean): jQuery,
+// Foundation JS, terrific, slick, etc. are NOT loaded site-wide. The only
+// script loaded here is the new vanilla menu toggler. Per-page scripts
+// (homepage Masonry) are loaded by the page that needs them.
 
 const year = new Date().getFullYear();
 ---
@@ -23,17 +25,17 @@ const year = new Date().getFullYear();
         <div style="text-align: left;">
           <p class="small-title">Information</p>
           <ul>
-            <li><a href="https://aerialedge.co.uk/index.html#top">Home</a></li>
-            <li><a href="https://aerialedge.co.uk/index.html#about">About</a></li>
-            <li><a href="https://aerialedge.co.uk/index.html#works">Classes & Courses</a></li>
-            <li><a href="https://aerialedge.co.uk/index.html#pricing">Pricing</a></li>
-            <li><a href="https://aerialedge.co.uk/index.html#vouchers">Vouchers</a></li>
+            <li><a href="/#top">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#works">Classes & Courses</a></li>
+            <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="/#vouchers">Vouchers</a></li>
             <li><a href="https://store.aerialedge.co.uk/" target="_blank">Clothing Store</a></li>
-            <li><a href="https://aerialedge.co.uk/blog/">Blog</a></li>
-            <li><a href="https://aerialedge.co.uk/index.html#contact">Contact Us</a></li>
-            <li><a href="https://aerialedge.co.uk/privacy/">Privacy Policy</a></li>
-            <li><a href="https://aerialedge.co.uk/terms/">Terms of Service</a></li>
-            <li><a href="https://aerialedge.co.uk/safeguarding/">Safeguarding Policy</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contact">Contact Us</a></li>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms of Service</a></li>
+            <li><a href="/safeguarding/">Safeguarding Policy</a></li>
           </ul>
         </div>
       </div>
@@ -41,18 +43,18 @@ const year = new Date().getFullYear();
         <div style="text-align: right;">
           <p class="small-title">What we do</p>
           <ul>
-            <li><a href="https://aerialedge.co.uk/portfolio/circus-fitness/">Circus Fitness</a></li>
-            <li><a href="https://aerialedge.co.uk/portfolio/aerial-acrobatic-arts/">Aerial & Acrobatic Arts</a></li>
-            <li><a href="https://aerialedge.co.uk/portfolio/youth-circus/">Youth Circus</a></li>
+            <li><a href="/portfolio/circus-fitness/">Circus Fitness</a></li>
+            <li><a href="/portfolio/aerial-acrobatic-arts/">Aerial & Acrobatic Arts</a></li>
+            <li><a href="/portfolio/youth-circus/">Youth Circus</a></li>
             {/* v1 quirk: commented-out link preserved for fidelity. */}
-            {/* <li><a href="https://aerialedge.co.uk/youth-performance/">Youth Circus Performance Programme</a></li> */}
-            <li><a href="https://aerialedge.co.uk/portfolio/rigging-training/">Rigging Training</a></li>
-            <li><a href="https://aerialedge.co.uk/portfolio/parties-private-lessons/">Parties & Private Lessons</a></li>
-            <li><a href="https://aerialedge.co.uk/easter-edge/">Easter Edge</a></li>
-            <li><a href="https://aerialedge.co.uk/foundation-course/">Foundation Course</a></li>
-            <li><a href="https://aerialedge.co.uk/four-week-intensive/">Four Week Intensive</a></li>
-            <li><a href="https://aerialedge.co.uk/protrack/">Pro Track</a></li>
-            <li><a href="https://aerialedge.co.uk/1-year-pdc/">1 Year Professional Development</a></li>
+            {/* <li><a href="/youth-performance/">Youth Circus Performance Programme</a></li> */}
+            <li><a href="/portfolio/rigging-training/">Rigging Training</a></li>
+            <li><a href="/portfolio/parties-private-lessons/">Parties & Private Lessons</a></li>
+            <li><a href="/easter-edge/">Easter Edge</a></li>
+            <li><a href="/foundation-course/">Foundation Course</a></li>
+            <li><a href="/four-week-intensive/">Four Week Intensive</a></li>
+            <li><a href="/protrack/">Pro Track</a></li>
+            <li><a href="/1-year-pdc/">1 Year Professional Development</a></li>
           </ul>
         </div>
       </div>
@@ -69,9 +71,9 @@ const year = new Date().getFullYear();
 </div>
 
 <!--
-  Phase 3 JS load: just the new vanilla menu toggler. Bower (jQuery,
+  Site-wide JS: just the new vanilla menu toggler. Bower (jQuery,
   imagesloaded, masonry, foundation) is no longer loaded site-wide. Masonry
   + imagesloaded are vendored at /assets/javascripts/ and invoked only by
-  the pages that need them (Phase 4 — homepage works grid).
+  the pages that need them (homepage works grid).
 -->
 <script src="/assets/javascripts/menu-toggler.js" type="text/javascript"></script>
