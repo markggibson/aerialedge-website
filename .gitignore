@@ -22,3 +22,9 @@ astro/.astro/
 # Large binary asset directory — currently kept in Dropbox (already version-controlled via Dropbox history).
 # Git-LFS migration is a website-redev project task; until then, do not `git add assets/`.
 assets/
+
+# Phase 3 (task #176): the Astro tree's small vendored asset set is tracked.
+# Excludes the v1 root `assets/` bulk; includes only `astro/public/assets/`
+# (fonts ~870 KB, css ~390 KB, javascripts ~44 KB, images ~150 KB).
+!astro/public/assets/
+!astro/public/assets/**

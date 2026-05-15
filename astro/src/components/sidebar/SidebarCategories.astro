@@ -1,0 +1,32 @@
+---
+// SidebarCategories.astro — replaces v1 _includes/sidebar-categories.html.
+//
+// Phase 4 will populate `categories` from the posts collection's frontmatter
+// aggregation. v1 sorted alphabetically and slugified for the anchor hash.
+
+export interface Props {
+  categories?: string[];
+}
+
+const { categories = [] } = Astro.props;
+
+function slugify(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+function capitalize(s: string): string {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+const sorted = [...categories].sort();
+---
+<div class="links categories">
+  <h3>Categories</h3>
+  <ul>
+    {sorted.map((cat) => (
+      <li>
+        <a href={`/blog/categories/#${slugify(cat)}`}>{capitalize(cat)}</a>
+      </li>
+    ))}
+  </ul>
+</div>

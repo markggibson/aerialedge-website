@@ -1,0 +1,73 @@
+---
+// Header.astro — replaces v1 _includes/header.html.
+//
+// Reads /src/data/nav.json (port of v1 _data/nav.yml).
+//
+// v1 quirk preserved: the `bg-black` modifier is applied when the page is
+// NOT a one-pager. One-pagers get the transparent header (so the hero video
+// shows through). All other pages get the solid black header.
+//
+// v1 quirk preserved: anchor hrefs like `#about` only link to the live
+// homepage when the current page IS the one-pager (i.e. index.html). On any
+// other page, the same anchors prefix with `/` so they navigate to the
+// homepage's section. Mirrors v1's Liquid block in _includes/header.html.
+
+import navData from '../data/nav.json';
+
+export interface Props {
+  onepage?: boolean;
+}
+
+const { onepage = false } = Astro.props;
+
+const wrapperClass = onepage
+  ? 'transparent fullwidth white fixed contain-to-grid'
+  : 'transparent fullwidth white fixed contain-to-grid bg-black';
+
+interface NavItem {
+  name: string;
+  path: string;
+  section_id?: string;
+}
+
+function hrefFor(item: NavItem): string {
+  // v1 logic from _includes/header.html: if the path starts with '#' and
+  // we're NOT on the one-pager, prepend '/' (i.e. link back to the homepage
+  // with the anchor). Otherwise pass through.
+  if (item.path.charAt(0) !== '#') {
+    return item.path;
+  }
+  if (onepage) {
+    return item.path;
+  }
+  return '/' + item.path;
+}
+---
+<div class:list={[wrapperClass]}>
+  <nav class="top-bar onepage" data-options="" data-topbar="">
+    <ul class="title-area">
+      <li class="name">
+        <h1>
+          <a href="/">
+            <img width="48" height="48" alt="" src="/assets/images/AELogoWhiteOnly-sm.png" />
+          </a>
+        </h1>
+      </li>
+    </ul>
+    <div id="menu-toggler" class="right">
+      <a href="#">
+        <i class="fa fa-bars"></i>
+        Menu
+      </a>
+    </div>
+    <section class="top-bar-section closed">
+      <ul class="right">
+        {(navData as NavItem[]).map((item) => (
+          <li>
+            <a href={hrefFor(item)}>{item.name}</a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </nav>
+</div>

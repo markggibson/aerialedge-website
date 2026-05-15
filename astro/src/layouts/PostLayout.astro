@@ -1,0 +1,89 @@
+---
+// PostLayout.astro — merges v1 _layouts/post.html and _layouts/video-post.html.
+//
+// Per migration plan §4: the two v1 layouts differ only in the hero block
+// (a static <img> for image posts vs an embedded <iframe> for YouTube
+// posts). One layout, branched on the `isVideoPost` prop.
+//
+// Disqus comments block dropped: site.disqus.shortname has never been set,
+// so the block has been silently empty for ≥2 years (plan §11 R6). The
+// `<a id="comments"></a>` anchor is kept (some posts link to it).
+
+import BlogLayout from './BlogLayout.astro';
+import PostMeta from '../components/PostMeta.astro';
+
+export interface Props {
+  title: string;
+  date: Date | string;
+  author?: string;
+  images?: string[];
+  categories?: string[];
+  tags?: string[];
+  isVideoPost?: boolean;
+  description?: string;
+  // Sidebar data — same prop set as BlogLayout; passed through.
+  recentPosts?: Array<{ url: string; title: string }>;
+  allCategories?: string[];
+  allTags?: string[];
+  archives?: Array<{ name: string; hash: string; count: number }>;
+}
+
+const {
+  title,
+  date,
+  author,
+  images = [],
+  categories = [],
+  isVideoPost = false,
+  description,
+  recentPosts,
+  allCategories,
+  allTags,
+  archives,
+} = Astro.props;
+---
+<BlogLayout
+  title={title}
+  description={description}
+  recentPosts={recentPosts}
+  categories={allCategories}
+  tags={allTags}
+  archives={archives}
+>
+  <div class="mod modBlogPost big no_bg">
+    {images.length > 0 && (
+      <div class="images">
+        {images.map((image) => (
+          isVideoPost ? (
+            <div class="youtube-video-container">
+              <iframe
+                width="560"
+                height="315"
+                src={image}
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          ) : (
+            <div class="image">
+              <img width="800" height="533" alt="" src={image} />
+            </div>
+          )
+        ))}
+      </div>
+    )}
+
+    <div class="content">
+      <PostMeta date={date} author={author} categories={categories} />
+      <h3 class="deco">{title}</h3>
+      <slot />
+    </div>
+  </div>
+
+  <a id="comments"></a>
+
+  <div class="comments-wrapper">
+    {/* Disqus dropped — site.disqus.shortname has been unset for ≥2 years. */}
+  </div>
+</BlogLayout>

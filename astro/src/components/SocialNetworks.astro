@@ -1,0 +1,57 @@
+---
+// SocialNetworks.astro — replaces v1 _includes/social-networks.html.
+//
+// Parallax block with the four social icons. The background image lives at
+// /assets/images/@stock/new-strap-hands.jpg in v1; that file is part of the
+// bulk Rochen-resident asset tree (plan §6 option A), not vendored into the
+// repo. The img path is preserved so v1's CSS just works at deploy time.
+//
+// Lift-and-shift quirk preserved: the inline background-image URL points to
+// a stock image. Mark/Iris call on replacement is post-launch.
+---
+<div class="full parallax social-networks" style="background-image: url(/assets/images/@stock/new-strap-hands.jpg)">
+  <div class="two spacing"></div>
+  <div class="row">
+    <div class="medium-3 columns">
+      <div class="big-social">
+        <a href="https://www.facebook.com/AerialEdge">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <h4>Facebook</h4>
+        <p>Connect with us on facebook</p>
+      </div>
+      <div class="two spacing"></div>
+    </div>
+    <div class="medium-3 columns">
+      <div class="big-social">
+        <a href="https://www.twitter.com/aerial_edge">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <h4>Twitter</h4>
+        <p>Follow our tweets</p>
+      </div>
+      <div class="two spacing"></div>
+    </div>
+    <div class="medium-3 columns">
+      <div class="big-social">
+        <a href="http://instagram.com/aerial_edge">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <h4>Instagram</h4>
+        <p>Check out the gram!</p>
+      </div>
+      <div class="two spacing"></div>
+    </div>
+    <div class="medium-3 columns">
+      <div class="big-social">
+        <a href="https://www.youtube.com/channel/UC3ddYR4rWSMZCAhYmRZZ8YQ">
+          <i class="fa fa-youtube"></i>
+        </a>
+        <h4>YouTube</h4>
+        <p>Circus videos</p>
+      </div>
+      <div class="two spacing"></div>
+    </div>
+  </div>
+  <div class="two spacing"></div>
+</div>

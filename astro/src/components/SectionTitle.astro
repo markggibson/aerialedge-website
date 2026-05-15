@@ -1,0 +1,15 @@
+---
+// SectionTitle.astro — replaces v1 _includes/section-title.html.
+// Trivial. Two-line title block used at the top of most pages.
+
+export interface Props {
+  smallTitle: string;
+  title: string;
+}
+
+const { smallTitle, title } = Astro.props;
+---
+<div class="section-title">
+  <p class="small-title">{smallTitle}</p>
+  <h2>{title}</h2>
+</div>

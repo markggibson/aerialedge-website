@@ -1,0 +1,23 @@
+---
+// SidebarArchives.astro — replaces v1 _includes/sidebar-archives.html.
+//
+// v1 grouped posts by "%B %Y" (e.g. "October 2024") and rendered count per
+// group. Phase 4 hydrates the prop from the posts collection.
+
+export interface Props {
+  archives?: Array<{ name: string; hash: string; count: number }>;
+}
+
+const { archives = [] } = Astro.props;
+---
+<div class="links">
+  <h3>Archives</h3>
+  <ul>
+    {archives.map((archive) => (
+      <li>
+        <a href={`/blog/archives/#${archive.hash}`}>{archive.name}</a>
+        <span>({archive.count})</span>
+      </li>
+    ))}
+  </ul>
+</div>

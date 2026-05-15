@@ -1,0 +1,46 @@
+---
+// BaseLayout.astro — replaces v1 _layouts/default.html
+// (and _layouts/landing-page.html, which is byte-identical to default — see
+// migration plan §4 for the collapse decision).
+//
+// Renders the HTML shell: <head>, <body>, top anchor, Header, #main wrapper,
+// FooterMenu. Same structure as v1; one-pager mode is a prop (replaces
+// page.onepage in Liquid). OnePageLayout.astro wraps this with onepage=true.
+
+import Head from '../components/Head.astro';
+import Header from '../components/Header.astro';
+import FooterMenu from '../components/FooterMenu.astro';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  onepage?: boolean;
+  bodyClass?: string;
+  lang?: string;
+}
+
+const {
+  title,
+  description,
+  onepage = false,
+  bodyClass = '',
+  lang = 'en',
+} = Astro.props;
+
+const mainClass = onepage ? 'top-shift' : '';
+---
+<!DOCTYPE html>
+<html lang={lang}>
+  <Head title={title} description={description} />
+  <body class={bodyClass}>
+    <a id="top"></a>
+
+    <Header onepage={onepage} />
+
+    <div id="main" class={mainClass}>
+      <slot />
+    </div>
+
+    <FooterMenu />
+  </body>
+</html>

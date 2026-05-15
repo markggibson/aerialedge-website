@@ -1,0 +1,169 @@
+---
+// safeguarding.astro — Phase 3 Mark gate. Port of v1's Safeguarding.html.
+//
+// v1 source: BKM/Product/Website/aerialedge-jekyll/Safeguarding.html
+//   - frontmatter: layout: default; permalink: /safeguarding/
+//   - body content: ~150 lines of static HTML wrapped in
+//     <div class="full"><div class="row"><div class="large-8 columns
+//     large-centered">{section-title}</div></div></div> + a
+//     <div class="full no-padding"><div class="row">{body}</div></div>.
+//
+// Mount point: /safeguarding/ (Astro file-routing — astro/src/pages/
+// safeguarding.astro emits /safeguarding/index.html, matching v1's permalink).
+//
+// Lift-and-shift discipline:
+//   - Body content reproduced verbatim from v1, including the exact heading
+//     order, list bullets, and ordered-list numbering.
+//   - No £ figures on this page (verified during port).
+//   - The two trailing `<div class="four spacing"></div>` blocks that sit
+//     OUTSIDE the inner row but inside #main are preserved.
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+---
+<BaseLayout title="Aerial Edge" description="Aerial Edge founded in 2007 is Glasgow's circus school. Developing people through circus.">
+  <div class="full">
+    <div class="row">
+      <div class="large-8 columns large-centered">
+        <SectionTitle smallTitle="Child & Vulnerable Adult" title="Safeguarding Policy (2025 Update)" />
+      </div>
+    </div>
+  </div>
+
+  <div class="full no-padding">
+    <div class="row">
+
+      <h2>1. Policy Overview</h2>
+      <h3>Why We Need a Safeguarding Policy</h3>
+      <p>This policy aims to ensure that children, young people, and vulnerable adults involved in Aerial Edge activities are protected from harm. It also outlines our staff's roles and responsibilities in maintaining a safe, inclusive and welcoming environment and provides procedures to manage and report any concerns.</p>
+
+      <h3>Our Responsibilities</h3>
+      <p>Aerial Edge has a duty of care to safeguard all participants in our programmes. This policy applies to all staff, contractors, and volunteers working with children, young people, and vulnerable adults.</p>
+      <ul>
+        <li>Everyone has a right to protection from abuse regardless of age, gender, ability, language, ethnicity, faith, or sexual identity.</li>
+        <li>The welfare of the child or vulnerable person is paramount.</li>
+        <li>All suspicions and allegations must be taken seriously and acted upon promptly.</li>
+      </ul>
+
+      <h2>2. Policy Aims</h2>
+      <ol>
+        <li>To protect the safety and wellbeing of all children, young people, and vulnerable adults in our care.</li>
+        <li>To support all staff and volunteers in making informed safeguarding decisions.</li>
+        <li>To promote an environment of respect, inclusion, and safety.</li>
+        <li>To provide access to up-to-date safeguarding training and resources.</li>
+        <li>To empower participants and their families with safeguarding awareness.</li>
+      </ol>
+
+      <h2>3. Legislative and Policy Framework</h2>
+      <p>This policy aligns with the following key Scottish and UK legislation:</p>
+      <ul>
+        <li>Children (Care and Justice) (Scotland) Act 2023</li>
+        <li>UNCRC (Incorporation) (Scotland) Act 2024</li>
+        <li>National Guidance for Child Protection in Scotland (2021)</li>
+        <li>Protection of Vulnerable Groups (Scotland) Act 2007</li>
+        <li>Adult Support and Protection (Scotland) Act 2007</li>
+        <li>Data Protection Act 2018 (UK GDPR)</li>
+        <li>Getting it Right for Every Child (GIRFEC) national approach</li>
+      </ul>
+
+      <h2>4. Safeguarding Roles</h2>
+      <ul>
+        <li><strong>Designated Safeguarding Officer:</strong> Mark Gibson, Managing Director – responsible for policy implementation and liaison with external agencies.</li>
+        <li>Contact details to be listed clearly and prominently throughout Aerial Edge premises and documents.</li>
+      </ul>
+
+      <h2>5. Safe Recruitment</h2>
+      <ul>
+        <li>PVG scheme membership for all staff and volunteers working regularly with children or vulnerable adults.</li>
+        <li>All applicants must provide references and attend safeguarding training.</li>
+        <li>Regular review of personnel suitability.</li>
+      </ul>
+
+      <h2>6. Responding to Concerns</h2>
+
+      <h3>Confidentiality</h3>
+      <p>Staff must only share safeguarding information with designated personnel. However, if a child is at risk, confidentiality must not prevent action to protect them.</p>
+
+      <h3>Reporting</h3>
+      <ol>
+        <li>Report concerns to the Safeguarding Officer immediately.</li>
+        <li>If unavailable and risk is immediate, contact Police Scotland (999) or local Social Work Services.</li>
+        <li>Complete an Incident Report Form and submit securely.</li>
+      </ol>
+
+      <h2>7. Responding to Disclosures</h2>
+      <p>Remain calm, listen actively, do not ask leading questions. Record exact words where possible. Take immediate steps to ensure safety and notify the Safeguarding Officer.</p>
+
+      <h2>8. Allegations Involving Staff</h2>
+      <ul>
+        <li>Internal disciplinary investigation</li>
+        <li>Child protection inquiry</li>
+        <li>Criminal investigation</li>
+      </ul>
+      <p>Support is offered to all parties, and outcomes are handled confidentially and professionally.</p>
+
+      <h2>9. Digital Safety and Use of Images</h2>
+      <ul>
+        <li>Consent for use of images and video is collected via student registration forms.</li>
+        <li>Images stored securely, with limited staff access.</li>
+        <li>Unauthorised recording by the public is discouraged.</li>
+        <li>Social media contact between staff and students is not permitted outside official Aerial Edge channels.</li>
+      </ul>
+
+      <h2>10. Anti-Bullying</h2>
+      <ul>
+        <li>Zero-tolerance policy.</li>
+        <li>All staff are responsible for detecting and addressing bullying promptly.</li>
+        <li>Support and follow-up procedures must be followed.</li>
+      </ul>
+
+      <h2>11. Whistleblowing</h2>
+      <p>Staff can raise concerns anonymously and without fear of reprisal. Refer to our full Whistleblowing Policy or contact <a href="https://protect-advice.org.uk" target="_blank">Protect</a>.</p>
+
+      <h2>12. Maintaining Professional Boundaries</h2>
+      <ul>
+        <li>No intimate relationships between staff and students.</li>
+        <li>Maintain appropriate physical and emotional boundaries.</li>
+        <li>Supportive yet professional behaviour is expected at all times.</li>
+      </ul>
+
+      <h2>13. Risk Assessment and Venue Safety</h2>
+      <ul>
+        <li>Risk assessments are carried out for all events and classes.</li>
+        <li>Additional precautions are taken when working with vulnerable groups.</li>
+        <li>All staff are briefed on safeguarding measures relevant to each site.</li>
+      </ul>
+
+      <h2>14. Review and Implementation</h2>
+      <ul>
+        <li>The policy is reviewed annually or when legislation or best practice changes.</li>
+        <li>All staff must complete safeguarding induction and refresher training every 2 years.</li>
+      </ul>
+
+      <hr />
+
+      <h2>Glossary (Summary)</h2>
+      <ul>
+        <li><strong>Child:</strong> under 18</li>
+        <li><strong>Vulnerable Adult:</strong> over 16 and unable to safeguard their wellbeing due to disability, illness, or mental health issues</li>
+        <li><strong>Staff:</strong> employed personnel</li>
+        <li><strong>Contractor/Volunteer:</strong> anyone working for Aerial Edge not under direct employment</li>
+      </ul>
+
+      <hr />
+
+      <h2>Key Contacts</h2>
+      <ul>
+        <li><strong>Safeguarding Officer:</strong> Mark Gibson – mark@aerialedge.co.uk</li>
+        <li><strong>Police Scotland:</strong> 999 (Emergency)</li>
+        <li><strong>Glasgow Social Work Services:</strong> 0141 287 0555</li>
+        <li><strong>Disclosure Scotland:</strong> 0870 609 6006</li>
+      </ul>
+
+      <p>For more detailed procedural guidance, refer to the Good Practice Guide and Incident Reporting Toolkit.</p>
+
+    </div>
+  </div>
+  <div class="four spacing"></div>
+  <div class="four spacing"></div>
+</BaseLayout>

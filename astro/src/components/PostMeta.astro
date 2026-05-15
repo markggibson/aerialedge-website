@@ -1,0 +1,49 @@
+---
+// PostMeta.astro — replaces v1 _includes/post-meta.html.
+//
+// Renders the post date / author / categories line under a blog post hero.
+// Categories link to /blog/categories/#<slug>. Slug derivation here follows
+// the same lower-kebab pattern Jekyll's `slugify` filter produces (Phase 4
+// wires the categories index page itself).
+
+export interface Props {
+  date: Date | string;
+  author?: string;
+  categories?: string[];
+}
+
+const { date, author, categories = [] } = Astro.props;
+
+function formatDate(d: Date | string): string {
+  const obj = typeof d === 'string' ? new Date(d) : d;
+  // v1 used Liquid "%B %d, %Y" — e.g. "October 02, 2024".
+  return obj.toLocaleDateString('en-US', { month: 'long', day: '2-digit', year: 'numeric' });
+}
+
+function slugify(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+---
+<p class="info">
+  <span>{formatDate(date)}</span>
+  {author && (
+    <>
+      {' '}/ <span>by <a href="javascript:void()">{author}</a></span>
+    </>
+  )}
+
+  {categories.length > 0 && (
+    <>
+      {' '}/
+      <span>
+        In
+        {categories.map((cat, i) => (
+          <>
+            {' '}
+            <a href={`/blog/categories/#${slugify(cat)}`}>{slugify(cat)}</a>{i < categories.length - 1 ? ',' : ''}
+          </>
+        ))}
+      </span>
+    </>
+  )}
+</p>

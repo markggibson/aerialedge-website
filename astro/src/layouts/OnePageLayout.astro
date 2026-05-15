@@ -1,0 +1,29 @@
+---
+// OnePageLayout.astro — thin wrapper over BaseLayout with onepage=true.
+//
+// Migration plan §4 calls out that v1's default.html and landing-page.html
+// are byte-identical — the actual one-pager-vs-default distinction in v1 is
+// driven by the `page.onepage` frontmatter flag, NOT the layout choice. We
+// preserve that semantic separation here as a thin variant for clarity, but
+// the rendered HTML is identical to BaseLayout when called with onepage=true.
+
+import BaseLayout from './BaseLayout.astro';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  bodyClass?: string;
+  lang?: string;
+}
+
+const { title, description, bodyClass, lang } = Astro.props;
+---
+<BaseLayout
+  title={title}
+  description={description}
+  bodyClass={bodyClass}
+  lang={lang}
+  onepage={true}
+>
+  <slot />
+</BaseLayout>

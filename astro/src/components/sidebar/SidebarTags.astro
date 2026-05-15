@@ -1,0 +1,25 @@
+---
+// SidebarTags.astro — replaces v1 _includes/sidebar-tags.html.
+
+export interface Props {
+  tags?: string[];
+}
+
+const { tags = [] } = Astro.props;
+
+function slugify(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+const sorted = [...tags].sort();
+---
+<div class="links tags">
+  <h3>Tags</h3>
+  <ul>
+    {sorted.map((tag) => (
+      <li>
+        <a href={`/blog/tags/#${slugify(tag)}`}>{tag}</a>
+      </li>
+    ))}
+  </ul>
+</div>

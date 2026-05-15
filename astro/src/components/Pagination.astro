@@ -1,0 +1,38 @@
+---
+// Pagination.astro — replaces v1 _includes/pagination.html.
+//
+// Phase 4 will wire this against Astro's paginate() API on the blog index
+// page. For Phase 3 the component just renders the older/newer links from
+// props, preserving v1's markup (pager wrapper + fa-angle-double icons).
+//
+// Hrefs come from the caller (Astro's paginate API gives URLs as
+// `page.url.prev` and `page.url.next`). Field names mirror v1's
+// paginator.previous_page / paginator.next_page semantics:
+//   - prevHref → "Older Entries" (older posts; in v1 this is `next_page`,
+//     because Jekyll paginate goes forward-in-time).
+//   - nextHref → "Newer Entries" (newer posts; in v1 `previous_page`).
+// I'm using directional names rather than v1's confusing prev/next.
+
+export interface Props {
+  olderHref?: string;
+  newerHref?: string;
+}
+
+const { olderHref, newerHref } = Astro.props;
+---
+{(olderHref || newerHref) && (
+  <div class="pager">
+    {olderHref && (
+      <a href={olderHref} class="older">
+        <i class="fa fa-angle-double-left"></i>
+        Older Entries
+      </a>
+    )}
+    {newerHref && (
+      <a href={newerHref} class="newer">
+        Newer Entries
+        <i class="fa fa-angle-double-right"></i>
+      </a>
+    )}
+  </div>
+)}

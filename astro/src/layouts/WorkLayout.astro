@@ -1,0 +1,137 @@
+---
+// WorkLayout.astro — replaces v1 _layouts/work.html.
+//
+// Hero slider, body, info sidebar (client/date), prev/next nav, contact form,
+// social networks. Slick JS is NOT wired in Phase 3 — the modBoxedSlider
+// markup is preserved so its chrome (border, padding) renders, but only the
+// first slide will be visible until Phase 4 wires runtime JS.
+//
+// Migration plan §4 hardest-template-3: prev/next nav. Astro Content
+// Collections don't give you `page.previous` / `page.next` for free — the
+// caller (a [slug].astro page) computes them at build via getStaticPaths()
+// and passes them in.
+
+import BaseLayout from './BaseLayout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import ContactForm from '../components/ContactForm.astro';
+import SocialNetworks from '../components/SocialNetworks.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  categories?: string[];
+  slides?: string[];
+  client?: string;
+  date?: Date | string;
+  link?: { text: string; url: string };
+  // Prev/next navigation — passed in by the [slug] page from a sorted list
+  // of works in the collection.
+  previousUrl?: string;
+  nextUrl?: string;
+  // The "back to portfolio" URL — derived from nav.json's `works` section.
+  worksIndexUrl?: string;
+}
+
+const {
+  title,
+  description,
+  categories = [],
+  slides = [],
+  client,
+  date,
+  link,
+  previousUrl,
+  nextUrl,
+  worksIndexUrl = '/#works',
+} = Astro.props;
+
+const smallTitle = categories.join(' & ');
+const sectionTitleText = title.charAt(0).toUpperCase() + title.slice(1).toLowerCase();
+
+function formatDate(d: Date | string): string {
+  const obj = typeof d === 'string' ? new Date(d) : d;
+  if (isNaN(obj.getTime())) return String(d);
+  return obj.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+}
+---
+<BaseLayout title={title} description={description}>
+  <div class="full">
+    <div class="row">
+      <div class="large-8 columns large-centered">
+        <SectionTitle smallTitle={smallTitle} title={sectionTitleText} />
+      </div>
+    </div>
+  </div>
+
+  <div class="full no-padding">
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="mod modBoxedSlider">
+          <div class="slides">
+            {slides.map((slide) => (
+              <div class="slide">
+                <img width="1120" height="600" alt="" src={slide} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="four spacing"></div>
+
+    <div class="row">
+      <div class="large-8 columns">
+        <h3>{title}</h3>
+        <slot />
+        <div class="spacing"></div>
+        {link && (
+          <a class="button small" href={link.url}>{link.text}</a>
+        )}
+      </div>
+
+      <div class="large-4 columns">
+        <ul class="info">
+          {client && (
+            <li>
+              <strong>Client:</strong>
+              {' '}{client}
+            </li>
+          )}
+
+          {date && (
+            <li>
+              <strong>Date:</strong>
+              {' '}{formatDate(date)}
+            </li>
+          )}
+
+          <li>
+            <div class="spacing"></div>
+
+            {previousUrl && (
+              <a href={previousUrl} title="previous">
+                <i class="icon-left-open"></i>
+              </a>
+            )}
+
+            <a href={worksIndexUrl} title="back to work list">
+              <i class="icon-layout"></i>
+            </a>
+
+            {nextUrl && (
+              <a href={nextUrl} title="next">
+                <i class="icon-right-open"></i>
+              </a>
+            )}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="four spacing"></div>
+  </div>
+
+  <ContactForm />
+  <SocialNetworks />
+</BaseLayout>
