@@ -1,0 +1,74 @@
+---
+// [...permalink].astro — emits each blog post at its v1-preserved URL.
+//
+// v1 Jekyll default permalink is /:categories/:year/:month/:day/:title.html.
+// We rebuild the same shape via the post's first category + date + slug
+// (see src/utils/blog.ts). The catch-all route lets us emit literal `.html`
+// at the end of the URL rather than the trailing-slash Astro default.
+//
+// Sidebar data (recent posts / categories / tags / archives) is aggregated
+// from the full collection so every post page shares the v1 blog sidebar.
+
+import { getCollection, render } from 'astro:content';
+import PostLayout from '../layouts/PostLayout.astro';
+import { getSortedPosts, postPermalink, slugify } from '../utils/blog';
+
+export async function getStaticPaths() {
+  const posts = await getSortedPosts();
+
+  // Build the sidebar aggregates once and reuse for every page.
+  const recentPosts = posts.slice(0, 10).map((p) => ({
+    url: postPermalink(p),
+    title: p.data.title,
+  }));
+
+  const allCategories = Array.from(
+    new Set(posts.flatMap((p) => p.data.categories ?? [])),
+  );
+  const allTags = Array.from(
+    new Set(posts.flatMap((p) => p.data.tags ?? [])),
+  );
+
+  // Archives — group by "Month YYYY".
+  const monthFmt = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' });
+  const buckets = new Map<string, { name: string; hash: string; count: number }>();
+  for (const p of posts) {
+    const d = p.data.date instanceof Date ? p.data.date : new Date(p.data.date);
+    const name = monthFmt.format(d);
+    const hash = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}`;
+    const entry = buckets.get(hash) ?? { name, hash, count: 0 };
+    entry.count += 1;
+    buckets.set(hash, entry);
+  }
+  const archives = Array.from(buckets.values()).sort((a, b) => (a.hash < b.hash ? 1 : -1));
+
+  return posts.map((post) => {
+    const permalink = postPermalink(post);
+    // Astro params for a [...slug]-style catch-all want the segments without
+    // the leading slash. Trailing `.html` is part of the slug; preserved.
+    return {
+      params: { permalink: permalink.replace(/^\//, '') },
+      props: { post, recentPosts, allCategories, allTags, archives },
+    };
+  });
+}
+
+const { post, recentPosts, allCategories, allTags, archives } = Astro.props;
+const { Content } = await render(post);
+---
+<PostLayout
+  title={post.data.title}
+  date={post.data.date}
+  author={post.data.author}
+  images={post.data.images ?? []}
+  categories={post.data.categories ?? []}
+  tags={post.data.tags ?? []}
+  isVideoPost={post.data.isVideoPost ?? false}
+  description={post.data.excerpt}
+  recentPosts={recentPosts}
+  allCategories={allCategories}
+  allTags={allTags}
+  archives={archives}
+>
+  <Content />
+</PostLayout>

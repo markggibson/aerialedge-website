@@ -1,0 +1,84 @@
+---
+// /blog/ + /blog/page/N — paginated blog index.
+//
+// Mirrors v1 blog/index.html using Astro's paginate() API.
+// v1 _config.yml sets `paginate: 4` so we keep 4 per page.
+// v1 paginate_path is `/blog/page/:num`; Astro's catch-all yields:
+//   - /blog/                  (page 1)
+//   - /blog/page/2/, /3/, …   (subsequent pages)
+
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import PostMeta from '../../components/PostMeta.astro';
+import Pagination from '../../components/Pagination.astro';
+import { getSortedPosts, postPermalink, slugify } from '../../utils/blog';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  const posts = await getSortedPosts();
+  return paginate(posts, { pageSize: 4 });
+};
+
+const { page } = Astro.props;
+
+// Sidebar aggregates — same shape as the post page sidebar.
+const allPosts = await getSortedPosts();
+const recentPosts = allPosts.slice(0, 10).map((p) => ({
+  url: postPermalink(p),
+  title: p.data.title,
+}));
+const allCategories = Array.from(new Set(allPosts.flatMap((p) => p.data.categories ?? [])));
+const allTags = Array.from(new Set(allPosts.flatMap((p) => p.data.tags ?? [])));
+const monthFmt = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' });
+const buckets = new Map<string, { name: string; hash: string; count: number }>();
+for (const p of allPosts) {
+  const d = p.data.date instanceof Date ? p.data.date : new Date(p.data.date);
+  const name = monthFmt.format(d);
+  const hash = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}`;
+  const entry = buckets.get(hash) ?? { name, hash, count: 0 };
+  entry.count += 1;
+  buckets.set(hash, entry);
+}
+const archives = Array.from(buckets.values()).sort((a, b) => (a.hash < b.hash ? 1 : -1));
+---
+<BlogLayout
+  title="Articles"
+  recentPosts={recentPosts}
+  categories={allCategories}
+  tags={allTags}
+  archives={archives}
+>
+  {page.data.map((post) => (
+    <>
+      <div class="big mod modBlogPost no_bg">
+        {post.data.images && post.data.images.length > 0 && (
+          <div class="images">
+            {post.data.images.map((image: string) => (
+              <div class="image">
+                <img width="800" height="533" alt="" src={image} />
+              </div>
+            ))}
+          </div>
+        )}
+        <div class="content">
+          <PostMeta
+            date={post.data.date}
+            author={post.data.author}
+            categories={post.data.categories ?? []}
+          />
+          <h3><a href={postPermalink(post)}>{post.data.title}</a></h3>
+          <div class="spacing"></div>
+          <a class="button small boxed yellow" href={postPermalink(post)}>Read more</a>
+        </div>
+      </div>
+      <hr />
+      <div class="two spacing"></div>
+    </>
+  ))}
+
+  <Pagination
+    olderHref={page.url.next}
+    newerHref={page.url.prev}
+  />
+
+  <div class="four spacing"></div>
+</BlogLayout>

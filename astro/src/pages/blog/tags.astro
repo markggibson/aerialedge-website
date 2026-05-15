@@ -1,0 +1,52 @@
+---
+// /blog/tags/ — tag index, mirrors v1 tags.html.
+// Sidebar items anchor here with #<slugified-tag>.
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import { getSortedPosts, postPermalink, slugify } from '../../utils/blog';
+
+const posts = await getSortedPosts();
+
+const groups = new Map<string, { url: string; title: string }[]>();
+for (const p of posts) {
+  for (const tag of p.data.tags ?? []) {
+    const arr = groups.get(tag) ?? [];
+    arr.push({ url: postPermalink(p), title: p.data.title });
+    groups.set(tag, arr);
+  }
+}
+const sortedTags = Array.from(groups.keys()).sort();
+---
+<BaseLayout title="Aerial Edge — Tags">
+  <div class="full">
+    <div class="row">
+      <div class="large-8 columns large-centered">
+        <SectionTitle smallTitle="tag index" title="Articles" />
+      </div>
+    </div>
+  </div>
+
+  <div class="full no-padding">
+    <div class="row">
+      <div class="large-8 large-centered columns">
+        <dl>
+          {sortedTags.map((name) => (
+            <>
+              <dt id={slugify(name)}>{name}</dt>
+              <dd>
+                <ul>
+                  {groups.get(name)!.map((item) => (
+                    <li>
+                      <a href={item.url}>{item.title}</a>
+                    </li>
+                  ))}
+                </ul>
+              </dd>
+            </>
+          ))}
+        </dl>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

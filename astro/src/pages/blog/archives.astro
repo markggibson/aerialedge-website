@@ -1,0 +1,60 @@
+---
+// /blog/archives/ — monthly archive index, mirrors v1 archives.html.
+// v1 permalink: /blog/archives/. Sidebar items anchor here with #YYYY-MM.
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import { getSortedPosts, postPermalink } from '../../utils/blog';
+
+const posts = await getSortedPosts();
+
+interface Group {
+  name: string;
+  hash: string;
+  items: { url: string; title: string }[];
+}
+
+const monthFmt = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' });
+const groups = new Map<string, Group>();
+for (const p of posts) {
+  const d = p.data.date instanceof Date ? p.data.date : new Date(p.data.date);
+  const hash = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}`;
+  const name = monthFmt.format(d);
+  const g = groups.get(hash) ?? { name, hash, items: [] };
+  g.items.push({ url: postPermalink(p), title: p.data.title });
+  groups.set(hash, g);
+}
+const archives = Array.from(groups.values()).sort((a, b) => (a.hash < b.hash ? 1 : -1));
+---
+<BaseLayout title="Aerial Edge — Archives">
+  <div class="full">
+    <div class="row">
+      <div class="large-8 columns large-centered">
+        <SectionTitle smallTitle="monthly archives" title="Articles" />
+      </div>
+    </div>
+  </div>
+
+  <div class="full no-padding">
+    <div class="row">
+      <div class="large-8 large-centered columns">
+        <dl>
+          {archives.map((archive) => (
+            <>
+              <dt id={archive.hash}>{archive.name}</dt>
+              <dd>
+                <ul>
+                  {archive.items.map((item) => (
+                    <li>
+                      <a href={item.url}>{item.title}</a>
+                    </li>
+                  ))}
+                </ul>
+              </dd>
+            </>
+          ))}
+        </dl>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
