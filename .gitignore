@@ -8,8 +8,10 @@ _site/
 .bundle/
 vendor/
 
-# Node (if a build pipeline is added later)
+# Node (Astro scaffold lives in astro/ — task #170, Phase 1)
 node_modules/
+astro/dist/
+astro/.astro/
 
 # macOS
 .DS_Store

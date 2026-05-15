@@ -1,0 +1,71 @@
+---
+// Phase 1 placeholder page — proves v1's compiled stylesheets render under Astro.
+// Loads the five v1 CSS files verbatim (copied to public/css/) plus the two
+// Google Fonts links from v1 _data/assets.yml (Poppins + Raleway).
+//
+// Do NOT add design or template work here. Job of this page is to verify
+// "the stylesheets load and v1 typography + Foundation grid utilities apply."
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aerial Edge — Astro scaffold smoke test</title>
+
+    <!-- v1 compiled stylesheets, vendored into public/css/ (Phase 1 gitignore option ii). -->
+    <link rel="stylesheet" href="/css/foundation.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/patch.css" />
+    <link rel="stylesheet" href="/css/fontello.css" />
+    <link rel="stylesheet" href="/css/font-awesome.css" />
+
+    <!-- v1 Google Fonts (from _data/assets.yml). -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,300" />
+  </head>
+  <body>
+    <div class="row" style="padding: 2rem 0;">
+      <div class="large-12 columns">
+        <h1>Astro scaffold — smoke test</h1>
+        <h2 class="thin">If this renders in Poppins / Raleway, v1 typography is live under Astro.</h2>
+        <p>
+          This page is a Phase 1 placeholder (task #170). It loads v1's compiled
+          stylesheets verbatim from <code>/css/</code> and the two Google Fonts
+          links from <code>_data/assets.yml</code>. No template porting, no
+          content moves — that's Phases 3 and 4.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-4 medium-6 columns">
+        <div style="background: #f0f0f0; padding: 1rem;">
+          <strong>Column A</strong> — Foundation grid: large-4 / medium-6.
+        </div>
+      </div>
+      <div class="large-4 medium-6 columns">
+        <div style="background: #e0e0e0; padding: 1rem;">
+          <strong>Column B</strong> — Foundation grid: large-4 / medium-6.
+        </div>
+      </div>
+      <div class="large-4 medium-12 columns">
+        <div style="background: #d0d0d0; padding: 1rem;">
+          <strong>Column C</strong> — Foundation grid: large-4 / medium-12.
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="padding: 2rem 0;">
+      <div class="large-12 columns">
+        <p>
+          <strong>What to look for in the browser:</strong>
+          column A / B / C sit side-by-side on desktop and stack on mobile;
+          headings render in Poppins; body in Raleway; the page has a Foundation
+          baseline (no Times-New-Roman, no naked HTML).
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
