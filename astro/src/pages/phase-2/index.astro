@@ -1,0 +1,48 @@
+---
+// Phase 2 index — link list to the three test pages. Disposable scaffolding.
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phase 2 test pages</title>
+    <link rel="stylesheet" href="/css/foundation.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/patch.css" />
+    <link rel="stylesheet" href="/css/fontello.css" />
+    <link rel="stylesheet" href="/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,300" />
+  </head>
+  <body>
+    <div class="row" style="padding: 4rem 0;">
+      <div class="large-8 columns large-centered">
+        <h1>Phase 2 — style-validation test pages</h1>
+        <p class="big-size">Three disposable Astro pages that consume v1's compiled CSS via real page structure. Side-by-side compare against the listed v1 page in production.</p>
+        <ul>
+          <li>
+            <a href="/phase-2/one-pager">/phase-2/one-pager</a> — mirrors v1
+            <a href="https://aerialedge.co.uk/safeguarding/" target="_blank">Safeguarding.html</a> shape (<code>_layouts/default.html</code>).
+          </li>
+          <li>
+            <a href="/phase-2/blog-post">/phase-2/blog-post</a> — mirrors v1
+            <a href="https://aerialedge.co.uk/classes/2024/10/02/handstands.html" target="_blank">Handstands post</a> shape (<code>_layouts/post.html</code> nested in <code>_layouts/blog.html</code>).
+          </li>
+          <li>
+            <a href="/phase-2/work">/phase-2/work</a> — mirrors v1
+            <a href="https://aerialedge.co.uk/portfolio/rigging-training/" target="_blank">Rigging Training portfolio entry</a> shape (<code>_layouts/work.html</code>).
+          </li>
+        </ul>
+
+        <h2>Known deltas (Phase 2 — to surface, not fix)</h2>
+        <ul>
+          <li><strong>Icons (fontello / font-awesome):</strong> v1 hosts CSS at <code>/assets/css/</code> and fonts at <code>/assets/fonts/</code>. Astro Phase 1 vendored CSS into <code>/css/</code> only. The compiled <code>fontello.css</code> and <code>font-awesome.css</code> use a <code>../fonts/…</code> relative path, which resolves to <code>/fonts/</code> on Astro. <code>/fonts/</code> doesn't exist yet, so icons (e.g. the hamburger, the prev/back/next icons on the work page) render as missing-glyph boxes. Phase 3 decision surfaced.</li>
+          <li><strong>Hero images and stock images:</strong> <code>style.css</code> references <code>../images/@stock/…</code> backgrounds for customer/socials/member sections. <code>/images/</code> doesn't exist on Astro yet. Plan §6 option A leaves the bulk asset tree on Rochen — Phase 3 decides the path strategy (mirror <code>/assets/</code> or flatten).</li>
+          <li><strong>AE logo (header):</strong> <code>/assets/images/AELogoWhiteOnly-sm.png</code> path is hard-coded into the header markup. Logo won't render until Phase 3 ports the small set of header/UI images per §6 option A.</li>
+          <li><strong>JS:</strong> no Bower JS loaded on Phase 2 pages. Foundation top-bar mobile-toggle, Masonry homepage works grid, Slick sliders — all Phase 3 JS-audit territory. Static visuals only here.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

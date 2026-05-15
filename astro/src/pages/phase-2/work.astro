@@ -1,0 +1,197 @@
+---
+// Phase 2 test page — work (mirrors v1 _layouts/work.html nested in
+// _layouts/default.html).
+//
+// Disposable scaffolding (task #172). Phase 3 owns the canonical templates.
+//
+// Real-page-structure check: the work page has a section-title banner, then a
+// `.modBoxedSlider` hero with a single slide, then a two-column body
+// (large-8 narrative + large-4 info sidebar with prev/next nav using
+// fontello icons), then the contact-form include and the social-networks
+// include. We reproduce the markup inline; the slider behaviour (Slick)
+// is a Phase 3 JS-audit item and we render a single slide statically here.
+//
+// Placeholder copy. No content port (Phase 4). No template extraction (Phase 3).
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phase 2 test — Work (collection page)</title>
+    <meta name="description" content="Phase 2 style-validation test page (work / collection). Disposable scaffolding." />
+
+    <link rel="stylesheet" href="/css/foundation.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/patch.css" />
+    <link rel="stylesheet" href="/css/fontello.css" />
+    <link rel="stylesheet" href="/css/font-awesome.css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,300" />
+  </head>
+
+  <body class="works">
+    <a id="top"></a>
+
+    <div class="transparent fullwidth white fixed contain-to-grid bg-black">
+      <nav class="top-bar onepage" data-options="" data-topbar="">
+        <ul class="title-area">
+          <li class="name">
+            <h1>
+              <a href="/"><img width="48" height="48" alt="" src="/assets/images/AELogoWhiteOnly-sm.png" /></a>
+            </h1>
+          </li>
+        </ul>
+        <div id="menu-toggler" class="right">
+          <a href="#"><i class="fa fa-bars"></i> Menu</a>
+        </div>
+        <section class="top-bar-section closed">
+          <ul class="right">
+            <li><a href="/#top">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#works">Classes</a></li>
+            <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="/#vouchers">Vouchers</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+
+    <div id="main" class="">
+
+      <!-- section-title banner (small_title = categories joined; title = page title). -->
+      <div class="full">
+        <div class="row">
+          <div class="large-8 columns large-centered">
+            <div class="section-title">
+              <p class="small-title">Courses</p>
+              <h2>Placeholder work title</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="full no-padding">
+        <div class="row">
+          <div class="large-12 columns">
+            <!-- modBoxedSlider — Phase 2 renders a single static slide; Slick JS is a Phase 3 item. -->
+            <div class="mod modBoxedSlider">
+              <div class="slides">
+                <div class="slide">
+                  <!-- v1 work slide images live at /assets/images/works/<slug>.jpg; using
+                       a 1×1 transparent SVG data-URI placeholder so the box renders at
+                       its natural aspect without depending on a 2 GB image tree we
+                       haven't ported yet (plan §6 option A). Real images land in Phase 3/4. -->
+                  <img width="1120" height="600" alt="Placeholder slide" src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='1120'%20height='600'%20viewBox='0%200%201120%20600'%3E%3Crect%20width='1120'%20height='600'%20fill='%23dddddd'/%3E%3Ctext%20x='50%25'%20y='50%25'%20font-family='Raleway,sans-serif'%20font-size='48'%20fill='%23666'%20text-anchor='middle'%20dominant-baseline='middle'%3EPlaceholder%201120%C3%97600%3C/text%3E%3C/svg%3E" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="four spacing"></div>
+
+        <div class="row">
+          <div class="large-8 columns">
+            <h3>Placeholder work title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <p><strong>For our students:</strong></p>
+            <ul>
+              <li>One-hour introduction class — body-copy rendering check.</li>
+              <li>Two-day workshop — secondary list item.</li>
+            </ul>
+
+            <p><strong>For teachers and performers</strong></p>
+            <ul>
+              <li>Three-hour workshop — checks bold + list combination.</li>
+            </ul>
+
+            <h3>Booking</h3>
+            <ul>
+              <li>Course Part 1 — March 15th &amp; 16th 2026 — £330</li>
+              <li>Course Part 2 — April 12th &amp; 13th 2026 — £330</li>
+            </ul>
+
+            <p><a href="#">Contact us with any questions</a></p>
+
+            <hr />
+
+            <h3>Course Specific Safety Statement</h3>
+            <p>Aerial Edge ensures that all participants and staff are provided
+            with a safe working environment. Phase 2 placeholder text — Phase 4
+            ports real work copy.</p>
+
+            <div class="spacing"></div>
+            <a class="button small" href="#">Contact us</a>
+          </div>
+
+          <div class="large-4 columns">
+            <ul class="info">
+              <li>
+                <strong>Date:</strong>
+                May 2026
+              </li>
+              <li>
+                <div class="spacing"></div>
+
+                <a href="#" title="previous"><i class="icon-left-open"></i></a>
+                <a href="/#works" title="back to work list"><i class="icon-layout"></i></a>
+                <a href="#" title="next"><i class="icon-right-open"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="four spacing"></div>
+      </div>
+
+      <!--
+        v1 includes contact-form.html (an iframe to api.aerialedge.co.uk) and
+        social-networks.html at the end of work pages. Both are template-port
+        territory (Phase 3); omitting them here keeps Phase 2 scaffolding tight.
+      -->
+
+    </div>
+
+    <!-- Footer (mirrors _includes/footer-menu.html). -->
+    <div class="full no-padding dark">
+      <div class="four spacing"></div>
+      <div id="footer" class="centered-text">
+        <div class="row">
+          <div class="large-6 columns">
+            <div style="text-align: left;">
+              <p class="small-title">Information</p>
+              <ul>
+                <li><a href="/#top">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/#contact">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="large-6 columns">
+            <div style="text-align: right;">
+              <p class="small-title">What we do</p>
+              <ul>
+                <li><a href="/portfolio/aerial-acrobatic-arts/">Aerial &amp; Acrobatic Arts</a></li>
+                <li><a href="/portfolio/rigging-training/">Rigging Training</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="four spacing"></div>
+        <div class="row">
+          <div class="large-12 columns">
+            <h4>©2026 Aerial Edge Circus School C.I.C. All rights reserved.</h4>
+          </div>
+        </div>
+      </div>
+      <div class="four spacing"></div>
+    </div>
+  </body>
+</html>

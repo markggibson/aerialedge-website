@@ -1,0 +1,232 @@
+---
+// Phase 2 test page — blog post (mirrors v1 _layouts/post.html nested in
+// _layouts/blog.html nested in _layouts/default.html).
+//
+// Disposable scaffolding (task #172). Phase 3 owns the canonical templates.
+//
+// Real-page-structure check: the blog post lives inside the blog three-column
+// layout (large-9 main + large-3 sidebar), with the section-title banner, the
+// `.mod.modBlogPost.big.no_bg` shell, post-meta block, `<h3 class="deco">`
+// title, body. Sidebar reproduces the recent-posts / categories / tags /
+// archives stack from _includes/sidebar-*.html with stub data.
+//
+// Placeholder copy. No content port (Phase 4). No template extraction (Phase 3).
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phase 2 test — Blog post (post → blog → default)</title>
+    <meta name="description" content="Phase 2 style-validation test page (blog post). Disposable scaffolding." />
+
+    <link rel="stylesheet" href="/css/foundation.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/patch.css" />
+    <link rel="stylesheet" href="/css/fontello.css" />
+    <link rel="stylesheet" href="/css/font-awesome.css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,300" />
+  </head>
+
+  <body class="posts">
+    <a id="top"></a>
+
+    <div class="transparent fullwidth white fixed contain-to-grid bg-black">
+      <nav class="top-bar onepage" data-options="" data-topbar="">
+        <ul class="title-area">
+          <li class="name">
+            <h1>
+              <a href="/"><img width="48" height="48" alt="" src="/assets/images/AELogoWhiteOnly-sm.png" /></a>
+            </h1>
+          </li>
+        </ul>
+        <div id="menu-toggler" class="right">
+          <a href="#"><i class="fa fa-bars"></i> Menu</a>
+        </div>
+        <section class="top-bar-section closed">
+          <ul class="right">
+            <li><a href="/#top">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#works">Classes</a></li>
+            <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="/#vouchers">Vouchers</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+
+    <div id="main" class="">
+
+      <!-- blog section-title banner (from _layouts/blog.html). -->
+      <div class="full">
+        <div class="row">
+          <div class="large-8 columns large-centered">
+            <div class="section-title">
+              <p class="small-title">our blog</p>
+              <h2>Articles</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- blog three-column shell (from _layouts/blog.html). -->
+      <div class="full no-padding">
+        <div class="row">
+          <div class="large-9 columns">
+
+            <!-- post body (from _layouts/post.html). -->
+            <div class="mod modBlogPost big no_bg">
+              <div class="content">
+                <!-- post-meta (_includes/post-meta.html) -->
+                <p class="info">
+                  <span>May 15, 2026</span>
+                  /
+                  <span>by <a href="javascript:void()">Placeholder Author</a></span>
+                  /
+                  <span>In <a href="/blog/categories/#events">events</a>, <a href="/blog/categories/#training">training</a></span>
+                </p>
+
+                <h3 class="deco">Lorem ipsum: a placeholder blog post for Phase 2 validation</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.</p>
+
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum.</p>
+
+                <h4>Common myths</h4>
+                <p><strong>Myth one.</strong> Lorem ipsum is just placeholder
+                copy. <em>True.</em> Used here so we can see how H4 and inline
+                emphasis render under <code>style.css</code>.</p>
+
+                <h4>Technique tips</h4>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta sunt explicabo.</p>
+
+                <ul>
+                  <li>List item one — checks the post-body list style.</li>
+                  <li>List item two — second item.</li>
+                  <li>List item three — third item with a longer body so we can see how list-items wrap inside the <code>.modBlogPost</code> container.</li>
+                </ul>
+
+                <p>Phase 2 reproduces v1 button styling inline rather than via
+                templates — see below.</p>
+
+                <p>
+                  <a href="#" class="button small">Book Workshop</a>
+                  <a href="#" class="button small boxed yellow">Read more</a>
+                </p>
+              </div>
+            </div>
+
+            <a id="comments"></a>
+            <div class="comments-wrapper">
+              <!-- Disqus is unset on v1 (no site.disqus.shortname). Empty in lift-and-shift. -->
+            </div>
+
+          </div>
+
+          <!-- sidebar (from _layouts/blog.html — sidebar-*.html includes). -->
+          <div class="large-3 columns" id="sidebar">
+
+            <!-- sidebar-recent-posts.html -->
+            <div class="links">
+              <h3>Recent Posts</h3>
+              <ul>
+                <li><a href="#">Handstands</a></li>
+                <li><a href="#">Why we all need to be the class clown</a></li>
+                <li><a href="#">The magic and mysterious draw of the rope</a></li>
+                <li><a href="#">Four essential mobility principles</a></li>
+                <li><a href="#">Why excellence is not extraordinary</a></li>
+                <li><a href="#">How handstand heroes are made</a></li>
+                <li><a href="#">Easter Edge</a></li>
+              </ul>
+            </div>
+
+            <!-- sidebar-categories.html -->
+            <div class="links categories">
+              <h3>Categories</h3>
+              <ul>
+                <li><a href="#circus">Circus</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#training">Training</a></li>
+              </ul>
+            </div>
+
+            <!-- sidebar-tags.html (stubbed) -->
+            <div class="links tags">
+              <h3>Tags</h3>
+              <ul>
+                <li><a href="#">acrobatics</a></li>
+                <li><a href="#">aerial</a></li>
+                <li><a href="#">handstand</a></li>
+                <li><a href="#">trapeze</a></li>
+                <li><a href="#">youth</a></li>
+              </ul>
+            </div>
+
+            <!-- sidebar-archives.html (stubbed) -->
+            <div class="links archives">
+              <h3>Archives</h3>
+              <ul>
+                <li><a href="#">2024</a></li>
+                <li><a href="#">2023</a></li>
+                <li><a href="#">2022</a></li>
+              </ul>
+            </div>
+
+            <div class="four spacing"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer (mirrors _includes/footer-menu.html). -->
+    <div class="full no-padding dark">
+      <div class="four spacing"></div>
+      <div id="footer" class="centered-text">
+        <div class="row">
+          <div class="large-6 columns">
+            <div style="text-align: left;">
+              <p class="small-title">Information</p>
+              <ul>
+                <li><a href="/#top">Home</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/#contact">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="large-6 columns">
+            <div style="text-align: right;">
+              <p class="small-title">What we do</p>
+              <ul>
+                <li><a href="/portfolio/aerial-acrobatic-arts/">Aerial &amp; Acrobatic Arts</a></li>
+                <li><a href="/portfolio/youth-circus/">Youth Circus</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="four spacing"></div>
+        <div class="row">
+          <div class="large-12 columns">
+            <h4>©2026 Aerial Edge Circus School C.I.C. All rights reserved.</h4>
+          </div>
+        </div>
+      </div>
+      <div class="four spacing"></div>
+    </div>
+  </body>
+</html>

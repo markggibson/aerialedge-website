@@ -1,0 +1,189 @@
+---
+// Phase 2 test page — one-pager (mirrors v1 _layouts/default.html structure).
+// Disposable scaffolding (task #172). Phase 3 owns the canonical layouts.
+//
+// Content shape mirrors v1's Safeguarding.html — a default-layout page that
+// wraps the rendered body in `<div class='full'>` + `<div class='row'>` and
+// uses the section-title include. This page reproduces that markup inline so
+// we can validate v1's compiled CSS renders correctly under real page
+// structure (not just the scaffold-test placeholder).
+//
+// Placeholder copy. No content port (Phase 4). No template extraction (Phase 3).
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phase 2 test — One-pager (default layout)</title>
+    <meta name="description" content="Phase 2 style-validation test page (one-pager). Disposable scaffolding." />
+
+    <!-- v1 compiled stylesheets, vendored into public/css/ (Phase 1). -->
+    <link rel="stylesheet" href="/css/foundation.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/patch.css" />
+    <link rel="stylesheet" href="/css/fontello.css" />
+    <link rel="stylesheet" href="/css/font-awesome.css" />
+
+    <!-- v1 Google Fonts (from _data/assets.yml). -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,300" />
+  </head>
+
+  <body class="">
+    <a id="top"></a>
+
+    <!-- Header — mirrors _includes/header.html for a non-onepage page (bg-black). -->
+    <div class="transparent fullwidth white fixed contain-to-grid bg-black">
+      <nav class="top-bar onepage" data-options="" data-topbar="">
+        <ul class="title-area">
+          <li class="name">
+            <h1>
+              <a href="/">
+                <img width="48" height="48" alt="" src="/assets/images/AELogoWhiteOnly-sm.png" />
+              </a>
+            </h1>
+          </li>
+        </ul>
+        <div id="menu-toggler" class="right">
+          <a href="#"><i class="fa fa-bars"></i> Menu</a>
+        </div>
+        <section class="top-bar-section closed">
+          <ul class="right">
+            <li><a href="/#top">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#works">Classes</a></li>
+            <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="/#vouchers">Vouchers</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+
+    <div id="main" class="">
+
+      <!-- section-title block (_includes/section-title.html). -->
+      <div class="full">
+        <div class="row">
+          <div class="large-8 columns large-centered">
+            <div class="section-title">
+              <p class="small-title">Phase 2 test page</p>
+              <h2>One-pager (default layout)</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- body content — mirrors Safeguarding's full / no-padding / row pattern. -->
+      <div class="full no-padding">
+        <div class="row">
+          <h2>1. Lorem ipsum dolor sit amet</h2>
+          <h3>Consectetur adipiscing elit</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.</p>
+
+          <h3>Duis aute irure dolor</h3>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <ul>
+            <li>Bullet item alpha — checks list rendering, line-height and bullet style.</li>
+            <li>Bullet item beta — second item to verify spacing under v1's <code>style.css</code>.</li>
+            <li>Bullet item gamma — third item with a longer caption that wraps onto a second line so we can see how the list-item indent behaves on narrow viewports.</li>
+          </ul>
+
+          <h2>2. Inline elements</h2>
+          <p>This paragraph contains a <a href="#top">link back to top</a>, a
+          <strong>strong</strong> span, an <em>emphasised</em> span, and some
+          <code>inline code</code> so we can confirm the inline-element styles
+          from <code>style.css</code> are applied.</p>
+
+          <h2>3. Ordered list</h2>
+          <ol>
+            <li>Step one — first step in the ordered-list rendering check.</li>
+            <li>Step two — second step.</li>
+            <li>Step three — third step.</li>
+          </ol>
+
+          <h2>4. Button styles (v1 button classes)</h2>
+          <p>
+            <a class="button small" href="#">.button .small</a>
+            <a class="button small boxed" href="#">.button .small .boxed</a>
+            <a class="button small boxed yellow" href="#">.button .small .boxed .yellow</a>
+          </p>
+
+          <hr />
+
+          <h2>5. Key contacts (definition-style block)</h2>
+          <ul>
+            <li><strong>Lorem:</strong> ipsum.dolor@example.com</li>
+            <li><strong>Sit:</strong> 0000 000 0000</li>
+            <li><strong>Amet:</strong> consectetur</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="four spacing"></div>
+      <div class="four spacing"></div>
+    </div>
+
+    <!-- Footer — mirrors _includes/footer-menu.html structurally. -->
+    <div class="full no-padding dark">
+      <div class="four spacing"></div>
+      <div id="footer" class="centered-text">
+        <div class="row">
+          <div class="large-6 columns">
+            <div style="text-align: left;">
+              <p class="small-title">Information</p>
+              <ul>
+                <li><a href="/#top">Home</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#works">Classes &amp; Courses</a></li>
+                <li><a href="/#pricing">Pricing</a></li>
+                <li><a href="/#vouchers">Vouchers</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/#contact">Contact Us</a></li>
+                <li><a href="/privacy/">Privacy Policy</a></li>
+                <li><a href="/terms/">Terms of Service</a></li>
+                <li><a href="/safeguarding/">Safeguarding Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="large-6 columns">
+            <div style="text-align: right;">
+              <p class="small-title">What we do</p>
+              <ul>
+                <li><a href="/portfolio/circus-fitness/">Circus Fitness</a></li>
+                <li><a href="/portfolio/aerial-acrobatic-arts/">Aerial &amp; Acrobatic Arts</a></li>
+                <li><a href="/portfolio/youth-circus/">Youth Circus</a></li>
+                <li><a href="/portfolio/rigging-training/">Rigging Training</a></li>
+                <li><a href="/portfolio/parties-private-lessons/">Parties &amp; Private Lessons</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="four spacing"></div>
+        <div class="row">
+          <div class="large-12 columns">
+            <h4>©2026 Aerial Edge Circus School C.I.C. All rights reserved.</h4>
+          </div>
+        </div>
+      </div>
+      <div class="four spacing"></div>
+    </div>
+
+    <!--
+      Phase-2 note: NO Bower JS is loaded here. Phase 3 decides which JS we
+      keep (per plan §7) — Masonry is the only confirmed live behaviour on v1
+      (Tc.Module.MasonryGallery, only fires on `.modMasonryGallery`, which is
+      the homepage works grid). Foundation top-bar JS is wired in app.js but
+      every test page is a static stand-in. No functional impact for the
+      side-by-side visual check.
+    -->
+  </body>
+</html>
