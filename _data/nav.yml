@@ -1,0 +1,22 @@
+- name: Home
+  path: "#top"
+  section_id: home
+- name: About
+  path: "#about"
+  section_id: about 
+- name: Classes
+  path: "#works"
+  section_id: works
+- name: Pricing
+  path: "#pricing"
+  section_id: pricing
+- name: Vouchers
+  path: "#vouchers"
+  section_id: vouchers
+- name: Blog
+  path: /blog/
+  section_id: blog 
+- name: Contact
+  path: "#contact"
+  section_id: contact
+

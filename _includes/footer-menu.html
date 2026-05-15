@@ -1,0 +1,62 @@
+<div class="full no-padding dark">
+  <div class="four spacing"></div>
+  <div id="footer" class='centered-text'>
+    <div class='row'>
+        <div class='large-6 columns'>
+          <div style="text-align: left;">
+            <p class="small-title">Information</p>
+          <ul>
+            <li><a href="https://aerialedge.co.uk/index.html#top">Home</a></li>
+            <li><a href="https://aerialedge.co.uk/index.html#about">About</a></li>
+            <li><a href="https://aerialedge.co.uk/index.html#works">Classes & Courses</a></li>
+            <li><a href="https://aerialedge.co.uk/index.html#pricing">Pricing</a></li>
+            <li><a href="https://aerialedge.co.uk/index.html#vouchers">Vouchers</a></li>
+            <li><a href="https://store.aerialedge.co.uk/" target="_blank">Clothing Store</a></li>
+            <li><a href="https://aerialedge.co.uk/blog/">Blog</a></li>
+            <li><a href="https://aerialedge.co.uk/index.html#contact">Contact Us</a></li>
+            <li><a href="https://aerialedge.co.uk/privacy/">Privacy Policy</a></li>
+            <li><a href="https://aerialedge.co.uk/terms/">Terms of Service</a></li>
+            <li><a href="https://aerialedge.co.uk/safeguarding/">Safeguarding Policy</a></li>
+        </ul>
+    </div>
+  </div>
+        <div class='large-6 columns'>
+          <div style="text-align: right;">
+            <p class="small-title">What we do</p>
+            <ul>
+              <li><a href="https://aerialedge.co.uk/portfolio/circus-fitness/">Circus Fitness</a></li>
+              <li><a href="https://aerialedge.co.uk/portfolio/aerial-acrobatic-arts/">Aerial & Acrobatic Arts</a></li>
+              <li><a href="https://aerialedge.co.uk/portfolio/youth-circus/">Youth Circus</a></li>
+              <!-- <li><a href="https://aerialedge.co.uk/youth-performance/">Youth Circus Performance Programme</a></li> -->
+              <li><a href="https://aerialedge.co.uk/portfolio/rigging-training/">Rigging Training</a></li>
+              <li><a href="https://aerialedge.co.uk/portfolio/parties-private-lessons/">Parties & Private Lessons</a></li>
+              <li><a href="https://aerialedge.co.uk/easter-edge/">Easter Edge</a></li>
+              <li><a href="https://aerialedge.co.uk/foundation-course/">Foundation Course</a></li>
+              <li><a href="https://aerialedge.co.uk/four-week-intensive/">Four Week Intensive</a></li>
+              <li><a href="https://aerialedge.co.uk/protrack/">Pro Track</a></li>
+              <li><a href="https://aerialedge.co.uk/1-year-pdc/">1 Year Professional Development</a></li>
+            </ul>
+        </div>
+    </div>
+  </div>
+ 
+  <div class="four spacing"></div>
+    <div class='row'>
+      <div class='large-12 columns'>
+        <h4>©{{site.time | date: "%Y" }} Aerial Edge Circus School C.I.C. All rights reserved.</h4>
+      </div>
+    </div>
+  </div>
+  <div class="four spacing"></div>
+</div>
+
+{% for path in site.data.assets.js %}    
+
+  {%- if path contains '://' -%}
+    {%- assign src = path -%}
+  {%- else -%}
+    {%- assign src = path | relative_url -%}
+  {%- endif -%}
+
+  <script src="{{ src }}" type="text/javascript"></script>
+{% endfor %}
