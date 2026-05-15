@@ -1,0 +1,41 @@
+---
+// /news/ — port of v1 news.html (Mailchimp newsletter archive embed).
+// v1 permalink: /news/.
+//
+// v1 included a `{% include newsletter-signup.html %}` at the bottom but
+// that include doesn't exist in _includes/ — Jekyll would have skipped or
+// produced an empty render; the loose `{% include %}` call is dropped here.
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+---
+<BaseLayout title="Aerial Edge — Newsletter Archive">
+  <div class="full">
+    <div class="row">
+      <div class="large-8 columns large-centered">
+        <SectionTitle smallTitle="newsletter" title="Archive" />
+      </div>
+    </div>
+  </div>
+
+  <div class="full no-padding">
+    <div class="row">
+      <div class="large-8 large-centered columns">
+        <style type="text/css">
+          {`
+          .display_archive
+          .campaign
+          `}
+        </style>
+        <script
+          is:inline
+          language="javascript"
+          src="//aerialedge.us2.list-manage.com/generate-js/?u=d528f0d88abac6f11dd849304&fid=47036&show=20"
+          type="text/javascript"
+        ></script>
+      </div>
+    </div>
+  </div>
+  <div class="four spacing"></div>
+  <div class="four spacing"></div>
+</BaseLayout>

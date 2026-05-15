@@ -1,0 +1,206 @@
+---
+// /our-team/ — port of v1 our-team.html (`layout: landing-page`, one-pager).
+// v1 permalink: /our-team/.
+//
+// Stock-content lift-and-shift: members[1].avatar 'member-9.png',
+// members[2].avatar 'member-8.png', members[3].avatar 'member-4-4.png',
+// members2[*] avatars '@stock/*.png', and the Lorem-ipsum descs on
+// members2 — all carried verbatim per brief.
+//
+// Trailing GoHighLevel chat-widget loader script preserved.
+
+import OnePageLayout from '../../layouts/OnePageLayout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+
+interface Social { link: string; icon: string; }
+interface Member { avatar: string; name: string; position: string; desc: string; socials: Social[]; }
+
+const members: Member[] = [
+  {
+    avatar: '/assets/images/team/MarkGibson.jpeg',
+    name: 'Mark Gibson',
+    position: 'Founder & Director',
+    socials: [
+      { link: 'https://www.instagram.com/mark_gibson67/', icon: 'instagram' },
+      { link: 'https://flickr.com/people/mark_gibson/', icon: 'flickr' },
+    ],
+    desc:
+      "Mark teaches and performs internationally, specialising in static and doubles trapeze, cradle, acrobalance and packing more value into every class and day than seems feasible. Mark studied at The Circus Space in London. He also works in non-circus education systems delivered globally.",
+  },
+  {
+    avatar: '/assets/images/@stock/member-9.png',
+    name: 'Sam McFarlane',
+    position: 'Acrobatics',
+    socials: [
+      { link: 'http://twitter.com', icon: 'twitter' },
+      { link: 'http://facebook.com', icon: 'facebook' },
+      { link: 'http://dribbble.com', icon: 'web' },
+    ],
+    desc:
+      "Easy-going Sam joined the 2014 Commonwealth Youth Circus Programme and now enthusiastically coaches acrobatics, trampolining, parkour, partner acro and juggling. When he’s not teaching or performing, he’ll likely be wild swimming, high diving, freediving or playing board games. Because: rest sometimes.",
+  },
+  {
+    avatar: '/assets/images/@stock/member-8.png',
+    name: 'Yara Fares',
+    position: 'Flow Arts',
+    socials: [
+      { link: 'http://instagram.com/yarajulesfares_', icon: 'instagram' },
+      { link: 'http://yarajulesfares.com', icon: 'globe' },
+    ],
+    desc:
+      "International flow arts teacher Yara shows how movement flows in any art from your heart to your body, bypassing the mind. She performs hula hooping, doubles trapeze, cradle and partner acro. Yara loves multi-tasking, animals and painting. Preferably with a cocktail…",
+  },
+  {
+    avatar: '/assets/images/@stock/member-4-4.png',
+    name: 'Gabriel Stella',
+    position: 'Flying Trapeze',
+    socials: [
+      { link: 'http://twitter.com', icon: 'twitter' },
+      { link: 'http://facebook.com', icon: 'facebook' },
+    ],
+    desc:
+      "Combining circus with cinematography, Gaby’s living the dream. As a flying trapeze instructor extraordinaire, he has some magical way of making people do much more than they think they can. Qualifying from Circocan, Brazil, Gaby performs a range of arts.",
+  },
+];
+
+const members2: Member[] = [
+  {
+    avatar: '/assets/images/@stock/member-7.png',
+    name: 'Adilso Machado',
+    position: 'Artistic Director',
+    socials: [
+      { link: 'http://twitter.com', icon: 'globe' },
+      { link: 'http://facebook.com', icon: 'facebook' },
+    ],
+    desc:
+      "Adilso’s work is characterised by rigour, softened by his disarming smile and high-energy approach. An internally recognised dancer and artistic director, he teaches circus technique with the same precision, and ambition for every person, that he applies as a show director.",
+  },
+  {
+    avatar: '/assets/images/@stock/member-9.png',
+    name: 'Michelle Ross',
+    position: 'Chinese Pole',
+    socials: [
+      { link: 'http://twitter.com', icon: 'twitter' },
+      { link: 'http://facebook.com', icon: 'facebook' },
+      { link: 'http://dribbble.com', icon: 'dribbble' },
+    ],
+    desc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    avatar: '/assets/images/@stock/member-8.png',
+    name: 'Ed Muir',
+    position: 'Aerial Straps',
+    socials: [
+      { link: 'http://twitter.com', icon: 'twitter' },
+      { link: 'http://facebook.com', icon: 'facebook' },
+      { link: 'http://tumblr.com', icon: 'tumblr' },
+    ],
+    desc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    avatar: '/assets/images/@stock/member-4-4.png',
+    name: 'Nea Kunnari',
+    position: 'Rope & Silks',
+    socials: [
+      { link: 'http://twitter.com', icon: 'twitter' },
+      { link: 'http://facebook.com', icon: 'facebook' },
+    ],
+    desc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+];
+---
+<OnePageLayout title="Aerial Edge — Our Team">
+  <a id="team"></a>
+  <div class="full dark-grey">
+    <div class="row">
+      <div class="large-8 columns large-centered">
+        <SectionTitle smallTitle="The team" title="This is our team." />
+      </div>
+    </div>
+  </div>
+
+  <div class="full dark-grey no-padding">
+    <div class="members">
+      {members.map((member) => (
+        <div class="small-3 columns">
+          <div class="member-avatar">
+            <img class="avatar" alt="" src={member.avatar} />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  <div class="full no-padding team-bg">
+    <div class="div member-decs">
+      {members.map((member) => (
+        <div class="large-3 columns">
+          <div class="member-dec">
+            <div class="intro">
+              <h3>{member.name}</h3>
+              <h4>{member.position}</h4>
+              <p>{member.desc}</p>
+              <ul class="socials">
+                {member.socials.map((social) => (
+                  <li>
+                    <a href={social.link}>
+                      <i class={`fa fa-${social.icon}`}></i>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="full dark-grey">
+    <div class="row"></div>
+  </div>
+  <div class="full dark-grey no-padding">
+    <div class="members">
+      {members2.map((member) => (
+        <div class="small-3 columns">
+          <div class="member-avatar">
+            <img class="avatar" alt="" src={member.avatar} />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  <div class="full no-padding team-bg">
+    <div class="div member-decs">
+      {members2.map((member) => (
+        <div class="large-3 columns">
+          <div class="member-dec">
+            <div class="intro">
+              <h3>{member.name}</h3>
+              <h4>{member.position}</h4>
+              <p>{member.desc}</p>
+              <ul class="socials">
+                {member.socials.map((social) => (
+                  <li>
+                    <a href={social.link}>
+                      <i class={`fa fa-${social.icon}`}></i>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="four spacing"></div>
+    <script
+      is:inline
+      src="https://widgets.leadconnectorhq.com/loader.js"
+      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+      data-widget-id="66b4950204b58084a9a7e054"
+    ></script>
+  </div>
+</OnePageLayout>

@@ -1,0 +1,30 @@
+---
+// 404.astro — port of v1 404.html.
+//
+// Astro outputs this as /404.html at the dist root, and most static hosts
+// (including Rochen/LiteSpeed) serve it for any unresolved path.
+// v1 used inline <style> for the 404 page; that's lift-and-shifted.
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="404 — Page not found">
+  <style type="text/css" media="screen">
+    .container-404 {
+      margin: 10px auto;
+      max-width: 600px;
+      text-align: center;
+    }
+    .container-404 h1 {
+      margin: 30px 0;
+      font-size: 4em;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+  </style>
+
+  <div class="container-404">
+    <h1>404</h1>
+    <p><strong>Page not found :(</strong></p>
+    <p>The requested page could not be found.</p>
+  </div>
+</BaseLayout>

@@ -1,0 +1,80 @@
+---
+// /little-circus-stars/ — port of v1 little-circus-stars.html.
+// v1 permalink: /little-circus-stars/. v1 layout: landing-page, onepage=true.
+//
+// The bulk of v1's body is commented-out blocks copy-pasted from
+// foundation-course.html (including the £2999 Foundation Course pricing
+// block — present but Liquid-commented and never rendered). Only the
+// hero-video block and the "What's it all about?" block actually render
+// on v1. We port what renders.
+//
+// £ figures actually rendered on v1: £14 drop-in, £32 monthly membership.
+// Both flagged to Cord — Phase 4 brief: surface £ figures not in R1.
+
+import OnePageLayout from '../../layouts/OnePageLayout.astro';
+---
+<OnePageLayout title="Aerial Edge — Little Circus Stars">
+  <div class="full no-padding parallax home-video-wrapper">
+    <div class="fullscreen">
+      <video muted autoplay="autoplay" playsinline id="fullscreen-video" loop="loop">
+        <source src="/assets/images/videos/LCS.mov" type="video/mp4" />
+      </video>
+      <div class="overlay"></div>
+      <div class="layer">
+        <p class="small-title">Glasgow's circus school </p>
+        <h1 class="thin" id="to-be-update">
+          <span class="fir">Little Circus Stars</span><br />
+        </h1>
+
+        <div class="two spacing"></div>
+
+        <h2 class="thin">
+          Little Circus Stars is designed for kids aged one to six to playfully explore aerial and acrobatic movements – along with their grown-ups.
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="full">
+    <div class="row">
+      <div class="large-8 columns large-centered">
+        <div class="section-title">
+          <p class="small-title">Little Circus Stars</p>
+          <h2>What's it all about?</h2>
+          <p class="big-size"> Little Circus Stars is designed for kids aged one to six to playfully explore aerial and acrobatic movements – along with their grown-ups. </p>
+        </div>
+        <div class="two spacing"></div>
+        <div class="mod modBlogPost big no_bg">
+          <p>Together you enjoy a magical mix of aerial apparatus including silks, hammock, trapeze and hoop, along with ground-based fun such as partner acrobalance, juggling, and fun tumble-track activities that build into acrobatic movements.</p>
+
+          <p>No prior experience is required. Just bring your curiosity and let Aerial Edge be your happy place! Book your spot today</p>
+
+          <p>Class details:</p>
+          <ul>
+            <li><b>When:</b> Mondays 5pm-6pm</li>
+            <li><b>Who:</b> Children aged one to six, with an accompanying adult</li>
+            <li><b>Where:</b> At our fabulously equipped Aerial Edge Circus School with aerial rigs, tumble tracks, trampolines and more – 240 Edmiston Drive, Glasgow G51 2YU</li>
+            <li><b>How much:</b> Book a drop-in class at £14 or enjoy a massive discount with a monthly membership at £32.</li>
+            <li><b>How to book:</b> Just click the ‘Book a Class’ button at AerialEdge.co.uk and it will take you to TeamUp, our booking system. Choose which class you’d like to attend and it will take you through the process step by step, either for drop-in or setting up a membership.</li>
+
+            <div class="two spacing"></div>
+            <div style="text-align: center;">
+              <a href="https://goteamup.com/p/3751555-aerial-edge/" target="_blank" class="button small">Book a Class</a>
+            </div>
+            <div class="three spacing"></div>
+
+            <li><b>Need help?:</b> Email info@contact.aerialedge.co.uk or pop into reception from 5pm-8pm Monday to Friday and10am-1pm on Sunday.</li>
+          </ul>
+
+          <p>What children can gain when they think they’re just having fun at Aerial Edge:</p>
+          <ul>
+            <li>Enhanced coordination, balance, and flexibility</li>
+            <li>Sharpened concentration, confidence, and creative expression</li>
+            <li>Improved social skills through playful interaction with adult partners and peers</li>
+            <li>A safe, supportive, non-competitive environment where growth is encouraged through fun and exploration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</OnePageLayout>
