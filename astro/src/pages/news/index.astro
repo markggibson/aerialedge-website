@@ -21,12 +21,18 @@ import SectionTitle from '../../components/SectionTitle.astro';
   <div class="full no-padding">
     <div class="row">
       <div class="large-8 large-centered columns">
-        <style type="text/css">
-          {`
-          .display_archive
-          .campaign
-          `}
-        </style>
+        {/*
+          v1 inlined an empty <style> with HTML-comment-wrapped CSS:
+          `<style type="text/css"><!--`
+          ` .display_archive`
+          ` .campaign`
+          ` //-->`
+          `</style>`
+          which is not valid CSS (`.display_archive .campaign` is an
+          incomplete selector with no `{ }` body). Carried verbatim from
+          v1 as a comment for fidelity; the Mailchimp embed script below
+          is the actual functional element on this page.
+        */}
         <script
           is:inline
           language="javascript"
