@@ -7,11 +7,14 @@
 #
 # Usage (from Mark's terminal):
 #
-#   export AE_SFTP_HOST=<rochen-sftp-hostname>
-#   export AE_SFTP_USER=<sftp-username>
-#   export AE_SFTP_PASS=<sftp-password>
-#   # Optional override; defaults to 22.
-#   # export AE_SFTP_PORT=22
+#   export AE_SFTP_HOST=<rochen-hostname>
+#   export AE_SFTP_USER=<username>
+#   export AE_SFTP_PASS=<password>
+#   # Optional. Default proto is `ftp` (FTPES — explicit FTP over TLS, port 21).
+#   # Rochen shared hosting uses FTPES out of the box; SFTP (port 22) requires
+#   # per-account SSH enablement via support ticket.
+#   # export AE_SFTP_PROTO=ftp        # ftp (FTPES) or sftp
+#   # export AE_SFTP_PORT=21          # default: 21 for ftp, 22 for sftp
 #   ./scripts/deploy-staging.sh
 #
 # What it does (in order):
@@ -73,13 +76,34 @@ if (( ${#missing[@]} > 0 )); then
   echo "FATAL: required env vars missing: ${missing[*]}" >&2
   echo "" >&2
   echo "Set them in your shell first, e.g.:" >&2
-  echo "  export AE_SFTP_HOST=<rochen-sftp-hostname>" >&2
-  echo "  export AE_SFTP_USER=<sftp-username>" >&2
-  echo "  export AE_SFTP_PASS=<sftp-password>" >&2
-  echo "  # Optional: export AE_SFTP_PORT=22" >&2
+  echo "  export AE_SFTP_HOST=<rochen-hostname>" >&2
+  echo "  export AE_SFTP_USER=<username>" >&2
+  echo "  export AE_SFTP_PASS=<password>" >&2
+  echo "  # Optional: export AE_SFTP_PROTO=ftp (default) or sftp" >&2
+  echo "  # Optional: export AE_SFTP_PORT=21 (auto: 21 for ftp, 22 for sftp)" >&2
   exit 1
 fi
-readonly AE_SFTP_PORT="${AE_SFTP_PORT:-22}"
+
+# Protocol — `ftp` (FTPES, explicit TLS on port 21) is the Rochen default.
+# `sftp` (port 22) requires SSH access enabled per-account on Rochen.
+readonly AE_SFTP_PROTO="${AE_SFTP_PROTO:-ftp}"
+case "${AE_SFTP_PROTO}" in
+  ftp|sftp) ;;
+  *)
+    echo "FATAL: AE_SFTP_PROTO must be 'ftp' or 'sftp', got '${AE_SFTP_PROTO}'" >&2
+    exit 2
+    ;;
+esac
+
+# Port — defaults from proto unless explicitly overridden.
+if [[ -z "${AE_SFTP_PORT:-}" ]]; then
+  if [[ "${AE_SFTP_PROTO}" == "sftp" ]]; then
+    AE_SFTP_PORT=22
+  else
+    AE_SFTP_PORT=21
+  fi
+fi
+readonly AE_SFTP_PORT
 
 # ──────────────────────────────────────────────────────────────────────────
 # Step 2 — toolchain.
@@ -133,14 +157,21 @@ echo "==> Build OK: ${dist_pages} HTML pages, ${dist_size} total."
 #   `--parallel=4` modest concurrency (Rochen shared host).
 #   `--verbose=1` summarises transferred files without dumping every byte.
 # ──────────────────────────────────────────────────────────────────────────
-echo "==> Uploading ${DIST_DIR}/ → ${AE_SFTP_HOST}:${REMOTE_DIR}/"
+echo "==> Uploading ${DIST_DIR}/ → ${AE_SFTP_HOST}:${REMOTE_DIR}/ (${AE_SFTP_PROTO}, port ${AE_SFTP_PORT})"
 # Heredoc (NOT quoted) lets bash interpolate "${AE_SFTP_PASS}" into the
 # lftp script. The password never appears on the lftp command line and
 # is therefore not visible via `ps` — only inside the heredoc stream
 # this shell pipes to lftp's stdin.
-lftp -p "${AE_SFTP_PORT}" "sftp://${AE_SFTP_HOST}" <<LFTP
+#
+# net:max-retries=1 deliberately: a wrong-creds run should fail FAST rather
+# than retry-and-trigger the Rochen CSF firewall's repeat-failure block.
+lftp -p "${AE_SFTP_PORT}" "${AE_SFTP_PROTO}://${AE_SFTP_HOST}" <<LFTP
+set ftp:ssl-allow yes
+set ftp:ssl-force yes
+set ftp:ssl-protect-data yes
+set ssl:verify-certificate no
 set sftp:auto-confirm yes
-set net:max-retries 2
+set net:max-retries 1
 set net:reconnect-interval-base 5
 set net:timeout 30
 user "${AE_SFTP_USER}" "${AE_SFTP_PASS}"
