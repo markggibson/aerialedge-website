@@ -47,7 +47,11 @@ set -euo pipefail
 readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly ASTRO_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 readonly DIST_DIR="${ASTRO_DIR}/dist"
-readonly REMOTE_DIR="public_html/v2"
+# Rochen FTP user lands INSIDE public_html/ (the FTP root IS the webroot).
+# So REMOTE_DIR is just `v2`, not `public_html/v2`. Verified 2026-05-16
+# (Cord cleanup hotfix). If a future Rochen account lands at the home dir
+# instead, override with: export AE_REMOTE_DIR=public_html/v2 before running.
+readonly REMOTE_DIR="${AE_REMOTE_DIR:-v2}"
 readonly STAGING_URL="https://aerialedge.co.uk/v2/"
 readonly STAGING_ADMIN_URL="https://aerialedge.co.uk/v2/admin/"
 
@@ -55,10 +59,10 @@ readonly STAGING_ADMIN_URL="https://aerialedge.co.uk/v2/admin/"
 # Step 0 — guardrail: REMOTE_DIR must end with /v2 (P6-D).
 # ──────────────────────────────────────────────────────────────────────────
 case "${REMOTE_DIR}" in
-  */v2|*/v2/) ;;
+  v2|v2/|*/v2|*/v2/) ;;
   *)
-    echo "FATAL: REMOTE_DIR (${REMOTE_DIR}) is not a /v2/ path." >&2
-    echo "Phase 6 deploy refuses to write outside public_html/v2/." >&2
+    echo "FATAL: REMOTE_DIR (${REMOTE_DIR}) is not a v2 path." >&2
+    echo "Phase 6 deploy refuses to write outside a v2/ directory." >&2
     exit 2
     ;;
 esac
