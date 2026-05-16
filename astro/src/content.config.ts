@@ -5,8 +5,9 @@
 // content/<name>/ folders so the v4-style content tree still works.
 // Reference: https://docs.astro.build/en/guides/upgrade-to/v6/
 //
-// Schemas mirror plan §3. Single source of truth for Sveltia CMS
-// (Phase 5) — config.yml will be aligned field-for-field at that point.
+// SCHEMA MIRROR — the other file is astro/public/admin/config.yml.
+// Keep these in sync field-for-field for posts + works (Phase 5, P5-E).
+// When you change a field here, change it there too (and vice versa).
 
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
