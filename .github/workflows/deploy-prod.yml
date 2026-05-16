@@ -1,0 +1,200 @@
+# Phase 7b — production auto-deploy (apex).
+#
+# Builds the Astro site with the default `base: '/'` and ships the
+# result to Rochen's webroot via FTPES. End-to-end goal: a Sveltia
+# commit (or any push to main) → live apex at https://aerialedge.co.uk/
+# within ~2-3 min, with no terminal step.
+#
+# Replaces .github/workflows/deploy-staging.yml — that file is deleted
+# in the same commit that adds this one. Post-cutover there is exactly
+# one deploy workflow in the repo.
+#
+# Critical guardrails post-cutover:
+#   - `dangerous-clean-slate: false` (default) — diff upload + orphan-
+#     delete INSIDE server-dir only. We MUST not delete anything outside
+#     the paths we own.
+#   - `exclude` paths cover v1-archive/** (Mark's 30-day rollback window)
+#     and assets/** (shared between v1-archive and prod, Rochen-managed
+#     5.8 GB tree). Both stay alive throughout deploys.
+#
+# Secrets required (same as Phase 7a deploy-staging.yml — already set on
+# the repo at /settings/secrets/actions):
+#   - AE_SFTP_HOST   (e.g. ftp.circushost.com)
+#   - AE_SFTP_USER
+#   - AE_SFTP_PASS
+#   - AE_SFTP_PORT   (optional — defaults to 21)
+#
+# Failure mode: a missing secret or a Rochen-side error fails this
+# workflow loudly in the Actions UI. The apex stays at the last-good
+# state until either fix-forward or local `astro/scripts/deploy-prod.sh`.
+
+name: Deploy production (apex)
+
+on:
+  # After cutover, Sveltia commits direct-to-main → apex auto-deploy.
+  # Same trigger model as Phase 7a deploy-staging.yml, just retargeted.
+  push:
+    branches:
+      - main
+  # Manual re-run from the Actions UI (useful for re-deploying after
+  # rotating a secret or recovering from a transient Rochen FTP blip).
+  workflow_dispatch:
+
+# Only one prod deploy at a time. Rapid Sveltia saves batch — only the
+# newest commit deploys. Trade-off accepted per Phase 7b-G. If the
+# cancel-in-progress behaviour leaves half-uploaded files on Rochen in
+# practice, flip to `cancel-in-progress: false`.
+concurrency:
+  group: prod-deploy
+  cancel-in-progress: true
+
+# Least-privilege token — same as staging workflow.
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    name: Build apex and FTP to Rochen
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: astro
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node 26
+        uses: actions/setup-node@v4
+        with:
+          node-version: '26'
+          cache: 'npm'
+          cache-dependency-path: 'astro/package-lock.json'
+
+      - name: Install dependencies (npm ci)
+        run: npm ci
+
+      - name: Build site (default base, SITE_BASE unset)
+        # `npm run build` defaults to base: '/' per astro.config.mjs.
+        # Apex serves at the root, so no SITE_BASE override here.
+        run: npm run build
+
+      - name: Sanity-check build output
+        # Same asserts as the staging workflow. Cheap; catches an
+        # empty-dist disaster before we touch Rochen.
+        run: |
+          test -f dist/index.html
+          test -f dist/admin/index.html
+          test -f dist/admin/config.yml
+          test -f dist/assets/javascripts/imagesloaded.pkgd.js
+          test -f dist/assets/javascripts/masonry.pkgd.min.js
+          test -f dist/assets/javascripts/menu-toggler.js
+          echo "Pages: $(find dist -name '*.html' | wc -l | tr -d ' ')"
+          # Confirm the build is apex-shaped, not staging-shaped — no
+          # /v2/ should appear in any internal href in dist/index.html.
+          if grep -q 'href="/v2/' dist/index.html; then
+            echo "::error::dist/index.html contains /v2/ hrefs. SITE_BASE leaked into the prod build."
+            exit 1
+          fi
+
+      # ──────────────────────────────────────────────────────────────────
+      # Step A — upload dist/ → public_html/ root on Rochen.
+      #
+      # FTP user lands inside public_html/ so server-dir of `./` resolves
+      # to public_html/. `dangerous-clean-slate: false` (the default)
+      # does a diff upload plus orphan-delete inside server-dir only —
+      # AND we explicitly exclude v1-archive/** and assets/** so those
+      # never get touched.
+      #
+      # `protocol: ftps` + `security: loose`: explicit-TLS on port 21,
+      # accepting Rochen's hostname-mismatched cert. Matches what the
+      # local script does with `ssl:verify-certificate no`.
+      # ──────────────────────────────────────────────────────────────────
+      - name: Deploy dist/ → apex root on Rochen
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.AE_SFTP_HOST }}
+          username: ${{ secrets.AE_SFTP_USER }}
+          password: ${{ secrets.AE_SFTP_PASS }}
+          port: ${{ secrets.AE_SFTP_PORT || 21 }}
+          protocol: ftps
+          security: loose
+          local-dir: ./astro/dist/
+          server-dir: ./
+          dangerous-clean-slate: false
+          # CRITICAL post-cutover excludes — these paths live OUTSIDE the
+          # new build and must not be diffed against dist/:
+          #   v1-archive/** — Mark's 30-day rollback window (~30-60 MB
+          #     of v1 Jekyll source). Deleted manually after 30 days.
+          #   assets/**     — 5.8 GB Rochen-resident shared asset tree.
+          #     The vendored-JS allowlist (3 files) is synced separately
+          #     in Step B.
+          #   .well-known/** — Let's Encrypt ACME challenge dir (Rochen-
+          #     managed; FTP-Deploy-Action won't usually delete dotfiles
+          #     but excluding for safety).
+          #   .ftpquota — Rochen auto-regenerates; exclude to keep the
+          #     diff stable.
+          # macOS metadata noise:
+          exclude: |
+            **/.DS_Store
+            **/._*
+            v1-archive/**
+            assets/**
+            .well-known/**
+            .ftpquota
+
+      # ──────────────────────────────────────────────────────────────────
+      # Step B — vendored-JS root-asset sync (carries forward from
+      # Phase 7a / task #198).
+      #
+      # The three vendored JS files (masonry, imagesloaded, menu-toggler)
+      # live at /assets/javascripts/ which is excluded from Step A above
+      # (assets/** exclude). So sync them as a second narrow upload —
+      # same source dir, same target path as Phase 7a, exact-same files.
+      #
+      # Post-cutover this step is mostly defence-in-depth: the files
+      # already sit at public_html/assets/javascripts/ from Phase 7a.
+      # Re-uploading them is harmless and protects against accidental
+      # deletion. NEVER enable dangerous-clean-slate here — we'd nuke
+      # v1's full /assets/ subtree.
+      # ──────────────────────────────────────────────────────────────────
+      - name: Sync vendored JS → /assets/javascripts/ on Rochen
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.AE_SFTP_HOST }}
+          username: ${{ secrets.AE_SFTP_USER }}
+          password: ${{ secrets.AE_SFTP_PASS }}
+          port: ${{ secrets.AE_SFTP_PORT || 21 }}
+          protocol: ftps
+          security: loose
+          local-dir: ./astro/public/assets/javascripts/
+          server-dir: ./assets/javascripts/
+          # CRITICAL: must stay false. Orphan-delete here would touch
+          # v1's broader asset tree.
+          dangerous-clean-slate: false
+
+      # ──────────────────────────────────────────────────────────────────
+      # Step C — post-deploy smoke. Hard-fail if apex doesn't serve 200,
+      # OR if /v2/ references appear in the served HTML (which would
+      # mean the deployed build was staging-shaped, not apex-shaped).
+      # ──────────────────────────────────────────────────────────────────
+      - name: Smoke-test https://aerialedge.co.uk/
+        run: |
+          status="$(curl -sIL -o /dev/null -w '%{http_code}' https://aerialedge.co.uk/)"
+          echo "Public apex → HTTP $status"
+          if [ "$status" != "200" ]; then
+            echo "::error::apex URL returned HTTP $status (expected 200)"
+            exit 1
+          fi
+
+          # Apex HTML must not contain /v2/ in any internal href.
+          if curl -sL https://aerialedge.co.uk/ | grep -qE 'href="/v2/'; then
+            echo "::error::apex HTML contains /v2/ internal hrefs. Wrong base shipped."
+            exit 1
+          fi
+
+          admin_status="$(curl -sIL -o /dev/null -w '%{http_code}' https://aerialedge.co.uk/admin/)"
+          echo "Admin /admin/ → HTTP $admin_status"
+          # Admin can return 200 or 304 depending on JS state. Don't fail
+          # on the admin probe; Mark verifies the OAuth round-trip in
+          # browser when it matters.
