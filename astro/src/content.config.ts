@@ -75,6 +75,15 @@ const pages = defineCollection({
 // defence-in-depth — neither layer alone catches everything (Sveltia
 // rejects on save; Zod rejects on build).
 const LANDING_SLUG_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+
+// Sveltia writes '' for empty string fields and null for empty object fields
+// (rather than omitting them). Zod's .optional() only accepts undefined, so
+// we normalise both '' and null → undefined before validation. Without this
+// preprocess, every Sveltia-created landing page with an unset optional field
+// fails the build with an InvalidContentEntryDataError (encountered 2026-05-16
+// task #207 — Mark's first test LP and Wynn's _example seed both failed).
+const emptyToUndef = (val: unknown) => (val === '' || val === null ? undefined : val);
+
 const landingPages = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/landing-pages' }),
   schema: z.object({
@@ -85,15 +94,16 @@ const landingPages = defineCollection({
         LANDING_SLUG_RE,
         'slug must be lowercase letters/digits with single hyphens (e.g. summer-2026)',
       ),
-    hero_image: z.string().optional(),
-    cta: z
-      .object({
+    hero_image: z.preprocess(emptyToUndef, z.string().optional()),
+    cta: z.preprocess(
+      emptyToUndef,
+      z.object({
         text: z.string(),
         url: z.string(),
-      })
-      .optional(),
+      }).optional(),
+    ),
     draft: z.boolean().default(false),
-    date: z.coerce.date().optional(),
+    date: z.preprocess(emptyToUndef, z.coerce.date().optional()),
   }),
 });
 
