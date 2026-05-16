@@ -1,5 +1,5 @@
 ---
-title: "Are you aspiring and inspiring?"
+title: Are you aspiring and inspiring? test
 date: 2022-11-04
 author: Kay
 images:
@@ -8,6 +8,7 @@ categories:
   - services
 tags:
   - cinematography
+excerpt: ''
 ---
 
 Like so many of us, amateur trapeze artist Kris Nimmo is on an aspirational circus journey: always feeling she’s not yet as good as she wishes she was. And at the same time, she is inspirational. 
@@ -17,7 +18,6 @@ At last, she’s rightly proud of her achievements. A huge emotional shift happe
 “I was really worried about seeing it,” says Kris, “I was shaking because I felt I had messed up a lot in the shoot, but I LOVE it! It looks fabulous. It’s really helped my confidence.
 
 <img src="/assets/images/posts/kriss-07.png" />
-
 
 “I now believe you can do almost anything if you invest the time and energy.”
 
