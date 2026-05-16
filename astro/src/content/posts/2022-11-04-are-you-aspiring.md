@@ -1,5 +1,5 @@
 ---
-title: Are you aspiring and inspiring? v7a-test
+title: Are you aspiring and inspiring?
 date: 2022-11-04
 author: Kay
 images:
