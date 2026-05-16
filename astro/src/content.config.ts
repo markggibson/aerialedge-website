@@ -6,7 +6,8 @@
 // Reference: https://docs.astro.build/en/guides/upgrade-to/v6/
 //
 // SCHEMA MIRROR — the other file is astro/public/admin/config.yml.
-// Keep these in sync field-for-field for posts + works (Phase 5, P5-E).
+// Keep these in sync field-for-field for posts + works + landing-pages
+// (Phase 5, P5-E; landing-pages added 2026-05-16 task #207).
 // When you change a field here, change it there too (and vice versa).
 
 import { defineCollection, z } from 'astro:content';
@@ -64,4 +65,36 @@ const pages = defineCollection({
   schema: z.object({}).passthrough(),
 });
 
-export const collections = { pages, posts, works };
+// `landing-pages` — campaign-style URL-shareable landing pages (task #207).
+//
+// URL pattern: /<slug>/ at apex root, no prefix. Mounted via
+// src/pages/[landing_slug].astro, which performs a build-time
+// reserved-slug check before emitting routes.
+//
+// Slug pattern enforced here (Zod) AND in config.yml (Sveltia) for
+// defence-in-depth — neither layer alone catches everything (Sveltia
+// rejects on save; Zod rejects on build).
+const LANDING_SLUG_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+const landingPages = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/landing-pages' }),
+  schema: z.object({
+    title: z.string(),
+    slug: z
+      .string()
+      .regex(
+        LANDING_SLUG_RE,
+        'slug must be lowercase letters/digits with single hyphens (e.g. summer-2026)',
+      ),
+    hero_image: z.string().optional(),
+    cta: z
+      .object({
+        text: z.string(),
+        url: z.string(),
+      })
+      .optional(),
+    draft: z.boolean().default(false),
+    date: z.coerce.date().optional(),
+  }),
+});
+
+export const collections = { pages, posts, works, 'landing-pages': landingPages };

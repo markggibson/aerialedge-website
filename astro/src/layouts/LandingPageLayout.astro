@@ -1,0 +1,62 @@
+---
+// LandingPageLayout.astro — campaign landing-page layout (task #207).
+//
+// Used by [landing_slug].astro for the `landing-pages` Content Collection.
+// Deliberately custom (not a course-page port) — campaign LPs need a focused
+// hero + body + CTA shape, not the course-page video parallax sections. The
+// course pages stay hand-built per-course; this layout is for Sveltia-created
+// campaign LPs Mark spins up without dev involvement.
+//
+// Uses BaseLayout's chrome (header/footer) so LPs match site styling. The
+// body markdown renders into the inner column; hero image is optional and
+// renders above the title; CTA button is optional and renders below the body.
+
+import BaseLayout from './BaseLayout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  hero_image?: string;
+  cta?: { text: string; url: string };
+}
+
+const { title, description, hero_image, cta } = Astro.props;
+---
+<BaseLayout title={title} description={description}>
+  {hero_image && (
+    <div class="full no-padding">
+      <div class="row">
+        <div class="large-12 columns">
+          <img src={hero_image} alt="" />
+        </div>
+      </div>
+    </div>
+  )}
+
+  <div class="full">
+    <div class="row">
+      <div class="large-8 columns large-centered">
+        <SectionTitle smallTitle="" title={title} />
+      </div>
+    </div>
+  </div>
+
+  <div class="full no-padding">
+    <div class="row">
+      <div class="large-8 columns large-centered">
+        <div class="mod modBlogPost big no_bg">
+          <slot />
+          {cta && (
+            <p>
+              <div class="two spacing"></div>
+              <a class="button small" href={cta.url}>{cta.text}</a>
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="four spacing"></div>
+</BaseLayout>

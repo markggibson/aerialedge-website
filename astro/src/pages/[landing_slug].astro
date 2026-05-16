@@ -1,0 +1,193 @@
+---
+// [landing_slug].astro — dynamic route for the `landing-pages` collection.
+//
+// URL pattern: /<slug>/ at apex root, no prefix. Filename uses
+// `[landing_slug]` (not `[slug]`) deliberately — distinctive param name
+// so the route file is unmistakable in src/pages/ and won't be confused
+// with portfolio/[slug].astro.
+//
+// Build-time slug-collision check is load-bearing. Astro's static-route
+// precedence means a colliding slug gets silently shadowed (e.g. an LP
+// with slug `foundation-course` would never serve — the existing static
+// /foundation-course/ wins). Better to fail the build than to ship a
+// silently-shadowed page.
+//
+// Collision sources:
+//   1. RESERVED_SLUGS — hard-coded list of v2 routes, v1-leftover dirs,
+//      URL category dirs, and special paths. Belt-and-braces against the
+//      filesystem scan missing anything (e.g. Rochen-resident dirs that
+//      aren't in src/pages/).
+//   2. Filesystem scan of src/pages/** — every static route name at the
+//      top level of src/pages/ becomes a reserved slug at build time.
+//      Catches any new static page added in src/pages/ without anyone
+//      remembering to also update the hard-coded list.
+//
+// Pattern enforcement (^[a-z0-9]+(-[a-z0-9]+)*$) is done by Zod in
+// content.config.ts and by Sveltia in config.yml. By the time we reach
+// here the slug is already pattern-valid.
+
+import { getCollection, render } from 'astro:content';
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
+import LandingPageLayout from '../layouts/LandingPageLayout.astro';
+
+export async function getStaticPaths() {
+  // Reserved slugs Mark cannot use for a landing page. The build will FAIL
+  // with a clear error if a landing-page entry's slug matches any of these.
+  //
+  // Sources commented per chunk for future maintenance — when a new
+  // top-level route lands in src/pages/, the filesystem scan below catches
+  // it automatically; this list backstops things the scan can't see
+  // (Rochen-resident dirs, files served outside src/pages/).
+  //
+  // Inlined here (rather than a module-scope const) because Astro hoists
+  // getStaticPaths() into a separate prerender chunk that doesn't capture
+  // top-level identifiers.
+  const RESERVED_SLUGS: ReadonlyArray<string> = [
+    // Special / infrastructure
+    'admin',
+    'assets',
+    '_astro',
+    '.well-known',
+    // v2-built top-level pages
+    'blog',
+    'portfolio',
+    'foundation-course',
+    '1-year-pdc',
+    'four-week-intensive',
+    'protrack',
+    'easter-edge',
+    'circus-holidays',
+    'little-circus-stars',
+    'our-team',
+    'youth-performance',
+    'sponsored-places',
+    'news',
+    'safeguarding',
+    'privacy',
+    'terms',
+    'videos',
+    'shows',
+    'scaffold-test',
+    'phase-2',
+    // Blog URL category dirs (serve v2 posts via [...permalink].astro)
+    'events',
+    'classes',
+    'services',
+    'programmes',
+    'philosophy',
+    'circus-shows',
+    // v1-leftover dirs at Rochen root (cleanup tracked in task #202/#204)
+    'v1-archive',
+    'v2',
+    '_includes',
+    '_layouts',
+    '_posts',
+    '_sass',
+    '_site',
+    '_data',
+    '_works',
+    'bower_components',
+    // v1-leftover files at Rochen root
+    'feed.xml',
+    'manifest.json',
+    'favicon.ico',
+    'browserconfig.xml',
+  ];
+
+  const all = await getCollection('landing-pages');
+
+  // Drafts are excluded from build output.
+  const published = all.filter((p) => p.data.draft !== true);
+
+  // Scan `src/pages/` for top-level static route names. Anything in this set
+  // shadows a same-named landing-page slug, so we reject at build time.
+  //
+  // We only need the top-level segment — landing-page slugs are single-segment
+  // URLs at apex, so deeper-nested static pages cannot collide.
+  //
+  // Excluded:
+  //   - This file itself ([landing_slug].astro — its `name` isn't a slug)
+  //   - 404.astro and any other top-level dynamic / error route file
+  //   - index.astro (mounts at `/`, not at `/<slug>/`)
+  //   - The `[...permalink].astro` catch-all (same reason as [landing_slug])
+  //
+  // Inlined here (rather than a helper at module scope) because Astro
+  // hoists getStaticPaths() into a separate prerender chunk that doesn't
+  // capture top-level helpers.
+  //
+  // Path: resolve via process.cwd() rather than import.meta.url. Astro
+  // builds the prerender chunk into dist/.prerender/, so `import.meta.url`
+  // doesn't point at src/pages/ at execution time. `astro build` always
+  // runs from the project root (the `astro/` dir), so cwd is stable.
+  const pagesDir = path.join(process.cwd(), 'src', 'pages');
+  const dirEntries = await fs.readdir(pagesDir, { withFileTypes: true });
+  const staticSlugs = new Set<string>();
+  for (const dirEntry of dirEntries) {
+    const name = dirEntry.name;
+    if (name.startsWith('[')) continue;
+    if (name === 'index.astro' || name === '404.astro') continue;
+    if (dirEntry.isDirectory()) {
+      staticSlugs.add(name);
+    } else if (dirEntry.isFile()) {
+      const ext = path.extname(name);
+      if (ext === '.astro' || ext === '.md' || ext === '.mdx' || ext === '.html') {
+        staticSlugs.add(name.slice(0, -ext.length));
+      }
+    }
+  }
+
+  // Build the union of reserved slugs.
+  const reserved = new Set<string>([...RESERVED_SLUGS, ...staticSlugs]);
+
+  // Collision check — fail loudly. Any one collision aborts the build so
+  // Mark sees the error immediately rather than silently shipping a
+  // shadowed page.
+  for (const entry of published) {
+    const slug = entry.data.slug;
+    if (reserved.has(slug)) {
+      const inStatic = staticSlugs.has(slug);
+      const inReservedList = RESERVED_SLUGS.includes(slug);
+      const source = inStatic && inReservedList
+        ? 'static route in src/pages/ AND reserved-slugs list'
+        : inStatic
+          ? 'static route in src/pages/'
+          : 'reserved-slugs list in src/pages/[landing_slug].astro';
+      throw new Error(
+        `Landing-page slug collision: "${slug}" (file: src/content/landing-pages/${entry.id}) ` +
+          `conflicts with an existing route (source: ${source}). ` +
+          `Choose a different slug. See src/pages/[landing_slug].astro for the reserved list.`,
+      );
+    }
+  }
+
+  // Also flag duplicate slugs across landing-page entries themselves —
+  // two LPs with the same slug would silently overwrite each other's route.
+  const seen = new Set<string>();
+  for (const entry of published) {
+    const slug = entry.data.slug;
+    if (seen.has(slug)) {
+      throw new Error(
+        `Landing-page slug duplicate: "${slug}" appears in more than one entry ` +
+          `under src/content/landing-pages/. Slugs must be unique.`,
+      );
+    }
+    seen.add(slug);
+  }
+
+  return published.map((entry) => ({
+    params: { landing_slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<LandingPageLayout
+  title={entry.data.title}
+  hero_image={entry.data.hero_image}
+  cta={entry.data.cta}
+>
+  <Content />
+</LandingPageLayout>
