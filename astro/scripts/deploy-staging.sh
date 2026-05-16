@@ -23,16 +23,22 @@
 #   3. Cleans dist/ and runs a fresh STAGING build (SITE_BASE=/v2/).
 #   4. Sanity-checks dist/index.html and dist/admin/index.html exist.
 #   5. Uploads dist/* to public_html/v2/ on Rochen via lftp `mirror -R`
-#      (reverse mirror = upload). public_html/ root is NEVER touched.
+#      (reverse mirror = upload). v1's other root contents are NEVER touched.
+#   5b. Uploads the vendored-JS allowlist (Phase 7a #198 fix) to
+#       public_html/assets/javascripts/. NO --delete on that path; only the
+#       hard-coded allowlist files are uploaded. See the rationale block
+#       below the config section.
 #   6. Fetches https://aerialedge.co.uk/v2/ post-deploy and asserts 200.
 #
 # Guardrails:
-#   - Hard-coded remote path is `public_html/v2/`. The script will refuse
-#     to upload to anything outside `/v2/` (defense-in-depth — even if
-#     someone edits REMOTE_DIR, the trailing path component is asserted).
+#   - Step 5's remote path is `public_html/v2/`. The script will refuse
+#     to upload there to anything outside `/v2/` (defense-in-depth — even
+#     if someone edits REMOTE_DIR, the trailing path component is asserted).
+#   - Step 5b uses literal `assets/javascripts/` as the remote path and an
+#     explicit allowlist of files. No wildcards, no mirror, no delete.
 #   - `set -euo pipefail` so any step's failure stops the deploy.
 #   - lftp's `mirror -R --delete` only deletes inside REMOTE_DIR; it
-#     cannot touch v1 at the public_html/ root.
+#     cannot touch v1 outside of `v2/` and `assets/javascripts/`.
 #
 # Rollback: nothing to roll back. v1 stays at public_html/ root throughout
 # Phase 6. If staging is broken, just don't browse to /v2/.
@@ -54,6 +60,42 @@ readonly DIST_DIR="${ASTRO_DIR}/dist"
 readonly REMOTE_DIR="${AE_REMOTE_DIR:-v2}"
 readonly STAGING_URL="https://aerialedge.co.uk/v2/"
 readonly STAGING_ADMIN_URL="https://aerialedge.co.uk/v2/admin/"
+
+# ──────────────────────────────────────────────────────────────────────────
+# Phase 7a (task #198) — vendored-JS root-asset sync.
+#
+# Astro `base: '/v2/'` builds emit HTML pages under /v2/* but leave asset
+# paths root-relative (e.g. <script src="/assets/javascripts/masonry...">).
+# That's deliberate (P6-E in the Phase 6 brief): v2 borrows v1's asset tree
+# at public_html/assets/ so we don't duplicate ~50 MB of CSS / images / fonts
+# between v1 and v2.
+#
+# Problem (#198): three vendored JS files were added during Phase 3 that
+# v1 NEVER had at public_html/assets/javascripts/ — Masonry, imagesloaded,
+# menu-toggler. v2 references them root-relative; v1's tree 404s them; the
+# homepage Masonry grid breaks until someone manually patches.
+#
+# Fix: upload the vendored-JS allowlist below to public_html/assets/
+# javascripts/ on every deploy. NO --delete on this path (we never own the
+# root /assets/ tree — it belongs to v1 until Phase 7b cutover). The
+# allowlist is hard-coded so adding new vendored JS is a conscious choice
+# (edit this script, not a wildcard sweep).
+#
+# Phase 7b: when the apex flips to Astro and base goes back to '/', these
+# files stay at public_html/assets/javascripts/ — exact same path — and
+# nothing changes on the asset side. This was the deciding factor for
+# option (a) over option (b) (withBase()-wrapping the <script> tags):
+# option (a) makes the cutover a no-op for assets.
+# ──────────────────────────────────────────────────────────────────────────
+readonly ROOT_ASSETS_REMOTE_DIR="assets/javascripts"
+# Allowlist. Add a new entry here when you add a new vendored JS file to
+# astro/public/assets/javascripts/. Files are looked up under DIST_DIR (so
+# we ship what was actually built, not source).
+VENDORED_JS_ALLOWLIST=(
+  "imagesloaded.pkgd.js"
+  "masonry.pkgd.min.js"
+  "menu-toggler.js"
+)
 
 # ──────────────────────────────────────────────────────────────────────────
 # Step 0 — guardrail: REMOTE_DIR must end with /v2 (P6-D).
@@ -161,6 +203,18 @@ echo "==> Build OK: ${dist_pages} HTML pages, ${dist_size} total."
 #   `--parallel=4` modest concurrency (Rochen shared host).
 #   `--verbose=1` summarises transferred files without dumping every byte.
 # ──────────────────────────────────────────────────────────────────────────
+# Phase 7a (#198) — sanity-check the vendored-JS allowlist exists in dist
+# before we kick off any upload. Fail fast if a file is missing.
+for f in "${VENDORED_JS_ALLOWLIST[@]}"; do
+  if [[ ! -f "${DIST_DIR}/assets/javascripts/${f}" ]]; then
+    echo "FATAL: vendored-JS allowlist file missing from dist: ${f}" >&2
+    echo "       Expected at ${DIST_DIR}/assets/javascripts/${f}" >&2
+    echo "       Add the file to astro/public/assets/javascripts/ or remove" >&2
+    echo "       it from VENDORED_JS_ALLOWLIST in this script." >&2
+    exit 1
+  fi
+done
+
 echo "==> Uploading ${DIST_DIR}/ → ${AE_SFTP_HOST}:${REMOTE_DIR}/ (${AE_SFTP_PROTO}, port ${AE_SFTP_PORT})"
 # Heredoc (NOT quoted) lets bash interpolate "${AE_SFTP_PASS}" into the
 # lftp script. The password never appears on the lftp command line and
@@ -189,6 +243,38 @@ mirror --reverse \
        "${DIST_DIR}/" "${REMOTE_DIR}/"
 bye
 LFTP
+
+# ──────────────────────────────────────────────────────────────────────────
+# Step 5b — vendored-JS root-asset sync (Phase 7a #198 fix).
+#
+# Uploads the allowlisted vendored JS files to public_html/assets/
+# javascripts/ — see the rationale block at the top of the script. This
+# step is intentionally narrow:
+#   - Each file is uploaded with `put -O` (overwrite-if-different), not
+#     a `mirror`, so we cannot accidentally delete anything in the root
+#     assets tree even if the allowlist shrinks.
+#   - The remote path is literal `assets/javascripts/`; we do NOT touch
+#     any other root subtree.
+#   - mkdir-p is idempotent.
+# ──────────────────────────────────────────────────────────────────────────
+echo "==> Syncing vendored JS allowlist → ${AE_SFTP_HOST}:${ROOT_ASSETS_REMOTE_DIR}/"
+{
+  echo "set ftp:ssl-allow yes"
+  echo "set ftp:ssl-force yes"
+  echo "set ftp:ssl-protect-data yes"
+  echo "set ssl:verify-certificate no"
+  echo "set sftp:auto-confirm yes"
+  echo "set net:max-retries 1"
+  echo "set net:reconnect-interval-base 5"
+  echo "set net:timeout 30"
+  echo "user \"${AE_SFTP_USER}\" \"${AE_SFTP_PASS}\""
+  echo "mkdir -p -f \"${ROOT_ASSETS_REMOTE_DIR}\""
+  for f in "${VENDORED_JS_ALLOWLIST[@]}"; do
+    echo "put -O \"${ROOT_ASSETS_REMOTE_DIR}\" \"${DIST_DIR}/assets/javascripts/${f}\""
+  done
+  echo "bye"
+} | lftp -p "${AE_SFTP_PORT}" "${AE_SFTP_PROTO}://${AE_SFTP_HOST}"
+echo "    Uploaded ${#VENDORED_JS_ALLOWLIST[@]} vendored JS file(s) to ${ROOT_ASSETS_REMOTE_DIR}/"
 
 # ──────────────────────────────────────────────────────────────────────────
 # Step 6 — post-deploy smoke.
