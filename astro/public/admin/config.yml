@@ -25,9 +25,10 @@ publish_mode: simple
 media_folder: "astro/public/assets/images/cms"
 public_folder: "/assets/images/cms"
 
-# Site URL for "View on site" links from the editor (local dev default).
-site_url: http://localhost:4321
-display_url: http://localhost:4321
+# Site URL for "View on site" links from the editor.
+# Phase 6 (#188) staging target — flips to https://aerialedge.co.uk in Phase 7.
+site_url: https://aerialedge.co.uk/v2
+display_url: https://aerialedge.co.uk/v2
 logo_url: /assets/images/AELogoWhiteOnly-sm.png
 
 collections:

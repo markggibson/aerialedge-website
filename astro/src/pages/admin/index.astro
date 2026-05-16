@@ -1,0 +1,33 @@
+---
+// /admin/ — Sveltia CMS admin shell.
+//
+// Phase 6 prep, task #186: previously lived at public/admin/index.html, which
+// served fine at build (Astro copies public/* into dist/*) but 404'd in dev
+// because the Astro dev server doesn't auto-resolve `/admin/` to
+// `/admin/index.html` for files in `public/`. Promoting the shell to an Astro
+// route fixes the dev URL ergonomics and keeps the production output
+// identical (dist/admin/index.html).
+//
+// The body is the same minimal bootstrap as before. Sveltia loads its own
+// SPA shell from the unpkg-pinned script tag and reads
+// `/admin/config.yml` (still in public/admin/config.yml).
+//
+// Sveltia v0.159.2 pinned 2026-05-16 — see public/admin/config.yml for sync
+// notes and release link. Upgrades are a deliberate task; do not switch to
+// @latest.
+//
+// Note: NO BaseLayout / Header / Footer chrome here on purpose — the Sveltia
+// SPA owns the whole viewport.
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Aerial Edge CMS</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/@sveltia/cms@0.159.2/dist/sveltia-cms.js" is:inline></script>
+  </body>
+</html>
