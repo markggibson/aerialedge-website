@@ -8,6 +8,10 @@
 // P4-E (Mark pre-approved 2026-05-15): drop the dead
 // `<a href="javascript:void()">` author wrapper from v1. Author renders as
 // plain text now. v1's anchor went nowhere; this was dead code.
+//
+// Phase 6 (#190): /blog/categories/ link respects base for /v2/ staging.
+
+import { withBase } from '../utils/url';
 
 export interface Props {
   date: Date | string;
@@ -43,7 +47,7 @@ function slugify(s: string): string {
         {categories.map((cat, i) => (
           <>
             {' '}
-            <a href={`/blog/categories/#${slugify(cat)}`}>{slugify(cat)}</a>{i < categories.length - 1 ? ',' : ''}
+            <a href={`${withBase('/blog/categories/')}#${slugify(cat)}`}>{slugify(cat)}</a>{i < categories.length - 1 ? ',' : ''}
           </>
         ))}
       </span>

@@ -33,6 +33,7 @@ import OnePageLayout from '../layouts/OnePageLayout.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 import ContactForm from '../components/ContactForm.astro';
 import SocialNetworks from '../components/SocialNetworks.astro';
+import { withBase } from '../utils/url';
 
 const services = [
   { title: 'Circus fitness', icon: 'fa fa-heart',         desc1: '£7.5 (8-class pass)',  desc2: '£8 (4-class pass)',     desc3: '£10 (drop-in)' },
@@ -92,7 +93,7 @@ function downcaseCapitalize(s: string) {
 
         <h2 class="thin">
           We have fun classes for all abilities, from toddlers to pensioners, and professional training too. Aerial Edge is a not-for-profit organisation, with sponsored places for people who experience barriers to participation.
-          <a href="/index.html#contact">Sign up for our newsletter </a>to keep up with our ever-evolving schedule.
+          <a href={withBase('/index.html#contact')}>Sign up for our newsletter </a>to keep up with our ever-evolving schedule.
         </h2>
       </div>
     </div>
@@ -123,7 +124,7 @@ function downcaseCapitalize(s: string) {
       </div>
       <div class="large-4 columns">
         <p>
-          <a class="button small boxed" href="/portfolio/full-time-pro-training/" target="_blank">Learn More</a>
+          <a class="button small boxed" href={withBase('/portfolio/full-time-pro-training/')} target="_blank">Learn More</a>
         </p>
       </div>
     </div>
@@ -148,7 +149,7 @@ function downcaseCapitalize(s: string) {
           const w = isWide ? 1000 : 500;
           const h = 350;
           const liClass = isWide ? 'wide' : '';
-          const url = `/portfolio/${work.data.slug}/`;
+          const url = withBase(`/portfolio/${work.data.slug}/`);
           const cats = (work.data.categories ?? []).join(' & ');
           return (
             <li class={liClass}>
@@ -357,7 +358,7 @@ function downcaseCapitalize(s: string) {
       </div>
       <div class="large-4 columns">
         <p>
-          <a class="button small boxed" href="/portfolio/full-time-pro-training/" target="_blank">Learn More</a>
+          <a class="button small boxed" href={withBase('/portfolio/full-time-pro-training/')} target="_blank">Learn More</a>
         </p>
       </div>
     </div>
@@ -374,7 +375,7 @@ function downcaseCapitalize(s: string) {
   </div>
   <div class="full grey no-padding no-overflow">
     {await (async () => {
-      const { getSortedPosts, postPermalink } = await import('../utils/blog');
+      const { getSortedPosts, postHref } = await import('../utils/blog');
       const latest = (await getSortedPosts()).slice(0, 3);
       const formatDate = (d: Date | string) => {
         const obj = d instanceof Date ? d : new Date(d);
@@ -385,10 +386,10 @@ function downcaseCapitalize(s: string) {
           <div class="mod modBlogPost simple">
             <div class="content">
               <p class="date">{formatDate(post.data.date)}</p>
-              <h3><a href={postPermalink(post)}>{post.data.title}</a></h3>
+              <h3><a href={postHref(post)}>{post.data.title}</a></h3>
               <div class="spacing"></div>
               <p>
-                <a class="button boxed yellow tiny" href={postPermalink(post)}>Read more</a>
+                <a class="button boxed yellow tiny" href={postHref(post)}>Read more</a>
               </p>
             </div>
           </div>

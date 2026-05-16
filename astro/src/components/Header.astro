@@ -13,6 +13,7 @@
 // homepage's section. Mirrors v1's Liquid block in _includes/header.html.
 
 import navData from '../data/nav.json';
+import { withBase } from '../utils/url';
 
 export interface Props {
   onepage?: boolean;
@@ -34,13 +35,15 @@ function hrefFor(item: NavItem): string {
   // v1 logic from _includes/header.html: if the path starts with '#' and
   // we're NOT on the one-pager, prepend '/' (i.e. link back to the homepage
   // with the anchor). Otherwise pass through.
+  // Phase 6 (#190): withBase() wraps so links resolve correctly under
+  // `base: '/v2/'` staging. Pure in-page anchors (onepage mode) bypass.
   if (item.path.charAt(0) !== '#') {
-    return item.path;
+    return withBase(item.path);
   }
   if (onepage) {
     return item.path;
   }
-  return '/' + item.path;
+  return withBase('/' + item.path);
 }
 ---
 <div class:list={[wrapperClass]}>
@@ -48,7 +51,7 @@ function hrefFor(item: NavItem): string {
     <ul class="title-area">
       <li class="name">
         <h1>
-          <a href="/">
+          <a href={withBase('/')}>
             <img width="48" height="48" alt="" src="/assets/images/AELogoWhiteOnly-sm.png" />
           </a>
         </h1>

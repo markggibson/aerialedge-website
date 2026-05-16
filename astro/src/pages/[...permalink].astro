@@ -11,14 +11,15 @@
 
 import { getCollection, render } from 'astro:content';
 import PostLayout from '../layouts/PostLayout.astro';
-import { getSortedPosts, postPermalink, slugify } from '../utils/blog';
+import { getSortedPosts, postPermalink, postHref, slugify } from '../utils/blog';
 
 export async function getStaticPaths() {
   const posts = await getSortedPosts();
 
   // Build the sidebar aggregates once and reuse for every page.
+  // Sidebar `<a href>` needs base prefix (postHref); params use postPermalink.
   const recentPosts = posts.slice(0, 10).map((p) => ({
-    url: postPermalink(p),
+    url: postHref(p),
     title: p.data.title,
   }));
 

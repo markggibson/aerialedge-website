@@ -3,6 +3,7 @@
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionTitle from '../../components/SectionTitle.astro';
+import { withBase } from '../../utils/url';
 ---
 <BaseLayout title="Aerial Edge — Shows">
   <div class="full">
@@ -23,7 +24,7 @@ import SectionTitle from '../../components/SectionTitle.astro';
         <div class="one spacing"></div>
         <div style="text-align:center">
           <a href="https://www.tickettailor.com/events/aerialedgecircusschoolcic/" target="_blank" class="button small">Buy Tickets</a>
-          <a href="/shows/night-night/" target="_blank" class="button small">Show Info</a>
+          <a href={withBase('/shows/night-night/')} target="_blank" class="button small">Show Info</a>
         </div>
       </div>
     </div>
@@ -40,7 +41,7 @@ import SectionTitle from '../../components/SectionTitle.astro';
         <img src="/assets/images/shows/Night-Night-LoRes.jpg" />
         <div class="one spacing"></div>
         <div style="text-align:center">
-          <a href="/shows/night-night/" target="_blank" class="button small">Show Info</a>
+          <a href={withBase('/shows/night-night/')} target="_blank" class="button small">Show Info</a>
         </div>
       </div>
       <div class="large-4 columns">
@@ -57,7 +58,7 @@ import SectionTitle from '../../components/SectionTitle.astro';
         <img src="/assets/images/shows/The-Manor-lores.jpg" />
         <div class="one spacing"></div>
         <div style="text-align:center">
-          <a href="/shows/the-manor/" target="_blank" class="button small">Show Info</a>
+          <a href={withBase('/shows/the-manor/')} target="_blank" class="button small">Show Info</a>
         </div>
       </div>
     </div>

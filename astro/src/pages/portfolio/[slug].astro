@@ -13,6 +13,7 @@
 import { getCollection } from 'astro:content';
 import WorkLayout from '../../layouts/WorkLayout.astro';
 import { render } from 'astro:content';
+import { withBase } from '../../utils/url';
 
 export async function getStaticPaths() {
   const works = await getCollection('works');
@@ -34,8 +35,8 @@ export async function getStaticPaths() {
       params: { slug: work.data.slug },
       props: {
         work,
-        previousUrl: prev ? `/portfolio/${prev.data.slug}/` : undefined,
-        nextUrl: next ? `/portfolio/${next.data.slug}/` : undefined,
+        previousUrl: prev ? withBase(`/portfolio/${prev.data.slug}/`) : undefined,
+        nextUrl: next ? withBase(`/portfolio/${next.data.slug}/`) : undefined,
       },
     };
   });

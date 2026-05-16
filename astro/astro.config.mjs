@@ -4,11 +4,24 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+// Phase 6 (task #190): env-driven `base` so the same codebase produces
+// either a root-mounted prod build (`base: '/'`) or a staging-subfolder
+// build under `base: '/v2/'`. Staging command:
+//   SITE_BASE=/v2/ npm run build
+// Anything else (dev, preview, prod build) defaults to `/`.
+//
+// `base` is normalised to include a trailing slash so import.meta.env.
+// BASE_URL is consistent (`'/'` or `'/v2/'`). src/utils/url.ts depends
+// on that shape; keep them in sync.
+const RAW_BASE = process.env.SITE_BASE ?? '/';
+const SITE_BASE = RAW_BASE.endsWith('/') ? RAW_BASE : RAW_BASE + '/';
+
 // Lift-and-shift discipline: no integrations beyond what the migration
 // genuinely needs.
 export default defineConfig({
   // Output is fully static (Rochen shared hosting target).
   output: 'static',
+  base: SITE_BASE,
   // Default `build.format: 'directory'` keeps page routes at
   // `/foo/index.html` (so URLs like `/safeguarding/` and
   // `/portfolio/<slug>/` work the way v1 served them). For the blog catch-

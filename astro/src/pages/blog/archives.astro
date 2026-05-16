@@ -4,7 +4,7 @@
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionTitle from '../../components/SectionTitle.astro';
-import { getSortedPosts, postPermalink } from '../../utils/blog';
+import { getSortedPosts, postHref } from '../../utils/blog';
 
 const posts = await getSortedPosts();
 
@@ -21,7 +21,7 @@ for (const p of posts) {
   const hash = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}`;
   const name = monthFmt.format(d);
   const g = groups.get(hash) ?? { name, hash, items: [] };
-  g.items.push({ url: postPermalink(p), title: p.data.title });
+  g.items.push({ url: postHref(p), title: p.data.title });
   groups.set(hash, g);
 }
 const archives = Array.from(groups.values()).sort((a, b) => (a.hash < b.hash ? 1 : -1));

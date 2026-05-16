@@ -4,7 +4,7 @@
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionTitle from '../../components/SectionTitle.astro';
-import { getSortedPosts, postPermalink, slugify } from '../../utils/blog';
+import { getSortedPosts, postHref, slugify } from '../../utils/blog';
 
 const posts = await getSortedPosts();
 
@@ -12,7 +12,7 @@ const groups = new Map<string, { url: string; title: string }[]>();
 for (const p of posts) {
   for (const cat of p.data.categories ?? []) {
     const arr = groups.get(cat) ?? [];
-    arr.push({ url: postPermalink(p), title: p.data.title });
+    arr.push({ url: postHref(p), title: p.data.title });
     groups.set(cat, arr);
   }
 }

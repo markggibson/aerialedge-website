@@ -15,6 +15,7 @@ import BaseLayout from './BaseLayout.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 import ContactForm from '../components/ContactForm.astro';
 import SocialNetworks from '../components/SocialNetworks.astro';
+import { withBase } from '../utils/url';
 
 export interface Props {
   title: string;
@@ -42,7 +43,7 @@ const {
   link,
   previousUrl,
   nextUrl,
-  worksIndexUrl = '/#works',
+  worksIndexUrl = withBase('/#works'),
 } = Astro.props;
 
 const smallTitle = categories.join(' & ');

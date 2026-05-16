@@ -14,6 +14,12 @@
 // Foundation JS, terrific, slick, etc. are NOT loaded site-wide. The only
 // script loaded here is the new vanilla menu toggler. Per-page scripts
 // (homepage Masonry) are loaded by the page that needs them.
+//
+// Phase 6 (#190): internal links route through withBase() so they work
+// at both `/` and `/v2/`. The /assets/* JS reference stays root-relative
+// per P6-E (resolves to v1's tree during staging).
+
+import { withBase } from '../utils/url';
 
 const year = new Date().getFullYear();
 ---
@@ -25,17 +31,17 @@ const year = new Date().getFullYear();
         <div style="text-align: left;">
           <p class="small-title">Information</p>
           <ul>
-            <li><a href="/#top">Home</a></li>
-            <li><a href="/#about">About</a></li>
-            <li><a href="/#works">Classes & Courses</a></li>
-            <li><a href="/#pricing">Pricing</a></li>
-            <li><a href="/#vouchers">Vouchers</a></li>
+            <li><a href={withBase('/#top')}>Home</a></li>
+            <li><a href={withBase('/#about')}>About</a></li>
+            <li><a href={withBase('/#works')}>Classes & Courses</a></li>
+            <li><a href={withBase('/#pricing')}>Pricing</a></li>
+            <li><a href={withBase('/#vouchers')}>Vouchers</a></li>
             <li><a href="https://store.aerialedge.co.uk/" target="_blank">Clothing Store</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/#contact">Contact Us</a></li>
-            <li><a href="/privacy/">Privacy Policy</a></li>
-            <li><a href="/terms/">Terms of Service</a></li>
-            <li><a href="/safeguarding/">Safeguarding Policy</a></li>
+            <li><a href={withBase('/blog/')}>Blog</a></li>
+            <li><a href={withBase('/#contact')}>Contact Us</a></li>
+            <li><a href={withBase('/privacy/')}>Privacy Policy</a></li>
+            <li><a href={withBase('/terms/')}>Terms of Service</a></li>
+            <li><a href={withBase('/safeguarding/')}>Safeguarding Policy</a></li>
           </ul>
         </div>
       </div>
@@ -43,18 +49,18 @@ const year = new Date().getFullYear();
         <div style="text-align: right;">
           <p class="small-title">What we do</p>
           <ul>
-            <li><a href="/portfolio/circus-fitness/">Circus Fitness</a></li>
-            <li><a href="/portfolio/aerial-acrobatic-arts/">Aerial & Acrobatic Arts</a></li>
-            <li><a href="/portfolio/youth-circus/">Youth Circus</a></li>
+            <li><a href={withBase('/portfolio/circus-fitness/')}>Circus Fitness</a></li>
+            <li><a href={withBase('/portfolio/aerial-acrobatic-arts/')}>Aerial & Acrobatic Arts</a></li>
+            <li><a href={withBase('/portfolio/youth-circus/')}>Youth Circus</a></li>
             {/* v1 quirk: commented-out link preserved for fidelity. */}
-            {/* <li><a href="/youth-performance/">Youth Circus Performance Programme</a></li> */}
-            <li><a href="/portfolio/rigging-training/">Rigging Training</a></li>
-            <li><a href="/portfolio/parties-private-lessons/">Parties & Private Lessons</a></li>
-            <li><a href="/easter-edge/">Easter Edge</a></li>
-            <li><a href="/foundation-course/">Foundation Course</a></li>
-            <li><a href="/four-week-intensive/">Four Week Intensive</a></li>
-            <li><a href="/protrack/">Pro Track</a></li>
-            <li><a href="/1-year-pdc/">1 Year Professional Development</a></li>
+            {/* <li><a href={withBase('/youth-performance/')}>Youth Circus Performance Programme</a></li> */}
+            <li><a href={withBase('/portfolio/rigging-training/')}>Rigging Training</a></li>
+            <li><a href={withBase('/portfolio/parties-private-lessons/')}>Parties & Private Lessons</a></li>
+            <li><a href={withBase('/easter-edge/')}>Easter Edge</a></li>
+            <li><a href={withBase('/foundation-course/')}>Foundation Course</a></li>
+            <li><a href={withBase('/four-week-intensive/')}>Four Week Intensive</a></li>
+            <li><a href={withBase('/protrack/')}>Pro Track</a></li>
+            <li><a href={withBase('/1-year-pdc/')}>1 Year Professional Development</a></li>
           </ul>
         </div>
       </div>

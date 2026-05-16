@@ -1,5 +1,8 @@
 ---
 // SidebarTags.astro — replaces v1 _includes/sidebar-tags.html.
+// Phase 6 (#190): /blog/tags/ link respects base for /v2/ staging.
+
+import { withBase } from '../../utils/url';
 
 export interface Props {
   tags?: string[];
@@ -18,7 +21,7 @@ const sorted = [...tags].sort();
   <ul>
     {sorted.map((tag) => (
       <li>
-        <a href={`/blog/tags/#${slugify(tag)}`}>{tag}</a>
+        <a href={`${withBase('/blog/tags/')}#${slugify(tag)}`}>{tag}</a>
       </li>
     ))}
   </ul>

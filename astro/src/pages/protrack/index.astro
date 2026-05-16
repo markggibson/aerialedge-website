@@ -8,6 +8,7 @@
 import OnePageLayout from '../../layouts/OnePageLayout.astro';
 import SectionTitle from '../../components/SectionTitle.astro';
 import ContactForm from '../../components/ContactForm.astro';
+import { withBase } from '../../utils/url';
 ---
 <OnePageLayout title="Aerial Edge — Pro Track">
 
@@ -220,7 +221,7 @@ import ContactForm from '../../components/ContactForm.astro';
           Speak to Mark in the school about it or email info@aerialedge.co.uk
         </h2>
         <div class="two spacing"></div>
-        <a href="/#contact" target="_blank" class="button small">Contact us</a>
+        <a href={withBase('/#contact')} target="_blank" class="button small">Contact us</a>
       </div>
     </div>
   </div>

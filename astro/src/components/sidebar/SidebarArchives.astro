@@ -3,6 +3,9 @@
 //
 // v1 grouped posts by "%B %Y" (e.g. "October 2024") and rendered count per
 // group. Phase 4 hydrates the prop from the posts collection.
+// Phase 6 (#190): /blog/archives/ link respects base for /v2/ staging.
+
+import { withBase } from '../../utils/url';
 
 export interface Props {
   archives?: Array<{ name: string; hash: string; count: number }>;
@@ -15,7 +18,7 @@ const { archives = [] } = Astro.props;
   <ul>
     {archives.map((archive) => (
       <li>
-        <a href={`/blog/archives/#${archive.hash}`}>{archive.name}</a>
+        <a href={`${withBase('/blog/archives/')}#${archive.hash}`}>{archive.name}</a>
         <span>({archive.count})</span>
       </li>
     ))}

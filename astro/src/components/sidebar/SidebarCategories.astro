@@ -3,6 +3,9 @@
 //
 // Phase 4 will populate `categories` from the posts collection's frontmatter
 // aggregation. v1 sorted alphabetically and slugified for the anchor hash.
+// Phase 6 (#190): /blog/categories/ link respects base for /v2/ staging.
+
+import { withBase } from '../../utils/url';
 
 export interface Props {
   categories?: string[];
@@ -25,7 +28,7 @@ const sorted = [...categories].sort();
   <ul>
     {sorted.map((cat) => (
       <li>
-        <a href={`/blog/categories/#${slugify(cat)}`}>{capitalize(cat)}</a>
+        <a href={`${withBase('/blog/categories/')}#${slugify(cat)}`}>{capitalize(cat)}</a>
       </li>
     ))}
   </ul>
