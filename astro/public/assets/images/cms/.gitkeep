@@ -1,0 +1,3 @@
+# Sveltia CMS media folder.
+# New uploads via Sveltia land here (config.yml media_folder).
+# Legacy /assets/images/ tree is Rochen-resident per migration plan §6.

@@ -1,0 +1,117 @@
+# Sveltia v0.159.2 pinned 2026-05-16
+# Release: https://github.com/sveltia/sveltia-cms/releases/tag/v0.159.2
+#
+# SCHEMA MIRROR — the other file is astro/src/content.config.ts.
+# Keep these in sync field-for-field for posts + works.
+# When you change a field here, change it there too (and vice versa). See migration plan §5.
+
+backend:
+  name: github
+  repo: markggibson/aerialedge-website
+  branch: main
+  base_url: https://sveltia-auth.mark-80a.workers.dev
+  auth_endpoint: auth
+  commit_messages:
+    create: "Create {{collection}} '{{slug}}' (Sveltia)"
+    update: "Update {{collection}} '{{slug}}' (Sveltia)"
+    delete: "Delete {{collection}} '{{slug}}' (Sveltia)"
+    uploadMedia: "Upload '{{path}}' (Sveltia)"
+    deleteMedia: "Delete '{{path}}' (Sveltia)"
+
+# Direct-to-main commits (P5-C, 2026-05-16). No editorial workflow.
+publish_mode: simple
+
+# Media — new uploads land here. Legacy /assets/images/ tree stays Rochen-resident.
+media_folder: "astro/public/assets/images/cms"
+public_folder: "/assets/images/cms"
+
+# Site URL for "View on site" links from the editor (local dev default).
+site_url: http://localhost:4321
+display_url: http://localhost:4321
+logo_url: /assets/images/AELogoWhiteOnly-sm.png
+
+collections:
+  # ─── posts ────────────────────────────────────────────────────────────────
+  # Mirrors content.config.ts `posts`. Files: src/content/posts/YYYY-MM-DD-<slug>.md
+  - name: posts
+    label: Blog posts
+    label_singular: Blog post
+    folder: astro/src/content/posts
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{title}} — {{date | date('YYYY-MM-DD')}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { name: author, label: Author, widget: string, required: false }
+      - name: images
+        label: Images
+        widget: list
+        required: false
+        summary: "{{fields.image}}"
+        field: { name: image, label: Image, widget: image }
+      - name: categories
+        label: Categories
+        widget: list
+        required: false
+        default: []
+        field: { name: category, label: Category, widget: string }
+      - name: tags
+        label: Tags
+        widget: list
+        required: false
+        default: []
+        field: { name: tag, label: Tag, widget: string }
+      - { name: excerpt, label: Excerpt, widget: text, required: false }
+      - { name: isVideoPost, label: Video post?, widget: boolean, required: false, default: false }
+      - { name: draft, label: Draft, widget: boolean, required: false, default: false }
+      - { name: body, label: Body, widget: markdown }
+
+  # ─── works ────────────────────────────────────────────────────────────────
+  # Mirrors content.config.ts `works`. Files: src/content/works/<slug>.md
+  # Slug constraint: lowercase letters, digits and hyphens only — keeps clean
+  # URLs and avoids the v1 `&`/mixed-case filename trap (plan §11 R2).
+  - name: works
+    label: Portfolio works
+    label_singular: Work
+    folder: astro/src/content/works
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{title}}"
+    sortable_fields: [title, date]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: slug, label: Slug, widget: string, pattern: ["^[a-z0-9-]+$", "lowercase letters, digits and hyphens only"] }
+      - { name: thumbnail, label: Thumbnail, widget: image }
+      - name: slides
+        label: Slides
+        widget: list
+        required: false
+        default: []
+        summary: "{{fields.slide}}"
+        field: { name: slide, label: Slide, widget: image }
+      - name: categories
+        label: Categories
+        widget: list
+        required: false
+        default: []
+        field: { name: category, label: Category, widget: string }
+      - { name: date, label: Date label, widget: string, required: false, hint: "Free-text date label, e.g. 'January, 2023'" }
+      - { name: client, label: Client, widget: string, required: false }
+      - name: link
+        label: Call-to-action link
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: text, label: Link text, widget: string }
+          - { name: url, label: Link URL, widget: string }
+      - { name: body, label: Body, widget: markdown }
