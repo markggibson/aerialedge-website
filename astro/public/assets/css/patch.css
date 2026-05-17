@@ -352,24 +352,19 @@ body.posts .modBlogPost {
   clear: both;
 }
 
-/* Hero video — force the .fullscreen container to fill the visible
- * viewport across all browsers, with Safari-specific robustness:
+/* Hero video override — REVERTED 2026-05-17.
  *
- * - max-height: none — drop the v1 1500px cap (was capping hero on
- *   viewports taller than 1500px)
- * - min-height: 100vh — guarantee the hero is at LEAST as tall as the
- *   visible viewport. v1's `min-height: 800px` is too short on most
- *   desktops and was letting the next section peek through on Safari
- *   (where `height: 100vh` sometimes computes shorter than visible
- *   viewport due to dynamic browser-chrome accounting)
- * - min-height: 100dvh — Safari 15.4+ "dynamic viewport height" unit
- *   that adjusts to the currently-visible viewport. Browsers that
- *   don't understand dvh fall back to the 100vh line above.
+ * The earlier #220 attempts (max-height: none, min-height: 100vh/100dvh)
+ * made the hero exactly match the visible viewport on Safari, but
+ * shifted the absolutely-positioned .layer's relative offset enough to
+ * cause two visible regressions: the header logo overlapped the h1
+ * "Circus fitness" text, and a thin white strip showed at the viewport
+ * bottom. v1's default behaviour (.fullscreen { min-height: 800px;
+ * height: 100vh; max-height: 1500px; overflow: hidden; }) clipped 3px
+ * at the bottom on viewports just under 800px tall but visually filled
+ * cleanly. Restoring v1 behaviour here.
  *
- * (Task #220 round 2, 2026-05-17 — Mark reported overflow persisting
- * after the bare max-height: none override; Safari-specific.) */
-.home-video-wrapper .fullscreen {
-  max-height: none;
-  min-height: 100vh;
-  min-height: 100dvh;
-}
+ * Re-open the original concern (hero clipping on viewports > 1500px)
+ * only if Mark actually sees it on his current monitor — first do a
+ * vh check.
+ */
