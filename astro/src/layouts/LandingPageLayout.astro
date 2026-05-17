@@ -7,55 +7,49 @@
 // course pages stay hand-built per-course; this layout is for Sveltia-created
 // campaign LPs Mark spins up without dev involvement.
 //
-// DOM order (task #212 refactor — mirrors WorkLayout's visual shape):
-//   1. Title block — same Foundation grid + SectionTitle as WorkLayout
-//   2. Hero image — constrained to large-8 large-centered to align with body
-//      (LPs have no sidebar to balance a large-12 hero); skipped entirely if
-//      `hero_image` is not set
-//   3. `four spacing` divider — same vertical rhythm WorkLayout uses between
+// DOM order (task #213 r3 — mirrors WorkLayout's *body section* shape):
+//   1. Hero image — full-width (large-12 columns), matching the portfolio
+//      works image size; skipped entirely if `hero_image` is not set
+//   2. `four spacing` divider — same vertical rhythm WorkLayout uses between
 //      its slider and body
-//   4. Body markdown — rendered into the inner column
-//   5. CTA button — below body, only if both `cta.text` and `cta.url` are set
+//   3. Content block in a large-12 column (text width matches image width
+//      per Mark's r3 request):
+//        a. Category — small-title kicker (<p class="small-title">), only
+//           rendered when the optional `category` field is set
+//        b. Title — <h3>, matching the body-side title typography in WorkLayout
+//        c. Body markdown — rendered via <slot />
+//        d. CTA button — below body, only if both `cta.text` and `cta.url`
+//           are set
+//   4. `four spacing` closer
+//
+// History:
+//   r1 (bc41157, #212) — DOM reshuffle: title block + image + body + CTA.
+//   r2 (3c1ef9e, #212) — narrowed hero to large-8 to align with body column.
+//   r3 (#213, this) — Mark's feedback: drop the title-above-image block,
+//      widen image to large-12, widen body column to large-12 (matching
+//      image), introduce optional category kicker above the title.
 //
 // WorkLayout's right-side meta sidebar and prev/next nav are intentionally
 // dropped: LPs don't carry client/date metadata and aren't browsable as a
 // series. BaseLayout's chrome (header/footer) is preserved for site styling.
 
 import BaseLayout from './BaseLayout.astro';
-import SectionTitle from '../components/SectionTitle.astro';
 
 export interface Props {
   title: string;
   description?: string;
+  category?: string;
   hero_image?: string;
   cta?: { text: string; url: string };
 }
 
-const { title, description, hero_image, cta } = Astro.props;
+const { title, description, category, hero_image, cta } = Astro.props;
 ---
 <BaseLayout title={title} description={description}>
-  <div class="full">
-    <div class="row">
-      <div class="large-8 columns large-centered">
-        <SectionTitle smallTitle="" title={title} />
-      </div>
-    </div>
-  </div>
-
   {hero_image && (
     <div class="full no-padding">
       <div class="row">
-        {/*
-          Image width matches the body column (large-8 large-centered) rather
-          than going full-width (large-12). Rationale: LPs have no right-side
-          sidebar (unlike WorkLayout, where the large-12 hero is paired with a
-          large-8 + large-4 body that together span the same width), so a
-          full-width image over a narrower body reads as two mismatched blocks.
-          Constraining to large-8 keeps the hero and prose visually aligned as
-          a single focused column, and preserves comfortable line-lengths in
-          the body — readability is the constraint we can't recover from.
-        */}
-        <div class="large-8 columns large-centered">
+        <div class="large-12 columns">
           <img src={hero_image} alt="" />
         </div>
       </div>
@@ -67,7 +61,11 @@ const { title, description, hero_image, cta } = Astro.props;
 
   <div class="full no-padding">
     <div class="row">
-      <div class="large-8 columns large-centered">
+      <div class="large-12 columns">
+        {category && (
+          <p class="small-title">{category}</p>
+        )}
+        <h3>{title}</h3>
         <div class="mod modBlogPost big no_bg">
           <slot />
           {cta && cta.text && cta.url && (

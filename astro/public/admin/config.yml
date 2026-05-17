@@ -149,6 +149,11 @@ collections:
         widget: string
         hint: "Lowercase letters, digits, single hyphens. e.g. summer-2026. Lives at aerialedge.co.uk/<slug>/."
         pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "lowercase letters/digits with single hyphens, no leading/trailing hyphen"]
+      - name: category
+        label: Category (small-title kicker)
+        widget: string
+        required: false
+        hint: "Optional. Renders as a small-title line above the page title in the body column. e.g. Events, Programmes, Campaign. Leave empty to omit."
       - { name: hero_image, label: Hero image, widget: image, required: false }
       - name: cta
         label: Call-to-action button

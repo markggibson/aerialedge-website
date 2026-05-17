@@ -100,6 +100,11 @@ const landingPages = defineCollection({
         LANDING_SLUG_RE,
         'slug must be lowercase letters/digits with single hyphens (e.g. summer-2026)',
       ),
+    // Optional small-title kicker rendered above the page title in the body
+    // column (task #213 r3). Mirrors WorkLayout's `categories.join(' & ')` →
+    // SectionTitle smallTitle pattern, but as a single free-text string here
+    // because LPs aren't taxonomised the way works are.
+    category: z.preprocess(emptyToUndef, z.string().optional()),
     hero_image: z.preprocess(emptyToUndef, z.string().optional()),
     cta: z.preprocess(
       emptyToUndef,
