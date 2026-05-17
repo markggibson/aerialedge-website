@@ -200,20 +200,26 @@ jobs:
           # new build and must not be diffed against dist/:
           #   v1-archive/** — Mark's 30-day rollback window (~30-60 MB
           #     of v1 Jekyll source). Deleted manually after 30 days.
-          #   assets/**     — 5.8 GB Rochen-resident shared asset tree.
-          #     The vendored-JS allowlist (3 files) is synced separately
-          #     in Step B.
           #   .well-known/** — Let's Encrypt ACME challenge dir (Rochen-
           #     managed; FTP-Deploy-Action won't usually delete dotfiles
           #     but excluding for safety).
           #   .ftpquota — Rochen auto-regenerates; exclude to keep the
           #     diff stable.
           # macOS metadata noise:
+          #
+          # NOTE 2026-05-17: `assets/**` was previously excluded to "protect
+          # v1's 5.8 GB tree." Counterproductive — with dangerous-clean-slate=
+          # false (the default we use) FTP-Deploy-Action does diff-upload only,
+          # so v1's legacy files are preserved automatically; v2's new/changed
+          # CSS/JS/images just overwrite their same-named v1 versions. The
+          # narrow Step B + Step B.2 syncs below were band-aids around this
+          # exclude — now they're defence-in-depth, but the main upload covers
+          # /assets/. Same-shape gaps surfaced: #198 vendored JS, #211 Sveltia
+          # media, #220 hero CSS — all traced to this single over-broad rule.
           exclude: |
             **/.DS_Store
             **/._*
             v1-archive/**
-            assets/**
             .well-known/**
             .ftpquota
 
