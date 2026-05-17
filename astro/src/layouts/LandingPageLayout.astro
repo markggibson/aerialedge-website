@@ -9,10 +9,13 @@
 //
 // DOM order (task #212 refactor — mirrors WorkLayout's visual shape):
 //   1. Title block — same Foundation grid + SectionTitle as WorkLayout
-//   2. Hero image — full-width, single image (no multi-slide carousel);
-//      skipped entirely if `hero_image` is not set
-//   3. Body markdown — rendered into the inner column
-//   4. CTA button — below body, only if both `cta.text` and `cta.url` are set
+//   2. Hero image — constrained to large-8 large-centered to align with body
+//      (LPs have no sidebar to balance a large-12 hero); skipped entirely if
+//      `hero_image` is not set
+//   3. `four spacing` divider — same vertical rhythm WorkLayout uses between
+//      its slider and body
+//   4. Body markdown — rendered into the inner column
+//   5. CTA button — below body, only if both `cta.text` and `cta.url` are set
 //
 // WorkLayout's right-side meta sidebar and prev/next nav are intentionally
 // dropped: LPs don't carry client/date metadata and aren't browsable as a
@@ -42,12 +45,25 @@ const { title, description, hero_image, cta } = Astro.props;
   {hero_image && (
     <div class="full no-padding">
       <div class="row">
-        <div class="large-12 columns">
+        {/*
+          Image width matches the body column (large-8 large-centered) rather
+          than going full-width (large-12). Rationale: LPs have no right-side
+          sidebar (unlike WorkLayout, where the large-12 hero is paired with a
+          large-8 + large-4 body that together span the same width), so a
+          full-width image over a narrower body reads as two mismatched blocks.
+          Constraining to large-8 keeps the hero and prose visually aligned as
+          a single focused column, and preserves comfortable line-lengths in
+          the body — readability is the constraint we can't recover from.
+        */}
+        <div class="large-8 columns large-centered">
           <img src={hero_image} alt="" />
         </div>
       </div>
     </div>
   )}
+
+  {/* Vertical rhythm spacer between hero image and body — mirrors WorkLayout. */}
+  <div class="four spacing"></div>
 
   <div class="full no-padding">
     <div class="row">
