@@ -1,68 +1,60 @@
 ---
 // / — port of v1 index.html. The homepage.
-// v1 layout: default, onepage=true. Permalink: /.
 //
-// Custom masonry-tile works grid pulls from the works content collection
-// and is initialised with the vendored Masonry runtime
-// (/assets/javascripts/masonry.pkgd.min.js, vendored in Phase 3 per P3-A).
-// Per brief: "Wire up the Masonry runtime call here … target
-// .modMasonryGallery .gallery".
+// Post-#210 (2026-05-17): content lives in the Sveltia-editable `homepage`
+// singleton (src/content/homepage/index.md). This file is a thin renderer
+// that consumes the singleton entry. Mark edits blocks via /admin/; Sveltia
+// commits to main; deploy-prod.yml ships in ~3 min.
 //
-// Stock content (per brief, carried verbatim):
-//   - members[] includes "Mark Wayne", "Clare Watson", "Jone Bucan"
-//     placeholders with @stock avatars and lorem-ish bios — preserved.
-//   - testimonials[] all attributed to "David White" with Designer/Huglab
-//     placeholder copy — preserved.
-//   - clients[] paths under /@stock/client-*.png — preserved.
-//   - The members + testimonials + clients sections are all Liquid-
-//     commented in v1 and never rendered. Not ported as visible HTML.
-//   - services[] (pricing cards) IS rendered on v1 — ported here with
-//     the exact same £ figures (£7.5, £8, £10, £17, £20, £25, £12.50,
-//     £17.50, £12, £20).
+// Schema source of truth: src/content.config.ts → `homepage` collection.
+// Sveltia mirror: public/admin/config.yml → "Homepage" files-collection.
 //
-// Other v1 quirks preserved:
-//   - Multiple <video id="fullscreen-video"> elements share the same id
-//     across the page (browser will only act on the first). Verbatim.
-//   - Many "How we work" / customers-bg / team / blog / clients sections
-//     are HTML-commented in v1 and never render. Not ported.
-//   - The "Foundation Course Show Reels" video URLs use real
-//     aerialedge.co.uk paths; left as-is for Rochen post-cutover.
+// NOT Sveltia-editable (stay hardcoded):
+//   - Latest 3 articles (auto-pulled from `posts` collection)
+//   - GHL newsletter form + Address + Vimeo embed (ContactForm component)
+//   - Social block (SocialNetworks component)
+//   - FooterMenu (BaseLayout)
+//   - Multiple <video id="fullscreen-video"> elements sharing the same id
+//     (v1 quirk preserved — browser only acts on the first)
+//   - Vendored Masonry runtime call at the bottom (structural JS, not content)
+//
+// v1 stock content / dead sections (testimonials, "Mark Wayne" team
+// placeholders, commented-out customers-bg/team/blog/clients sections) are
+// untouched. They never rendered in v1; they don't render here.
 
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import OnePageLayout from '../layouts/OnePageLayout.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 import ContactForm from '../components/ContactForm.astro';
 import SocialNetworks from '../components/SocialNetworks.astro';
 import { withBase } from '../utils/url';
 
-const services = [
-  { title: 'Circus fitness', icon: 'fa fa-heart',         desc1: '£7.5 (8-class pass)',  desc2: '£8 (4-class pass)',     desc3: '£10 (drop-in)' },
-  { title: 'Aerial',         icon: 'fa  fa-arrow-up',     desc1: '£17 (8-class pass)',   desc2: '£20 (4-class pass)',    desc3: '£25 (drop-in)' },
-  { title: 'Acro',           icon: 'fa  fa-arrow-down',   desc1: '£12.50 (8-class pass)', desc2: '£17.50 (4-class pass)', desc3: '£20 (drop-in)' },
-  { title: 'Youth circus',   icon: 'fa  fa-child',        desc1: '£12 (book the term)',  desc2: '£20 (drop-in)',         desc3: '' },
-];
+// Singleton entry — exactly one file lives in src/content/homepage/.
+const homepageEntry = await getEntry('homepage', 'index');
+if (!homepageEntry) {
+  throw new Error(
+    'Missing src/content/homepage/index.md — the homepage singleton entry is required.',
+  );
+}
+const home = homepageEntry.data;
 
-// works[] frontmatter in v1 references _works/ files by path; here we
-// resolve by the new slug (matches plan §3 + P4-B works collection).
-// Order and per-tile `style: wide` flag preserved verbatim.
-interface WorkRef { slug: string; style?: 'wide' }
-const workRefs: WorkRef[] = [
-  { slug: 'circus-fitness' },
-  { slug: 'aerial-edge-circus-challenge' },
-  { slug: 'youth-circus', style: 'wide' },
-  { slug: 'aerial-acrobatic-arts' },
-  { slug: 'rigging-training' },
-  { slug: 'full-time-pro-training', style: 'wide' },
-  { slug: 'parties-private-lessons' },
-  { slug: 'circus-cinematography' },
-];
-
+// Resolve `works` references for the Masonry grid. Astro's reference() in the
+// schema validates that each slug exists in the `works` collection at build
+// time; here we just join to get the actual entry data for rendering.
 const allWorks = await getCollection('works');
 const worksBySlug = new Map(allWorks.map((w) => [w.data.slug, w]));
-const works = workRefs.map((ref) => {
-  const w = worksBySlug.get(ref.slug);
-  if (!w) throw new Error(`homepage references unknown work slug: ${ref.slug}`);
-  return { ref, work: w };
+// In Astro 6, reference() values resolve at validation time to entries shaped
+// like { collection, id }. We accept either string ids (slug) or the resolved
+// shape, and look up by data.slug (the explicit slug field set on each work).
+type WorkRef = { collection: string; id: string } | string;
+function refToSlug(r: WorkRef): string {
+  return typeof r === 'string' ? r : r.id;
+}
+const works = home.works_section.tiles.map((tile) => {
+  const slug = refToSlug(tile.work as WorkRef);
+  const w = worksBySlug.get(slug);
+  if (!w) throw new Error(`homepage references unknown work slug: ${slug}`);
+  return { tile, work: w };
 });
 
 function downcaseCapitalize(s: string) {
@@ -74,27 +66,33 @@ function downcaseCapitalize(s: string) {
   <div class="full no-padding parallax home-video-wrapper">
     <div class="fullscreen">
       <video muted autoplay="autoplay" playsinline id="fullscreen-video" loop="loop">
-        <source src="/assets/images/@stock/Hero2.mp4" type="video/mp4" />
+        <source src={home.hero.video_src} type="video/mp4" />
       </video>
       <div class="overlay"></div>
       <div class="layer">
-        <p class="small-title">Glasgow's circus school </p>
+        <p class="small-title">{home.hero.small_title}</p>
         <h1 class="thin" id="to-be-update">
-          <span class="fir">Circus fitness</span><br />
-          <span class="sec">Circus training</span><br />
-          <span class="thir">Circus arts</span>
+          {home.hero.title_lines.map((line, i) => {
+            // v1 styles the three hero title lines with .fir / .sec / .thir
+            // CSS classes by position. Schema is a flat array; we assign the
+            // classes by index, with .thir as the fallback for any 4th+ line.
+            const cls = i === 0 ? 'fir' : i === 1 ? 'sec' : 'thir';
+            const isLast = i === home.hero.title_lines.length - 1;
+            return (
+              <>
+                <span class={cls}>{line}</span>{!isLast && <br />}
+              </>
+            );
+          })}
         </h1>
 
-        <a href="https://goteamup.com/p/3751555-aerial-edge/" target="_blank" class="button small">Book a class</a>
-        <a href="https://www.tickettailor.com/events/aerialedgecircusschoolcic/" target="_blank" class="button small">Event Tickets</a>
-        <a href="https://store.aerialedge.co.uk" target="_blank" class="button small">Clothing Store</a>
+        {home.hero.cta_buttons.map((btn) => (
+          <a href={btn.url} target={btn.target} class="button small">{btn.text}</a>
+        ))}
 
         <div class="two spacing"></div>
 
-        <h2 class="thin">
-          We have fun classes for all abilities, from toddlers to pensioners, and professional training too. Aerial Edge is a not-for-profit organisation, with sponsored places for people who experience barriers to participation.
-          <a href={withBase('/index.html#contact')}>Sign up for our newsletter </a>to keep up with our ever-evolving schedule.
-        </h2>
+        <h2 class="thin" set:html={home.hero.body_html}></h2>
       </div>
     </div>
   </div>
@@ -104,11 +102,11 @@ function downcaseCapitalize(s: string) {
     <div class="row">
       <div class="large-8 columns large-centered">
         <div class="section-title">
-          <p class="small-title">Developing people</p>
-          <h2>Developing people through circus is what we do best.</h2>
-          <p class="big-size">Anyone can do circus, regardless of age, body type, experience or other factors. We start where you are now, then build from there. And there’s more to it than meets the eye! As you meet the challenges aerial or acrobatic training, you discover things about yourself that may surprise you! </p>
+          <p class="small-title">{home.about.small_title}</p>
+          <h2>{home.about.title}</h2>
+          <p class="big-size">{home.about.body}</p>
           <div class="four spacing"></div>
-          <img src="/assets/images/AELogoGreyBadge-sm.png" alt="" />
+          <img src={home.about.image} alt="" />
         </div>
       </div>
       <div class="four spacing"></div>
@@ -119,12 +117,12 @@ function downcaseCapitalize(s: string) {
     <div class="four spacing"></div>
     <div class="row">
       <div class="large-8 columns">
-        <h3 class="white">Intensive circus courses for 2026</h3>
-        <p>Full-time 1-year Professional Development course, 4-month Foundation courses & 4-week Intensives; part-time Pro-Track Programme & Rigging courses; plus an annual Easter festival</p>
+        <h3 class="white">{home.intensive.title}</h3>
+        <p>{home.intensive.body}</p>
       </div>
       <div class="large-4 columns">
         <p>
-          <a class="button small boxed" href={withBase('/portfolio/full-time-pro-training/')} target="_blank">Learn More</a>
+          <a class="button small boxed" href={withBase(home.intensive.button.url)} target={home.intensive.button.target}>{home.intensive.button.text}</a>
         </p>
       </div>
     </div>
@@ -135,8 +133,8 @@ function downcaseCapitalize(s: string) {
   <div class="full">
     <div class="row">
       <div class="large-8 columns large-centered">
-        <SectionTitle smallTitle="take a look" title="Our classes & courses" />
-        <p class="big-size">Welcome to the fun side of life! Aerial Edge is an exciting and safe environment for you to explore a whole world of upside-down joy as you learn some very cool aerial and acrobatic skills. Check out each of the sections below for more details</p>
+        <SectionTitle smallTitle={home.works_section.small_title} title={home.works_section.title} />
+        <p class="big-size">{home.works_section.intro}</p>
       </div>
     </div>
   </div>
@@ -144,8 +142,8 @@ function downcaseCapitalize(s: string) {
   <div class="full no-padding" id="demo-1-works">
     <div class="mod modMasonryGallery">
       <ul class="gallery">
-        {works.map(({ ref, work }) => {
-          const isWide = ref.style === 'wide';
+        {works.map(({ tile, work }) => {
+          const isWide = tile.style === 'wide';
           const w = isWide ? 1000 : 500;
           const h = 350;
           const liClass = isWide ? 'wide' : '';
@@ -175,131 +173,82 @@ function downcaseCapitalize(s: string) {
     <div class="row">
       <div class="large-6 columns">
         <div class="section-title">
-          <h3>Gift Vouchers</h3>
-          <p class="big-size">Give someone the gift of circus with one of our gift vouchers </p>
-          <img src="/assets/images/Gift-Voucher.jpg" alt="" />
+          <h3>{home.vouchers.title}</h3>
+          <p class="big-size">{home.vouchers.body}</p>
+          <img src={home.vouchers.image} alt="" />
           <div class="two spacing"></div>
           <p>
-            <a class="button small" href="https://giftup.app/place-order/1eb2d8cf-004a-4a6a-9cb2-627691bf741e?platform=hosted" target="_blank">Buy a Voucher</a>
+            <a class="button small" href={home.vouchers.button.url} target={home.vouchers.button.target}>{home.vouchers.button.text}</a>
           </p>
         </div>
       </div>
       <div class="large-6 columns">
         <div class="section-title">
-          <h3>Aerial Edge Clothing Store</h3>
-          <p class="big-size">Keep someone warm with one of our cozy hoodies, or look at our circus training clothing line </p>
-          <img src="/assets/images/Hoodie1.jpg" alt="" />
+          <h3>{home.store.title}</h3>
+          <p class="big-size">{home.store.body}</p>
+          <img src={home.store.image} alt="" />
           <div class="two spacing"></div>
           <p>
-            <a class="button small" href="https://store.aerialedge.co.uk/" target="_blank">Buy a Hoodie</a>
+            <a class="button small" href={home.store.button.url} target={home.store.button.target}>{home.store.button.text}</a>
           </p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="full no-padding parallax home-video-wrapper">
-    <div class="fullscreen">
-      <video muted autoplay="autoplay" playsinline id="fullscreen-video" loop="loop">
-        <source src="/assets/images/videos/Acrobatics-no-title.mp4" type="video/mp4" />
-      </video>
-      <div class="overlay"></div>
-      <div class="layer">
-        <p class="small-title">Acrobalance, Acrobatics & Trampolining</p>
+  {home.program_features.map((feat) => (
+    feat.kind === 'video' ? (
+      <div class="full no-padding parallax home-video-wrapper">
+        <div class="fullscreen">
+          <video muted autoplay="autoplay" playsinline id="fullscreen-video" loop="loop">
+            <source src={feat.video_src} type="video/mp4" />
+          </video>
+          <div class="overlay"></div>
+          <div class="layer">
+            <p class="small-title">{feat.small_title}</p>
 
-        <h2 class="thin">
-          Wednesdays & Thursdays
-        </h2>
-        <h2 class="thin">
-          Come and learn with us! Classes are open to complete beginners, intermediate and advanced students of all ages.
-        </h2>
+            {feat.title_lines.map((line) => (
+              <h2 class="thin">
+                {line}
+              </h2>
+            ))}
+            {feat.button && (
+              <>
+                <div class="two spacing"></div>
+                <a href={feat.button.url} target={feat.button.target} class="button small">{feat.button.text}</a>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    ) : (
+      <div class="full dark no-padding ">
+        <div class="four spacing"></div>
+        <div class="row">
+          <div class="large-8 columns">
+            <h3 class="white">{feat.title}</h3>
+            <p>{feat.body}</p>
+          </div>
+          <div class="large-4 columns">
+            <p>
+              {feat.button && (
+                <a class="button small boxed" href={feat.button.url} target={feat.button.target}>{feat.button.text}</a>
+              )}
+            </p>
+          </div>
+        </div>
         <div class="two spacing"></div>
-        <a href="https://goteamup.com/p/3751555-aerial-edge/" target="_blank" class="button small">Book a class</a>
       </div>
-    </div>
-  </div>
-
-  <div class="full dark no-padding ">
-    <div class="four spacing"></div>
-    <div class="row">
-      <div class="large-8 columns">
-        <h3 class="white">Youth Circus places now available</h3>
-        <p>Class covers aerial arts, acrobatics, trampoline & juggling. Ages 1-7, 7-12 & 12-18. Term booking £12 per 90min class, drop-ins £20. Summer School 15-19 July & 5-9 August. </p>
-      </div>
-      <div class="large-4 columns">
-        <p>
-          <a class="button small boxed" href="https://goteamup.com/p/3751555-aerial-edge/" target="_blank">Book Now</a>
-        </p>
-      </div>
-    </div>
-    <div class="two spacing"></div>
-  </div>
-
-  <div class="full no-padding parallax home-video-wrapper">
-    <div class="fullscreen">
-      <video muted autoplay="autoplay" playsinline id="fullscreen-video" loop="loop">
-        <source src="/assets/images/videos/Fly-trap-promo.mp4" type="video/mp4" />
-      </video>
-      <div class="overlay"></div>
-      <div class="layer">
-        <p class="small-title">Flying Trapeze Classes</p>
-
-        <h2 class="thin">
-          Mondays, Wednesdays, Fridays and Sundays
-        </h2>
-        <h2 class="thin">
-          Come fly with us! Classes are open to complete beginners, intermediate and advanced students of all ages. Learn tricks on the bar, cradle tricks on the catcher and returns to platform. Maybe even star in one of our shows.
-        </h2>
-        <div class="two spacing"></div>
-        <a href="https://goteamup.com/p/3751555-aerial-edge/" target="_blank" class="button small">Book a class</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="full dark no-padding ">
-    <div class="four spacing"></div>
-    <div class="row">
-      <div class="large-8 columns">
-        <h3 class="white">Weekend workshops, parties and events</h3>
-        <p>Schedule private lessons, parties, team-building events or one of our weekend workshops.</p>
-      </div>
-      <div class="large-4 columns">
-        <p>
-          <a class="button small boxed" href="https://goteamup.com/p/3751555-aerial-edge/" target="_blank">Book Now</a>
-        </p>
-      </div>
-    </div>
-    <div class="two spacing"></div>
-  </div>
-
-  <div class="full no-padding parallax home-video-wrapper">
-    <div class="fullscreen">
-      <video muted autoplay="autoplay" playsinline id="fullscreen-video" loop="loop">
-        <source src="/assets/images/videos/Aerials-no-titles.mp4" type="video/mp4" />
-      </video>
-      <div class="overlay"></div>
-      <div class="layer">
-        <p class="small-title">Aerial Classes</p>
-
-        <h2 class="thin">
-          Weekdays and  weekends
-        </h2>
-        <h2 class="thin">
-          Come and get upside down with us! Learn to perform exciting and different tricks and moves on aerial equipment including trapeze, hoop, silks (aka lyra), rope and more. Make your Instagram pop!
-        </h2>
-        <div class="two spacing"></div>
-        <a href="https://goteamup.com/p/3751555-aerial-edge/" target="_blank" class="button small">Book a class</a>
-      </div>
-    </div>
-  </div>
+    )
+  ))}
 
   <a id="pricing"></a>
   <div class="full">
     <div class="row">
       <div class="large-8 columns large-centered">
         <div class="section-title">
-          <p class="small-title">Pricing</p>
-          <h2>Class pricing</h2>
+          <p class="small-title">{home.pricing.small_title}</p>
+          <h2>{home.pricing.title}</h2>
         </div>
       </div>
     </div>
@@ -307,19 +256,28 @@ function downcaseCapitalize(s: string) {
 
   <div class="full no-overflow no-padding">
     <div class="main-services">
-      {services.map((item) => (
+      {home.pricing.cards.map((card) => (
         <div class="medium-6 large-3 columns">
           <div class="mod modIconText moveup" data-delay="0">
             <div class="icon-text-advanced">
               <div class="wrapper">
                 <div class="content">
-                  <i class={item.icon}></i>
+                  <i class={card.icon}></i>
                 </div>
               </div>
-              <h2>{item.title}</h2>
-              <p><h3>{item.desc1}</h3></p>
-              <p><h4>{item.desc2}</h4></p>
-              <p><h4>{item.desc3}</h4></p>
+              <h2>{card.title}</h2>
+              {/* v1 quirk preserved: each price tier wraps an <hN> inside a <p>.
+                  The first tier is <h3>, the rest are <h4>. Order matters. */}
+              {card.price_tiers.map((tier, i) => (
+                i === 0
+                  ? <p><h3>{tier}</h3></p>
+                  : <p><h4>{tier}</h4></p>
+              ))}
+              {/* Pad to four <p> rows so all cards align — v1 always emitted
+                  four desc slots (desc1/2/3 plus the implicit blank). */}
+              {Array.from({ length: Math.max(0, 3 - card.price_tiers.length) }).map(() => (
+                <p><h4></h4></p>
+              ))}
               <div class="spacing"></div>
             </div>
           </div>
@@ -338,11 +296,11 @@ function downcaseCapitalize(s: string) {
     <div class="row">
       <div class="large-12 columns">
         <div class="section-title">
-          <h3>Timetable</h3>
-          <img src="/assets/images/timetable-jan.jpg" alt="" />
+          <h3>{home.timetable.title}</h3>
+          <img src={home.timetable.image} alt="" />
           <div class="two spacing"></div>
           <p>
-            <a href="https://goteamup.com/p/3751555-aerial-edge/" target="_blank" class="button small">Book a class</a>
+            <a href={home.timetable.button.url} target={home.timetable.button.target} class="button small">{home.timetable.button.text}</a>
           </p>
         </div>
       </div>
@@ -353,12 +311,12 @@ function downcaseCapitalize(s: string) {
     <div class="four spacing"></div>
     <div class="row">
       <div class="large-8 columns">
-        <h3 class="white">Training designed for you.</h3>
-        <p>We can give you a personalised programme for your unique goals, abilities, time and budget. No charge. </p>
+        <h3 class="white">{home.training_callout.title}</h3>
+        <p>{home.training_callout.body}</p>
       </div>
       <div class="large-4 columns">
         <p>
-          <a class="button small boxed" href={withBase('/portfolio/full-time-pro-training/')} target="_blank">Learn More</a>
+          <a class="button small boxed" href={withBase(home.training_callout.button.url)} target={home.training_callout.button.target}>{home.training_callout.button.text}</a>
         </p>
       </div>
     </div>

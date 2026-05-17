@@ -7,20 +7,20 @@
 //
 // SCHEMA MIRROR — the other file is astro/public/admin/config.yml.
 // Keep these in sync field-for-field for posts + works + landing-pages
-// (Phase 5, P5-E; landing-pages added 2026-05-16 task #207).
+// + homepage (Phase 5, P5-E; landing-pages added 2026-05-16 task #207;
+// homepage singleton added 2026-05-17 task #210).
 // When you change a field here, change it there too (and vice versa).
 
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, reference, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 // Sveltia writes '' for empty string fields and null for empty object/list
 // fields (rather than omitting them). Zod's .optional() only accepts undefined,
-// so we normalise '' and null → undefined before validation. Without this
-// preprocess, every Sveltia-created entry with an unset optional field fails
-// the build with an InvalidContentEntryDataError. First encountered 2026-05-16
-// task #207 on landing-pages (Cord hotfix c18b5f6); generalised to every
-// collection 2026-05-17 task #209 — posts and works could hit the same trap
-// if Mark creates an entry via Sveltia with unset optional fields.
+// so we normalise '', null, and empty arrays → undefined before validation.
+// Without this preprocess, every Sveltia-created entry with an unset optional
+// field fails the build with an InvalidContentEntryDataError. First encountered
+// 2026-05-16 task #207 on landing-pages (Cord hotfix c18b5f6); generalised to
+// every collection 2026-05-17 task #210 (closes #209).
 const emptyToUndef = (val: unknown) =>
   val === '' || val === null ? undefined : val;
 
@@ -113,4 +113,157 @@ const landingPages = defineCollection({
   }),
 });
 
-export const collections = { pages, posts, works, 'landing-pages': landingPages };
+// `homepage` — Sveltia-editable singleton for the apex one-pager (task #210,
+// 2026-05-17). Folder contains exactly one entry: index.md. Sveltia mounts it
+// as a files-collection (label: "Homepage"), so Mark sees one entry he can
+// edit — no create/delete.
+//
+// The schema is rich: every editable homepage block has its own object. Order
+// of blocks on the page is fixed by src/pages/index.astro (the renderer);
+// fields in the schema control the *content* of each block. Auto-pulled
+// blocks (latest 3 posts, GHL newsletter form, Address+Vimeo, Social block,
+// FooterMenu) stay code-driven and are NOT in this schema.
+//
+// Field-shape choices:
+//   - Buttons everywhere use the same shape `{ text, url, target? }`. `target`
+//     is optional and defaults to undefined on render (no _blank). Keeps
+//     Sveltia forms uniform.
+//   - The hero `body_html` field accepts inline HTML (one anchor link to
+//     /#contact in production today). Rendered with set:html. Mark is the
+//     sole editor — XSS surface is zero. If we ever open editing to others,
+//     swap to widget: markdown and add a renderer.
+//   - `works_section.tiles[].work` uses reference('works'), so an unknown
+//     slug fails the build LOUDLY. Lift-and-shift behaviour preserved (today's
+//     code throws on missing slug; this moves the check to Zod).
+//   - `program_features` is the alternating "video parallax + dark callout"
+//     band between Vouchers/Store and Pricing. v1 has three video parallaxes
+//     and two dark callouts in alternation. Modelling it as an ordered list
+//     of discriminated items (`kind: video | callout`) preserves the v1 order
+//     AND lets Mark reorder / add / remove items in Sveltia without code
+//     changes. This is the single piece of schema design that pays off most.
+//
+// Optional fields use `emptyToUndef` preprocess everywhere (per #209 lesson).
+const buttonSchema = z.object({
+  text: z.string(),
+  url: z.string(),
+  target: z.preprocess(emptyToUndef, z.string().optional()),
+});
+
+const videoFeatureSchema = z.object({
+  kind: z.literal('video'),
+  small_title: z.string(),
+  title_lines: z.array(z.string()).min(1),
+  video_src: z.string(),
+  button: z.preprocess(emptyToUndef, buttonSchema.optional()),
+});
+
+const calloutFeatureSchema = z.object({
+  kind: z.literal('callout'),
+  title: z.string(),
+  body: z.string(),
+  button: z.preprocess(emptyToUndef, buttonSchema.optional()),
+});
+
+const homepage = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/homepage' }),
+  schema: z.object({
+    // Block 1: Hero (one-pager top). Includes the newsletter announcement
+    // paragraph as `body_html` so the inline /#contact anchor renders inline.
+    hero: z.object({
+      small_title: z.string(),
+      title_lines: z.array(z.string()).min(1),
+      cta_buttons: z.array(buttonSchema).default([]),
+      body_html: z.string(),
+      video_src: z.string(),
+    }),
+
+    // Block 3: About section.
+    about: z.object({
+      small_title: z.string(),
+      title: z.string(),
+      body: z.string(),
+      image: z.string(),
+    }),
+
+    // Block 4: Intensive callout (dark band, first one).
+    intensive: z.object({
+      title: z.string(),
+      body: z.string(),
+      button: buttonSchema,
+    }),
+
+    // Block 5: Works grid (Masonry). Tiles reference the `works` collection
+    // — unknown slugs fail the build loudly via Astro's reference() validator.
+    works_section: z.object({
+      small_title: z.string(),
+      title: z.string(),
+      intro: z.string(),
+      tiles: z
+        .array(
+          z.object({
+            work: reference('works'),
+            style: z.preprocess(emptyToUndef, z.enum(['wide']).optional()),
+          }),
+        )
+        .min(1),
+    }),
+
+    // Blocks 6 + 7: Gift Vouchers and Clothing Store (side-by-side row).
+    vouchers: z.object({
+      title: z.string(),
+      body: z.string(),
+      image: z.string(),
+      button: buttonSchema,
+    }),
+    store: z.object({
+      title: z.string(),
+      body: z.string(),
+      image: z.string(),
+      button: buttonSchema,
+    }),
+
+    // Block 8 (audit-expanded): the alternating video-parallax + dark-callout
+    // band. v1 has 3 video + 2 callout in alternation. Modelled as an
+    // ordered list so Mark can add/remove/reorder items in Sveltia.
+    program_features: z
+      .array(z.discriminatedUnion('kind', [videoFeatureSchema, calloutFeatureSchema]))
+      .default([]),
+
+    // Block 9: Pricing.
+    pricing: z.object({
+      small_title: z.string(),
+      title: z.string(),
+      cards: z
+        .array(
+          z.object({
+            title: z.string(),
+            icon: z.string(),
+            price_tiers: z.array(z.string()).default([]),
+          }),
+        )
+        .min(1),
+    }),
+
+    // Block 10: Timetable.
+    timetable: z.object({
+      title: z.string(),
+      image: z.string(),
+      button: buttonSchema,
+    }),
+
+    // Block 11: Training callout (dark band, last one before articles).
+    training_callout: z.object({
+      title: z.string(),
+      body: z.string(),
+      button: buttonSchema,
+    }),
+  }),
+});
+
+export const collections = {
+  pages,
+  posts,
+  works,
+  'landing-pages': landingPages,
+  homepage,
+};

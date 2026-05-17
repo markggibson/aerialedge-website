@@ -2,8 +2,8 @@
 # Release: https://github.com/sveltia/sveltia-cms/releases/tag/v0.159.2
 #
 # SCHEMA MIRROR — the other file is astro/src/content.config.ts.
-# Keep these in sync field-for-field for posts + works + landing-pages.
-# (landing-pages added 2026-05-16 task #207.)
+# Keep these in sync field-for-field for posts + works + landing-pages + homepage.
+# (landing-pages added 2026-05-16 task #207; homepage singleton 2026-05-17 task #210.)
 # When you change a field here, change it there too (and vice versa). See migration plan §5.
 
 backend:
@@ -162,3 +162,234 @@ collections:
       - { name: draft, label: Draft, widget: boolean, required: false, default: false }
       - { name: date, label: Date, widget: datetime, required: false, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
       - { name: body, label: Body, widget: markdown }
+
+  # ─── homepage (singleton) ─────────────────────────────────────────────────
+  # Mirrors content.config.ts `homepage` (task #210, 2026-05-17).
+  # File: astro/src/content/homepage/index.md
+  #
+  # Files-collection mode — Mark sees ONE entry called "Homepage" in the
+  # Sveltia sidebar. No create/delete. The schema is rich; every editable
+  # block on aerialedge.co.uk/ has a field here. Renderer:
+  # astro/src/pages/index.astro.
+  #
+  # Auto-pulled / hardcoded blocks (NOT in this schema):
+  #   - Latest 3 articles (auto-pulled from posts)
+  #   - GHL newsletter form + Address + Vimeo embed (ContactForm.astro)
+  #   - Social block (SocialNetworks.astro)
+  #   - FooterMenu (BaseLayout)
+  - name: homepage
+    label: Homepage
+    label_singular: Homepage
+    editor:
+      preview: false
+    files:
+      - name: index
+        label: Homepage
+        file: astro/src/content/homepage/index.md
+        fields:
+          # Block 1: Hero (one-pager top)
+          - name: hero
+            label: Hero (top of page)
+            widget: object
+            collapsed: true
+            fields:
+              - { name: small_title, label: Small title (kicker), widget: string }
+              - name: title_lines
+                label: Title lines (each line styled fir / sec / thir by position)
+                widget: list
+                hint: "Three lines for the big H1. First gets .fir, second .sec, third+ .thir."
+                field: { name: line, label: Line, widget: string }
+              - name: cta_buttons
+                label: CTA buttons (Book / Tickets / Store)
+                widget: list
+                required: false
+                default: []
+                summary: "{{fields.text}} → {{fields.url}}"
+                fields:
+                  - { name: text, label: Button text, widget: string }
+                  - { name: url, label: Button URL, widget: string }
+                  - { name: target, label: Link target (e.g. _blank), widget: string, required: false }
+              - { name: body_html, label: Body paragraph (HTML allowed for inline links), widget: text, hint: "Inline HTML allowed — used today for the 'Sign up for our newsletter' anchor." }
+              - { name: video_src, label: Hero background video src, widget: string, hint: "e.g. /assets/images/@stock/Hero2.mp4" }
+
+          # Block 3: About
+          - name: about
+            label: About section
+            widget: object
+            collapsed: true
+            fields:
+              - { name: small_title, label: Small title (kicker), widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: text }
+              - { name: image, label: Image, widget: image }
+
+          # Block 4: Intensive callout (dark band, first one)
+          - name: intensive
+            label: Intensive callout (dark band)
+            widget: object
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: text }
+              - name: button
+                label: Button
+                widget: object
+                fields:
+                  - { name: text, label: Button text, widget: string }
+                  - { name: url, label: Button URL, widget: string }
+                  - { name: target, label: Link target (e.g. _blank), widget: string, required: false }
+
+          # Block 5: Works grid (Masonry) — tiles reference the works collection
+          - name: works_section
+            label: Works grid (Masonry)
+            widget: object
+            collapsed: true
+            fields:
+              - { name: small_title, label: Small title (kicker), widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: intro, label: Intro paragraph, widget: text }
+              - name: tiles
+                label: Tiles (each references a Portfolio Work by slug)
+                widget: list
+                summary: "{{fields.work}}{{#if fields.style}} ({{fields.style}}){{/if}}"
+                hint: "Each tile points at an existing Portfolio Work by its slug. Build fails loudly if a slug doesn't exist."
+                fields:
+                  - name: work
+                    label: Work
+                    widget: relation
+                    collection: works
+                    value_field: "{{slug}}"
+                    search_fields: [title, slug]
+                    display_fields: [title]
+                  - { name: style, label: Tile style, widget: select, options: ["", "wide"], required: false, hint: "Empty = standard (500x350). 'wide' = double-width (1000x350)." }
+
+          # Blocks 6 + 7: Gift Vouchers + Clothing Store (side-by-side)
+          - name: vouchers
+            label: Gift Vouchers block
+            widget: object
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: text }
+              - { name: image, label: Image, widget: image }
+              - name: button
+                label: Button
+                widget: object
+                fields:
+                  - { name: text, label: Button text, widget: string }
+                  - { name: url, label: Button URL, widget: string }
+                  - { name: target, label: Link target (e.g. _blank), widget: string, required: false }
+
+          - name: store
+            label: Clothing Store block
+            widget: object
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: text }
+              - { name: image, label: Image, widget: image }
+              - name: button
+                label: Button
+                widget: object
+                fields:
+                  - { name: text, label: Button text, widget: string }
+                  - { name: url, label: Button URL, widget: string }
+                  - { name: target, label: Link target (e.g. _blank), widget: string, required: false }
+
+          # Block 8 (audit-expanded): the alternating video-parallax + dark-callout
+          # band. Ordered list of typed items — Mark can add / remove / reorder.
+          - name: program_features
+            label: Program features band (video parallaxes + dark callouts, alternating)
+            widget: list
+            required: false
+            default: []
+            hint: "Order matters. v1 has video → callout → video → callout → video. Add or reorder as the timetable evolves."
+            types:
+              - name: video
+                label: Video parallax
+                summary: "Video: {{fields.small_title}}"
+                widget: object
+                fields:
+                  - { name: small_title, label: Small title (kicker), widget: string }
+                  - name: title_lines
+                    label: Body lines (each renders as its own h2.thin)
+                    widget: list
+                    field: { name: line, label: Line, widget: text }
+                  - { name: video_src, label: Background video src, widget: string }
+                  - name: button
+                    label: Call-to-action button (optional)
+                    widget: object
+                    required: false
+                    collapsed: true
+                    fields:
+                      - { name: text, label: Button text, widget: string }
+                      - { name: url, label: Button URL, widget: string }
+                      - { name: target, label: Link target (e.g. _blank), widget: string, required: false }
+              - name: callout
+                label: Dark callout
+                summary: "Callout: {{fields.title}}"
+                widget: object
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: body, label: Body, widget: text }
+                  - name: button
+                    label: Call-to-action button (optional)
+                    widget: object
+                    required: false
+                    collapsed: true
+                    fields:
+                      - { name: text, label: Button text, widget: string }
+                      - { name: url, label: Button URL, widget: string }
+                      - { name: target, label: Link target (e.g. _blank), widget: string, required: false }
+
+          # Block 9: Pricing
+          - name: pricing
+            label: Pricing section
+            widget: object
+            collapsed: true
+            fields:
+              - { name: small_title, label: Small title (kicker), widget: string }
+              - { name: title, label: Title, widget: string }
+              - name: cards
+                label: Pricing cards
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { name: title, label: Card title, widget: string }
+                  - { name: icon, label: Icon (Font Awesome class), widget: string, hint: "e.g. fa fa-heart" }
+                  - name: price_tiers
+                    label: Price tiers (first renders bigger as h3, rest as h4)
+                    widget: list
+                    field: { name: tier, label: Price tier, widget: string }
+
+          # Block 10: Timetable
+          - name: timetable
+            label: Timetable block
+            widget: object
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: image, label: Timetable image, widget: image }
+              - name: button
+                label: Button
+                widget: object
+                fields:
+                  - { name: text, label: Button text, widget: string }
+                  - { name: url, label: Button URL, widget: string }
+                  - { name: target, label: Link target (e.g. _blank), widget: string, required: false }
+
+          # Block 11: Training callout (dark band, last one before articles)
+          - name: training_callout
+            label: Training callout (dark band, near the bottom)
+            widget: object
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: text }
+              - name: button
+                label: Button
+                widget: object
+                fields:
+                  - { name: text, label: Button text, widget: string }
+                  - { name: url, label: Button URL, widget: string }
+                  - { name: target, label: Link target (e.g. _blank), widget: string, required: false }
