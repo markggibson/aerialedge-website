@@ -1,0 +1,17 @@
+# Aerial Edge — apex robots.txt
+#
+# Task #219 (2026-05-17). Block crawlers from operational paths
+# while leaving the rest of the canonical site indexable.
+#
+# The /preview/ subdirectory has its own (synthesised) robots.txt
+# disallowing everything; see .github/workflows/deploy-staging.yml.
+# That file is created at deploy time inside dist/ for the staging
+# build and supersedes anything below at /preview/robots.txt.
+#
+# Defence-in-depth: every page emitted from src/pages/publish.astro
+# and src/pages/admin/ also carries a <meta name="robots" ...> noindex
+# in its <head>. This robots.txt is the second line of defence.
+
+User-agent: *
+Disallow: /publish/
+Disallow: /admin/

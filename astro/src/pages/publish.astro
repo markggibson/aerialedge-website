@@ -1,0 +1,438 @@
+---
+// publish.astro — task #219 (2026-05-17).
+//
+// One-click "Publish staging → production" page. Replaces the 4-click
+// dance through the GitHub Actions UI. Mark bookmarks
+// https://aerialedge.co.uk/publish/, lands on this page, clicks one
+// button, confirms, and the publish-to-production.yml workflow
+// dispatches. Toast appears with a link to the Actions run.
+//
+// ─────────────────────────────────────────────────────────────────────
+// AUTH MODEL — Option A: reuse Sveltia's existing GitHub OAuth token.
+// ─────────────────────────────────────────────────────────────────────
+//
+// When Mark signs into the Sveltia admin at /admin/, the GitHub OAuth
+// handshake completes via the Cloudflare Worker
+// (sveltia-auth.mark-80a.workers.dev) and Sveltia stores the resulting
+// token in browser localStorage. The token carries the `repo` scope (per
+// astro/public/admin/config.yml), which INCLUDES `workflow` permissions —
+// i.e. it can POST to the workflow_dispatch API.
+//
+// This page reads the token from localStorage and dispatches
+// publish-to-production.yml directly via the GitHub REST API. No new
+// infrastructure, no second PAT, no Worker change. Same trust boundary
+// as Sveltia itself: a token on a browser the user controls.
+//
+// Storage key shape (Sveltia / Decap convention):
+//   localStorage['sveltia-cms.user'] = JSON.stringify({ backendName: 'github', token: '<gho_...>' , ... })
+// Fallback key (older Decap fork):
+//   localStorage['decap-cms.user']    = JSON.stringify({ ... token, ... })
+//
+// If neither key exists OR neither has a `.token` field, the page shows
+// the "sign in via /admin/ first" state. Mark visits /admin/, signs in,
+// comes back. No silent failure.
+//
+// ─────────────────────────────────────────────────────────────────────
+// WHY NOT BaseLayout
+// ─────────────────────────────────────────────────────────────────────
+//
+// This is an OPERATIONAL page, not content. No header, no footer, no
+// nav. Minimal HTML so the button is the obvious focal point. Renders
+// instantly even on flaky mobile. Same noindex discipline as the
+// /preview/ build (see Head.astro guard) — this page also emits a
+// `<meta name="robots" content="noindex,nofollow,noarchive">` so it
+// never appears in search, regardless of which build (apex or preview)
+// emits it. Defence-in-depth: /robots.txt blocks /publish/ too (see
+// astro/public/robots.txt).
+//
+// ─────────────────────────────────────────────────────────────────────
+// FAILURE MODES handled in-page
+// ─────────────────────────────────────────────────────────────────────
+//   - No token in localStorage → "Sign in via /admin/ first" state.
+//   - Token present but GitHub returns 401 → "Token rejected. Sign in
+//     again via /admin/." (Sveltia tokens don't auto-expire but the
+//     OAuth app can be revoked.)
+//   - GitHub returns 422 / 404 → "Workflow not found or repo access
+//     denied." (Workflow file missing on default branch, or scope
+//     dropped from the OAuth app.)
+//   - Network failure → "Network error. Check connection and retry."
+//   - User cancels the confirm dialog → no-op, no toast.
+//
+// On success, toast shows "Workflow dispatched" with a link to the
+// publish-to-production.yml runs list. Mark watches the run there.
+
+const REPO_OWNER = 'markggibson';
+const REPO_NAME = 'aerialedge-website';
+const WORKFLOW_FILE = 'publish-to-production.yml';
+const PUBLISH_REF = 'main'; // workflow_dispatch defaults to default branch; main is correct.
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Always noindex — this page is operational, never content. -->
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <title>Publish staging → production — Aerial Edge</title>
+
+    <!-- Minimal styling, inline. No dependency on the site's CSS so this
+         page loads even if /assets/css/ is unreachable. Visual idiom
+         deliberately distinct from the public site — this is admin UX. -->
+    <style>
+      :root {
+        --bg: #0e1116;
+        --card: #161b22;
+        --card-border: #30363d;
+        --text: #e6edf3;
+        --text-dim: #8b949e;
+        --accent: #2ea043;
+        --accent-hover: #3fb950;
+        --danger: #f85149;
+        --warn: #d29922;
+        --info: #58a6ff;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        min-height: 100vh;
+      }
+      .wrap {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 4rem 1.5rem 6rem;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        padding: 2rem 2rem 2.25rem;
+      }
+      h1 {
+        margin: 0 0 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+      .lede {
+        color: var(--text-dim);
+        margin: 0 0 1.75rem;
+        font-size: 0.95rem;
+      }
+      .lede code {
+        background: rgba(110, 118, 129, 0.4);
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+        font-size: 0.9em;
+      }
+      button.publish {
+        display: block;
+        width: 100%;
+        background: var(--accent);
+        color: white;
+        border: 0;
+        padding: 0.95rem 1.25rem;
+        border-radius: 8px;
+        font-size: 1.05rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.12s ease;
+      }
+      button.publish:hover:not(:disabled) { background: var(--accent-hover); }
+      button.publish:disabled {
+        background: #3a3f47;
+        color: var(--text-dim);
+        cursor: not-allowed;
+      }
+      .signin {
+        background: rgba(210, 153, 34, 0.12);
+        border: 1px solid rgba(210, 153, 34, 0.4);
+        color: var(--text);
+        padding: 1rem 1.1rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+      .signin a {
+        color: var(--info);
+        font-weight: 500;
+      }
+      .meta {
+        margin-top: 1.25rem;
+        font-size: 0.85rem;
+        color: var(--text-dim);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .meta a { color: var(--info); text-decoration: none; }
+      .meta a:hover { text-decoration: underline; }
+      .hidden { display: none !important; }
+
+      /* Toast — bottom-right, slides up. */
+      .toast {
+        position: fixed;
+        right: 1.25rem;
+        bottom: 1.25rem;
+        max-width: 420px;
+        background: var(--card);
+        border: 1px solid var(--card-border);
+        border-left: 4px solid var(--accent);
+        border-radius: 8px;
+        padding: 0.95rem 1.1rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 0.18s ease, transform 0.18s ease;
+        pointer-events: none;
+        z-index: 100;
+      }
+      .toast.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .toast.err { border-left-color: var(--danger); }
+      .toast strong { display: block; margin-bottom: 0.25rem; font-size: 0.95rem; }
+      .toast p { margin: 0; font-size: 0.88rem; color: var(--text-dim); }
+      .toast a { color: var(--info); }
+
+      /* Spinner inside the button while dispatching. */
+      .spinner {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-top-color: white;
+        border-radius: 50%;
+        animation: spin 0.7s linear infinite;
+        vertical-align: -0.15em;
+        margin-right: 0.5rem;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <h1>Publish staging → production</h1>
+        <p class="lede">
+          This promotes the current <code>staging</code> branch to <code>main</code>.
+          The change becomes live at <code>aerialedge.co.uk/</code> in about three minutes.
+        </p>
+
+        <!-- Signed-out state. JS toggles this on/off based on localStorage token. -->
+        <div id="signin" class="signin hidden">
+          <strong>Sign in first.</strong>
+          You're not signed in to the Sveltia admin. Open
+          <a href="/admin/">/admin/</a>, sign in with GitHub, then come back here.
+        </div>
+
+        <!-- Signed-in state. The publish button. -->
+        <button id="publishBtn" class="publish hidden" type="button">
+          Publish to production
+        </button>
+
+        <div class="meta">
+          <a href="https://aerialedge.co.uk/preview/" target="_blank" rel="noopener">View /preview/</a>
+          <a
+            id="actionsLink"
+            href={`https://github.com/${REPO_OWNER}/${REPO_NAME}/actions/workflows/${WORKFLOW_FILE}`}
+            target="_blank"
+            rel="noopener"
+          >Workflow runs ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast — outside .wrap so position:fixed isn't affected by transforms on ancestors. -->
+    <div id="toast" class="toast" role="status" aria-live="polite">
+      <strong id="toastTitle"></strong>
+      <p id="toastBody"></p>
+    </div>
+
+    <script
+      is:inline
+      define:vars={{
+        REPO_OWNER,
+        REPO_NAME,
+        WORKFLOW_FILE,
+        PUBLISH_REF,
+      }}
+    >
+      // ─── Token discovery ────────────────────────────────────────────
+      // Sveltia (and the Decap fork it descends from) store the auth
+      // payload under one of two keys. We check both.
+      const STORAGE_KEYS = ['sveltia-cms.user', 'decap-cms.user'];
+
+      function readToken() {
+        for (const key of STORAGE_KEYS) {
+          try {
+            const raw = localStorage.getItem(key);
+            if (!raw) continue;
+            const parsed = JSON.parse(raw);
+            if (parsed && typeof parsed.token === 'string' && parsed.token.length > 0) {
+              return parsed.token;
+            }
+          } catch (e) {
+            // localStorage entry corrupt — fall through to the next key.
+          }
+        }
+        return null;
+      }
+
+      // ─── UI elements ────────────────────────────────────────────────
+      const signinEl = document.getElementById('signin');
+      const publishBtn = document.getElementById('publishBtn');
+      const toastEl = document.getElementById('toast');
+      const toastTitle = document.getElementById('toastTitle');
+      const toastBody = document.getElementById('toastBody');
+
+      function showSignedOut() {
+        signinEl.classList.remove('hidden');
+        publishBtn.classList.add('hidden');
+      }
+
+      function showSignedIn() {
+        signinEl.classList.add('hidden');
+        publishBtn.classList.remove('hidden');
+      }
+
+      let toastTimer = null;
+      function toast({ title, body, kind = 'ok', sticky = false }) {
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTitle.textContent = title;
+        // body may contain a link — accept HTML for that case only.
+        toastBody.innerHTML = body;
+        toastEl.classList.toggle('err', kind === 'err');
+        toastEl.classList.add('show');
+        if (!sticky) {
+          toastTimer = setTimeout(() => toastEl.classList.remove('show'), 8000);
+        }
+      }
+
+      // ─── Dispatch ───────────────────────────────────────────────────
+      async function dispatchPublish() {
+        const token = readToken();
+        if (!token) {
+          // Token went away between page load and click. Re-render.
+          showSignedOut();
+          toast({
+            title: 'Not signed in',
+            body: 'Sign in via <a href="/admin/">/admin/</a> first, then retry.',
+            kind: 'err',
+          });
+          return;
+        }
+
+        const ok = window.confirm(
+          'Are you sure?\n\nThis will publish the current staging branch to live production at aerialedge.co.uk/. The change goes live in about three minutes.'
+        );
+        if (!ok) return;
+
+        // Lock the button — disable + spinner — until the API call returns.
+        publishBtn.disabled = true;
+        const originalLabel = publishBtn.textContent;
+        publishBtn.innerHTML = '<span class="spinner"></span>Dispatching…';
+
+        const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/actions/workflows/${WORKFLOW_FILE}/dispatches`;
+
+        try {
+          const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/vnd.github+json',
+              'Authorization': `Bearer ${token}`,
+              'Content-Type': 'application/json',
+              'X-GitHub-Api-Version': '2022-11-28',
+            },
+            body: JSON.stringify({
+              ref: PUBLISH_REF,
+              inputs: {
+                // publish-to-production.yml requires this exact literal.
+                confirm: 'publish',
+              },
+            }),
+          });
+
+          if (response.status === 204) {
+            // 204 No Content = success per the GitHub API contract.
+            const runsUrl = `https://github.com/${REPO_OWNER}/${REPO_NAME}/actions/workflows/${WORKFLOW_FILE}`;
+            toast({
+              title: 'Workflow dispatched.',
+              body: `Watch the run at <a href="${runsUrl}" target="_blank" rel="noopener">GitHub Actions ↗</a>. Apex updates in ~3 min.`,
+            });
+            publishBtn.innerHTML = originalLabel;
+            // Soft-cooldown: keep the button disabled for 10s so Mark
+            // doesn't double-click and queue two publishes in a row.
+            setTimeout(() => { publishBtn.disabled = false; }, 10000);
+            return;
+          }
+
+          // Non-204: parse the error body for a clearer message.
+          let detail = '';
+          try {
+            const body = await response.json();
+            detail = body && body.message ? body.message : '';
+          } catch (e) { /* non-JSON body — leave detail empty */ }
+
+          if (response.status === 401) {
+            toast({
+              title: 'Token rejected.',
+              body: 'GitHub rejected the auth token. Sign in again via <a href="/admin/">/admin/</a>.',
+              kind: 'err',
+            });
+          } else if (response.status === 403) {
+            toast({
+              title: 'Permission denied.',
+              body: `The signed-in account lacks workflow-dispatch permission on this repo. ${detail}`,
+              kind: 'err',
+            });
+          } else if (response.status === 404) {
+            toast({
+              title: 'Workflow not found.',
+              body: `Either the workflow file is missing on <code>${PUBLISH_REF}</code>, or the token lacks repo access. ${detail}`,
+              kind: 'err',
+            });
+          } else if (response.status === 422) {
+            toast({
+              title: 'Dispatch refused.',
+              body: `GitHub rejected the inputs. ${detail}`,
+              kind: 'err',
+            });
+          } else {
+            toast({
+              title: `HTTP ${response.status}`,
+              body: detail || 'Unexpected GitHub API response.',
+              kind: 'err',
+            });
+          }
+          publishBtn.innerHTML = originalLabel;
+          publishBtn.disabled = false;
+        } catch (err) {
+          toast({
+            title: 'Network error.',
+            body: `Couldn't reach GitHub. ${err && err.message ? err.message : ''} Check connection and retry.`,
+            kind: 'err',
+          });
+          publishBtn.innerHTML = originalLabel;
+          publishBtn.disabled = false;
+        }
+      }
+
+      // ─── Init ───────────────────────────────────────────────────────
+      if (readToken()) {
+        showSignedIn();
+      } else {
+        showSignedOut();
+      }
+      publishBtn.addEventListener('click', dispatchPublish);
+    </script>
+  </body>
+</html>
