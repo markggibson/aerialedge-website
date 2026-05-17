@@ -352,9 +352,24 @@ body.posts .modBlogPost {
   clear: both;
 }
 
-/* Hero video — drop the v1 1500px cap so the video fills any viewport.
- * Without this, on viewports taller than 1500px the hero ends at 1500px
- * and the next section peeks in below. (Task #220, 2026-05-17.) */
+/* Hero video — force the .fullscreen container to fill the visible
+ * viewport across all browsers, with Safari-specific robustness:
+ *
+ * - max-height: none — drop the v1 1500px cap (was capping hero on
+ *   viewports taller than 1500px)
+ * - min-height: 100vh — guarantee the hero is at LEAST as tall as the
+ *   visible viewport. v1's `min-height: 800px` is too short on most
+ *   desktops and was letting the next section peek through on Safari
+ *   (where `height: 100vh` sometimes computes shorter than visible
+ *   viewport due to dynamic browser-chrome accounting)
+ * - min-height: 100dvh — Safari 15.4+ "dynamic viewport height" unit
+ *   that adjusts to the currently-visible viewport. Browsers that
+ *   don't understand dvh fall back to the 100vh line above.
+ *
+ * (Task #220 round 2, 2026-05-17 — Mark reported overflow persisting
+ * after the bare max-height: none override; Safari-specific.) */
 .home-video-wrapper .fullscreen {
   max-height: none;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
