@@ -249,6 +249,45 @@ jobs:
           dangerous-clean-slate: false
 
       # ──────────────────────────────────────────────────────────────────
+      # Step B.2 — Sveltia CMS-uploaded media sync (added 2026-05-17).
+      #
+      # When Mark (or any editor) uploads an image via Sveltia, the media
+      # lands at astro/public/assets/images/cms/<file> in the repo. The
+      # Astro build copies it through to dist/assets/images/cms/<file>.
+      #
+      # BUT Step A above excludes assets/** to protect v1's 5.8 GB legacy
+      # tree at public_html/assets/. That exclusion also blocks new
+      # Sveltia-uploaded images from reaching Rochen — same pattern that
+      # bit Phase 7a's vendored-JS files (#198 / Step B above).
+      #
+      # Fix: a narrow second sync, scoped to assets/images/cms/ only.
+      # Sveltia's media_folder + public_folder in admin/config.yml are
+      # both set to this exact subtree, so it's the only place new
+      # CMS-uploaded media lives. v1's broader assets/ tree stays
+      # untouched.
+      #
+      # First discovered 2026-05-17 when Mark's hero image on the
+      # circus-challenge landing page (BIC4.jpeg) 404'd at apex despite
+      # being committed correctly. Cord hotfix; closes the gap before
+      # Mark hits it again on the homepage singleton's image fields.
+      # ──────────────────────────────────────────────────────────────────
+      - name: Sync Sveltia CMS media → /assets/images/cms/ on Rochen
+        if: steps.cutover_gate.outputs.cutover_done == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.AE_SFTP_HOST }}
+          username: ${{ secrets.AE_SFTP_USER }}
+          password: ${{ secrets.AE_SFTP_PASS }}
+          port: ${{ secrets.AE_SFTP_PORT || 21 }}
+          protocol: ftps
+          security: loose
+          local-dir: ./astro/dist/assets/images/cms/
+          server-dir: ./assets/images/cms/
+          # CRITICAL: must stay false. Orphan-delete here would touch
+          # v1's broader asset tree.
+          dangerous-clean-slate: false
+
+      # ──────────────────────────────────────────────────────────────────
       # Step C — post-deploy smoke. Hard-fail if apex doesn't serve 200,
       # OR if /v2/ references appear in the served HTML (which would
       # mean the deployed build was staging-shaped, not apex-shaped).
