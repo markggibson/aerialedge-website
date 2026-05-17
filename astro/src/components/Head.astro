@@ -28,11 +28,21 @@ const pageTitle = title ? title : siteTitle;
 
 // Canonical URL: prefer explicit prop; else use current pathname.
 const canonicalHref = canonical ?? Astro.url.pathname;
+
+// Task #215 (2026-05-17) — staging/preview SEO block. When the build is
+// running with SITE_BASE=/preview/ (i.e. import.meta.env.BASE_URL ===
+// '/preview/'), emit a robots noindex/nofollow meta tag in <head>.
+// Paired with the public_html/preview/robots.txt that deploy-staging.yml
+// drops on Rochen — robots.txt blocks crawling, the meta tag blocks
+// indexing if anything slips through. Apex prod build (BASE_URL === '/')
+// emits no such tag.
+const isPreviewBuild = import.meta.env.BASE_URL === '/preview/';
 ---
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {isPreviewBuild && <meta name="robots" content="noindex,nofollow" />}
 
   <title>{pageTitle}</title>
   <meta name="description" content={description} />

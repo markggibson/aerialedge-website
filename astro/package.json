@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "build:staging": "SITE_BASE=/v2/ astro build",
+    "build:staging": "SITE_BASE=/preview/ astro build",
     "preview": "astro preview",
     "astro": "astro"
   },

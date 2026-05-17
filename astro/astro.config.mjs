@@ -4,15 +4,21 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-// Phase 6 (task #190): env-driven `base` so the same codebase produces
-// either a root-mounted prod build (`base: '/'`) or a staging-subfolder
-// build under `base: '/v2/'`. Staging command:
-//   SITE_BASE=/v2/ npm run build
-// Anything else (dev, preview, prod build) defaults to `/`.
+// Phase 6 (task #190) — env-driven `base` so the same codebase produces
+// either a root-mounted prod build (`base: '/'`) or a sub-path build under
+// an arbitrary base like `/preview/` (or historically `/v2/`).
+//
+// Task #215 (2026-05-17): the staging/preview environment is now a
+// permanent fixture at https://aerialedge.co.uk/preview/. Builds are
+// driven by:
+//   • prod  → `npm run build`                  (base: '/')
+//   • staging → `SITE_BASE=/preview/ npm run build` (base: '/preview/')
+//
+// Anything else (dev, local preview) defaults to `/`.
 //
 // `base` is normalised to include a trailing slash so import.meta.env.
-// BASE_URL is consistent (`'/'` or `'/v2/'`). src/utils/url.ts depends
-// on that shape; keep them in sync.
+// BASE_URL is consistent (`'/'` or `'/preview/'`). src/utils/url.ts
+// depends on that shape; keep them in sync.
 const RAW_BASE = process.env.SITE_BASE ?? '/';
 const SITE_BASE = RAW_BASE.endsWith('/') ? RAW_BASE : RAW_BASE + '/';
 

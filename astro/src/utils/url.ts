@@ -1,30 +1,33 @@
 // url.ts — base-aware URL helper for internal links.
 //
 // Phase 6 (task #190) wired Astro `base` to be staging-switchable: builds
-// default to base `/` (dev / preview / prod), while staging builds run
-// with `SITE_BASE=/v2/ npm run build` and produce a build whose internal
-// URLs sit under `/v2/...`. Astro prefixes routes / page.url.* / Astro's
-// own helpers with `base` automatically, but **string literals** in
-// templates (`<a href="/portfolio/foo/">`) do not get the prefix. Wrap
+// default to base `/` (dev / local preview / prod). Task #215 (2026-05-17)
+// promoted the staging environment to a permanent fixture at
+// https://aerialedge.co.uk/preview/, so staging builds now run with
+// `SITE_BASE=/preview/ npm run build` and produce a build whose internal
+// URLs sit under `/preview/...`. Astro prefixes routes / page.url.* /
+// Astro's own helpers with `base` automatically, but **string literals**
+// in templates (`<a href="/portfolio/foo/">`) do not get the prefix. Wrap
 // any internal-page path with `withBase()` so it works both at root and
-// under `/v2/`.
+// under `/preview/`.
 //
 // Asset paths (`/assets/...`) are deliberately left as root-relative
-// literals (P6-E in the Phase 6 brief): during staging they resolve to
-// v1's `public_html/assets/` tree on the same domain. Do NOT pass asset
-// paths through `withBase()`.
+// literals (P6-E in the Phase 6 brief). Apex and /preview/ share the
+// single `public_html/assets/` tree on Rochen — that's intentional, so
+// images uploaded via Sveltia don't need to be duplicated. Do NOT pass
+// asset paths through `withBase()`.
 
-const BASE = import.meta.env.BASE_URL; // e.g. '/' or '/v2/'
+const BASE = import.meta.env.BASE_URL; // e.g. '/' or '/preview/'
 
 /**
  * Prefix a root-relative internal path with Astro's `base`.
  *
- *   withBase('/foo/')        → '/foo/'      (base '/')
- *   withBase('/foo/')        → '/v2/foo/'   (base '/v2/')
- *   withBase('/#about')      → '/#about'    (base '/')
- *   withBase('/#about')      → '/v2/#about' (base '/v2/')
- *   withBase('https://x.y')  → 'https://x.y' (absolute URLs untouched)
- *   withBase('#about')       → '#about'     (in-page anchors untouched)
+ *   withBase('/foo/')        → '/foo/'           (base '/')
+ *   withBase('/foo/')        → '/preview/foo/'   (base '/preview/')
+ *   withBase('/#about')      → '/#about'         (base '/')
+ *   withBase('/#about')      → '/preview/#about' (base '/preview/')
+ *   withBase('https://x.y')  → 'https://x.y'     (absolute URLs untouched)
+ *   withBase('#about')       → '#about'          (in-page anchors untouched)
  */
 export function withBase(path: string): string {
   if (!path) return path;
