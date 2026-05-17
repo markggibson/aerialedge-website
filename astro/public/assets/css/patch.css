@@ -351,3 +351,10 @@ body.posts .modBlogPost {
 .blahlab_line {
   clear: both;
 }
+
+/* Hero video — drop the v1 1500px cap so the video fills any viewport.
+ * Without this, on viewports taller than 1500px the hero ends at 1500px
+ * and the next section peeks in below. (Task #220, 2026-05-17.) */
+.home-video-wrapper .fullscreen {
+  max-height: none;
+}
