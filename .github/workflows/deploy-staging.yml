@@ -1,0 +1,249 @@
+# Task #215 (2026-05-17) — staging/preview auto-deploy to /preview/.
+#
+# Mirror of deploy-prod.yml, but:
+#   • triggered by push to `staging` (not `main`)
+#   • builds with SITE_BASE=/preview/ (not default '/')
+#   • uploads dist/* to public_html/preview/ (not public_html/)
+#   • no cutover gate (preview/ is its own subdir; v1-archive doesn't apply)
+#   • synthesises a noindex robots.txt into dist/ before upload, so
+#     https://aerialedge.co.uk/preview/robots.txt blocks crawlers
+#   • smoke-tests https://aerialedge.co.uk/preview/ post-deploy
+#
+# End-to-end: a Sveltia commit (or any push to `staging`) → live preview
+# at https://aerialedge.co.uk/preview/ within ~2-3 min, no terminal step.
+#
+# Mark reviews on /preview/. When he's happy, he triggers
+# publish-to-production.yml in the Actions UI, which fast-forwards main
+# to staging HEAD and lets the existing deploy-prod.yml ship to apex.
+#
+# Critical guardrails:
+#   • `dangerous-clean-slate: false` (default) — diff upload + orphan-
+#     delete INSIDE server-dir (= public_html/preview/) only. We MUST
+#     not delete anything at apex / public_html/.
+#   • The shared `assets/images/cms/` sync (Step B.2 below) mirrors
+#     deploy-prod.yml. Apex and /preview/ share `public_html/assets/`
+#     so Sveltia-uploaded media is reachable from both. That sharing is
+#     deliberate (markdown image paths stay root-relative, so they
+#     resolve under both bases on the same domain).
+#
+# Secrets required (same set as deploy-prod.yml — already on the repo):
+#   - AE_SFTP_HOST   (e.g. ftp.circushost.com)
+#   - AE_SFTP_USER
+#   - AE_SFTP_PASS
+#   - AE_SFTP_PORT   (optional — defaults to 21)
+#
+# Failure mode: any error fails this workflow loudly in the Actions UI.
+# Apex stays at the last-good state regardless — this workflow never
+# touches public_html/ root.
+
+name: Deploy staging (/preview/)
+
+on:
+  push:
+    branches:
+      - staging
+  # Manual re-run from the Actions UI (useful after rotating a secret or
+  # recovering from a transient Rochen FTP blip).
+  workflow_dispatch:
+
+# Only one staging deploy at a time. Rapid Sveltia saves batch — only the
+# newest commit deploys. Trade-off accepted (mirrors deploy-prod.yml). If
+# the cancel-in-progress behaviour leaves half-uploaded files on Rochen
+# in practice, flip to `cancel-in-progress: false`.
+concurrency:
+  group: staging-deploy
+  cancel-in-progress: true
+
+# Least-privilege token — same as deploy-prod.yml.
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    name: Build /preview/ and FTP to Rochen
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: astro
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node 26
+        uses: actions/setup-node@v4
+        with:
+          node-version: '26'
+          cache: 'npm'
+          cache-dependency-path: 'astro/package-lock.json'
+
+      - name: Install dependencies (npm ci)
+        run: npm ci
+
+      - name: Build site (SITE_BASE=/preview/)
+        env:
+          SITE_BASE: /preview/
+        # `npm run build` reads SITE_BASE from env via astro.config.mjs.
+        # Produces a build whose internal hrefs (via withBase) are
+        # prefixed `/preview/...`, and whose <head> emits
+        # `<meta name="robots" content="noindex,nofollow">`.
+        run: npm run build
+
+      - name: Sanity-check build output
+        # Same asserts as deploy-prod.yml plus the inverse /preview/-shape
+        # check: every page MUST contain /preview/ internal hrefs (else
+        # SITE_BASE failed to take effect and we'd ship an apex-shaped
+        # build into /preview/ — links would point off to apex).
+        run: |
+          test -f dist/index.html
+          test -f dist/admin/index.html
+          test -f dist/admin/config.yml
+          test -f dist/assets/javascripts/imagesloaded.pkgd.js
+          test -f dist/assets/javascripts/masonry.pkgd.min.js
+          test -f dist/assets/javascripts/menu-toggler.js
+          echo "Pages: $(find dist -name '*.html' | wc -l | tr -d ' ')"
+          # The /preview/-shape build MUST have /preview/ hrefs in its
+          # navigation. Pick a known-internal href from dist/index.html
+          # and assert it's prefixed.
+          if ! grep -q 'href="/preview/' dist/index.html; then
+            echo "::error::dist/index.html has no /preview/ internal hrefs. SITE_BASE did not take effect."
+            exit 1
+          fi
+          # Defence-in-depth: confirm the noindex meta tag landed in HEAD.
+          if ! grep -q 'name="robots" content="noindex,nofollow"' dist/index.html; then
+            echo "::error::dist/index.html missing robots noindex meta tag. Head.astro guard regressed."
+            exit 1
+          fi
+
+      # ──────────────────────────────────────────────────────────────────
+      # Synthesise dist/robots.txt before upload — becomes
+      # public_html/preview/robots.txt on Rochen and tells crawlers
+      # arriving at /preview/robots.txt to leave. Defence-in-depth with
+      # the noindex meta tag emitted by Head.astro above.
+      #
+      # File is created inline (not in the repo) because the same file
+      # at astro/public/robots.txt would also ship in the apex build and
+      # block crawling at the canonical site. Inline keeps it scoped to
+      # this workflow.
+      # ──────────────────────────────────────────────────────────────────
+      - name: Synthesise /preview/ robots.txt
+        run: |
+          cat > dist/robots.txt <<'ROBOTS'
+          # Aerial Edge staging/preview environment — task #215.
+          # Crawlers, please skip this subtree. Apex (aerialedge.co.uk/)
+          # is the canonical site.
+          User-agent: *
+          Disallow: /
+          ROBOTS
+          echo "robots.txt:"
+          cat dist/robots.txt
+
+      # ──────────────────────────────────────────────────────────────────
+      # Step A — upload dist/ → public_html/preview/ on Rochen.
+      #
+      # FTP user lands inside public_html/ so server-dir `./preview/`
+      # resolves to public_html/preview/. `dangerous-clean-slate: false`
+      # (the default) does a diff upload plus orphan-delete inside
+      # server-dir only — i.e. inside /preview/ only. Apex and v1-archive
+      # are physically out of reach of this step.
+      #
+      # `protocol: ftps` + `security: loose`: explicit-TLS on port 21,
+      # accepting Rochen's hostname-mismatched cert. Matches deploy-prod.
+      # ──────────────────────────────────────────────────────────────────
+      - name: Deploy dist/ → /preview/ on Rochen
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.AE_SFTP_HOST }}
+          username: ${{ secrets.AE_SFTP_USER }}
+          password: ${{ secrets.AE_SFTP_PASS }}
+          port: ${{ secrets.AE_SFTP_PORT || 21 }}
+          protocol: ftps
+          security: loose
+          local-dir: ./astro/dist/
+          server-dir: ./preview/
+          dangerous-clean-slate: false
+          # macOS metadata noise — mirrors deploy-prod.yml.
+          # No v1-archive / assets excludes needed here because server-dir
+          # is preview/ — those paths are physically outside the scope of
+          # this upload.
+          exclude: |
+            **/.DS_Store
+            **/._*
+
+      # ──────────────────────────────────────────────────────────────────
+      # Step B — Sveltia CMS-uploaded media sync.
+      #
+      # When Mark (or any editor) uploads an image via Sveltia, the media
+      # lands at astro/public/assets/images/cms/<file> in the repo. The
+      # Astro build copies it through to dist/assets/images/cms/<file>.
+      #
+      # For staging, the /preview/-shaped build has those files at
+      # dist/assets/images/cms/, which Step A above uploads to
+      # public_html/preview/assets/images/cms/. But markdown content
+      # references images as `/assets/images/cms/<file>` (root-relative,
+      # NOT base-prefixed — P6-E discipline), so the image needs to be
+      # reachable at public_html/assets/images/cms/<file> too.
+      #
+      # Same shared-asset pattern as deploy-prod.yml Step B.2. Mirrors
+      # CMS media into apex's shared assets tree so /preview/ pages
+      # render images correctly without duplicating files in /preview/.
+      #
+      # Side-effect: a Sveltia upload on staging puts the binary at apex
+      # too, BEFORE Mark publishes. The markdown referencing it only
+      # exists on the staging branch though — apex pages won't render
+      # the new image until publish-to-production fast-forwards main.
+      # Slight asset-vs-content skew accepted per the brief.
+      # ──────────────────────────────────────────────────────────────────
+      - name: Sync Sveltia CMS media → /assets/images/cms/ on Rochen
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.AE_SFTP_HOST }}
+          username: ${{ secrets.AE_SFTP_USER }}
+          password: ${{ secrets.AE_SFTP_PASS }}
+          port: ${{ secrets.AE_SFTP_PORT || 21 }}
+          protocol: ftps
+          security: loose
+          local-dir: ./astro/dist/assets/images/cms/
+          server-dir: ./assets/images/cms/
+          # CRITICAL: must stay false. Orphan-delete here would touch v1's
+          # broader assets/ tree.
+          dangerous-clean-slate: false
+
+      # ──────────────────────────────────────────────────────────────────
+      # Step C — post-deploy smoke. Hard-fail if /preview/ doesn't serve
+      # 200, OR if /preview/ HTML doesn't contain the /preview/-prefixed
+      # nav (which would mean the deployed build was apex-shaped, not
+      # staging-shaped), OR if robots.txt is missing.
+      # ──────────────────────────────────────────────────────────────────
+      - name: Smoke-test https://aerialedge.co.uk/preview/
+        run: |
+          status="$(curl -sIL -o /dev/null -w '%{http_code}' https://aerialedge.co.uk/preview/)"
+          echo "Preview / → HTTP $status"
+          if [ "$status" != "200" ]; then
+            echo "::error::/preview/ URL returned HTTP $status (expected 200)"
+            exit 1
+          fi
+
+          # /preview/ HTML MUST contain /preview/ in at least one internal
+          # href (proves SITE_BASE was honoured and Mark won't bounce back
+          # to apex when clicking nav links).
+          if ! curl -sL https://aerialedge.co.uk/preview/ | grep -qE 'href="/preview/'; then
+            echo "::error::/preview/ HTML has no /preview/ internal hrefs. Wrong base shipped."
+            exit 1
+          fi
+
+          # robots.txt must be present and blocking.
+          robots_status="$(curl -sIL -o /dev/null -w '%{http_code}' https://aerialedge.co.uk/preview/robots.txt)"
+          echo "robots.txt → HTTP $robots_status"
+          if [ "$robots_status" != "200" ]; then
+            echo "::error::/preview/robots.txt returned HTTP $robots_status (expected 200)"
+            exit 1
+          fi
+          if ! curl -sL https://aerialedge.co.uk/preview/robots.txt | grep -q 'Disallow: /'; then
+            echo "::error::/preview/robots.txt does not contain 'Disallow: /'"
+            exit 1
+          fi
+
+          admin_status="$(curl -sIL -o /dev/null -w '%{http_code}' https://aerialedge.co.uk/preview/admin/)"
+          echo "Admin /preview/admin/ → HTTP $admin_status"
+          # Admin probe is informational only — same as deploy-prod.yml.

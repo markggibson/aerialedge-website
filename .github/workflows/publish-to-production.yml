@@ -1,0 +1,125 @@
+# Task #215 (2026-05-17) — manual "Publish to production" promote step.
+#
+# This is the bridge from /preview/ to apex. Mark visits
+#   https://github.com/markggibson/aerialedge-website/actions/workflows/publish-to-production.yml
+# clicks "Run workflow", and the job below fast-forwards `main` to the
+# current `staging` HEAD. That push to main triggers the existing
+# deploy-prod.yml, which builds with the default base and ships to
+# https://aerialedge.co.uk/.
+#
+# Trigger model is workflow_dispatch ONLY — no push/PR trigger. Apex
+# deploys ONLY when Mark explicitly publishes.
+#
+# Permissions: `contents: write` is required so the workflow's
+# GITHUB_TOKEN can push to main. Branch protection on main (if Mark
+# enables it later) needs to allow the GitHub Actions actor through, or
+# this push will fail.
+#
+# Failure mode:
+#   • main is non-fast-forwardable from staging (someone pushed directly
+#     to main, or main diverged) → `git merge --ff-only` errors out and
+#     the workflow fails loudly. Fix-forward by rebasing staging on
+#     main, or pushing the divergent main commits back to staging.
+#   • GITHUB_TOKEN refused by org policy → swap to a fine-grained PAT
+#     stored as the AE_PUBLISH_PAT secret. Not configured today; flip
+#     the checkout `token:` line below and document it on first failure.
+
+name: Publish to production (main ← staging)
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type "publish" to confirm — fast-forwards main to current staging HEAD.'
+        required: true
+        default: ''
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    name: Fast-forward main to staging HEAD
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate confirmation input
+        run: |
+          if [ "${{ inputs.confirm }}" != "publish" ]; then
+            echo "::error::Confirmation input must be the literal string 'publish'. Got: '${{ inputs.confirm }}'"
+            exit 1
+          fi
+          echo "Confirmation OK — proceeding with publish."
+
+      # Need full history (fetch-depth: 0) and BOTH main + staging so the
+      # fast-forward merge actually has something to fast-forward to. The
+      # default actions/checkout pulls only the ref the workflow ran on
+      # (here, main because workflow_dispatch defaults to the default
+      # branch); we explicitly check out main below, then fetch staging.
+      - name: Checkout main with full history
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          # Use the workflow's GITHUB_TOKEN for the push back to origin.
+          # `permissions: contents: write` above grants this. If org
+          # policy refuses, swap to ${{ secrets.AE_PUBLISH_PAT }}.
+          persist-credentials: true
+
+      - name: Configure git identity
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch staging
+        run: |
+          git fetch origin staging:refs/remotes/origin/staging
+          echo "main HEAD:    $(git rev-parse origin/main)"
+          echo "staging HEAD: $(git rev-parse origin/staging)"
+
+      - name: Pre-flight — is main fast-forwardable to staging?
+        id: ff_check
+        run: |
+          main_sha="$(git rev-parse origin/main)"
+          staging_sha="$(git rev-parse origin/staging)"
+          if [ "$main_sha" = "$staging_sha" ]; then
+            echo "::notice::main and staging are already at the same commit ($main_sha). Nothing to publish."
+            echo "noop=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # Is main an ancestor of staging? If yes, fast-forward is safe.
+          if git merge-base --is-ancestor "$main_sha" "$staging_sha"; then
+            echo "main is an ancestor of staging — fast-forward is safe."
+            echo "noop=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "::error::main ($main_sha) is NOT an ancestor of staging ($staging_sha)."
+            echo "::error::Someone pushed directly to main, or staging has been rewound."
+            echo "::error::Fix: rebase staging on main, or cherry-pick the divergent main commits to staging."
+            exit 1
+          fi
+
+      - name: Fast-forward main → staging HEAD
+        if: steps.ff_check.outputs.noop == 'false'
+        run: |
+          # We're on main (from checkout above). Fast-forward to staging.
+          git merge --ff-only origin/staging
+          echo "Local main now at: $(git rev-parse HEAD)"
+
+      - name: Push main to origin
+        if: steps.ff_check.outputs.noop == 'false'
+        run: |
+          git push origin main
+          echo "::notice::Pushed main → origin. deploy-prod.yml will fire on this push."
+          echo "Watch: https://github.com/${{ github.repository }}/actions/workflows/deploy-prod.yml"
+
+      - name: Summary
+        run: |
+          if [ "${{ steps.ff_check.outputs.noop }}" = "true" ]; then
+            echo "Nothing to publish — main and staging are already in sync." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Published staging → main." >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "deploy-prod.yml is now firing. Watch it here:" >> "$GITHUB_STEP_SUMMARY"
+            echo "https://github.com/${{ github.repository }}/actions/workflows/deploy-prod.yml" >> "$GITHUB_STEP_SUMMARY"
+          fi
