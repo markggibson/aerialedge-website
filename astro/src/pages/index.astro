@@ -267,7 +267,13 @@ function downcaseCapitalize(s: string) {
     <div class="main-services">
       {home.pricing.cards.map((card) => (
         <div class="medium-6 large-3 columns">
-          <div class="mod modIconText moveup" data-delay="0">
+          {/* v1 carried `moveup` (+ data-delay) here as a fade-in-on-scroll
+              hook. The handler lived in jQuery + jquery.appear.js, which the
+              Phase-3 Bower strip removed. Without the JS, `.moveup` stays at
+              opacity:0 and the cards never paint. Class dropped 2026-05-17
+              (task #214 r2). If we ever re-wire a scroll-fade animation, add
+              the class back deliberately. */}
+          <div class="mod modIconText">
             <div class="icon-text-advanced">
               <div class="wrapper">
                 <div class="content">
