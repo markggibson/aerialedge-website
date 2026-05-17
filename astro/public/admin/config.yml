@@ -9,7 +9,13 @@
 backend:
   name: github
   repo: markggibson/aerialedge-website
-  branch: main
+  # Task #215 (2026-05-17): Sveltia commits land on `staging`, never on
+  # `main`. The staging branch auto-deploys to
+  # https://aerialedge.co.uk/preview/ via deploy-staging.yml. Mark promotes
+  # to apex by running the publish-to-production.yml workflow in the
+  # GitHub Actions UI, which fast-forwards main to staging HEAD and
+  # triggers the existing deploy-prod.yml.
+  branch: staging
   base_url: https://sveltia-auth.mark-80a.workers.dev
   auth_endpoint: auth
   commit_messages:
@@ -19,7 +25,9 @@ backend:
     uploadMedia: "Upload '{{path}}' (Sveltia)"
     deleteMedia: "Delete '{{path}}' (Sveltia)"
 
-# Direct-to-main commits (P5-C, 2026-05-16). No editorial workflow.
+# Direct-to-branch commits (no editorial workflow). Combined with the
+# staging→preview→publish flow above, this gives Mark a save-and-preview
+# experience with an explicit manual promote-to-prod step.
 publish_mode: simple
 
 # Media — new uploads land here. Legacy /assets/images/ tree stays Rochen-resident.
