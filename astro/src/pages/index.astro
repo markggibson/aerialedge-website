@@ -22,6 +22,7 @@
 // placeholders, commented-out customers-bg/team/blog/clients sections) are
 // untouched. They never rendered in v1; they don't render here.
 
+import { Fragment } from 'astro/jsx-runtime';
 import { getCollection, getEntry } from 'astro:content';
 import OnePageLayout from '../layouts/OnePageLayout.astro';
 import SectionTitle from '../components/SectionTitle.astro';
@@ -86,8 +87,16 @@ function downcaseCapitalize(s: string) {
           })}
         </h1>
 
-        {home.hero.cta_buttons.map((btn) => (
-          <a href={btn.url} target={btn.target} class="button small">{btn.text}</a>
+        {/* v1 hero rendered three <a class="button">s on separate source lines,
+            producing whitespace text nodes between them. Without those text
+            nodes the inline-block buttons abut with zero visible gap. We
+            interleave a literal space between consecutive buttons to
+            restore v1's between-button spacing. */}
+        {home.hero.cta_buttons.map((btn, i) => (
+          <Fragment>
+            {i > 0 && ' '}
+            <a href={btn.url} target={btn.target} class="button small">{btn.text}</a>
+          </Fragment>
         ))}
 
         <div class="two spacing"></div>
