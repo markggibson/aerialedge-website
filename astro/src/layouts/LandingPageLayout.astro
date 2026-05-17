@@ -7,31 +7,46 @@
 // course pages stay hand-built per-course; this layout is for Sveltia-created
 // campaign LPs Mark spins up without dev involvement.
 //
-// DOM order (task #213 r3 — mirrors WorkLayout's *body section* shape):
-//   1. Hero image — full-width (large-12 columns), matching the portfolio
-//      works image size; skipped entirely if `hero_image` is not set
-//   2. `four spacing` divider — same vertical rhythm WorkLayout uses between
+// DOM order (task #213 r4 — full WorkLayout visual shape: title-above-image
+// AND repeated h3-title-below-image, both at full-width):
+//   1. Title block — `section-title` div in `large-8 columns large-centered`
+//      (markup mirrors SectionTitle.astro; inlined so we can gate the kicker
+//      on `category` — see note above the body):
+//        a. Optional <p class="small-title">{category}</p> kicker
+//        b. <h2>{title}</h2>
+//   2. Hero image — full-width (large-12 columns), `width="100%"` so it fills
+//      the column (not its natural pixel width); skipped if `hero_image` unset
+//   3. `four spacing` divider — same vertical rhythm WorkLayout uses between
 //      its slider and body
-//   3. Content block in a large-12 column (text width matches image width
+//   4. Content block in a large-12 column (text width matches image width
 //      per Mark's r3 request):
-//        a. Category — small-title kicker (<p class="small-title">), only
-//           rendered when the optional `category` field is set
-//        b. Title — <h3>, matching the body-side title typography in WorkLayout
-//        c. Body markdown — rendered via <slot />
-//        d. CTA button — below body, only if both `cta.text` and `cta.url`
+//        a. Title — <h3>, repeated below image, matches WorkLayout body shape
+//        b. Body markdown — rendered via <slot />
+//        c. CTA button — below body, only if both `cta.text` and `cta.url`
 //           are set
-//   4. `four spacing` closer
+//   5. `four spacing` closer
 //
 // History:
 //   r1 (bc41157, #212) — DOM reshuffle: title block + image + body + CTA.
 //   r2 (3c1ef9e, #212) — narrowed hero to large-8 to align with body column.
-//   r3 (#213, this) — Mark's feedback: drop the title-above-image block,
-//      widen image to large-12, widen body column to large-12 (matching
-//      image), introduce optional category kicker above the title.
+//   r3 (29a28fb, #213) — REGRESSION: misread Mark's brief, dropped the
+//      title-above-image block. Image rendered at natural width (narrower
+//      than its large-12 column), and category had nowhere to surface.
+//   r4 (#213, this) — Fix r3: restore SectionTitle above image (large-8
+//      centred, smallTitle=category), add width="100%" to img, keep the
+//      repeated h3 + large-12 body block.
 //
 // WorkLayout's right-side meta sidebar and prev/next nav are intentionally
 // dropped: LPs don't carry client/date metadata and aren't browsable as a
 // series. BaseLayout's chrome (header/footer) is preserved for site styling.
+
+// Note: SectionTitle.astro requires a non-optional `smallTitle` and renders
+// it unconditionally, which would emit an empty <p class="small-title"></p>
+// when category is unset. Mark's gate explicitly requires no kicker when
+// category is unset, and the r4 guardrail says only LandingPageLayout may be
+// touched. So we inline SectionTitle's markup here and gate the kicker on
+// `category`. The DOM output matches SectionTitle exactly when category is
+// set; when unset, the empty <p> simply isn't emitted.
 
 import BaseLayout from './BaseLayout.astro';
 
@@ -46,11 +61,24 @@ export interface Props {
 const { title, description, category, hero_image, cta } = Astro.props;
 ---
 <BaseLayout title={title} description={description}>
+  <div class="full">
+    <div class="row">
+      <div class="large-8 columns large-centered">
+        <div class="section-title">
+          {category && (
+            <p class="small-title">{category}</p>
+          )}
+          <h2>{title}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
   {hero_image && (
     <div class="full no-padding">
       <div class="row">
         <div class="large-12 columns">
-          <img src={hero_image} alt="" />
+          <img src={hero_image} alt="" width="100%" />
         </div>
       </div>
     </div>
@@ -62,9 +90,6 @@ const { title, description, category, hero_image, cta } = Astro.props;
   <div class="full no-padding">
     <div class="row">
       <div class="large-12 columns">
-        {category && (
-          <p class="small-title">{category}</p>
-        )}
         <h3>{title}</h3>
         <div class="mod modBlogPost big no_bg">
           <slot />
