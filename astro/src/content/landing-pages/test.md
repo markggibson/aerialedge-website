@@ -1,5 +1,5 @@
 ---
-title: Aerial Edge Circus Challenge
+title: Aerial Edge Circus Challenge1
 slug: circus-challenge
 category: Event
 hero_image: /assets/images/cms/BIC4.jpeg
