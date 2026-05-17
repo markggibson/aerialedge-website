@@ -1,0 +1,120 @@
+# Aerial Edge cache-control policy — task #208 (2026-05-17).
+#
+# Proposal / rationale:
+#   Deliverables/website-redev/cache-control-strategy-2026-05-17/proposal.md
+#
+# WHY: Rochen serves a default `Cache-Control: public, max-age=604800`
+# (7 days) on every static asset. That worked for the legacy v1 Jekyll
+# site but breaks v2 because:
+#   - Sveltia admin assets (config.yml, index.html) are sticky in the
+#     browser for up to a week, so config changes aren't visible until
+#     a hard reload. (2026-05-16 missing-landing-pages-collection bug.)
+#   - Un-hashed CSS/JS at /assets/css/* and /assets/javascripts/* keep
+#     stale content for up to a week after deploy. (2026-05-17 four-way
+#     hero-fix CSS deploy chain misdiagnosed as failed.)
+#
+# This file overrides the default with per-path rules. LiteSpeed honours
+# Apache mod_headers / mod_expires / mod_mime syntax natively.
+#
+# Verify with: curl -I https://aerialedge.co.uk/<path>
+#
+# Order matters: more-specific rules (cms/) appear AFTER the broader
+# images/ rule so the cms/ rule is the last one applied for the overlap.
+
+# ─────────────────────────────────────────────────────────────────
+# MIME type fix — config.yml is served as application/octet-stream
+# by default. Sveltia tolerates it, but text/yaml is correct.
+# This also catches any future tool that's stricter about MIME.
+# ─────────────────────────────────────────────────────────────────
+<IfModule mod_mime.c>
+  AddType text/yaml .yml
+  AddType text/yaml .yaml
+</IfModule>
+
+<IfModule mod_headers.c>
+
+  # ─────────────────────────────────────────────────────────────────
+  # HTML — apex pages and preview pages.
+  # `no-cache` = revalidate every load (cheap 304s, not "don't cache").
+  # ─────────────────────────────────────────────────────────────────
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+
+  # Directory-index HTML (the "/" request that resolves to index.html).
+  # Apache serves index.html for "/" via DirectoryIndex, so the
+  # FilesMatch above already covers it on the wire. Belt-and-braces:
+  # a LocationMatch can cover the directory request itself.
+  <LocationMatch "^/$|^/preview/$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </LocationMatch>
+
+  # ─────────────────────────────────────────────────────────────────
+  # Sveltia admin — `no-store` so config and bundle ALWAYS refresh.
+  # Files are tiny (config.yml is 18 KB, index.html is 318 bytes).
+  # Applies to both apex /admin/ and preview /preview/admin/ (the
+  # latter only matters on the preview .htaccess but the same rule
+  # ships to both via the public/ → dist/ copy).
+  # ─────────────────────────────────────────────────────────────────
+  <LocationMatch "^/admin(/|$)|^/preview/admin(/|$)">
+    Header set Cache-Control "no-store, must-revalidate"
+    Header set Pragma "no-cache"
+  </LocationMatch>
+
+  # ─────────────────────────────────────────────────────────────────
+  # Astro content-hashed bundles — safe to cache forever.
+  # ─────────────────────────────────────────────────────────────────
+  <LocationMatch "^/_astro/">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </LocationMatch>
+
+  # Also handle the /preview/_astro/ webroot (preview deploy ships
+  # the same dist/_astro/ but at /preview/_astro/ on the wire).
+  <LocationMatch "^/preview/_astro/">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </LocationMatch>
+
+  # ─────────────────────────────────────────────────────────────────
+  # Un-hashed CSS / JS — 5-min freshness, must revalidate.
+  # This is the patch.css fix. Override the Rochen 7-day default.
+  # ─────────────────────────────────────────────────────────────────
+  <LocationMatch "^/assets/css/|^/preview/assets/css/">
+    Header set Cache-Control "public, max-age=300, must-revalidate"
+  </LocationMatch>
+
+  <LocationMatch "^/assets/javascripts/|^/preview/assets/javascripts/">
+    Header set Cache-Control "public, max-age=300, must-revalidate"
+  </LocationMatch>
+
+  # ─────────────────────────────────────────────────────────────────
+  # Fonts — stable, long-cache.
+  # ─────────────────────────────────────────────────────────────────
+  <LocationMatch "^/assets/fonts/|^/preview/assets/fonts/">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </LocationMatch>
+
+  # ─────────────────────────────────────────────────────────────────
+  # General /assets/images/ — moderate cache (1 day).
+  # Note: the more-specific /assets/images/cms/ rule below overrides
+  # this for CMS-uploaded media.
+  # ─────────────────────────────────────────────────────────────────
+  <LocationMatch "^/assets/images/|^/preview/assets/images/">
+    Header set Cache-Control "public, max-age=86400"
+  </LocationMatch>
+
+  # ─────────────────────────────────────────────────────────────────
+  # Sveltia CMS-uploaded images — short cache because Sveltia
+  # overwrites same-filename files in place. 5 min recovery window.
+  # ─────────────────────────────────────────────────────────────────
+  <LocationMatch "^/assets/images/cms/|^/preview/assets/images/cms/">
+    Header set Cache-Control "public, max-age=300, must-revalidate"
+  </LocationMatch>
+
+  # ─────────────────────────────────────────────────────────────────
+  # Future /assets/videos/ — moderate cache (1 day).
+  # ─────────────────────────────────────────────────────────────────
+  <LocationMatch "^/assets/videos/|^/preview/assets/videos/">
+    Header set Cache-Control "public, max-age=86400"
+  </LocationMatch>
+
+</IfModule>
