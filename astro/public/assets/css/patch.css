@@ -369,26 +369,31 @@ body.posts .modBlogPost {
  * vh check.
  */
 
-/* Hero video override — round 3, 2026-05-17 (task #223).
+/* #223 round-4 — real hero layout fix (shipped 2026-05-17).
  *
- * Two targeted rules to fix the home hero on short viewports (Safari,
- * 797px tall) without re-triggering the round-2 regressions:
+ * Two structural problems on the homepage hero, both unrelated to the
+ * .fullscreen height/min-height we kept trying earlier:
  *
- *   1. min-height: 100vh on .fullscreen replaces v1's hard 800px floor
- *      with a viewport-relative floor. At 797px the hero becomes 797px
- *      (kills the 3px overflow / white strip at the bottom). At taller
- *      viewports it matches viewport. v1's 1500px max-height cap is
- *      left intact — no max-height changes here.
- *   2. padding-top: 100px on .layer pushes hero content below
- *      Foundation's ~100px header line-box (.top-bar .name h1 has
- *      line-height ~7.14rem) so the AE monogram stops overlapping the
- *      small-title "Glasgow's circus school".
+ *   1. #main.top-shift { margin-top: -100px } (style.css:313) pulls the
+ *      hero up by 100px so the fixed header overlays it. On a viewport
+ *      = 100vh, the hero ends 100px short of the viewport bottom and
+ *      the next section bleeds in. Fix: hero height = 100vh + 100px.
  *
- * Deliberately not using 100dvh — round 2 had it and it didn't help.
+ *   2. .layer is position:absolute; bottom:10% — bottom-anchored.
+ *      Content flows from layer top, so top-padding makes the box
+ *      taller upward without moving text. The fixed header (~100px tall)
+ *      still overlays the small-title. Fix: top-anchor the layer at
+ *      200px (= 100px viewport offset + 100px clearance below header).
+ *
+ * Scoped to the FIRST .home-video-wrapper. The three secondary
+ * class-promo heroes (Acrobalance / Flying Trapeze / Aerial Classes)
+ * are mid-page, user has scrolled past the fixed header, no overlap
+ * risk. Verified on /preview/ before promote (see task #221 mechanism).
  */
-.home-video-wrapper .fullscreen {
-  min-height: 100vh;
+#main > .home-video-wrapper:first-of-type .fullscreen {
+  height: calc(100vh + 100px);
 }
-.home-video-wrapper .layer {
-  padding-top: 100px;
+#main > .home-video-wrapper:first-of-type .layer {
+  top: 200px;
+  bottom: auto;
 }

@@ -10,33 +10,3 @@
  *
  * Created 2026-05-17 as the resolution to task #221 (preview shared-asset gap).
  */
-
-/* #223 round-4 — real hero layout fix, staging eyeball copy.
- *
- * Round-3 was wrong: it targeted min-height and layer padding-top, neither
- * of which addresses the actual layout. Confirmed via Mark's Safari Web
- * Inspector 2026-05-17:
- *   .fullscreen min-height: 797px (round-3 rule applied, no visible effect)
- *   .layer padding-top: 100px (applied, content didn't move because layer
- *   is bottom-anchored).
- *
- * Real causes:
- *   1. #main.top-shift { margin-top: -100px } pulls hero up 100px → 100px of
- *      next section shows below hero at viewport bottom.
- *   2. .layer is position:absolute; bottom:10% — bottom-anchored. Content
- *      flows from layer top; top-padding makes box taller upward but doesn't
- *      push text away from header.
- *
- * Fix: compensate hero height for top-shift; top-anchor layer below header.
- * Scoped to FIRST .home-video-wrapper only (3 secondary class-promo heroes
- * mid-page are unaffected — no header overlap risk on them).
- */
-
-#main > .home-video-wrapper:first-of-type .fullscreen {
-  height: calc(100vh + 100px);
-}
-
-#main > .home-video-wrapper:first-of-type .layer {
-  top: 200px;
-  bottom: auto;
-}
