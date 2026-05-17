@@ -368,3 +368,27 @@ body.posts .modBlogPost {
  * only if Mark actually sees it on his current monitor — first do a
  * vh check.
  */
+
+/* Hero video override — round 3, 2026-05-17 (task #223).
+ *
+ * Two targeted rules to fix the home hero on short viewports (Safari,
+ * 797px tall) without re-triggering the round-2 regressions:
+ *
+ *   1. min-height: 100vh on .fullscreen replaces v1's hard 800px floor
+ *      with a viewport-relative floor. At 797px the hero becomes 797px
+ *      (kills the 3px overflow / white strip at the bottom). At taller
+ *      viewports it matches viewport. v1's 1500px max-height cap is
+ *      left intact — no max-height changes here.
+ *   2. padding-top: 100px on .layer pushes hero content below
+ *      Foundation's ~100px header line-box (.top-bar .name h1 has
+ *      line-height ~7.14rem) so the AE monogram stops overlapping the
+ *      small-title "Glasgow's circus school".
+ *
+ * Deliberately not using 100dvh — round 2 had it and it didn't help.
+ */
+.home-video-wrapper .fullscreen {
+  min-height: 100vh;
+}
+.home-video-wrapper .layer {
+  padding-top: 100px;
+}
