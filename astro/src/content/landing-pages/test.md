@@ -1,6 +1,7 @@
 ---
 title: Aerial Edge Circus Challenge
 slug: circus-challenge
+category: Event
 hero_image: /assets/images/cms/BIC4.jpeg
 cta: null
 draft: false
@@ -99,11 +100,8 @@ How you score points
 Only tagged Instagram Stories will be counted. To officially score a skill:
 
 1. You perform the skill
-
 2. You record yourself nailing it in a short video
-
 3. You post it to your Instagram Story
-
 4. You tag Aerial Edge (@aerial_edge)
 
 Staff will review stories and log:
