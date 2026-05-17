@@ -15,7 +15,7 @@ hero:
     - text: Clothing Store
       url: https://store.aerialedge.co.uk
       target: _blank
-  body_html: We have fun classes for all abilities, from toddlers to pensioners, and professional training too. Aerial Edge is a not-for-profit organisation, with sponsored places for people who experience barriers to participation. <a href="/index.html#contact">Sign up for our newsletter </a>to keep up with our ever-evolving schedule.
+  body_html: We have fun classes for all abilities, from toddlers to pensioners, and professional training too. Aerial Edge is a not-for-profit organisation, with sponsored places for people who experience barriers to participation. <a href="/index.html#contact">Sign up for our newsletter1 </a>to keep up with our ever-evolving schedule.
   video_src: /assets/images/@stock/Hero2.mp4
 about:
   small_title: Developing people
