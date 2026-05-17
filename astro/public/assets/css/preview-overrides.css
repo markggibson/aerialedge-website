@@ -1,0 +1,20 @@
+/* preview-overrides.css — staging-only CSS for visual review at /preview/.
+ *
+ * Loaded by Head.astro ONLY when import.meta.env.BASE_URL === '/preview/'.
+ * Apex (BASE_URL === '/') does not link this file.
+ *
+ * Workflow: drop CSS changes here, push to staging, eyeball at /preview/.
+ * Once approved, move the rules into patch.css and clear this file before
+ * promoting staging → main. preview-overrides.css should be empty (or
+ * comment-only) on main / apex deploys.
+ *
+ * Created 2026-05-17 as the resolution to task #221 (preview shared-asset gap).
+ */
+
+/* #223 round-3 hero layout — staging eyeball copy. */
+.home-video-wrapper .fullscreen {
+  min-height: 100vh;
+}
+.home-video-wrapper .layer {
+  padding-top: 100px;
+}
