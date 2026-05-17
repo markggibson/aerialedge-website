@@ -1,4 +1,5 @@
 # Task #215 (2026-05-17) — manual "Publish to production" promote step.
+# Task #218 (2026-05-17) — swap GITHUB_TOKEN → AE_PUBLISH_PAT (see below).
 #
 # This is the bridge from /preview/ to apex. Mark visits
 #   https://github.com/markggibson/aerialedge-website/actions/workflows/publish-to-production.yml
@@ -10,19 +11,27 @@
 # Trigger model is workflow_dispatch ONLY — no push/PR trigger. Apex
 # deploys ONLY when Mark explicitly publishes.
 #
-# Permissions: `contents: write` is required so the workflow's
-# GITHUB_TOKEN can push to main. Branch protection on main (if Mark
-# enables it later) needs to allow the GitHub Actions actor through, or
-# this push will fail.
+# Token: this workflow MUST push using AE_PUBLISH_PAT, not the default
+# GITHUB_TOKEN. GitHub's anti-recursion safety means pushes made by a
+# workflow using GITHUB_TOKEN do NOT trigger downstream workflows — so
+# the push to main would land, but deploy-prod.yml would never fire,
+# defeating the automation. Empirically confirmed 2026-05-17 (#217):
+# two publish runs succeeded, both required a manual deploy-prod
+# dispatch to actually ship to apex. AE_PUBLISH_PAT is a fine-grained
+# PAT scoped to this repo with `contents:write` + `actions:write`; a
+# push authenticated with it DOES trigger deploy-prod.yml.
+#
+# Permissions: `contents: write` on the job stays as belt-and-braces,
+# but the actual push uses the PAT-based remote URL that
+# actions/checkout writes into .git/config when given `token:`.
 #
 # Failure mode:
 #   • main is non-fast-forwardable from staging (someone pushed directly
 #     to main, or main diverged) → `git merge --ff-only` errors out and
 #     the workflow fails loudly. Fix-forward by rebasing staging on
 #     main, or pushing the divergent main commits back to staging.
-#   • GITHUB_TOKEN refused by org policy → swap to a fine-grained PAT
-#     stored as the AE_PUBLISH_PAT secret. Not configured today; flip
-#     the checkout `token:` line below and document it on first failure.
+#   • AE_PUBLISH_PAT missing or expired → checkout step fails with an
+#     auth error. Rotate the PAT in repo Settings → Secrets and re-run.
 
 name: Publish to production (main ← staging)
 
@@ -62,9 +71,15 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-          # Use the workflow's GITHUB_TOKEN for the push back to origin.
-          # `permissions: contents: write` above grants this. If org
-          # policy refuses, swap to ${{ secrets.AE_PUBLISH_PAT }}.
+          # Push back to origin using AE_PUBLISH_PAT (fine-grained PAT,
+          # contents:write + actions:write on this repo). Required: a
+          # push made by the default GITHUB_TOKEN does NOT trigger
+          # downstream workflows (anti-recursion safety), so deploy-prod
+          # would never auto-fire. The PAT bypasses that gate.
+          # actions/checkout writes the token into .git/config as the
+          # remote URL credential, so the later `git push` picks it up
+          # implicitly.
+          token: ${{ secrets.AE_PUBLISH_PAT }}
           persist-credentials: true
 
       - name: Configure git identity
