@@ -36,7 +36,7 @@ Aerial Edge Circus School is a not-for-profit organisation so there's a standard
 
 Simply click[ this link](https://goteamup.com/p/3751555-aerial-edge-circus-school/memberships/273489/) to go to our booking system, called TeamUp. We have set up a special membership for this event – don't worry, you're not signing up to anything beyond this event. Membership is just the word that TeamUp uses for this kind of thing.  
 
-Again, the system will show the cost of the membership, but you can use the code on the leaflet from the shopping centre and the cost will go to zero.
+Again, the system will show the cost of the membership, but you can use the code on the leaflet from the shopping centre and the cost will go to zero at checkout.
 
 Simply fill in the registration details then go to the schedule on TeamUp – there's a tab at the very top of the page saying 'Schedule'. Scroll down to Saturday 25th July. You'll see the 30-min taster classes listed. 
 
