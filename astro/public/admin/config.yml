@@ -124,6 +124,11 @@ collections:
         fields:
           - { name: text, label: Link text, widget: string }
           - { name: url, label: Link URL, widget: string }
+      # Task #312 stage 2 (2026-05-26) — SEO meta. Optional. When set, these
+      # drive the page <title> and <meta description> while the visible H3
+      # and SectionTitle keep using `title` above.
+      - { name: metaTitle, label: "SEO meta title (optional)", widget: string, required: false, hint: "Page <title>. ~50-60 chars. Falls back to Title above if blank." }
+      - { name: metaDescription, label: "SEO meta description (optional)", widget: text, required: false, hint: "Page <meta description>. ~150-155 chars. Falls back to site default if blank." }
       - { name: body, label: Body, widget: markdown }
 
   # ─── landing-pages ────────────────────────────────────────────────────────

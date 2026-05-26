@@ -7,6 +7,8 @@ slides:
 categories:
   - Workshops
 date: February 2023
+metaTitle: "Circus Parties & Private Lessons in Glasgow | Aerial Edge"
+metaDescription: "Circus parties and private lessons in Glasgow. Hens, stags, birthdays and team-building from £299 for up to 9 people. 90 minutes for up to 9 people."
 ---
 ### Parties
 

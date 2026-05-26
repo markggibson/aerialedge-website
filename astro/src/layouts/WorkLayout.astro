@@ -20,6 +20,12 @@ import { withBase } from '../utils/url';
 export interface Props {
   title: string;
   description?: string;
+  // Task #312 stage 2 (2026-05-26) — SEO meta. When set, override the
+  // visible `title` for the page <title>, and override the BaseLayout
+  // default for <meta description>. The visible H3 + SectionTitle keep
+  // using `title`.
+  metaTitle?: string;
+  metaDescription?: string;
   categories?: string[];
   slides?: string[];
   client?: string;
@@ -36,6 +42,8 @@ export interface Props {
 const {
   title,
   description,
+  metaTitle,
+  metaDescription,
   categories = [],
   slides = [],
   client,
@@ -48,6 +56,8 @@ const {
 
 const smallTitle = categories.join(' & ');
 const sectionTitleText = title.charAt(0).toUpperCase() + title.slice(1).toLowerCase();
+const headTitle = metaTitle ?? title;
+const headDescription = metaDescription ?? description;
 
 function formatDate(d: Date | string): string {
   const obj = typeof d === 'string' ? new Date(d) : d;
@@ -55,7 +65,7 @@ function formatDate(d: Date | string): string {
   return obj.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 }
 ---
-<BaseLayout title={title} description={description}>
+<BaseLayout title={headTitle} description={headDescription}>
   <div class="full">
     <div class="row">
       <div class="large-8 columns large-centered">

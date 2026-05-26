@@ -67,6 +67,13 @@ const works = defineCollection({
         })
         .optional(),
     ),
+    // Task #312 stage 2 (2026-05-26) — SEO meta. Separate from `title` so
+    // the visible page H3 + SectionTitle keep the short human label, while
+    // the <title> and <meta description> can carry the longer SERP-shaped
+    // string. Both optional; pages fall back to `title` + the BaseLayout
+    // default description when absent.
+    metaTitle: z.preprocess(emptyToUndef, z.string().optional()),
+    metaDescription: z.preprocess(emptyToUndef, z.string().optional()),
   }),
 });
 
