@@ -15,19 +15,51 @@ export interface Props {
   title?: string;
   description?: string;
   canonical?: string;
+  /**
+   * Optional per-page Open Graph image. Root-relative path (e.g.
+   * `/assets/images/foo.jpg`) — Head.astro will absolutise it against
+   * the canonical site origin. Falls back to the site logo if absent.
+   *
+   * NOTE: the fallback /assets/images/AELogoWhiteOnly.png is the
+   * brandmark, not a 1200x630 OG-ideal social card. A proper OG card
+   * is pending an Iris brief (task #312 follow-up). Once that ships,
+   * swap the OG_FALLBACK constant below.
+   */
+  ogImage?: string;
+  ogType?: string;
 }
 
 const {
   title,
   description = "Aerial Edge founded in 2007 is Glasgow's circus school. Developing people through circus.",
   canonical,
+  ogImage,
+  ogType = 'website',
 } = Astro.props;
 
 const siteTitle = 'Aerial Edge';
 const pageTitle = title ? title : siteTitle;
 
-// Canonical URL: prefer explicit prop; else use current pathname.
-const canonicalHref = canonical ?? Astro.url.pathname;
+// Task #312 (2026-05-26) — canonical site origin for absolute URLs in
+// canonical / OG / Twitter / JSON-LD. The apex URL never changes per
+// build target; staging-vs-apex shape is handled by stripping the
+// /preview/ prefix from the path below before composing canonical.
+const SITE_ORIGIN = 'https://aerialedge.co.uk';
+
+// Canonical URL: prefer explicit prop; else derive from current pathname.
+// Strip any `/preview/` prefix so canonical always points to the apex
+// version of the page (per Mark's #312 decision). On apex builds
+// BASE_URL is `/` so the stripping is a no-op; on staging builds
+// BASE_URL is `/preview/` and we want the canonical href to advertise
+// the apex URL rather than the staging-shaped one.
+const rawPath = canonical ?? Astro.url.pathname;
+const canonicalPath = rawPath.replace(/^\/preview(\/|$)/, '/');
+const canonicalHref = new URL(canonicalPath, SITE_ORIGIN).href;
+
+// Open Graph image — absolute URL required by the spec. Default is the
+// AE logo; a per-page override comes through `ogImage`.
+const OG_FALLBACK = '/assets/images/AELogoWhiteOnly.png';
+const ogImageHref = new URL(ogImage ?? OG_FALLBACK, SITE_ORIGIN).href;
 
 // Task #215 (2026-05-17) — staging/preview SEO block. When the build is
 // running with SITE_BASE=/preview/ (i.e. import.meta.env.BASE_URL ===
@@ -46,6 +78,31 @@ const isPreviewBuild = import.meta.env.BASE_URL === '/preview/';
 
   <title>{pageTitle}</title>
   <meta name="description" content={description} />
+
+  {/*
+    Task #312 (2026-05-26) — Open Graph + Twitter Card meta tags.
+
+    Renders absolute URLs against https://aerialedge.co.uk (the
+    canonical apex). On staging builds the canonical/og:url get the
+    /preview/ prefix stripped so social shares of /preview/ URLs still
+    advertise the apex page — staging traffic is robots-blocked anyway,
+    but the head shape is the same as apex (defence in depth).
+
+    og:image defaults to /assets/images/AELogoWhiteOnly.png. That is
+    the brandmark, not a purpose-built 1200x630 social card. A proper
+    OG image is pending an Iris brief (#312 follow-up).
+  */}
+  <meta property="og:type" content={ogType} />
+  <meta property="og:site_name" content={siteTitle} />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalHref} />
+  <meta property="og:image" content={ogImageHref} />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={pageTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageHref} />
 
   <link rel="stylesheet" href="/assets/css/foundation.css" />
   <link rel="stylesheet" href="/assets/css/style.css" />
