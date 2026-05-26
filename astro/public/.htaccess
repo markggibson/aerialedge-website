@@ -1,3 +1,41 @@
+# Aerial Edge — apex canonical redirects + cache-control policy.
+#
+# ─────────────────────────────────────────────────────────────────
+# Section 1 — Canonical-host 301s (task #312, 2026-05-26).
+#
+# Force every request to https://aerialedge.co.uk (no www, no http).
+# Splits previously caused link-equity dilution + duplicate-content
+# noise (audit findings A2/A3, Deliverables/website-seo-audit-2026-05-17).
+#
+# Rules:
+#   - http://aerialedge.co.uk/*       → https://aerialedge.co.uk/*
+#   - https://www.aerialedge.co.uk/*  → https://aerialedge.co.uk/*
+#   - http://www.aerialedge.co.uk/*   → https://aerialedge.co.uk/*
+#
+# Implemented as two mod_rewrite rules:
+#   - one match-by-host for www (covers http+https www together)
+#   - one match-by-scheme for http (covers apex http)
+#
+# These rules are no-ops inside /preview/ — the staging build lives
+# under public_html/preview/, served at https://aerialedge.co.uk/preview/.
+# Requests there already arrive as https + apex, so no redirect fires.
+# ─────────────────────────────────────────────────────────────────
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1. Strip the www. subdomain (https→https, http→http; the http→https
+  #    rule below then upgrades the scheme on the second pass).
+  RewriteCond %{HTTP_HOST} ^www\.aerialedge\.co\.uk$ [NC]
+  RewriteRule ^(.*)$ https://aerialedge.co.uk/$1 [R=301,L]
+
+  # 2. Force HTTPS on the apex host. %{HTTPS} is "off" on cleartext
+  #    requests, "on" on TLS — LiteSpeed honours both per Apache spec.
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP_HOST} ^aerialedge\.co\.uk$ [NC]
+  RewriteRule ^(.*)$ https://aerialedge.co.uk/$1 [R=301,L]
+</IfModule>
+
 # Aerial Edge cache-control policy — task #208 (2026-05-17).
 #
 # Proposal / rationale:
