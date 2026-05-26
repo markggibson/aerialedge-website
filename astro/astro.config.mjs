@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -24,7 +25,16 @@ const SITE_BASE = RAW_BASE.endsWith('/') ? RAW_BASE : RAW_BASE + '/';
 
 // Lift-and-shift discipline: no integrations beyond what the migration
 // genuinely needs.
+//
+// Task #312 (2026-05-26) — SEO foundation. Set `site` so absolute URLs
+// (canonical, OG, JSON-LD) can be constructed and so @astrojs/sitemap
+// can emit absolute <loc> entries. `site` is the apex URL — staging
+// builds still produce a sitemap, but the staging robots.txt
+// (synthesised by deploy-staging.yml) blocks crawling anyway and the
+// per-page <meta name="robots" content="noindex,nofollow"> guard in
+// Head.astro is the second line of defence.
 export default defineConfig({
+  site: 'https://aerialedge.co.uk',
   // Output is fully static (Rochen shared hosting target).
   output: 'static',
   base: SITE_BASE,
@@ -37,6 +47,12 @@ export default defineConfig({
   // them. The post-build integration below flattens those folders so the
   // server delivers the same path v1 inbound links target.
   integrations: [
+    // Task #312 — XML sitemap. Excludes operational paths (admin, publish)
+    // that already carry noindex meta tags + robots.txt Disallow.
+    sitemap({
+      filter: (page) =>
+        !page.includes('/admin/') && !page.includes('/publish/'),
+    }),
     {
       name: 'flatten-html-suffix-routes',
       hooks: {

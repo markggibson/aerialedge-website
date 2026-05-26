@@ -15,3 +15,6 @@
 User-agent: *
 Disallow: /publish/
 Disallow: /admin/
+
+# Task #312 (2026-05-26) — sitemap pointer for crawlers.
+Sitemap: https://aerialedge.co.uk/sitemap-index.xml
