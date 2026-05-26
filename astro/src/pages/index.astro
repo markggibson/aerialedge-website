@@ -61,6 +61,59 @@ const works = home.works_section.tiles.map((tile) => {
 function downcaseCapitalize(s: string) {
   return s.length === 0 ? s : s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
 }
+
+// Task #312 (2026-05-26) — Organization + LocalBusiness JSON-LD.
+// Homepage-only (do NOT lift this into Head.astro / BaseLayout).
+//
+// Postcode + opening hours per Mark's decisions in the #312 brief:
+//   - G51 2YU (LocalBusiness postalCode)
+//   - Saturday OMITTED (variable per workshop/event schedule). Schema
+//     is valid without it; events page on the site is the canonical
+//     Saturday source.
+//
+// sameAs URLs mirror SocialNetworks.astro. Phone, address pulled from
+// the same components (ContactForm.astro / SocialNetworks.astro) — if
+// those change, update here too.
+const SITE_ORIGIN = 'https://aerialedge.co.uk';
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${SITE_ORIGIN}/#organization`,
+  name: 'Aerial Edge',
+  url: SITE_ORIGIN,
+  logo: `${SITE_ORIGIN}/assets/images/AELogoWhiteOnly.png`,
+  sameAs: [
+    'https://www.facebook.com/AerialEdge',
+    'https://www.tiktok.com/@aerial_edge',
+    'https://www.instagram.com/aerial_edge',
+    'https://www.youtube.com/channel/UC3ddYR4rWSMZCAhYmRZZ8YQ',
+  ],
+};
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${SITE_ORIGIN}/#localbusiness`,
+  name: 'Aerial Edge',
+  url: SITE_ORIGIN,
+  telephone: '+447414438501',
+  image: `${SITE_ORIGIN}/assets/images/AELogoWhiteOnly.png`,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '240 Edmiston Drive',
+    addressLocality: 'Glasgow',
+    postalCode: 'G51 2YU',
+    addressCountry: 'GB',
+  },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Monday',    opens: '10:00', closes: '22:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Tuesday',   opens: '10:00', closes: '22:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Wednesday', opens: '10:00', closes: '22:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Thursday',  opens: '10:00', closes: '20:30' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday',    opens: '10:00', closes: '21:00' },
+    // Saturday omitted intentionally — varies by workshop/event.
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Sunday',    opens: '10:00', closes: '17:30' },
+  ],
+};
 ---
 <OnePageLayout title="Aerial Edge">
 
@@ -377,6 +430,16 @@ function downcaseCapitalize(s: string) {
   <ContactForm />
 
   <SocialNetworks />
+
+  {/*
+    Task #312 (2026-05-26) — Organization + LocalBusiness JSON-LD.
+    Homepage-only. Built in the frontmatter above; rendered here as
+    two separate <script type="application/ld+json"> blocks per
+    schema.org guidance (one block per primary entity, joined by
+    @id refs if cross-linking is needed later).
+  */}
+  <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
 
   {/*
     Homepage-only JS: vendored Masonry + imagesloaded to lay out the
