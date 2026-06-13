@@ -19,7 +19,7 @@ PLUS young stars of the shows
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k0tzqzgQhX-N2CUFAmNYaOFHlPGNE3vs-HU3lB5trBgkLGQM_PopJ7dmpurmblvdqtNfnyMyJclyx574S8vz_XRlHU3iW9J6kgjph8L3pCmZ0kQY7ZhwjwysYgXIHB6Febyef71n5qbB1idVZa6rgBRGMKfMV116QIJhHOMoxTjxoGSqyEqoa5bDXcBrPbPNoWi37Y9muTnNlnlU_er6_EywsmIq1_-r3cfiNMLHkMUJF5hzzv0oDUKOsQe6UdboErQjlTXyKu5SvBPhIQsTMRDDhPuRkIMIEuHL5BjEGEQEQ08R7ONBgLEfxNHQTx6HQQCpDCIGQsj0yFHk_5FEQU7OVTUKRwhThCmr1G9NCNPPJR4qC42CG8KUpsFzFULC1s-FO4YbPeq3CNPvoKCQOlVCVjtWViic_gcVD1OvENkXIKUdWM0KssG0ls_b8z5I5wuEx_5o_Zxv1bp58ze4-8vvXm1Qpy5X17bb1UV76pJo98ov1MyD4Wo8iBeTfu4Kk3QbWPSj49K_NTfdJD8m837v_43w-AMuGz1Li4_Gv9Vvb7vZvplCP7kiPN5F62TB626z7PvJy_HFvF_idr2C_Qxh-l5ty9VlESM8niJMF53YH07vP80U6OX1Y3ThBxhoKg-gB1z2P5ntx4MC4XErDu19aBu088qUp3Vzfnq_rUqEx92BHtnHC8J0Yruno9nkKJx6hfn0-HeQvRLcyUjCKuUZq3KlCb8W54dPiF5lTaMkWFIAk8JoDcIZ61lSMntGkf_b-WtztQLI13lV3TzcjD2D9dw9DNm3AhwRpsy-zZ8j4LJ_jd8Q_E8AAAD__2SGQH8)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-01.png)
 
 Youth Circus performers made themselves and everyone else proud
 
@@ -181,21 +181,17 @@ Your Youth Circus membership will roll on automatically through the two-week Chr
 
 At the end of every month, we award a free class for the social post that makes us smile the most. It could be a triumph with a trick, or a magic moment for emotional reasons, or something that makes you laugh. Just tag us @aerial_edge (rather than doing it by location). And remember, if it's in your Insta stories, it will have disappeared by the time we're looking to award the prize! Best to make it a post/reel or highlight it.
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
+![Aerial Edge Gift Vouchers come in various values, tap the image to buy one](/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-11.jpg)
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
+![Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus](/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-12.png)
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -217,15 +213,26 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-02.jpg` (549 KB) — alt: (none)
-- `/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-03.png` (525 KB) — alt: (none)
-- `/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-04.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-05.png` (413 KB) — alt: (none)
-- `/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-06.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-07.jpg` (758 KB) — alt: (none)
-- `/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-08.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-09.gif` (5197 KB) — alt: (none)
-- `/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-10.png` (8 KB) — alt: (none)
-- `/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-11.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one
-- `/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-12.png` (2341 KB) — alt: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus
+![](/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-02.jpg)
+
+![](/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-03.png)
+
+![](/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-04.png)
+
+![](/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-05.png)
+
+![](/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-06.png)
+
+![](/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-07.jpg)
+
+![](/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-08.png)
+
+![](/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-09.gif)
+
+![](/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-10.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)
+- _Rendered inline:_ `/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-11.jpg` (741 KB, alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one)
+- _Rendered inline:_ `/assets/images/newsletter/all-you-can-eat-circus-in-feb/img-12.png` (2341 KB, alt: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus)

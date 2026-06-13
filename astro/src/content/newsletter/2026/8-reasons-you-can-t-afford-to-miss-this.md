@@ -19,7 +19,7 @@ PLUS Last few spaces on Elke's fly pole workshops
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k01zqjwcxT8N7NqBhNdFFm0VW72-VAuiGyYkESKQYAhY_fTPaO_ceWaud_vPP5mT3zmHZJyi1RaP89l3XqSjtdJR4J2Db5MiQi1ILJPKBnOBiBQaE_2MmeK4ZrRgz0Q-99Xv80yeBVNdydtMX1qGakmw5vJnTk2GbN-HrgUsD5iswbzOGtZ1uGA3AaFOtqe3izucwKzfr-P9NKl-b90fI7hpMS_E_2a3a16YOzagfs4Cl4Q2IyHEhOLAZGLgSoqGCY1aJWlPblLMEjmh43ie5VNM7NB2QOAHMGQUUJpT5obQ5AhYwLOg7dgu8B3wHGDbdz0WOq7DDi4khmP9k0SNSq3bzoAvBogMEOGW_7VkgOj-iadWsYGzswGiKLQnLWQB3kxqfYCxeLkmBogeQTFgpHnDsk7jpjXg6A9U2_cssybZDyAuNFMC1ygGUUcnSZXa4etG6tF6PAYzGAf76mMy-fpKygCu1RLPfbFNB5aq5epUwsNReXPyvqCfIR-XqxwP_WbYVmKxMMBrNE55cVZT2zstrrnOy8NYOXF03YV1kiSzoVpe-rbrpx6hYvtlgGi6ktaQwur7bS2nTpKuD2_z4y7ejzb9LjdA5LwzcZqGH9P41-XXy7X4sP1PfXVuCD8mCwNE70ewzoczf8O13A3WUX2GZb9PmzLdL-NVPYteA_96HdkJhf3pXRdzA47MWt6T_Qit2TBdSopwy02peMEFyvu6erqjM1slB06ZQjXDlEghGNFSmQo1WFWGY_1leid7RRj6MZV3w9NZqoopUyOmsz_B1bdCZA_laERkkz3s4IDAfwEAAP___ts60w)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-01.png)
 
 To make life easier, you can use this menu go direct to articles. Above each section, you'll find a timeline of relevant dates, and there are direct booking links throughout.
 
@@ -215,21 +215,16 @@ Registration is open right now, and it will shut one week before the show, to gi
 
               [Adults: register here](https://email.contact.aerialedge.co.uk/c/eJx0U01vqzoU_DWwa4VtPhdetElIm7RpmhRCs0HGdsAFbGIMafn1T8m9enrSvW87nrHmzJlDc8Hw9kAWxfq7KLP5Tps49C_ht80wZQ6ijs1US4TEVElDqLknXAvScFbye6ruh_r3e64ukuu-El1ufjqOG0WJEeoXzmyOQRAgz4GOD23eEtHkLe97UvKrgcikh_PsxxvPcD0cd8lxlda_WbfPKGk7Ikr5H-wq86PCBZAFBQ89GgFOI0QoI6HN5Si0ki2XBndasYFerdgV9groF4z5gEHkO0HACy9wCt8jDuARCE-2wNCBvoOACzwYuPA-JCDwfB65nstPHqKW6_xvEg2ujOl6Cz1YMLZgTDrxB8mC8UWwkhsLxielWwvG8GUZTcDdr9dmnO03KTg2oYViqYwmtLbQ3OiB2w3Nf00vpOFakgYnMO7ZMq0zED3ulZnvFgu4Rkl4rJ-Xy4-PtArRTr-R10AespFn-m17rtDpS_uv9GnD3iOxqLYFGYf9eKjlZmPBx3iRifKiV8A_b6bCFNVpod0knj6jJk3T9Vi__QxdP6x8yuThw4LxaqucMUP192ynVm6a7U6z16_P5DjfD5-FBWP3icvzKnpeJS8_Lw9T-QyCdzO513yelxsLxk9fcFeMFzEjjfocnS_9HlXDMWur7PiWbJt1_BgG0zQHKUPD-cmUrxaa24261TaOwLJDPCT7ZWNOKJEPU2q33FSKYdIJW2lRComLoanvbtHZnVajYFzjhhNGlZScGqVtjVuia8t1_thorwZNOb6p70Q_3l2Urrm2DeYm_7eV5tr2_K92DKaqzf96YCOG_wQAAP__sU4wbg)
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
+![Aerial Edge Gift Vouchers come in various values, tap the image to buy one](/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-12.jpg)
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -251,15 +246,27 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-02.png` (882 KB) — alt: (none)
-- `/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-03.png` (30 KB) — alt: (none)
-- `/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-04.png` (887 KB) — alt: (none)
-- `/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-05.png` (258 KB) — alt: (none)
-- `/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-06.jpg` (4438 KB) — alt: (none)
-- `/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-07.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-08.jpg` (526 KB) — alt: (none)
-- `/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-09.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-10.gif` (3614 KB) — alt: (none)
-- `/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-11.png` (8 KB) — alt: (none)
-- `/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-12.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one
+![](/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-02.png)
+
+![](/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-03.png)
+
+![](/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-04.png)
+
+![](/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-05.png)
+
+![](/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-06.jpg)
+
+![](/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-07.png)
+
+![](/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-08.jpg)
+
+![](/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-09.png)
+
+![](/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-10.gif)
+
+![](/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-11.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)
+- _Rendered inline:_ `/assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-12.jpg` (741 KB, alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one)

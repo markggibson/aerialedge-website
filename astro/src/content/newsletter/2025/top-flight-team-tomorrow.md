@@ -19,7 +19,7 @@ Open Rig Night is unmissable
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k01vqzgYhX8N7FoZm8-FFyFA2rS3TVtBSDbI2Ib48mEwTsjk14-SVqORbu729bF1_Jzz0kIwvNmSuHw5l3UefSqd-O7sn02GKQOIApPJjogeU9lrQvUj4UqQlrOaP1L5eGx-zgs591xNBzEU-p-B41ZSooX8njOTY8tzLYQcGwCTd0S0RcenidT8amAvz1_LaFdtLvknGTbLc_O0-VHdHqOkG4io-__Nrtdcvyod6Fkl9IhNGPNtUDmWZ5u8Pwkl-473Gg9KsiO9WjEP2AIeoo7jscq1vNKC3CcO9XwLIFCWnASmwBBAxwLQtgIHAPDIoQ19C1qEVtBHfmDY4K8kWnzQepgMtDBgYsCEDOIPkQGT2yceBsVPgs8GTJLAWg2I--Rr1eoKpf3ikhkwuQfFQIkWHS8mTbrBQNEPVBQEHvLNlhbfgESvuepJi1OYTGyVNbkVfCyTLlZuNPpyvR9dN3jL4iV4OWhFw7PXeGzfRR_N8r16YWz1RursYyV9TZ6-RldFqROnQaR-vx5TtMtOSwOG5ZiO3RbNqWM_2-0Fva5nJ2iTOKvB5jkO2m4zRvFbkNg5iRc0mPchzIftMcnAmXxl6zHbhPTSkAt5DZ_fa0UvpajCaNVNwecpzKljze4Wlr_y6GkfuwYMAT28j_lrvtg143K9Wn8s7N9-yhfPUV_D_XrY0fUvA0VmK2-dvgfV7Lg-SIbJIEypRC16XB7b5uEGzRyUPAnGFW45YVT2PadaKlPhjqjGsMEfcU_yqCjH33GK6fQwS9VwZepr-Yu7BjSmsivu7pvGXBf_Ff2E4b8BAAD__9bZNjM)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/top-flight-team-tomorrow/img-01.png)
 
 Don't miss our biggest Open Rig Night to date – it's tomorrow!
 
@@ -99,7 +99,7 @@ Tickets £10 (£5 child/concession)
 
               [Get in on the acts: grab tickets here](https://email.contact.aerialedge.co.uk/c/eJx0U8tyqzgU_BrYTCUlxHuhhW3AsfOykzIm3lBCElgXJIGQH-Ovn7LjmZqqm7ttHXX16dNNSk7RaovT6vlcNUXyoU0WBafobFNEKHAJsKkSmEtElDSYmEfMNMcdow17JOrx0N7fS3WSTI973pfm756hThFsuPrGqc2QEwaO6_oeADYTmHelYOOIG3YVsFPnz1nyVa8uxQfuV7Nz-7S6T93ICBY95o38H3b9FkR15cPQqWCIPUxp5IHad0LPZvLItZKCSYN6reiBXKXYexQwGFInrnwHh05cVQFlNQk9FvlhFIG6tjmCAPoOgJ4T-wCARwY9GDnQwaSGkRvFlgf-6ESH9sb0o-VOLJhZMMM9_23IgtltiQejMWm5bCyY1Yz4AfZcJ6gtN7vTL6jlJmPsrSav28n-WPl5bBbrV44tGByMKEd10IRZbnKju4OCUX4Q_4J_CaxbZrhs7I6U395xaZiWuEMbmI10nreFE69nmUh1kAyRWu6GIIjf8nQGnvdGk-k5bEO6E8m6nb3Xz5TO33CTr-cqMvjpcwh0svHTTZzoXy-HjfuVH2cWnFbDZhBb97TxvYXXXdyX5cmPuyzNG7BapHEnVkOSvsWZV-B0QuLTbgqLfnvIcnDGn_lyyFdTcmnxBb9MF--NJpeK19NkLsb44zgtiO-cgi2sXovkaZcGFpwCsn8fipdi8tUOs-V8uZ54v6INmywS2cDdsv8iy1fLTexO3eKexc68d1mEP-edqd2NnFxyWzCzVxThnttK84ZLVB269uFmmt1rdeSUadQxTImSkhGjtK3R1WDLA78l4fs46PvSfDw-nJRumbbNtRfljwIMIkqUP1bRIGbK_zpwRPCfAAAA__8eE0Ho)
 
-      [image: a halloween themed aerial circus artist against a spooky background with the words Dare you to join October Edge]
+![a halloween themed aerial circus artist against a spooky background with the words Dare you to join October Edge](/assets/images/newsletter/top-flight-team-tomorrow/img-06.png)
 
 ## TRAIN LIKE A DEMON
 
@@ -171,21 +171,15 @@ At the end of every month, we award a free class for the social post that makes 
 
 As walkovers go, it's impressive. But admit it, you wanted to see someone falling in the water! Never mind, there are plenty more exciting moments [@georgie.hutchx](https://email.contact.aerialedge.co.uk/c/eJx0U0tvszob_DWw-dTK2FwXXkCANGnTJq1CaDbI2Ib45WIwzuXLrz9K0nN0pPc9klePnxmNxzO0EAyvdyQpXy9lncefSqe-e_YvJsOUAUSByWRHRI-p7DWh-plwJUjLWc2fqXw-Nj_3hTz3XE0HMRT6_wPHraREC_mYM5Njy3MthBwbAJN3RLRFx6eJ1PwmYC8vX7P4u1pf808yrGeX5mX9s3Uno6QbiKj7f81uMNevSgd6Vgk9YhPGfBtUjuXZJu9PQsm-473Gg5LsSG9SzAMGlAIAkBd4rksqt-QUVsyCAPluAJmHTIEhgI4FoG0FDgDgmUMb-ha0CK2gj_zAsMF_OtHig9bDZKDQgKkBUzKI35YMmN4f8aQVoY3oawOmPvd97gMLMM9A6Q_9ghkongJ7Ha524eFUOlmgF5uVIAZ0j7orJnlUlBsovtMZ0BX1dDBQvLp-th9xJN53absPDRTfzgPScSaO3d-Q_3VENVyLvjZbWjycFb3mqict3sJ0YvOsya1gM0u7RLnx6MvlfnTd4D1LZuD1oBWNLl7jsX0Xb5rZR_XK2Pyd1NlmLn1NXr5GV8VbJ9kGsfr1dtyi7-w0M2BUjtux26Hz1rEXdntFb8uzE7RpktVgvUiCtluPcfIepHZOkpAG530E82F3TDNwIV_ZcszWEb025EreosVHrei1FFUUz7sp-DxFOXWss7uD5SqPX_aJa8AI0MPHmL_l4Xczzpbz5Sa0f_lbHi7ivob75fBNlysDxWYr72VIA2s-IO6Tr3mrK7Ttw2tmdlwfJMNkEKZUohY9Lo9t83Q3zRyUPAnGFW45YVT2PadaKlPhm8GGDX7LyePr8CMHYjo9naVquDL1rTXFHwVoTGVX_LGoGnNd_NOQE4Z_BQAA___F90ml)
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -207,15 +201,27 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/top-flight-team-tomorrow/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/top-flight-team-tomorrow/img-02.png` (971 KB) — alt: (none)
-- `/assets/images/newsletter/top-flight-team-tomorrow/img-03.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/top-flight-team-tomorrow/img-04.png` (848 KB) — alt: (none)
-- `/assets/images/newsletter/top-flight-team-tomorrow/img-05.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/top-flight-team-tomorrow/img-06.png` (1329 KB) — alt: a halloween themed aerial circus artist against a spooky background with the words Dare you to join October Edge
-- `/assets/images/newsletter/top-flight-team-tomorrow/img-07.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/top-flight-team-tomorrow/img-08.jpg` (1578 KB) — alt: (none)
-- `/assets/images/newsletter/top-flight-team-tomorrow/img-09.jpg` (1732 KB) — alt: (none)
-- `/assets/images/newsletter/top-flight-team-tomorrow/img-10.jpg` (270 KB) — alt: (none)
-- `/assets/images/newsletter/top-flight-team-tomorrow/img-11.png` (6 KB) — alt: (none)
-- `/assets/images/newsletter/top-flight-team-tomorrow/img-12.gif` (8915 KB) — alt: (none)
+![](/assets/images/newsletter/top-flight-team-tomorrow/img-02.png)
+
+![](/assets/images/newsletter/top-flight-team-tomorrow/img-03.png)
+
+![](/assets/images/newsletter/top-flight-team-tomorrow/img-04.png)
+
+![](/assets/images/newsletter/top-flight-team-tomorrow/img-05.png)
+
+![](/assets/images/newsletter/top-flight-team-tomorrow/img-07.png)
+
+![](/assets/images/newsletter/top-flight-team-tomorrow/img-08.jpg)
+
+![](/assets/images/newsletter/top-flight-team-tomorrow/img-09.jpg)
+
+![](/assets/images/newsletter/top-flight-team-tomorrow/img-10.jpg)
+
+![](/assets/images/newsletter/top-flight-team-tomorrow/img-11.png)
+
+![](/assets/images/newsletter/top-flight-team-tomorrow/img-12.gif)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/top-flight-team-tomorrow/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)
+- _Rendered inline:_ `/assets/images/newsletter/top-flight-team-tomorrow/img-06.png` (1329 KB, alt: a halloween themed aerial circus artist against a spooky background with the words Dare you to join October Edge)

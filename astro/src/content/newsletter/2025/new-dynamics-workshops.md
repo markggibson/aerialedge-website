@@ -19,7 +19,7 @@ PLUS Sparky Open Rig Night lined up for you
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k0tz6jgQhX-NvEvKlmywF1pAiLgBQgKEx8zGpZdtYdkysjCPXz8FuXVrqsLddrdUp78-h6dK4M8tfWXTM8t3o6V1JO6d4rMnMBc-4r4nTEVVjbmpHeXumUqrqJYil8_cPB_L3_3UnGpp20I1qbs0EmvDqVPmuy48iYN-z4-hD_vIkxVVOq1k29Jc3gTwqYkW7WDzruj2vCa_Ql20v6fun3FaNVTl9f9qt2e9OEN9KuKeFCLpM0lh1GNBJjxZd8qaupK1w4014shvUrwCZ2GSyTgSAWeC-WGcyIxFEeQs6kNGEfIUhj6MAj-IoR-GCD2zgNJb26cookzEIPT_SkLjwrmmBWgAIAGQ0Eb9GAKQ3Jd4aqzslDwBSEgSjBskY7oaa5ehdT24bgAkj6AARJyqZNo6WjUAjf5AhUnge5qn34BU7aStqcZrSFox3pS7ID61tqBrAIdvCq0UgMOXegmDiy5m02lZLci_-gAg-SLrj3yy_Xid8T2Aw_BCrtv529cOAkiSgsxUcGQ6C8vorMR77_pSwWg0nVnaludwdZqGib6IsT3rvCslX3bzz2xb8kGWsD5730NbcGr3Q1WQpfrHn4wuejI7DMikbHhLID_kG_K1WZfHRKKsW8zp7s1U_c9uQbu5nGT0Y7lnl7F4jV8uh2Udb6px6VYQ8iSZ_Rr05mcdc5RcOUAjT5u7sx-h9SrpCiMwbZRnrMpVjdlRl093dF5jTaeEtFhLKripa8mdsZ7FFbUlCP0fR2_N0XKJv4-q2u7pZGwprecwN1X6MFoOS5f-8bS7ZSV9qLTD8L8AAAD__ztwPMg)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/new-dynamics-workshops/img-01.png)
 
 Open Rig Night has first-time performers and newcomers. Pic: [Max Crawford](https://email.contact.aerialedge.co.uk/c/eJx0U8ty6ygU_Bq0mUpKAj0XLJw4-PqZ2IntzGxUCJBEhEBBWLbz9VN2PFNTdTPb5tDVp083yyXHL3v6VMxPRfU-3lhH0viYnjyOGfcR8z1uWio1ZkY7ytw9FVZSJXgl7pm5PzS399wctbB9LbvcnTuBlWHUSfONc0_gIIn9FPowQZ5oqVR5K_qeVuIigM1NtO5Hu6Wk-9OW_ApV3d-mrmSMth2Vlf4PdvkWpyVKKE9jwXmWFILCKC6CkntCD9Ia3QrtcGcNP7CLFK_GPAoLJjI_S7KkTP0A0QAVSRnSMAhhHAtPYujDKPCDFPphiNB9EVDKiijxKYpowVMQ-v_rhMK1c10P0AhAAiChnfxtCEByXeLOWcoaqSsAScBgViYhTxIIELnRTzlA4z4LX0bL_ageimiXuel6KSmA8cG1eW8OlgmAxle6G9gKLg_tP-AfLbWNcFJXnmL5t3dSO2E1VXgLSc8nu-Y9SI-9rekWwIepRK8SwIdHvYHBWdWL-bxp1-Qv9QkgeSPb52q2f35asA8AH8Iz-dqvpm_vEECS1WQhg0OhyrCJTpIv46_HFkbj-cLSvjmFr8d5mKkzn9iTqoZGsM2wein3DRuVWZEUyw9oa0btx4OsyUb-6c_GZzVbfI7IrOlYTyD7rHbkbbdtDplA5bBe0fepaZOXYU2HlZiV9HnzUZwn_Cl9PH9udLprJ417hZBl2eLXKF6dVMpQ9sUAGnvKXENPsmDSIZHS14lyJdrq0dfOa4WrDce0k56xspIaFwfV3F2t8zprBsmFxUpQzozWgjljPYsvNoPQ_y0P3yfC3_eW_XB3NLYR1nOYmTb_sXUOC5f_G3d3qVH-o9IBw78DAAD__-4eRwU)
 
@@ -171,21 +171,15 @@ At the end of every month, we award a free class for the social post that makes 
 
 If someone asks you if you’d like to see their buns, balls and donuts, pause before you emphatically decline. They could be a Chinese pole artist – coz Marco Ingaramo says that’s what he’s doing here. It could be an impressive or entertaining experience. Check [@chaiingaramo](https://email.contact.aerialedge.co.uk/c/eJx0U09zuzYU_DTi0kkGJMBw0MGJI__8N7ET22kvjJAEKAiJCIHtfPqOHbfTmV96XT3t7Nu3yzLJ8cuBPuWLU16-T7bWkSQ-JiePY8Z9xHyPm4ZKjZnRjjJ3T4WVVAleintm7vv69p6Zoxa2q2SbuXMrsDKMOmm-ce4JHIxiP4E-HCFPNFSqrBFdR0txEcAWJtp04_1K0sNpR36FqupuU1cyRpuWylL_B7t8i5MCjShPYsF5OsoFhVGcBwX3hB6kNboR2uHWGt6zixSvwmEcJQiFIo5hihIY-GEcJDnMCxSLJBz5nsTQh1HgBwn0wxCh-zyglOXRyKcoojlPQOj_rxMKV861HUBjAAmAhLbytyEAyXWJO2cpq6UuASQFDHxEmR8FAUDkRj_jAE26NHwZrw7jasijfepmm5WkAMa9a7LO9JYJgCZXuhvYCC775h_wj4baWjipS0-x7Ns7qZ2wmiq8g6Tj0339HiTHzlZ0B-DDTKJXCeDDo97C4Kyq5WJRNxvyl_oEkLyR3XM5Pzw_LdkHgA_hmXwd1rO3dwggSSuylEGfqyKso5Pkq_jrsYHRZLG0tKtP4etxEabqzKf2pMqhFmw7rF-KQ83GRZqP8tUHtBWj9uNBVmQr__Tnk7OaLz_HZF63rCOQfZZ78rbf1X0qUDFs1vR9ZprRy7Chw1rMC_q8_cjPU_6UPJ4_tzrZN9PavULI0nT5axyvTyphKP1iAE08Za6hJ2kwbZFI6OtUuQLt9Phr7zXCVYZj2krPWFlKjfNe1XdX67zWmkFyYbESlDOjtWDOWM_ii80g9H_Lw_eJ8Pe9ZTfcHY2thfUcZqbJfmydw8Jl_8bdXWqU_ah0wPDvAAAA__8gD0X8)
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -207,15 +201,28 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/new-dynamics-workshops/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/new-dynamics-workshops/img-02.jpg` (27 KB) — alt: (none)
-- `/assets/images/newsletter/new-dynamics-workshops/img-03.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/new-dynamics-workshops/img-04.gif` (4997 KB) — alt: (none)
-- `/assets/images/newsletter/new-dynamics-workshops/img-05.jpg` (109 KB) — alt: (none)
-- `/assets/images/newsletter/new-dynamics-workshops/img-06.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/new-dynamics-workshops/img-07.gif` (3700 KB) — alt: (none)
-- `/assets/images/newsletter/new-dynamics-workshops/img-08.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/new-dynamics-workshops/img-09.jpg` (292 KB) — alt: (none)
-- `/assets/images/newsletter/new-dynamics-workshops/img-10.png` (6 KB) — alt: (none)
-- `/assets/images/newsletter/new-dynamics-workshops/img-11.gif` (6627 KB) — alt: (none)
-- `/assets/images/newsletter/new-dynamics-workshops/img-12.gif` (2129 KB) — alt: (none)
+![](/assets/images/newsletter/new-dynamics-workshops/img-02.jpg)
+
+![](/assets/images/newsletter/new-dynamics-workshops/img-03.png)
+
+![](/assets/images/newsletter/new-dynamics-workshops/img-04.gif)
+
+![](/assets/images/newsletter/new-dynamics-workshops/img-05.jpg)
+
+![](/assets/images/newsletter/new-dynamics-workshops/img-06.png)
+
+![](/assets/images/newsletter/new-dynamics-workshops/img-07.gif)
+
+![](/assets/images/newsletter/new-dynamics-workshops/img-08.png)
+
+![](/assets/images/newsletter/new-dynamics-workshops/img-09.jpg)
+
+![](/assets/images/newsletter/new-dynamics-workshops/img-10.png)
+
+![](/assets/images/newsletter/new-dynamics-workshops/img-11.gif)
+
+![](/assets/images/newsletter/new-dynamics-workshops/img-12.gif)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/new-dynamics-workshops/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

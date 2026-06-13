@@ -17,7 +17,7 @@ draft: false
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k89yozgYxJ8Gbkkhib8HHXBsUh4nmXEIxpMLJSQBMiBhIQPrp99yMrW7VcleP31StX7dTQvB8K-cbMrdUtbH9as2SejP4WIzTJmDqGMz1RMhMVXSEGruCdeCdJzV_J6q-0v757xQs-R6bMRQmL8GjjtFiRHqc85sjkHgQwe6YYBs3hPRFT0fR1Lzm4Dd9e0EwiXOul3c1RnNX9_bP1sfj1HSD0TU8j-z2zU_ctyycqFLKkBdxEEVeSUtfZvLSWgley4NHrRiF3qTYjc4ZMgtQ1BRD5Eo8sIQVX5EKwSoz8sIuLbA0IEeAA4AEQQA3VOn8kvqMp-6JII8tFznf0l0uDFmGC0UWzCxYEIG8WXJgsnHJ-4GzSfBZwsmSQQeB8RDkj52pkKZjK8HCybfQbFQYkTPi9GQfrDQ-l-ojufaHS0-AQlpuJakwxlMRvZ4aI8gNOtBBOWcP-TeMT2t02k5xyr4OfuD2wNvUwPWV-n1vLxf30B9fELTtvWauMzLc5btD8mvk2_B5PgkU_RSSfTjx9bAiMUWXK1zp333_CTv9uUp_V2_5edpw6pl5cgtDd5WJBwOMLLgasrj_BrzpyARcdQ2TXceu2b3-zlYSPqwcR92p7B_RWnwc1nq1TWbL2d9erLg6iDoWYTP_Pnai7HKBlj2Yp1uNy_7eXfYP7y44mhStpT7G1w9by20tjv1kezv0No9N41imAzCVlrUQuLy0rV3H-jsQatJMK5xxwmjSkpOjdK2xj3RreU6X0wf1UVTjj9NFeN0Nyvdcm0bTFVffFstg7kp_sm0uXWl-FbphOHfAQAA__9mgTr9)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/full-house-full-hearts/img-01.png)
 
 Alana & Ike were inspired by spring Open Rig Night to work towards their first  performance. Their duo hoop act last week was impressive. [Photo: Max Crawford](https://email.contact.aerialedge.co.uk/c/eJx0k81yozgUhZ8GNlNJIfG_0ALHJuV2nI5DbNzZUPoDZEDCQsaMn37Kjmdqqjq9PVxOHX33XFoIht5yvCCriVT7-bs2aRSco8lmiDLHpY7NVIeFRFRJg6l5xFwL3HJW8UeqHk_N_XuhzpLroRZ9Yf7uOWoVxUaoL53ZHIEwgA70otC1eYdFW3R8GHDFrwFWl48DiKZk266SttrS_P2zuU_dzCjueiwq-T_t-lsQOx4pPejhElDP5aCMfUJJYHM5Cq1kx6VBvVbsRK9R7Bq53AUeCAn3Yif0nbDkQQDigJEIlAzHvi0QdKAPgANADAFwH6lTBoR6LKAejiGPLM_5I4kW1cb0g-UmFkwtmOJe_DZkwfT2iAejMW2ErCyYlj5hDij9OGKWm97tl8xy50PsvSXrPKlH4u9is9ysBbZgcDJdMaiTptxy5ze7u9hxJk7dv-JfHdYNN0JWdkuLL3ZCGq4lbtEWpgN73jV7EJl5L0Jyzp9yf58d5tk4HRMV_jwHvdcBf1EB1pXZ5Th9Xj5AtX9xx2Xj1wnJyXG73ezSt0NgwXT_IjP3tZTujx9LA2OWWHA2z53m0w_SvN2QQ_ar-siP44KV08yRSxp-zHDU72BswdmYJ_kl4S9hKpK4qev2OLT16tc6nHD2tPCeVoeoe3ez8Oc0VbPL9nw66sOLBWc7QY8iWvP1pRNDue0h6cQ8Wy5eN-fVbvP06om9ydhENlfu-ry03Lndqlvp0xg89y6PcPbcmtLdyuSysztuasUQ7oWttKiEROTUNg83dHav1SgY16jlmFElJadGaVujK2bLc37rw9eK0Ne-xTA-nJVuuLYNoqorvr06g7gp_qu7uZ5R8W3SEcF_AgAA__-uDUZM)
 
@@ -157,21 +157,15 @@ At the end of every month, we award a free class for the social post that makes 
 
 You couldn't fail to love the high-energy acro dance with ingenuity from [@hyperskidsafrica](https://email.contact.aerialedge.co.uk/c/eJx0k09vqzgUxT8NbEatsDH_Fl6QJlR5afqa0oS8bpCxDTiATYxDmHz6UdLMaKTXtz1cjo5_91yaC4bfMrIoVlNR7efv2iShfw4nm2HKHJc6NlMdERJTJQ2h5pFwLUjLWcUfqXo8NffvuTpLroda9Ln5u-e4VZQYob50ZnMMAh86EIWBa_OOiDbv-DCQil8DrC4fBxBO8bZdxW21pdn7Z3OfuplR0vVEVPJ_2vU3P3JQUSKISAkocjkoI6-ghW9zOQqtZMelwb1W7ESvUewaeyiAZcBgBCiLQu5ThKIwBAUtncgrCLAFhg70AHAAiCAA7iN1Sr-giPkUkQjy0ELOH0m0uDamHyw3tmBiwYT04rchCya3RzwYTWgjZGXBBIHQiVwPhT6z3ORuv2SWOx8i9Bavs7geC28XmeVmLYgF_ZPp8kGdNOWWO7_Z3cWOM3Hq_hX_6ohuuBGysluaf7ET0nAtSYu3MBnY867Zg9DMexEU5-wp8_bpYZ6O0zFWwc-z36MOeIsKsK5ML8fp8_IBqv2LOy4br46LrDhut5td8nbwLZjsX2TqvpbS_fFjaWDEYgvO5pnTfHp-krWb4pD-qj6y47hg5TRz5JIGHzMS9jsYWXA2ZnF2iflLkIg4auq6PQ5tvfq1DiaSPi3Q0-oQdu9uGvycpmp22Z5PR314seBsJ-hRhGu-vnRiKLc9LDoxT5eL1815tds8vSKxNymbis2Vuz4vLXdut-pW-iQCz73LQ5I-t6Z0tzK-7OyOm1oxTHphKy0qIXFxapuHGzq712oUjGvccsKokpJTo7St8RWzhZzf-vC1Ivy1bzGMD2elG65tg6nq8m-vzmBu8v_qbq5nlH-bdMTwnwAAAP__oRVFxA) in Uganda! Check out their other reels, they're just endless fun vibes.
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -193,15 +187,28 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/full-house-full-hearts/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/full-house-full-hearts/img-02.png` (361 KB) — alt: (none)
-- `/assets/images/newsletter/full-house-full-hearts/img-03.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/full-house-full-hearts/img-04.gif` (6172 KB) — alt: (none)
-- `/assets/images/newsletter/full-house-full-hearts/img-05.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/full-house-full-hearts/img-06.png` (941 KB) — alt: (none)
-- `/assets/images/newsletter/full-house-full-hearts/img-07.jpg` (175 KB) — alt: (none)
-- `/assets/images/newsletter/full-house-full-hearts/img-08.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/full-house-full-hearts/img-09.gif` (3614 KB) — alt: (none)
-- `/assets/images/newsletter/full-house-full-hearts/img-10.png` (6 KB) — alt: (none)
-- `/assets/images/newsletter/full-house-full-hearts/img-11.gif` (2657 KB) — alt: (none)
-- `/assets/images/newsletter/full-house-full-hearts/img-12.gif` (6929 KB) — alt: (none)
+![](/assets/images/newsletter/full-house-full-hearts/img-02.png)
+
+![](/assets/images/newsletter/full-house-full-hearts/img-03.png)
+
+![](/assets/images/newsletter/full-house-full-hearts/img-04.gif)
+
+![](/assets/images/newsletter/full-house-full-hearts/img-05.png)
+
+![](/assets/images/newsletter/full-house-full-hearts/img-06.png)
+
+![](/assets/images/newsletter/full-house-full-hearts/img-07.jpg)
+
+![](/assets/images/newsletter/full-house-full-hearts/img-08.png)
+
+![](/assets/images/newsletter/full-house-full-hearts/img-09.gif)
+
+![](/assets/images/newsletter/full-house-full-hearts/img-10.png)
+
+![](/assets/images/newsletter/full-house-full-hearts/img-11.gif)
+
+![](/assets/images/newsletter/full-house-full-hearts/img-12.gif)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/full-house-full-hearts/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

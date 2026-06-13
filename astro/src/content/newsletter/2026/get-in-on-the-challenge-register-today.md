@@ -19,7 +19,7 @@ PLUS new chains, hammock and loops class
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k1FzqygcxT8NvrWDYAg-8JDUmDRtb9N0E9O-OAhoqApeRO3dT7-T9s7uzrT39c8f5vA754hcS7bL-Kq4ey-qU7J3PqVkou-BZEJCLGAgbcu1YcIaz4W_5spp3ihZqWthr4f693luJ6Ncf9Zd7n91ijVWcK_t51wGioXz-QzjMCbzQLVcN3mr-p5X6iJgiLa36-xOJEeYVIfz9La_k7-3Ph4TvO24rsz_ZpdrJBYCQQihiuYwxJKSggoqwkCZUTtrWmU865yVg7hICc6M0pBgQkSkkMC4DIvZnMhIERHhWKkQB5ohiAiMYBTGEYHza8plUcyKUkAaCV6WIIJ_JNGws_ddD_ACoBSglHf6yxJA6ccnrjqnRq0mgNI0DtcdVpQ_rxtf4oNZ_H0EKP0OCsCp163Ke8_bDuDkP6iQoKAR-ScgbbxyhjfsgNJero_1KQRoKQBK_3oZ7kvqPH2t37D59bCZng4_SfOc-FVVh9Wkb26e5PkhXhlVbvrX-bSJsHpcJmSQW7yrdnSxvr97g4k-GICWy-fxNrOPUpzTJ9eGJZ0l8Qy9m-VeFgCl3Ym8ZuXQjJunPXKWrHZ2sX2JN_I0LV-WbXyiGX1Avf0B0HLr11rfj4-LdsXJOor2t9lW8LdJX4D9JLvMvIsHSrs5P9pyc7_5EdbHqT5JDm9W2UwVr9NJH7nA4Xq1ggAnQWM_sv0d3KBV_mwl450OrNOVNqwYmvrqA17QOTtqqRxrFJfCGqOEty5wrOWuBhH8YntvBycU-7RV9-PVZF2tXOAvJci_FeCZsG3-be88Uz7_N_AjQ_8EAAD__4OLOEg)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/get-in-on-the-challenge-register-today/img-01.png)
 
 Youth Circus Easter Camp is a break from school that gives you a boost
 
@@ -197,21 +197,18 @@ Remember that there are no Youth Circus classes this week. This is factored into
 
 Classes restart on Sunday 12th April and will run during the week that Easter Camp is on.
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
+![Aerial Edge Gift Vouchers come in various values, tap the image to buy one](/assets/images/newsletter/get-in-on-the-challenge-register-today/img-08.jpg)
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
+![Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus](/assets/images/newsletter/get-in-on-the-challenge-register-today/img-09.png)
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
+![Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours](/assets/images/newsletter/get-in-on-the-challenge-register-today/img-10.png)
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -233,14 +230,23 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/get-in-on-the-challenge-register-today/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/get-in-on-the-challenge-register-today/img-02.png` (522 KB) — alt: (none)
-- `/assets/images/newsletter/get-in-on-the-challenge-register-today/img-03.jpg` (269 KB) — alt: (none)
-- `/assets/images/newsletter/get-in-on-the-challenge-register-today/img-04.png` (29 KB) — alt: (none)
-- `/assets/images/newsletter/get-in-on-the-challenge-register-today/img-05.gif` (654 KB) — alt: (none)
-- `/assets/images/newsletter/get-in-on-the-challenge-register-today/img-06.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/get-in-on-the-challenge-register-today/img-07.png` (8 KB) — alt: (none)
-- `/assets/images/newsletter/get-in-on-the-challenge-register-today/img-08.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one
-- `/assets/images/newsletter/get-in-on-the-challenge-register-today/img-09.png` (2341 KB) — alt: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus
-- `/assets/images/newsletter/get-in-on-the-challenge-register-today/img-10.png` (678 KB) — alt: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours
-- `/assets/images/newsletter/get-in-on-the-challenge-register-today/img-11.png` (8 KB) — alt: (none)
+![](/assets/images/newsletter/get-in-on-the-challenge-register-today/img-02.png)
+
+![](/assets/images/newsletter/get-in-on-the-challenge-register-today/img-03.jpg)
+
+![](/assets/images/newsletter/get-in-on-the-challenge-register-today/img-04.png)
+
+![](/assets/images/newsletter/get-in-on-the-challenge-register-today/img-05.gif)
+
+![](/assets/images/newsletter/get-in-on-the-challenge-register-today/img-06.png)
+
+![](/assets/images/newsletter/get-in-on-the-challenge-register-today/img-07.png)
+
+![](/assets/images/newsletter/get-in-on-the-challenge-register-today/img-11.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/get-in-on-the-challenge-register-today/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)
+- _Rendered inline:_ `/assets/images/newsletter/get-in-on-the-challenge-register-today/img-08.jpg` (741 KB, alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one)
+- _Rendered inline:_ `/assets/images/newsletter/get-in-on-the-challenge-register-today/img-09.png` (2341 KB, alt: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus)
+- _Rendered inline:_ `/assets/images/newsletter/get-in-on-the-challenge-register-today/img-10.png` (678 KB, alt: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours)

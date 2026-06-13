@@ -19,7 +19,7 @@ PLUS: Radical progress in specialised and classic circus arts
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k9FzqjgUxv-a8NYOCRDhIQ_aGmnv3ep6F62-MCEJGgUSQwDLX79je-fOztR9y5ycnPnyO9_HcyXIasvmxY9rcXh_XltHYzzEV08QLvyA-57QNVMN4bpxjLtHJq1ilRQH-cj1Y3f-fZ_roZG2PSqTuw8jSaU5c0p_1YUnCZzgJI4RxJEna6aqvJZtyw7yJsDClKatEa-bZdDZFV-07vK763MYZ7Vh6tD8p3Z7hpNJEU7KpLzNlTiYCAH9IBCebHpldVPLxhFjtej4TYp3JHFY4qQseYhilshJhDgWRVT6RSBlhEPfUwT5CPswgHASYT96FIz7foIETsJIlBKC0P9fEhU5OmdaEEwBogBRZtS3JoDo5ycejJW9kgNAlCZwYQIZs1-LypVB1kzHDUD0HhQQUKdqmbeO1QYEz3-ghhFGXsXzL0CqcdI2rCIZoq1YbM7vECD6XPebcq8RQFSse3Pa-iaTH5lZxYNL4al50n8viwggehp38CLSlA5zgOjTdYDncG8vvWHRqS7SHl93ANG3_dD9c75OV7AdT4shBWhGV4JPonUWvT6tX1s7T_rLcddM9A-6jV_gANDsfTv_Oa5up1T9DMZFUcLVcrRvHwDN-nFz4R8vCUCzrCzeDO4Oyxe3gfWp3cNLGP7CT9VwHPHZoVh0czfy7C-AZqJ4mc6v2yGVu-z4ZjZ1lbH1crrnAM0CuwPBs1fpT5_fA-3V0h21IMwoT1t1UA0puur88AnSM1b3SkhLKskE100judPWs6Rm9gxC_5sFWt1ZLsnXilXbPwzanqX13C0Q-V0BjnBd53cz6Ih0-R_z9wT9GwAA___vZj8I)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/tap-into-your-secret-superpower/img-01.png)
 
 Enter a world of kinaesthetic resonance when Specialised arts meet the Classics
 
@@ -319,21 +319,16 @@ Cost: £60 per day
 
               [Unlock potential: book camp here](https://email.contact.aerialedge.co.uk/c/eJx0U81y4jgYfBr5spWUJfn3oAMEjMlMAsOsIXBxyZIMwj8ysmwTP_0WhN3aqpm5qVqfulrdX7NUcrLe0Xn27ZodP2YbbaLAG4KrxQnjNma2xVVFZU2Yqg1l5pkKLWkp-FE8M_XcFY_7VA210O1JNqn5bAQpFaNGqi-cW4JA3wuDAEHPtURFZZlWom3pUdwEaBhHcdvw1-0Kd3rNFq25PKbuZIxWDZXH-n_Y7ZkX-pnj52F-4xUe9jmHNsbcEnUvtaorURvSaMU7dpNinYgQFHqBoE4O_SDzc8xDyHwU-L4dhIj7liTIRp4NMYS-69nuM6fMtkPEvdBxeS4gcOw_OlGSkzFNC_AEoAigiDbylyGAovsnnoymrJD1EaAIYzsIfDfwYABw9KBfcoBnbeisJ2-7yanP3G1olj_eJAXI60yVtqrTTAA8u9M9wEpw2VX_gn9VVBfCyPpolSz98k7WRuialiRBUcsX2-IDAhTNqn6bHxQCKOKbvjnv7CYRn0mzDgYTw3P9on6sMheg6Dzu4YXHcTTMAYpergMsnIO-9A11z1UW9951D1D0fhi6v4vrZA3b8bwYYoCm0Zoz390k7uvL5rXV87C_nPa1r75Fu2AJB4CmH7v593F9O8XyOx4XWQ7Xq1G_fwI07cfthX0uQ4CmSZ69N153XC3NFlbn9gAvjvPTeymH0-gVBgW8m5uRJW8ATXm2nMyvuyEW--T03myrMqGb1eTAAJpivQd4ZpXqXoEohIsGi4D-XJQmx0k9GbdWJcxJcUIbaSktj7ImWVcWT3cjrUarXnKhSSkoZ6quBTNKW5rcTAeO_ct2fAVGvtKXbf80KF0IbZlbV9LfCjCEqSr9bT0NESb9rxc9Qf8EAAD__wPESRE)
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
+![Aerial Edge Gift Vouchers come in various values, tap the image to buy one](/assets/images/newsletter/tap-into-your-secret-superpower/img-12.jpg)
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -355,15 +350,27 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/tap-into-your-secret-superpower/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/tap-into-your-secret-superpower/img-02.gif` (3308 KB) — alt: (none)
-- `/assets/images/newsletter/tap-into-your-secret-superpower/img-03.jpg` (258 KB) — alt: (none)
-- `/assets/images/newsletter/tap-into-your-secret-superpower/img-04.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/tap-into-your-secret-superpower/img-05.gif` (4699 KB) — alt: (none)
-- `/assets/images/newsletter/tap-into-your-secret-superpower/img-06.gif` (5479 KB) — alt: (none)
-- `/assets/images/newsletter/tap-into-your-secret-superpower/img-07.jpg` (145 KB) — alt: (none)
-- `/assets/images/newsletter/tap-into-your-secret-superpower/img-08.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/tap-into-your-secret-superpower/img-09.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/tap-into-your-secret-superpower/img-10.gif` (4406 KB) — alt: (none)
-- `/assets/images/newsletter/tap-into-your-secret-superpower/img-11.png` (8 KB) — alt: (none)
-- `/assets/images/newsletter/tap-into-your-secret-superpower/img-12.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one
+![](/assets/images/newsletter/tap-into-your-secret-superpower/img-02.gif)
+
+![](/assets/images/newsletter/tap-into-your-secret-superpower/img-03.jpg)
+
+![](/assets/images/newsletter/tap-into-your-secret-superpower/img-04.png)
+
+![](/assets/images/newsletter/tap-into-your-secret-superpower/img-05.gif)
+
+![](/assets/images/newsletter/tap-into-your-secret-superpower/img-06.gif)
+
+![](/assets/images/newsletter/tap-into-your-secret-superpower/img-07.jpg)
+
+![](/assets/images/newsletter/tap-into-your-secret-superpower/img-08.png)
+
+![](/assets/images/newsletter/tap-into-your-secret-superpower/img-09.png)
+
+![](/assets/images/newsletter/tap-into-your-secret-superpower/img-10.gif)
+
+![](/assets/images/newsletter/tap-into-your-secret-superpower/img-11.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/tap-into-your-secret-superpower/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)
+- _Rendered inline:_ `/assets/images/newsletter/tap-into-your-secret-superpower/img-12.jpg` (741 KB, alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one)

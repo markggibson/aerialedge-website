@@ -19,7 +19,7 @@ plus 5 reasons why Easter camp is a must
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k01z2jwQgH-NfUtGlvx50KHUMYRAk0AIphePkBZQsSwhy-bj178D6XTemdLrarXz7LO7vJKCvi3Z0_rltN6W-cy6Io2P6ckXlAtEOPKFVkw2lOvGMe4eGVjJahBbeOT6sdv_fq_0sQHb7qSp3NkArTVnTuqvuPCBBkkSZShLUOKDYrKuFLQt28IVALPpz-7kzFnMI1WI7_VxKn5n3YpxpgyT2-Z_seu3OBNZgDdRxtMoupYXmJCICx-aXlrdKGgcNVaLjl9R_B1lASciQxyTNUNBIuIQYbZOeJhEKIkZ9yXFCMcoDIIABxGKHjMeYRTyEBHYIBDCC9E_TdR055xpPfLNw4WHC2bkX0keLm5NPBgLvYSjh4siC4aGQMrmw9ptyKL5dvn0cHFPikcKJxVUrWPKeCT_IzXCOPZrXn0Jko0D27CaLnDRiuHnvgyy6WY3dqtfl_d06eGinwwusT6R-vvIzNCmK_Xrx4od1Ec_E-kYTQCWr59c52IeLclZ5Rc2_ZGXyYoEu3iYm7gdbIJ8vgpH7fsV1TwjdMiXFw8XKzJ-iVN-BPPmFnrUki3EB7Jep_CrHhx-jD08YNPwZ5y86idXvretUk9N_DoSk-eRGk6eu5KzqOzHH2dOhrB46-r3eXY6HZYzNJ6cUDsDo17CfTmPPTx4OjAnpyEKs_Mla4NiOTrqrUdyv9a3zb6n1lfgdlpQZqSvrdzKhq67ev9wU-cbq3spwNIamOC6aYA7bX1LFbN7L0R_Db3VneVAv4Yq2_7hqO0erO8ouOrP4rrrQVR3cRzlWlV3b7Cn-L8AAAD__woUOcU)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/celebrate-your-circus-spirit/img-01.png)
 
 Save your seat for Open Rig Night before it sells out
 
@@ -233,21 +233,16 @@ Monday 13th April til Friday 17th
 
               [Join the fun: book here](https://email.contact.aerialedge.co.uk/c/eJx0U01z4jgU_DXyZSspWbKFfdAhjGM-ApMASYC5uGTpYTRYlrFlvn79FoTd2qrJXltPXf36dctMK_62FM_5yykvVsm8cWnEjtHJU1wqTCX2lDVCV1zaygnpHgU0WpSgCniU9rHb3d8ze6ygabe6zty5Bl5aKZy2X7jygPu9XhjjuId7Hhihy8xA24oCrgKImP7qTq4-q0VoUvWjPE7VfepGJoWphS6q_2DXbyxWsU82YSyjMLzSK0JpKJUH1UE3tjJQOV43VnXyKsXbchXEjDDpB70gB0KAbGiUEyFoEEVE5czTnGDCcOD7PvFDHD7GMiQ4kAGmsMGgFArw_zpR8q1zdYvoEyIpIqmo9R9DiKS3JR5cI-ROVwUiqQyJnzMWhpFCNL3TjxSiSRsHb0_T5dP2kIefsRvNplogwjpnstZ2jQREkxvdHTSgdGf-Af8yotmB01XhlTL78k5XDppKlPyDpK0afO5WfjzdbMdu_fsyi5aIpIdJ_8LsiZY_hvUcb7qVfX1fi715P8xVNMYTgOXrp7SJWoRLejbJRUx_JqvemvpbNkhq1vY3frJYB8N2hkhK6hHG-2R5QSRd0_ELi-QR6jf3YYctLYDtaZ5H8Lvs73-OEemLafCL9V7ts1vN2taY54q9DtVkNDSDyahbSRGuDuP3s6QD-HjrytkiPp32yzkeT064nUNtXoLdasEQ6T_vhdPTAAfx-RK3frocHm2BaOKV9hb6NPYHNYVILAal29CP6uny6RlwW6u4qLVnG13oiudduXu4WefVjT1oBQ0vQShpqwqks43X8KvNKMB_5OHrRPzr3ro9PBxts4PGcxxc9m-m3bUr2bdyHJfWZN_W88DJ3wEAAP__3M5EWQ)
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
+![Aerial Edge Gift Vouchers come in various values, tap the image to buy one](/assets/images/newsletter/celebrate-your-circus-spirit/img-12.jpg)
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -269,15 +264,27 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/celebrate-your-circus-spirit/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/celebrate-your-circus-spirit/img-02.jpg` (167 KB) — alt: (none)
-- `/assets/images/newsletter/celebrate-your-circus-spirit/img-03.png` (319 KB) — alt: (none)
-- `/assets/images/newsletter/celebrate-your-circus-spirit/img-04.png` (29 KB) — alt: (none)
-- `/assets/images/newsletter/celebrate-your-circus-spirit/img-05.gif` (15215 KB) — alt: (none)
-- `/assets/images/newsletter/celebrate-your-circus-spirit/img-06.gif` (654 KB) — alt: (none)
-- `/assets/images/newsletter/celebrate-your-circus-spirit/img-07.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/celebrate-your-circus-spirit/img-08.jpg` (153 KB) — alt: (none)
-- `/assets/images/newsletter/celebrate-your-circus-spirit/img-09.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/celebrate-your-circus-spirit/img-10.gif` (5871 KB) — alt: (none)
-- `/assets/images/newsletter/celebrate-your-circus-spirit/img-11.png` (8 KB) — alt: (none)
-- `/assets/images/newsletter/celebrate-your-circus-spirit/img-12.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one
+![](/assets/images/newsletter/celebrate-your-circus-spirit/img-02.jpg)
+
+![](/assets/images/newsletter/celebrate-your-circus-spirit/img-03.png)
+
+![](/assets/images/newsletter/celebrate-your-circus-spirit/img-04.png)
+
+![](/assets/images/newsletter/celebrate-your-circus-spirit/img-05.gif)
+
+![](/assets/images/newsletter/celebrate-your-circus-spirit/img-06.gif)
+
+![](/assets/images/newsletter/celebrate-your-circus-spirit/img-07.png)
+
+![](/assets/images/newsletter/celebrate-your-circus-spirit/img-08.jpg)
+
+![](/assets/images/newsletter/celebrate-your-circus-spirit/img-09.png)
+
+![](/assets/images/newsletter/celebrate-your-circus-spirit/img-10.gif)
+
+![](/assets/images/newsletter/celebrate-your-circus-spirit/img-11.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/celebrate-your-circus-spirit/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)
+- _Rendered inline:_ `/assets/images/newsletter/celebrate-your-circus-spirit/img-12.jpg` (741 KB, alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one)

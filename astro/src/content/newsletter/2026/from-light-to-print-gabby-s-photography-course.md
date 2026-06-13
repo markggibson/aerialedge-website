@@ -19,7 +19,7 @@ PLUS Hula hoop workshop and acro jam tomorrow
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k8Fu4yoYhZ8G71oZcIy9YNHUJb2NkptJmzrpxsKAExIMDiZ2M09_1XY0utJ0tj8_6PCdc0SlJV2V_KGev9f7bbH2gWXpmL1HkgoZYxFH0rVcWyqcDVyEW6685kbJvboV7vZy-nVeudEq3x90V4Vrp6hxggftvuYyUhQSEidxmicoUi3XpmpV3_O9-hBwv8-x2dr-8LZ028VKHHfF46-tz8cEbzuu9_Z_s49raZ5NpCCxgiLNY5jiHNWCyCZSdtDe2VbZQDvv5EV8SIkOlGBYT1KYK0FSSbBUpMaY47iJsWhgjiNNUYzSGMUpzBOE0K2oc8UToRoiICQNB0n8VxKGHkLoeoDvAGIAMd7pP5YAYp-fuOm8GrQaAWIsh7MOq4w_z0xo8Mbe_XwFiH0HBWAWdKuqPvC2A7j4DRVmCYqMqL4AaRuUt9zQDWK9nL2etjCbzJsifl-W5-GFWzc0s2FBAGJyNMcftb8kHTOzUQI0bZZwx_rJJhBC5HlzNf_GZu3fXxYPI-z1flc_pJ68HbezAiBWADTtrm_HEk4tBIiFDc72mw0nq_b5CP2rfDqXb7vjgxl23T_P2bl56ueP-cAfFxzdny-8nK56PV1nsLyG9bwNxR3WfAkQey4f52eCV3XnyzVA7DK-uG3eT8d63l_vBUDT4goQW0zW4nhYPt2X15_n-gd7PZxeND4ANB2TYQFwERn3mfHvIEetCgcnKe905Lzea0vrizndfEKMOu8GLZWnRnEpnLVKBOcjT1vuTyCJ_7C_dxcvFP2yV_fDzej8SfkofJSh-lZAoMK11bf9C1SF6nfwB4r-CwAA__9gRD1Q)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-01.png)
 
 Gabby is running a two-day Analogue Photography course
 
@@ -251,21 +251,15 @@ Cost: £60 per day or £150 for all three (save £30)
 
               [C is for circus camp: book here](https://email.contact.aerialedge.co.uk/c/eJx0U11v6jgU_DXOy6qV44R8PPgBmpq2CJbSQqAvkWM7iSGxg-Mk5f76FbS7Wun2vo6PR3PmzLBMcrxO6WO--MzLfbIxlkTBGH06HDMOPQYdrhsqFWZaWcrsPRVG0lrwUtwzfd-fvt8zPSphukq2mb20AteaUSv1F84dgd0whD4MYh85oqGyzhrRdbQUVwEPZezVe9VVHyu9X67Z8ZA8fU_dyBhtWipL9T_s-i2IowlnIRQuC2LoBl6MchbywhFqkEarRiiLW6N5z65SnAqjCWduPImCsIB5yKNCCMZhzv2QRzkXriMxgiiACAZu7COE7lkeC-ozUYTMdcOCAh_-0YkaV9a2HfCmABGACG3lb0MAkdsSd9ZQdpKqBIjEAjIYiTxgFHjkm_6ZAy_pYn89XabTasgnu9g-vy4lBSjobZN1ujdMAC-50X2DjeCyb_4F_2qoOQkrVenULPvyTiorjKI13iLS8fnutHejyaJI4OcqPQ_vVOmhmA_LECDCx_r4mpveb0k9HzlAs2LlHkg32dowDPl5e6n_hvXGfL4vH0e3k-UhfwxM-HHczxOASALQrL18HFN3plyAiN16Ubnd0nDdvB1ds-Mv5_TjcHysh0P7_Badi5du8RQP9GlJ0cO5p-ls3cnZJnLTi90sGptMPUlXAJG39GlxDr113pp0AxDpx3e9j7vZmC-6ywMDaJZcACLLyYYdq9XLQ3r5dc5fya46vUuvAmg2-sMSeIlT61v8SezOW09E9G1e28LbqumvndMIW2mOaSsdbWQpFc77-nR3M9FpjR4kFwbXgnKmlRLMauMYfDUc-PC3ZHwdC39dXnbD3ajNSRjHXnuS_SjAYqab7MdqWixs9l8nBoz-CQAA___gakoG)
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -287,14 +281,26 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-02.jpg` (893 KB) — alt: (none)
-- `/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-03.png` (21 KB) — alt: (none)
-- `/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-04.jpg` (842 KB) — alt: (none)
-- `/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-05.png` (882 KB) — alt: (none)
-- `/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-06.gif` (8533 KB) — alt: (none)
-- `/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-07.gif` (9906 KB) — alt: (none)
-- `/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-08.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-09.gif` (3700 KB) — alt: (none)
-- `/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-10.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-11.png` (728 KB) — alt: (none)
+![](/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-02.jpg)
+
+![](/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-03.png)
+
+![](/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-04.jpg)
+
+![](/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-05.png)
+
+![](/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-06.gif)
+
+![](/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-07.gif)
+
+![](/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-08.png)
+
+![](/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-09.gif)
+
+![](/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-10.png)
+
+![](/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-11.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

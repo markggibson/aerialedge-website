@@ -61,5 +61,7 @@ The Easter Edge team
 
 ## Images
 
-- `/assets/images/newsletter/easter-edge-schedule/img-01.png` (22 KB) — alt: (none)
-- `/assets/images/newsletter/easter-edge-schedule/img-02.jpg` (192 KB) — alt: (none)
+![](/assets/images/newsletter/easter-edge-schedule/img-01.png)
+
+![](/assets/images/newsletter/easter-edge-schedule/img-02.jpg)
+

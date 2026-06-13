@@ -19,7 +19,7 @@ PLUS Hamish is back on the weekly roster
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k09v6joQxT-Ns2tlT_4vvCClKZS-8gqUApvI2CZxSexcxyS0n_6J9urqSeVux-PRmd-cwwsl6L9v7H4_O-_LzXhhXZ5EQ3L2BOUC-xx7wjRMacqNdoy7WyatYrUUpbzl5vZ0_P1emEFL21WqLdxHK2ltOHPKfNeFJymJI4ggTMD3ZMNUXTSy61gpLwKmoJfdh3ljuto_7ewjnrXz311fwzhrWqZK_b_a5VuUYiG5CPYy3EeHgHAgPpaEeVL3yhrdSO1oa4048YsUr6IBT1OWhDFJWRBFQoqYxThhhxh8HIlAeIoChpAQnJCExNi_hRSDTA8cC84JiWIU4L-SqGnlXNshf4QgR5CzVv1oQpB_LXHTWtkrOSDI85Q8tL5M2PKhdgf_VY8-1wjya1CQnzvVyKJzrGmRP_4DFeIEezUvvgEp7aTVrKavkHfiYX3ckLSfPCPIXhaOrdpORGd44XK5CfBxjhFkfpvVKgjV6O4eQZaWm5KdYVh_7qIlgqwfhf8snudkGe02y_w1HOvufV6l_VCu0mG7W04qBFlIUmaiR7hsOBmmO3NYf7hfL_mvXc_etk_BHJ5fxpNJjCAzMwR5u1i_I8jKTVWtJgiyd51uh-nZHBBk3Rk0O8yeYn_R3fXZeFttn_Gd_zmrz3N2rx-7Vbmeri6Mw7e7YJOvA0zmZhTEYpccj9P4oPbgX4aerBiQP_Zq8-X0a6i9RrrKCMpa5RmrSqXp_lQfb75Qeq01vRLS0loywY3WkjtjPUsbZo8owD9M0JmT5ZJ-H1l1_c1g7FFaz1FumuJq1ByVrvjjcXfJTnFVaU_hvwAAAP__t1Q7Cg)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-01.png)
 
 Christmas present ideas? Aerial Edge merch is on everyone's list! Buy it [here](https://email.contact.aerialedge.co.uk/c/eJx0U0tzozgY_DXilpT4eB90MHGIHWfj9SN-XShZEqAAEiNkcPLrt-yZ2tqqmb22urtarRbLJSd_7-nzeXE9l4fp2tgsDsf46nDCOPYYdrhuqVSEaWUps49UGEkbwUvxyPTjpf51nutRCdNXssvtVydIoxm1Uv_EuSOIG4UQQhCD54iWyiZvRd_TUtwCzEFt-i-9p6o6v53MK150y1-suxmjbUdlqf6D3WRhgrlg3D-L4BwWvsvA9bBwqSPUII1WrVCWdEbzC7tFcSoiiggSERV-SAPfD7xQQBgzzIEmHg85dyQBDIHr4tiN3Qh7j5BgEEnBMGfMdcMI-fh_m2hIZW3XI2-CIEOQ9VYb8RsNQeY0LP95FamsMIo25AOynr_s6oObDLN3BOlqbem263l4hRUTm4OP6yVGkHpd2kg_kJOnZwRpUh5KeoVx930KNwjSYRL8tX5fupvwdNhkH8FU9Z_LKhnGcpuMx9NmViFIAzehOnwFBJmYjfOTLnZf9scq-3Ea6P745i_hfTWdzSIEqV4gyLr17hNBWh6qajtDkH6q5DjOr7pAkPZXULRYvEXeun8a0umxOr7jJ-970VyX9Fm99ttyN9_e2gj2T_4h2_nYXeqJH_FTXNfzqJBn8G6mF8NH5E2dRt83mSXuS-eJmG5eGlt4H2ryvXNaYSvNCe2ko40spSLnS1M_3Kt0OqMHyYUhjaCcaaUEs9o4hrTU1MjHvz1Xry-GCXJXP8h-eBi1qYVxLGG6zf_4KSwRNv93jfa28vyPSQcC_wQAAP__cIwgBQ)
 
@@ -183,21 +183,15 @@ At the end of every month, we award a free class for the social post that makes 
 
 You know those jumps that Doretto was getting the Foundation Course to do in the video above? No reason why they couldn't develop into something like this [@samieletch](https://email.contact.aerialedge.co.uk/c/eJx0U01z4jgU_DXyLZT0_IF90AGHOBCyYQOEABdKlmRbsS15ZGGT_PotMlNbW7Uz15a6q1-_fvysBP37nT3kq2teHuYb67I4GuOrJygX2OfYE6ZlSlNutGPcTZi0ijVSlHLCzeRS_3o_m1FL21eqO7vPTtLGcOaU-YkLT1IyjSCCMAbfky1TzbmVfc9KeTOwBL3tP80701X-fLJPeNWtf_36FuOs7Zgq9X-wGy1KsJBcBLkM86gICAfiY0mYJ_WgrNGt1I521ogLv1nxKsqCOMd-yGLGEoiIL3jM_DzOZZhMQx4UnqKAISQExyQmU-xPIMEgk4JjwTkh0RQF-I9JNLRyruuRP0OQIcjGcZwo3TtWWtZOuGkRZD1rG-l4lUQIMq_h558jKe2k1ayhb5D14nFfH0gyLF4QpK8bx3ZdL6IrvHK5PQS4XmMEqd-ljQpCNbt_QJAm5aFkVxj3X6doiyAdZuFfm5c12UanwzZ7C-e6_1hXyTCWu2Q8nraLCkEakoSZ6AkQZHIxLk-m2H-6H6_Zj9PA3o_PwRpeXueLxRRBalYIsm6z_0CQloeq2i0QpB86OY7LqykQpP0VNCtWz1N_098P6fxYHV_wvf-1aq5r9qCf-l25X-5uqYTv98Eh2weYrM0smIpTXNfLaaFy8G-iFytG5M-9xnx3M0vIY-fLmG0fG1f4b3r2tfda6SojKOuUZ6wqlab5panvvqP0OmsGJaSljWSCG60ld8Z6lrbM1ijA_1tbby6WS_rNvlP9cDcaW0vrOcpNe_7tcTgq3fnfVrpb28-_dTpQ-CcAAP__42Mi3A)
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -219,15 +213,28 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-02.jpg` (646 KB) — alt: (none)
-- `/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-03.png` (25 KB) — alt: (none)
-- `/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-04.gif` (2693 KB) — alt: (none)
-- `/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-05.gif` (8577 KB) — alt: (none)
-- `/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-06.gif` (3232 KB) — alt: (none)
-- `/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-07.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-08.gif` (6588 KB) — alt: (none)
-- `/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-09.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-10.gif` (6373 KB) — alt: (none)
-- `/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-11.jpg` (939 KB) — alt: (none)
-- `/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-12.png` (6 KB) — alt: (none)
+![](/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-02.jpg)
+
+![](/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-03.png)
+
+![](/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-04.gif)
+
+![](/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-05.gif)
+
+![](/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-06.gif)
+
+![](/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-07.png)
+
+![](/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-08.gif)
+
+![](/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-09.png)
+
+![](/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-10.gif)
+
+![](/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-11.jpg)
+
+![](/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-12.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

@@ -19,7 +19,7 @@ PLUS when rigging is part of the creative process
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k0Fz4jgQhX-NfEvKko1tHXQIISKZTIKLAENycQmpDVpblpBlCPz6LZKp3a0a9tpqdb3--j1ZacXKX-Jh8_y52a4ncx94kR2Lz0gxqeJExpGyRuiOSdsFIcOtAK9FC2oLt9LeDs3v98oeO_D9TrsqnByw1koRtP2uqwgYznOc5STPaARG6LYy0PdiCxcBZP7zmb7U5ZpO74Z9PC7fnu3vrq9hUhgn9Lb7T-3yLaM0wRkFIWStciqTmsY0HeEIuoP2tjPQBea8VYO8SIl2jMYZjCDdCJIWdZ7iuqZFXNORgJgQQpNIMxKTLCYEY4wpobejbESTnGK6SZTEBUZp_L8kWrYLwfUouUOEI8KF0380IcK_lrhxHg4ajohwTvHUJVCIt2kb6mTZ3Z1XiPBrUFDCgzZQ9UEYh5LJv1ATHEetrL4B6S6A70TLloT3arpq1rgY7l_Vx_Jj5ZdyNt09lvv647yYIsIfzafZq5e3_V9ulZ12swf_vBsH_l6_rszLo_6xp8XTOX2cIMKzXz9gOcxniPDy9ZTidU6P9OHJhPYyqJuMn2A7Wa-NWqbJfSlHD4hwt35y74jwYncqNov3YjGbjd8tIuNznWbxPJfYzRZ80gJ-a36mclMuDsVsSPcn6GUobfyyqR1ZDtqZ-5Mt46VQ6ggHrqdNmif9vJnH51k-nQehLSKcykVeL7A5SpRMotZ--fsa4MhA2FnFhNOR9XqrO7YZ2ubmC2DkvD1oBZ61IJS0XQcyWB95ZoRvUBr_cfreDl4C-z6t7g83R-sb8FFg0prqasACg1D94-xwSUx1VemBkb8DAAD__2dMOHA)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-01.png)
 
 The Professional Development Course are preparing a riot of a show for you
 
@@ -217,21 +217,15 @@ We need to see confirmed numbers in advance to keep these specialist sessions on
 
               [Set up your Super Saturday: book here](https://email.contact.aerialedge.co.uk/c/eJx0U01z4jgU_DXyjZQsf-qgQwgRyWQSKAIMyYUS0rOtxZaMLEPg12-ZUFtbs7NH9VM_dXWr5VYrNv8lHncvX7tyM1k4z_P0lH8FikmFI4kDZRuhDZPWeCH9nQCnRQ2qhDtp7_r9bb61JwOuq3S79ecWWG2l8Np-4yoAFmZZmGYkS2kAjdD1toGuEyUMAsji5wt9LeYbOr3vD3g8f3-xt1vXZVI0rdCl-Rc20FJKozClIIQsVEZlVFBM4yQMwBy1s6YB41nrrOrlICWoGAFSYJmDJClOc4J3BIsigSQhgHdJLAPNCCYpJiQMw5ASepekCY0yGtJdpGSYhyjG_-tEzSrv2w5F94hwRHhpPYimb--kbRDhLSI8ypIwSZLRN3c0kEdSO9l3o05W1taIcIkI72QFqq8BRbzzwnklPKBoMogb4WiECSIpGPU7nCOSHsH00KFogkgqhYfSuvP3SZvOu156625jWxTgtCmvjt6wIRIHnXf6atoN_f2hLKjl9jsNbTw4I2q2IrxT0_V-E-b9w5v6XH2u3UrOptXT_FB8XpZTRPhT89Uc1Ov74a92nZ6r2aN7qcaefxRv6-b1Sf840Pz5Ej9NEOHprx-w6hczRPj87RyHm4ye6ONz4-thkZmMn6GcbDaNWsXRw1wmj4PFm-f2AxGeV-d8t_zIl7PZ-MMiMr4UcYoXmQzb2ZJPagjf9z9juZsvj_msjw9n6KSfW_y6K1qy6nXbPJztHK-EUic4cj3dx1nULfYLfJll04UX2iLCqVxmxTJsThJFk6C21zJxGk7bCHLxPq19Ea3M_WUdNOArq5hodWCdLrVhu77ej64GBq2zR63AsRqEktYYGCIKHGuE26MY_-efdbZ3EtiVPdLdcXSybg8u8EzaZvvHNnsGfvtPjfxQz-0flR4Z-TsAAP__db9axA)
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -253,15 +247,28 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-02.png` (646 KB) — alt: (none)
-- `/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-03.jpg` (9 KB) — alt: (none)
-- `/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-04.png` (28 KB) — alt: (none)
-- `/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-05.png` (21 KB) — alt: (none)
-- `/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-06.gif` (7336 KB) — alt: (none)
-- `/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-07.gif` (8533 KB) — alt: (none)
-- `/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-08.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-09.gif` (3614 KB) — alt: (none)
-- `/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-10.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-11.jpg` (264 KB) — alt: (none)
-- `/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-12.png` (8 KB) — alt: (none)
+![](/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-02.png)
+
+![](/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-03.jpg)
+
+![](/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-04.png)
+
+![](/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-05.png)
+
+![](/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-06.gif)
+
+![](/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-07.gif)
+
+![](/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-08.png)
+
+![](/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-09.gif)
+
+![](/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-10.png)
+
+![](/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-11.jpg)
+
+![](/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-12.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/four-fly-tracks-at-easter-edge/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

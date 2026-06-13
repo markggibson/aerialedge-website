@@ -19,7 +19,7 @@ PLUS Doubles at the bar!
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k01vozoYhX-N2bXyBwRYeBGSkukkTZr25qN3g4xtiAu2qXGg6a-_ajsaXWky29evrePnnMMLJejjgd2Vy_eyPs6fnM-TyZi8B4JyAQmHgbCaKUO5NZ5xf8ukU6yVopa33N6em1_nhR2NdP1JdYW_dJK2ljOv7PdcBJKiOEqjNA4RCqRmqi207HtWy08Bpx05VvLp8popXB5ibVBIfm19PcaZ7piqzf9mn9cmiahKFooEcwiJxEhCgSpCAmkG5azR0njaOSvO_FNKcKJVQpKoYixhBMaSVEQkYYVxBMtIVDCtAkUxxBGCMEQxJATdQhxPYhJPJEpjIsgEhPCvJFp68r7rAZkCnAOcs079sQRw_vWJm87JQckR4DxP0aIjMmHPi9ZXZGemH3uA82tQAMm90rLoPdMdIPPfUGEYRUHLi29AynjpDGvpDue9WOybIwI436zux9V4h8XioyxXd-xn5B7W9eV1n27Cji1buyYAZ909ej4kKFvZaSzXpMxSYfXs8cFMO-_Ia9uWzYO2y8t0z6OlGFKAs7fmA6LdbL79BwKcPY6Mq3INcPZsQ_U2Ozxt3yezan63-AnHqA83Lz_SlxPAmZic96TJT5mbDtujOOu5tsPM1PPTdlUlMlqrlypzx3D3L0rk04OP9bG2W4CzcmTwfrnecEzOmwv_UectwPnYPb4l7-Y1UQcNcF7uAJkHrf1K-DXEgZb-ZAVlnQqsU7UytDy3zc0XwqBzdlBCOtpKJrg1RnJvXeCoZq4BIfzD_N6eHZf021zVDzejdY10gf-sQnFVgKfc6uJq-zyVvvgd-4Hi_wIAAP__NC45ug)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/dance-yourself-dizzy/img-01.png)
 
 Amber is here to help you bring contemporary movement to your circus life
 
@@ -236,21 +236,15 @@ In circus, we challenge gravity –sometimes we let go, sometimes we grip tight 
 
 Check out the full video of this winning freestyle performance [@leo_volkov](https://email.contact.aerialedge.co.uk/c/eJx0k0tz46gXxT8N2vwrKQR6LlhYduR2-538_UhvXAiwRCRAQciK8-mn7GSmpqp7tofL5XDu_bGT5GRzoE_F_KMoj5Nn6_IkGpIPjxPGIWbQ40ZRqQkz2lHmHqmwkjaCl-KRmce-_j4_mUEL21WyPblrK0hjGHXSfOncE8SPwzRM48D3PaGobE5KdB0txc1AtcPHs3i-vmUSFYdYaT_A31X3ZoyqlspS_0u7XYsSfi5owBPEIMQC-QJy_4yxJ_RFWqOV0I601vCe3ax4FcFMhGmMIi6SmNGIJsUZpzBghU8R5AHzJEEQhT6EgR9DjP1HiOIoxnEk_DTGHEcggP-ZREMq59oO4BFAOUA5beVvRQDl9088OEtZLXUJUM4hPMNQ8BAHAOff7Wcc4EmXBpvR8jCqLkW4T91su5QUoEiWXQXwhKHldYlz_EszxHA9ABT1Tp0601smAJ7cH_oWleCyV3-L_1PU1sJJXXoNO32lKrUTVtOG7FDe8em-PvoA5evFbFgMT4hPP4ti8UR_hna5Kq9v-3QdtHTemBUGKGtn_ssh8bOFGcVihYss5UaNN0s9ap3Fb01T1Etl5tfRnoVzfkkByt7rT-jvxpPt_yFA2WagTBYrgLIXE8j38eF5-xGNz5On6U84hF2wfv2RvlYAZTzq97jOq8yOLtsj79VEmctYl5NquzgnIlzJ13Nmj8Hul5-I56WL1bE0W4CyYqBwNl-tGcL9-sp-lHkDUD60m_fkQ78l8qAAyosdwBOvMXcs8tSftlgk9GXauDPe6dHn3lPCVYYT2krPWFlKTYq-qR_uEXqtNRfJhSWNoJwZrQVzxnqW3OIGAfxtY75GRb42QnaXh8HYWljP3fg5_dGAI8yo0x-RdUS40z-sXAj6KwAA__-A6U2A) and decide for yourself: is it easier, harder, or just…different than aerial arts?!
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -272,14 +266,26 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/dance-yourself-dizzy/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/dance-yourself-dizzy/img-02.png` (725 KB) — alt: (none)
-- `/assets/images/newsletter/dance-yourself-dizzy/img-03.png` (25 KB) — alt: (none)
-- `/assets/images/newsletter/dance-yourself-dizzy/img-04.gif` (6749 KB) — alt: (none)
-- `/assets/images/newsletter/dance-yourself-dizzy/img-05.gif` (5899 KB) — alt: (none)
-- `/assets/images/newsletter/dance-yourself-dizzy/img-06.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/dance-yourself-dizzy/img-07.jpg` (250 KB) — alt: (none)
-- `/assets/images/newsletter/dance-yourself-dizzy/img-08.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/dance-yourself-dizzy/img-09.jpg` (1640 KB) — alt: (none)
-- `/assets/images/newsletter/dance-yourself-dizzy/img-10.jpg` (9073 KB) — alt: (none)
-- `/assets/images/newsletter/dance-yourself-dizzy/img-11.png` (27 KB) — alt: (none)
+![](/assets/images/newsletter/dance-yourself-dizzy/img-02.png)
+
+![](/assets/images/newsletter/dance-yourself-dizzy/img-03.png)
+
+![](/assets/images/newsletter/dance-yourself-dizzy/img-04.gif)
+
+![](/assets/images/newsletter/dance-yourself-dizzy/img-05.gif)
+
+![](/assets/images/newsletter/dance-yourself-dizzy/img-06.png)
+
+![](/assets/images/newsletter/dance-yourself-dizzy/img-07.jpg)
+
+![](/assets/images/newsletter/dance-yourself-dizzy/img-08.png)
+
+![](/assets/images/newsletter/dance-yourself-dizzy/img-09.jpg)
+
+![](/assets/images/newsletter/dance-yourself-dizzy/img-10.jpg)
+
+![](/assets/images/newsletter/dance-yourself-dizzy/img-11.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/dance-yourself-dizzy/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

@@ -73,4 +73,5 @@ Aerial Edge Founder
 
 ## Images
 
-- `/assets/images/newsletter/need-to-know-for-tomorrow-at-october-edge/img-01.jpg` (179 KB) — alt: (none)
+![](/assets/images/newsletter/need-to-know-for-tomorrow-at-october-edge/img-01.jpg)
+

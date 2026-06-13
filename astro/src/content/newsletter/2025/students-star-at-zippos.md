@@ -19,7 +19,7 @@ PLUS new classes start this week
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k1tzgjoUhX9NeKsD4ZY-5MFLsdV6OVq89IUJyRZTgWAIYPvrz2g7nTNTz-vOSmblW2vzRAq63LKndHpJs91opU1Ego5cLEG5sF1uW0IVTJaUq9IwbnoMtGQ5iAx6XPWa0895oroSdH2UVWI-K6C54sxI9T0XFlAn9D0nII--Z0HBZJ4UUNcsg6uBfXvxK2eDnRg3UL-Szf4EP6rbY5wVFZNZ-Z_Z9VpACE8JCOF6geN4BMIAQsxsC8pWalUWUBpaaSUafrViHaltg5O63PNS1z_Y7MBSHKbCBexjEhwIWJJiG_s2sTF27EfH64HwfcyE63MvJS6EyLP_l0ROj8ZUNXL7CEcIR6ySf0QIR7dPPFQaWgkdwlH06IwrFwhbj3NzcOOy_7VBOLoHBbmRkQUktWFFhdzRL1Q3JL6V8-QbkCwN6JLlNMZRLcab085BOHp6D3dkNXTqqin8zwnCgwzhaPrCLm_1tFLp-1QOF9m6O4t1gHCU9fUO4cGked4AMdHyLN1mZz7EEMevsFhN96vxMtyOVMDn3blxZva2Ja9bhAcdIDw4q9lTvA66cNvkL7PYfvtn-SXn4fL5qkB44MyHwGfdrFkMY6Oz6CMY-uVmsDenXSzz98l0P1zUfXEYBVs11m25WI0nxzl_sXJ16-w9aFYB5qgEZZW0lJaZLGna5KeHGxSr0qqVAjTNgQmuyhK4UdrStGD6hDz7T5y1ajQH-h2XrNuHTukTaMtcy53cNWAoV0Vyd58MBZP8Frml-N8AAAD__49lK_k)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/students-star-at-zippos/img-01.png)
 
 Applause for Youth Circus Performance Programme students at Zippos Circus
 
@@ -118,9 +118,7 @@ Cost: Use your class pass
 
               [Tap to book Wednesday daytime classes](https://email.contact.aerialedge.co.uk/c/eJx0lEtzozgQxz-NuGw5JcT7oIMfweM4jj3O-JULJaQ21hgkIgRO5tNvYXu3tmayR_7dNP_-dTc8k4Kuduwxn3_kxX6yNjaNw0v84QjKBfY4doSumFSUa2UZtw8MjGQliAIeuH5oz_d4pi8KTHOSdWY_a6Cl5sxKfdOFA9SNAt8N4yTwHaiYLLMKmoYV0Bs4dB9B7W6JuyEtNM_x9nCGe9a1GGdVzWSh_qP1r4VxzPMYhPD80HX9GKIQIsKwA6qTRqsKlKW10aLlvRXnRDETQeRj5vMAWM4F4V6SuBFL3MTzIDo6khJMAhxjQlycuP4DiCAgTHgB9_PYgwj5-H9JlPRkbd0gb4hIikjKavlHEiLptYmBNYyfpSoQSSOc-yRiAY5j5KX38jOBvEmT-KvhYjc8dXmwTezs-0IyRMLGMmMFs4C8Se93gOMB9hEJQYnfZBcjEnagWmiQN0Ek5MxCoc3n7UmqxpqWW23uYX08gpGquEK-a_2UDDTWyCvHu_r790NEwtZWWaNbw_vItc-7WIGQbfWP-FfFzBmsVIVT8uw2VKksGMVKuiFpI6bb895FJH18i_bxeuw2dVsFn0-IjHpg8xn7-NHMa52_zeV4Wbxe3sVriEhaDM0ekdFT-20LsU1X79Jr9_anGJPNMyzX88N6uop2Ex3yl8t76y7wroufd4iMLoDI6F0vHjev4SXateVsscE_vq9-yZdo9a3PQGTkvoyBLy6LdjneWFOkP8NxoLajgz3vN7J8e5ofxstmKI6TcKenplPL9fTp9MJnTqmvd5Ym7rT2IGav09IevY0a_to6FdiTFpTV0tFGFlLRvC3PgysUpza6kwIMLYEJrpWCflSOoT1A5OM_VvAGn95WTDbd4KLNGYxj-4PMvjRgKddV9uU_wFKw2b_H11HydwAAAP__-thlpg)
 
-[image: previous][image: previous][image: previous][image: previous]
 
-[image: next][image: next][image: next][image: next]
 
 ## STARS OF ZIPPOS SHOW
 
@@ -170,21 +168,15 @@ This is the sort of fun you could try in the new Group & Partner Acro class. Tau
 
 You can see more from [@acro_alexy here](https://email.contact.aerialedge.co.uk/c/eJx0k0tz4ygUhX8N2kwlJdALLVj4Ebkdx7Hbab-yUWG4lmlJoCAkpfvXT9nJTE1VZ7aHy6nDdw8iV5Kt9_zhtHg_FYfpxrqMxgN99yQT0g-E70lTc6WZMNpx4e45WMUrkAXcC3PflZ_nuRk02Paimtz9aoBVRnCnzIcuPWA4iUIc0zQKPai5qvIa2pYXcA1w7N-jBu8I3pIO2ie6O5bwOXUzE7xuuCr0f7TrtZhScaIgZRDGGIcUkhgSwn0PdK-s0TVoxxprZCeuUbwLS0SEaewDPYfnk0zjNDknEEieQiDpmcaeYsQnkU99QrCf4vAeZBQRLoNIhCcaQIJC_39JVOziXNOiYIRIhkjGG_XHECLZ7RF3znJRKl0gkoUQ45SHBEsfBdmn_VyiYNqm4Xq03I8u_SnapW7-fak4InHn6rw1nRWAgunN7lOsQaqu_kf8q-a2BKd04VUi_2CntAOrecW2JGvlbFceMCLZw2tyoJsJbpuujn49IjK-5lrM-fuPdtGY0-tCTVbFy_AmX2JEsmJkD4iMH7tvO6AuW7-poDu4n3JCtk-w2iyOm9k62U9NLJ6Htw4v_X1Pn_aIjAdAZPxmlg_bl3hI9l01X279H9_Xv9Vzsv52nUBkjJ8nIJbDsltNts4W2c94Eund-OjKw1ZVr4-L42TVjuR5Gu_NzPZ6tZk9Xp7F3KvMrc5ZimdNAJS_zCp3DrZ69Hvn1eAuRjLeKM9YVSjNTl1V3t2geI01vZJgWQVcCqM1CGesZ9kVIAr9Pzb9AZ99bFK1_d1gbAnWc9fe518GcEyYOv_yqzkGLv-34z0jfwcAAP__SiY3Sw).
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -206,14 +198,26 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/students-star-at-zippos/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/students-star-at-zippos/img-02.jpg` (242 KB) — alt: (none)
-- `/assets/images/newsletter/students-star-at-zippos/img-03.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/students-star-at-zippos/img-04.jpg` (115 KB) — alt: (none)
-- `/assets/images/newsletter/students-star-at-zippos/img-05.jpg` (714 KB) — alt: (none)
-- `/assets/images/newsletter/students-star-at-zippos/img-06.gif` (5792 KB) — alt: (none)
-- `/assets/images/newsletter/students-star-at-zippos/img-07.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/students-star-at-zippos/img-08.jpg` (624 KB) — alt: (none)
-- `/assets/images/newsletter/students-star-at-zippos/img-09.jpg` (604 KB) — alt: (none)
-- `/assets/images/newsletter/students-star-at-zippos/img-10.jpg` (598 KB) — alt: (none)
-- `/assets/images/newsletter/students-star-at-zippos/img-11.jpg` (611 KB) — alt: (none)
+![](/assets/images/newsletter/students-star-at-zippos/img-02.jpg)
+
+![](/assets/images/newsletter/students-star-at-zippos/img-03.png)
+
+![](/assets/images/newsletter/students-star-at-zippos/img-04.jpg)
+
+![](/assets/images/newsletter/students-star-at-zippos/img-05.jpg)
+
+![](/assets/images/newsletter/students-star-at-zippos/img-06.gif)
+
+![](/assets/images/newsletter/students-star-at-zippos/img-07.png)
+
+![](/assets/images/newsletter/students-star-at-zippos/img-08.jpg)
+
+![](/assets/images/newsletter/students-star-at-zippos/img-09.jpg)
+
+![](/assets/images/newsletter/students-star-at-zippos/img-10.jpg)
+
+![](/assets/images/newsletter/students-star-at-zippos/img-11.jpg)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/students-star-at-zippos/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

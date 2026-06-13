@@ -19,7 +19,7 @@ PLUS Youth play or perform...how to choose?
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k89u4yoYxZ8G71ph_H_BIp6UNG1uXU-bxJ2NhQE7NDYwmCRun_4q6Wh0peZuPz7QOT_OYbXk-HlL75rHqemq-U_rSBqf0snjmHEYMOhxPVCpMNPKUeZuqbCS9oJ34pbp28P-z3mtT0rYcSdN7T6MwL1m1En9NeeewH4SJX6SIeh7YqCyrwcxjrQTZwG_StPnd2-huKPF0oULVDy4P1uXxxgdDJWd-s_sfC1OG8raFrKgoX4iUBtlacKZ7wl1lFarQSiHjdX8wM5SvB1u49hvKGxhk3CWMT-EfsJTCNMohdyngScxgiiCGYz9BEHo3zZxk1A_SymFbRqlAoTwf0n0eOecGUEwA4gARKiR35YAIhcTN8aKoxQngAjJ_IUJREpfFr1rg7WafW4AIteggIA4OYh6dHQwIJj_hQrDKPF6Vn8BksoJq2iP14iMfLHZVz5AeV-1AqB8XxiA8um53XYRQPlQuDeSApSrzY9lbJthK9NjsImzLS9JTPt0CRB5L-7D_e_1iXLzLLiqLHpgFRHNr_t8_jQDKKev62Kd8l23Gt-1KQL1UU4_duWMTKZ5LX4-Ps318uEEUF49duQ5RNMkhn-K2ePnmdNHABBBT6tOhrScGR7a08rwz5fQ0Jfdi3soks0Cvq5UOVZ2-ZQdxuR31Kx4uf3IhqDbRNPZ3L1VZxOHQr9XSfy2bOdN25fVHQjmXq8vOb8G2huE22mOqZGetrKTCjeHfn9zAekZq4-SC4t7QTnTSgnmtPUsHqjdgxB-i8CoD5YJ_PXFcjzenLTdC-s5zPRQXy2aw8LVfxPuzs2pryo9YvRvAAAA___MPzw8)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/fly-all-day-for-three-days/img-01.png)
 
 To make life easier, you can use this menu go direct to articles. Above each section, you'll find a timeline of relevant dates, and there are direct booking links throughout.
 
@@ -229,21 +229,15 @@ At the end of every month, we award a free class for the social post that makes 
 
 Is your acro practice missing a set of step ladders? The fun family of acrobats in this [vintage circus](https://email.contact.aerialedge.co.uk/c/eJx0U11vqzgU_DXmZdUKbD4f_BAuJU2bhtA2Ce0LMrYBN2BzjfPR_voVSXe10u1KPB3OjGbGZ2gpGF7vyF31eK6aInnWJg39U3i2GKbMRtS2mOqJkJgqaQg1t4RrQTrOGn5L1e1h__2_VCfJ9diKoTSfA8edosQIdZ0zi2Mn8AIniKDtWLwnoit7Po6k4ZOA93zo4rs3l9-RbGHcOcwezPfWhYySfiCikf-ZTTA_rAita5uiijgBh7UXhQGjjsXlUWgley4NHrRiBzpJsVqMPB56dk0RDRC0K8hh5CIWcreKeGUjZgkMbejZke07AbRt57byq4A4UUiIXYdeyIFr_28SHW6NGUaAZgCmAKZkEH8sAZheTNwYTeheyAbA1A55zb2oIjACKP2mXzCAkjFy17On3aw9Vt42Mov8SRAA_YPpy1EdNOUAJRc6AH3RjC1AydPXc5clsVjt0u59BlAyfVdIz5k49P9A_uqJ3nMjZGN1tLwmK6ThWpIOb2A6svl2XzgAxl1RcwDjfTYAGJ_X9a7xAIz7zLylIYCx3P5a-LrqdyI8oq0f7Vie-qQLFwCmH9m9u_-9ORE2rDmThYYPtEh59X4fJ6sZgDF53WSbkLXNcvxQQ4bkZ37-1eaz9DxUr9nz4ypRi4cTgHHx2KRrF57PvH_KZo9fU8CfCMAUrpaNcEk-G5irT8uBfb24A3lpX8xDFmzn9utS5mOhF6voMAa_vWrJ8t1n1KNm650nc_daTiYOmfooAv9tUSdV3eXFHUCJ1alLQdLImQ-Ih-Rl3pkabeTsa2v13LSKYTIIS2nRCImrQ7e_uQRpDVodBeMad5wwqqTk1ChtaTyFDlz7j9u5Pie-3oYYjzcnpfdcWwZT1Zc_NtRgbsp_q2GmypU_Kj1i-HcAAAD__wPnUUI) TV clip have got out of the starting blocks with the creative possibilities!
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -265,15 +259,28 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/fly-all-day-for-three-days/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/fly-all-day-for-three-days/img-02.jpg` (213 KB) — alt: (none)
-- `/assets/images/newsletter/fly-all-day-for-three-days/img-03.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/fly-all-day-for-three-days/img-04.gif` (4335 KB) — alt: (none)
-- `/assets/images/newsletter/fly-all-day-for-three-days/img-05.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/fly-all-day-for-three-days/img-06.gif` (6297 KB) — alt: (none)
-- `/assets/images/newsletter/fly-all-day-for-three-days/img-07.png` (25 KB) — alt: (none)
-- `/assets/images/newsletter/fly-all-day-for-three-days/img-08.gif` (7831 KB) — alt: (none)
-- `/assets/images/newsletter/fly-all-day-for-three-days/img-09.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/fly-all-day-for-three-days/img-10.gif` (8328 KB) — alt: (none)
-- `/assets/images/newsletter/fly-all-day-for-three-days/img-11.png` (6 KB) — alt: (none)
-- `/assets/images/newsletter/fly-all-day-for-three-days/img-12.gif` (3070 KB) — alt: (none)
+![](/assets/images/newsletter/fly-all-day-for-three-days/img-02.jpg)
+
+![](/assets/images/newsletter/fly-all-day-for-three-days/img-03.png)
+
+![](/assets/images/newsletter/fly-all-day-for-three-days/img-04.gif)
+
+![](/assets/images/newsletter/fly-all-day-for-three-days/img-05.png)
+
+![](/assets/images/newsletter/fly-all-day-for-three-days/img-06.gif)
+
+![](/assets/images/newsletter/fly-all-day-for-three-days/img-07.png)
+
+![](/assets/images/newsletter/fly-all-day-for-three-days/img-08.gif)
+
+![](/assets/images/newsletter/fly-all-day-for-three-days/img-09.png)
+
+![](/assets/images/newsletter/fly-all-day-for-three-days/img-10.gif)
+
+![](/assets/images/newsletter/fly-all-day-for-three-days/img-11.png)
+
+![](/assets/images/newsletter/fly-all-day-for-three-days/img-12.gif)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/fly-all-day-for-three-days/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

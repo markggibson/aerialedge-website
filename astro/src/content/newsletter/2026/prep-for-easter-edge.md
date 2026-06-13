@@ -131,5 +131,7 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/prep-for-easter-edge/img-01.jpg` (19 KB) — alt: (none)
-- `/assets/images/newsletter/prep-for-easter-edge/img-02.png` (761 KB) — alt: (none)
+![](/assets/images/newsletter/prep-for-easter-edge/img-01.jpg)
+
+![](/assets/images/newsletter/prep-for-easter-edge/img-02.png)
+

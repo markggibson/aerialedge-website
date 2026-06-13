@@ -19,7 +19,7 @@ PLUS Hammock is in October Edge
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k0lv-yoUxT8N3jXC4HHBIkPtpK6S5lWZurEw3DjUAxYmQ_Ppn5JW7_2l5r-9HNDhd84VuZLsbcOfi-xSlNvJP8YmUXCOLo5kQmIqsCN1w1XLhG4tF3bAwShegyxhIPTgWP2c5_rcgukPqsvtVwes1oJbpb_n0gHmhj71feyG2IGGqzpvoO95CTcDm2CxWO1w7GZZbxer9JpO9Y_q_pjgTcdV2f4xu10LoojEXlQQwILKiOK99DkvCgfakzK6baC1rDNaHsXNinNgBfWjfVHE-xjLcO97EeZcUNcvAgqURNRRjGDi45AEbugGLh54IuZhGIAfkgi8sEAe_iuJmh2s7XpEh4gkiCS8U79EiCT3Tzx1Bk4KzogkSeymHYWIv6e13dNVO7yuEUkeQUE0saqBvLe86RCd_A-VBMSpRf4NSLUWTMtrtiJJL9N1tXXjaQLXxW7ijxAZpbtM2XD8gscvz6t5dr5u1xeY96tOlVG43FfxcjG8Uvy1fnn95B9VsBoHX8L3Nh-Kjt0ynb8jMroM3zbD2a6eLMejzeu294bJogsRScSMziQiiRspFYhl976d6DOZuom9mGDmfWYzN0oRSbwlPozL5W6e-VNb7XRLK0RGUzGfe88iHm6DSF23_lxCm2bZ0X1zan1v6yNcTgP2oCXjnXK0UaVqWXGsq6c7Dqcz-qQkGFYDl0K3LQirjWNYw02FPPwryF4fjQD2HZTqT09nbSowjr3VOn9owDKhm_zhJlkGNv-vwidG_g0AAP__coAmMw)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/new-acrobalance-partner-acro-class/img-01.png)
 
 There's a new acrobalance class starting the first week of August
 
@@ -117,9 +117,7 @@ Cost: £200
 
               [Tap to book into October Edge](https://email.contact.aerialedge.co.uk/c/eJx0k8uOozgYhZ_GbEZVAhuwWXhBkoKk6E4qU8qtN8jYDnEDNjLOpfL0o1xmNFJ3b49_Hx1__zEvlaAfG_ZWFZeq3k7-ti4j8ZlcPEG58BH3PWE6pjTlRjvG3SuTVrFWilq-cvN6bJ7npTlraYeD6kv31UvaGs6cMg9deJIGOEJR5AfY92THVFt2chhYLW8BNvFisdr5SVAUg1us8ms-Nc-puxlnXc9Urf-n3a7FhMAkJBWUPkeCIH8vIsaqypP6pKzRndSO9taII79F8Q6UJQHBe4gIkyJGIeEJI3hfVTKMYSX22FMU-jDyMYwDHMSB_xryhGEcywhDIkNcgdD_I4mWHpzrB4BSADMAM9arX4YAzO6PeHGW8UbpGsAMQxwhKTmOBUDZ034mAJoMSfiRft-kh1MVrRM3W35XDMD46LpyMEfLJUCTu91T7KRQx-5f8a-O2UY6pWuv5eWDndJOWs1auoLZIPJ1sw2SaSavi90kGgE4yneFcnj87o_f31bz4nzdri9yPqx6VRO83DfJcpFekf-1fv_2k_1o4tU4_uJRuPmh0Dio8_kngKNL-rFJZ7t2shyPNt-2Q5hmix4DmPEZmgkAs4AoFfNl_7mdmDOcBpm72HgW_ixmAckBzMKlfxjXy928iKau2RmNGgBHUz6fh288SbcxUddtNBdS50VxDD681tyLnCVB3iNJ2Gfeuj1a6fS69jrpDkZQ1ivPWFUrTatj27zccXi9NSclpKWtZIIbrSV3xnqW3tCB0P9lxw_s9LFDNZxezsY20nru1vjytwEc5aYrf_vJHJWu_K_dJwr_CQAA__8qATKh)
 
-[image: previous][image: previous][image: previous][image: previous]
 
-[image: next][image: next][image: next][image: next]
 
 ## Zero to spotlight in 4 weeks
 
@@ -147,21 +145,15 @@ At the end of every month, we award a free class for the social post that makes 
 
 The sweeping wide circle of spin makes [this](https://email.contact.aerialedge.co.uk/c/eJx0k8uO4ygYhZ8Gb0ZVwuALXrBwkrKTcndSmVJuvbEwEIe2DRYml8rTj3KZ0UjdvT38HB2-_8BLJejHhr1VxaWqt5O_rctIdCYXT1AuIObQE6ZjSlNutGPcvTJpFWulqOUrN6_H5nlemrOWdjiovnRfvaSt4cwp89CFJ6kfhzgMoR9DT3ZMtWUnh4HV8hZgEy0Wqx1M_KIY3GKVX_OpeU7dzTjreqZq_T_tdi0iBCUBqZCEHAuC4V6EjFWVJ_VJWaM7qR3trRFHfoviHSgmoeB-yBkhEdzHgkEpSYg4Y2IfYBJ6iiKIQhijyI_9yIevAU9YHEcyjBGRQVyBAP6RREsPzvUDwClAGUAZ69UvQwBl90e8OMt4o3R9EyK-j1CVQCEBzp72MwHwZEiCj_T7Jj2cqnCduNnyu2IARUfXlYM5Wi4BntztnmInhTp2_4p_dcw20ildey0vH-yUdtJq1tIVygaRr5utn0wzeV3sJuEIoFG-K5SLx-9w_P62mhfn63Z9kfNh1auaxMt9kywX6RXDr_X7t5_sRxOtxtEXD4PND4XHfp3PPwEaXdKPTTrbtZPleLT5th2CNFv0MUAZn-GZACjziVIRX_af24k5o6mfuYuNZsHPYuaTHKAsWMLDuF7u5kU4dc3OaNwANJry-Tx440m6jYi6bsO5kDoviqP_4bXmXuQs8fMeS8I-89bt8Uqn17XXSXcwgrJeecaqWmlaHdvm5Y7D6605KSEtbSUT3GgtuTPWs_SGDgTwlx0_sNPHDtVwejkb20jruVvjy98GcJSbrvztJ3NUuvK_dp8o-icAAP__uVwy6g) act so graceful, and wow, those ice skating boots add a little more risk. It's all fun and games until someone loses an eye, as our grandparents used to say. Just as well circus people are expert risk-assessors.
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -183,14 +175,26 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/new-acrobalance-partner-acro-class/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/new-acrobalance-partner-acro-class/img-02.jpg` (273 KB) — alt: (none)
-- `/assets/images/newsletter/new-acrobalance-partner-acro-class/img-03.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/new-acrobalance-partner-acro-class/img-04.gif` (7240 KB) — alt: (none)
-- `/assets/images/newsletter/new-acrobalance-partner-acro-class/img-05.gif` (4941 KB) — alt: (none)
-- `/assets/images/newsletter/new-acrobalance-partner-acro-class/img-06.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/new-acrobalance-partner-acro-class/img-07.gif` (4414 KB) — alt: (none)
-- `/assets/images/newsletter/new-acrobalance-partner-acro-class/img-08.jpg` (679 KB) — alt: (none)
-- `/assets/images/newsletter/new-acrobalance-partner-acro-class/img-09.jpg` (1000 KB) — alt: (none)
-- `/assets/images/newsletter/new-acrobalance-partner-acro-class/img-10.jpg` (1110 KB) — alt: (none)
-- `/assets/images/newsletter/new-acrobalance-partner-acro-class/img-11.jpg` (333 KB) — alt: (none)
+![](/assets/images/newsletter/new-acrobalance-partner-acro-class/img-02.jpg)
+
+![](/assets/images/newsletter/new-acrobalance-partner-acro-class/img-03.png)
+
+![](/assets/images/newsletter/new-acrobalance-partner-acro-class/img-04.gif)
+
+![](/assets/images/newsletter/new-acrobalance-partner-acro-class/img-05.gif)
+
+![](/assets/images/newsletter/new-acrobalance-partner-acro-class/img-06.png)
+
+![](/assets/images/newsletter/new-acrobalance-partner-acro-class/img-07.gif)
+
+![](/assets/images/newsletter/new-acrobalance-partner-acro-class/img-08.jpg)
+
+![](/assets/images/newsletter/new-acrobalance-partner-acro-class/img-09.jpg)
+
+![](/assets/images/newsletter/new-acrobalance-partner-acro-class/img-10.jpg)
+
+![](/assets/images/newsletter/new-acrobalance-partner-acro-class/img-11.jpg)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/new-acrobalance-partner-acro-class/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

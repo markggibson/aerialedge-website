@@ -19,7 +19,7 @@ PLUS Start prepping for Open Rig Night...
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k1FzujgUxT8NvNUJCSB9yINWo_5ZXatgbV-YEC6aFRImBLR--h1tp7MzdV9vTjInv3OuyGRB1298mseX_LCfbIxlUXiOLm5BRYGIQG6hay4VFVpZLuyAg5G8guIAA6EH3en7PNNnBaY9yiaznw3QSgtupf6aFy5QbxgEz74fosCFmssqq6Ft-QFuBprz5LCPBRbd3-vpVCHSpvG36v6Y4HXD5UH9Z3a7FkY8CnhelsNA8BKTqPSC0AsDF1QvjVY1KEsbo4tO3Ky4R-rziJeBX2AsxFCQPBDPOY9KjkQYQZFjV1KMcIAiTDyECQ4GaEiiQETI414ImISOj_6XREWP1jatQ0YOZg5mvJG_RA5m9088NQZ6CWcHM_bszRoCEd_OKluSVI2uOwezR1AcwqysIWstrxuHTH6g-iH23EpkX4CksmAUr2iKWVvMdqe952C2vMQvi2bKqv0pXXX1Ra3j9S5Acr5M4vMKsTS1yVW9zGBRo2n9z9Irt2zz9keCRkPfweO4-PjrDW2jK8tnZS9KtnXweH4k8XySrH0yQimsytflZNZM3yd1MsbqFWGdfHSWA1t2n_0lGZ29-ef7i7c4bfpkFi02MO7KbbTzx5uU8eFWOZi9MiNG7-21nazGxMHjskn-rC9upe9dfQTLrcEedUF5I11t5EEqmnfV6ekOw22M7mUBhlbAC6GVAmG1cQ2tuTk5PvoVY6s7I4B-xSTb_umszQmMa2-lzh4asFToOnu4R5aCzX4K3FP8bwAAAP__it8pCA)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/new-classes-starting-september/img-01.png)
 
 Open Rig Night is coming soon!
 
@@ -221,21 +221,15 @@ Anyone who can pop into Aerial Edge like [@andresabatino](https://email.contact.
 
 It's at 2pm, 5pm and 8pm at the Mirage Spiegeltent at the Gyle Shopping Centre – last day is today (Saturday 23rd August).
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -257,15 +251,28 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/new-classes-starting-september/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/new-classes-starting-september/img-02.jpg` (146 KB) — alt: (none)
-- `/assets/images/newsletter/new-classes-starting-september/img-03.png` (1394 KB) — alt: (none)
-- `/assets/images/newsletter/new-classes-starting-september/img-04.gif` (5285 KB) — alt: (none)
-- `/assets/images/newsletter/new-classes-starting-september/img-05.png` (25 KB) — alt: (none)
-- `/assets/images/newsletter/new-classes-starting-september/img-06.gif` (2751 KB) — alt: (none)
-- `/assets/images/newsletter/new-classes-starting-september/img-07.gif` (7831 KB) — alt: (none)
-- `/assets/images/newsletter/new-classes-starting-september/img-08.gif` (5396 KB) — alt: (none)
-- `/assets/images/newsletter/new-classes-starting-september/img-09.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/new-classes-starting-september/img-10.gif` (4596 KB) — alt: (none)
-- `/assets/images/newsletter/new-classes-starting-september/img-11.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/new-classes-starting-september/img-12.gif` (4804 KB) — alt: (none)
+![](/assets/images/newsletter/new-classes-starting-september/img-02.jpg)
+
+![](/assets/images/newsletter/new-classes-starting-september/img-03.png)
+
+![](/assets/images/newsletter/new-classes-starting-september/img-04.gif)
+
+![](/assets/images/newsletter/new-classes-starting-september/img-05.png)
+
+![](/assets/images/newsletter/new-classes-starting-september/img-06.gif)
+
+![](/assets/images/newsletter/new-classes-starting-september/img-07.gif)
+
+![](/assets/images/newsletter/new-classes-starting-september/img-08.gif)
+
+![](/assets/images/newsletter/new-classes-starting-september/img-09.png)
+
+![](/assets/images/newsletter/new-classes-starting-september/img-10.gif)
+
+![](/assets/images/newsletter/new-classes-starting-september/img-11.png)
+
+![](/assets/images/newsletter/new-classes-starting-september/img-12.gif)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/new-classes-starting-september/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

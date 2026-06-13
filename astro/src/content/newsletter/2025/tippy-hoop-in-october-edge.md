@@ -19,7 +19,7 @@ NEW! Gremlin 101 rope workshop with Fox
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k89y4jgQh59GviUly5ZtDjoAtsnChEmGDYG5uGSpMQJbMrJs_jz9FsnU1FZN5vpTS_Xp625RKMle3nlWLi5ltUl_WJcn0Tm5eJIJiQOBPWkarjQTRjsu3CMHq3gNsoJHYR7746_zwpw12G6v2sJdW2C1Edwp85lLD5gf0zimIR4RDxqu6qKBruMV3AFyms1h1Q3XyWw6Xfb_Srl1v6o-HhO8abmq9P-y-7UoEQEhpZScRiQMkyDBPAQae6AHZY1uQDvWWiN7cUfx9oyEvvAJyB2OSFiGO4rDICzjqIxLHPuce4oRTCge-QEeYT8gjzHZQTyiNApiQcMYUIj_aqJme-faDgVjRHJEct6qP4oQyT8-8dBaGBScEcnzkT9rA0j4ala7XfCmx7f1Pf5CCgpypxooOsebFgXpb6k-pYlXi-JTkNIOrOY1eyN5J2fr48YfTdfb5e20rcrRZopIfkcMudlOr4bs-_kckfz120W2_ekwH6oqJcssRWRCGhrTiQRXH56iF3k-neh6Nlkhkj-Z-CYuF6m3zfP2ssuO46dLud_i2WtPzy0Wq67ur_ksHsZLc5qrTUgy9yKSbKe_H4afpx8LvHBbel2mY_993y7hZ9PLAwSITKKbKzfZfvGaIpL3azutb8s5JM_h6UgPMHlbZ3Shb4jkImrT9xSczV--_7Oq-Or67Tm7llW6shKjIPVq8zHfXwn2GnB7IxlvlWesqpRmZV8fHz4Eeq01g5JgWQ1cCqM1CGesZ1nD7RGF-I_Wd6a3Athna1U3PJyNPYL13H0Rii8BHBOmKb7cPcfAFb-HfmDkvwAAAP__M9E7Jg)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/tippy-hoop-in-october-edge/img-01.png)
 
 To make life easier, you can use this menu go direct to articles. Above each section, you'll find a timeline of relevant dates, and there are direct booking links throughout.
 
@@ -243,21 +243,15 @@ At the end of every month, we award a free class for the social post that makes 
 
 Such a good piece of kit for hypnotically smooth movements. Takes up a lot more space than a hoop in your living room though. See the whole reel [@holly.downey](https://email.contact.aerialedge.co.uk/c/eJx0U01z4jgU_DXyZSspI1v-OOgAGJPAwJBhQ2AuLll62AJbMrJsPn79FiS7tVUzc209dfXr180zKejqg03y-SUvtskPY9MoOEcXR1AuXI-7jtA1k4pyrSzj9pmBkawCUcAz18_d8es902cFpi1lk9lrA7TSnFmpP3HhAB2EJAyJ78bYgZrJKquhbVkBdwEpmcxg3fbX0XQ8XnZ_C7GzX1MPMs7qhslC_Q-7fwsi7mGcC8FIgH0_8iKX-UBCB1QvjVY1KEsbo0XH71KckuYBY2EYCH_v7geAYRAJAnsRR4HIAz9wHUmxi4kbDzw3dgcefg7xHsKYkMALOfFDQL77RycqWlrbtMgbIpwinLJG_jKEcPpY4skaxo9SFQinGAY5EcDjwEde-kX_KpCXtLG_Gi4-hmWfk01sX98WkiEcdLbOWt0ZDshLHnRfYA1CdvW_4F81M0ewUhVOxbNP76SyYBSr6DtOWzHdHLeDeLzZLW-nXZHH2zHC6V29z_RufNW47GYzhNO3bxfRdKfDrC-KBC8nCcIjXJOQjATY6vASrMT5dCKb6WiNcPqiwxu_XITa1YvdZT85Dl8ueblzp28dOTcuX7dVd02nYT9c6tNMbn08sSseTfbq-6H_efoxd-d2R67LZDj4KJsl_Kw7cQAP4VFws_l2Us7fEoTTbmPG1W05g2jhn47kAKP3zYTM1Q3hlAdN8pGANenq--u6YOvrt8XkmhfJ2ggXeYlT6Uf003gwbTyI2Hpa2b33roa3jVODLbWgrJGONrKQiuZddXx6GOg0RvdSgKEVMMG1UsCtNo6hd7OR7_6Sis9D0c-ry7Z_OmtzBOPYe0ey3wqwlOs6-20tLQWb_deHnuJ_AgAA__80J0df)
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -279,15 +273,28 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/tippy-hoop-in-october-edge/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/tippy-hoop-in-october-edge/img-02.png` (1332 KB) — alt: (none)
-- `/assets/images/newsletter/tippy-hoop-in-october-edge/img-03.jpg` (495 KB) — alt: (none)
-- `/assets/images/newsletter/tippy-hoop-in-october-edge/img-04.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/tippy-hoop-in-october-edge/img-05.gif` (3238 KB) — alt: (none)
-- `/assets/images/newsletter/tippy-hoop-in-october-edge/img-06.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/tippy-hoop-in-october-edge/img-07.jpg` (1605 KB) — alt: (none)
-- `/assets/images/newsletter/tippy-hoop-in-october-edge/img-08.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/tippy-hoop-in-october-edge/img-09.jpg` (41 KB) — alt: (none)
-- `/assets/images/newsletter/tippy-hoop-in-october-edge/img-10.gif` (5730 KB) — alt: (none)
-- `/assets/images/newsletter/tippy-hoop-in-october-edge/img-11.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/tippy-hoop-in-october-edge/img-12.jpg` (271 KB) — alt: (none)
+![](/assets/images/newsletter/tippy-hoop-in-october-edge/img-02.png)
+
+![](/assets/images/newsletter/tippy-hoop-in-october-edge/img-03.jpg)
+
+![](/assets/images/newsletter/tippy-hoop-in-october-edge/img-04.png)
+
+![](/assets/images/newsletter/tippy-hoop-in-october-edge/img-05.gif)
+
+![](/assets/images/newsletter/tippy-hoop-in-october-edge/img-06.png)
+
+![](/assets/images/newsletter/tippy-hoop-in-october-edge/img-07.jpg)
+
+![](/assets/images/newsletter/tippy-hoop-in-october-edge/img-08.png)
+
+![](/assets/images/newsletter/tippy-hoop-in-october-edge/img-09.jpg)
+
+![](/assets/images/newsletter/tippy-hoop-in-october-edge/img-10.gif)
+
+![](/assets/images/newsletter/tippy-hoop-in-october-edge/img-11.png)
+
+![](/assets/images/newsletter/tippy-hoop-in-october-edge/img-12.jpg)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/tippy-hoop-in-october-edge/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

@@ -19,7 +19,7 @@ PLUS explore your fluidity and creaturely movement qualities
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k89u4jwUxZ_G2bVK7PxdeEGgoQVmQoGm0E3kOJfg4tipYwL06T-1HY0-qZ3t9bV1_Dvn8FLUdPnM7qr5pWq2k5WxWRye44tTU167hLtOrVsmFOVaWcbtLQMjmIS6gVuub0_HP-elPisw_UF0pb12QKXmzAr9Na8doF4UxEmMk4A40DIhyxb6njXwISBdzm2RL_IZadbH7jI_3M82f7Y-H-Os7Zho1P9mH9fCuA4DDoA9CL2qioOaM9dzawfUIIxWLShLO6PrE_-Q4hxoxSLXj_eYB1W0D8O4YnFYhUkIHgYMjDiCYhcHboIjz8eYkFvwCWc1gYjEns_dGPnuP0lIerC26xEZIZwhnLFOfFtCOPv8xE1nYBBwRjjLEm_aEYjZeirtnjyp0XuBcPYTFEQyK1ooe8vaDpHJX6g4dH1H8vILkFAWjGKSPuGsr6fFceshnHaByslloXd4t39Yv4wW7zZPvNddwe7vEc7IcH17et9HjZC-YFYmwH_v-3Ew5zNf6LM0EiZh7hWn17dzcZUHFm0QznZzf1NtxOju2F-jaZ_k1_GBnBBOXwY5ZvXudQ3L6fT5mj8inAbP83vxEtjF0l4QTiFb7EUhVcdm40rnqQybuwnCqUQ43bLRuNiJ2Spb4OV8mre_ntRmpR9YRGxyXZG7xaTASfA-rKXeNm9vD-3q8THbLtJi_PslyeAXIhNH6s98_wTYacEedE1ZJxxtRCMUrU7yePMJ0OmMHkQNhkpgNddKAbfaOIa2zByR736zvtcnw4F-WSv64easzRGMYynY8m987Uctyh_lWMp1W_7YxIHi_wIAAP__KzQ7Xw)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/join-us-for-circus-lab/img-01.png)
 
 To make life easier, you can use this menu go direct to articles. Above each section, you'll find a timeline of relevant dates, and there are direct booking links throughout.
 
@@ -175,21 +175,15 @@ As well as being outrageously clever and cool, this clip posted by [@BradMeltzer
 
 So no more turning up for training in raggy old joggers! Let's see some effort!
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -211,14 +205,26 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/join-us-for-circus-lab/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/join-us-for-circus-lab/img-02.jpg` (1362 KB) — alt: (none)
-- `/assets/images/newsletter/join-us-for-circus-lab/img-03.gif` (7538 KB) — alt: (none)
-- `/assets/images/newsletter/join-us-for-circus-lab/img-04.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/join-us-for-circus-lab/img-05.gif` (7831 KB) — alt: (none)
-- `/assets/images/newsletter/join-us-for-circus-lab/img-06.jpg` (9073 KB) — alt: (none)
-- `/assets/images/newsletter/join-us-for-circus-lab/img-07.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/join-us-for-circus-lab/img-08.jpg` (103 KB) — alt: (none)
-- `/assets/images/newsletter/join-us-for-circus-lab/img-09.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/join-us-for-circus-lab/img-10.png` (6 KB) — alt: (none)
-- `/assets/images/newsletter/join-us-for-circus-lab/img-11.gif` (7320 KB) — alt: (none)
+![](/assets/images/newsletter/join-us-for-circus-lab/img-02.jpg)
+
+![](/assets/images/newsletter/join-us-for-circus-lab/img-03.gif)
+
+![](/assets/images/newsletter/join-us-for-circus-lab/img-04.png)
+
+![](/assets/images/newsletter/join-us-for-circus-lab/img-05.gif)
+
+![](/assets/images/newsletter/join-us-for-circus-lab/img-06.jpg)
+
+![](/assets/images/newsletter/join-us-for-circus-lab/img-07.png)
+
+![](/assets/images/newsletter/join-us-for-circus-lab/img-08.jpg)
+
+![](/assets/images/newsletter/join-us-for-circus-lab/img-09.png)
+
+![](/assets/images/newsletter/join-us-for-circus-lab/img-10.png)
+
+![](/assets/images/newsletter/join-us-for-circus-lab/img-11.gif)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/join-us-for-circus-lab/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

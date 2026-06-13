@@ -19,7 +19,7 @@ PLUS: Youth Circus classes continue through the hols
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k8Fy4joThZ9G3iVlt2xsL7SAgAiQhCEEwrBxCUu2hW1JyMKEPP1fIfPfulWTu221uk5_fU6eSU5-vbPJYfFxKHfjV-toMrgkHx4nOfdx7ntct0wqkmvlWO7umbCSNYKX4j7X9-f6z3umL0rYrpImc1cjSKNz5qT-rnNPkCAe-EGKIfU90TLZZK3oOlaKLwHz6gT73V7si37-PG63687An67bsJy1hslS_av29W2QiBRYmBRJFAcijiOcFBDmB0-oXlqtWqEcMVbzc_4lxasIPgCGIizigEc-ZnwQDkI4RFEyKCIRx8KTBHyIAj8IghCHYXoPnOc8DQKfCyzwwUeh_58kGlI5ZzqEhwgoAsqM_KsJAb0tcWes6KW4IKA0DaYGi4Stp40r8EYNP7cI6E9QEKZOtiLrHGsNwuP_Q01SjAOvybNvQFI5YRVryAZox6fbehekZTUqEYwMAvrw1vgfdTd8Xh03qn1FMPLnH9ulgRYB_YRgMTUwXDX7h_p5loh5eYyql_U5qvPt5wEvtg_0ggu8fhqFy7XwJ78X-K1eyuM12vfpcRL_CpudUuHmbdP0ui6X1Wq4O4-vEwR0AePrposR0A28xP3qtublZEyzmml5uiIYrXWlgYJ8pI-P7n00g9VMnJ9UIoun12PSmPXA7KZDOrKTeHY5UnP6zean8r1Lw6B_AaP0cldQV519hMdeo2_-_gmw1wpXaU6YkZ62spSKHM5NfXcD6Bmre8mFJY1gPNdKidxp61nSMluj0P_r9J0-21yQ79PKrr-7aFsL6zkiXPaPfd1XLLIf5TiS6zb7MYk9gf8FAAD___TuOkg)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/overcoming-adversity-like-jj/img-01.png)
 
 Open Rig Night entry forms must be in by 18th October. Photo: [Max Crawford](https://email.contact.aerialedge.co.uk/c/eJx0U1FzsjgU_TXhZacduIDAQx60NlattdZq_XxxQhIgAkmEgLW_fkfb3dmZ79vXk5sz5557DjtIjl8_6GM6_0zz3fitsSQenONPh2PGXZ-5Dtc1lQozrSxl9p6KRtJK8FzcM33flT_vB31WomkLaQ72YgSuNKNW6m-cOwJ70cD1Eh8S1xE1ldWhFm1Lc3EVMCtOsN_txT7rZ4txvV23Bn6mbmSM1obKXP0Hu34bxCIBGsRZHEaeiKLQjzMIWOoI1ctGq1ooi02jeceuUpwCu0HKGQWXUi7SMB2ILInCTIAXQeRFYeZIDC6Enut5XuAHQXIPnDOeeJ7LhS_81EWB-79OVLiw1rTIHyIgCAg18rchBOS2xJ1tKCulyhGQ2I1dj0EGLEE--aGfcuSP2yR4HS4-hkWfhtvETlcLSREMOlsfWt01TCB_fKP7AWvBZVf_A_5V06YUVqrcqdjh2zuprGgUrfAGSMsn23LnJXkxyhGMDALy8F65n2U7XKyOG1W_IRi5s8_t0kCNgHyBN58YGK6q_UO5mMZilh_D4mXdhSXbfqX-fPtAzn7mr59HwXIt3Mdfc_-9XMrjJdz3yfExeg2qnVLB5n1T9brMl8VquOvGl0cEZA7jy6aNEJANvET9aouAzM4nY6rVVMvTBcForQsNBOQTeXqyH6MprKaie1axzJ7fjnFl1gOzmwzJqHmMpucjMadfdHbKP9ok8PoXMEovdxmxRecif-xU-hZ9kngT44uYrieVzfyNGn5tnVrYQnNMjXR0I3OpcNpV5d3NQMc0updcNLgSlDOtlGBWN06Dr2ajwP0tFd-Hwt9Xl21_d9ZNKRrHYmEP_ybbXhtz-KMci5muD38saY_h7wAAAP__drpGMw)
 
@@ -330,21 +330,15 @@ Here's a handy reel if you're considering Open Rig Night.
 
 Think of them as guidance from [@sultanka_circus](https://email.contact.aerialedge.co.uk/c/eJx0U11v6jgU_DXOy6pVchzy8ZAHaGoKlFJK-bi8RMZxEpPENokTSn_9CuiuVrp3JT8dnxmNxzMsEWn0vqXPh9nXId_FH40hgXcOvqw0YqmNmW2lqqZCRkxJQ5l5pLwRtOJpzh-ZeuzKn_tEnSVv2kLoxFw0jyrFqBHqPk8tHjm-ZzshhtC2eE1FldS8bWnOrwKmxQn2uz3fZ_10HtebVavhZ-tGxmitqcjlf2ZXmBfwEKgbZMHAd7jvD3CQgcsOFpe9aJSsuTSRblTasasUq4i441LPhcyhnoszHoTOIIWAu36GGcU-tkQENgwc23EcF7tu-AhpytLQceyUY44PNnLt_3WiigpjdIvwEAFBQKgWvy0hILdHPJiGslLIHAHxXN_zMhsw9hEmP_STFOG4Dd334Xw7LPrDYBOayXIuKAKvM3XSqq5hHOH4RofAE3lbIBzPvz-qRTwSb1tS7YcIx9dzh9Q8FV39D-SvmjYlN0LmVsWSu7NCGt5IWkVrIG063pQ7J8yLUY5gpBGQp8_K_irb4Xx5XMv6A8HInn5tFhpqBOQbnNlYw3BZ7Z_K-STg0_w4KN5W3aBkm-8Dnm2eyBlnePU6chcrbj__muHPciGOl8G-D4_P_rtb7aR015_rqldlviiWw10XX54RkBnEl3XrIyBrePP75QYBmZ5PWlfLiRKnC4LRShUKCIgX8vJitqMJLCe8e5WByF4_jkGlV57ejYdk1Dz7k_OR6NMvOj3l2zZ0nf4NtFSLXUZM0dkIx1albsUgoTPWmAd0Na5Mhtdy-L2xam4KlUZUC0s1IhcyOnRV-XAz0NKN6kXKm6jiNGVKSs6MaqwmupqNXPu3zNy_MbpnQrT9w1k1JW8sE3GT_Jt7c-1T8kc5JmKqTv5Y4T6CvwMAAP__Y-hN5w) rather than mistakes, though – especially if you're new to performance.
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -366,15 +360,28 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/overcoming-adversity-like-jj/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/overcoming-adversity-like-jj/img-02.jpg` (314 KB) — alt: (none)
-- `/assets/images/newsletter/overcoming-adversity-like-jj/img-03.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/overcoming-adversity-like-jj/img-04.gif` (5804 KB) — alt: (none)
-- `/assets/images/newsletter/overcoming-adversity-like-jj/img-05.jpg` (9073 KB) — alt: (none)
-- `/assets/images/newsletter/overcoming-adversity-like-jj/img-06.gif` (5569 KB) — alt: (none)
-- `/assets/images/newsletter/overcoming-adversity-like-jj/img-07.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/overcoming-adversity-like-jj/img-08.gif` (2417 KB) — alt: (none)
-- `/assets/images/newsletter/overcoming-adversity-like-jj/img-09.png` (25 KB) — alt: (none)
-- `/assets/images/newsletter/overcoming-adversity-like-jj/img-10.gif` (7253 KB) — alt: (none)
-- `/assets/images/newsletter/overcoming-adversity-like-jj/img-11.gif` (3232 KB) — alt: (none)
-- `/assets/images/newsletter/overcoming-adversity-like-jj/img-12.png` (27 KB) — alt: (none)
+![](/assets/images/newsletter/overcoming-adversity-like-jj/img-02.jpg)
+
+![](/assets/images/newsletter/overcoming-adversity-like-jj/img-03.png)
+
+![](/assets/images/newsletter/overcoming-adversity-like-jj/img-04.gif)
+
+![](/assets/images/newsletter/overcoming-adversity-like-jj/img-05.jpg)
+
+![](/assets/images/newsletter/overcoming-adversity-like-jj/img-06.gif)
+
+![](/assets/images/newsletter/overcoming-adversity-like-jj/img-07.png)
+
+![](/assets/images/newsletter/overcoming-adversity-like-jj/img-08.gif)
+
+![](/assets/images/newsletter/overcoming-adversity-like-jj/img-09.png)
+
+![](/assets/images/newsletter/overcoming-adversity-like-jj/img-10.gif)
+
+![](/assets/images/newsletter/overcoming-adversity-like-jj/img-11.gif)
+
+![](/assets/images/newsletter/overcoming-adversity-like-jj/img-12.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/overcoming-adversity-like-jj/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

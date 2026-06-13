@@ -19,7 +19,7 @@ PLUS: why you need to learn to be dynamic
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k81u6yoUhZ8Gz1oZiP8GDBql5DpJT9o07U07sTBsx8Q2OJj8NE9_1fbo6ErNmW42aPGttWShFXv8V9yX83O53UxWzvM0PqXnQDGpQirDQNlOaMOkNV5IfyvAadGC2sKttLeH5vd5YU8G3FDrvvAfPbDWSuG1_Z6rABhO4hGlcRIlAXRCt0UHwyC28Clgn83Wd-sZTU7u9KjHarp7W_7e-npMiq4Xemv-N_u8FmckFViqClSVqiSNVEJVitMAzFE7azownvXOqoP8lBLULJElToTMypLQmGQyBYFjEFUCEJUJhkAzEpIIY5JiSglNbksZQlSqWIQUaFRRNAr_SqJltff9gOgdIhwRLnr9YwkR_vWJm97BUcMJEc4zPO0ppOJ52vqKvpi7yysi_BoURLnXHRSDF12P6OQP1DgZRUEri29A2nhwRrTshfBBTV-bDU6zTJ9hWT0vp7AazXaVE0q-83u89Y-LD5u59Wodv9Sk27S7NX-YbcJLDuVhl7_N5ZL8mkQKkfHk0q_i6NeHDhEZN_UMkbGWpYgztSAP_AGOuNxP_hEYm3Ou900dj05nruaLHBKzaJdHu3flJJy_4mScx2s7fRqm_N3eEWhWnMqcTJ_NEyktj-gKkXH0bC_dPNqFg90sZojwfL9FhN_fR-t9HEcE5u8VIuN69TbbjB4vH21u6ftLNl4_TXJEJ0Frv9J9DW_Qga-tYqLXgXV6qw0rD21z84Uv6J09agWOtSCUtMaA9NYFjnXCNWgU_jB-sAcngX0bq4fjzcm6BlzgmbRdcbVenoEv_uTaf_aluKr0yMh_AQAA___hLTkO)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-01.png)
 
 Add text to your email.
 
@@ -65,9 +65,7 @@ Mark Gibson
 
 Aerial Edge Founder
 
-[image: previous][image: previous][image: previous]
 
-[image: next][image: next][image: next]
 
 ## SPIRITS HIGH TONIGHT!
 
@@ -187,21 +185,15 @@ This month's free class is awarded to Kate for this Story at Elke's fly pole wor
 
 At the end of every month, we award a free class for the social post that makes us smile the most. It could be a triumph with a trick, or a magic moment for emotional reasons, or something that makes you laugh. Just tag us @aerial_edge (rather than doing it by location). And remember, if it's in your Insta stories, it will have disappeared by the time we're looking to award the prize! Best to make it a post/reel or highlight it.
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -223,13 +215,24 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-02.jpg` (159 KB) — alt: (none)
-- `/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-03.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-04.jpg` (316 KB) — alt: (none)
-- `/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-05.jpg` (343 KB) — alt: (none)
-- `/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-06.jpg` (332 KB) — alt: (none)
-- `/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-07.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-08.jpg` (342 KB) — alt: (none)
-- `/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-09.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-10.gif` (6367 KB) — alt: (none)
+![](/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-02.jpg)
+
+![](/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-03.png)
+
+![](/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-04.jpg)
+
+![](/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-05.jpg)
+
+![](/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-06.jpg)
+
+![](/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-07.png)
+
+![](/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-08.jpg)
+
+![](/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-09.png)
+
+![](/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-10.gif)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

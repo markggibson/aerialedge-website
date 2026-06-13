@@ -19,7 +19,7 @@ PLUS new Youth Acrobatics class
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k0tv6joUhX9NMmsV2yTEAw-KOKYvLq-mUCaRY28SnzwcHBMev_4KenR0pXKn28vW8rfWlqlWbL4Wv7K3U5ZvxkvreBwd45OvmFQBkYGvTC10w6RpnJDuUYDVogKVw6M0j4fyz3lqjg3YrtBt6s4tsMpI4bT5nisfGBqGURiSOCY-1EJXaQ1dJ3K4Gni1OSaIQPn18v5e7maj00fxR3V7TIq6FTpv_jO7XoviDFGqKN1FOIyyCIRCAVGBD02vrWlqaBxrrVEHebXiF4wGIowikMFAwHCXoWgImAqKoqGgQMnO1wwHOAxiEiBE4oA8DqOhxARn0YBCiDPwBsH_kqhY4VzbeeTJw9zDXLT6h8jD_PaJh9ZCr-HoYc4pmrQEYrGaVG5Hkubp8ulhfg-KR7jTNaSdE3XrkfFfqHiIsV_J9BuQbhzYRlQswbxTk89ygyis9Rp_qX08X_KL8TBPFijbLMP5yzlufiX5bNWhelQ0E9qF7vx6Ea8w_g1ju8ipDXaotv_Mi3VAP77a2WoSF_Lp_TLtF3aGMrpN-HJ_mk3eppk6Pu-ftomHeUxG8eqNbDu0ea6Xb1OA1fR5sx-fX7pIFn3Yf8SHQZJk088Fnw-S36-7ruelFOSCFh9q7OFRp_v5cTsbcb8yt57eA-XX4AqjmGi1b6zOdcOyQ1U-3ED4rTW9VmBZBUJJ0zQgnbG-ZbWwpTcIfkTYmYOVwL4j0l3_cDS2BOu7a6HTuwYck6ZO7-6QY-DSv-XtGf43AAD__-NAKLU)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-01.png)
 
 To make life easier, you can use this menu go direct to articles. Above each section, you'll find a timeline of relevant dates, and there are direct booking links throughout.
 
@@ -229,21 +229,15 @@ Intriguing bit of kit [@m_knf](https://email.contact.aerialedge.co.uk/c/eJx0k8uO
 
 You could maybe start by rigging two hoops together...don't try this at home, folks! Check with an instructor first!
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -265,14 +259,26 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-02.jpg` (270 KB) — alt: (none)
-- `/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-03.png` (3941 KB) — alt: (none)
-- `/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-04.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-05.jpg` (17 KB) — alt: (none)
-- `/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-06.png` (25 KB) — alt: (none)
-- `/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-07.gif` (6788 KB) — alt: (none)
-- `/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-08.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-09.gif` (4098 KB) — alt: (none)
-- `/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-10.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-11.gif` (6351 KB) — alt: (none)
+![](/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-02.jpg)
+
+![](/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-03.png)
+
+![](/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-04.png)
+
+![](/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-05.jpg)
+
+![](/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-06.png)
+
+![](/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-07.gif)
+
+![](/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-08.png)
+
+![](/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-09.gif)
+
+![](/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-10.png)
+
+![](/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-11.gif)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

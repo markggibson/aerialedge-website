@@ -19,7 +19,7 @@ All set for Youth Circus re-start?
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k09z6jYUxT-NvQtjS_K_hRZQMK_AY5JQMFl5ZOna6NmSXFkYkk_fgaSdzoS3vbrSnPM7R7yUgj4XbFGtr1VznL9al6fxJb36gnIRYB74wigmNeVGO8bdhIGVrAPRwISbybn9Oi_NRYMdTrIv3XsPtDOcOWk-58IHGiZRhCNMksgHxWRXKhgG1sBNQDYanr0cMdvhne6V3Ag5fm3dH-NM9Uw2-n-z27U4zeqIBHGUIUgIy0iUpIgnlQ96lNZoBdrR3hpx5jcp_ommIYoREBILjFOEcJIAimJOEo4zgRjyJUUBioI0jEMShmE0ISlADLHgUZQJlCCPBL8l0dGTc_3g4amHcg_lrJffljyU30089RZGCRcP5XkWLnsMKdstO1fjvZ5-HDyUP4Li4dxJBeXgmOo9PP8XahyTJPY7Xn4CktqB1ayje5QPYnloj6GHZvt0MxQaO0iEOaTN9X1TCNT_-UJmzRj-VRcfLHl7vtZun6qxbmSVVtNlo1aXM8h2t1udyPqVvyxUbfKlMYqli_nfhV1vV394aNYefuV1NlU1LLbVNZ0Xw8-3eFFk43wzG7JVdPlV_fhx3JJ-RhZvVkTbLlD5Gu8QXvyURdG01-f9bsputvczUb1C3bT7ZBzfRzgEfmfuPX0EylfgTkZQ1kvfWNlITatz1z7dQfi9NaMUYGkHTHCjNXBnrG-pYrb1SPAtwsGcLQf6GZEcxqeLsS1Y390KXT4U4Cg3qnz4hxwFV_5X3pGifwIAAP__Go0pNQ)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-01.png)
 
 Nea is back and teaching at the October Edge
 
@@ -221,21 +221,15 @@ Conditioning? Nobody wants that (except experts like Julia & Robyn 😉👀).
 
 Take some guidance from  [@tom.the.acrobat](https://email.contact.aerialedge.co.uk/c/eJx0U01v4zYQ_TXSpUggkdTXgQe7srz5sJvEteX0IlDkSOZKJFWKlp38-sJ2WhTYXYCn4byHN-_N8EoK-lKyRf10rtt9_mZdkcan9OwLykWAeeALo5jUlBvtGHf3DKxkPYgW7rm5P3Zf_5U5abDjQQ6V-xiA9oYzJ82tLnygYRJFOMIkiXxQTPaVgnFkLVwEZJPh2esesw3e6EHJZyGnr64rGWdqYLLV_6tdYHGaNREJ4ihDkBCWkShJEU9qH_QkrdEKtKODNeLIL1L8Aw1wypIwhCSCECGCa2i4YIQxFKeoxsSXFAUoCtIwDkkYhtE9SQFiiAWPokygBHkk-KUTPT04N4wennmo8FDBBvlDk4eK6xB3zjLeSd16qIgJwRA2PEmZh4sv-gfh4XzMyMtsVc4OUx3tMvfwupLMQ_HRqWo0R8vBw_mVzkOxbMeDh_PV51v_Rz6X67Lo_5p5OL-8G0SBkEf1L-Q3xWwHTurW73l1c1ZqB1aznm5RMYrlrtuHHppv0-ex1NhBIswubc8fz6VAw8MrmbdT-GdTfrLk_eXcuG2qpqaVdVrPlq16PB1BdpvN44E8vfHXhWpMsTRGsXSR_13ap_Xj7x6ad7vvRZPNVAOLdX1O83JcvceLMpvy5_mYPUan7_W3b_s1GeZk8W5FtO4DVTzhDcKLlSzLtju_bDcz5qEi285F_QZN222TafqYYBf4vbkueJGFywFDyjbL3jV4q2efO1-BOxhB2SB9Y2UrNa2PfXd3NcIfrJmkAEt7YIIbrYE7Y31LL6Z5JPgh-1sc9JatHKe7k7EdWN9dLqH6qQBHuVHVT4_PUXDVf1s_UfRPAAAA___EoD3y) on fun practice sessions. He has plenty of technique tips for building great partner acro.
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -257,15 +251,28 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-02.gif` (3232 KB) — alt: (none)
-- `/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-03.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-04.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-05.jpg` (192 KB) — alt: (none)
-- `/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-06.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-07.gif` (3473 KB) — alt: (none)
-- `/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-08.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-09.jpg` (240 KB) — alt: (none)
-- `/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-10.gif` (3446 KB) — alt: (none)
-- `/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-11.png` (26 KB) — alt: (none)
-- `/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-12.png` (6 KB) — alt: (none)
+![](/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-02.gif)
+
+![](/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-03.png)
+
+![](/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-04.png)
+
+![](/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-05.jpg)
+
+![](/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-06.png)
+
+![](/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-07.gif)
+
+![](/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-08.png)
+
+![](/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-09.jpg)
+
+![](/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-10.gif)
+
+![](/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-11.png)
+
+![](/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-12.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

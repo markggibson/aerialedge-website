@@ -19,7 +19,7 @@ Use the Planuary Principle to your advantage
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k0tv6yoUhX8NnrWywTb2gEEeJW1eTU6aNMnEwrCTcP3AxcR5_PqrtkdHVzq9080GLb61lsy0Yot38ZRPrvlxO_xlHU_iS3L1FJPKJ9L3lKmErpk0tRPSPQqwWpSgjvAozeO5-H2emUsNtj3pJnO3BlhppHDafM-VByygcRJTQmjkQSV0mVXQtuIInwJeJpvNzJrdK18d-82cz5Op_r319ZgUVSP0sf7P7PNanMYiAD_CNKERhlylOYkiyD2oO21NXUHtWGONOstPKd6JxQSSkAIOaSrzOFEyDpQi-JColIAPuacZ9nHsBwENEj8l0WNEMcZ5KMOD71OqDij0_5dEyU7ONS0iPYQ5wlw0-q8lhPnXJx4aC52GC8Kcp8GoIZCI1ah0B7Kue_cNwvwnKIhwpyvIWieqBpHhH6hh4kdeKbNvQLp2YGtRsjXmrRptim2QtOH0OLsNduVkvN-cxsvr2_4Wz663_XqM3_Y0wTt7753JYj69nxf7A8L8n2vfLGeT0673MQqHo95tMBtPhs2Bhum9HnKE-5X_PGrGW7yYTAEvEeZnrN7n03QzDTWl6_SVq8Ie9teTtS8I80sYRNP3-Xa07Nav9-pSRve2GBTvb0_9FGHevriqHMDHtPeyW9bkl12ki73fF9tB-LqazaLhbTBfisOlezZNMNldZk8f6tzhTVlQ3M5X426ly3n-_ITI0CvNV7J_QutV4E5GMdFoz1h91DXLz2Xx8IXOa6zptALLShBKmroG6Yz1LKuELVDo_2V6a85WAvs2Vbfdw8XYAqznPiuQ_SjAMWmq7MfWOQYu-xP3juF_AwAA__9TMTgo)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/your-sustainable-new-year-momentum/img-01.png)
 
 Sarah's showreel reflects her Foundation Course journey
 
@@ -155,21 +155,17 @@ PS: All flying trapeze classes are now Open Level.
 
 At the end of every month, we award a free class for the social post that makes us smile the most. It could be a triumph with a trick, or a magic moment for emotional reasons, or something that makes you laugh. Just tag us @aerial_edge (rather than doing it by location). And remember, if it's in your Insta stories, it will have disappeared by the time we're looking to award the prize! Best to make it a post/reel or highlight it.
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
+![Aerial Edge Gift Vouchers come in various values, tap the image to buy one](/assets/images/newsletter/your-sustainable-new-year-momentum/img-11.jpg)
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
+![Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus](/assets/images/newsletter/your-sustainable-new-year-momentum/img-12.png)
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -191,15 +187,26 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/your-sustainable-new-year-momentum/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/your-sustainable-new-year-momentum/img-02.png` (3487 KB) — alt: (none)
-- `/assets/images/newsletter/your-sustainable-new-year-momentum/img-03.png` (256 KB) — alt: (none)
-- `/assets/images/newsletter/your-sustainable-new-year-momentum/img-04.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/your-sustainable-new-year-momentum/img-05.png` (253 KB) — alt: (none)
-- `/assets/images/newsletter/your-sustainable-new-year-momentum/img-06.gif` (4414 KB) — alt: (none)
-- `/assets/images/newsletter/your-sustainable-new-year-momentum/img-07.png` (25 KB) — alt: (none)
-- `/assets/images/newsletter/your-sustainable-new-year-momentum/img-08.gif` (6003 KB) — alt: (none)
-- `/assets/images/newsletter/your-sustainable-new-year-momentum/img-09.png` (6 KB) — alt: (none)
-- `/assets/images/newsletter/your-sustainable-new-year-momentum/img-10.png` (8 KB) — alt: (none)
-- `/assets/images/newsletter/your-sustainable-new-year-momentum/img-11.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one
-- `/assets/images/newsletter/your-sustainable-new-year-momentum/img-12.png` (2341 KB) — alt: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus
+![](/assets/images/newsletter/your-sustainable-new-year-momentum/img-02.png)
+
+![](/assets/images/newsletter/your-sustainable-new-year-momentum/img-03.png)
+
+![](/assets/images/newsletter/your-sustainable-new-year-momentum/img-04.png)
+
+![](/assets/images/newsletter/your-sustainable-new-year-momentum/img-05.png)
+
+![](/assets/images/newsletter/your-sustainable-new-year-momentum/img-06.gif)
+
+![](/assets/images/newsletter/your-sustainable-new-year-momentum/img-07.png)
+
+![](/assets/images/newsletter/your-sustainable-new-year-momentum/img-08.gif)
+
+![](/assets/images/newsletter/your-sustainable-new-year-momentum/img-09.png)
+
+![](/assets/images/newsletter/your-sustainable-new-year-momentum/img-10.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/your-sustainable-new-year-momentum/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)
+- _Rendered inline:_ `/assets/images/newsletter/your-sustainable-new-year-momentum/img-11.jpg` (741 KB, alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one)
+- _Rendered inline:_ `/assets/images/newsletter/your-sustainable-new-year-momentum/img-12.png` (2341 KB, alt: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus)

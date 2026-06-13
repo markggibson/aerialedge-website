@@ -19,7 +19,7 @@ PLUS! There's still time to get your gift vouchers
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k12T4igYhX8NueuuBPJ5wYVpgz2t7cesOu3epAiQhDaBDMFo_PVb2lO7WzXO7csLdXjOOSyXHK9_0KyYX4rqY_rdWBKH5_jicMy4i5jrcN1SqTDTylJmn6kwkjaCV-KZ6efT8dd5rs9KmL6WXW7HTuBGM2ql_ppzR2AvCoMQBYkfOqKlsslb0fe0EjcB8_mwI3wzW0x6Ex3c6_dUy19b98cYbTsqK_W_2e1amCAWBigokC9ivygiyCkKoecINUijVSuUxZ3R_MRuUpwaMxShWIQ-9ylyS-hBP2aw5Iz7PE6QKB2JoQsDD3rI82Hgh89hwRnyXJYErksFi4Dv_pFEg2trux6gCYAEQEI7-dsSgOT-iafOiEGKM4CEJN6sQyKmf80aW6Kdmlz3AJJHUAAiVrYi7y1tO4Cm_0GFMHYaln8BksoKo2iDd5D0fLY_fnjJS-__vVwuXxfNWz2PuilZbPtdmWUva1pWSxR6q3P_IwGQZJtzFXhJePw8R5ur_ra_slmRvU1rmUJDlwCmadz02Tb1i4Kieh9VUqtvm50e160pTy_Td1SoAzQ_fdi2i-TtOmsTV2bFwb8AmHb7gzq8uTFcwffLT30cR1GVgx2zcUEu0XSkQ9mkn4F7WqW2uwBI9MbbrpOh2tnL7HUx6UWrd--TNYBpxNLx5UPpINnWBYBk_zoHkAyrTxPFAE2dRt_T_Qiv0wpba45pJx1tZCUVLk7N8emOz-mMHiQXBjeCcqaVEsxq4xjcUnMEvvub8b0-GSbwl7GyH57O2hyFcSwWNv83vPZWivyhHIuZbvOHPRww_CcAAP__j2I6Jg)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-01.png)
 
 Don't miss the talented youth students in tonight's show
 
@@ -195,21 +195,18 @@ Your Youth Circus membership will roll on automatically through the two-week Chr
 
 •⁠ ⁠There will be a week of camp from Monday 13th April until Friday 17th (ie classes will run on Sunday 12th and Wednesday 15th April).
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
+![Aerial Edge Gift Vouchers come in various values, tap the image to buy one](/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-09.jpg)
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
+![Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus](/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-10.png)
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
+![Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours](/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-11.png)
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -231,15 +228,25 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-02.png` (940 KB) — alt: (none)
-- `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-03.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-04.gif` (4543 KB) — alt: (none)
-- `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-05.png` (25 KB) — alt: (none)
-- `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-06.png` (525 KB) — alt: (none)
-- `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-07.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-08.png` (8 KB) — alt: (none)
-- `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-09.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one
-- `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-10.png` (2341 KB) — alt: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus
-- `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-11.png` (678 KB) — alt: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours
-- `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-12.png` (8 KB) — alt: (none)
+![](/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-02.png)
+
+![](/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-03.png)
+
+![](/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-04.gif)
+
+![](/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-05.png)
+
+![](/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-06.png)
+
+![](/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-07.png)
+
+![](/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-08.png)
+
+![](/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-12.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)
+- _Rendered inline:_ `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-09.jpg` (741 KB, alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one)
+- _Rendered inline:_ `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-10.png` (2341 KB, alt: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus)
+- _Rendered inline:_ `/assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-11.png` (678 KB, alt: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours)

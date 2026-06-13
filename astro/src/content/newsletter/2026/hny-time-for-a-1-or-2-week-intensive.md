@@ -19,7 +19,7 @@ Plus: feast at the all-you-can-eat circus buffet
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k09TqzwYxT9N2OnQBAgssmitqbVa_2BL7YYJSYCUQDCktPrp31Hv3Hln9G6fPMmc_M45PFeCPGbsulidi2o3f7aOxtEpPnuCcOEj7nvCtEx1hJvOMe4umbSKaSkqecnN5bH5c56bUyftUKs-d--9JNpw5pT5ngtPkgmOcBBCGGFPtkzpvJXDwCr5KQB_qPfqLntKr8ePUsf86dBN_2x9PcZZ2zNVdf-bfV6LkhAnCZMJEjwWcVHCyJc8TjzZjcqarpWdI7014sg_pXg1SXjBmJzgUkKYFAihMoxQOYkTPsGxCEJPEejDyJ_4aBKEOMCXZVT4URgVJZMlZn4BAv-fJDSpnesHgKYAUgAp69WPJQDp1ycueitHJU8AUppMFj2SMUsX2pVo000_tgDS36AARJ1qZT441vYAzf9CjYI48TTPvwGpzknbMU02kA5isW12k8Q8PJxv2Ia-bOjuBmULxfH1Ll7f6eW8uXpu1q_1ekfVtjrozQrAmeFsK7ZQxIHmGVJ3uGxwu7oPOgBnZT1m4f6tWN4v46sX1L4P-8f5AUC6DBZTenN6DQ2ANLldBeun3eNMq1u0fIqz24MAkDZvdTxL8HpfzG6D6kFRAGeOXp8Xz6s03Z8AnKXGXJ3bdqvG4_RUUkZ34jBoCyDdb15SrM8hz_j4WgNI79K37D59tvPgZqqbh_kV8l-Ce4fTLR4DgOaeNl8J_w2x10pXG0FYrzxjVaU6Uhx1c_GF0OutGZWQlmjJBDddJ7kz1rOkZbYBgf_D_MEcLZfk21w1jBcnYxtpPfdZhfxXAY5w0-a_ts8R6fK_sR8J_C8AAP__ZRM6_w)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-01.png)
 
 To make life easier, you can use this menu go direct to articles. Above each section, you'll find a timeline of relevant dates, and there are direct booking links throughout.
 
@@ -181,21 +181,17 @@ Circus Intensives
 
               Interested? Click to let us know
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
+![Aerial Edge Gift Vouchers come in various values, tap the image to buy one](/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-11.jpg)
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
+![Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus](/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-12.png)
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -217,15 +213,26 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-02.png` (732 KB) — alt: (none)
-- `/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-03.png` (25 KB) — alt: (none)
-- `/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-04.gif` (6003 KB) — alt: (none)
-- `/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-05.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-06.gif` (4699 KB) — alt: (none)
-- `/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-07.jpg` (103 KB) — alt: (none)
-- `/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-08.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-09.gif` (9906 KB) — alt: (none)
-- `/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-10.png` (8 KB) — alt: (none)
-- `/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-11.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one
-- `/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-12.png` (2341 KB) — alt: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus
+![](/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-02.png)
+
+![](/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-03.png)
+
+![](/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-04.gif)
+
+![](/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-05.png)
+
+![](/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-06.gif)
+
+![](/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-07.jpg)
+
+![](/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-08.png)
+
+![](/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-09.gif)
+
+![](/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-10.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)
+- _Rendered inline:_ `/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-11.jpg` (741 KB, alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one)
+- _Rendered inline:_ `/assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-12.png` (2341 KB, alt: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus)

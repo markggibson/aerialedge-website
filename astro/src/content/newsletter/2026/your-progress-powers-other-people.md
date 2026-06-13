@@ -55,4 +55,5 @@ If you no longer wish to receive these emails you may [unsubscribe](https://emai
 
 ## Images
 
-- `/assets/images/newsletter/your-progress-powers-other-people/img-01.png` (72 KB) — alt: (none)
+![](/assets/images/newsletter/your-progress-powers-other-people/img-01.png)
+

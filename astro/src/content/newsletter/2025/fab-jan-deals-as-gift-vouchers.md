@@ -19,7 +19,7 @@ PLUS Youth Circus show Midwinter and class showings next weekend
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k01z4ygYhH-NdEsKgYXRgYM9tpxk1o7jOP6YiwoBlogRYITkj1-_lWRqd6sme315oZqnu3mhBF1u2bT8eSmr3WTlQ07wmVxiQbkAiINY2IYpQ7k1gfFwz6RXTEtRyXtu77vj7_PCno30ba1cEa5OUm05C8p-zUUsaTLEKUCIABTLhildNLJtWSU_BExWuEf4ed9dtlXOp_OO1PXvrc_HOGscU5X5z-zjGs4QLJlEkJeECcETgDkrURZL0ytvTSNNoM5b0fEPKXFNkyEfDPBQZOkBD8oBJwdAMpKBoSQohTiJFYUApgkEOEkTANA9ECUqDwATzFGWpjgagP8loWkdgmsjNIpgHsGcOfXHUgTzz0_cOS97Jc8RzPMsmTkkCXud6XBAb2Z020Qw_w5KhPKgGlm0gTUuQpN_oSKMYs2LL0DKBOkN0_QN5q2YbY67JIL549voqruNbd8Xm_14eiJh_diDXfr69Dhzc8GnInPr7WLvLurllm9vyen1afhiJm2WdhpHcDwni6uuXb96wO_2B1TP19zbLlu5n_nT7v1h-WK7BandAUB54ytyurkIjmf6aMfr5ehS4dHxR6bVaDnvyTqtmus-y7Hry-XkQbzhrdles_fDaTUh_tfpGVabBCXPE_NrZtfbpFGmiuD4XPHZtC11yy8aL7om-et1cErSsZ_b3WLn5vtNFaFJrO1nrr8DGzcy1FZQ5lRsvaqUoWWnj3ef4GLnba-E9FRLJrg1RvJgfexpw_wxGoA_LG9t57mkX5aqtr87W3-UPg4fBSi-FRAot03xbecClaH4J-w9hX8HAAD__41nOaY)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-01.png)
 
 Circus gift vouchers? They should on everyone's list!
 
@@ -171,21 +171,17 @@ There's no need to do anything about rebooking for Youth Circus in January. Your
 
 •⁠ ⁠There will be a week of camp from Monday 13th April until Friday 17th (ie classes will run on Sunday 12th and Wednesday 15th April).
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
+![Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus](/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-11.png)
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
+![Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours](/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-12.png)
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -207,15 +203,26 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-02.png` (525 KB) — alt: (none)
-- `/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-03.jpg` (192 KB) — alt: (none)
-- `/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-04.png` (25 KB) — alt: (none)
-- `/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-05.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-06.gif` (5896 KB) — alt: (none)
-- `/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-07.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-08.png` (940 KB) — alt: (none)
-- `/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-09.jpg` (365 KB) — alt: (none)
-- `/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-10.png` (8 KB) — alt: (none)
-- `/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-11.png` (2341 KB) — alt: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus
-- `/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-12.png` (678 KB) — alt: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours
+![](/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-02.png)
+
+![](/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-03.jpg)
+
+![](/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-04.png)
+
+![](/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-05.png)
+
+![](/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-06.gif)
+
+![](/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-07.png)
+
+![](/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-08.png)
+
+![](/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-09.jpg)
+
+![](/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-10.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)
+- _Rendered inline:_ `/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-11.png` (2341 KB, alt: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus)
+- _Rendered inline:_ `/assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-12.png` (678 KB, alt: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours)

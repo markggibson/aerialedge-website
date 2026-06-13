@@ -19,7 +19,7 @@ PLUS What's holding you back? When will now be a good time to shine your light?
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k81uqzoUhZ_GzFrBJiEw8KA0IWma_qVp0tMJMvaGOIBtGUN-nv6q7dG9Vzo90-1ta_lba_FcCvq8Y7Pi_lRU79O1dVkcHeOTJygXfsh9T-iWSUW5Vo5xd83QStagqPCa6-u-_n2e66NC2-2lyd3ZIG00Z07q77nwkAaTcRxOknEcedgy2eQtdh2r8FPAsJrL-FY1QqZnw_rF6p2ffm99PcZZa5is1P9mn9eimIsCWYITEY1ZXPiAJUa-8FAN0mrVonLUWC16_inF21NelsyPyxEPy3iMnIPAIi6TMRfBOOZl4EkKPoz9BPxgNIogukbkEPMwwojFY0iAjPy_kmjo3jnTkfCGQEYgY0b-sUQg-_rElbE4SDwSyLIkmJsQY_Y6b1wZvqmby5ZA9hMUEmZOtph3jrWGhNP_oPoT8BqefwOSyqFVrKFvkHVivq3fAwJpFLzbZDcLf9X-46w4rDeT2eF8G4jeFuXqub9Xy9eUFc_6brnaNmx5qocAfPeyX2weoh0X6iElkB3EYfbSyWwCJ79Qi_P9mkVdfTY7fnl4CcxdVrkPTiCDqXNvKwLpKxabLPk1g2lweqoOlo-Mierh0qwvH5vntwVvCaTVTQ_b3t834Xl6fCKQPT0-xjCPlre43U6Px2B3GD5Y6jaMQDojkD4uVvXNvW_WQ2qG1aK6TNIndqhHVRneLeHSBZqEU6_RX_n-CbDXottrQZmRnraykooWfVNffQH0jNWDFGhpg0xwrRRyp61nactsTUb-H9Z3urcc6be1shuujtrWaD33WYT8RwGOct3mP3bPUXT5v6EfKPwTAAD__3frPao)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-01.png)
 
 Don't miss the chance to train with Jason Brügger at October edge
 
@@ -209,21 +209,16 @@ Shame we don't have a lot of floor space to train cyr wheel (though we do have s
 
 Plus, Bara (we miss you!) has been developing some hot skills in this art during her degree at the National Centre for Circus Arts, so she could come show us how it's done.
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
+![Aerial Edge Gift Vouchers come in various values, tap the image to buy one](/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-12.jpg)
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -245,15 +240,27 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-02.gif` (5721 KB) — alt: (none)
-- `/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-03.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-04.jpg` (115 KB) — alt: (none)
-- `/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-05.gif` (5731 KB) — alt: (none)
-- `/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-06.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-07.jpg` (110 KB) — alt: (none)
-- `/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-08.png` (6 KB) — alt: (none)
-- `/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-09.gif` (4786 KB) — alt: (none)
-- `/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-10.gif` (4426 KB) — alt: (none)
-- `/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-11.png` (8 KB) — alt: (none)
-- `/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-12.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one
+![](/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-02.gif)
+
+![](/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-03.png)
+
+![](/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-04.jpg)
+
+![](/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-05.gif)
+
+![](/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-06.png)
+
+![](/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-07.jpg)
+
+![](/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-08.png)
+
+![](/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-09.gif)
+
+![](/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-10.gif)
+
+![](/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-11.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)
+- _Rendered inline:_ `/assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-12.jpg` (741 KB, alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one)

@@ -19,7 +19,7 @@ PLUS! New mixed aerial class with hammock, loops and chains
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k1FzoywYhX8N3rWDqKgXXHSbkGZrdm236aa5cQigISpQJJr213-Tdmfnm2n29vDCHJ73HF4pQcrfbL67P-2azezReZrhKTsFgnABIw4DYXqmNOFGe8b9NZNOsU6KRl5zc31s_5xXZtLSDXtlK_9mJekMZ16ZT10EkoRpGqcQJjAJZM9UV_VyGFgjzwYoLn7EPNu87Bbzn_D7lk7615-pj8c46y1Tjf6fdr6Gc46xwDjZxSzBgu9yLHKEcCD1qJzRvdSeWGfEkZ-tBHsiWQ2TEOdRjUIYJyiOkx0OUcwgjPIU1YEiCCIMI5SFCIVxcp2mMpMc5xHMZZyiFMTwnyQ6svfeDiC6AYgCRJlVX4YAoh-fuLJOjkpOAFGahwsbyYz9WnS-jtb65v35LF-AAiLqVS-rwbPegmj2F2qc4TzoePUJSGkvnWYdWSM6iMVzuwkBoiuAqEP8-U7MXo8ie2oAoni7eWeJX4wJLuIDo6_jtL4NU25qawGip-UMl_08XBY1VuvHVXG4t765e9rirlyvHu5L6wH6NuRLX5T75Y8VW2mxKeFbU7asWPwcAKLiFtYZFI_-1ODl-xlLOc-yhy6XLNzevu7u7mfrw0m2c_180GKJ_WLk5fcCP7y0bwwg2s_YOAyHuX3S4R4gesRsFMKuam-zuWi2T-ubcfqti_wFA_Rt_r7Ba6SKrDgV-wlEs6AzHxm_BDnopd8bQZhVgXGqUZrsjl179QExsM6MSkhHOskEN1pL7o0LHOmZa0EMv6x_MEfHJflcrxrGq8m4VrrAn8tQXTTgCTd9dbF_nkhf_Q3-SNB_AQAA__8cxzk3)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/are-you-up-for-the-challenge/img-01.png)
 
 Are you up for the Aerial Edge Circus Challenge?
 
@@ -307,21 +307,15 @@ Book £60 per day or enjoy a discount for booking all five
 
               [Book Easter Camp here](https://email.contact.aerialedge.co.uk/c/eJx0k1FzoyoUxz8NviWjqKgPPHSbkGZrdm236aZ5ySCgEhUookn76e_Y7ty5M7f7euDH_M7hf9hJclz8puvy_lrWh9WjdSRFl_Tqccy4HzLf47qnUmGmlaPMLamwknaC12LJ9HJs_5yf9EUJOzTSnNybEbjTjDqpP-vcEzhIkijx_diPPdFT2Z16MQy0FrMAQfmPiKWHl3Kz_ul_P5KL-vXn1sdjjPaGylr9pzZjKGMIcYTiMqIx4qzMEM8gRJ5Qk7Ra9UI5bKzmI5tVvAZXUZXyKs18BLmowiRBES1hnISwDCGPmCcx9CHyQ5gGEAZRvEwSkQqGstDPRJTABET-XyfR4cY5M4DwBkACIKm1E7QfzZLpHkBiACRhEgdxHC8-2cUML5i0bBwWA2u07gAkTI92EAOAJAiDMAkBJF7HTp-9S-WEVbTDe0gGvnluDwGAZAcgsZA93_HV68jTpxpAgo6Hdxq7zRSjPDpT8jpd9rdBwnRlZpPrdoWKfh1s8wrJ_eMuP98bV989HVFX7HcP94VxAH4bsq3Li2b7Y0d3ih8K_60uWppvfs56_NavUp8_umuNtu9zx8U6TR-6TNDgePta3t2v9ueraNfq-az4FrnNxIrvOXp4ad8ogKRf0WkYzmvzpIIGQDIiOnFudpUz6ZrXx6f9zXT5rfLsBQH4bf1-QHso8zS_5s0FhCuv0x_xJVmwMaFI6a9N56pwr27en71euEZzTI30tJW1VLgcu3bxMUTPWD1JLizuBOVMKyWY09azuKe2BZH_v58d9GiZwB_0Qg7T4qJtK6zn5pyfvhRwmOn-9OVqOSzc6d9MTxj-EwAA__8Y8S6_)
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -343,15 +337,28 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/are-you-up-for-the-challenge/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/are-you-up-for-the-challenge/img-02.gif` (6875 KB) — alt: (none)
-- `/assets/images/newsletter/are-you-up-for-the-challenge/img-03.jpg` (269 KB) — alt: (none)
-- `/assets/images/newsletter/are-you-up-for-the-challenge/img-04.png` (29 KB) — alt: (none)
-- `/assets/images/newsletter/are-you-up-for-the-challenge/img-05.gif` (654 KB) — alt: (none)
-- `/assets/images/newsletter/are-you-up-for-the-challenge/img-06.png` (30 KB) — alt: (none)
-- `/assets/images/newsletter/are-you-up-for-the-challenge/img-07.png` (803 KB) — alt: (none)
-- `/assets/images/newsletter/are-you-up-for-the-challenge/img-08.png` (887 KB) — alt: (none)
-- `/assets/images/newsletter/are-you-up-for-the-challenge/img-09.jpg` (418 KB) — alt: (none)
-- `/assets/images/newsletter/are-you-up-for-the-challenge/img-10.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/are-you-up-for-the-challenge/img-11.jpg` (253 KB) — alt: (none)
-- `/assets/images/newsletter/are-you-up-for-the-challenge/img-12.png` (27 KB) — alt: (none)
+![](/assets/images/newsletter/are-you-up-for-the-challenge/img-02.gif)
+
+![](/assets/images/newsletter/are-you-up-for-the-challenge/img-03.jpg)
+
+![](/assets/images/newsletter/are-you-up-for-the-challenge/img-04.png)
+
+![](/assets/images/newsletter/are-you-up-for-the-challenge/img-05.gif)
+
+![](/assets/images/newsletter/are-you-up-for-the-challenge/img-06.png)
+
+![](/assets/images/newsletter/are-you-up-for-the-challenge/img-07.png)
+
+![](/assets/images/newsletter/are-you-up-for-the-challenge/img-08.png)
+
+![](/assets/images/newsletter/are-you-up-for-the-challenge/img-09.jpg)
+
+![](/assets/images/newsletter/are-you-up-for-the-challenge/img-10.png)
+
+![](/assets/images/newsletter/are-you-up-for-the-challenge/img-11.jpg)
+
+![](/assets/images/newsletter/are-you-up-for-the-challenge/img-12.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/are-you-up-for-the-challenge/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

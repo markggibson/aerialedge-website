@@ -19,7 +19,7 @@ Hula hoop, rigging, dynamic aerial and Youth Circus camp
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k8tS4zoXhZ9GnkHJku3IAw1yaacNARICJDBxydJ2rPgiIys3P_1fhK7_nKrmTLe2VEvfWktmWvHlRvzK78_5bjt7ti5h0YmdPcWlwlRiT5lG6JZL0zoh3a0Aq0UNage30tweqj_nmTm1YPtSd5m7dMBrI4XT5nuuPOD-KIpJxAJCPGiErrMG-l7s4CpgZQ_ydL-O2Pt6fzcdMXlY_tm6PiZF0wm9a_81-7oWxSMaxnlRFLHMIfJlrCimCnvQHrU1bQOt45016iC_pHglJ3TEVDwqQhyyEPtQ-JGIAwYKcBSHUe5pTjCJsE8CPyQjTG6jEMe-jynBeSEYFSjA_0mi5qVzXY_oGJEEkUR0-q8lRJLrJ246C0cNJ0SSJPbnHQUm1vPaFfS1HQ9viCQ_QUE0cbqBrHei6RCd_QMVB75Xy-wbkG4d2FbU_JUkvZq_VVsfkSRtTtvp02ZxYukmeXru3FmV3XF319-l8mFoNvunIWUxlKvNeS98v06ntNeITIaP-Xu9GM_y3-bFDIto8vb5kAtEkuNSrxBJFtCvL58viEyqcPo8kOM-hY8gHSl1HuulWBb3oO5fQwqITF4EIhPJ0ne3Lsx8mLLVxKwqM3v_tTg7edju_eGRvQ6Ly4MoX6hZP677Zyb2irRlqEf-276tiLksL_UjGVeD2v1OgnIogx2mOUvhc_ux_2ifTrhHdObV5prun_B6DbjSKC467Rmrd7rl-aGubq74vM6ao1ZgeQ1CSdO2IJ2xnuWNsBUK8F_G9-ZgJfBvY3V_vDkZW4H13FcNsh8FOC5Nk_3YPMfBZf-P_JGT_wUAAP__wLY7LA)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/new-workshops-courses/img-01.png)
 
 It's time! Yara is offering a workshop as the appetite for hula hoop grows
 
@@ -235,21 +235,15 @@ Cost: £60 per day
 
               [Secure a half-term flight path: book here](https://email.contact.aerialedge.co.uk/c/eJx0VE1zozgQ_TXispUUSIDhwMEfg4fETuw4sZ1cXEJqQAYkIoQ_-PVb_titrZnZo163Wq_f6xbbCR4tNvRH-nxK8-3kTZs48I_ByeIR4zZhtsVVTYWMmJKGMvNIQQtaAc_hkanHrrzHd-ooQbeFaHbm3EBUKUaNUDecWxA5Az_EfuBibEFNRbWroW1pDlcCS92x4_PKDz5X-6fxIGDd4p51LcZo3VCRy_9gl2t-OCBemGZZFrIUfIeFnNiE2xbIg9BK1iBN1GjFO3ahYhWROwDm2tzFnsfBTX2HeQQHKed-xlkWOpaIsI1928Gu4-GBjR99zw4dxybYTjMaEIpc-3-VqKLCmKZFZIhwjHBMG_FbEsLxtYkHoykrhcwRjtPUTx0SYAI2IvG9fMIRmbShuxjON8PikHrr0CTLuaAI-62h2nBqAJHJhe-DjR8cH2EfJP8Fxhhh_wCygxaRCcI-owZypc-3k5Ct0R0zSt_DKstAC5lfRb5jF5c0tEaLq4539Nf3Q4T9ztS7VnWaXSLXPu9gDVx09T_gXzXVJRghc6tiu5upQhrQklbRB45bPl2XWwfhOKmP2_HrZnYMkk38-taYEy-aQ_7UPiVs3teb_WufBCEUy81pTx2nSsakFQiP-q_pZzUbTtKf6l31M3-0_p6nFOH4sBBLhOMZtKvz9zvCo9Ibv_X4sE_gy00GnJ-GYkEX2TPw5w-PAMKjd4rwiAXJp1llatqPg-VILUs1-fwxOxnWbfdO_xJ89LPznBbvRK1eVu1bQPccy8ITA2e9lyVW58W5esHDsuf5z9gt-sLNbZIGCXxvv_Zf8vVoX2S1KnXdyDh0pg2BgK6mlcnIhxz2a6sGUyge0UZYSotcyCjtqvLhKp_VaHUQHHRUAeVMSQkXUy0dXaRGrv3bsN5sim7DKNrDw1HpErRlLqu7-yMBEzFV7_74W5gIzO7fNT1E-O8AAAD__zuEdj0)
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -271,15 +265,28 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/new-workshops-courses/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/new-workshops-courses/img-02.png` (682 KB) — alt: (none)
-- `/assets/images/newsletter/new-workshops-courses/img-03.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/new-workshops-courses/img-04.gif` (4416 KB) — alt: (none)
-- `/assets/images/newsletter/new-workshops-courses/img-05.gif` (8533 KB) — alt: (none)
-- `/assets/images/newsletter/new-workshops-courses/img-06.gif` (3238 KB) — alt: (none)
-- `/assets/images/newsletter/new-workshops-courses/img-07.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/new-workshops-courses/img-08.gif` (11355 KB) — alt: (none)
-- `/assets/images/newsletter/new-workshops-courses/img-09.gif` (4543 KB) — alt: (none)
-- `/assets/images/newsletter/new-workshops-courses/img-10.jpg` (271 KB) — alt: (none)
-- `/assets/images/newsletter/new-workshops-courses/img-11.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/new-workshops-courses/img-12.jpg` (95 KB) — alt: (none)
+![](/assets/images/newsletter/new-workshops-courses/img-02.png)
+
+![](/assets/images/newsletter/new-workshops-courses/img-03.png)
+
+![](/assets/images/newsletter/new-workshops-courses/img-04.gif)
+
+![](/assets/images/newsletter/new-workshops-courses/img-05.gif)
+
+![](/assets/images/newsletter/new-workshops-courses/img-06.gif)
+
+![](/assets/images/newsletter/new-workshops-courses/img-07.png)
+
+![](/assets/images/newsletter/new-workshops-courses/img-08.gif)
+
+![](/assets/images/newsletter/new-workshops-courses/img-09.gif)
+
+![](/assets/images/newsletter/new-workshops-courses/img-10.jpg)
+
+![](/assets/images/newsletter/new-workshops-courses/img-11.png)
+
+![](/assets/images/newsletter/new-workshops-courses/img-12.jpg)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/new-workshops-courses/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

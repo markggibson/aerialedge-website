@@ -19,7 +19,7 @@ PLUS Daytime classes are up for grabs
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k01z4jgYhH-NfUtKH_486GBCTAKEYSBA4OKSJdlWbEkeWZiEX7-VZHZrqyZzffVK1Xq6mxWSk_WB3peLt7J-mW6sy5Pokrz5nDAOMAM-N4pKTZjRjjJ3S4WVtBO8FrfM3J7b3-eFuWhhh0b2hXvvBekMo06arzn3BYFxhGGaAgR9oajsCiWGgdbiQ8DDan3MxmwvTUPTu8Nh3s-Xv7c-H2NU9VTW-n-zj2tRCmNchQELGBCsikHMoIir1Bd6lNZoJbQjvTX8zD6k-A2J05LROE3KOIlFnFQ8ZAkDYVhGFcZBJXxJEEAhhDAEKQYI3iLB4xJwhrDAAgTMC8BfSXSkca4fPJx5KPdQTnv5x5KH8s9P3PRWjFJcPJTnKZz1WCR0O-tchXc6u-49lH8HxcO5k0oUg6Oq9_D0X6gwSJPY71jxBUhqJ6ymHdmhfOCzffsCPTT5qZRNjk9R3UgVnM6qlIdNmFdB-u6h_HGUbLIzpn2QR3cnr-i8fVr-Wj69yet6XUcTcNgu5UE9hauM1nq-HYMtHGGC88XllIHVUC5-LXYb_fwD7efbbZCpDRfnKz6ll1a-r3F5bHB1WqNS37d3TXDd8dYMfN54aDI7vYYemoDxsYpep_fRw56iYLd5Lptu9fzzpPXOQPgWXTKo-rIPjRkRvEvWy_L-8biY6tmPqHl3B9ai0-uqfDEenvqd-cz1d2B9JVxjOKG99I2VtdSkPHftzSc4v7dmlFxY0gnKmdFaMGesb4mitvUC8IflgzlbJsiXpXIYby7GtsL6jghX_Bdb91GH4ls5jjCjim8bOBL0TwAAAP__GYI5nQ)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/sunday-fly-starts-tomorrow/img-01.png)
 
 Don't miss the Foundation Course graduation show. Tickets [here](https://email.contact.aerialedge.co.uk/c/eJx0U01z4jgU_DX2ZWtSlmQbfNDBhJjwOQQCBC4ufWErtiSPLJuEX78FyW5t1cxeW09d_fp1s1xyvD6QJzr_oMXbeGNdNowvww-fY8YDxAKfG0WkxsxoR5h7IMJKUgteiAdmHrrq-z03Fy1sW8omd5-NwLVhxEnzhXNfYDCIEUiSAAJfKCLrXIm2JYW4CXherY9pn-6lKUnyeDjMmtnie-pOxohqiCz0f7DbtzgBA3SOQhayQLDzIBgwIAbnxBe6l9ZoJbTDjTW8YzcpfokRiGJKUUxhQkQieEIEiuOYUsYp5HHkSwwDGAEAoiBBAQQPUPABDTiDSCARhMwLg_91osalc03rodSDmQcz0sjfhjyY3Zf44SxhldSFB7MgJjDkKKKMeij7pp9yD43bJFyny0Na9jTaJ276spTEg3HnVN6azjLhofGd7htUgstO_QP-pYithJO68GuWf3kntRNWkxrvYNbyyb56Ax4cvShlh8dlXJRShadOUXnYRNk5TD49mE17yUY7Y6pneXSP8gq77XLxa7H8kNf1uohHwWG7kAe1jFYpKfRs24db0IMhyuaXUxqsWjr_Nd9t9OtPuJ9tt2GqNlx0V3RKLpX8XCN6LNH5tIZUP1WPZXjd8cq0fFZ6cDQ5vUceHAX99By_j5_i5z2B4W7zSst69fpy0npnAPiILylQDW0iY3oIHofrBX2aHudjPfkZl5_uwCp4el_RN-OhsV-be-SzBEwaJIZkO6ndGe10et37SrjScEwa6RsrC6kx7erqx904v7Gml1xYXAvCmdFaMGesb_HNZC8MfkvD14Hw17Vl2_-4GFsJ6zssXP5vot2tKfkf5TjMjMr_WM4ew78DAAD__9dhRYg)
 
@@ -77,9 +77,7 @@ Aerial Edge Founder
 
 Aaaand he's airborne again! Gabby had his first swing on the fly rig since surgery.  And if you see the full 30-second clip, you're thinking all that time about how he's going to land safely! Flat back, people.
 
-[image: previous][image: previous][image: previous]
 
-[image: next][image: next][image: next]
 
 Open Rig Night gave a glimpse of the potential of Grace, Pegg and Madita, who are now creating their ensemble show. For all the Open Rig Night photos, see [MaxCrawfordPhoto.com](https://email.contact.aerialedge.co.uk/c/eJx0U01zozgU_DVw2ZoUkvgwBx1wHBx_jmPHduwLJSQBCkhihMCJf_2WnezWVs3stfXU1a9fN80Ew5sjecoXH3n5Ntkam47Cy-jDZZgyD1HPZVoSoTDVyhJqHwg3gjSclfyB6oe-_n7P9EVx01Wizexny3GjKbFCf-HM5RhEIQJx7EHgcklEk0nedaTkNwHP680pGZKD0BWJH4_HeTtffk_dySiRLRGl-g92-xbGIEJF4FOfepwWkRdRwKMidrkahNFKcmVxazTr6U2KW2E_RgD4PomCIOcoRihCPEcwjArKAuhTV2DowQAAEHgx8iB4gJxFuccoRBxxz6eO7_2vEw2urG07ByUOTB2Yklb8NuTA9L7ED2sIrYUqHZiO4rCgLGQAcQel3_Qz5qBJF_ubZHVMqiEPDrGdvawEcWDYW5l1ujeUO2hyp_sGJWeil_-Af0liam6FKt2GZl_eCWW5UaTBe5h2bHqo34ADxy9SmtFpFZaVkP65l7k4boO08ONPB6azQdDxXuv6WZzso7jCfrda_lquPsR1synDsXfcLcVRroJ1Qko13w3-DgxghNLF5Zx46y5f_Frst-r1JzzMdzs_kVvG-ys6x5dafG5QfqpQcd7AXD3Vj5V_3bNad2xeOXA8Pb8HDhx7w6wI3ydP4fOBQH-_fc2rZv36clZqrwH4CC8JkG3eBloPEDyONsv8aXZaTNT0Z1h92iOt4fl9nb9pB03cRt8jn8Zg2iI-IrtpYwu0V8n14EpuK80waYWrjSiFwnnf1D_uxrmt0YNg3OCGE0a1UpxabVyDbyY7vvdbGr4OhL-uLbrhx0WbmhvXYm6zfxNtb03J_ijHYqpl9sdyDhj-HQAA___1dkR_)
 
@@ -195,21 +193,15 @@ At the end of every month, we award a free class for the social post that makes 
 
 Perks of having a bendy back – and someone you trust who can catch you with a solid grip, [@rowanallinson](https://email.contact.aerialedge.co.uk/c/eJx0U8ty6jgU_Bp5M5WUHn7ghRYmxAnPEAgQ2FCyJNuKLcnXFibh66cgmampunc2Whyd7mq1uvlRCbrcscds-pkV76NV69JBeB58eoJyAQmHnrCaKUO5NY5xd89kq1gtRSHvub0_VT_3R3s2su1K1RzdVyNpbTlzyn7PhScpikKC4hhi5EnNVH3UsutYIa8CnhfLfdInW2VLFj_sdpNmMvvZupFxphumCvOf2RUWxigieeBzn0PJ8whGHMkojz1petVao6VxtGmtOPGrFK-kOCRwgCMEhY9jGfoDkpMoDDD3c4QjDD1FMcQBQiiAMYEY3WMpogwKjokkEvoc-PB_nahp6VzTAZIAnAKcskb9tgRwenvEnWsZr5QpAE4hgjzIOWQoAiT9oR8LQEZd7C-T-S4p-yzYxm78OlcM4PDk9LGzp5ZLQEY3OoBDVXQlIKP5ZVW_jIZqsUvrQwJwQEY_xw2mpVAn_Q_sL83aSjplCq_mx293lXGyNaymG5x24mlbvSOAh69at4P9PCxKpf3DSWdqtwrS3I-_AE7HveLDjbXVs9q7B3XBp_V89ms2_1SX5bIIh3C3nqmdngeLhBVmsu79NerRgKTT8yGBiy6b_ppuVubtBW8n67Wf6JWQpws5xOdKfS1Jti9JfljizDxWD6V_2YjKdmJSAjx8OnwEAA9hP87Dj9Fj-Lxl2N-s3rKyXry9HozZWIQ-w3OCdJM1gbU9Rg-D5Sx7HO-nI_P0EpZfbscrfPhYZO8WkJFX21sp0hg9NUQO2PqpdjnZmOSy9bR0pRWUNcqzrSqUodmpru5uxnlNa3slZEtryQS3xkjubOu19Goy8OFvefn-QvqdB9X1d2fbVrL1HJXu-G_m3bVLxz_KcZRbffxjfXuK_w4AAP__oapM_w)
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -231,13 +223,24 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/sunday-fly-starts-tomorrow/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/sunday-fly-starts-tomorrow/img-02.png` (707 KB) — alt: (none)
-- `/assets/images/newsletter/sunday-fly-starts-tomorrow/img-03.gif` (6962 KB) — alt: (none)
-- `/assets/images/newsletter/sunday-fly-starts-tomorrow/img-04.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/sunday-fly-starts-tomorrow/img-05.jpg` (505 KB) — alt: (none)
-- `/assets/images/newsletter/sunday-fly-starts-tomorrow/img-06.jpg` (557 KB) — alt: (none)
-- `/assets/images/newsletter/sunday-fly-starts-tomorrow/img-07.jpg` (262 KB) — alt: (none)
-- `/assets/images/newsletter/sunday-fly-starts-tomorrow/img-08.png` (25 KB) — alt: (none)
-- `/assets/images/newsletter/sunday-fly-starts-tomorrow/img-09.gif` (5973 KB) — alt: (none)
-- `/assets/images/newsletter/sunday-fly-starts-tomorrow/img-10.png` (27 KB) — alt: (none)
+![](/assets/images/newsletter/sunday-fly-starts-tomorrow/img-02.png)
+
+![](/assets/images/newsletter/sunday-fly-starts-tomorrow/img-03.gif)
+
+![](/assets/images/newsletter/sunday-fly-starts-tomorrow/img-04.png)
+
+![](/assets/images/newsletter/sunday-fly-starts-tomorrow/img-05.jpg)
+
+![](/assets/images/newsletter/sunday-fly-starts-tomorrow/img-06.jpg)
+
+![](/assets/images/newsletter/sunday-fly-starts-tomorrow/img-07.jpg)
+
+![](/assets/images/newsletter/sunday-fly-starts-tomorrow/img-08.png)
+
+![](/assets/images/newsletter/sunday-fly-starts-tomorrow/img-09.gif)
+
+![](/assets/images/newsletter/sunday-fly-starts-tomorrow/img-10.png)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/sunday-fly-starts-tomorrow/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)

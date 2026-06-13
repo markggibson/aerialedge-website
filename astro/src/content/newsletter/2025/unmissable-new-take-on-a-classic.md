@@ -19,7 +19,7 @@ PLUS: why you need to learn to be dynamic
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k11zqjoYhX8N3LUDCZ8XuahautHaXetB1BsmX0IKJBiiUH_9Ge2ePWemnts3bzIrz1qLFoKh9xw_k8VIyu3sQ5skCoZotBmizIHUsZlqsZCIKmkwNY-Ya4Ebzkr-SNXjqf5zXqhBct1XoivMV8dRoyg2Qn3Pmc2RGwYwckPghzZvsWiKlvc9LvlVwDFx5_98-huFQb3OL7WepumfrdtjFLcdFqX8z-x6LYiBQ7API8JCjwCPxD72iB_ZXJ6FVrLl0qBOK3aiVyl2hSgJ3EPo4tBxAh4Sh8YcEgA8h4Qh5-BgCwQc4LsuAC50PTd8JBCSg8d8xjzfcRi2POd_STSoMqbrLfhkgcQCCe7EjyULJLdPPHSanwUfLJAksfvSQR7h9UtjDjCTT5eNBZJ7UCyYGNHyoje47Sw4-ws18MPAbmjxDUhIw7XEDcpA0rOXTb114_zdB-4yNwszKSNR8Vj-Ps38fcqVBSaVBSYTU-bGWe7BW-yvIihmz-FO78zuvXLGw2H1umNmXu0skHht3IZytcqyy6bjWRmtZ8H6k5agm7dhuT9uXkn02klQ_fr1Nc0Wb-f0A35QV0396utp0-3HGas5VmdY18OQbuV2vpQ4CC0wyUn1KQPjTse5M57SnVTTIXsaF-1b8Du4VK-bkS6H5e5Z5jl7MVS1z3pYLLIpSI_HdHJJg4EsLTizG3XL9T2wdstNpRjCnbCVFqWQiJya-uEGzu60OgvGNWo4ZlRJyalR2taoxbq2POeH5b06acrRt6WiPz8MStdc2wZxU_yNrbnWobgrxyCq2uJuA88I_BsAAP__YQ06DQ)
 
-      [image: Logo for Aerial Edge, Glasgow's Circus School]
+![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/unmissable-new-take-on-a-classic/img-01.png)
 
 Add text to your email.
 
@@ -63,9 +63,7 @@ Mark Gibson
 
 Aerial Edge Founder
 
-[image: previous][image: previous][image: previous]
 
-[image: next][image: next][image: next]
 
 ## NEW TAKE ON FAMILIAR TALE
 
@@ -167,21 +165,15 @@ Whether you’re exploring new skills or preparing for a professional path, East
 
               [Check out courses here](https://email.contact.aerialedge.co.uk/c/eJx0U1uTsjgU_DXwpkXC_SEP3nDwMjOOi6gvVEgiZIAEYxTGX7-lM7W1tTvfa6c71adPH5Jxit5TPMuXfV7spx9KR4HXBb1JEaGWTSyTygZzgYgUGhM9xExxXDNasCGRw2v1857JTjB1KXmb6a-WoVoSrLn8xqnJEPA9OwA-dH2TNZjXWcMuF1ywh4FzBBZ_fbo7iWG1Te-VmsTxD-v5GcFNi3kh_oU9ZF4IrRy7dpBT38mhk4cudnI3MJm4cSVFw4RGrZL0Sh5WzBJ5nuVi5oYBBiH2LUaADyjzgR0AmJ8cx-QIWtAFAEJgAwf4w9y285NDXUod17IoNhzrj0nUqNS6vRj2yICRAaP_EgwYtVLpk6y5NGB0utb1QPOGDVolB1phLrgoDBiZNcm-J-VCMyVwjRIYXeh8V-1BmL67EKxTvdTjIuAlC8XbdeoeYyYNOC4NOB7rItXW-ghfQ3cT2Hw68w_qoA_vpdWfTpvVgepFeTBg5DRh44vNJknuu5YlRbCdettPUsB20fjF8bxb5cGqFbB8efmaJMvXW_xhfxAgJ275Ndq1x35KK4blza6qrov3Yr9YC-z5BhynefkpPA0m_cLqr_FByEmXjPpl8-q9efdytevJulsfZiJN6VwT2cxUt1wmExifz_H4HntdvjbsqVnLZ0GjEMxbmwV4O6_1yU7E6L4zG6ZLSRFuuSkVL7hA-bWuBs_gzFbJG6dMoZphSqQQjGipTIUarCrDsf63u4u8KsLQUz3gl9ugk6piytSI6eyf_ulHr7Nf7WhEZJP9eko3BP8OAAD__78ZKgI)
 
-        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
-        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
-        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
-        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
-                  [image: Aerial Edge TikTok]
 
-                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -203,13 +195,24 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-- `/assets/images/newsletter/unmissable-new-take-on-a-classic/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
-- `/assets/images/newsletter/unmissable-new-take-on-a-classic/img-02.jpg` (159 KB) — alt: (none)
-- `/assets/images/newsletter/unmissable-new-take-on-a-classic/img-03.png` (23 KB) — alt: (none)
-- `/assets/images/newsletter/unmissable-new-take-on-a-classic/img-04.jpg` (316 KB) — alt: (none)
-- `/assets/images/newsletter/unmissable-new-take-on-a-classic/img-05.jpg` (343 KB) — alt: (none)
-- `/assets/images/newsletter/unmissable-new-take-on-a-classic/img-06.jpg` (332 KB) — alt: (none)
-- `/assets/images/newsletter/unmissable-new-take-on-a-classic/img-07.png` (27 KB) — alt: (none)
-- `/assets/images/newsletter/unmissable-new-take-on-a-classic/img-08.jpg` (264 KB) — alt: (none)
-- `/assets/images/newsletter/unmissable-new-take-on-a-classic/img-09.png` (31 KB) — alt: (none)
-- `/assets/images/newsletter/unmissable-new-take-on-a-classic/img-10.gif` (3238 KB) — alt: (none)
+![](/assets/images/newsletter/unmissable-new-take-on-a-classic/img-02.jpg)
+
+![](/assets/images/newsletter/unmissable-new-take-on-a-classic/img-03.png)
+
+![](/assets/images/newsletter/unmissable-new-take-on-a-classic/img-04.jpg)
+
+![](/assets/images/newsletter/unmissable-new-take-on-a-classic/img-05.jpg)
+
+![](/assets/images/newsletter/unmissable-new-take-on-a-classic/img-06.jpg)
+
+![](/assets/images/newsletter/unmissable-new-take-on-a-classic/img-07.png)
+
+![](/assets/images/newsletter/unmissable-new-take-on-a-classic/img-08.jpg)
+
+![](/assets/images/newsletter/unmissable-new-take-on-a-classic/img-09.png)
+
+![](/assets/images/newsletter/unmissable-new-take-on-a-classic/img-10.gif)
+
+### Already referenced inline above
+
+- _Rendered inline:_ `/assets/images/newsletter/unmissable-new-take-on-a-classic/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)
