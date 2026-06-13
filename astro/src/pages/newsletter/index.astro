@@ -1,0 +1,89 @@
+---
+// /newsletter/ — chronological newsletter archive index.
+//
+// Wynn task #678 (2026-06-13). Mark's Q2 decision: /newsletter/ section,
+// year-segmented detail URLs (/newsletter/<year>/<slug>/).
+//
+// Index page lists every published newsletter (drafts excluded), grouped by
+// year, newest year first; within each year, newest first.
+//
+// Replaces nothing — coexists with the legacy /news/ Mailchimp embed at
+// /news/ until Mark gates that page over (out of scope for #678).
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import { getSortedNewsletters, newsletterHref, groupByYear, deriveExcerpt } from '../../utils/newsletter';
+
+const items = await getSortedNewsletters();
+const groups = groupByYear(items);
+
+function formatDate(d: Date | string): string {
+  const obj = typeof d === 'string' ? new Date(d) : d;
+  return obj.toLocaleDateString('en-US', { month: 'long', day: '2-digit', year: 'numeric' });
+}
+---
+<BaseLayout
+  title="Aerial Edge Newsletter Archive"
+  description="Every Aerial Edge newsletter, archived. Browse our weekly updates on classes, workshops, shows and circus-life stories from Glasgow's circus school."
+  extraRssFeeds={[{ title: 'Aerial Edge Newsletter', href: '/newsletter/feed.xml' }]}
+>
+  <div class="full">
+    <div class="row">
+      <div class="large-8 columns large-centered">
+        <SectionTitle smallTitle="newsletter" title="Archive" />
+      </div>
+    </div>
+  </div>
+
+  <div class="full no-padding">
+    <div class="row">
+      <div class="large-8 large-centered columns">
+        {items.length === 0 && (
+          <div class="mod no_bg">
+            <div class="content">
+              <p>No newsletters published yet. The archive will appear here as issues are added.</p>
+            </div>
+          </div>
+        )}
+
+        {groups.map((group) => (
+          <>
+            <h3 class="deco">{group.year}</h3>
+            {group.items.map((entry) => {
+              const excerpt =
+                entry.data.preview_excerpt ??
+                entry.data.preheader ??
+                deriveExcerpt(entry.body ?? '', 30);
+              return (
+                <>
+                  <div class="big mod modBlogPost no_bg">
+                    {entry.data.hero_image && (
+                      <div class="images">
+                        <div class="image">
+                          <img width="800" height="533" alt="" src={entry.data.hero_image} />
+                        </div>
+                      </div>
+                    )}
+                    <div class="content">
+                      <p class="info">
+                        <span>{formatDate(entry.data.date)}</span>
+                      </p>
+                      <h3><a href={newsletterHref(entry)}>{entry.data.subject}</a></h3>
+                      {excerpt && <p>{excerpt}</p>}
+                      <div class="spacing"></div>
+                      <a class="button small boxed yellow" href={newsletterHref(entry)}>Read newsletter</a>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="two spacing"></div>
+                </>
+              );
+            })}
+          </>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="four spacing"></div>
+</BaseLayout>

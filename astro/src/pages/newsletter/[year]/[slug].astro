@@ -1,0 +1,124 @@
+---
+// /newsletter/<year>/<slug>/ — newsletter detail page.
+//
+// Wynn task #678 (2026-06-13). Mark's Q2 decision: year-segmented URLs.
+//
+// Renders one newsletter entry, with hero image (if set), preheader as a
+// kicker line, subject as <h1>, and rendered markdown body. Uses the same
+// `mod modBlogPost` shell as PostLayout so brand styling matches the rest
+// of the site.
+
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { newsletterPermalink, getSortedNewsletters, newsletterHref } from '../../../utils/newsletter';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const items = await getCollection('newsletter', ({ data }) => !data.draft);
+  return items.map((entry) => {
+    const date = entry.data.date instanceof Date ? entry.data.date : new Date(entry.data.date);
+    const year = String(date.getUTCFullYear());
+    return {
+      params: { year, slug: entry.data.slug },
+      props: { entry },
+    };
+  });
+};
+
+interface Props {
+  entry: CollectionEntry<'newsletter'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const date = entry.data.date instanceof Date ? entry.data.date : new Date(entry.data.date);
+const formattedDate = date.toLocaleDateString('en-US', {
+  month: 'long',
+  day: '2-digit',
+  year: 'numeric',
+});
+
+// Description — preheader if set, else first ~30 words of body.
+const description = entry.data.preheader ?? `Aerial Edge newsletter — ${entry.data.subject}, sent ${formattedDate}.`;
+
+// Previous + next navigation (chronological).
+const all = await getSortedNewsletters();
+const idx = all.findIndex((e) => e.id === entry.id);
+const newer = idx > 0 ? all[idx - 1] : null;
+const older = idx < all.length - 1 ? all[idx + 1] : null;
+---
+<BaseLayout
+  title={`${entry.data.subject} — Aerial Edge Newsletter`}
+  description={description}
+  extraRssFeeds={[{ title: 'Aerial Edge Newsletter', href: '/newsletter/feed.xml' }]}
+>
+  <div class="full">
+    <div class="row">
+      <div class="large-8 columns large-centered">
+        <div class="section-title">
+          <p class="small-title">newsletter / {formattedDate}</p>
+          <h2>{entry.data.subject}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="full no-padding">
+    <div class="row">
+      <div class="large-8 large-centered columns">
+        <div class="mod modBlogPost big no_bg">
+          {entry.data.hero_image && (
+            <div class="images">
+              <div class="image">
+                <img width="800" height="533" alt="" src={entry.data.hero_image} />
+              </div>
+            </div>
+          )}
+
+          <div class="content">
+            {entry.data.preheader && (
+              <p class="info"><em>{entry.data.preheader}</em></p>
+            )}
+            <Content />
+          </div>
+        </div>
+
+        <hr />
+        <div class="two spacing"></div>
+
+        {/* Previous / next navigation. */}
+        <div class="row">
+          <div class="large-6 columns">
+            {older ? (
+              <a class="button small boxed" href={newsletterHref(older)}>
+                ← Older: {older.data.subject}
+              </a>
+            ) : (
+              <span></span>
+            )}
+          </div>
+          <div class="large-6 columns text-right" style="text-align: right;">
+            {newer ? (
+              <a class="button small boxed" href={newsletterHref(newer)}>
+                Newer: {newer.data.subject} →
+              </a>
+            ) : (
+              <span></span>
+            )}
+          </div>
+        </div>
+
+        <div class="two spacing"></div>
+
+        <p>
+          <a class="button small boxed yellow" href={import.meta.env.BASE_URL.replace(/\/$/, '') + '/newsletter/'}>
+            ← Back to archive
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="four spacing"></div>
+</BaseLayout>

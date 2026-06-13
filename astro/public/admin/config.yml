@@ -2,8 +2,9 @@
 # Release: https://github.com/sveltia/sveltia-cms/releases/tag/v0.159.2
 #
 # SCHEMA MIRROR — the other file is astro/src/content.config.ts.
-# Keep these in sync field-for-field for posts + works + landing-pages + homepage.
-# (landing-pages added 2026-05-16 task #207; homepage singleton 2026-05-17 task #210.)
+# Keep these in sync field-for-field for posts + works + landing-pages + homepage + newsletter.
+# (landing-pages added 2026-05-16 task #207; homepage singleton 2026-05-17 task #210;
+#  newsletter added 2026-06-13 task #678.)
 # When you change a field here, change it there too (and vice versa). See migration plan §5.
 
 backend:
@@ -179,6 +180,51 @@ collections:
           - { name: url, label: Button URL, widget: string }
       - { name: draft, label: Draft, widget: boolean, required: false, default: false }
       - { name: date, label: Date, widget: datetime, required: false, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { name: body, label: Body, widget: markdown }
+
+  # ─── newsletter ───────────────────────────────────────────────────────────
+  # Mirrors content.config.ts `newsletter` (Wynn task #678, 2026-06-13).
+  # Files: astro/src/content/newsletter/<year>/<slug>.md
+  #
+  # Mark's decisions (#678):
+  #   - Architecture: Markdown lift + Sveltia publish (newsletter app at
+  #     library.aerialedge.co.uk is bypassed for the archive flow).
+  #   - URL: /newsletter/<year>/<slug>/.
+  #   - Image hosting: committed to astro/public/assets/images/newsletter/<slug>/
+  #     (this collection's `media_folder` override below).
+  #
+  # Marlow's publish flow on each newsletter send:
+  #   1. In Sveltia: New Newsletter → fill subject, preheader, date,
+  #      upload hero image, paste markdown body.
+  #   2. Hit Save → Sveltia commits to the staging branch.
+  #   3. Promote to prod via the publish-to-production.yml workflow.
+  - name: newsletter
+    label: Newsletter
+    label_singular: Newsletter issue
+    folder: astro/src/content/newsletter
+    create: true
+    delete: true
+    # Slug pattern includes a YYYY/ year segment so Sveltia writes
+    # newsletter/<year>/<slug>.md, matching the on-disk + URL shape.
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: "{{year}}/{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    # Per-collection image folder override — keeps newsletter media isolated
+    # under /assets/images/newsletter/ so Mark's #4 decision (commit to repo,
+    # ~500 MB-1 GB total) is auditable in one tree.
+    media_folder: "/astro/public/assets/images/newsletter"
+    public_folder: "/assets/images/newsletter"
+    summary: "{{subject}} — {{date | date('YYYY-MM-DD')}}"
+    sortable_fields: [date, subject]
+    fields:
+      - { name: subject, label: Subject line, widget: string, hint: "The email subject line — also used as the <h1> and <title> on the web page." }
+      - { name: date, label: Send date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { name: slug, label: Slug (URL path), widget: string, pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "lowercase letters/digits with single hyphens, no leading/trailing hyphen"], hint: "Lowercase letters, digits, single hyphens. Becomes the URL: aerialedge.co.uk/newsletter/<year>/<slug>/." }
+      - { name: preheader, label: Preheader (preview text), widget: string, required: false, hint: "The preview line shown under the subject in the inbox. Also used as the page meta description." }
+      - { name: hero_image, label: Hero image, widget: image, required: false, hint: "First image, rendered at the top of the page." }
+      - { name: preview_excerpt, label: Preview excerpt (for archive index), widget: text, required: false, hint: "Short summary shown on the /newsletter/ archive page. Falls back to preheader, then the first ~30 words of the body." }
+      - { name: draft, label: Draft, widget: boolean, required: false, default: false }
       - { name: body, label: Body, widget: markdown }
 
   # ─── homepage (singleton) ─────────────────────────────────────────────────

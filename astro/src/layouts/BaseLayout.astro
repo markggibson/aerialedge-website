@@ -17,6 +17,11 @@ export interface Props {
   onepage?: boolean;
   bodyClass?: string;
   lang?: string;
+  /**
+   * Optional per-page RSS feeds (added 2026-06-13 task #678 for newsletter).
+   * Passed through to Head.astro as additional <link rel="alternate"> entries.
+   */
+  extraRssFeeds?: Array<{ title: string; href: string }>;
 }
 
 const {
@@ -25,13 +30,14 @@ const {
   onepage = false,
   bodyClass = '',
   lang = 'en',
+  extraRssFeeds,
 } = Astro.props;
 
 const mainClass = onepage ? 'top-shift' : '';
 ---
 <!DOCTYPE html>
 <html lang={lang}>
-  <Head title={title} description={description} />
+  <Head title={title} description={description} extraRssFeeds={extraRssFeeds} />
   <body class={bodyClass}>
     <a id="top"></a>
 

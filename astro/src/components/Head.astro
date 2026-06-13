@@ -27,6 +27,13 @@ export interface Props {
    */
   ogImage?: string;
   ogType?: string;
+  /**
+   * Extra <link rel="alternate" type="application/rss+xml"> entries.
+   * Added 2026-06-13 (task #678) for the newsletter RSS feed.
+   * The site-wide `/feed.xml` alternate stays in place; this adds
+   * additional per-section feeds when a page wants one.
+   */
+  extraRssFeeds?: Array<{ title: string; href: string }>;
 }
 
 const {
@@ -35,6 +42,7 @@ const {
   canonical,
   ogImage,
   ogType = 'website',
+  extraRssFeeds = [],
 } = Astro.props;
 
 const siteTitle = 'Aerial Edge';
@@ -117,6 +125,9 @@ const isPreviewBuild = import.meta.env.BASE_URL === '/preview/';
 
   <link rel="canonical" href={canonicalHref} />
   <link rel="alternate" type="application/rss+xml" title={siteTitle} href="/feed.xml" />
+  {extraRssFeeds.map((feed) => (
+    <link rel="alternate" type="application/rss+xml" title={feed.title} href={feed.href} />
+  ))}
 
   <!-- favicon — paths preserved verbatim from v1 _includes/head.html. -->
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png" />

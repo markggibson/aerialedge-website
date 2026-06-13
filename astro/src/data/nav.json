@@ -5,5 +5,6 @@
   { "name": "Pricing",  "path": "#pricing",  "section_id": "pricing" },
   { "name": "Vouchers", "path": "#vouchers", "section_id": "vouchers" },
   { "name": "Blog",     "path": "/blog/",    "section_id": "blog" },
+  { "name": "Newsletter", "path": "/newsletter/", "section_id": "newsletter" },
   { "name": "Contact",  "path": "#contact",  "section_id": "contact" }
 ]

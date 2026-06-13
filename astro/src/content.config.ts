@@ -7,8 +7,9 @@
 //
 // SCHEMA MIRROR — the other file is astro/public/admin/config.yml.
 // Keep these in sync field-for-field for posts + works + landing-pages
-// + homepage (Phase 5, P5-E; landing-pages added 2026-05-16 task #207;
-// homepage singleton added 2026-05-17 task #210).
+// + homepage + newsletter (Phase 5, P5-E; landing-pages added 2026-05-16
+// task #207; homepage singleton added 2026-05-17 task #210; newsletter
+// added 2026-06-13 task #678).
 // When you change a field here, change it there too (and vice versa).
 
 import { defineCollection, reference, z } from 'astro:content';
@@ -272,10 +273,49 @@ const homepage = defineCollection({
   }),
 });
 
+// `newsletter` — email-newsletter archive (Wynn task #678, 2026-06-13).
+//
+// Mark's decisions baked in:
+//   - Architecture: Markdown lift + Sveltia publish (Option A — newsletter
+//     authoring app at library.aerialedge.co.uk is bypassed for archive +
+//     web-publish flow).
+//   - URL pattern: /newsletter/<year>/<slug>/ (year-segmented).
+//   - Image hosting: committed to Astro repo at
+//     /assets/images/newsletter/<slug>/.
+//
+// `year` is a derived field — Sveltia / the backfill script writes `date`
+// and the route emits `<year>` from `date.getUTCFullYear()`. Authors do
+// NOT set `year` manually.
+const newsletter = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/newsletter' }),
+  schema: z.object({
+    // The email subject line — used as <h1> + <title>.
+    subject: z.string(),
+    // Send date (drives both the year URL segment and the chronological sort).
+    date: z.coerce.date(),
+    // Slug controls the URL path: /newsletter/<year>/<slug>/. Required —
+    // both Sveltia and the backfill script set it explicitly so renames
+    // don't change the URL.
+    slug: z.string(),
+    // Optional preheader (the preview line under the subject in inbox view).
+    // Doubles as the meta description if present.
+    preheader: z.preprocess(emptyToUndef, z.string().optional()),
+    // Optional hero image (first image in the email). Path is
+    // /assets/images/newsletter/<slug>/<filename>.
+    hero_image: z.preprocess(emptyToUndef, z.string().optional()),
+    // Optional preview excerpt for the index card. Falls back to the first
+    // ~30 words of body when absent.
+    preview_excerpt: z.preprocess(emptyToUndef, z.string().optional()),
+    // Draft gate — same shape as posts. Drafts excluded from index + RSS.
+    draft: z.preprocess(emptyToUndef, z.boolean().optional()),
+  }),
+});
+
 export const collections = {
   pages,
   posts,
   works,
   'landing-pages': landingPages,
   homepage,
+  newsletter,
 };
