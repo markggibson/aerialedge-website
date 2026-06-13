@@ -1,5 +1,5 @@
 ---
-subject: "Vee's Fringe Top Picks"
+subject: "Vee's Fringe top picks"
 date: 2025-08-09
 slug: vee-s-fringe-top-picks
 hero_image: /assets/images/newsletter/vee-s-fringe-top-picks/img-01.png

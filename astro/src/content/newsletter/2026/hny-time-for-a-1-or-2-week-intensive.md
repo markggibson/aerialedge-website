@@ -1,5 +1,5 @@
 ---
-subject: "Hny Time For A 1 Or 2 Week Intensive"
+subject: "HNY: Time for a 1 or 2-week Intensive!"
 date: 2026-01-03
 slug: hny-time-for-a-1-or-2-week-intensive
 hero_image: /assets/images/newsletter/hny-time-for-a-1-or-2-week-intensive/img-01.png

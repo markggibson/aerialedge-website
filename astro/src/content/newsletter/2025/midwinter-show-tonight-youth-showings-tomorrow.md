@@ -1,5 +1,5 @@
 ---
-subject: "Midwinter Show Tonight Youth Showings Tomorrow"
+subject: "Midwinter show tonight & youth showings tomorrow"
 date: 2025-12-13
 slug: midwinter-show-tonight-youth-showings-tomorrow
 hero_image: /assets/images/newsletter/midwinter-show-tonight-youth-showings-tomorrow/img-01.png

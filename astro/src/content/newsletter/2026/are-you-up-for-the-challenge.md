@@ -1,5 +1,5 @@
 ---
-subject: "Are You Up For The Challenge"
+subject: "Are you up for the challenge?"
 date: 2026-03-28
 slug: are-you-up-for-the-challenge
 hero_image: /assets/images/newsletter/are-you-up-for-the-challenge/img-01.png

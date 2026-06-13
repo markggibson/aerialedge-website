@@ -1,5 +1,5 @@
 ---
-subject: "Fly All Day For Three Days"
+subject: "Fly all day for three days"
 date: 2025-09-06
 slug: fly-all-day-for-three-days
 hero_image: /assets/images/newsletter/fly-all-day-for-three-days/img-01.png

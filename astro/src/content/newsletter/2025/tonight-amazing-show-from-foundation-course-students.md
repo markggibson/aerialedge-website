@@ -1,5 +1,5 @@
 ---
-subject: "Tonight Amazing Show From Foundation Course Students"
+subject: "TONIGHT! Amazing show from Foundation Course students"
 date: 2025-11-28
 slug: tonight-amazing-show-from-foundation-course-students
 hero_image: /assets/images/newsletter/tonight-amazing-show-from-foundation-course-students/img-01.png

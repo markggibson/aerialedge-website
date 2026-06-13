@@ -1,5 +1,5 @@
 ---
-subject: "Fab Jan Deals As Gift Vouchers"
+subject: "Fab Jan deals as gift vouchers"
 date: 2025-12-06
 slug: fab-jan-deals-as-gift-vouchers
 hero_image: /assets/images/newsletter/fab-jan-deals-as-gift-vouchers/img-01.png

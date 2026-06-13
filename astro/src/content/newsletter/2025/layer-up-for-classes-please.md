@@ -1,5 +1,5 @@
 ---
-subject: "Layer Up For Classes Please"
+subject: "Layer up for classes please"
 date: 2025-11-14
 slug: layer-up-for-classes-please
 draft: false

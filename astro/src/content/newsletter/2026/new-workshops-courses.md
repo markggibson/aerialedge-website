@@ -1,5 +1,5 @@
 ---
-subject: "New Workshops Courses"
+subject: "New workshops & courses"
 date: 2026-01-24
 slug: new-workshops-courses
 hero_image: /assets/images/newsletter/new-workshops-courses/img-01.png

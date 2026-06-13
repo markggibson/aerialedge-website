@@ -1,5 +1,5 @@
 ---
-subject: "Give Yourself A Shake Train With Our Best Guest"
+subject: "Give yourself a shake! Train with our best guest"
 date: 2025-09-20
 slug: give-yourself-a-shake-train-with-our-best-guest
 hero_image: /assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-01.png

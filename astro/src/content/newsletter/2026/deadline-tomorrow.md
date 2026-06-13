@@ -1,5 +1,5 @@
 ---
-subject: "Deadline Tomorrow"
+subject: "Deadline tomorrow"
 date: 2026-04-21
 slug: deadline-tomorrow
 draft: false

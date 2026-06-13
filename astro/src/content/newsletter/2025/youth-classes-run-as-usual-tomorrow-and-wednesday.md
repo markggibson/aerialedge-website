@@ -1,5 +1,5 @@
 ---
-subject: "Youth Classes Run As Usual Tomorrow And Wednesday"
+subject: "Youth classes run as usual tomorrow and Wednesday"
 date: 2025-10-11
 slug: youth-classes-run-as-usual-tomorrow-and-wednesday
 draft: false

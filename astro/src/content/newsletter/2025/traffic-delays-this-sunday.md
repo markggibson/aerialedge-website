@@ -1,5 +1,5 @@
 ---
-subject: "Traffic Delays This Sunday"
+subject: "Traffic delays this Sunday"
 date: 2025-08-29
 slug: traffic-delays-this-sunday
 draft: false

@@ -1,5 +1,5 @@
 ---
-subject: "8 Reasons You Can T Afford To Miss This"
+subject: "8 reasons you can't afford to miss this"
 date: 2026-03-14
 slug: 8-reasons-you-can-t-afford-to-miss-this
 hero_image: /assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-01.png

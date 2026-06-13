@@ -1,5 +1,5 @@
 ---
-subject: "Performance Dates For Your Diary"
+subject: "Performance dates for your diary"
 date: 2026-03-27
 slug: performance-dates-for-your-diary
 draft: false

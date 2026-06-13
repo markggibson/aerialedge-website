@@ -1,5 +1,5 @@
 ---
-subject: "Running Order For Tomorrow's Show"
+subject: "Running order for tomorrow's show"
 date: 2025-10-24
 slug: running-order-for-tomorrow-s-show
 hero_image: /assets/images/newsletter/running-order-for-tomorrow-s-show/img-01.png

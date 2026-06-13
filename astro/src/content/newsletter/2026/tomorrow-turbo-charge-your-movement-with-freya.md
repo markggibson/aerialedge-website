@@ -1,5 +1,5 @@
 ---
-subject: "Tomorrow Turbo Charge Your Movement With Freya"
+subject: "TOMORROW! Turbo charge your movement with Freya"
 date: 2026-01-09
 slug: tomorrow-turbo-charge-your-movement-with-freya
 hero_image: /assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-01.png

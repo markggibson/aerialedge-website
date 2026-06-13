@@ -1,5 +1,5 @@
 ---
-subject: "Nea's Back With New Rope Silks Skills For You"
+subject: "Nea's back with new rope & silks skills for you"
 date: 2025-08-16
 slug: nea-s-back-with-new-rope-silks-skills-for-you
 hero_image: /assets/images/newsletter/nea-s-back-with-new-rope-silks-skills-for-you/img-01.png

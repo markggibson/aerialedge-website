@@ -1,5 +1,5 @@
 ---
-subject: "Students Star At Zippos"
+subject: "Students star at Zippos"
 date: 2025-08-02
 slug: students-star-at-zippos
 hero_image: /assets/images/newsletter/students-star-at-zippos/img-01.png

@@ -1,5 +1,5 @@
 ---
-subject: "Your Sustainable New Year Momentum"
+subject: "Your sustainable new year momentum"
 date: 2026-01-17
 slug: your-sustainable-new-year-momentum
 hero_image: /assets/images/newsletter/your-sustainable-new-year-momentum/img-01.png

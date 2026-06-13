@@ -1,5 +1,5 @@
 ---
-subject: "Four Fly Tracks At Easter Edge"
+subject: "Four fly tracks at Easter Edge"
 date: 2026-02-21
 slug: four-fly-tracks-at-easter-edge
 hero_image: /assets/images/newsletter/four-fly-tracks-at-easter-edge/img-01.png

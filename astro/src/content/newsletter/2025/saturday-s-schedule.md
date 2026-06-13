@@ -1,5 +1,5 @@
 ---
-subject: "Saturday's Schedule"
+subject: "Saturday's schedule"
 date: 2025-10-22
 slug: saturday-s-schedule
 draft: false

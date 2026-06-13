@@ -1,5 +1,5 @@
 ---
-subject: "New Dynamics Workshops"
+subject: "NEW dynamics workshops"
 date: 2025-10-18
 slug: new-dynamics-workshops
 hero_image: /assets/images/newsletter/new-dynamics-workshops/img-01.png

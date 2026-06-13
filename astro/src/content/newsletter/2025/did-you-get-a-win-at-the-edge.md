@@ -1,5 +1,5 @@
 ---
-subject: "Did You Get A Win At The Edge"
+subject: "Did you get a win at the Edge?"
 date: 2025-11-10
 slug: did-you-get-a-win-at-the-edge
 draft: false

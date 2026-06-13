@@ -1,5 +1,5 @@
 ---
-subject: "Overcoming Adversity Like Jj"
+subject: "Overcoming adversity like JJ"
 date: 2025-10-11
 slug: overcoming-adversity-like-jj
 hero_image: /assets/images/newsletter/overcoming-adversity-like-jj/img-01.png

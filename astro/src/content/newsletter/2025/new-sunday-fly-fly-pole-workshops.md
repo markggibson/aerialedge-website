@@ -1,5 +1,5 @@
 ---
-subject: "New Sunday Fly Fly Pole Workshops"
+subject: "NEW! Sunday fly + fly pole workshops"
 date: 2025-11-08
 slug: new-sunday-fly-fly-pole-workshops
 hero_image: /assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-01.png

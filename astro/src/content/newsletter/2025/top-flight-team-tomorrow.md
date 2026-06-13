@@ -1,5 +1,5 @@
 ---
-subject: "Top Flight Team Tomorrow"
+subject: "Top flight team tomorrow"
 date: 2025-10-24
 slug: top-flight-team-tomorrow
 hero_image: /assets/images/newsletter/top-flight-team-tomorrow/img-01.png

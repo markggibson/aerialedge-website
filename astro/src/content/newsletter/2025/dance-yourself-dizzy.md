@@ -1,5 +1,5 @@
 ---
-subject: "Dance Yourself Dizzy"
+subject: "Dance yourself dizzy"
 date: 2025-10-04
 slug: dance-yourself-dizzy
 hero_image: /assets/images/newsletter/dance-yourself-dizzy/img-01.png

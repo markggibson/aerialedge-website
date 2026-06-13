@@ -1,5 +1,5 @@
 ---
-subject: "Need To Know For Tomorrow At October Edge"
+subject: "Need to know for tomorrow at October Edge"
 date: 2025-10-30
 slug: need-to-know-for-tomorrow-at-october-edge
 hero_image: /assets/images/newsletter/need-to-know-for-tomorrow-at-october-edge/img-01.jpg

@@ -1,5 +1,5 @@
 ---
-subject: "30min To Grab Your Tracks At October Edge"
+subject: "30min to grab your tracks at October Edge"
 date: 2025-10-18
 slug: 30min-to-grab-your-tracks-at-october-edge
 hero_image: /assets/images/newsletter/30min-to-grab-your-tracks-at-october-edge/img-01.png

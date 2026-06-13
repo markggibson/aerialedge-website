@@ -1,5 +1,5 @@
 ---
-subject: "New Classes Starting September"
+subject: "New classes starting September!! 👏🎪"
 date: 2025-08-23
 slug: new-classes-starting-september
 hero_image: /assets/images/newsletter/new-classes-starting-september/img-01.png

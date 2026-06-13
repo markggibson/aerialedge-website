@@ -1,5 +1,5 @@
 ---
-subject: "Sunday Fly Starts Tomorrow"
+subject: "Sunday fly starts tomorrow"
 date: 2025-11-15
 slug: sunday-fly-starts-tomorrow
 hero_image: /assets/images/newsletter/sunday-fly-starts-tomorrow/img-01.png

@@ -1,5 +1,5 @@
 ---
-subject: "All Set For Youth Circus Starting"
+subject: "All set for Youth Circus starting?"
 date: 2025-08-10
 slug: all-set-for-youth-circus-starting
 hero_image: /assets/images/newsletter/all-set-for-youth-circus-starting/img-01.png

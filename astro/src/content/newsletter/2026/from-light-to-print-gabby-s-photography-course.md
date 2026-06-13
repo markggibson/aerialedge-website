@@ -1,5 +1,5 @@
 ---
-subject: "From Light To Print Gabby's Photography Course"
+subject: "From light to print: Gabby's photography course"
 date: 2026-02-06
 slug: from-light-to-print-gabby-s-photography-course
 hero_image: /assets/images/newsletter/from-light-to-print-gabby-s-photography-course/img-01.png

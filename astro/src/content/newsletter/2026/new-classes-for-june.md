@@ -1,5 +1,5 @@
 ---
-subject: "New Classes For June"
+subject: "New classes for June"
 date: 2026-05-22
 slug: new-classes-for-june
 hero_image: /assets/images/newsletter/new-classes-for-june/img-01.png
