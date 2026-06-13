@@ -1,0 +1,65 @@
+---
+subject: "Easter Edge Schedule"
+date: 2026-02-26
+slug: easter-edge-schedule
+hero_image: /assets/images/newsletter/easter-edge-schedule/img-01.png
+draft: false
+---
+# Easter Edge schedule
+
+- **Sent:** 2026-02-26
+- **From:** info@contact.aerialedge.co.uk
+- **Folder:** INBOX.Archive
+- **Images saved:** 2
+- **Images dir:** `/assets/images/newsletter/easter-edge-schedule/`
+
+---
+
+Timeline for booking your tracks
+
+Dear Mark,
+
+Building a festival schedule is a bit like assembling a complex watch – every gear and spring has to click into place to make the whole thing tick. We are in the final stages of that fine-tuning, and the schedule will be released soon.
+
+You'll be able to book your tracks two weeks before the festival, on Saturday 21st March at 1pm. That means everyone's on the starting blocks at the same time to book the most important tracks to them.
+
+Stay looped in
+
+To ensure you don't miss the starting gun, keep an eye on our newsletter. It’s the first place we share the news, so if you haven't joined yet, head to the sign-up section of Aerial Edge website home page [here](https://email.contact.aerialedge.co.uk/c/eJx0U8FyozgU_Bpx2UoKJBvQQQdcNsTjTezYjp3JhRKSABmQsCRIPF-_ZSe7tVWTubaeuvr162a55GRzpIti9VFUr_OtcWkcvscfHieM-4j5HtcdlYowrRxl7p4KI2kreCXumb4fmq_3XL8rYWwt-9xdekFazaiT-hPnniBBFMEgmCCIPdFR2eadsJZW4ioga46-lA9yf67Nz8u5G8tg_Jq6kTHa9VRW6n_Y9VuIMcOYMlzGCJcTMeURQgUNPKFGabTqhHKkN5oP7CrFqwnFMWNRhBDyJ9THBfZxILA_5YiWKObYkwT6MPQhDAM0jSf4HhcsjqIyLnkU-_EUg4n_RydaUjvXW4ASAFMAU9rL34YATG9L3DlDWSNVBWBaToNoUsbBFJYApV_0Sw7Q3OLJJnk8JvVYTA_YLZ8fJQUwHFyXWz0YJgCa3-i-wE5wOXT_gn911DTCSVV5Lcs_vZPKCaNoS15ganl2aF4DAGdsc7FvFsCZPq03T_5O8uH80ItFWL6sf5lk9Xy4HNMQAzj72MzHZRDZblvH5xi3Uyi4esvaXZYUl_1DtjOrh0ZFfXISTW3hfrmER3YZ1zy7sH5xrjqaxGNaLwCcnbDs6kDaH8EZwFlYnJ824d7K036zmEDRXebbF9kBODMIFmOEQofNgtnzaROOA8qOiXh8Wye8dSIKdge8tH8Pz0e6xY9P0tVt9NNu_Xb9Y7FaVYuPBB6fg9faAJhagOZeq2_BT3GQ9UjEdJe1rkQvKvl18Drhas0J7aWnjaykIsXQNnc3-7ze6FFyYUgrKGdaKcGcNp4hV6vBxP8tE59nIp83l3a8e9emEcZz14bk3wpwhOku_7aUjgiX_9eGkcB_AgAA__-xIkZm).
+
+Prep your engine
+
+We really encourage you to take up some flexibility and conditioning now, so that you're walking into Easter Edge with a resilient, warm, and conditioned frame. It's like having a full tank of fuel, it means you can keep playing and learning right until the final session and get the most out of it.
+
+You can find these vital prep sessions in two places:
+
+-
+
+[Circus Fitness:](https://email.contact.aerialedge.co.uk/c/eJx0U01z4jgU_DXyZSspW8IfOuhgCkwYNoEAgUwuLlmSbWFbMpLshPn1W5Ds1lZN5tp66urXr5vlkpPNkc6L1UdRvc62xmVJ9J58eJww7iPme1x3VCrCtHKUuXsqjKSt4JW4Z_p-aL7ec_2uhLG17HN36QVpNaNO6k-ce4IEcQyDYIIg9kRHZZt3wlpaiauARXP0pXyQ-3Ntfl7O3VgG49fUjYzRrqeyUv_Drt8ijBnGlOEyQbiciJDHCBU08IQapdGqE8qR3mg-sKsUryZhGItiUkYFwkWAsc9KEUJexAUOCliW1JME-jDyIYwCFCYTfI8LlsRxmZQ8TvwkxGDi_9GJltTO9RagFMAMwIz28rchALPbEnfOUNZIVQGYJXHJQholPgoByr7olxygmcWTTfp4TOuxCA_YLZ8fJQUwGlyXWz0YJgCa3ei-wE5wOXT_gn911DTCSVV5Lcs_vZPKCaNoS15gZvni0LwGAE7Z5mLfLIBTfVpvnvyd5MP5oRfzqHxZ_zLp6vlwOWYRBnD6sZmNyyC23bZOzgluQyi4elu0u0VaXPYPi51ZPTQq7tOTaGoL98slPLLLuOaLC-vn56qjaTJm9RzA6QnLrg6k_RGcAZxGxflpE-2tPO038wkU3WW2fZEdgFODYDHGKHLYzJk9nzbROKDFMRWPb-uUt07Ewe6Al_bv4flIt_jxSbq6jX_ard-uf8xXq2r-kcLjc_BaGwAzC9DMa_Ut-BkOFj0SCd0tWleiF5X-OnidcLXmhPbS00ZWUpFiaJu7m31eb_QouTCkFZQzrZRgThvPkKvVYOL_lonPM5HPm0s73r1r0wjjuWtD8m8FOMJ0l39bSkeEy_9rw0jgPwEAAP__QpxHVg) These 60-minute classes at 6pm are a focused tune-up for your functional strength. And they're incredible value – just £7.50 with an 8-class pass. [Book here](https://email.contact.aerialedge.co.uk/c/eJx0U01z4jgU_DXyZSspW8IfOuhgCkwYNoEAgUwuLlmSbWFbMpLshPn1W5Ds1lZN5tp66urXr5vlkpPNkc6L1UdRvc62xmVJ9J58eJww7iPme1x3VCrCtHKUuXsqjKSt4JW4Z_p-aL7ec_2uhLG17HN36QVpNaNO6k-ce4IEcQyDYIIg9kRHZZt3wlpaiauARXP0pXyQ-3Ntfl7O3VgG49fUjYzRrqeyUv_Drt8ijBnGlOEyQbiciJDHCBU08IQapdGqE8qR3mg-sKsUryZhGItiUkYFwkWAsc9KEUJexAUOCliW1JME-jDyIYwCFCYTfI8LlsRxmZQ8TvwkxGDi_9GJltTO9RagFMAMwIz28rchALPbEnfOUNZIVQGYJXHJQholPgoByr7olxygmcWTTfp4TOuxCA_YLZ8fJQUwGlyXWz0YJgCa3ei-wE5wOXT_gn911DTCSVV5Lcs_vZPKCaNoS15gZvni0LwGAE7Z5mLfLIBTfVpvnvyd5MP5oRfzqHxZ_zLp6vlwOWYRBnD6sZmNyyC23bZOzgluQyi4elu0u0VaXPYPi51ZPTQq7tOTaGoL98slPLLLuOaLC-vn56qjaTJm9RzA6QnLrg6k_RGcAZxGxflpE-2tPO038wkU3WW2fZEdgFODYDHGKHLYzJk9nzbROKDFMRWPb-uUt07Ewe6Al_bv4flIt_jxSbq6jX_ard-uf8xXq2r-kcLjc_BaGwAzC9DMa_Ut-BkOFj0SCd0tWleiF5X-OnidcLXmhPbS00ZWUpFiaJu7m31eb_QouTCkFZQzrZRgThvPkKvVYOL_lonPM5HPm0s73r1r0wjjuWtD8m8FOMJ0l39bSkeEy_9rw0jgPwEAAP__QpxHVg)
+
+-
+
+[Daytime schedule](https://email.contact.aerialedge.co.uk/c/eJx0VMFy4jgQ_Rr5skXKlmzZOvhgCkyYbCYECGRyoWRJtgW2ZCTZCfP1WwZ2a7dm9qjXrdbr97rFDpKnqz2dF09fRfU-WxuXJ_gz-fJ4yriPmO9x3VKpUqaVo8w9UGEkbQSvxAPTD_3pHj_oTyWMrWV3cJdOpI1m1El9w7kn0iCOYRCECBJPtFQ2h1ZYSysxElic9r6Uj3J7rs2Py7kdymC4Z12LMdp2VFbqX9h4DRPCCKGMlAkiZSgiHiNU0MATapBGq1Yol3ZG856NVLw6hQhSnEQ4IDgmURQGAickSfykFAQzjD2ZQh9iH0IcoCgJyQMpWBLHZVLyOPGTiIDQ_18lmrR2rrMAZQDmAOa0k78kAZhfm5g4Q9lJqgrAPIloETKIIhoClN_LLzlAM0vCVfa8z-qhiHbELV-fJQUQW0eN49QJgGYj34kfTCAGEAvF_wOjiR8AiAehemEBmgGIGXWi0uZyO0llnemZ0-Ye1mUpjFTVVeQ7NrpkhHVGXnW8o71rD1b3ho3PXXu6g63gsm__Bv9oqTkJJ1XlNexwM1AqJ4yiTfoGc8sXu9N7AOCUrS72wwI41ceX1Xd_I3l_fuzEHJdvLz9N9vS6u-xzTACcfq1mwzKIbbuuk3NCmggKrj4WzWaRFZft42Jjnh5PKu6yozjVFm6XS7hnl-GFLy6sm5-rlmbJkNdzAKdHIts6kPZbcAZwiovz9xXeWnncruYhFO1ltn6TLYBTg2AxxAg7YubMno8rPPRosc_E88dLxhsn4mCzI0v7Z_-6p2vy_F26uol_2LXfvHybPz1V868M7l-D99oAmI8Seo2-bl9OgkWHREI3i8aV6E1lP3deK1yteUo76WkjK6nSom9Ok6t8Xmf0ILkwaSMoZ1opMRromXSUGoT-L4N5sym9DZ60w-RTm5MwnhvX9PBbAi5luj389mdwqXCHf1ZySOFfAQAA__9JiW-t): Our 90-minute conditioning and flexibility sessions are available through the week if daytime is better for you. [Book here](https://email.contact.aerialedge.co.uk/c/eJx0VMFy4jgQ_Rr5skXKlmzZOvhgCkyYbCYECGRyoWRJtgW2ZCTZCfP1WwZ2a7dm9qjXrdbr97rFDpKnqz2dF09fRfU-WxuXJ_gz-fJ4yriPmO9x3VKpUqaVo8w9UGEkbQSvxAPTD_3pHj_oTyWMrWV3cJdOpI1m1El9w7kn0iCOYRCECBJPtFQ2h1ZYSysxElic9r6Uj3J7rs2Py7kdymC4Z12LMdp2VFbqX9h4DRPCCKGMlAkiZSgiHiNU0MATapBGq1Yol3ZG856NVLw6hQhSnEQ4IDgmURQGAickSfykFAQzjD2ZQh9iH0IcoCgJyQMpWBLHZVLyOPGTiIDQ_18lmrR2rrMAZQDmAOa0k78kAZhfm5g4Q9lJqgrAPIloETKIIhoClN_LLzlAM0vCVfa8z-qhiHbELV-fJQUQW0eN49QJgGYj34kfTCAGEAvF_wOjiR8AiAehemEBmgGIGXWi0uZyO0llnemZ0-Ye1mUpjFTVVeQ7NrpkhHVGXnW8o71rD1b3ho3PXXu6g63gsm__Bv9oqTkJJ1XlNexwM1AqJ4yiTfoGc8sXu9N7AOCUrS72wwI41ceX1Xd_I3l_fuzEHJdvLz9N9vS6u-xzTACcfq1mwzKIbbuuk3NCmggKrj4WzWaRFZft42Jjnh5PKu6yozjVFm6XS7hnl-GFLy6sm5-rlmbJkNdzAKdHIts6kPZbcAZwiovz9xXeWnncruYhFO1ltn6TLYBTg2AxxAg7YubMno8rPPRosc_E88dLxhsn4mCzI0v7Z_-6p2vy_F26uol_2LXfvHybPz1V868M7l-D99oAmI8Seo2-bl9OgkWHREI3i8aV6E1lP3deK1yteUo76WkjK6nSom9Ok6t8Xmf0ILkwaSMoZ1opMRromXSUGoT-L4N5sym9DZ60w-RTm5MwnhvX9PBbAi5luj389mdwqXCHf1ZySOFfAQAA__9JiW-t)
+
+## We are so proud of the supportive, powerhouse community that gathers for this event. Let’s head into the spring feeling strong, supple, and ready for anything!
+
+See you soon,
+
+The Easter Edge team
+
+                Book flex & conditioning here
+
+ Copyright © 2026  Aerial Edge, All rights reserved.
+
+ Our mailing address is:
+ info@aerialedge.co.uk
+
+ Want to change how you receive these emails?
+ You can [unsubscribe from this list](https://email.contact.aerialedge.co.uk/c/eJx0lM9y4jgXxZ9G3oWyJf_TwgtTYELzJRAgkM6GkqVrLLAsI8lO6Kf_CtLVMzWT2V7pnjo6vzriBymy1Z5Ny8VneXybrI0r0vgj_fRExoVPuO8JrZhsM65bx7gbMTCSNSCOMOJ61J9_nx_0RwvG1rI7uGsHWaM5c1J_zYUHWZAkOAhCgqkHisnmoMBadoSbgdl570v5KLeX2vy8XtRQBcPvW3cxzlTH5LH92-y2FlPKKWWcVimhVQiRSAgpWeBBO0ijWwWtyzqjRc9vVrw6S0PMeUQDP-IYp2kZkCgUhGKIwrLEFfNkhn0c-xjHAYnSkI5oydMkqdJKJKmfRhSF_n8m0WS1c51FJEe4QLiwYAbJwY6UPdpWmBHXCuHi_giLcFH2shFgEC761val5UaW8DBI-EC4KGgw6wikbDNrXEVe2_zX7qZJw1X-tM_roYx21M1fniRD5EsTkYli5oxwFPr_NIdw7EB1DXO36BCZxNTHCRU4TOJQcAwkSCsIohLh-C8yiEy-Y3MTkwoO1jHVITL5wzaNwtBr-OGLk2wdmJY12SsurJjtzm8BwmO-utp3i_BYn5arZ38jRX957GAaV6_LXyZfvOyu-yKmCI8_V5NhHiRWrev0ktImwiDa91mzmeXldfs425jF47lNuvwE59ri7XyO9_w6LMXsyrvp5ahYng5FPUV4fKJS1YG0P4ILwuO4vDyv4q2Vp-1qGmJQ18n6VSqEx4bgckhI7KiZcns5reKhJ7N9Dk_vy1w0DpJgs6Nz-7_-Zc_W9OlZurpJftq13yx_TBeL4_Qzx_uX4K2-YbWITLxG30v2HU9Pgau1yFgnPW3kUbZZ2Tfnh3t8Xmf0IAWYrAEmuG5b4E4bz2R3yP9G7FndGw7ZfftB2uHhQ5szGM_d2nj41oDLuFaHbz8Al4E7_GnekOH_BwAA__9FMWfD).
+
+---
+
+## Images
+
+- `/assets/images/newsletter/easter-edge-schedule/img-01.png` (22 KB) — alt: (none)
+- `/assets/images/newsletter/easter-edge-schedule/img-02.jpg` (192 KB) — alt: (none)
