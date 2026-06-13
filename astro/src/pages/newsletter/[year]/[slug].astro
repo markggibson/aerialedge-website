@@ -115,7 +115,7 @@ const older = idx < all.length - 1 ? all[idx + 1] : null;
               <p class="info"><em>{entry.data.preheader}</em></p>
             )}
             {htmlBody ? (
-              <div class="newsletter-html-body" set:html={htmlBody} />
+              <div class="newsletter-html-body" style="background:#ffffff; padding:0; max-width: 720px; margin: 0 auto;" set:html={htmlBody} />
             ) : (
               <Content />
             )}
@@ -159,4 +159,33 @@ const older = idx < all.length - 1 ? all[idx + 1] : null;
   </div>
 
   <div class="four spacing"></div>
+
+  {/*
+    Newsletter HTML body container styles (task #695).
+    The embedded email's <style> block now gets its selectors scoped under
+    `.ae-newsletter-shell` so it can't leak into the host page. We give the
+    outer container the host-friendly defaults: full-width, no shell-bg
+    (so the email's own inline background-colors render correctly), and
+    images that respect the column width on narrow viewports.
+  */}
+  <style is:global>
+    .newsletter-html-body { width: 100%; }
+    .newsletter-html-body .ae-newsletter-shell {
+      background: transparent;
+      color: inherit;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    /* Email tables ship with hardcoded width:600px — let them shrink on mobile. */
+    .newsletter-html-body .ae-newsletter-shell table[width="600"],
+    .newsletter-html-body .ae-newsletter-shell table[width="600px"] {
+      max-width: 100% !important;
+    }
+    /* Email images can be wider than the column on mobile. */
+    .newsletter-html-body .ae-newsletter-shell img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
 </BaseLayout>
