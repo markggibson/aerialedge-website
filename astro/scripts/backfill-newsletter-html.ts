@@ -181,6 +181,46 @@ async function listLocalImages(slug: string): Promise<string[]> {
   }
 }
 
+interface UrlMapRow {
+  pos: number | null;
+  url: string;
+  file: string | null;
+  size: number;
+  alt: string;
+  status: string;
+}
+
+interface UrlMapSidecar {
+  slug: string;
+  min_image_bytes: number;
+  max_images_per_email: number;
+  tracking_pixel_bytes: number;
+  rows: UrlMapRow[];
+}
+
+/**
+ * Load the per-issue url-map.json sidecar produced by the Python extractor.
+ * This is the authoritative URL→file mapping (covers every <img> URL the
+ * extractor walked, with its actual fate: ok / tracking-hint / too-small /
+ * fetch-fail / spacer-pixel / over-cap). Use this instead of positional
+ * inference whenever it's available — it's robust against fetch failures
+ * that would mis-align position-based maps.
+ *
+ * Task #695 (2026-06-13): the extractor now writes this sidecar; the previous
+ * rewriter inferred mapping by sorted-position, which got 484/980 URLs wrong
+ * because the 5KB / 12-cap thresholds silently filtered URLs without telling
+ * the rewriter which ones.
+ */
+async function loadUrlMapSidecar(corpus: string, dateSlug: string): Promise<UrlMapSidecar | null> {
+  const sidecarPath = path.join(corpus, 'images', dateSlug, 'url-map.json');
+  try {
+    const raw = await fs.readFile(sidecarPath, 'utf-8');
+    return JSON.parse(raw) as UrlMapSidecar;
+  } catch {
+    return null;
+  }
+}
+
 /**
  * Walk the HTML the same way the Python extractor walked it: document-order
  * <img> tags, dedup by src URL, drop tracking-hint URLs. Returns the ordered
@@ -217,13 +257,31 @@ interface UrlMap {
   trailingLocalFiles: string[];    // local files with no corresponding URL slot (rare)
 }
 
-function buildUrlMap(slug: string, htmlOrderedUrls: string[], localFiles: string[]): UrlMap {
+/**
+ * Build URL→local map from the authoritative sidecar. Each row in the
+ * sidecar has either `file: "img-NN.<ext>"` (download succeeded) or
+ * `file: null` (any failure mode). Rows with files become URL→local entries;
+ * rows without files become unmappedUrls so the rewriter drops the <img>.
+ */
+function buildUrlMapFromSidecar(slug: string, sidecar: UrlMapSidecar): UrlMap {
   const urlToLocal = new Map<string, string>();
   const unmappedUrls: string[] = [];
-  // Position-based pairing: URL #i (0-based) → localFiles[i] when available.
-  // If extractor dropped some URLs as too-small or fetch-fail, the trailing
-  // URLs simply have no file — drop the <img>. We can't tell *which* URL was
-  // dropped from this side, so we trust the ordered list.
+  for (const row of sidecar.rows) {
+    if (row.file) {
+      urlToLocal.set(row.url, `/assets/images/newsletter/${slug}/${row.file}`);
+    } else {
+      unmappedUrls.push(row.url);
+    }
+  }
+  return { urlToLocal, unmappedUrls, trailingLocalFiles: [] };
+}
+
+function buildUrlMap(slug: string, htmlOrderedUrls: string[], localFiles: string[]): UrlMap {
+  // Fallback path (no sidecar): position-based pairing. URL #i (0-based) →
+  // localFiles[i] when available. Used only when the extractor didn't emit a
+  // url-map.json (e.g. pre-task-#695 extractions).
+  const urlToLocal = new Map<string, string>();
+  const unmappedUrls: string[] = [];
   for (let i = 0; i < htmlOrderedUrls.length; i++) {
     if (i < localFiles.length) {
       urlToLocal.set(htmlOrderedUrls[i], `/assets/images/newsletter/${slug}/${localFiles[i]}`);
@@ -357,15 +415,30 @@ function sanitiseAndRewrite(html: string, urlMap: UrlMap): { out: string; refs: 
     // Pull <style> blocks from <head> into the output so the visual styling
     // survives. Each <style> stays scoped via the inline-attribute pattern
     // emails already use.
+    //
+    // Task #695: emails ship with global selectors like
+    //   body { margin:0; padding:0; }
+    //   p { display:block; margin:13px 0; }
+    //   img { border:0; ... }
+    // that, when injected into the host page, override the site's typography
+    // and break the surrounding layout (and contribute to the "washed out"
+    // look Mark reported by collapsing `body` margins + leaking dark
+    // background-color from the email's `body` selector if present).
+    //
+    // Solution: rewrite every selector in every extracted <style> block so it
+    // is scoped under `.ae-newsletter-shell`. The host page never sees these
+    // rules leak. The email's own internal layout still works because every
+    // descendant of `.ae-newsletter-shell` matches.
     const styles: string[] = [];
+    const scopeRoot = '.ae-newsletter-shell';
     $('head style').each((_, el) => {
       const css = $(el).html() ?? '';
-      if (css.trim()) styles.push(`<style>${css}</style>`);
+      if (css.trim()) styles.push(`<style>${scopeCss(css, scopeRoot)}</style>`);
     });
     // Also keep style tags that live in body (rare but happens).
     $body.find('style').each((_, el) => {
       const css = $(el).html() ?? '';
-      if (css.trim()) styles.push(`<style>${css}</style>`);
+      if (css.trim()) styles.push(`<style>${scopeCss(css, scopeRoot)}</style>`);
       $(el).remove();
     });
     out = styles.join('\n') + '\n' + ($body.html() ?? '');
@@ -375,6 +448,144 @@ function sanitiseAndRewrite(html: string, urlMap: UrlMap): { out: string; refs: 
   }
 
   return { out, refs: { total, mapped, tracking, noFile } };
+}
+
+/**
+ * Scope every selector in a CSS block under `scopeRoot` so the rules can't
+ * leak out into the host page. Handles plain selectors, at-rules
+ * (`@media`, `@supports`), and bare type selectors like `body`, `p`, `img`.
+ *
+ * Approach: walk the CSS as text and prefix each selector list with the
+ * scope. We intentionally don't use a full CSS parser — the emails are
+ * machine-generated by GHL and use a narrow, predictable subset.
+ *
+ * Special cases:
+ *   - `body { ... }` becomes `.ae-newsletter-shell { ... }` (the email-level
+ *     body styling should apply to the shell, not the host body).
+ *   - `html { ... }` is dropped (the email doesn't get to style the page).
+ *   - `@media`, `@supports`, `@keyframes` at-rules: we recurse into their
+ *     inner blocks but leave the at-rule itself alone.
+ *   - `@import`, `@font-face`, `@charset`: pass through unchanged.
+ */
+function scopeCss(css: string, scopeRoot: string): string {
+  // Strip CSS comments first — they can contain braces that confuse the
+  // brace-matcher.
+  const noComments = css.replace(/\/\*[\s\S]*?\*\//g, '');
+
+  // Recursive block parser. Returns the scoped CSS.
+  function processBlock(input: string): string {
+    let out = '';
+    let i = 0;
+    const n = input.length;
+    while (i < n) {
+      // Skip whitespace.
+      while (i < n && /\s/.test(input[i])) { out += input[i]; i++; }
+      if (i >= n) break;
+
+      // At-rule?
+      if (input[i] === '@') {
+        // Read up to '{' or ';' — at-rule prelude.
+        let prelude = '';
+        while (i < n && input[i] !== '{' && input[i] !== ';') {
+          prelude += input[i]; i++;
+        }
+        if (i < n && input[i] === ';') {
+          // @import, @charset, @font-face decl — pass through.
+          out += prelude + ';';
+          i++;
+          continue;
+        }
+        if (i < n && input[i] === '{') {
+          i++; // consume {
+          // Find matching }
+          let depth = 1;
+          let body = '';
+          while (i < n && depth > 0) {
+            if (input[i] === '{') depth++;
+            else if (input[i] === '}') { depth--; if (depth === 0) break; }
+            body += input[i]; i++;
+          }
+          if (i < n) i++; // consume }
+          const name = prelude.trim().split(/\s+/, 1)[0].toLowerCase();
+          if (name === '@media' || name === '@supports' || name === '@document') {
+            // Recurse: nested rules inside need scoping too.
+            out += prelude + '{' + processBlock(body) + '}';
+          } else {
+            // @keyframes, @font-face etc — pass body through untouched.
+            out += prelude + '{' + body + '}';
+          }
+          continue;
+        }
+        out += prelude;
+        continue;
+      }
+
+      // Regular rule: selector list { declarations }.
+      let selectorList = '';
+      while (i < n && input[i] !== '{' && input[i] !== '}') {
+        selectorList += input[i]; i++;
+      }
+      if (i >= n || input[i] !== '{') {
+        // Trailing garbage — flush and bail.
+        out += selectorList;
+        if (i < n) { out += input[i]; i++; }
+        continue;
+      }
+      i++; // consume {
+      let depth = 1;
+      let body = '';
+      while (i < n && depth > 0) {
+        if (input[i] === '{') depth++;
+        else if (input[i] === '}') { depth--; if (depth === 0) break; }
+        body += input[i]; i++;
+      }
+      if (i < n) i++; // consume }
+
+      const scopedSelectors = scopeSelectorList(selectorList, scopeRoot);
+      if (scopedSelectors === null) {
+        // Selector dropped entirely (e.g. plain `html`).
+        continue;
+      }
+      out += scopedSelectors + '{' + body + '}';
+    }
+    return out;
+  }
+
+  return processBlock(noComments);
+}
+
+/**
+ * Scope a comma-separated selector list. Returns null to drop the rule
+ * (used for bare `html` which shouldn't carry over).
+ */
+function scopeSelectorList(list: string, scopeRoot: string): string | null {
+  const parts = list.split(',').map((s) => s.trim()).filter(Boolean);
+  if (parts.length === 0) return null;
+  const scoped: string[] = [];
+  for (const sel of parts) {
+    const s = scopeSelector(sel, scopeRoot);
+    if (s !== null) scoped.push(s);
+  }
+  if (scoped.length === 0) return null;
+  return scoped.join(', ');
+}
+
+function scopeSelector(sel: string, scopeRoot: string): string | null {
+  const trimmed = sel.trim();
+  if (!trimmed) return null;
+  // Drop bare `html` (and `html.foo`, `html *`) — never the host page's job.
+  if (/^html(\s|[.#:[]|$)/.test(trimmed)) return null;
+  // `body` (with or without modifiers) → rewrite to the shell. This catches
+  // `body`, `body.foo`, `body > .x`, `body.bar p`.
+  if (/^body(\s|[.#:[>+~]|$)/.test(trimmed)) {
+    return scopeRoot + trimmed.slice(4);
+  }
+  // `:root` → shell.
+  if (/^:root(\s|[.#:[>+~]|$)/.test(trimmed)) {
+    return scopeRoot + trimmed.slice(5);
+  }
+  // Otherwise: prefix with scope root.
+  return scopeRoot + ' ' + trimmed;
 }
 
 interface Manifest {
@@ -399,7 +610,7 @@ async function main() {
 
   const manifest: Manifest = {
     generatedAt: new Date().toISOString(),
-    task: '#692',
+    task: '#698',
     totalIssues: 0,
     totalHtmlBytesIn: 0,
     totalHtmlBytesOut: 0,
@@ -442,9 +653,33 @@ async function main() {
 
     const rawHtml = await fs.readFile(path.join(htmlBodiesDir, htmlFile), 'utf-8');
     const localFiles = await listLocalImages(trimmedSlug);
+
+    // Prefer the authoritative url-map.json sidecar (task #695). The corpus's
+    // image folder uses the full YYYY-MM-DD-<slug> form, but the per-issue
+    // image folder committed to astro/public uses the trimmed slug. Resolve
+    // the sidecar against the corpus's date-prefixed slug.
+    const dateSlug = `${dateMatch[1]}-${dateMatch[2]}`;
+    const sidecar = await loadUrlMapSidecar(args.corpus, dateSlug);
     const ordered = orderedUniqueSrcs(rawHtml);
-    const urlMap = buildUrlMap(trimmedSlug, ordered, localFiles);
-    const { out, refs } = sanitiseAndRewrite(rawHtml, urlMap);
+    const urlMap = sidecar
+      ? buildUrlMapFromSidecar(trimmedSlug, sidecar)
+      : buildUrlMap(trimmedSlug, ordered, localFiles);
+    const { out: rewrittenInner, refs } = sanitiseAndRewrite(rawHtml, urlMap);
+
+    // Wrap the rewritten body in a scope container so the email's `<style>`
+    // block (which gets rewritten to scope every selector under
+    // `.ae-newsletter-shell`) doesn't leak into the host page. The wrapper's
+    // own background is intentionally transparent — emails set their own
+    // background-color via inline styles on inner divs/tables, and the
+    // wrapper deliberately doesn't override them.
+    //
+    // Task #695 contrast fix (2026-06-13): the previous embed leaked the
+    // email's `body { margin:0; padding:0; }` rule into the host page, which
+    // collapsed margins on the surrounding Astro layout AND in some
+    // newsletters injected a global `body` background that washed out the
+    // email's inner cards. Scoping the email's <style> under
+    // .ae-newsletter-shell stops the leak in both directions.
+    const out = `<div class="ae-newsletter-shell">\n${rewrittenInner}\n</div>`;
 
     const stats: RewriteStats = {
       slug: trimmedSlug,
