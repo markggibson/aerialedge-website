@@ -1,8 +1,9 @@
 ---
-subject: "Prep for Easter Edge"
+subject: Prep for Easter Edge
 date: 2026-03-31
 slug: prep-for-easter-edge
 hero_image: /assets/images/newsletter/prep-for-easter-edge/img-01.jpg
+html_body: prep-for-easter-edge.html
 draft: false
 ---
 # Prep for Easter Edge

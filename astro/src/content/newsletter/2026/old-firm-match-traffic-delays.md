@@ -2,6 +2,7 @@
 subject: "Old Firm match: traffic delays"
 date: 2026-02-27
 slug: old-firm-match-traffic-delays
+html_body: old-firm-match-traffic-delays.html
 draft: false
 ---
 # Old Firm match: traffic delays

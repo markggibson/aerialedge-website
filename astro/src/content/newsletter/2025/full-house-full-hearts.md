@@ -1,8 +1,9 @@
 ---
-subject: "Full house, full hearts"
+subject: Full house, full hearts
 date: 2025-11-01
 slug: full-house-full-hearts
 hero_image: /assets/images/newsletter/full-house-full-hearts/img-01.png
+html_body: full-house-full-hearts.html
 draft: false
 ---
 # Full house, full hearts

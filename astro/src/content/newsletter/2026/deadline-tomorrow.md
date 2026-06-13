@@ -1,7 +1,8 @@
 ---
-subject: "Deadline tomorrow"
+subject: Deadline tomorrow
 date: 2026-04-21
 slug: deadline-tomorrow
+html_body: deadline-tomorrow.html
 draft: false
 ---
 # Deadline tomorrow

@@ -1,7 +1,8 @@
 ---
-subject: "Performance dates for your diary"
+subject: Performance dates for your diary
 date: 2026-03-27
 slug: performance-dates-for-your-diary
+html_body: performance-dates-for-your-diary.html
 draft: false
 ---
 # Performance dates for your diary

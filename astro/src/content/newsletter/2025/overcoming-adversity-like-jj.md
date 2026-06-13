@@ -1,8 +1,9 @@
 ---
-subject: "Overcoming adversity like JJ"
+subject: Overcoming adversity like JJ
 date: 2025-10-11
 slug: overcoming-adversity-like-jj
 hero_image: /assets/images/newsletter/overcoming-adversity-like-jj/img-01.png
+html_body: overcoming-adversity-like-jj.html
 draft: false
 ---
 # Overcoming adversity like JJ

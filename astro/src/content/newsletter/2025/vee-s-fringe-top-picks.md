@@ -3,6 +3,7 @@ subject: "Vee's Fringe top picks"
 date: 2025-08-09
 slug: vee-s-fringe-top-picks
 hero_image: /assets/images/newsletter/vee-s-fringe-top-picks/img-01.png
+html_body: vee-s-fringe-top-picks.html
 draft: false
 ---
 # Vee's Fringe top picks

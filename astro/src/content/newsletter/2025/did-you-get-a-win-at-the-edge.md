@@ -1,7 +1,8 @@
 ---
-subject: "Did you get a win at the Edge?"
+subject: Did you get a win at the Edge?
 date: 2025-11-10
 slug: did-you-get-a-win-at-the-edge
+html_body: did-you-get-a-win-at-the-edge.html
 draft: false
 ---
 # Did you get a win at the Edge?

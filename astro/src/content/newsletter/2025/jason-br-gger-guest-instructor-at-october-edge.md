@@ -1,8 +1,9 @@
 ---
-subject: "Jason Brügger guest instructor at October Edge"
+subject: Jason Brügger guest instructor at October Edge
 date: 2025-08-30
 slug: jason-br-gger-guest-instructor-at-october-edge
 hero_image: /assets/images/newsletter/jason-br-gger-guest-instructor-at-october-edge/img-01.png
+html_body: jason-br-gger-guest-instructor-at-october-edge.html
 draft: false
 ---
 # Jason Brügger guest instructor at October Edge

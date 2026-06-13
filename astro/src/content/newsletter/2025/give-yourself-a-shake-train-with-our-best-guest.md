@@ -3,6 +3,7 @@ subject: "Give yourself a shake! Train with our best guest"
 date: 2025-09-20
 slug: give-yourself-a-shake-train-with-our-best-guest
 hero_image: /assets/images/newsletter/give-yourself-a-shake-train-with-our-best-guest/img-01.png
+html_body: give-yourself-a-shake-train-with-our-best-guest.html
 draft: false
 ---
 # Give yourself a shake! Train with our best guest

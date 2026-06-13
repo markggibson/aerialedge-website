@@ -1,8 +1,9 @@
 ---
-subject: "Celebrate your circus spirit"
+subject: Celebrate your circus spirit
 date: 2026-04-11
 slug: celebrate-your-circus-spirit
 hero_image: /assets/images/newsletter/celebrate-your-circus-spirit/img-01.png
+html_body: celebrate-your-circus-spirit.html
 draft: false
 ---
 # Celebrate your circus spirit

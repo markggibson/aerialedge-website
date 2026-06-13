@@ -3,6 +3,7 @@ subject: "New classes starting September!! 👏🎪"
 date: 2025-08-23
 slug: new-classes-starting-september
 hero_image: /assets/images/newsletter/new-classes-starting-september/img-01.png
+html_body: new-classes-starting-september.html
 draft: false
 ---
 # New classes starting September!! 👏🎪

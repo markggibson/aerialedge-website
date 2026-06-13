@@ -1,8 +1,9 @@
 ---
-subject: "Tap into your secret superpower"
+subject: Tap into your secret superpower
 date: 2026-01-31
 slug: tap-into-your-secret-superpower
 hero_image: /assets/images/newsletter/tap-into-your-secret-superpower/img-01.png
+html_body: tap-into-your-secret-superpower.html
 draft: false
 ---
 # Tap into your secret superpower

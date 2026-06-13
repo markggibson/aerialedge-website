@@ -3,6 +3,7 @@ subject: "8 reasons you can't afford to miss this"
 date: 2026-03-14
 slug: 8-reasons-you-can-t-afford-to-miss-this
 hero_image: /assets/images/newsletter/8-reasons-you-can-t-afford-to-miss-this/img-01.png
+html_body: 8-reasons-you-can-t-afford-to-miss-this.html
 draft: false
 ---
 # 8 reasons you can't afford to miss this

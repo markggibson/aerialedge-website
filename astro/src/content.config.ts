@@ -308,6 +308,15 @@ const newsletter = defineCollection({
     preview_excerpt: z.preprocess(emptyToUndef, z.string().optional()),
     // Draft gate — same shape as posts. Drafts excluded from index + RSS.
     draft: z.preprocess(emptyToUndef, z.boolean().optional()),
+    // Optional sanitised-HTML sibling for archive fidelity (Wynn task #692,
+    // 2026-06-13). When set, the value is a filename adjacent to the .md
+    // entry inside src/content/newsletter/<year>/ (eg. "four-fly-tracks.html").
+    // The detail page renders that HTML via `set:html` to preserve the
+    // original email chrome (Poppins typography, gold accents, CTA buttons,
+    // hero styling) that the markdown extraction stripped. The markdown body
+    // remains the SEO + RSS source — this HTML is purely for visual
+    // rendering of the detail page.
+    html_body: z.preprocess(emptyToUndef, z.string().optional()),
   }),
 });
 

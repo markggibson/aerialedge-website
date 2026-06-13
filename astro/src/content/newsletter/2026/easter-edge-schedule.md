@@ -1,8 +1,9 @@
 ---
-subject: "Easter Edge schedule"
+subject: Easter Edge schedule
 date: 2026-02-26
 slug: easter-edge-schedule
 hero_image: /assets/images/newsletter/easter-edge-schedule/img-01.png
+html_body: easter-edge-schedule.html
 draft: false
 ---
 # Easter Edge schedule

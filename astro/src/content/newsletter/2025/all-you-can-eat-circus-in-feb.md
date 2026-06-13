@@ -1,8 +1,9 @@
 ---
-subject: "All you can eat circus in Feb"
+subject: All you can eat circus in Feb
 date: 2025-12-20
 slug: all-you-can-eat-circus-in-feb
 hero_image: /assets/images/newsletter/all-you-can-eat-circus-in-feb/img-01.png
+html_body: all-you-can-eat-circus-in-feb.html
 draft: false
 ---
 # All you can eat circus in Feb

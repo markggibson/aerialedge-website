@@ -1,8 +1,9 @@
 ---
-subject: "Tippy hoop in October Edge"
+subject: Tippy hoop in October Edge
 date: 2025-09-13
 slug: tippy-hoop-in-october-edge
 hero_image: /assets/images/newsletter/tippy-hoop-in-october-edge/img-01.png
+html_body: tippy-hoop-in-october-edge.html
 draft: false
 ---
 # Tippy hoop in October Edge

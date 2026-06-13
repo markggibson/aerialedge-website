@@ -1,8 +1,9 @@
 ---
-subject: "Join us for circus lab"
+subject: Join us for circus lab
 date: 2025-09-27
 slug: join-us-for-circus-lab
 hero_image: /assets/images/newsletter/join-us-for-circus-lab/img-01.png
+html_body: join-us-for-circus-lab.html
 draft: false
 ---
 # Join us for circus lab

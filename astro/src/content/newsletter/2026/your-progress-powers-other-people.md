@@ -1,8 +1,9 @@
 ---
-subject: "Your progress powers other people"
+subject: Your progress powers other people
 date: 2026-04-06
 slug: your-progress-powers-other-people
 hero_image: /assets/images/newsletter/your-progress-powers-other-people/img-01.png
+html_body: your-progress-powers-other-people.html
 draft: false
 ---
 # Your progress powers other people

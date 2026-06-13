@@ -1,7 +1,8 @@
 ---
-subject: "Layer up for classes please"
+subject: Layer up for classes please
 date: 2025-11-14
 slug: layer-up-for-classes-please
+html_body: layer-up-for-classes-please.html
 draft: false
 ---
 # Layer up for classes please

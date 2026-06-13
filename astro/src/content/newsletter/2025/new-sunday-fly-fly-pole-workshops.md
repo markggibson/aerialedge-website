@@ -3,6 +3,7 @@ subject: "NEW! Sunday fly + fly pole workshops"
 date: 2025-11-08
 slug: new-sunday-fly-fly-pole-workshops
 hero_image: /assets/images/newsletter/new-sunday-fly-fly-pole-workshops/img-01.png
+html_body: new-sunday-fly-fly-pole-workshops.html
 draft: false
 ---
 # NEW! Sunday fly + fly pole workshops

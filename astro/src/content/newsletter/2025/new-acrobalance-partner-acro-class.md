@@ -1,8 +1,9 @@
 ---
-subject: "New acrobalance/partner acro class"
+subject: New acrobalance/partner acro class
 date: 2025-07-26
 slug: new-acrobalance-partner-acro-class
 hero_image: /assets/images/newsletter/new-acrobalance-partner-acro-class/img-01.png
+html_body: new-acrobalance-partner-acro-class.html
 draft: false
 ---
 # New acrobalance/partner acro class

@@ -3,6 +3,7 @@ subject: "Get in on the challenge! Register today"
 date: 2026-04-04
 slug: get-in-on-the-challenge-register-today
 hero_image: /assets/images/newsletter/get-in-on-the-challenge-register-today/img-01.png
+html_body: get-in-on-the-challenge-register-today.html
 draft: false
 ---
 # Get in on the challenge! Register today

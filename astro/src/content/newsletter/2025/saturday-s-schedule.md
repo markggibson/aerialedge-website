@@ -2,6 +2,7 @@
 subject: "Saturday's schedule"
 date: 2025-10-22
 slug: saturday-s-schedule
+html_body: saturday-s-schedule.html
 draft: false
 ---
 # Saturday's schedule

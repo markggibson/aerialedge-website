@@ -1,8 +1,9 @@
 ---
-subject: "Unmissable new take on a classic"
+subject: Unmissable new take on a classic
 date: 2025-11-22
 slug: unmissable-new-take-on-a-classic
 hero_image: /assets/images/newsletter/unmissable-new-take-on-a-classic/img-01.png
+html_body: unmissable-new-take-on-a-classic.html
 draft: false
 ---
 # Unmissable new take on a classic
