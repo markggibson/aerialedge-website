@@ -1,0 +1,57 @@
+{
+  "slug": "2025-10-18-30min-to-grab-your-tracks-at-october-edge",
+  "min_image_bytes": 0,
+  "max_images_per_email": 999,
+  "tracking_pixel_bytes": 100,
+  "max_image_bytes": 2097152,
+  "rows": [
+    {
+      "pos": null,
+      "url": "https://email.contact.aerialedge.co.uk/o/eJx0kstuwjgYhZ8m2RU5jkmchRfhEqaUTtsA4bKJHNsED4ntOoZQnn4ErUYjTWd77PPr09HHSsnJ-4ZOq5drVW8nuXUZjnp89TlhHIQM-Fy3VCrCtHKUuQEVVtJG8FoMmB6cTz_vpe6VsN1RmtJ9GUEazaiT-jvnviBBHIEYRyhAvmipbMpWdB2txR1g-3KcF3oBv6bP-3R3hbNj_9fPr8cxRltDZa3-ld1rET6EcRSHEQCsOiQHehA4SQDyhbpIq1UrlCPGan5mdxT_SHAQhChgGFUUhQFOMEUxA0kMYFwlYUV9SSCAwwAEOAggCNCgqmiChojCIQujijEPgf9domHlN6BUTlhFG7KGWcdnxWkbeDDLPDgq0Pm6qKIE7ecAqmw8a67oXbdvkavB6x-TfrrIltddu89D9z5eIZO3XH_AbH2je7Y2MN-yzfaE7W1XiQ_bLfnr1eDp4diFEaiZNnWe3kbhIv087Tw4Up3ZpWqJxpdVner29fY2Vn00LuiHBzPjwSxfjQ4oNZsi9eDoBgrXY7t0csknwshJ9zZNPJip_LPI4PDZ8T8DWEnDUBf3sxGe82YcGRWsvkyK801WZ1PN1Hw9XO6mnRdO_EY_7MqSYGZCgely1rhDuFbprfBb4Y6aE2qkr62spSLVuTk9PebzjdUXyYUljaCcaaUEc9r6lrTUnjwE_jN8p8-WCfJoP8nu8tRrexLWd3cNy18BHGG6LX813xHhyn-UuxD4dwAAAP__pa8Q1Q",
+      "file": null,
+      "size": 0,
+      "alt": "",
+      "status": "tracking-hint"
+    },
+    {
+      "pos": 1,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bc9910c3dedc301712043a.png",
+      "file": "img-01.png",
+      "size": 57691,
+      "alt": "Logo for Aerial Edge, Glasgow's Circus School",
+      "status": "ok"
+    },
+    {
+      "pos": 2,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68e955ec35e869af4f27d87e.gif",
+      "file": null,
+      "size": 5943720,
+      "alt": "",
+      "status": "too-large"
+    },
+    {
+      "pos": 3,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68d2a611fd1a28211095d771.jpeg",
+      "file": null,
+      "size": 9290936,
+      "alt": "",
+      "status": "too-large"
+    },
+    {
+      "pos": 4,
+      "url": "https://i.vimeocdn.com/video/1504244240-1346bdfc9f3a464f6b4c472dc97ba11eb225b93564533d93e99bba1c91ea4e67-d_640.jpg",
+      "file": "img-04.jpg",
+      "size": 19936,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 5,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd9c308a2a16968826ffd.png",
+      "file": "img-05.png",
+      "size": 780243,
+      "alt": "",
+      "status": "ok"
+    }
+  ]
+}

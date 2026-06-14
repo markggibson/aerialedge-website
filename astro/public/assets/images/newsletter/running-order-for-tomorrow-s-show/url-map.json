@@ -1,0 +1,33 @@
+{
+  "slug": "2025-10-24-running-order-for-tomorrow-s-show",
+  "min_image_bytes": 0,
+  "max_images_per_email": 999,
+  "tracking_pixel_bytes": 100,
+  "max_image_bytes": 2097152,
+  "rows": [
+    {
+      "pos": null,
+      "url": "https://email.contact.aerialedge.co.uk/o/eJx0ksuO4jgYhZ-G7ArFdq4LL6CL0D0NNLeEKjaRYzuJK4mdsg0JPP0IujUaaWq2__GxPh19NBcMb09kUfwci-rtda9tEgVDNDoMU-Yi6jpMdURITJW0hNop4VqQlrOKT6maXpo_ea4GybWpRZ_bW89xqyixQv2-M4djEAYAgRj4rsM7Itq848aQij8AVm6tP73jtjhv6nFcDd9LGfx59fyMkq4nopL_uj1qQVQWsR8iCgjyEKewoAV0feZweRVayY5Li3ut2IU-UJwa-yguAOOII4hY6BcwCH3Pi0AYQujDIHYEhi70gQs94IMYuFNQEhYgj5DSjTxI4cRz_3eJlua_AYW0XEvS4hQmhi2z5g1MYLLY38NkOA6G7TwZr765SdROYDJv2DY1u4Tf14ervzPBXZjt9dIE83Vl_woPiUbZkN7pmOzpx-fcDE0_a1JdpmO8X2S31bt3ycCRoOZWxueFmcPNJvNupx86ambFBM6P5xNaidG4fjGByXHzPWn9XYS21SP79is8_6hPPlmuw59ZXc5TyOMWmuTXwc5XPfnkMmrth6mHZXQaj-8pzdDsdT-YatO-kSAh8HZDH-5p7ZkV4Nv9PejeJ-jVadXTrCQGyx7xiByWrS1RKmf3zOm4rRXDpBeO0qISEheXtnl5Tuf0Wl0F4xq3nDCqpOTUKu1o3BHdTDz3P6MbddGU42f7RZjry6B0w7VjMVVd_qXaFnOb_-OUfbiaf0l6xfDvAAAA___rkxA2",
+      "file": null,
+      "size": 0,
+      "alt": "",
+      "status": "tracking-hint"
+    },
+    {
+      "pos": 1,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/685d10135cecaedde5d86d40.png",
+      "file": "img-01.png",
+      "size": 23122,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 2,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68fb68a745057e19f59f9a1c.png",
+      "file": "img-02.png",
+      "size": 994797,
+      "alt": "",
+      "status": "ok"
+    }
+  ]
+}

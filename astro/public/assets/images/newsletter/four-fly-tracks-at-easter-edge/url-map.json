@@ -1,0 +1,209 @@
+{
+  "slug": "2026-02-21-four-fly-tracks-at-easter-edge",
+  "min_image_bytes": 0,
+  "max_images_per_email": 999,
+  "tracking_pixel_bytes": 100,
+  "max_image_bytes": 2097152,
+  "rows": [
+    {
+      "pos": null,
+      "url": "https://email.contact.aerialedge.co.uk/o/eJx0klGPqjgcxT8NvI2hBQt96MN1FPR6HYiKo_NCSlu0C6VYio5--o3OZLPJzr7-23Pyy8mPFZKT7J3OyuVnedxP18bGEbpGny4njHs-81yuFZUtYbq1lNkRFUbSRvCjGDE9Gurv90JfW2H6k-wKe-sEaTSjVuqvO3cFAWEIUAhDhF2hqGwKJfqeHsUDAK7_LPGqyvY4-TWcvUm2WervX88yRlVH5bH91-0RQxj7AGFBKat4iJlfYQ8HY-CK9iKNbpVoLemM5gN7oLgnMkZVIJiHMYwQRVWJkUfHVRCNRemLkCNXEuhB5EEIAAAY4tEYjbEfYoBLnzMQASfw_neJhhVfgLK1wrS0ITmMe57s6j2Ihtc3_pF_7EzO0uQ0z87Vx32bODCeq0915qvN-a9uh26ndGaWp4mND9XbTq3m8vcZR4t7MJ86MEbvv0U-rFMHxtnbLQD7EF_xbKFs8yhqp5OFOE73e8XzwH_N2HjmwLjbL7qDA-PodIvK7SHapunkoB04uVcB8tYhA126jaeNAJv6T8DKbHuJ0iE430TPbKa9VVl1MB9kp15vOvNyyvlVXGKZ1EHo9-t67d3TMFlbKrUDY8y2YbUF6socf-o2-ulXjEHS-SKim6SxlZ-3v-47Vwl70pzQTrrayKNsSTk09ctzQLcz-iK5MKQRlDPdtoJZbVxDFDW1E3j_mb7Xg2GCPNMvsr-8XLWphXEtYVoVPwpuibDFP2bZh7HFj6QXAv8OAAD__2JgEMY",
+      "file": null,
+      "size": 0,
+      "alt": "",
+      "status": "tracking-hint"
+    },
+    {
+      "pos": 1,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bc9910c3dedc301712043a.png",
+      "file": "img-01.png",
+      "size": 57691,
+      "alt": "Logo for Aerial Edge, Glasgow's Circus School",
+      "status": "ok"
+    },
+    {
+      "pos": 2,
+      "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/6998ed29a2a2c0402b79ce6e.png",
+      "file": "img-02.png",
+      "size": 662042,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 3,
+      "url": "https://img.youtube.com/vi/bavdTCmRvWM/hqdefault.jpg",
+      "file": "img-03.jpg",
+      "size": 9785,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 4,
+      "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/69973758df9bdfc27e079fd1.png",
+      "file": "img-04.png",
+      "size": 29119,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 5,
+      "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/698618d403c9d56efcd4cec1.png",
+      "file": "img-05.png",
+      "size": 22103,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 6,
+      "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/6998e6efdf9bdfd14372deea.gif",
+      "file": null,
+      "size": 7512244,
+      "alt": "",
+      "status": "too-large"
+    },
+    {
+      "pos": 7,
+      "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/67cb5ff9456f01a4bd3db77c.gif",
+      "file": null,
+      "size": 8737869,
+      "alt": "",
+      "status": "too-large"
+    },
+    {
+      "pos": 8,
+      "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/6998d02bdf9bdf19c76e8848.png",
+      "file": "img-08.png",
+      "size": 24343,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 9,
+      "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/6906479d3081bc11843cfaf6.gif",
+      "file": null,
+      "size": 3701463,
+      "alt": "",
+      "status": "too-large"
+    },
+    {
+      "pos": 10,
+      "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/699073d724813cb91f7480d5.png",
+      "file": "img-10.png",
+      "size": 28022,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 11,
+      "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/6920db89393741777b7aafc4.jpeg",
+      "file": "img-11.jpg",
+      "size": 270976,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 12,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bccfe94be04f3fc8521f1d.png",
+      "file": "img-12.png",
+      "size": 8872,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 13,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd068b36c0d1e8e9d9fd3.jpeg",
+      "file": "img-13.jpg",
+      "size": 759461,
+      "alt": "Aerial Edge Gift Vouchers come in various values, tap the image to buy one",
+      "status": "ok"
+    },
+    {
+      "pos": 14,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
+      "file": null,
+      "size": 2397485,
+      "alt": "Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at \u00a315 or a whole term at \u00a3132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus",
+      "status": "too-large"
+    },
+    {
+      "pos": 15,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd050d0ee367b7e86e7f0.png",
+      "file": "img-15.png",
+      "size": 694972,
+      "alt": "Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours",
+      "status": "ok"
+    },
+    {
+      "pos": 16,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd471c3dedcfc5f129cf5.png",
+      "file": "img-16.png",
+      "size": 8279,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 17,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd4b980910829cbaf8c1f.png",
+      "file": "img-17.png",
+      "size": 240558,
+      "alt": "Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training",
+      "status": "ok"
+    },
+    {
+      "pos": 18,
+      "url": "https://storage.googleapis.com/preview-production-assets/email/img/hl_default_img/social/facebook_circle_grey.png",
+      "file": "img-18.png",
+      "size": 1046,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 19,
+      "url": "https://storage.googleapis.com/preview-production-assets/email/img/hl_default_img/social/instagram_circle_grey.png",
+      "file": "img-19.png",
+      "size": 1624,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 20,
+      "url": "https://storage.googleapis.com/preview-production-assets/email/img/hl_default_img/social/tiktok_circle_grey.png",
+      "file": "img-20.png",
+      "size": 714,
+      "alt": "Aerial Edge TikTok",
+      "status": "ok"
+    },
+    {
+      "pos": 21,
+      "url": "https://storage.googleapis.com/preview-production-assets/email/img/hl_default_img/social/youtube_circle_grey.png",
+      "file": "img-21.png",
+      "size": 1170,
+      "alt": "Aerial Edge YouTube channel",
+      "status": "ok"
+    },
+    {
+      "pos": 22,
+      "url": "https://storage.googleapis.com/preview-production-assets/email/img/hl_default_img/social/website_circle_grey.png",
+      "file": "img-22.png",
+      "size": 1838,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 23,
+      "url": "https://i.vimeocdn.com/video/1504244240-1346bdfc9f3a464f6b4c472dc97ba11eb225b93564533d93e99bba1c91ea4e67-d_640.jpg",
+      "file": "img-23.jpg",
+      "size": 19936,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 24,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd9c308a2a16968826ffd.png",
+      "file": "img-24.png",
+      "size": 780243,
+      "alt": "",
+      "status": "ok"
+    }
+  ]
+}

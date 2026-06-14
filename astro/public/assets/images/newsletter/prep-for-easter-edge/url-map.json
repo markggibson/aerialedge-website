@@ -1,0 +1,33 @@
+{
+  "slug": "2026-03-31-prep-for-easter-edge",
+  "min_image_bytes": 0,
+  "max_images_per_email": 999,
+  "tracking_pixel_bytes": 100,
+  "max_image_bytes": 2097152,
+  "rows": [
+    {
+      "pos": null,
+      "url": "https://email.contact.aerialedge.co.uk/o/eJx0kstuuzgchZ8Gdo3AdgwsvAil5J8m6aRpbs0GGdsQF7CJMbk9_ShpNRppOttjn58-HX0sk5wstvQln17ycpcsjU1DfA4vLieMe5B5LtcNlYowrSxldkCFkbQWvBQDpgd99fOe6bMSpjvINrPXVpBaM2ql_s65K4gfBCgKh36EXNFQWWeN6DpaijtAjZ5Rl15vy-181lwWL-flvP359TjGaNNSWap_ZfcajlguMBS-FxYB9AVjgHkIYleokzRaNUJZ0hrNe3ZHcQ-kwCznIMCI-pwWHgQ8CigqeMERwwJFriTAA9iD0PcjgCEaRFGQB9ADYBhwxAB2kPe_S9Qs-waUygqjaE3WIO34eFPt_ChmDoi75BiWNLle8f7UHPPIAalGyaXY8m4OPaq6S3tapHb7Va_WeSkWDkiZ6SsHxKtteNjA2bFIHRDvz5O-QOspQq8pxbFaDdVpN4r8pJ8d_8jRa7Ivpt7n7muzVKL7awzL110_egalA9LjYdX--aKX_qO6vXyk7_Cmg_lqM7zBUTGffaJrruZhjLxPM4mXus_33vthvpeBA9LWAfFSCbUrE3Cu5PNk7ID4bTPB2j-PC71RSzvzdyHE5t0B6fQNhw5M3Fo_HEsjf9xCEdKPcW0LuFaj28ZthD1oTmgrXW1kKRXJ-7p6eozotkafJBeG1IJyppUSzGrjGtJQUznI-8_8ne4NE-TRfpLd6emsTSWMa-8yZr8CWMJ0k_3qvyXCZv-IdyLg7wAAAP__uXgSlg",
+      "file": null,
+      "size": 0,
+      "alt": "",
+      "status": "tracking-hint"
+    },
+    {
+      "pos": 1,
+      "url": "https://i.vimeocdn.com/video/1504244240-1346bdfc9f3a464f6b4c472dc97ba11eb225b93564533d93e99bba1c91ea4e67-d_640.jpg",
+      "file": "img-01.jpg",
+      "size": 19936,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 2,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd9c308a2a16968826ffd.png",
+      "file": "img-02.png",
+      "size": 780243,
+      "alt": "",
+      "status": "ok"
+    }
+  ]
+}

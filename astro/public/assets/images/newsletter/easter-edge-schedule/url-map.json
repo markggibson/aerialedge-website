@@ -1,0 +1,33 @@
+{
+  "slug": "2026-02-26-easter-edge-schedule",
+  "min_image_bytes": 0,
+  "max_images_per_email": 999,
+  "tracking_pixel_bytes": 100,
+  "max_image_bytes": 2097152,
+  "rows": [
+    {
+      "pos": null,
+      "url": "https://email.contact.aerialedge.co.uk/o/eJx0kstuozAYhZ8Gdo3AEIwXXhCFkDTTJs217QYZ2wSHi8F2aOjTj5JWo5Gmsz32-fXp6KOpYHh9JHG2vGan1-lGmVkYfIRXm2HKHI86NpM1EQ2msjGEmhHhSpCKsxMfUTm6lN_vqfxouNKFaFMztBxXkhIj5FfObI5dCIHr-h5ANq-JqNKaa01O_AaQlEdHiLnYdYV6G7q6z93--9f9GCV1S8Sp-Su71QKEKEKEojz0UO7zMYOelxHX5k0vlGxq3hjcKsku9IZiF5jTgMMwd0MCs7HPOfQ9J8yoT2EAfRIQW2DggMABIHC9ceijEcpoCGEe5gyGTjhGlu_8d4mKpl-AojFcNaTCezDTLDmUr64FJnQ96HdtgYk8r9bPzlawSzdveRzk-9WnipYvh-E4C5AFJtf1tF-4UNebIuxCVI0BZ817Um2TKBt282SrlvOygW105mWhwW6xAEc69CuWDLSNu1NNorCfFbEFJmck6sIV-tHtLDAJsu55Hey0OO_WsQ94PUw3e1FbYKI8kPXQCwxSMdXdeR30Fy85RvzpfRWxynDobg9ooX9dXo5kg56ehSkq-KY3TrV6jJfLU3yNwPHFfS2UBWba8qZ2Je92zZCbtB4PyTapTO7tm-jzYNfcFJJh0gpbKnESDc4uVflwn89ulewF4wpXnDAqm4ZTI5WtcE1UafnOP8NreVGU43v7Qej-4UOqkivb3DRMfwQwmMo6_dF8g7lJ_yjXY_A7AAD__44gEvs",
+      "file": null,
+      "size": 0,
+      "alt": "",
+      "status": "tracking-hint"
+    },
+    {
+      "pos": 1,
+      "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/685d10135cecaedde5d86d40.png",
+      "file": "img-01.png",
+      "size": 23122,
+      "alt": "",
+      "status": "ok"
+    },
+    {
+      "pos": 2,
+      "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/689fa3a0bb58f5e4b877bdbc.jpeg",
+      "file": "img-02.jpg",
+      "size": 196669,
+      "alt": "",
+      "status": "ok"
+    }
+  ]
+}
