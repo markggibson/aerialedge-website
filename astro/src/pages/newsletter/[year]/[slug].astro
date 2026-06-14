@@ -55,6 +55,13 @@ if (entry.data.html_body) {
   );
   try {
     htmlBody = await fs.readFile(htmlPath, 'utf-8');
+    // Prepend Astro's BASE_URL to root-relative asset paths so images resolve
+    // under /preview/ (staging) and / (production) without the rewriter
+    // having to know which environment it's targeting.
+    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+    if (base) {
+      htmlBody = htmlBody.replace(/(src|href)="\/assets\//g, `$1="${base}/assets/`);
+    }
   } catch (e) {
     // Fall back to markdown render if the sibling is missing — surface a
     // build warning so we notice.
