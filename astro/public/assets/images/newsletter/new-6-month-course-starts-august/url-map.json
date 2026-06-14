@@ -3,7 +3,7 @@
   "min_image_bytes": 0,
   "max_images_per_email": 999,
   "tracking_pixel_bytes": 100,
-  "max_image_bytes": 2097152,
+  "max_image_bytes": 10485760,
   "rows": [
     {
       "pos": null,
@@ -24,10 +24,10 @@
     {
       "pos": 2,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/858d5740-e5f2-468c-a84e-03ff327cab24.jpg",
-      "file": null,
+      "file": "img-02.jpg",
       "size": 3747671,
       "alt": "WHY SMALL IS VALUABLE",
-      "status": "too-large"
+      "status": "ok"
     },
     {
       "pos": 3,
@@ -112,10 +112,10 @@
     {
       "pos": 13,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/36d8e8a5-7a36-4d06-bb88-449485668b9f.jpg",
-      "file": null,
+      "file": "img-13.jpg",
       "size": 5217006,
       "alt": "GOVAN WAS GREAT",
-      "status": "too-large"
+      "status": "ok"
     },
     {
       "pos": 14,
@@ -160,10 +160,10 @@
     {
       "pos": 19,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
-      "file": null,
+      "file": "img-19.png",
       "size": 2397485,
       "alt": "Aerial Edge Pay It Forward",
-      "status": "too-large"
+      "status": "ok"
     },
     {
       "pos": 20,

@@ -3,7 +3,7 @@
   "min_image_bytes": 0,
   "max_images_per_email": 999,
   "tracking_pixel_bytes": 100,
-  "max_image_bytes": 2097152,
+  "max_image_bytes": 10485760,
   "rows": [
     {
       "pos": null,
@@ -24,10 +24,10 @@
     {
       "pos": 2,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/0cf927e3-70d0-491c-b3d8-f6fac72184a5.jpg",
-      "file": null,
+      "file": "img-02.jpg",
       "size": 2822851,
       "alt": "YOU DON\u2019T OUTGROW CIRCUS",
-      "status": "too-large"
+      "status": "ok"
     },
     {
       "pos": 3,
@@ -56,18 +56,18 @@
     {
       "pos": 6,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/77804358-dcc8-4c3c-8b5b-9b7878fd7b6e.gif",
-      "file": null,
+      "file": "img-06.gif",
       "size": 3488332,
       "alt": "A LOT CAN HAPPEN IN AN HOUR",
-      "status": "too-large"
+      "status": "ok"
     },
     {
       "pos": 7,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/9f192531-8529-432f-8ef7-793a2b9d0c72.gif",
-      "file": null,
+      "file": "img-07.gif",
       "size": 4326107,
       "alt": "WHO'S  HOOP",
-      "status": "too-large"
+      "status": "ok"
     },
     {
       "pos": 8,
@@ -80,10 +80,10 @@
     {
       "pos": 9,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/534737c0-9d6a-406a-90d0-5b3567394d85.gif",
-      "file": null,
+      "file": "img-09.gif",
       "size": 6141336,
       "alt": "WHISPERS OF GOLD",
-      "status": "too-large"
+      "status": "ok"
     },
     {
       "pos": 10,
@@ -128,10 +128,10 @@
     {
       "pos": 15,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
-      "file": null,
+      "file": "img-15.png",
       "size": 2397485,
       "alt": "Aerial Edge Pay It Forward",
-      "status": "too-large"
+      "status": "ok"
     },
     {
       "pos": 16,

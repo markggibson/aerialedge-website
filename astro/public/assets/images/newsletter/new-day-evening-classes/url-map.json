@@ -3,7 +3,7 @@
   "min_image_bytes": 0,
   "max_images_per_email": 999,
   "tracking_pixel_bytes": 100,
-  "max_image_bytes": 2097152,
+  "max_image_bytes": 10485760,
   "rows": [
     {
       "pos": null,
@@ -120,10 +120,10 @@
     {
       "pos": 14,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/6a19bdf50a5d9d4b8f3f403f.gif",
-      "file": null,
+      "file": "img-14.gif",
       "size": 4102445,
       "alt": "",
-      "status": "too-large"
+      "status": "ok"
     },
     {
       "pos": 15,
@@ -136,18 +136,18 @@
     {
       "pos": 16,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/6a10798c3c3aed7c63847a61.gif",
-      "file": null,
+      "file": "img-16.gif",
       "size": 3488332,
       "alt": "",
-      "status": "too-large"
+      "status": "ok"
     },
     {
       "pos": 17,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/68ea35a52c80b5afcedfcd11.gif",
-      "file": null,
+      "file": "img-17.gif",
       "size": 5702875,
       "alt": "",
-      "status": "too-large"
+      "status": "ok"
     },
     {
       "pos": 18,
@@ -160,10 +160,10 @@
     {
       "pos": 19,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/6a1ad175d53fc25488c131ec.gif",
-      "file": null,
+      "file": "img-19.gif",
       "size": 6277083,
       "alt": "",
-      "status": "too-large"
+      "status": "ok"
     },
     {
       "pos": 20,
@@ -192,10 +192,10 @@
     {
       "pos": 23,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/6a1adbe6ff82912d65a7ba68.png",
-      "file": null,
+      "file": "img-23.png",
       "size": 2556904,
       "alt": "",
-      "status": "too-large"
+      "status": "ok"
     },
     {
       "pos": 24,
@@ -208,10 +208,10 @@
     {
       "pos": 25,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/679d47ad387caa93e4cbe598.gif",
-      "file": null,
+      "file": "img-25.gif",
       "size": 4800662,
       "alt": "",
-      "status": "too-large"
+      "status": "ok"
     },
     {
       "pos": 26,
@@ -232,10 +232,10 @@
     {
       "pos": 28,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
-      "file": null,
+      "file": "img-28.png",
       "size": 2397485,
       "alt": "Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at \u00a315 or a whole term at \u00a3132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus",
-      "status": "too-large"
+      "status": "ok"
     },
     {
       "pos": 29,
