@@ -122,7 +122,31 @@ const older = idx < all.length - 1 ? all[idx + 1] : null;
               <p class="info"><em>{entry.data.preheader}</em></p>
             )}
             {htmlBody ? (
-              <div class="newsletter-html-body" style="background:#ffffff; padding:0; max-width: 720px; margin: 0 auto;" set:html={htmlBody} />
+              <>
+                <style is:global>
+                  /* Neutralise Foundation framework defaults that leak into
+                     embedded email HTML. Email tables expect zero-default
+                     borders/margins so they can stack tightly into one
+                     contiguous layout; Foundation's defaults turn each table
+                     into a bordered card with bottom margin, producing the
+                     gaps-between-cards look. Inline bgcolor + style attrs
+                     still carry the visual treatment. (task post-#697 fix.) */
+                  .newsletter-html-body table,
+                  .newsletter-html-body tr,
+                  .newsletter-html-body td,
+                  .newsletter-html-body th {
+                    border: 0 !important;
+                    margin: 0 !important;
+                    background: none;
+                  }
+                  .newsletter-html-body table { border-collapse: collapse; border-spacing: 0; }
+                  .newsletter-html-body td, .newsletter-html-body th { padding: 0; }
+                  .newsletter-html-body p { margin: 0 0 1em 0; color: inherit; }
+                  .newsletter-html-body a { color: inherit; }
+                  .newsletter-html-body img { max-width: 100%; height: auto; }
+                </style>
+                <div class="newsletter-html-body" style="background:#ffffff; padding:0; max-width: 720px; margin: 0 auto;" set:html={htmlBody} />
+              </>
             ) : (
               <Content />
             )}
