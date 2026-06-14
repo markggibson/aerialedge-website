@@ -62,13 +62,57 @@ export function groupByYear(
 }
 
 /**
- * Excerpt fallback — first ~30 words of the rendered body, stripped of
- * markdown syntax. Used by the index page when `preview_excerpt` is unset.
+ * Excerpt fallback — first ~30 words of real body content, stripped of
+ * markdown syntax AND the Rochen extractor's audit-trail preamble. Used
+ * by the index page when `preview_excerpt` is unset.
+ *
+ * The extractor (`Team/tools/rochen-mail/`) writes a fixed preamble at the
+ * top of every issue body:
+ *
+ *   # <subject>
+ *
+ *   - **Sent:** YYYY-MM-DD
+ *   - **From:** info@contact.aerialedge.co.uk
+ *   - **Folder:** INBOX(.Archive)?
+ *   - **Images saved:** N
+ *   - **Images dir:** `/assets/images/newsletter/<slug>/`
+ *
+ *   ---
+ *
+ *   PLUS ...                         (optional preheader-ish line)
+ *   [View this email in browser](…)  (optional)
+ *   [image: …]                       (optional placeholders)
+ *
+ * Without filtering, that block was being rendered as each card's excerpt
+ * (Mark #707, 2026-06-14). Lines matching any of the patterns below are
+ * dropped BEFORE word-counting, so the excerpt starts at the first line
+ * of actual newsletter copy.
  */
 export function deriveExcerpt(body: string, wordCount = 30): string {
-  const stripped = body
+  const cleaned = body
     // Drop frontmatter if present (defensive — body shouldn't contain it).
     .replace(/^---[\s\S]*?---\n/, '')
+    // Drop a leading H1 — the extractor writes the subject as the first H1
+    // of every body, which would otherwise duplicate the card title.
+    .replace(/^\s*#\s+[^\n]*\n/, '')
+    // Drop the metadata bullet list lines.
+    .split('\n')
+    .filter((line) => {
+      const t = line.trim();
+      if (t === '') return true; // keep blank lines for now; collapsed later
+      // Metadata bullets: "- **Sent:** ...", "- **From:** ...", etc.
+      if (/^[-*+]?\s*\*\*(Sent|From|Folder|Images saved|Images dir):\*\*/i.test(t)) return false;
+      // Standalone "---" horizontal rule.
+      if (/^-{3,}$/.test(t)) return false;
+      // "PLUS ..." preheader-ish line that often sits between the rule and content.
+      if (/^PLUS\b/.test(t)) return false;
+      // "View this email in browser" — both linked and plain forms.
+      if (/^\[?View this email in browser\b/i.test(t)) return false;
+      // "[image: ...]" placeholder lines (alt text leaks from the extractor).
+      if (/^\[image:[^\]]*\]\s*$/i.test(t)) return false;
+      return true;
+    })
+    .join('\n')
     // Drop image syntax.
     .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
     // Drop link syntax, keep text.
@@ -82,7 +126,7 @@ export function deriveExcerpt(body: string, wordCount = 30): string {
     // Collapse whitespace.
     .replace(/\s+/g, ' ')
     .trim();
-  const words = stripped.split(' ').filter(Boolean);
-  if (words.length <= wordCount) return stripped;
+  const words = cleaned.split(' ').filter(Boolean);
+  if (words.length <= wordCount) return cleaned;
   return words.slice(0, wordCount).join(' ') + '…';
 }

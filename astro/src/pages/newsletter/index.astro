@@ -57,25 +57,21 @@ function formatDate(d: Date | string): string {
               return (
                 <>
                   <div class="big mod modBlogPost no_bg">
-                    {entry.data.hero_image && (
-                      <div class="images">
-                        <div class="image">
-                          <img width="800" height="533" alt="" src={entry.data.hero_image} />
-                        </div>
-                      </div>
-                    )}
+                    {/* Hero image intentionally omitted on the index — the
+                        first email image is unreliable as a card thumbnail
+                        (often the AE logo or a chrome graphic). The detail
+                        page renders the full email with its own hero. */}
                     <div class="content">
                       <p class="info">
                         <span>{formatDate(entry.data.date)}</span>
                       </p>
                       <h3><a href={newsletterHref(entry)}>{entry.data.subject}</a></h3>
                       {excerpt && <p>{excerpt}</p>}
-                      <div class="spacing"></div>
                       <a class="button small boxed yellow" href={newsletterHref(entry)}>Read newsletter</a>
                     </div>
                   </div>
                   <hr />
-                  <div class="two spacing"></div>
+                  <div class="spacing"></div>
                 </>
               );
             })}
