@@ -406,6 +406,35 @@ function sanitiseAndRewrite(html: string, urlMap: UrlMap): { out: string; refs: 
   // somehow survived, kill it.
   $('base').remove();
 
+  // Stage 5: strip leaked preheader text (task #706, 2026-06-14).
+  // GHL's newer template (seen in issues ingested 2026-06-04 onward) emits
+  // the subject line as a bare text node at the top of the body, before the
+  // properly-hidden `<div style="display:none...">` preheader. Email clients
+  // ignore bare text without styling, but the iframe srcdoc renders it
+  // verbatim — so "Folklore on the rig + new June drop-ins" was bleeding
+  // into the top of finding-folklore-on-the-rig's render.
+  //
+  // Fix: any direct text-node child of a wrapper div (a top-level <div> at
+  // the root of the email body) is preheader/subject leakage by definition —
+  // legitimate email content is always wrapped in elements (tables, divs,
+  // headings, paragraphs). Strip those text nodes.
+  //
+  // Targets `<div style="font-family:Roboto, Arial..."` specifically because
+  // that's the GHL wrapper signature, but checks any top-level <div> for
+  // robustness against template variants.
+  $('body > div, body > div[style*="font-family"]').each((_, el) => {
+    // Cheerio's children() returns elements + text nodes via contents().
+    $(el).contents().each((_, child) => {
+      if (child.type === 'text') {
+        // Drop bare text-node children that aren't pure whitespace.
+        const text = (child.data ?? '').trim();
+        if (text) {
+          $(child).remove();
+        }
+      }
+    });
+  });
+
   // Output the body contents only — many emails wrap everything in
   // <html><body>; we want just the body's inner HTML so it can be embedded
   // into the Astro page without nested <html> tags.
