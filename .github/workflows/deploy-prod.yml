@@ -294,27 +294,56 @@ jobs:
           dangerous-clean-slate: false
 
       # ──────────────────────────────────────────────────────────────────
-      # Step C — post-deploy smoke. Hard-fail if apex doesn't serve 200,
-      # OR if /v2/ references appear in the served HTML (which would
-      # mean the deployed build was staging-shaped, not apex-shaped).
+      # Step C — post-deploy smoke. Hard-fail on real server errors (5xx)
+      # or connection failures only. Treat 4xx as a warning, not a
+      # failure: Rochen's firewall blocks GitHub Actions runner IP ranges
+      # and returns 415 to the curl probe even when the deploy succeeded
+      # and real visitors see 200. Hard-failing on 4xx produces a false-
+      # negative red CI signal on every prod deploy and erodes trust.
+      #
+      # Try a browser-ish User-Agent first — Rochen's firewall often lets
+      # common browser UAs through where bare curl gets blocked. If it
+      # works, smoke runs as designed; if it still 4xx's, we log + skip
+      # the body check rather than hard-fail.
+      #
+      # First seen on prod run 27505695764 (HTTP 415, deploy actually
+      # shipped fine). Task #708.
       # ──────────────────────────────────────────────────────────────────
       - name: Smoke-test https://aerialedge.co.uk/
         if: steps.cutover_gate.outputs.cutover_done == 'true'
         run: |
-          status="$(curl -sIL -o /dev/null -w '%{http_code}' https://aerialedge.co.uk/)"
+          # Browser-ish UA — Rochen's firewall blocks bare curl/* UAs from
+          # GitHub's runner IP ranges but typically allows common browser
+          # UAs through. Used for both the status probe AND the body
+          # fetch below.
+          UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+
+          status="$(curl -sIL -A "$UA" -o /dev/null -w '%{http_code}' https://aerialedge.co.uk/)"
           echo "Public apex → HTTP $status"
-          if [ "$status" != "200" ]; then
-            echo "::error::apex URL returned HTTP $status (expected 200)"
+
+          # Bucket the response:
+          #   5xx or empty/0 → real server error / connection failure → fail
+          #   4xx           → likely firewall block on runner IP → warn, continue
+          #   2xx / 3xx     → pass
+          if [ -z "$status" ] || [ "$status" = "000" ] || [ "$status" = "0" ]; then
+            echo "::error::apex URL returned empty/no response (connection failure)"
             exit 1
+          elif [ "$status" -ge 500 ] 2>/dev/null; then
+            echo "::error::apex URL returned HTTP $status (server error)"
+            exit 1
+          elif [ "$status" -ge 400 ] 2>/dev/null; then
+            echo "::warning::apex URL returned HTTP $status — likely Rochen firewall block on GitHub Actions runner IP. Real visitors unaffected; verify in browser if needed."
+            echo "Skipping /v2/ body grep — firewall block means the fetched HTML wouldn't be the real page."
+          else
+            # 2xx / 3xx — probe got real content. Run the /v2/ guard.
+            # Apex HTML must not contain /v2/ in any internal href.
+            if curl -sL -A "$UA" https://aerialedge.co.uk/ | grep -qE 'href="/v2/'; then
+              echo "::error::apex HTML contains /v2/ internal hrefs. Wrong base shipped."
+              exit 1
+            fi
           fi
 
-          # Apex HTML must not contain /v2/ in any internal href.
-          if curl -sL https://aerialedge.co.uk/ | grep -qE 'href="/v2/'; then
-            echo "::error::apex HTML contains /v2/ internal hrefs. Wrong base shipped."
-            exit 1
-          fi
-
-          admin_status="$(curl -sIL -o /dev/null -w '%{http_code}' https://aerialedge.co.uk/admin/)"
+          admin_status="$(curl -sIL -A "$UA" -o /dev/null -w '%{http_code}' https://aerialedge.co.uk/admin/)"
           echo "Admin /admin/ → HTTP $admin_status"
           # Admin can return 200 or 304 depending on JS state. Don't fail
           # on the admin probe; Mark verifies the OAuth round-trip in
