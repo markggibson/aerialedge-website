@@ -37,9 +37,10 @@ const { Content } = await render(entry);
 // High-fidelity HTML body (Wynn task #692, 2026-06-13). When `html_body` is
 // set in frontmatter, the value is a filename adjacent to the .md entry
 // inside src/content/newsletter/<year>/. We read it from disk at build time
-// and embed it via `set:html`. The HTML has already been sanitised + had its
-// image URLs rewritten to local paths by scripts/backfill-newsletter-html.ts —
-// no runtime sanitisation needed.
+// and render it inside an isolated iframe via `srcdoc` (task #700) so the
+// email's CSS can't clash with the host page's Foundation chrome.
+// The HTML has already been sanitised + had its image URLs rewritten to
+// local paths by scripts/backfill-newsletter-html.ts.
 const entryDate = entry.data.date instanceof Date ? entry.data.date : new Date(entry.data.date);
 let htmlBody: string | null = null;
 if (entry.data.html_body) {
@@ -57,7 +58,9 @@ if (entry.data.html_body) {
     htmlBody = await fs.readFile(htmlPath, 'utf-8');
     // Prepend Astro's BASE_URL to root-relative asset paths so images resolve
     // under /preview/ (staging) and / (production) without the rewriter
-    // having to know which environment it's targeting.
+    // having to know which environment it's targeting. iframe srcdoc still
+    // resolves relative URLs against the host page's origin, so this rewrite
+    // is still required.
     const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     if (base) {
       htmlBody = htmlBody.replace(/(src|href)="\/assets\//g, `$1="${base}/assets/`);
@@ -69,6 +72,33 @@ if (entry.data.html_body) {
     htmlBody = null;
   }
 }
+
+// Build a standalone HTML document for the iframe srcdoc. <base target="_parent">
+// makes email links open in the parent tab (not trapped inside the iframe).
+// The inline script posts the document height up to the host page so the
+// iframe can auto-resize to fit its content with no scrollbars.
+const iframeDoc = htmlBody ? `<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base target="_parent">
+  </head>
+  <body>
+${htmlBody}
+<script>
+(function () {
+  function post() {
+    parent.postMessage({ type: 'newsletter-iframe-height', height: document.documentElement.scrollHeight }, '*');
+  }
+  window.addEventListener('load', post);
+  if (window.ResizeObserver) {
+    new ResizeObserver(post).observe(document.documentElement);
+  }
+})();
+</script>
+  </body>
+</html>` : null;
 
 const date = entry.data.date instanceof Date ? entry.data.date : new Date(entry.data.date);
 const formattedDate = date.toLocaleDateString('en-US', {
@@ -121,31 +151,13 @@ const older = idx < all.length - 1 ? all[idx + 1] : null;
             {!htmlBody && entry.data.preheader && (
               <p class="info"><em>{entry.data.preheader}</em></p>
             )}
-            {htmlBody ? (
-              <>
-                <style is:global>
-                  /* Neutralise Foundation framework defaults that leak into
-                     embedded email HTML. Email tables expect zero-default
-                     borders/margins so they can stack tightly into one
-                     contiguous layout; Foundation's defaults turn each table
-                     into a bordered card with bottom margin, producing the
-                     gaps-between-cards look. Inline bgcolor + style attrs
-                     still carry the visual treatment. (task post-#697 fix.) */
-                  .newsletter-html-body table,
-                  .newsletter-html-body tr,
-                  .newsletter-html-body td,
-                  .newsletter-html-body th {
-                    border: 0 !important;
-                    margin: 0 !important;
-                  }
-                  .newsletter-html-body table { border-collapse: collapse; border-spacing: 0; }
-                  .newsletter-html-body td, .newsletter-html-body th { padding: 0; }
-                  .newsletter-html-body p { margin: 0 0 1em 0; color: inherit; }
-                  .newsletter-html-body a { color: inherit; }
-                  .newsletter-html-body img { max-width: 100%; height: auto; }
-                </style>
-                <div class="newsletter-html-body" style="background:#ffffff; padding:0; max-width: 720px; margin: 0 auto;" set:html={htmlBody} />
-              </>
+            {iframeDoc ? (
+              <iframe
+                class="newsletter-iframe"
+                style="width:100%; border:0; display:block; background:#fff;"
+                loading="lazy"
+                srcdoc={iframeDoc}
+              ></iframe>
             ) : (
               <Content />
             )}
@@ -191,31 +203,18 @@ const older = idx < all.length - 1 ? all[idx + 1] : null;
   <div class="four spacing"></div>
 
   {/*
-    Newsletter HTML body container styles (task #695).
-    The embedded email's <style> block now gets its selectors scoped under
-    `.ae-newsletter-shell` so it can't leak into the host page. We give the
-    outer container the host-friendly defaults: full-width, no shell-bg
-    (so the email's own inline background-colors render correctly), and
-    images that respect the column width on narrow viewports.
+    Iframe auto-resize (task #700). The srcdoc iframe posts its document
+    height up via postMessage; we set the iframe's pixel height to match so
+    the email renders inline with no inner scrollbars. +8px buffer absorbs
+    sub-pixel rounding.
   */}
-  <style is:global>
-    .newsletter-html-body { width: 100%; }
-    .newsletter-html-body .ae-newsletter-shell {
-      background: transparent;
-      color: inherit;
-      width: 100%;
-      max-width: 100%;
-      overflow-x: hidden;
-    }
-    /* Email tables ship with hardcoded width:600px — let them shrink on mobile. */
-    .newsletter-html-body .ae-newsletter-shell table[width="600"],
-    .newsletter-html-body .ae-newsletter-shell table[width="600px"] {
-      max-width: 100% !important;
-    }
-    /* Email images can be wider than the column on mobile. */
-    .newsletter-html-body .ae-newsletter-shell img {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
+  <script is:inline>
+    window.addEventListener('message', function(e) {
+      if (!e.data || e.data.type !== 'newsletter-iframe-height') return;
+      var iframe = document.querySelector('iframe.newsletter-iframe');
+      if (iframe && typeof e.data.height === 'number') {
+        iframe.style.height = (e.data.height + 8) + 'px';
+      }
+    });
+  </script>
 </BaseLayout>
