@@ -62,6 +62,19 @@ if (entry.data.html_body) {
     if (base) {
       htmlBody = htmlBody.replace(/(src|href)="\/assets\//g, `$1="${base}/assets/`);
     }
+    // Email <style> blocks often have `body { background: ... }` rules that
+    // set the dark backdrop the email was designed against (Mailchimp
+    // convention). When embedded under set:html, the `body` selector targets
+    // Astro's outer <body>, not our wrapper, so the backdrop never applies
+    // and elements like the white-on-dark logo sit invisibly on white. Scope
+    // those rules to our wrapper.
+    htmlBody = htmlBody.replace(
+      /<style\b([^>]*)>([\s\S]*?)<\/style>/gi,
+      (_m, attrs, css) => {
+        const scoped = css.replace(/(^|[\s,{}])body(\s*[\s,{])/g, '$1.newsletter-html-body$2');
+        return `<style${attrs}>${scoped}</style>`;
+      },
+    );
   } catch (e) {
     // Fall back to markdown render if the sibling is missing — surface a
     // build warning so we notice.
