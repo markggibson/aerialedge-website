@@ -24,36 +24,38 @@ You’re in good hands at Aerial Edge. We have decades of high-level expertise i
 
 ## Dates of upcoming programmes
 
-- **[Circus Professional Development Course:](/1-year-pdc/)** One year, 10am-5pm, Mon-Thu. £5995. Apply [here](/1-year-pdc/)
-  - 15th September 2025 to 19th June 2026
-  - 14th September 2026 to 19th June 2027
-- **[Foundation Course in Circus Arts:](/foundation-course/)** Four months, 10am-5pm, Mon-Fri. £2999. Apply [here](/foundation-course/)
-  - August 11th to November 28th 2025
-  - March 2nd to June 20th 2026
-  - August 10th to November 28th 2026
-- **[Circus Intensive Courses:](/four-week-intensive/)** 4 weeks, 10am-5pm, Mon-Fri. £795 Apply [here](/four-week-intensive/)
-  - 2nd March to 27th March 2026
-  - 30th March to 28th April 2026 (excluding 3rd-6th April)
+- **[Professional Development Programme:](/professional-development-programme/)** Six months, 10am-5pm, Mon-Fri. £4,499. Two intakes a year, in March and August, alongside the Foundation Course. Apply [here](/professional-development-programme/)
+  - 10th August 2026 to 28th November 2026, then 4th January to 19th February 2027
+  - 1st March 2027 to 19th June 2027, then 21st June to 6th August 2027
+  - 9th August 2027 to 27th November 2027, then 3rd January to 18th February 2028
+- **[Foundation Course in Circus Arts:](/foundation-course/)** Four months, 10am-5pm, Mon-Fri. £2,999. Apply [here](/foundation-course/)
+  - 10th August to 28th November 2026
+  - 1st March to 19th June 2027
+  - 9th August to 27th November 2027
+- **[Circus Intensive Courses:](/four-week-intensive/)** 4 weeks, 10am-5pm, Mon-Fri. £795. Apply [here](/four-week-intensive/)
   - 29th June to 24th July 2026
   - 10th August to 4th September 2026
-  - 28th September to 23th October 2026
-- **[Pro-Track Training:](/protrack/)** Personalised programme based on classes and self-training slots in our daytime schedule, which are reserved for circus pros and full-time students, as well as our evening sessions. Your part-time programme is adaptable and changes monthly. Apply [Here](/protrack/)
-- **[Easter Edge Circus Festival:](/easter-edge/)** 4 days of progress-focused workshops for circus pros and recreation students – £249 Details [Here](/easter-edge/)
-  - 3rd - 6th April 2026
+  - 28th September to 22nd October 2026 (ends Thursday — Friday 23rd is October Edge)
+  - 1st March to 25th March 2027 (ends Thursday — Friday 26th is Easter Edge)
+  - 19th April to 14th May 2027
+  - 28th June to 23rd July 2027
+  - 9th August to 3rd September 2027
+- **[Pro-Track Training:](/protrack/)** Personalised programme based on classes and self-training slots in our daytime schedule, which are reserved for circus pros and full-time students, as well as our evening sessions. Your part-time programme is adaptable and changes monthly. Apply [here](/protrack/)
+- **[Easter Edge Circus Festival:](/easter-edge/)** 4 days of progress-focused workshops for circus pros and recreation students. £269. Details [here](/easter-edge/)
+  - 26th to 29th March 2027
 
 
 ---
 
-## 1-year Professional Development Course
+## Professional Development Programme
 
-If you’ve already got circus skills and want to move towards professional level, this is a great route.
-Maybe you don’t have a proper act, or you want to improve your technique to gain performance capability, or you want a bridge to a degree course.
+If you've already got some circus skills and you want to develop as a creator and a performer, this is the route. You might not have a finished act yet, you might want to sharpen your technique and your performance, or you might want a bridge towards a degree or a performing career.
 
-Or perhaps you’ve done our Foundation Course and want to immerse yourself for a year in the friendly, empathic and supportive atmosphere! That’s why this course was created.
+It's also for you if you've done our Foundation Course or a Four-Week Intensive and you want to go deeper into your own solo work.
 
-You focus on your chosen arts while still training others. You make huge leaps in performance. You get to grips with essential documentation. And you get a pro showreel!
+You ride the full Foundation Course journey, sharing the ensemble show, then carry on for two more months focused entirely on your solo act. You'll work on choreography, character, stagecraft and performing for camera, and you'll leave with a professional showreel filmed by our cinematographer Gabriel Stella.
 
-More info on the One-Year Professional Development Course [here](/1-year-pdc/)
+More on the Professional Development Programme [here](/professional-development-programme/)
 
 
 ---
