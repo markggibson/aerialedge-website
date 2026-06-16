@@ -162,13 +162,40 @@ jobs:
           local-dir: ./astro/dist/
           server-dir: ./preview/
           dangerous-clean-slate: false
-          # macOS metadata noise — mirrors deploy-prod.yml.
-          # No v1-archive / assets excludes needed here because server-dir
-          # is preview/ — those paths are physically outside the scope of
-          # this upload.
+          # Defence-in-depth shared-webroot excludes (task #745, 2026-06-16) —
+          # mirrors the widened deploy-prod.yml exclude set so both workflows
+          # carry ONE defence model. These are technically inert here because
+          # server-dir is ./preview/ and the apex co-tenants live physically
+          # outside that scope, but listing them means the protection travels
+          # with the workflow if server-dir is ever changed. assets/ and
+          # newsletter/ are omitted for the same reason as deploy-prod.yml —
+          # they are build-owned paths the upload must be free to write.
           exclude: |
             **/.DS_Store
             **/._*
+            preview/**
+            v2/**
+            v1-archive/**
+            aewiki/**
+            sites/**
+            settings.php
+            default.settings.php
+            zArchive/**
+            _includes/**
+            _layouts/**
+            _posts/**
+            _sass/**
+            _site/**
+            _data/**
+            _works/**
+            bower_components/**
+            feed.xml
+            manifest.json
+            favicon.ico
+            browserconfig.xml
+            cgi-bin/**
+            .well-known/**
+            .ftpquota
 
       # ──────────────────────────────────────────────────────────────────
       # Step B — Sveltia CMS-uploaded media sync.

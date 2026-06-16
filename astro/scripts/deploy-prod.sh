@@ -21,14 +21,42 @@
 #   # export AE_SFTP_PORT=21          # default: 21 for ftp, 22 for sftp
 #   ./scripts/deploy-prod.sh
 #
+# ─── DELETE-STEP DESIGN (post-incident 2026-06-16, task #744) ──────────────
+# CHOSEN APPROACH: keep `mirror -R --delete` but make it safe via (a) a
+# COMPREHENSIVE, EXPLICIT protected-path exclude list covering every known
+# co-hosted path in the shared webroot, and (b) a HARD GUARDRAIL that aborts
+# the deploy if dist/ contains a top-level entry outside the Astro-owned
+# allowlist (so junk can never be uploaded, and the exclude list never has
+# to defend against an unexpected dist/ shape).
+#
+# WHY keep --delete: dist/ is the source of truth for the Astro site's OWN
+# pages. When an Astro page is genuinely removed (e.g. the retired
+# `1-year-pdc/`), --delete is what cleans up the stale remote copy. Dropping
+# --delete entirely would leave orphaned pages live forever. A manifest-diff
+# delete was considered but rejected as more moving parts for the same
+# guarantee the exclude list already gives — the failure mode here was a
+# missing exclude, not the lack of a manifest.
+#
+# WHY this is now safe: the webroot is SHARED. It co-hosts preview/ (staging),
+# aewiki/, a Drupal install (sites/, settings.php, …), v1-archive/, the
+# 5.8 GB assets/ tree, newsletter/, zArchive/, old Jekyll source dirs, and
+# Rochen-managed dirs (cgi-bin/, .well-known/). The 2026-06-15 incident
+# deleted all of these because --delete compared dist/ against the FTP root
+# and the exclude list only covered v1-archive/ + assets/ + .well-known/.
+# The PROTECTED_PATHS array below now enumerates EVERY co-hosted path so
+# --delete can never touch anything the Astro build does not own.
+# ───────────────────────────────────────────────────────────────────────────
+#
 # What it does (in order):
 #   1. Sanity-checks the env vars are set.
 #   2. Sanity-checks `lftp` is on PATH.
 #   3. Cleans dist/ and runs a fresh PROD build (SITE_BASE unset → '/').
 #   4. Sanity-checks dist/index.html + admin + vendored JS.
+#   4b. HARD GUARDRAIL — asserts every top-level entry in dist/ is in the
+#       Astro-owned allowlist. Aborts if dist/ carries anything unexpected.
 #   5. Uploads dist/* to public_html/ root on Rochen via lftp `mirror -R`
-#      with explicit excludes for `v1-archive/` and `assets/` (and the
-#      shape-sanity assertion in step 0).
+#      with the full PROTECTED_PATHS exclude list (and prints what will be
+#      protected before uploading).
 #   5b. Uploads the vendored-JS allowlist to public_html/assets/javascripts/.
 #       (Redundant once cutover lands, but harmless and protects against
 #       accidental deletes.)
@@ -38,9 +66,12 @@
 #   - REMOTE_DIR defaults to "" (FTP root = webroot). The script refuses
 #     to run if REMOTE_DIR contains anything that looks like a subfolder
 #     we shouldn't be touching, e.g. `v1-archive` or `assets/...`.
-#   - lftp `mirror -R --delete` only deletes inside REMOTE_DIR. We add
-#     explicit `--exclude-glob` for `v1-archive/` and `assets/` to keep
-#     the 30-day rollback window + shared asset tree alive.
+#   - lftp `mirror -R --delete` only deletes inside REMOTE_DIR. We add an
+#     explicit `--exclude-glob` for EVERY entry in PROTECTED_PATHS (see the
+#     array below) so the shared webroot's co-hosted content is never
+#     touched. This is the root-cause fix for the 2026-06-15 incident.
+#   - HARD GUARDRAIL (step 4b): dist/ top-level entries must all be in the
+#     Astro-owned allowlist, else abort.
 #   - `set -euo pipefail` so any step's failure stops the deploy.
 #
 # Rollback: use `./scripts/cutover.sh --rollback` to swap v1 back to apex
@@ -74,6 +105,82 @@ VENDORED_JS_ALLOWLIST=(
   "imagesloaded.pkgd.js"
   "masonry.pkgd.min.js"
   "menu-toggler.js"
+)
+
+# ──────────────────────────────────────────────────────────────────────────
+# PROTECTED_PATHS — the shared-webroot co-tenant list (root-cause fix #744).
+#
+# The Rochen webroot (public_html/) is SHARED. It co-hosts far more than the
+# Astro site. `mirror -R --delete` must NEVER touch any of these — they are
+# not part of the Astro build and dist/ does not contain them, so without an
+# explicit exclude --delete would remove every one of them (it did, on
+# 2026-06-15).
+#
+# Each entry is excluded both bare and with a trailing slash, because lftp's
+# --exclude-glob matches the remote entry name and a dir can present either
+# way depending on listing. ADD A NEW ENTRY HERE the moment any new
+# co-tenant is created in the webroot. Treat this list as load-bearing.
+# ──────────────────────────────────────────────────────────────────────────
+PROTECTED_PATHS=(
+  # ── Our own surfaces we deploy separately (must survive a prod deploy) ──
+  "preview"        # staging env — redeployed via deploy-staging.sh. CRITICAL.
+  "v2"             # retired staging path; may still hold content. Do not touch.
+  # ── Rollback window + shared asset tree (pre-existing protections) ──
+  "v1-archive"     # Mark's 30-day rollback window.
+  "assets"         # 5.8 GB Rochen-resident shared tree (vendored-JS sync is
+                   # the ONLY write path into it, step 5b — never via mirror).
+  # ── Other co-hosted apps / content (deleted in the incident) ──
+  "aewiki"         # disposable per Mark, but must not be touched further.
+  "sites"          # Drupal — site config + uploaded files (sites/default/files).
+  "settings.php"   # Drupal config.
+  "default.settings.php"  # Drupal default config.
+  "newsletter"     # co-hosted newsletter content.
+  "zArchive"       # archived content.
+  # ── Old Jekyll source / build dirs left at root (v1 leftovers) ──
+  "_includes"
+  "_layouts"
+  "_posts"
+  "_sass"
+  "_site"
+  "_data"
+  "_works"
+  "bower_components"
+  # ── v1-leftover root files the Astro build does not produce ──
+  "feed.xml"
+  "manifest.json"
+  "favicon.ico"
+  "browserconfig.xml"
+  # ── Server / control dirs (Rochen- or platform-managed) ──
+  "cgi-bin"
+  ".well-known"    # Let's Encrypt / ACME — Rochen-managed.
+  ".ftpquota"      # auto-regenerated by Rochen.
+  # ── Editor / OS noise (kept from prior excludes) ──
+  ".DS_Store"
+)
+
+# ──────────────────────────────────────────────────────────────────────────
+# ASTRO_OWNED_TOPLEVEL — positive allowlist for the step-4b hard guardrail.
+#
+# Every top-level name the Astro build is allowed to emit into dist/. The
+# guardrail aborts if dist/ contains a top-level entry NOT in this set, so a
+# stray/junk dir can never be uploaded into the shared webroot. This list is
+# the inverse safety net to PROTECTED_PATHS: PROTECTED_PATHS stops --delete
+# removing co-tenants; this stops a bad build adding rogue top-level paths.
+#
+# Derived from the current dist/ shape. When a new Astro top-level page or
+# section is added, add its built top-level name here.
+# ──────────────────────────────────────────────────────────────────────────
+ASTRO_OWNED_TOPLEVEL=(
+  ".htaccess" "404.html" "index.html" "robots.txt"
+  "sitemap-0.xml" "sitemap-index.xml"
+  "_astro" "admin" "assets"
+  "blog" "cgfcircusforall" "circus-challenge" "circus-holidays"
+  "circus-shows" "classes" "easter-edge" "events" "foundation-course"
+  "four-week-intensive" "little-circus-stars" "news" "our-team"
+  "phase-2" "philosophy" "portfolio" "privacy"
+  "professional-development-programme" "programmes" "protrack" "publish"
+  "safeguarding" "scaffold-test" "services" "shows" "sponsored-places"
+  "terms" "videos" "youth-performance"
 )
 
 # ──────────────────────────────────────────────────────────────────────────
@@ -194,19 +301,50 @@ dist_pages="$(find "${DIST_DIR}" -name '*.html' | wc -l | tr -d ' ')"
 echo "==> Build OK: ${dist_pages} HTML pages, ${dist_size} total."
 
 # ──────────────────────────────────────────────────────────────────────────
+# Step 4b — HARD GUARDRAIL: dist/ must contain only Astro-owned top-level
+# entries.
+#
+# This is the inverse safety net to PROTECTED_PATHS. The exclude list stops
+# --delete removing shared co-tenants; this stops a malformed build pushing
+# a rogue top-level path into the shared webroot. If dist/ ever grows a
+# top-level entry not in ASTRO_OWNED_TOPLEVEL, we abort rather than upload it.
+# ──────────────────────────────────────────────────────────────────────────
+unexpected=()
+for entry in "${DIST_DIR}"/* "${DIST_DIR}"/.[!.]*; do
+  [[ -e "${entry}" ]] || continue   # globs that matched nothing
+  name="$(basename "${entry}")"
+  ok=0
+  for allowed in "${ASTRO_OWNED_TOPLEVEL[@]}"; do
+    if [[ "${name}" == "${allowed}" ]]; then ok=1; break; fi
+  done
+  if (( ok == 0 )); then
+    unexpected+=("${name}")
+  fi
+done
+if (( ${#unexpected[@]} > 0 )); then
+  echo "FATAL: dist/ contains top-level entries not in the Astro-owned" >&2
+  echo "       allowlist. Refusing to upload to the shared webroot:" >&2
+  for u in "${unexpected[@]}"; do echo "         - ${u}" >&2; done
+  echo "" >&2
+  echo "       If these are legitimate new Astro pages, add them to" >&2
+  echo "       ASTRO_OWNED_TOPLEVEL in this script. Otherwise the build" >&2
+  echo "       is wrong — do not deploy." >&2
+  exit 2
+fi
+echo "==> Guardrail OK: all dist/ top-level entries are Astro-owned."
+
+# ──────────────────────────────────────────────────────────────────────────
 # Step 5 — upload via lftp.
 #
 # `mirror -R` = reverse mirror, upload local → remote. With --delete it
-# removes orphaned remote files inside REMOTE_DIR only. Critical excludes:
+# removes orphaned remote files inside REMOTE_DIR (here: the FTP root =
+# shared webroot). Because the webroot is shared, --delete is ONLY safe with
+# the full PROTECTED_PATHS exclude list below — without it, --delete deletes
+# every co-tenant dist/ doesn't contain (the 2026-06-15 incident).
 #
-#   --exclude-glob 'v1-archive/' — Mark's 30-day rollback window.
-#   --exclude-glob 'assets/'     — 5.8 GB shared tree.
-#   --exclude-glob '.well-known/' — Let's Encrypt; Rochen-managed.
-#   --exclude-glob '.ftpquota'    — auto-regenerated by Rochen.
-#
-# Without these excludes, --delete would compare dist/ against the FTP
-# root and try to delete v1-archive/ + assets/ + .well-known/ since dist/
-# doesn't contain them.
+# The --exclude-glob flags are built programmatically from PROTECTED_PATHS
+# (each entry both bare and with a trailing slash) into EXCLUDE_ARGS, so the
+# exclude set is single-sourced from the one commented array above.
 # ──────────────────────────────────────────────────────────────────────────
 # Sanity-check vendored-JS allowlist exists in dist before uploading.
 for f in "${VENDORED_JS_ALLOWLIST[@]}"; do
@@ -217,9 +355,24 @@ for f in "${VENDORED_JS_ALLOWLIST[@]}"; do
   fi
 done
 
+# Build the --exclude-glob block from PROTECTED_PATHS. Each entry is excluded
+# both bare and with a trailing slash. The result is a newline-delimited set
+# of `--exclude-glob <pat>` continuation lines spliced into the mirror command.
+exclude_block=""
+for p in "${PROTECTED_PATHS[@]}"; do
+  exclude_block+="       --exclude-glob ${p} \\"$'\n'
+  exclude_block+="       --exclude-glob ${p}/ \\"$'\n'
+done
+# Keep the macOS resource-fork glob (not a single-named path, so it lives
+# outside PROTECTED_PATHS).
+exclude_block+="       --exclude-glob ._* \\"$'\n'
+
+echo "==> PROTECTED (never deleted from the shared webroot):"
+for p in "${PROTECTED_PATHS[@]}"; do echo "      - ${p}"; done
+
 target_label="${REMOTE_DIR:-/ (FTP root)}"
 echo "==> Uploading ${DIST_DIR}/ → ${AE_SFTP_HOST}:${target_label} (${AE_SFTP_PROTO}, port ${AE_SFTP_PORT})"
-# Heredoc unquoted so bash interpolates passwords/paths.
+# Heredoc unquoted so bash interpolates passwords/paths AND ${exclude_block}.
 # Trailing slash on source means "contents of DIST_DIR into REMOTE_DIR".
 # REMOTE_DIR may be empty — lftp treats "" as cwd (FTP root).
 lftp -p "${AE_SFTP_PORT}" "${AE_SFTP_PROTO}://${AE_SFTP_HOST}" <<LFTP
@@ -236,16 +389,7 @@ mirror --reverse \
        --delete \
        --parallel=4 \
        --verbose=1 \
-       --exclude-glob v1-archive/ \
-       --exclude-glob v1-archive \
-       --exclude-glob assets/ \
-       --exclude-glob assets \
-       --exclude-glob .well-known/ \
-       --exclude-glob .well-known \
-       --exclude-glob .ftpquota \
-       --exclude-glob .DS_Store \
-       --exclude-glob ._* \
-       "${DIST_DIR}/" "${REMOTE_DIR:-./}"
+${exclude_block}       "${DIST_DIR}/" "${REMOTE_DIR:-./}"
 bye
 LFTP
 
