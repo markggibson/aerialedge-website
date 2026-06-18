@@ -188,6 +188,10 @@ const homepage = defineCollection({
       cta_buttons: z.array(buttonSchema).default([]),
       body_html: z.string(),
       video_src: z.string(),
+      // Optional poster frame shown instantly while the hero video loads
+      // (task #314). Optional for backward-compat: if unset, the <video>
+      // simply renders without a poster as before.
+      video_poster: z.preprocess(emptyToUndef, z.string().optional()),
     }),
 
     // Block 3: About section.

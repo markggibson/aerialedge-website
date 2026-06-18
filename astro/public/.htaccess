@@ -34,6 +34,18 @@
   RewriteCond %{HTTPS} off
   RewriteCond %{HTTP_HOST} ^aerialedge\.co\.uk$ [NC]
   RewriteRule ^(.*)$ https://aerialedge.co.uk/$1 [R=301,L]
+
+  # ───────────────────────────────────────────────────────────────
+  # Section 2 — Page-level 301s.
+  #
+  # /1-year-pdc/ → /professional-development-programme/ (task #733,
+  # 2026-06-15). The 1-Year PDC retired; its page was repurposed into
+  # the Professional Development Programme at a new accurate slug. This
+  # 301 preserves inbound links and SEO equity from the old URL.
+  #
+  # Matches /1-year-pdc and /1-year-pdc/ (with optional trailing path);
+  # leading-slash anchored so it never fires under /preview/.
+  RewriteRule ^1-year-pdc/?$ /professional-development-programme/ [R=301,L]
 </IfModule>
 
 # Aerial Edge cache-control policy — task #208 (2026-05-17).

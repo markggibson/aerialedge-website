@@ -196,30 +196,57 @@ jobs:
           local-dir: ./astro/dist/
           server-dir: ./
           dangerous-clean-slate: false
-          # CRITICAL post-cutover excludes — these paths live OUTSIDE the
-          # new build and must not be diffed against dist/:
-          #   v1-archive/** — Mark's 30-day rollback window (~30-60 MB
-          #     of v1 Jekyll source). Deleted manually after 30 days.
-          #   .well-known/** — Let's Encrypt ACME challenge dir (Rochen-
-          #     managed; FTP-Deploy-Action won't usually delete dotfiles
-          #     but excluding for safety).
-          #   .ftpquota — Rochen auto-regenerates; exclude to keep the
-          #     diff stable.
-          # macOS metadata noise:
+          # CRITICAL shared-webroot excludes — widened 2026-06-16 (task #745)
+          # to mirror the hardened deploy-prod.sh PROTECTED_PATHS so CI and
+          # the manual break-glass script share ONE defence model. The
+          # public_html/ webroot is SHARED: it co-hosts preview/ (staging),
+          # aewiki/, a Drupal install (sites/, settings.php), v1-archive/,
+          # the 5.8 GB assets/ tree, newsletter/, zArchive/, old Jekyll source
+          # dirs, and Rochen-managed control dirs. The 2026-06-15 incident
+          # deleted these because the exclude set covered only v1-archive/ +
+          # .well-known/ + .ftpquota. Every co-tenant below is now excluded so
+          # FTP-Deploy-Action's orphan-delete can never touch anything the
+          # Astro build does not own.
           #
-          # NOTE 2026-05-17: `assets/**` was previously excluded to "protect
-          # v1's 5.8 GB tree." Counterproductive — with dangerous-clean-slate=
-          # false (the default we use) FTP-Deploy-Action does diff-upload only,
-          # so v1's legacy files are preserved automatically; v2's new/changed
-          # CSS/JS/images just overwrite their same-named v1 versions. The
-          # narrow Step B + Step B.2 syncs below were band-aids around this
-          # exclude — now they're defence-in-depth, but the main upload covers
-          # /assets/. Same-shape gaps surfaced: #198 vendored JS, #211 Sveltia
-          # media, #220 hero CSS — all traced to this single over-broad rule.
+          # IMPORTANT — assets/ and newsletter/ are deliberately NOT excluded
+          # here, even though the hardened deploy-prod.sh lists them in
+          # PROTECTED_PATHS. Reason: the Astro build EMITS dist/assets/ and
+          # dist/newsletter/ — they are build-owned top-level paths. Under
+          # dangerous-clean-slate=false the action diff-uploads only and
+          # orphan-deletes solely within the diffed paths, so the co-resident
+          # v1 files under assets/ (the 5.8 GB legacy tree) are preserved
+          # automatically while new/changed build files overwrite their
+          # same-named copies. Excluding either would BLOCK the deploy of the
+          # newsletter section and the site's CSS/JS/images. The manual-script
+          # PROTECTED_PATHS handles assets/ via its own narrow sync steps; the
+          # CI action does not need that split. (Flagged to Mark 2026-06-16:
+          # the hardened script's PROTECTED_PATHS/ASTRO_OWNED_TOPLEVEL predate
+          # the newsletter build section and need the same reconciliation —
+          # see runbook.)
           exclude: |
             **/.DS_Store
             **/._*
+            preview/**
+            v2/**
             v1-archive/**
+            aewiki/**
+            sites/**
+            settings.php
+            default.settings.php
+            zArchive/**
+            _includes/**
+            _layouts/**
+            _posts/**
+            _sass/**
+            _site/**
+            _data/**
+            _works/**
+            bower_components/**
+            feed.xml
+            manifest.json
+            favicon.ico
+            browserconfig.xml
+            cgi-bin/**
             .well-known/**
             .ftpquota
 

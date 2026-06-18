@@ -1,17 +1,26 @@
 ---
-// /1-year-pdc/ — port of v1 1-year-pdc.html.
-// v1 permalink: /1-year-pdc/. v1 layout: landing-page, onepage=true.
+// /professional-development-programme/ — the Professional Development
+// Programme (PDP) page. Repurposed from the retiring /1-year-pdc/ page
+// (task #733, 2026-06-15). Copy from Marlow's deck:
+// Deliverables/fill-pro-course-places-2026/pdp-page-copy-2026-06-15/00-pdp-and-works-copy.md
 //
-// £5,995 / year pricing. Flagged to Cord — not in R1.
-// Other £ figures: £250 deposit, £3,000, £2,745 — all instalment-of-£5,995.
+// URL change (Mark, 2026-06-15): the page moved from /1-year-pdc/ to this
+// accurate slug; a 301 from /1-year-pdc/ lives in public/.htaccess.
+//
+// Pricing: £4,499 for six months. Instalments: £250 deposit + £2,200
+// (8 weeks before start) + £2,049 balance before starting.
+//
+// GHL forms: still the PDC forms ("Info Request PDC" ycKl2fLSIemr2WweQRMv
+// + "Application PDC" 4Vwsf6XinB8f3f4DNYm3) — reused for now per Mark's
+// 2026-06-15 decision. See the TODOs at each embed.
 
 import OnePageLayout from '../../layouts/OnePageLayout.astro';
 import SectionTitle from '../../components/SectionTitle.astro';
 import ContactForm from '../../components/ContactForm.astro';
 ---
 <OnePageLayout
-  title="1-Year Pro Circus Course in Glasgow | Aerial Edge"
-  description="One-year pro-track circus course in Glasgow. Hone technique, prep an ensemble show, build a solo act and leave with a professional showreel."
+  title="Professional Development Programme in Glasgow | Aerial Edge"
+  description="Six-month full-time circus course in Glasgow. Train Monday–Friday 10–5, ride the Foundation Course ensemble show, then build a signature solo act and a professional showreel. Starts March and August."
 >
 
   <iframe
@@ -42,13 +51,13 @@ import ContactForm from '../../components/ContactForm.astro';
       <div class="layer">
         <p class="small-title">Glasgow's circus school </p>
         <h1 class="thin" id="to-be-update">
-          <span class="fir">1 Year Professional Development Course in Circus Arts</span><br />
+          <span class="fir">Professional Development Programme</span><br />
         </h1>
 
         <div class="two spacing"></div>
 
         <h2 class="thin">
-          Got circus skills? Want to develop to pro level? This course hones technique in your chosen arts, upgrades everything else including performance, introduces essential documentation AND you get a pro showreel! Runs 10am-5pm Monday to Thursday, starting in September. Fridays? Use them for self-training, or to work.
+          Want to create a smoking solo that's uniquely yours? Our six-month Professional Development Programme gives you the full Foundation Course journey, then continues for two months dedicated to redefining your solo work, with all kinds of skills to build a professional showreel that can get you places. Runs 10am–5pm, Monday to Friday.
         </h2>
       </div>
     </div>
@@ -58,16 +67,16 @@ import ContactForm from '../../components/ContactForm.astro';
     <div class="row">
       <div class="large-8 columns large-centered">
         <div class="section-title">
-          <p class="small-title">1-year Professional Development Course</p>
-          <h2>Your Programme</h2>
-          <p class="big-size"> Turn your circus skills and talent into your career </p>
+          <p class="small-title">Professional Development Programme</p>
+          <h2>Your programme</h2>
+          <p class="big-size"> What could be more you than a solo act? This course brings out the best in you. </p>
         </div>
         <div class="two spacing"></div>
         <div class="mod modBlogPost big no_bg">
-          <p>On this course, you focus on your preferred arts from the get-go, instead of learning a broad range of disciplines in the early stages. But you still get to train other arts too.</p>
-          <p>First, you hone technique in your chosen disciplines then you spend a full term preparing an ensemble show with a professional Artistic Director. In Term Three, you focus on creating a solo act and understanding how to rig it safely, along with processes for becoming a professional performer.</p>
-          <p>And of course you’ll have a fabulous professional show reel that you can use to apply for work and funding.</p>
-          <p>Like our other programmes, you get the benefit of our decades of expertise in circus arts and educational development.</p>
+          <p>You can learn tricks in lots of places. What takes longer is discovering what you want to say with them.</p>
+          <p>The Professional Development Programme is a six-month full-time circus course for people who want to go beyond technical training and develop themselves as creators and performers.</p>
+          <p>You'll be on the same journey as the Foundation Course, starting at the same time twice a year. That means you learn a broad range of arts, then decide which will become your solo performance around six to seven weeks in. From there the focus moves to an ensemble production with a professional director. That ensemble show is the graduation point for the Foundation Course, and it's where your solo work gets really deep and interesting.</p>
+          <p>You'll reach into yourself to discover how to transform your solo act from a work in progress into a polished piece, through tuition that goes beyond act creation, choreography and characterisation. You'll learn how to use tech such as lighting and projection, and how to perform for a camera as well as a crowd. It all gets captured in a glorious showreel, the circus artist's calling card, which you can use to get work or to get into university courses.</p>
         </div>
       </div>
     </div>
@@ -77,7 +86,7 @@ import ContactForm from '../../components/ContactForm.astro';
     <div class="four spacing"></div>
     <div class="row">
       <div class="large-12 columns large-centered">
-        <h3 class="white" align="center">What disciplines could you learn on the course?</h3>
+        <h3 class="white" align="center">What disciplines will you learn on the course?</h3>
 
         <div class="medium-4 columns">
           <ul>
@@ -118,7 +127,7 @@ import ContactForm from '../../components/ContactForm.astro';
   <div class="full">
     <div class="row">
       <div class="large-8 columns large-centered">
-        <SectionTitle title="Your Journey" smallTitle="" />
+        <SectionTitle title="Your progress" smallTitle="" />
       </div>
     </div>
   </div>
@@ -130,17 +139,13 @@ import ContactForm from '../../components/ContactForm.astro';
       </div>
 
       <div class="large-6 columns">
-        <h3>Making your skills work</h3>
-        <p>Our approach is always to start where you are, and build from there. For this course, your starting place will need to be further along the road than beginner status. If you don’t already have circus skills, you can quickly gain the entry requirements on one of our other programmes.</p>
-
-        <p>On this course, you learn a lot more than circus skills. You go big on how to perform, and the process of putting an act together in a group setting and as a solo or duo. You also learn how to ensure you have safe rigging, and what you need to do to you get work.</p>
-        <p>The course has been designed to meet the needs of graduates of our Foundation Course who wanted to carry on learning in a friendly and supportive environment that challenges and develops them.</p>
-        <p>It’s also great for you if:</p>
-        <ul>
-          <li>You can put a routine together and want to transform that into a fully fledged act</li>
-          <li>You want to improve your technique or to gain performance capability</li>
-          <li>You want to do a degree course and want a bridge between your current level and that stage</li>
-        </ul>
+        <h3>After the ensemble, it's all about you</h3>
+        <p>The Foundation Course curriculum gives you a solid grounding in circus arts, and it's very much a group experience. Everyone comes with a different level of experience, and no one is good at everything, so you lean into each other's strengths and help each other through the hard parts.</p>
+        <p>After that segment of the programme, it's all about you.</p>
+        <p>You'll return to your own solo work with new experience and a different perspective, having been wrapped up in the ensemble show. As you step into the next two months, this is when you begin to discover not just what you can do, but who you are as a performer.</p>
+        <p>Working with experienced tutors, you'll develop choreography, character, musicality, stagecraft and performance skills for both live audiences and film. It all builds to a professionally filmed showreel designed to show your work at its very best.</p>
+        <p>A great showreel is more than a record of what you can do. It's a statement of who you are, so it deserves your full attention.</p>
+        <p>Yours is shot by Gabriel Stella, whose degree in cinematography, dedication to circus and creative artistry will make your showreel something to treasure as well as to use.</p>
         <div class="two spacing"></div>
         <p>Photo credit: Max Crawford</p>
       </div>
@@ -156,19 +161,19 @@ import ContactForm from '../../components/ContactForm.astro';
       </video>
       <div class="overlay"></div>
       <div class="layer">
-        <p class="small-title">Entry Requirements</p>
+        <p class="small-title">Who is the course for?</p>
 
         <h2 class="thin">
-          If you have pull-ups and leg lifts, and you can invert without jumping off the ground, we’d love to see some video showing examples of your work. You could come into the school to show us in person, if you prefer.
+          <b>You,</b> if you already have some circus skills and you want to develop as a creator and a performer, not only as a technician.
         </h2>
         <h2 class="thin">
-          If you can do all of the above and more, you’ve got what it takes!
+          This programme is for you if you want to build a signature solo act and leave with a professional showreel, if you're looking for a bridge towards a degree or a performing career, or if you've done our Foundation Course or a Four-Week Intensive and you want to go deeper.
         </h2>
         <h2 class="thin">
-          If you have some experience of physical activities, you can gain the entry requirements in a short space of time through programmes with us or other circus schools.
+          You'll need to be a little further along than beginner level. If you're not there yet, you can gain the entry requirements on one of our other programmes, and we'll help you work out the route.
         </h2>
         <h2 class="thin">
-          Options with us include intensive training in evening recreational classes plus self-training sessions, perhaps leading into our Pro Track Programme, our four-week full time Circus Intensive Course or our four-month Foundation Course.
+          You'll leave with a sharper solo act, new performance skills, new confidence, new friends, and a showreel you can use to find work and funding.
         </h2>
       </div>
     </div>
@@ -189,24 +194,14 @@ import ContactForm from '../../components/ContactForm.astro';
         <div class="two spacing"></div>
       </div>
       <div class="large-6 columns">
+        <p>You start alongside the Foundation Course students, and you all train together until they leave. The shape is like this:</p>
         <ul>
-          <li>
-            <b>Term 1 (September to December):</b> The focus is on improving technique and physical conditioning, making sure that the fundamentals are excellent in your chosen arts, and that you know how your body works so that you can train safely to minimise the possibility of injuries.
-          </li>
-          <li>
-            <b>Term 2 (January to March):</b> Your technique will be further honed through the process of preparing for an ensemble performance at the end of this term, working with a professional Artistic Director. Tuition in act creation and choreography will expand your creative bandwidth.
-          </li>
-          <li>
-            <b>Term 3 (April to June):</b> The focus will be on solo act creation in one or more arts which will lead to a cabaret performance at the end of the term.
-          </li>
+          <li><b>First segment: </b> Learn a broad skillset across a wide variety of acrobatic skills for ground and aerial arts, to work out where your interests and talents lie. You may well discover a new passion.</li>
+          <li><b>Second segment: </b> Start to specialise in the specific skills and arts that will form the basis of your individual performance.</li>
+          <li><b>Third segment: </b> Build creativity and skills through ensemble show creation and performance.</li>
+          <li><b>Fourth segment: </b> Now you dive into the detail of where you've reached with your solo work and make it more incredible. Alongside all the tuition in performance skills, you keep training your technique in your chosen arts.</li>
         </ul>
-        <p>Along the way you will learn about:</p>
-        <ul>
-          <li>Promoting yourself on social media and on the web</li>
-          <li>Technical documentation which are needed for professional performances</li>
-          <li>What to expect in the professional environment</li>
-        </ul>
-        <p>And at the end, you’ll have a gorgeous pro show reel captured by Gabriel Stella, our amazing in-house cinematographer.</p>
+        <p>We run two programmes a year, starting in March and August.</p>
       </div>
       <div class="four spacing"></div>
     </div>
@@ -226,13 +221,13 @@ import ContactForm from '../../components/ContactForm.astro';
           We are the largest circus school in Scotland, established in 2007. As a non-profit Community Interest Company, our core principle is: circus for all regardless of age, size, shape, ability and other factors.
         </h2>
         <h2 class="thin">
-          If you’re just starting your circus journey, or if you’ve already got years of aerial or acrobatics behind you, we’ll make sure you see great progress, and you’ll gain strong foundational abilities in other arts too.
+          If you're just starting your circus journey, or if you've already got years of aerial or acrobatics behind you, we'll make sure you see great progress, and you'll gain strong foundational abilities in other arts too.
         </h2>
         <h2 class="thin">
-          You’ll discover how our passion and speciality is developing people through circus – your gains go deeper than learning the arts. We’ll nurture you not just through the physical challenges as you grapple with the techniques, but other pieces of your progression puzzle that arise along the way.
+          You'll discover how our passion and speciality is developing people through circus. Your gains go deeper than learning the arts. We'll support you through the physical challenges as you grapple with the techniques, and through the other pieces of your progression puzzle that come up along the way.
         </h2>
         <h2 class="thin">
-          We have specialist knowledge to support you to make breakthroughs which have a positive impact on other aspects of your life.
+          We have specialist knowledge to help you make breakthroughs that have a positive impact on other parts of your life.
         </h2>
       </div>
     </div>
@@ -282,12 +277,12 @@ import ContactForm from '../../components/ContactForm.astro';
         <p class="small-title">What does it cost?</p>
 
         <h2 class="thin">
-          As a non-profit organisation, we price everything as low as possible. And you get incredible added value with your pro show reel. Great care and expertise has gone into our course planning, to ensure you get the best, personalised, experience and outcomes.
+          As a non-profit, we price everything as low as we can. You also get real added value with your professional showreel. We put great care and expertise into planning the programme so you get the best, most personal experience and outcome.
         </h2>
         <div class="two spacing"></div>
         <p class="small-title">Course Fees</p>
         <h2 class="thin">
-          £5,995 for the year. Course fees are payable in full or in three instalments: £250 deposit, then £3,000 six weeks before the course begins, and the £2,745 balance to be paid before starting.
+          £4,499 for the six-month programme. You can pay in full, or in three instalments: a £250 deposit, then £2,200 eight weeks before the programme begins, and the £2,049 balance before you start. Monthly payment plans are available on request.
         </h2>
       </div>
     </div>
@@ -350,7 +345,7 @@ import ContactForm from '../../components/ContactForm.astro';
       <div class="large-12 medium-12 columns large-centered">
         <div class="row">
           <div class="large-12 columns large-centered">
-            <p>The application to the 1-Year Professional Development Course is quick and easy. Simply fill in the form and sign up online. This form will take your details and take the deposit payment of £250.</p>
+            <p>The application to the Professional Development Programme is quick and easy. Fill in the form and sign up online. The form takes your details and the £250 deposit.</p>
             <p>Feel free to contact us with any questions in advance</p>
 
             <iframe

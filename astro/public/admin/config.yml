@@ -275,6 +275,7 @@ collections:
                   - { name: target, label: Link target (e.g. _blank), widget: string, required: false }
               - { name: body_html, label: Body paragraph (HTML allowed for inline links), widget: text, hint: "Inline HTML allowed — used today for the 'Sign up for our newsletter' anchor." }
               - { name: video_src, label: Hero background video src, widget: string, hint: "e.g. /assets/images/@stock/Hero2.mp4" }
+              - { name: video_poster, label: Hero poster image, widget: string, required: false, hint: "Shown instantly while the video loads, e.g. /assets/images/@stock/Hero2-poster.jpg" }
 
           # Block 3: About
           - name: about
