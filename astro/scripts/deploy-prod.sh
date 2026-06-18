@@ -134,7 +134,14 @@ PROTECTED_PATHS=(
   "sites"          # Drupal — site config + uploaded files (sites/default/files).
   "settings.php"   # Drupal config.
   "default.settings.php"  # Drupal default config.
-  "newsletter"     # co-hosted newsletter content.
+  # NOTE: "newsletter" is intentionally NOT protected here. The Astro build
+  # now EMITS dist/newsletter/ (src/pages/newsletter/), so it is a
+  # build-owned top-level path — it lives in ASTRO_OWNED_TOPLEVEL below
+  # instead. Excluding it from the mirror would block the newsletter section
+  # from ever deploying (and the step-4b guardrail would abort, since dist/
+  # carries newsletter/). This mirrors the CI exclude-set side in
+  # deploy-prod.yml, where assets/ and newsletter/ are deliberately NOT
+  # excluded for the same reason. (Reconciliation from #745 / follow-up #815.)
   "zArchive"       # archived content.
   # ── Old Jekyll source / build dirs left at root (v1 leftovers) ──
   "_includes"
@@ -176,7 +183,7 @@ ASTRO_OWNED_TOPLEVEL=(
   "_astro" "admin" "assets"
   "blog" "cgfcircusforall" "circus-challenge" "circus-holidays"
   "circus-shows" "classes" "easter-edge" "events" "foundation-course"
-  "four-week-intensive" "little-circus-stars" "news" "our-team"
+  "four-week-intensive" "little-circus-stars" "news" "newsletter" "our-team"
   "phase-2" "philosophy" "portfolio" "privacy"
   "professional-development-programme" "programmes" "protrack" "publish"
   "safeguarding" "scaffold-test" "services" "shows" "sponsored-places"

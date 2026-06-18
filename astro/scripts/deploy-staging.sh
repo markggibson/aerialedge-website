@@ -97,7 +97,14 @@ PROTECTED_PATHS=(
   "sites"                 # Drupal.
   "settings.php"          # Drupal config.
   "default.settings.php"  # Drupal default config.
-  "newsletter"            # co-hosted newsletter content.
+  # NOTE: "newsletter" is intentionally NOT excluded here. The Astro build
+  # now EMITS dist/newsletter/ (src/pages/newsletter/), so it is a
+  # build-owned path that must land at preview/newsletter/. Adding it to the
+  # --exclude-glob block would make a break-glass staging run silently skip
+  # the newsletter section. The preview/ --delete scope already keeps the
+  # blast radius inside staging, so newsletter does not need co-tenant
+  # protection here. Mirrors the deploy-prod.sh side. (Task #886 / from
+  # #745 / follow-up #815.)
   "zArchive"              # archived content.
   "_includes" "_layouts" "_posts" "_sass" "_site" "_data" "_works"
   "bower_components"
