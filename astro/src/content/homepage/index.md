@@ -17,6 +17,7 @@ hero:
       target: _blank
   body_html: We have fun classes for all abilities, from toddlers to pensioners, and professional training too. Aerial Edge is a not-for-profit organisation, with sponsored places for people who experience barriers to participation. <a href="/index.html#contact">Sign up for our newsletter </a>to keep up with our ever-evolving schedule.
   video_src: /assets/images/@stock/Hero2.mp4
+  video_poster: /assets/images/@stock/Hero2-poster.jpg
 about:
   small_title: Developing people
   title: Developing people through circus is what we do best.

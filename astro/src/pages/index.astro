@@ -122,7 +122,7 @@ const localBusinessSchema = {
 
   <div class="full no-padding parallax home-video-wrapper">
     <div class="fullscreen">
-      <video muted autoplay="autoplay" playsinline id="fullscreen-video" loop="loop">
+      <video muted autoplay="autoplay" playsinline id="fullscreen-video" loop="loop" preload="auto" poster={home.hero.video_poster}>
         <source src={home.hero.video_src} type="video/mp4" />
       </video>
       <div class="overlay"></div>
