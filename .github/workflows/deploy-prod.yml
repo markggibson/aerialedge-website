@@ -9,14 +9,14 @@
 # in the same commit that adds this one. Post-cutover there is exactly
 # one deploy workflow in the repo.
 #
-# Cutover gate: the first step probes Rochen for public_html/v1-archive/.
-# If absent (cutover hasn't run), the rest of the workflow is SKIPPED via
-# step-level `if:` guards. This protects the apex from being auto-deployed
-# over the still-live v1 between this commit landing on main and Mark
-# running astro/scripts/cutover.sh. Once v1-archive/ exists, every
-# subsequent push deploys normally.
+# Cutover gate: REMOVED 2026-06-27 (task #893). It probed Rochen for
+# public_html/v1-archive/ and skipped the whole workflow (green, but
+# uploading nothing) whenever the probe came back empty — which silently
+# no-op'd every prod deploy since ~14 June 2026. The v1→v2 cutover is long
+# done, so the gate's protective job is obsolete. Every push to main now
+# deploys. See the in-step note at "Checkout repo".
 #
-# Critical guardrails post-cutover:
+# Critical guardrails (unchanged, always apply):
 #   - `dangerous-clean-slate: false` (default) — diff upload + orphan-
 #     delete INSIDE server-dir only. We MUST not delete anything outside
 #     the paths we own.
@@ -69,72 +69,30 @@ jobs:
 
     steps:
       # ──────────────────────────────────────────────────────────────────
-      # Step 0 — cutover gate. Refuse to run until cutover has completed
-      # on Rochen (signalled by the presence of public_html/v1-archive/).
+      # NOTE (2026-06-27, task #893): the obsolete v1-cutover gate that
+      # used to sit here as "Step 0" has been REMOVED. It probed Rochen for
+      # public_html/v1-archive/ and skipped the entire deploy (exiting green
+      # while uploading nothing) whenever that probe came back empty. The
+      # cutover to v2 completed long ago, but the probe had grown unreliable
+      # and silently no-op'd every prod deploy since ~14 June 2026 — pushes
+      # to main went green but shipped nothing. The gate's protective job
+      # (don't auto-deploy apex over still-live v1 before cutover) is no
+      # longer relevant: v1 is archived and v2 is the live apex.
       #
-      # WHY: between this workflow merging to main and Mark running
-      # cutover.sh, every push to main would otherwise auto-deploy the
-      # apex-shape build over v1, partially flattening v1 BEFORE the
-      # snapshot is taken and BEFORE v1-archive/ is created. The cutover
-      # script's pre-flight assertions can't recover from that.
-      #
-      # The gate: connect via FTPES, `cls -d v1-archive`. If it exists
-      # (exit 0, lftp prints the dir), continue. If not (exit non-zero),
-      # SKIP the rest of the workflow gracefully so the push doesn't
-      # appear as a red failure run in the Actions UI.
-      #
-      # Once Mark has run cutover.sh successfully, v1-archive/ exists
-      # and this step passes on every subsequent push.
+      # The OTHER guardrails are untouched and still apply on every deploy:
+      #   - dangerous-clean-slate: false (diff upload + in-server orphan-
+      #     delete only)
+      #   - the shared-webroot `exclude` set on Step A mirroring the manual
+      #     script PROTECTED_PATHS — co-tenant paths (preview/, aewiki/,
+      #     sites/, v1-archive/, etc.) can never be touched
+      #   - the post-deploy smoke / status assert (Step C)
+      # Preview-first remains the design: staging → /preview/ via
+      # deploy-staging.yml; prod ships only from main via the publish flow.
       # ──────────────────────────────────────────────────────────────────
-      - name: Pre-flight — has cutover happened?
-        id: cutover_gate
-        working-directory: .
-        env:
-          AE_SFTP_HOST: ${{ secrets.AE_SFTP_HOST }}
-          AE_SFTP_USER: ${{ secrets.AE_SFTP_USER }}
-          AE_SFTP_PASS: ${{ secrets.AE_SFTP_PASS }}
-          AE_SFTP_PORT: ${{ secrets.AE_SFTP_PORT || 21 }}
-        run: |
-          sudo apt-get -qq update >/dev/null
-          sudo apt-get -qq install -y lftp >/dev/null
-          # Build the lftp command list as a single string (no heredoc
-          # inside a YAML run: block — too easy to break indentation).
-          lftp_cmds="set ftp:ssl-allow yes
-          set ftp:ssl-force yes
-          set ftp:ssl-protect-data yes
-          set ssl:verify-certificate no
-          set net:max-retries 1
-          set net:reconnect-interval-base 5
-          set net:timeout 30
-          user \"$AE_SFTP_USER\" \"$AE_SFTP_PASS\"
-          cls -1 v1-archive
-          bye"
-          set +e
-          listing="$(printf '%s\n' "$lftp_cmds" | lftp -p "$AE_SFTP_PORT" "ftp://$AE_SFTP_HOST" 2>&1)"
-          rc=$?
-          set -e
-          echo "lftp exit=$rc"
-          echo "--- lftp output ---"
-          echo "$listing"
-          echo "--- end lftp output ---"
-          # cls of a missing dir produces 'access failed', '550' or similar.
-          # If lftp returns non-zero OR we detect those signals, the cutover
-          # has not run yet.
-          if [ "$rc" -ne 0 ] || echo "$listing" | grep -qiE "access failed|no such file|not found|550"; then
-            echo "cutover_done=false" >> "$GITHUB_OUTPUT"
-            echo "::notice::v1-archive/ not found on Rochen — cutover has not run yet."
-            echo "::notice::Skipping production deploy. Run astro/scripts/cutover.sh first."
-          else
-            echo "cutover_done=true" >> "$GITHUB_OUTPUT"
-            echo "v1-archive/ present on Rochen — proceeding with apex deploy."
-          fi
-
       - name: Checkout repo
-        if: steps.cutover_gate.outputs.cutover_done == 'true'
         uses: actions/checkout@v4
 
       - name: Setup Node 26
-        if: steps.cutover_gate.outputs.cutover_done == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '26'
@@ -142,17 +100,14 @@ jobs:
           cache-dependency-path: 'astro/package-lock.json'
 
       - name: Install dependencies (npm ci)
-        if: steps.cutover_gate.outputs.cutover_done == 'true'
         run: npm ci
 
       - name: Build site (default base, SITE_BASE unset)
-        if: steps.cutover_gate.outputs.cutover_done == 'true'
         # `npm run build` defaults to base: '/' per astro.config.mjs.
         # Apex serves at the root, so no SITE_BASE override here.
         run: npm run build
 
       - name: Sanity-check build output
-        if: steps.cutover_gate.outputs.cutover_done == 'true'
         # Same asserts as the staging workflow. Cheap; catches an
         # empty-dist disaster before we touch Rochen.
         run: |
@@ -184,7 +139,6 @@ jobs:
       # local script does with `ssl:verify-certificate no`.
       # ──────────────────────────────────────────────────────────────────
       - name: Deploy dist/ → apex root on Rochen
-        if: steps.cutover_gate.outputs.cutover_done == 'true'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.AE_SFTP_HOST }}
@@ -266,7 +220,6 @@ jobs:
       # v1's full /assets/ subtree.
       # ──────────────────────────────────────────────────────────────────
       - name: Sync vendored JS → /assets/javascripts/ on Rochen
-        if: steps.cutover_gate.outputs.cutover_done == 'true'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.AE_SFTP_HOST }}
@@ -305,7 +258,6 @@ jobs:
       # Mark hits it again on the homepage singleton's image fields.
       # ──────────────────────────────────────────────────────────────────
       - name: Sync Sveltia CMS media → /assets/images/cms/ on Rochen
-        if: steps.cutover_gate.outputs.cutover_done == 'true'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.AE_SFTP_HOST }}
@@ -337,7 +289,6 @@ jobs:
       # shipped fine). Task #708.
       # ──────────────────────────────────────────────────────────────────
       - name: Smoke-test https://aerialedge.co.uk/
-        if: steps.cutover_gate.outputs.cutover_done == 'true'
         run: |
           # Browser-ish UA — Rochen's firewall blocks bare curl/* UAs from
           # GitHub's runner IP ranges but typically allows common browser
