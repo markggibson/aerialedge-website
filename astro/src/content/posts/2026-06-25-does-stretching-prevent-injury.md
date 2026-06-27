@@ -3,7 +3,7 @@ title: "Does stretching actually prevent injury? What the research says"
 date: 2026-06-25
 author: Aerial Edge
 categories:
-  - classes
+  - Circus Training
 tags:
   - conditioning
   - flexibility
@@ -55,7 +55,7 @@ A few things follow from all of this.
 
 **Spend real time on strength through your full range, especially at end range.** This is the part that builds resilience, and it is the part a stretching-only routine misses entirely. Load the lengthened position. Train the strength to control the positions you can reach.
 
-If you are an adult chasing your splits, the same logic applies: the split isn't finished when you touch the floor, it is finished when you can hold and use it. We get into that in [how to get the splits as an adult](/classes/2026/06/25/how-to-get-the-splits-as-an-adult.html). And if strength is the missing half of your training and you are not sure where to begin, [strength training for aerial: where beginners should start](/classes/2026/06/25/strength-training-for-aerial-beginners.html) is the place to start. None of this stops mattering as you get older. If anything the strength work matters more, which is the point of [can you get flexible in your 50s, 60s and 70s?](/classes/2026/06/25/flexible-in-your-50s-60s-70s.html)
+If you are an adult chasing your splits, the same logic applies: the split isn't finished when you touch the floor, it is finished when you can hold and use it. We get into that in [how to get the splits as an adult](/circus-training/2026/06/25/how-to-get-the-splits-as-an-adult.html). And if strength is the missing half of your training and you are not sure where to begin, [strength training for aerial: where beginners should start](/circus-training/2026/06/25/strength-training-for-aerial-beginners.html) is the place to start. None of this stops mattering as you get older. If anything the strength work matters more, which is the point of [can you get flexible in your 50s, 60s and 70s?](/circus-training/2026/06/25/flexible-in-your-50s-60s-70s.html)
 
 ## Where to build this for real
 

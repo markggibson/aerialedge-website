@@ -3,7 +3,7 @@ title: "Can you get flexible in your 50s, 60s and 70s?"
 date: 2026-06-25
 author: Aerial Edge
 categories:
-  - classes
+  - Circus Training
 tags:
   - conditioning
   - flexibility
@@ -70,4 +70,4 @@ If you have read this far wondering whether a class would actually have room for
 
 ---
 
-*Want more on the training behind this? See [how to get the splits as an adult](/classes/2026/06/25/how-to-get-the-splits-as-an-adult.html), [does stretching actually prevent injury?](/classes/2026/06/25/does-stretching-prevent-injury.html), and [strength training for aerial: where beginners should start](/classes/2026/06/25/strength-training-for-aerial-beginners.html).*
+*Want more on the training behind this? See [how to get the splits as an adult](/circus-training/2026/06/25/how-to-get-the-splits-as-an-adult.html), [does stretching actually prevent injury?](/circus-training/2026/06/25/does-stretching-prevent-injury.html), and [strength training for aerial: where beginners should start](/circus-training/2026/06/25/strength-training-for-aerial-beginners.html).*

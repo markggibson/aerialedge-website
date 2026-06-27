@@ -3,7 +3,7 @@ title: "Strength training for aerial: where beginners should start"
 date: 2026-06-25
 author: Aerial Edge
 categories:
-  - classes
+  - Circus Training
 tags:
   - conditioning
   - strength
@@ -27,7 +27,7 @@ So the goal is usable strength: strength you can call on across the whole range 
 
 Take each exercise through its full range rather than half-repping it. The reason is transfer. You get strong in the range you train, so training the full range builds strength you can use everywhere the apparatus loads you, including the deep, lengthened positions where a skill puts force through the tissue. Train only half the range and you are strong only where you trained, with gaps to backfill later (Wolf et al., the partial-versus-full-ROM meta-analysis).
 
-There is a related idea worth naming, because it is the strongest injury-prevention point in the whole conditioning set: strength held at the very *end* of your range. Building strength in a lengthened position is among the best-evidenced ways to lower strain-injury risk. Longer muscle fascicles are linked to a lower chance of strain injury, and eccentric work at long muscle length both lengthens fascicles and lowers re-injury rates (Timmins et al. 2016; Marušič et al. 2020). Stretching on its own does not injury-proof you; strength at end range is what does. We cover that in full in [does stretching actually prevent injury?](/classes/2026/06/25/does-stretching-prevent-injury.html). For now, the takeaway for a beginner is the plainer one: train the whole range, not just the comfortable part.
+There is a related idea worth naming, because it is the strongest injury-prevention point in the whole conditioning set: strength held at the very *end* of your range. Building strength in a lengthened position is among the best-evidenced ways to lower strain-injury risk. Longer muscle fascicles are linked to a lower chance of strain injury, and eccentric work at long muscle length both lengthens fascicles and lowers re-injury rates (Timmins et al. 2016; Marušič et al. 2020). Stretching on its own does not injury-proof you; strength at end range is what does. We cover that in full in [does stretching actually prevent injury?](/circus-training/2026/06/25/does-stretching-prevent-injury.html). For now, the takeaway for a beginner is the plainer one: train the whole range, not just the comfortable part.
 
 ## Stop short of failure
 
@@ -94,7 +94,7 @@ You do not need to assemble all of this yourself on day one. The short version f
 
 This is coached, step by step, in our Foundation and beginner classes, where the progressions are built for adults starting out and the shoulder and grip prehab is part of the session rather than an afterthought. If you want to train this with people who coach it, [our beginner classes](https://aerialedge.co.uk/portfolio/circus-fitness/) are where to start.
 
-If you are also working on flexibility alongside your strength, two companion pieces fit here: [how to get the splits as an adult](/classes/2026/06/25/how-to-get-the-splits-as-an-adult.html), and, if you are starting later in life, [can you get flexible in your 50s, 60s and 70s?](/classes/2026/06/25/flexible-in-your-50s-60s-70s.html).
+If you are also working on flexibility alongside your strength, two companion pieces fit here: [how to get the splits as an adult](/circus-training/2026/06/25/how-to-get-the-splits-as-an-adult.html), and, if you are starting later in life, [can you get flexible in your 50s, 60s and 70s?](/circus-training/2026/06/25/flexible-in-your-50s-60s-70s.html).
 
 *Adults only. The guidance here is written for adult training and is not for under-18s without separate, age-appropriate coaching. It is general training information, not individual medical or physiotherapy advice. If you have pain or a relevant history, get it looked at.*
 

@@ -3,7 +3,7 @@ title: "How to get the splits as an adult (and actually use them)"
 date: 2026-06-25
 author: Aerial Edge
 categories:
-  - classes
+  - Circus Training
 tags:
   - conditioning
   - flexibility
@@ -53,7 +53,7 @@ And gains are not linear. A lot of the early progress is your nervous system rai
 
 Age is a real factor, but it works differently than people assume. Older adults still gain range and still respond to strength work through that range (Stathokostas et al. 2012). The ceiling doesn't drop. What shifts is the climb: you add load more slowly and you rest a bit more between hard sessions, because older tissue recovers over a longer window. Most people starting later are stiffer rather than looser to begin with, so patience and a longer warm-up do more than aggressive pushing.
 
-If you are picking this up in your fifties, sixties or seventies, that is its own piece: [can you get flexible in your 50s, 60s and 70s?](/classes/2026/06/25/flexible-in-your-50s-60s-70s.html) goes into it properly. A couple of general health notes apply too. If you have had a hip or knee replacement, respect the range limits your surgeon or physio gave you and do not force the joint to its maximum depth, and if you are unsure about any of this, get it checked before you load it hard.
+If you are picking this up in your fifties, sixties or seventies, that is its own piece: [can you get flexible in your 50s, 60s and 70s?](/circus-training/2026/06/25/flexible-in-your-50s-60s-70s.html) goes into it properly. A couple of general health notes apply too. If you have had a hip or knee replacement, respect the range limits your surgeon or physio gave you and do not force the joint to its maximum depth, and if you are unsure about any of this, get it checked before you load it hard.
 
 ## What to do next
 
@@ -61,7 +61,7 @@ Here is the short version. Adults can get the splits. Aim for an active, holdabl
 
 What this article gives you is the approach, not a day-by-day routine. The actual progressions, the specific drills, how they sequence, how much for your body, are what a coach works out with you in the room, because the right dose is individual and it changes as you do. If you want to train your splits with people who coach exactly this, our [adult flexibility classes](https://aerialedge.co.uk/portfolio/circus-fitness/) are where the step-by-step progressions happen.
 
-A few related reads if you want the principles underneath this: [does stretching actually prevent injury?](/classes/2026/06/25/does-stretching-prevent-injury.html), [strength training for aerial: where beginners should start](/classes/2026/06/25/strength-training-for-aerial-beginners.html), and [can you get flexible in your 50s, 60s and 70s?](/classes/2026/06/25/flexible-in-your-50s-60s-70s.html)
+A few related reads if you want the principles underneath this: [does stretching actually prevent injury?](/circus-training/2026/06/25/does-stretching-prevent-injury.html), [strength training for aerial: where beginners should start](/circus-training/2026/06/25/strength-training-for-aerial-beginners.html), and [can you get flexible in your 50s, 60s and 70s?](/circus-training/2026/06/25/flexible-in-your-50s-60s-70s.html)
 
 ## References and further reading
 
