@@ -201,12 +201,36 @@ body.posts .modBlogPost.big p {
   background-color: transparent;
 }
 
-.modBlogPost.big h1 {
-  font-size: 4.271425rem;
+/* Blog post heading hierarchy (fix, task #1051).
+ *
+ * On a single blog post the article title renders as <h3 class="deco">
+ * (PostLayout.astro), while Markdown body sections render as <h2>/<h3>.
+ * The old rules here sized the body <h2> at 3.03rem and <h1> at 4.27rem —
+ * far larger than the ~22px title — so section headings looked bigger than
+ * the title (inverted hierarchy). Mark reported this on the 4 recent posts.
+ *
+ * Fix: a descending scale, title > h2 > h3, scoped to the single-post
+ * wrapper (.singlePost, added in PostLayout.astro). The .blog/ listing,
+ * landing pages and newsletter also use .modBlogPost, so scoping to
+ * .singlePost keeps the change to article body pages only. The title rule
+ * comes after the body rules so it wins the cascade on equal specificity.
+ */
+
+/* Body section headings (Markdown ## and ###) — clearly below the title. */
+.modBlogPost.singlePost .content h2 {
+  font-size: 1.75rem;
+  margin-top: 1.8rem;
 }
 
-.modBlogPost.big h2 {
-  font-size: 3.028575rem;
+.modBlogPost.singlePost .content h3 {
+  font-size: 1.3rem;
+  margin-top: 1.4rem;
+}
+
+/* Article title — the single largest heading on the page. */
+.modBlogPost.singlePost h3.deco {
+  font-size: 2.6rem;
+  line-height: 1.2;
 }
 
 .modBlogPost h3::after {
