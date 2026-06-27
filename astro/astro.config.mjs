@@ -4,6 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import remarkDemotePostHeadings from './src/plugins/remark-demote-post-headings.mjs';
 
 // Phase 6 (task #190) — env-driven `base` so the same codebase produces
 // either a root-mounted prod build (`base: '/'`) or a sub-path build under
@@ -38,6 +39,13 @@ export default defineConfig({
   // Output is fully static (Rochen shared hosting target).
   output: 'static',
   base: SITE_BASE,
+  // Task #1051 — demote blog-post body headings two levels (h2->h4, h3->h5)
+  // so nothing in the body outranks the <h3 class="deco"> article title.
+  // The plugin is gated on the file path, so it only touches
+  // src/content/posts/* — newsletters and landing pages are unaffected.
+  markdown: {
+    remarkPlugins: [remarkDemotePostHeadings],
+  },
   // Default `build.format: 'directory'` keeps page routes at
   // `/foo/index.html` (so URLs like `/safeguarding/` and
   // `/portfolio/<slug>/` work the way v1 served them). For the blog catch-
