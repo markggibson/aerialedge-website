@@ -2,7 +2,9 @@
 title: Aerial Silks Classes in Glasgow
 slug: silks-classes-glasgow
 category: Adult Classes
-hero_image: /assets/images/works/MOL03451.jpg
+# hero_image intentionally unset — the previous image (MOL03451.jpg) was aerial
+# STRAPS, not silks (Mark caught it 2026-06-28). Needs a confirmed aerial-silks
+# photo from the Photo Library before a hero goes back on. See cutover runbook.
 cta:
   text: Book an aerial silks class
   url: https://goteamup.com/p/3751555-aerial-edge/
