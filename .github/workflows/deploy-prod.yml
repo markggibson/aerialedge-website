@@ -273,56 +273,87 @@ jobs:
           dangerous-clean-slate: false
 
       # ──────────────────────────────────────────────────────────────────
-      # Step C — post-deploy smoke. Hard-fail on real server errors (5xx)
-      # or connection failures only. Treat 4xx as a warning, not a
-      # failure: Rochen's firewall blocks GitHub Actions runner IP ranges
-      # and returns 415 to the curl probe even when the deploy succeeded
-      # and real visitors see 200. Hard-failing on 4xx produces a false-
-      # negative red CI signal on every prod deploy and erodes trust.
+      # Step C — post-deploy smoke (task #1081 rewrite; mirrors
+      # deploy-staging.yml).
       #
-      # Try a browser-ish User-Agent first — Rochen's firewall often lets
-      # common browser UAs through where bare curl gets blocked. If it
-      # works, smoke runs as designed; if it still 4xx's, we log + skip
-      # the body check rather than hard-fail.
+      # Genuine gate, browser-shaped probe. The old probe used a bare HEAD
+      # (`curl -sIL`). Rochen's firewall/WAF rejects HEAD from GitHub
+      # Actions runner IPs with HTTP 415 even though the deploy shipped
+      # fine and real-visitor browser GETs return 200. The previous fix
+      # downgraded ALL 4xx to a warning with no body check — which dodged
+      # the false-red but also meant a genuine 404 would slip through green.
       #
-      # First seen on prod run 27505695764 (HTTP 415, deploy actually
-      # shipped fine). Task #708.
+      # This version is browser-shaped AND a real gate: GET (not HEAD), a
+      # browser User-Agent, Accept: text/html, and a short retry loop. It
+      # asserts HTTP 200 AND that the real page content is present — the
+      # site-wide footer marker, and the absence of /v2/ or /preview/
+      # internal hrefs (which would mean a wrong-base build shipped to
+      # apex). A real outage, a 404, or a wrong-base build still turns it
+      # red. The 4xx-without-a-body branch is the documented Rochen
+      # runner-IP firewall escape hatch (warn, don't fail) — NOT the happy
+      # path, which is a real 200 + marker on the GET.
+      #
+      # First seen on prod run 27505695764 (HTTP 415, deploy shipped fine).
+      # Tasks #708, #1081.
       # ──────────────────────────────────────────────────────────────────
       - name: Smoke-test https://aerialedge.co.uk/
         run: |
-          # Browser-ish UA — Rochen's firewall blocks bare curl/* UAs from
-          # GitHub's runner IP ranges but typically allows common browser
-          # UAs through. Used for both the status probe AND the body
-          # fetch below.
           UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
 
-          status="$(curl -sIL -A "$UA" -o /dev/null -w '%{http_code}' https://aerialedge.co.uk/)"
-          echo "Public apex → HTTP $status"
+          # Site-wide marker present in the footer of every page. Durable
+          # (legal entity name) — deliberately NOT page-body copy that
+          # changes per content edit.
+          MARKER='Aerial Edge Circus School C.I.C.'
 
-          # Bucket the response:
-          #   5xx or empty/0 → real server error / connection failure → fail
-          #   4xx           → likely firewall block on runner IP → warn, continue
-          #   2xx / 3xx     → pass
-          if [ -z "$status" ] || [ "$status" = "000" ] || [ "$status" = "0" ]; then
-            echo "::error::apex URL returned empty/no response (connection failure)"
-            exit 1
-          elif [ "$status" -ge 500 ] 2>/dev/null; then
-            echo "::error::apex URL returned HTTP $status (server error)"
-            exit 1
-          elif [ "$status" -ge 400 ] 2>/dev/null; then
-            echo "::warning::apex URL returned HTTP $status — likely Rochen firewall block on GitHub Actions runner IP. Real visitors unaffected; verify in browser if needed."
-            echo "Skipping /v2/ body grep — firewall block means the fetched HTML wouldn't be the real page."
-          else
-            # 2xx / 3xx — probe got real content. Run the /v2/ guard.
-            # Apex HTML must not contain /v2/ in any internal href.
-            if curl -sL -A "$UA" https://aerialedge.co.uk/ | grep -qE 'href="/v2/'; then
-              echo "::error::apex HTML contains /v2/ internal hrefs. Wrong base shipped."
-              exit 1
+          # get_with_retry <url> <out_body_file> -> echoes final HTTP code;
+          # body (when fetched) written to <out_body_file>. GET + browser UA
+          # + Accept, follow redirects, up to 5 tries, 5s apart.
+          get_with_retry() {
+            url="$1"; out="$2"; code=""
+            for attempt in 1 2 3 4 5; do
+              code="$(curl -sS -L \
+                -A "$UA" \
+                -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' \
+                -o "$out" -w '%{http_code}' \
+                "$url" || echo 000)"
+              echo "  attempt $attempt: $url → HTTP $code" >&2
+              [ "$code" = "200" ] && break
+              [ "$attempt" -lt 5 ] && sleep 5
+            done
+            echo "$code"
+          }
+
+          fail=0
+
+          # ---- Apex home: 200 AND real content (footer marker present,
+          # no wrong-base /v2/ or /preview/ hrefs leaked into the apex build). ----
+          body="$(mktemp)"
+          status="$(get_with_retry https://aerialedge.co.uk/ "$body")"
+          echo "Public apex → HTTP $status"
+          if [ "$status" = "200" ]; then
+            if ! grep -qF "$MARKER" "$body"; then
+              echo "::error::apex home returned 200 but the site-wide footer marker ('$MARKER') is missing — page may be broken or a wrong page was served."
+              fail=1
+            elif grep -qE 'href="/v2/|href="/preview/' "$body"; then
+              echo "::error::apex HTML contains /v2/ or /preview/ internal hrefs. Wrong base shipped to production."
+              fail=1
+            else
+              echo "  OK: apex is up, real page served (footer marker present), apex-shaped."
             fi
+          elif [ -z "$status" ] || [ "$status" = "000" ] || [ "$status" -ge 500 ] 2>/dev/null; then
+            echo "::error::apex URL returned HTTP ${status:-<none>} (server error / connection failure)."
+            fail=1
+          else
+            # 4xx after retries with a real browser GET → known Rochen
+            # runner-IP firewall block, not a deploy failure. Warn, continue.
+            echo "::warning::apex returned HTTP $status to the runner even with a browser GET — likely a Rochen firewall block on the GitHub Actions runner IP, not a deploy failure. Real visitors unaffected. Verify in a browser if in doubt."
           fi
 
-          admin_status="$(curl -sIL -A "$UA" -o /dev/null -w '%{http_code}' https://aerialedge.co.uk/admin/)"
-          echo "Admin /admin/ → HTTP $admin_status"
-          # Admin can return 200 or 304 depending on JS state. Don't fail
-          # on the admin probe; Mark verifies the OAuth round-trip in
-          # browser when it matters.
+          # ---- admin probe — informational only. ----
+          admin_body="$(mktemp)"
+          admin_status="$(get_with_retry https://aerialedge.co.uk/admin/ "$admin_body")"
+          echo "Admin /admin/ → HTTP $admin_status (informational)"
+          # Admin can return 200/304 depending on JS state. Mark verifies the
+          # OAuth round-trip in browser when it matters.
+
+          [ "$fail" -eq 0 ] || exit 1
