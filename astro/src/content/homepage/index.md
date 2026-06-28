@@ -25,7 +25,7 @@ about:
   image: /assets/images/AELogoGreyBadge-sm.png
 intensive:
   title: Intensive circus courses for 2026
-  body: Full-time 1-year Professional Development course, 4-month Foundation courses & 4-week Intensives; part-time Pro-Track Programme & Rigging courses; plus an annual Easter festival
+  body: Full-time 6-month Professional Development Programme, 4-month Foundation courses & 4-week Intensives; part-time Pro-Track Programme & Rigging courses; plus an annual Easter, July and October festival
   button:
     text: Learn More
     url: /portfolio/full-time-pro-training/
