@@ -2,7 +2,11 @@
 title: Aerial Rope Classes in Glasgow
 slug: rope-classes-glasgow
 category: Adult Classes
-hero_image: /assets/images/works/rope-stag-thumb.jpg
+# hero_image intentionally unset — the previous image
+# (/assets/images/works/rope-stag-thumb.jpg) shows an ex-student tagged
+# "DO NOT USE" in the photo library (consent withdrawn). Removed 2026-06-28.
+# DO NOT reuse that file. A cleared rope photo will be confirmed by Mark
+# separately — consent can't be verified from a filename.
 cta:
   text: Book an aerial rope class
   url: https://goteamup.com/p/3751555-aerial-edge/
