@@ -25,7 +25,7 @@ You’re in good hands at Aerial Edge. We have decades of high-level expertise i
 ## Dates of upcoming programmes
 
 - **[Professional Development Programme:](/professional-development-programme/)** Six months, 10am-5pm, Mon-Fri. £4,499. Two intakes a year, in March and August, alongside the Foundation Course. Apply [here](/professional-development-programme/)
-  - 10th August 2026 to 28th November 2026, then 4th January to 19th February 2027
+  - 10th August 2026 to 18th December 2026, then 4th January to 29th January 2027
   - 1st March 2027 to 19th June 2027, then 21st June to 6th August 2027
   - 9th August 2027 to 27th November 2027, then 3rd January to 18th February 2028
 - **[Foundation Course in Circus Arts:](/foundation-course/)** Four months, 10am-5pm, Mon-Fri. £2,999. Apply [here](/foundation-course/)
