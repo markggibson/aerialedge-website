@@ -30,6 +30,10 @@
 // Dedupe / safety:
 //   - Skip the infra-validation test entry (slug: 'infra-validation').
 //   - Skip entries that already exist at the destination unless --force.
+//   - Skip deliberately-deleted posts listed in scripts/newsletter-deleted-slugs.txt
+//     (task #705 — the IMAP extractor keeps re-fetching them into the corpus,
+//     so without this a re-run resurrects posts Mark removed on purpose).
+//     --force does NOT override the deleted list; edit the file to un-delete.
 //   - Validate against the Zod schema before writing.
 
 import { promises as fs } from 'node:fs';
@@ -126,13 +130,35 @@ async function pathExists(p: string): Promise<boolean> {
   }
 }
 
+const DELETED_SLUGS_FILE = path.join(__dirname, 'newsletter-deleted-slugs.txt');
+
+/**
+ * Load the deleted-posts skip list (task #705). One date-prefixed slug per
+ * line (YYYY-MM-DD-<slug>), '#' comments allowed. Missing file → empty set
+ * (fail open: worst case is the old resurrect-then-scrub behaviour, and
+ * poll.sh's post-ingest scrub still catches the two known slugs).
+ */
+async function loadDeletedSlugs(): Promise<Set<string>> {
+  try {
+    const raw = await fs.readFile(DELETED_SLUGS_FILE, 'utf-8');
+    return new Set(
+      raw
+        .split('\n')
+        .map((l) => l.trim())
+        .filter((l) => l && !l.startsWith('#')),
+    );
+  } catch {
+    return new Set();
+  }
+}
+
 interface IssueResult {
   filename: string;
   slug: string;
   year: number;
   imageCount: number;
   bytes: number;
-  status: 'wrote' | 'skipped-exists' | 'skipped-empty' | 'error';
+  status: 'wrote' | 'skipped-exists' | 'skipped-empty' | 'skipped-deleted' | 'error';
   error?: string;
 }
 
@@ -140,6 +166,7 @@ async function processIssue(
   filename: string,
   corpus: string,
   args: Args,
+  deletedSlugs: Set<string>,
 ): Promise<IssueResult> {
   const slugWithDate = filename.replace(/\.md$/, '');
   const dateMatch = slugWithDate.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)$/);
@@ -157,6 +184,18 @@ async function processIssue(
   const [, yyyy, mm, dd, slugOnly] = dateMatch;
   const year = parseInt(yyyy, 10);
   const date = `${yyyy}-${mm}-${dd}`;
+
+  // Deliberately-deleted post (task #705): never re-ingest, even with --force.
+  if (deletedSlugs.has(slugWithDate)) {
+    return {
+      filename,
+      slug: slugOnly,
+      year,
+      imageCount: 0,
+      bytes: 0,
+      status: 'skipped-deleted',
+    };
+  }
 
   // Read body.
   const bodyPath = path.join(corpus, 'bodies', filename);
@@ -271,14 +310,16 @@ async function main() {
   }
 
   const allFiles = (await fs.readdir(bodiesDir)).filter((f) => f.endsWith('.md')).sort();
+  const deletedSlugs = await loadDeletedSlugs();
   console.log(`Found ${allFiles.length} candidate body files in ${bodiesDir}`);
+  console.log(`Deleted-slug skip list: ${deletedSlugs.size} entries (${DELETED_SLUGS_FILE})`);
   console.log(`Mode: ${args.dryRun ? 'DRY RUN (no writes)' : 'LIVE'}`);
   console.log('');
 
   const results: IssueResult[] = [];
   for (const file of allFiles) {
     try {
-      const result = await processIssue(file, args.corpus, args);
+      const result = await processIssue(file, args.corpus, args, deletedSlugs);
       results.push(result);
       const tag = `[${result.status}]`.padEnd(20);
       const detail = result.error
@@ -306,6 +347,7 @@ async function main() {
   console.log(`Wrote:          ${tally('wrote')}`);
   console.log(`Skipped (exists): ${tally('skipped-exists')}`);
   console.log(`Skipped (empty source): ${tally('skipped-empty')}`);
+  console.log(`Skipped (deleted post): ${tally('skipped-deleted')}`);
   console.log(`Errors:         ${tally('error')}`);
   const totalImages = results.reduce((a, r) => a + r.imageCount, 0);
   const totalBytes = results.reduce((a, r) => a + r.bytes, 0);

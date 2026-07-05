@@ -1,0 +1,19 @@
+# newsletter-deleted-slugs.txt — posts deliberately removed from the archive.
+#
+# Task #705 (2026-07-05). The IMAP source-of-truth mailbox still holds these
+# emails, so the extractor keeps re-fetching them into the corpus. This file
+# stops the backfill scripts from re-ingesting them into the Astro archive.
+# This is the CANONICAL skip list; the DELETED_SLUGS array in
+# Team/tools/newsletter-archive-poll/poll.sh mirrors it as a belt-and-braces
+# post-ingest scrub (commits 79888cb / 4295e3b).
+#
+# Format: one date-prefixed slug per line (YYYY-MM-DD-<slug>, matching the
+# corpus bodies/ filename without .md). Lines starting with # are comments.
+#
+# To delete a post from the archive: remove its .md/.html from
+# astro/src/content/newsletter/<year>/ and its images from
+# astro/public/assets/images/newsletter/<slug>/, then add its date-prefixed
+# slug here (and mirror it into poll.sh's DELETED_SLUGS).
+
+2026-02-27-old-firm-match-traffic-delays
+2026-04-21-deadline-tomorrow
