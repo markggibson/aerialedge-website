@@ -40,6 +40,15 @@
 //   download failure, sub-5KB, beyond MAX_IMAGES_PER_EMAIL=12) have no local
 //   file and the rewriter drops the <img> tag entirely.
 //
+// Idempotency (task #710, 2026-07-05):
+//   - Entries whose <slug>.html already exists are SKIPPED (no re-sanitise,
+//     no rewrite) unless --force. Before this fix the script rewrote every
+//     entry every run; its output differed in whitespace from the committed
+//     files, so the weekly poll (Team/tools/newsletter-archive-poll/poll.sh)
+//     produced — and then had to revert — a whitespace-only diff each Monday.
+//   - All writes (html, md frontmatter, corpus manifest) only happen when the
+//     content actually changed. Run twice back-to-back → second run is a no-op.
+//
 // Usage:
 //   cd astro && npx tsx scripts/backfill-newsletter-html.ts \
 //     --corpus="/path/to/Deliverables/ae-newsletters-archive-2026-05-26" \
@@ -650,6 +659,9 @@ async function main() {
     issues: [],
   };
 
+  let skippedExists = 0; // task #710: entries left untouched because output already exists
+  let filesWritten = 0;  // actual on-disk writes this run (html + md)
+
   for (const htmlFile of htmlFiles) {
     // Slug = file basename, but the markdown bodies dropped the YYYY-MM-DD
     // prefix when copied into astro content (eg. 2026-02-21-four-fly-... →
@@ -675,8 +687,31 @@ async function main() {
       try { await fs.access(c); mdPath = c; break; } catch {}
     }
     if (!mdPath) {
-      // No matching collection entry — likely a post-snapshot broadcast.
+      // No matching collection entry — likely a post-snapshot broadcast or a
+      // deliberately-deleted post (see scripts/newsletter-deleted-slugs.txt).
       // Skip silently.
+      continue;
+    }
+
+    const htmlOutPath = mdPath.replace(/\.md$/, '.html');
+    let htmlExists = true;
+    try { await fs.access(htmlOutPath); } catch { htmlExists = false; }
+
+    if (htmlExists && !args.force) {
+      // Idempotency (task #710): output already exists — leave it alone.
+      // Only repair the md frontmatter pointer if it's missing (write-if-changed).
+      const rawMd = await fs.readFile(mdPath, 'utf-8');
+      const fm = parseFrontmatter(rawMd);
+      if (fm.fields.html_body !== `${trimmedSlug}.html`) {
+        fm.fields.html_body = `${trimmedSlug}.html`;
+        const rewritten = serializeFrontmatter(fm.fields, fm.body);
+        if (!args.dryRun && rewritten !== rawMd) {
+          await fs.writeFile(mdPath, rewritten, 'utf-8');
+          filesWritten++;
+          console.log(`${trimmedSlug.padEnd(60)} [frontmatter-repaired]`);
+        }
+      }
+      skippedExists++;
       continue;
     }
 
@@ -730,19 +765,28 @@ async function main() {
     manifest.totalImgDroppedTracking += refs.tracking;
     manifest.totalImgDroppedNoFile += refs.noFile;
 
-    // Write the sanitised HTML alongside the markdown entry.
-    const htmlOutPath = mdPath.replace(/\.md$/, '.html');
+    // Write the sanitised HTML alongside the markdown entry — but only when
+    // the content actually differs (task #710: byte-identical output must
+    // produce zero writes, so --force re-runs don't churn mtimes/diffs).
     if (!args.dryRun) {
-      await fs.writeFile(htmlOutPath, out, 'utf-8');
+      let existingHtml: string | null = null;
+      if (htmlExists) {
+        try { existingHtml = await fs.readFile(htmlOutPath, 'utf-8'); } catch {}
+      }
+      if (existingHtml !== out) {
+        await fs.writeFile(htmlOutPath, out, 'utf-8');
+        filesWritten++;
+      }
     }
 
-    // Update markdown frontmatter to point at the html sibling.
+    // Update markdown frontmatter to point at the html sibling (write-if-changed).
     const rawMd = await fs.readFile(mdPath, 'utf-8');
     const fm = parseFrontmatter(rawMd);
     fm.fields.html_body = `${trimmedSlug}.html`;
     const rewritten = serializeFrontmatter(fm.fields, fm.body);
-    if (!args.dryRun) {
+    if (!args.dryRun && rewritten !== rawMd) {
       await fs.writeFile(mdPath, rewritten, 'utf-8');
+      filesWritten++;
     }
 
     console.log(
@@ -754,20 +798,29 @@ async function main() {
     );
   }
 
+  // Task #710: only rewrite the corpus manifest when this run actually
+  // processed something. The manifest carries a generatedAt timestamp, so an
+  // unconditional write dirtied the corpus on every no-op weekly poll. Note:
+  // the manifest describes the issues PROCESSED THIS RUN (skipped-exists
+  // entries are not re-listed).
   const manifestPath = path.join(args.corpus, 'html-rewrite-manifest.json');
-  if (!args.dryRun) {
+  if (!args.dryRun && manifest.totalIssues > 0) {
     await fs.writeFile(manifestPath, JSON.stringify(manifest, null, 2), 'utf-8');
   }
 
   console.log('\n--- SUMMARY ---');
   console.log(`Issues processed:    ${manifest.totalIssues}`);
+  console.log(`Skipped (html exists): ${skippedExists}`);
+  console.log(`Files written:       ${filesWritten}`);
   console.log(`HTML in bytes:       ${(manifest.totalHtmlBytesIn / 1024).toFixed(0)} KB`);
   console.log(`HTML out bytes:      ${(manifest.totalHtmlBytesOut / 1024).toFixed(0)} KB`);
   console.log(`<img> refs total:    ${manifest.totalImgRefs}`);
   console.log(`  mapped to local:   ${manifest.totalImgMapped}`);
   console.log(`  dropped tracking:  ${manifest.totalImgDroppedTracking}`);
   console.log(`  dropped no-file:   ${manifest.totalImgDroppedNoFile}`);
-  console.log(`Manifest:            ${manifestPath}`);
+  console.log(
+    `Manifest:            ${manifest.totalIssues > 0 ? manifestPath : '(not rewritten — nothing processed)'}`,
+  );
   if (args.dryRun) console.log('(dry-run — no files written)');
 }
 
