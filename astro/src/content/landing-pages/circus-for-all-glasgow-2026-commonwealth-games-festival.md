@@ -47,3 +47,7 @@ Then you  click on each class that you want to try, and book yourself in.
 You can contact us by emailing info@contact.aerialedge.co.uk
 
 These activities really are for everyone. Whether you’re a complete beginner or simply curious to try something new, you’ll discover that this is the most fun way to get fitter and stronger in a non-competitive, non-judgemental community.
+
+<div style="text-align: center; margin-top: 40px;">
+  <img src="/assets/images/cms/glasgow-life-festival-lockup.png" alt="Commonwealth Games Festival Glasgow 2026 — presented with Glasgow Life" style="width: 100%; max-width: 480px;" loading="lazy" />
+</div>
