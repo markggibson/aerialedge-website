@@ -113,7 +113,16 @@ const landingPages = defineCollection({
     // SectionTitle smallTitle pattern, but as a single free-text string here
     // because LPs aren't taxonomised the way works are.
     category: z.preprocess(emptyToUndef, z.string().optional()),
+    // SEO fields (task #1242, 2026-07-07 — rope+silks combined LP).
+    // seo_title overrides <title>/og:title only; the on-page heading stays
+    // `title`. description feeds the meta description (Head.astro has a
+    // site-wide fallback when unset).
+    seo_title: z.preprocess(emptyToUndef, z.string().optional()),
+    description: z.preprocess(emptyToUndef, z.string().optional()),
     hero_image: z.preprocess(emptyToUndef, z.string().optional()),
+    // Alt text for hero_image (previously hard-coded to "" in
+    // LandingPageLayout). Optional — decorative heroes may stay alt="".
+    hero_alt: z.preprocess(emptyToUndef, z.string().optional()),
     cta: z.preprocess(
       emptyToUndef,
       z.object({

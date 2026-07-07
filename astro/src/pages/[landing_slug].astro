@@ -187,8 +187,11 @@ const { Content } = await render(entry);
 ---
 <LandingPageLayout
   title={entry.data.title}
+  seo_title={entry.data.seo_title}
+  description={entry.data.description}
   category={entry.data.category}
   hero_image={entry.data.hero_image}
+  hero_alt={entry.data.hero_alt}
   cta={entry.data.cta}
 >
   <Content />

@@ -55,12 +55,19 @@ export interface Props {
   description?: string;
   category?: string;
   hero_image?: string;
+  hero_alt?: string;
+  /**
+   * Optional <title>/og:title override (task #1242). The on-page headings
+   * (h2 above the hero, repeated h3) always use `title`; seo_title only
+   * changes what BaseLayout/Head emit into <head>.
+   */
+  seo_title?: string;
   cta?: { text: string; url: string };
 }
 
-const { title, description, category, hero_image, cta } = Astro.props;
+const { title, description, category, hero_image, hero_alt, seo_title, cta } = Astro.props;
 ---
-<BaseLayout title={title} description={description}>
+<BaseLayout title={seo_title ?? title} description={description}>
   <div class="full">
     <div class="row">
       <div class="large-8 columns large-centered">
@@ -78,7 +85,7 @@ const { title, description, category, hero_image, cta } = Astro.props;
     <div class="full no-padding">
       <div class="row">
         <div class="large-12 columns">
-          <img src={hero_image} alt="" width="100%" />
+          <img src={hero_image} alt={hero_alt ?? ''} width="100%" />
         </div>
       </div>
     </div>

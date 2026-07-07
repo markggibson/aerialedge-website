@@ -46,6 +46,22 @@
   # Matches /1-year-pdc and /1-year-pdc/ (with optional trailing path);
   # leading-slash anchored so it never fires under /preview/.
   RewriteRule ^1-year-pdc/?$ /professional-development-programme/ [R=301,L]
+
+  # /rope-classes-glasgow/ + /silks-classes-glasgow/ →
+  # /rope-and-silks-classes-glasgow/ (task #1242, 2026-07-07). The two
+  # single-apparatus landing pages merged into one combined rope + silks
+  # page — one destination for adverts and search, one place to book
+  # either class. These 301s preserve both pages' search rankings and
+  # any live advert links.
+  #
+  # NOTE (staging behaviour): this file also deploys to
+  # public_html/preview/.htaccess, where the pattern matches relative to
+  # /preview/ — so /preview/rope-classes-glasgow/ will 301 to the APEX
+  # /rope-and-silks-classes-glasgow/, which 404s until cutover. Harmless
+  # (preview is noindex + Mark-only) but expected during review. On apex
+  # these rules go live only when publish-to-production ships this file.
+  RewriteRule ^rope-classes-glasgow/?$ /rope-and-silks-classes-glasgow/ [R=301,L]
+  RewriteRule ^silks-classes-glasgow/?$ /rope-and-silks-classes-glasgow/ [R=301,L]
 </IfModule>
 
 # Aerial Edge cache-control policy — task #208 (2026-05-17).

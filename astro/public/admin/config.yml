@@ -168,7 +168,22 @@ collections:
         widget: string
         required: false
         hint: "Optional. Renders as a small-title line above the page title in the body column. e.g. Events, Programmes, Campaign. Leave empty to omit."
+      - name: seo_title
+        label: SEO title (browser tab / search result)
+        widget: string
+        required: false
+        hint: "Optional. Overrides the <title> tag only, e.g. 'Aerial Rope & Silks Classes in Glasgow | Aerial Edge'. The on-page heading stays the Title field."
+      - name: description
+        label: Meta description (search result snippet)
+        widget: text
+        required: false
+        hint: "Optional. 1-2 sentences shown under the page in Google. Leave empty for the site-wide default."
       - { name: hero_image, label: Hero image, widget: image, required: false }
+      - name: hero_alt
+        label: Hero image alt text
+        widget: string
+        required: false
+        hint: "Optional. Describes the hero image for screen readers and search. Leave empty for decorative images."
       - name: cta
         label: Call-to-action button
         widget: object
