@@ -10,6 +10,7 @@
 import Head from '../components/Head.astro';
 import Header from '../components/Header.astro';
 import FooterMenu from '../components/FooterMenu.astro';
+import Analytics from '../components/Analytics.astro';
 
 export interface Props {
   title?: string;
@@ -48,5 +49,9 @@ const mainClass = onepage ? 'top-shift' : '';
     </div>
 
     <FooterMenu />
+
+    {/* GA4 tag + consent banner + conversion events (task #1308).
+        Measurement ID configured in src/data/analytics.ts — one config point. */}
+    <Analytics />
   </body>
 </html>

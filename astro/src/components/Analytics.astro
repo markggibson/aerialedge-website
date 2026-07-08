@@ -1,0 +1,202 @@
+---
+// Analytics.astro — Google Analytics 4 tag + UK PECR consent + conversion
+// events (task #1308, 2026-07-08).
+//
+// Rendered once per page by BaseLayout.astro, just before </body>. The
+// measurement ID comes from src/data/analytics.ts — the single config
+// point; swapping the placeholder for the real G- ID is a one-line change
+// there and nothing here needs touching.
+//
+// Consent approach (UK PECR):
+//   • GA4 Consent Mode v2 with everything DENIED by default — no cookies
+//     are set and no device storage is touched until the visitor accepts.
+//   • A minimal first-party banner offers Accept / Decline. Accept grants
+//     analytics_storage only (ad_* stay denied — AE runs no Google Ads).
+//     The choice is remembered in localStorage.
+//   • While denied, gtag sends cookieless pings (Consent Mode "advanced"),
+//     which set nothing on the device; GA models the gaps.
+// Reasoning in full: Deliverables/google-analytics-setup-2026-07-08/HANDOVER.md
+//
+// Events (beyond automatic page_view):
+//   • book_class_click    — click on any outbound goteamup.com link (the
+//                           closest thing the site has to "started booking").
+//   • enquiry_form_start  — first interaction with a GHL form iframe
+//                           (api.aerialedge.co.uk/widget/form/...), detected
+//                           via the window-blur + activeElement trick.
+//   • enquiry_form_submit — best-effort: postMessage from the GHL iframe
+//                           that looks submit-shaped. GHL doesn't document
+//                           its embed messages, so treat as directional.
+//   • pro_course_engaged  — on pro-course pages (list in analytics.ts),
+//                           first of: 50% scroll or 20s dwell.
+import { GA4_MEASUREMENT_ID, PRO_COURSE_PATHS } from '../data/analytics';
+
+// Operational pages (admin, publish) are noise — no tag there.
+const base = import.meta.env.BASE_URL; // '/' or '/preview/'
+const pagePath = Astro.url.pathname.replace(/^\/preview(\/|$)/, '/');
+const isOperationalPage =
+  pagePath.startsWith('/admin') || pagePath.startsWith('/publish');
+
+// debug_mode on preview builds only — events then appear in GA4's
+// DebugView (Admin → DebugView) for verification without polluting
+// standard reports once the real ID is live.
+const isPreviewBuild = base === '/preview/';
+
+const gtagSrc = `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`;
+const privacyHref = `${base}privacy/`;
+---
+{!isOperationalPage && (
+  <>
+    {/* Consent defaults MUST be queued before the gtag.js library runs. */}
+    <script
+      is:inline
+      define:vars={{
+        gaId: GA4_MEASUREMENT_ID,
+        proCoursePaths: PRO_COURSE_PATHS,
+        isPreviewBuild,
+      }}
+    >
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      window.gtag = gtag;
+
+      var CONSENT_KEY = 'ae-analytics-consent';
+      var storedConsent = null;
+      try { storedConsent = localStorage.getItem(CONSENT_KEY); } catch (e) {}
+
+      // Consent Mode v2 — default everything denied. analytics_storage is
+      // granted only if the visitor accepted on a previous page.
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: storedConsent === 'granted' ? 'granted' : 'denied',
+      });
+
+      gtag('js', new Date());
+      gtag('config', gaId, isPreviewBuild ? { debug_mode: true } : {});
+
+      // ---- Consent banner wiring -------------------------------------
+      function setConsent(choice) {
+        try { localStorage.setItem(CONSENT_KEY, choice); } catch (e) {}
+        if (choice === 'granted') {
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+        }
+        var banner = document.getElementById('ae-consent-banner');
+        if (banner) banner.style.display = 'none';
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var banner = document.getElementById('ae-consent-banner');
+        if (!banner) return;
+        if (storedConsent === 'granted' || storedConsent === 'denied') return;
+        banner.style.display = 'block';
+        document.getElementById('ae-consent-accept')
+          .addEventListener('click', function () { setConsent('granted'); });
+        document.getElementById('ae-consent-decline')
+          .addEventListener('click', function () { setConsent('denied'); });
+      });
+
+      // ---- Conversion-shaped events ----------------------------------
+      // book_class_click: any click that lands on a goteamup.com link.
+      document.addEventListener('click', function (ev) {
+        var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+        if (!a) return;
+        if (/(^|\.)goteamup\.com$/.test((a.hostname || ''))) {
+          gtag('event', 'book_class_click', {
+            link_url: a.href,
+            link_text: (a.textContent || '').trim().slice(0, 100),
+            page_path: location.pathname,
+          });
+        }
+      }, true);
+
+      // enquiry_form_start: focus moving into a GHL form iframe. The
+      // iframe swallows the click, but the parent window fires `blur` and
+      // document.activeElement points at the iframe.
+      var GHL_FORM_RE = /api\.aerialedge\.co\.uk\/widget\/form\/([A-Za-z0-9]+)/;
+      var startedForms = {};
+      window.addEventListener('blur', function () {
+        var el = document.activeElement;
+        if (!el || el.tagName !== 'IFRAME') return;
+        var m = GHL_FORM_RE.exec(el.src || '');
+        if (!m || startedForms[m[1]]) return;
+        startedForms[m[1]] = true;
+        gtag('event', 'enquiry_form_start', {
+          form_id: m[1],
+          form_name: el.getAttribute('data-form-name') || el.title || '',
+          page_path: location.pathname,
+        });
+      });
+
+      // enquiry_form_submit: best-effort sniff of the GHL embed's
+      // postMessage traffic for something submit-shaped.
+      var submittedOnce = false;
+      window.addEventListener('message', function (ev) {
+        if (submittedOnce) return;
+        if (!/aerialedge\.co\.uk|leadconnectorhq\.com|msgsndr\.com/.test(ev.origin || '')) return;
+        var s = '';
+        try { s = JSON.stringify(ev.data); } catch (e) {}
+        if (s && /submit/i.test(s)) {
+          submittedOnce = true;
+          gtag('event', 'enquiry_form_submit', { page_path: location.pathname });
+        }
+      });
+
+      // pro_course_engaged: on pro-course pages, first of 50% scroll or
+      // 20 seconds on page.
+      var pagePathNorm = location.pathname.replace(/^\/preview(\/|$)/, '/');
+      if (!/\/$/.test(pagePathNorm)) pagePathNorm += '/';
+      var isProCourse = proCoursePaths.some(function (p) {
+        return pagePathNorm.indexOf(p) === 0;
+      });
+      if (isProCourse) {
+        var engaged = false;
+        function fireEngaged(trigger) {
+          if (engaged) return;
+          engaged = true;
+          window.removeEventListener('scroll', onScroll);
+          gtag('event', 'pro_course_engaged', {
+            course_path: pagePathNorm,
+            trigger: trigger,
+          });
+        }
+        function onScroll() {
+          var doc = document.documentElement;
+          var max = doc.scrollHeight - window.innerHeight;
+          if (max > 0 && window.scrollY / max >= 0.5) fireEngaged('scroll_50');
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        setTimeout(function () { fireEngaged('time_20s'); }, 20000);
+      }
+    </script>
+
+    {/* The GA4 library itself — async, so the consent queue above always wins. */}
+    <script is:inline async src={gtagSrc}></script>
+
+    {/* Minimal consent banner — hidden until the script confirms no stored choice. */}
+    <div
+      id="ae-consent-banner"
+      role="dialog"
+      aria-label="Cookie consent"
+      style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:#1b1b1b; color:#fff; padding:14px 18px; font-size:14px; line-height:1.5; box-shadow:0 -2px 10px rgba(0,0,0,.35);"
+    >
+      <div style="max-width:960px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:12px; justify-content:space-between;">
+        <span style="flex:1 1 320px;">
+          We use cookies to understand how people use this site (Google
+          Analytics — no advertising). See our
+          <a href={privacyHref} style="color:#9fd3ff; text-decoration:underline;">privacy policy</a>.
+        </span>
+        <span style="display:flex; gap:10px;">
+          <button
+            id="ae-consent-accept"
+            style="background:#e8bf3c; color:#1b1b1b; border:0; padding:8px 18px; font-size:14px; font-weight:600; cursor:pointer; border-radius:3px;"
+          >Accept</button>
+          <button
+            id="ae-consent-decline"
+            style="background:transparent; color:#fff; border:1px solid #777; padding:8px 18px; font-size:14px; cursor:pointer; border-radius:3px;"
+          >Decline</button>
+        </span>
+      </div>
+    </div>
+  </>
+)}
