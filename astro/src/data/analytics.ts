@@ -1,14 +1,15 @@
 // analytics.ts — the ONE config point for Google Analytics 4 (task #1308).
 //
-// To go live: replace the placeholder below with the real measurement ID
-// from the GA4 property (Admin → Data streams → Web → "Measurement ID",
-// shaped like G-ABC1DE2FGH). That is the only change needed — every page
-// reads this constant via src/components/Analytics.astro.
+// This is the only place the measurement ID lives — every page reads this
+// constant via src/components/Analytics.astro. To change it, edit the one
+// line below; nothing else needs touching.
 //
-// Click-by-click instructions for creating the GA4 property and reading
-// off this ID live in:
-//   Deliverables/google-analytics-setup-2026-07-08/HANDOVER.md
-export const GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+// Current ID: the web stream of the EXISTING GA4 property
+// "Aerial Edge - GA4" (property 386606284, account 21120976 —
+// www.aerialedge.co.uk, Mark's account). Reused per Mark's call
+// 2026-07-09; no new property was created.
+// Handover: Deliverables/google-analytics-setup-2026-07-08/HANDOVER.md
+export const GA4_MEASUREMENT_ID = 'G-RFN5P1P2D4';
 
 // True once the placeholder is swapped for a real ID. While false the tag
 // still loads and fires (Google serves gtag.js for any ID, and beacons are
