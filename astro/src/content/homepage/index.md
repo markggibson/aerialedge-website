@@ -77,7 +77,7 @@ program_features:
       url: https://goteamup.com/p/3751555-aerial-edge/
       target: _blank
     title: Youth Circus places now available
-    body: Class covers aerial arts, acrobatics, trampoline & juggling. Ages 1-7, 7-12 & 12-18. Term booking £12 per 90min class, drop-ins £20. Summer School 15-19 July & 5-9 August.
+    body: Class covers aerial arts, acrobatics, trampoline & juggling. Ages 1-6, 7-12 & 12-18. No terms — join anytime. Little Circus Stars (ages 1-6) £32/month, Youth Circus £48/month, drop-ins £20. August Summer Camp 3–7 August — £240 for the week or £60 per day.
     kind: callout
   - small_title: Flying Trapeze Classes
     title_lines:
