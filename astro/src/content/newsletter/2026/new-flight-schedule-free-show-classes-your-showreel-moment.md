@@ -11,7 +11,7 @@ draft: false
 - **Sent:** 2026-07-10
 - **From:** info@contact.aerialedge.co.uk
 - **Folder:** GHL-BACKFILL (never received by mailbox — see task #1441)
-- **Images saved:** 10
+- **Images saved:** 25
 - **Images dir:** `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/`
 
 ---
@@ -357,8 +357,10 @@ Tap the video on the left for a quick guide to our front door at 240 Edmiston Dr
 ## Images
 
 - `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-01.png` (56 KB) — alt: Aerial Edge, Glasgow
+- `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-02.webp` (556 KB) — alt: NO SCOREBOARD IN CIRCUS
 - `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-03.png` (13 KB) — alt: NEW AIRPORT IN GLASGOW timeline
 - `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-04.png` (18 KB) — alt: SEE IT,  LOVE IT,  DO IT timeline
+- `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-05.webp` (2006 KB) — alt: SEE IT,  LOVE IT,  DO IT
 - `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-06.png` (14 KB) — alt: FINISH ON A HIGH timeline
 - `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-07.jpg` (94 KB) — alt: FINISH ON A HIGH
 - `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-08.png` (19 KB) — alt: THE REEL REWARD timeline
@@ -366,3 +368,16 @@ Tap the video on the left for a quick guide to our front door at 240 Edmiston Dr
 - `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-10.png` (14 KB) — alt: AND THEN THE OTHER SIDE! timeline
 - `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-11.jpg` (169 KB) — alt: AND THEN THE OTHER SIDE!
 - `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-12.png` (17 KB) — alt: THE CONFIDENCE FACTORY timeline
+- `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-13.png` (8 KB) — alt: SHOP — clothing, gift vouchers and Pay It Forward
+- `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-14.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers
+- `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-15.webp` (64 KB) — alt: Aerial Edge Pay It Forward
+- `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-16.png` (678 KB) — alt: Aerial Edge clothing store
+- `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-17.png` (8 KB) — alt: SERVICES — what you can do at Aerial Edge
+- `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-18.png` (234 KB) — alt: What we offer at Aerial Edge
+- `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-19.png` (1 KB) — alt: Facebook
+- `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-20.png` (1 KB) — alt: Instagram
+- `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-21.png` (0 KB) — alt: TikTok
+- `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-22.png` (1 KB) — alt: YouTube
+- `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-23.png` (1 KB) — alt: Website
+- `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-24.jpg` (19 KB) — alt: Find us — quick video tour of the front door at 240 Edmiston Drive
+- `/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-25.png` (761 KB) — alt: Route map to Aerial Edge, 240 Edmiston Drive, Glasgow G51 2YU
