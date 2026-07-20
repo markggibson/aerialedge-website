@@ -1,0 +1,527 @@
+<div class="ae-newsletter-shell">
+<style>
+.ae-newsletter-shell{
+  --bg: #292929;
+  --gold: #edb713;
+  
+  --yellow: #edb713;
+  --text: #ffffff;
+  --text-muted: #cccccc;
+  --black: #000000;
+}
+.ae-newsletter-shell *{ box-sizing: border-box; }
+.ae-newsletter-shell{
+  margin: 0;
+  background: #1a1a1a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  line-height: 1.55;
+  font-weight: 400;
+}
+.ae-newsletter-shell .newsletter{
+  max-width: 600px;
+  margin: 6px auto 40px auto;
+  background: #292929;
+  border: 1px solid #111;
+}
+.ae-newsletter-shell .browser-link{ padding: 12px 24px; text-align: right; font-size: 11px; }
+.ae-newsletter-shell .browser-link a{ color: #cccccc; text-decoration: underline; }
+
+.ae-newsletter-shell .logo-block{ text-align: center; padding: 8px 24px 24px 24px; }
+.ae-newsletter-shell .logo-block img{ display: inline-block; max-width: 100%; width: 520px; height: auto; }
+
+.ae-newsletter-shell .hero{
+  background: #000;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .hero img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .hero-caption{
+  padding: 20px 32px 0 32px;
+  font-size: 14px;
+  color: #ffffff;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.45;
+}
+
+
+.ae-newsletter-shell .hero-carousel{
+  margin: 0;
+  background-color: #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  line-height: 0;
+  position: relative;
+}
+.ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+  
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN{
+  
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN.s1{
+  
+  opacity: 1;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-captions{
+  position: relative;
+  min-height: 0;
+  line-height: 1.45;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption{
+  display: block;
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  padding: 8px 16px 12px 16px;
+  text-align: left;
+  font-style: italic;
+  background: #000;
+  
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+  margin-top: 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0), screen and (min-resolution: 0.001dpcm) {
+  .ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+    
+    visibility: hidden;
+  }
+  .ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+  }
+}
+
+.ae-newsletter-shell .menu{ padding: 30px 32px 22px 32px; background: #292929; }
+.ae-newsletter-shell .menu-intro{ font-size: 14px; color: #ffffff; margin: 0 0 16px 0; }
+.ae-newsletter-shell .menu ul{ margin: 0; padding-left: 22px; }
+.ae-newsletter-shell .menu li{ margin: 7px 0; font-size: 14px; color: #ffffff; }
+.ae-newsletter-shell .menu li strong{ color: #edb713; font-weight: 700; }
+.ae-newsletter-shell .menu li a, .ae-newsletter-shell .menu li a:link, .ae-newsletter-shell .menu li a:visited, .ae-newsletter-shell .menu li a:hover, .ae-newsletter-shell .menu li a:active{ color: inherit; text-decoration: none; }
+
+.ae-newsletter-shell .divider{ border-top: 1px solid #edb713; margin: 16px 32px; opacity: 0.6; }
+
+
+.ae-newsletter-shell .timeline-img{ display: block; width: 100%; height: auto; margin: 0 0 20px 0; }
+
+
+.ae-newsletter-shell .timeline-fallback{
+  display: block;
+  width: 100%;
+  margin: 0 0 20px 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .timeline-fallback svg{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ae-newsletter-shell .block{ padding: 26px 32px 28px 32px; }
+.ae-newsletter-shell .block .subtitle{
+  color: #edb713;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .block h2{
+  color: #edb713;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h3{
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin: -8px 0 16px 0;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h4{
+  color: #cccccc;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 14px 0;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block blockquote{
+  margin: 0 0 14px 0;
+  padding: 10px 16px;
+  border-left: 3px solid rgba(237, 183, 19, 0.6);
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.5;
+}
+.ae-newsletter-shell .block blockquote p{ margin: 0 0 8px 0; }
+.ae-newsletter-shell .block blockquote p:last-child{ margin-bottom: 0; }
+.ae-newsletter-shell .block p{ margin: 0 0 14px 0; font-size: 15px; color: #ffffff; }
+
+.ae-newsletter-shell .block p.spacer{ margin: 0 0 14px 0; line-height: 1.55; font-size: 15px; }
+.ae-newsletter-shell .block p a, .ae-newsletter-shell .block p a:link, .ae-newsletter-shell .block p a:visited, .ae-newsletter-shell .block p a:hover, .ae-newsletter-shell .block p a:active, .ae-newsletter-shell .block li a, .ae-newsletter-shell .block li a:link, .ae-newsletter-shell .block li a:visited, .ae-newsletter-shell .block li a:hover, .ae-newsletter-shell .block li a:active{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .cta{
+  display: inline-block;
+  background: #edb713;
+  color: #000000 !important;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 25px;
+  border-radius: 0;
+  margin: 16px 0 0 0;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .cta-row{ text-align: center; }
+
+.ae-newsletter-shell .opener .subtitle{ color: #edb713; }
+.ae-newsletter-shell .opener h2{ color: #edb713; }
+.ae-newsletter-shell .opener .sign-off{
+  margin-top: 22px;
+  color: #edb713;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+
+.ae-newsletter-shell .section-band-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .section-band-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-2up{ display: table; width: 100%; table-layout: fixed; border-spacing: 0; }
+.ae-newsletter-shell .shop-2up .col{ display: table-cell; vertical-align: top; padding: 10px 20px; }
+.ae-newsletter-shell .shop-2up .col a{ display: block; line-height: 0; text-decoration: none; }
+.ae-newsletter-shell .shop-2up .col img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-heading{ padding: 0 24px; }
+.ae-newsletter-shell .shop-heading h2{
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .shop-heading p{
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  line-height: 1;
+  font-family: arial, helvetica, sans-serif;
+}
+
+.ae-newsletter-shell .full-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .full-img a, .ae-newsletter-shell .full-img > img{ display: block; line-height: 0; }
+.ae-newsletter-shell .full-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .social-row{
+  text-align: center;
+  padding: 16px 20px 20px 20px;
+  background: #292929;
+}
+.ae-newsletter-shell .social-row a{ display: inline-block; margin: 0 4px; text-decoration: none; }
+.ae-newsletter-shell .social-row img{ width: 25px; height: 25px; vertical-align: middle; border-radius: 3px; }
+
+.ae-newsletter-shell .contact-band{ padding: 4px 32px 4px 32px; }
+.ae-newsletter-shell .contact-row{ display: table; width: 100%; table-layout: fixed; }
+.ae-newsletter-shell .contact-row .col{ display: table-cell; vertical-align: top; padding: 0 8px; }
+.ae-newsletter-shell .contact-row .col-video{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-text{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-video a{ display: block; position: relative; line-height: 0; }
+.ae-newsletter-shell .contact-row .col-video img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .play-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.ae-newsletter-shell .play-overlay span{
+  display: inline-block;
+  padding: 6px 15px;
+  background: rgba(0, 173, 239, 1);
+  border-radius: 6px;
+  position: relative;
+  line-height: 0;
+}
+.ae-newsletter-shell .play-overlay span::after{
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  border-width: 9px 0 9px 18px;
+  border-color: transparent transparent transparent #ffffff;
+  vertical-align: middle;
+}
+.ae-newsletter-shell .contact-row h3{
+  color: #edb713;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.ae-newsletter-shell .contact-row p{ font-size: 13px; margin: 0 0 10px 0; color: #ffffff; line-height: 1.5; }
+.ae-newsletter-shell .contact-row a.tel{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .map-row{ padding: 20px 32px 0 32px; line-height: 0; }
+.ae-newsletter-shell .map-row img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .footer{
+  padding: 20px 24px 24px 24px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cccccc;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .footer p{ margin: 0 0 10px 0; }
+.ae-newsletter-shell .footer a{ color: #cccccc; text-decoration: underline; }
+.ae-newsletter-shell .footer .legal{ color: #cccccc; font-size: 14px; }
+
+</style>
+<div style="font-family:Roboto, Arial;font-size:14px">
+
+<div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden">PLUS Elke's fly pole, the strength vs stretch question, and why Summer Camp is the Confidence Factory</div>
+
+<div class="newsletter"><div class="browser-link"><a href="#">View this email in browser</a></div><div class="logo-block"><img src="/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-01.png" alt="Aerial Edge, Glasgow" width="520"></div>
+<div class="hero"></div>
+<div class="block opener" id="opener">
+  
+  <h2>NO SCOREBOARD IN CIRCUS</h2>
+  <h3>DOING IT JUST BECAUSE WE CAN</h3><p>The Commonwealth Games are built on competition, and this summer Glasgow will be full of it. While we're full of admiration for the Games athletes and their teams, our corner of the Games Festival celebrates physical activity just for fun of it.</p><p>Nobody wins a handstand class, and the only person you measure yourself against is the version of yourself who couldn't do the thing last week.</p><p>On Saturday 25th July we finish the run with a free show and taster classes here at the school, and I have a favour to ask: the best thing you can bring on the day is someone new.</p><p>The friend who says "I could never do that" is exactly who the tasters are for. Let them discover that feeling when "I can't" becomes "I did it".</p><p>If you fancy something for yourself, check out next week's daytime timetable – there's lots you can join. Come and play.</p><p>Mark Gibson<br>Aerial Edge Founder</p>
+  
+</div>
+<div class="divider"></div>
+<div class="menu"><p>To make life easier, you can use this menu to go direct to articles. Above each section, you'll find a timeline of relevant dates, and there are direct booking links throughout.</p><ul><li><a href="#section-events"><strong>Events:</strong> Summer Festival + Commonwealth Games Festival</a></li><li><a href="#section-workshops"><strong>Workshops:</strong> Elke's Fly Pole Sessions + Acro jam</a></li><li><a href="#section-courses"><strong>Courses:</strong> Why You Need a Showreel </a></li><li><a href="#section-classes"><strong>Classes:</strong> Strength vs Stretching + Nea on symmetry + National Skive for Circus Week</a></li><li><strong>Rigging:</strong> Is IRATA worth it for circus riggers?</li><li><a href="#section-youth"><strong>Youth Circus:</strong> Summer Camp — the Confidence Factory</a></li><li><a href="#section-shop"><strong>Store:</strong> Buy clothing, gift vouchers and Pay It Forward</a></li><li><a href="#section-services"><strong>Our services for you:</strong> </a></li><li><a href="#section-contact"><strong>Contact us:</strong> </a></li></ul></div><div class="divider"></div>
+<img class="timeline-img" id="section-events" src="/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-03.png" alt="NEW AIRPORT IN GLASGOW timeline">
+<div class="hero"></div>
+<div class="block events" id="block-events">
+  
+  <h2>NEW AIRPORT IN GLASGOW</h2>
+  <h3>FOUR WAYS TO TAKE OFF: DESTINATION UNKNOWN</h3><p>Big news for Scottish aviation. From Friday 17 to Sunday 19 July, Glasgow has a second airport. It's at 240 Edmiston Drive, the departures board reads flying trapeze, cradle, teeterboard and the fabulous acrobatic bar.</p><p>That's the whole idea of the Summer Festival: four circus arts that belong together because they all feature a take-off.</p><p>Flying trapeze is the scheduled service you already know. Teeterboard is a seesaw with ambition — when someone is landing at one terminal, someone else is taking off from the other terminal.</p><p>The acrobatic bar is a long, thin, flexy plank that you stand on, while it's balanced on the shoulders of two bases. When you've boarded properly, it fires you skyward.</p><p>And cradle is the one you know, but need to do more of. Sometimes you fly to the catcher who's hanging by their knees, arms out, ready for you. It's the closest thing circus has to being met at arrivals. And sometimes you take off from the cradle itself while holding tight to the catcher.</p><p>We've scheduled the new flights around the flying trapeze classes you already enjoy on Fridays and Sundays.</p><p>Your aerial multi-class pass is your boarding pass. It gets you into any festival session. Want the full itinerary, Friday night through Sunday? The All Access Festival Pass covers all ten workshops at £15 each — business class at budget prices.</p><p>The Acro Jam runs all day Saturday, free for anyone on a festival workshop. Think of it as the departure lounge, except fun.</p><p>From this airport, every flight leaves exactly on time. Where it goes is up to you. </p><p class="spacer">&nbsp;</p><p><strong>Summer Festival</strong><br>Friday 17th July til Sunday 19th<br>Drop-in £25 per workshop or do 10 for £15 each. Aerial multi-class passes can be used.</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/b880c362012?contactId={{contact.id}}&amp;startdate=2026-07-13&amp;enddate=2026-07-19&amp;venues=&amp;category=&amp;instructors=&amp;offering_types=&amp;age_restrictions=&amp;date=2026-07-13&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Clear your diary for take-off: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-shows" src="/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-04.png" alt="SEE IT,  LOVE IT,  DO IT timeline">
+<div class="hero"></div>
+<div class="block shows" id="block-shows">
+  
+  <h2>SEE IT,  LOVE IT,  DO IT</h2>
+  <h3>COMMONWEALTH GAMES FESTIVAL FREE SHOW + TASTER CLASSES</h3><p>This summer we let circus out to play. Three times it went roaming through Glasgow's shopping centres, from Govan Cross and beyond – and last week we rocked up to Silverburn shopping mall.</p><p>Now we're turning the whole thing around. Glasgow is invited to ours.</p><p>For the grand finale of our Commonwealth Games Festival events, we're staging a free show here at Aerial Edge, and the cast is the school's entire family tree – instructors, graduates of our full-time courses, adult students who train in the evenings, and Youth Circus students.</p><p>When the show ends, the performers head for the teaching floor, where they and others from the Aerial Edge instructor team will run free 30-minute taster classes for everyone aged 7 and up. Under-7s are very welcome to come and watch, and to start plotting.</p><p>The whole idea behind our Circus For All events has been simple – get close enough and you realise ordinary people are doing this, so you could too.</p><p>That's what happened big-time at Silverburn, the last of our pop-up events in the wild. When spectators see kids launching themselves into the activities, they think it's just for kids...but the temptation gets the better of them, and they join in too. Quite right!</p><p>So bring friends. These Commonwealth Games Festival events are to encourage new people to give it a go.</p><p>It's worth considering as you watch the show on the 25th, that every single one of the performers started out in an audience, watching somebody else fly.</p><p>One word to the wise. Taster places can be booked in advance, and they will be. You may come as a spectator and decide on the day you want to try it, but by then the spots may be spoken for. If someone you know has spent years wondering whether circus is for them, bring them — and book their place before somebody quicker does.</p><p class="spacer">&nbsp;</p><p><strong>Commonwealth Games Festival</strong><br>Saturday 25th July<br>Free show 1pm-2pm, all ages welcome<br>30-minute taster classes, ages 7-70+</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/02b19d0b1a8?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Circus For All: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-workshops" src="/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-06.png" alt="FINISH ON A HIGH timeline">
+<div class="hero"><img src="/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-07.jpg" alt="FINISH ON A HIGH"></div>
+<div class="block workshops" id="block-workshops">
+  
+  <h2>FINISH ON A HIGH</h2>
+  <h3>ELKE'S SAVING THE BEST TILL LAST: DO IT WITH HER</h3><p>Collect moves all day, then find out what they're for. That's the shape of Elke's fly pole day tomorrow – three technique workshops through the day, then a choreography session at 3pm that ties everything you've just learned into something worth watching.</p><p>It starts on the floor with pendulum swings, lunges and the odd gentle backbend, then heads up into the air, using music to stitch simple spins and mounts into longer, smoother phrases. Even if you only have a handful of moves Elke says this choreo class will be what makes the fly pole yours.</p><p>She should know. She spends most of her year pole dancing on tour with Steel Panther, performing at festivals with her show The Living Ecosystem, and her stated mission for 2026 is to get creative. That energy comes to class with her.</p><p>Come for the tricks, stay for the tune.</p><p class="spacer">&nbsp;</p><p><strong>Elke's Fly Pole Workshops</strong><br>Saturday 11th July<br>Advanced: 10am-11.30am<br>Intermediate: 11.30am-1pm<br>Beginner: 1.30pm-3pm<br>Choreo: 3pm-4.30pm</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/38f6203b33b?contactId={{contact.id}}&amp;startdate=2026-06-29&amp;enddate=2026-08-02&amp;venues=&amp;category=&amp;instructors=&amp;offering_types=&amp;age_restrictions=&amp;date=2026-07-06&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Find your flow: book here</a></div>
+</div>
+<div class="divider"></div>
+
+
+
+<div class="block workshops" id="block-workshops-95d92d">
+  
+  <h2>PLAY WITH PROGRESS</h2>
+  <h3>BONUS ACRO JAM</h3><p>Acro jam is what happens when people show up to train, play together, and push each other's edges without a class structure.</p><p>Since bookings didn't reach the minimum number for tomorrow's jam, it's cancelled – all the more reason to come to the Aerial Edge Summer Festival next week.</p><p>After all, it's all day and it's free if you're coming to any of the Summer Festival workshops.</p><p>Come for the training, stay for the partnership magic, and leave with a smile of satisfaction.</p><p class="spacer">&nbsp;</p><p><strong>Acro Jam</strong><br>Bonus free jam: All day at Summer Festival weekend 18th July<br>Cost: Free with any workshop, or £12 per 3-hour session</p>
+  
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-courses" src="/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-08.png" alt="THE REEL REWARD timeline">
+<div class="hero"><img src="/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-09.jpg" alt="THE REEL REWARD"></div>
+<div class="block courses" id="block-courses">
+  
+  <h2>THE REEL REWARD</h2>
+  <h3>WHY TO DO OUR NEW 6-MONTH COURSE</h3><p>You can try to tell people what you do in the air, or you can show them a couple of minutes of film that says it for you.</p><p>That's how the Professional Development Programme ends – with a professionally shot showreel, the kind you send to directors, degree course admissions panels, anyone you'd actually like to work with...not to mention friends and family.</p><p>Here's the shape of the six months:</p><ul><li>The first four are the Foundation Course, building your range across apparatus. You'll perform in Open Rig Night within the first two months, and an ensemble production with a professional director at the end.</li><li>The final two are where it turns into something more rare. You return to your own solo work, with your expanded experience, and as you refine your physical skills, you work with experts in act creation, character, lighting, projection and more, until what you've got is an act, ready to be filmed properly and turned into a showreel.</li></ul><p>Those two months cover the things most performers are left to work out alone. What turns tricks into work is everything around them...how an act is built, how it looks under lights, who you are while you're doing it.</p><p>Circus degrees save this material for the final year. Here, it's two focused months with Gabriel Stella and his cameras waiting at the end. You leave holding the proof.</p><p class="spacer">&nbsp;</p><p><strong>Also starting 10 August</strong></p><ul><li>The Foundation Course: four months across multiple apparatus, for building your training from the ground up or finding breadth before you choose a specialism. </li><li>The Four-Week Circus Intensive, which gives you four weeks of full-time training across multiple disciplines – long enough to learn a lot and perhaps see a favourite emerging.</li></ul>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/8e2f23de7a1?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Choose your future: find out more here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-classes" src="/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-10.png" alt="AND THEN THE OTHER SIDE! timeline">
+<div class="hero"><img src="/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-11.jpg" alt="AND THEN THE OTHER SIDE!"></div>
+<div class="block classes" id="block-trapeze">
+  
+  <h2>AND THEN THE OTHER SIDE!</h2>
+  <h3>NEA ON SILKS, ROPE, AND WHY 'I CAN'T' NEVER LASTS LONG</h3><p>People tell Nea they can't do rope or silks all the time. It's one of her favourite parts of teaching, because it usually stops being true fast. "Sometimes within the same class, even," she says.</p><p>The secret, she says, is that there's no single way up. "It's all about picking the right progressions and cues for each person, and that's what I enjoy about teaching. I don't always get it right, but I do try my best to find what works for everyone."</p><p>Her classes are built on strong basics, with conditioning woven through every session, and on rope especially she loves teaching dynamics. "They can be tricky to begin with, but once they start making sense they open so many doors. They also make you feel really cool, especially when you get your first release-catch trick."</p><p>If open level classes have ever felt intimidating, watching what everyone else is working on, Nea reads the room the other way round. "The teachers and regulars know how hard the moves you're learning are, and they're just as excited to see the progress you're making. If not more, especially when it comes to me."</p><p>You don't need to arrive strong either. Building strength outside class helps movement in the air feel easier and keeps injuries away, but Nea says: "You don't need much to start off with – it comes with practice". Most people feel stronger and more confident sooner than they expect.</p><p>One warning before you book. Everything in Nea's classes happens twice...you may get bored of hearing "and then the other side!" very quickly. But your left side will thank her eventually!</p><p class="spacer">&nbsp;</p><p><strong>Silks and rope</strong><br>Dedicated classes Tuesday, Wednesday, Sunday, plus look out for the variable weekday daytime schedule. Rope and silks often feature in mixed aerial classes on Mondays and Sundays</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/9e647d33ba9?contactId={{contact.id}}&amp;startdate=2026-06-29&amp;enddate=2026-08-02&amp;venues=&amp;category=&amp;instructors=&amp;offering_types=&amp;age_restrictions=&amp;date=2026-07-13&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Prove yourself wrong: book here</a></div>
+</div>
+<div class="divider"></div>
+
+
+
+<div class="block classes" id="block-classes">
+  
+  <h2>STRENGTH OR STRETCH TO PREVENT INJURY?</h2>
+  <h3>AND OTHER QUESTIONS YOUR BODY KEEPS ASKING</h3><p>How best to prevent injury is the kind of question in a training space that can start a hotter debate than politics at an activist rally. Ask ten circus artists and you could get ten different answers, usually delivered with some conviction.</p><p>We won't subject you to clickbait frustration, so here's the answer: strength wins.  Mark's been digging into the research — large-scale reviews covering thousands of participants. Stretching alone, for all the hours we may lovingly give it, does less for injury prevention than you might think, but it's still an integral part of a good programme.</p><p>Mark's new blog tells you how big the strength effect actually is, what kind of strength work counts, where stretching earns its keep in your training...and one finding that will annoy anyone who trains to failure.</p><p>Worth a read. Ideally before your next warm-up.</p><p><strong>Circus Fitness stretch &amp; strength options</strong><br>Aerial Conditioning Tuesdays 10am-11am, Thursdays 6pm-7pm<br>Flexibility: Mondays and Fridays 6pm-7pm<br>Check the daytime schedule each week for other classes<br>£10 drop-in or £7.50 with an 8-class pass</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/f6d3aa1818e?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Train smart: read the article here</a></div>
+</div>
+<div class="divider"></div>
+
+
+<div class="hero"><img src="/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-01.png" alt="NATIONAL SKIVE FOR CIRCUS WEEK"></div>
+<div class="block classes" id="block-classes-b65226">
+  
+  <h2>NATIONAL SKIVE FOR CIRCUS WEEK</h2>
+  <h3>WEEKDAY DAYTIME CLASSES ALL NEXT WEEK</h3><p>We've checked the calendar and can confirm that next week is National Skive For Circus Week. It's a very new tradition – this is the first one – and we're marking it with a full daytime timetable.</p><p>Whether you work shifts, work from home, work for yourself, are off for the summer, or can engineer a legendary lunch break, there's a way in. Come for one class or stack a whole day of them.</p><p>See the full timetable above, and celebrate accordingly – traditions don't establish themselves.</p><p class="spacer">&nbsp;</p><p><strong>Daytime classes</strong><br>Monday 13-Friday 17 July from 10am<br>Bookable with your multi-class pass or drop-in rate</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/60f39af6fd3?contactId={{contact.id}}&amp;startdate=2026-07-13&amp;enddate=2026-07-19&amp;venues=&amp;category=&amp;instructors=&amp;offering_types=&amp;age_restrictions=&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Skive responsibly: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<span id="section-events"></span>
+
+<div class="block events" id="block-rigging">
+  
+  <h2>IS IRATA WORTH IT FOR CIRCUS RIGGERS?</h2>
+  <h3>PROFESSIONAL RIGGING CERTIFICATION, DECODED</h3><p>It's been a while since we mentioned circusrigging.info, so a quick reintroduction is in order.</p><p>It's our sister site, where Mark and other experts write about the technical skills that keep circus in the air.</p><p>There's plenty on there that's free to read, because safety standards hold up only as well as the information behind them, and good information should be easy to find. The more technical info is available for a very small subscription fee (£5 per month or £50 a year).</p><p>The latest article takes on a question working riggers often ask themselves: is IRATA – the industrial rope access certification – worth it for circus?</p><p>And, so you're not left dangling, here's the answer: yes, for part of the job.</p><p>IRATA teaches you to work safely on ropes at height, using doubled-up rope systems where no single failure can hurt you, and it teaches that very well. What it doesn't teach is how to rig a circus act – performer loads, shock loading, apparatus. You need to learn that separately.</p><p>The full article gives you the lowdown on what each of the three IRATA levels actually covers, what a Level 1 course costs, the 1,000-hour catch people don't mention upfront, and the safety statistic that explains why industry swears by the two-rope system.</p><p>If rigging is any part of your circus life, give it a read.</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/25cba35bf7e?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Rig it right: read here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-youth" src="/assets/images/newsletter/new-flight-schedule-free-show-classes-your-showreel-moment/img-12.png" alt="THE CONFIDENCE FACTORY timeline">
+
+<div class="block youth" id="block-youth">
+  
+  <h2>THE CONFIDENCE FACTORY</h2>
+  <h3>WHAT YOUTH CIRCUS SUMMER CAMP QUIETLY BUILDS</h3><p>If you could stand at the back of the room on Monday and again on Friday, you'd see it. On Monday, someone hesitates at the bottom of the silks. By Friday, they're negotiating for one more go. A trick that looked impossible on day one has become part of the warm-up, and a kid who arrived a little unsure is standing a little taller.</p><p>That's why we've nicknamed Summer Camp The Confidence Factory. You won't find confidence classes anywhere on the timetable – we teach climbs, catches, balances and drops. Confidence is what gets made while they're busy having fun.</p><p>Sure, it's to do with the hours in the air, but it's also to do with the 'have a go' spirit when young people get together in a room full of possibilities, and the freedom to approach the task in the way that works best for them.</p><p>They notice that people go about things in different ways, and that it's not just okay, it's encouraged. It's not an 'anything goes' situation because safety comes first, so they learn how to assess risk - that's another thing that doesn't show up on a standard curriculum.</p><p>The Confidence Factory opens on Monday, with just a few spots left. Just as well there's another camp week from August 3rd – and by August, a summer's worth of energy will need somewhere to go.</p><p>If you'd like the fuller case for what circus builds – the coordination, the resilience, the knack of trying again – see <a href="https://api.aerialedge.co.uk/email-tracking/a4a13f41986?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">this blog.</a></p><p class="spacer">&nbsp;</p><p><strong>Youth Circus Summer Camp (ages 7-18)</strong><br>Monday 13-Friday 17 July<br>Monday 3-Friday 7 August<br>10am-4pm daily<br>£60 per day, or £240 for the week – that's five days for the price of four</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/3e2573c765c?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Clock them in: book here</a></div>
+</div>
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-shop">
+  
+</div>
+
+
+<div class="shop-2up">
+  <div class="col">
+    <a href="https://api.aerialedge.co.uk/email-tracking/a7604d9e4bb?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+      
+    </a>
+  </div>
+  <div class="col">
+    <a href="https://api.aerialedge.co.uk/email-tracking/bc130318b2c?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+      
+    </a>
+  </div>
+</div>
+
+
+<div class="shop-heading">
+  <h2>TAP IMAGE TO BUY YOUR GOODIES</h2>
+  <p>EACH IMAGE HAS A SEPARATE LINK</p>
+</div>
+
+
+<div class="full-img">
+  <a href="https://api.aerialedge.co.uk/email-tracking/bc130318b2c?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+    
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-services">
+  
+</div>
+
+
+<div class="full-img">
+  <a href="https://api.aerialedge.co.uk/email-tracking/5ad06cb0060?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+    
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="social-row">
+  <a href="https://api.aerialedge.co.uk/email-tracking/7511056826c?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/619765796ac?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/e5f5788559d?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/90bfeae0700?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/5ad06cb0060?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"></a>
+</div>
+
+
+<div class="contact-band" id="section-contact">
+  <div class="contact-row">
+    <div class="col col-video">
+      <a href="https://api.aerialedge.co.uk/email-tracking/80caa490d8b?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing">
+        
+        <span class="play-overlay"><span></span></span>
+      </a>
+    </div>
+    <div class="col col-text">
+      <h3>How To Get In Touch With Us</h3>
+      <p>The best ways to talk to us are through email and text on <a class="tel" href="tel: 447414438501">(+44) 07414 438 501</a> — or just drop in and have a coffee in reception.</p>
+      <p>We monitor social media DMs too, they just might not be answered as quickly.</p>
+      <p>Tap the video on the left for a quick guide to our front door at 240 Edmiston Drive, Glasgow G51 2YU.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="map-row">
+  
+</div>
+
+
+<div class="footer">
+  <div class="legal">
+    <em>Copyright © 2026&nbsp; Aerial Edge, All rights reserved.</em><br><br>
+    <strong>Our e-mail address is:</strong><br>
+    <a href="mailto:info@aerialedge.co.uk">info@aerialedge.co.uk</a><br><br>
+    Want to change how you receive these emails?<br>
+    You can <a href="https://api.aerialedge.co.uk/email-tracking/3c03a9e1e2c?contactId={{contact.id}}&amp;email=PREVIEW%40aerialedge.co.uk&amp;utm_source=email&amp;utm_medium=email marketing">unsubscribe from this list</a>.
+  </div>
+</div>
+</div>
+
+</div>
+</div>
