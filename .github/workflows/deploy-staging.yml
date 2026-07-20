@@ -170,6 +170,33 @@ jobs:
           # with the workflow if server-dir is ever changed. assets/ and
           # newsletter/ are omitted for the same reason as deploy-prod.yml —
           # they are build-owned paths the upload must be free to write.
+          #
+          # CORRECTION (task #1449, 2026-07-20): "technically inert" above is
+          # WRONG for the slash-less patterns, and that misreading is what
+          # let this bug survive a month. The exclude set filters the LOCAL
+          # file list (applyExcludeFilter runs over dist/ before anything is
+          # uploaded) — it is NOT a remote-path guard. So it bites here
+          # exactly as hard as it does on prod, regardless of server-dir.
+          # The dir-shaped patterns (preview/**, sites/** …) are inert
+          # because dist/ contains no such dirs; the FILE-shaped ones are
+          # very much live.
+          #
+          # ─── THE BASENAME TRAP ────────────────────────────────────────────
+          # multimatch(path, filters, { matchBase: true, dot: true }) matches
+          # a slash-less pattern against the BASENAME at ANY DEPTH. Bare
+          # `feed.xml` — meant for v1's leftover ROOT feed — also blocked
+          # dist/newsletter/feed.xml, so the newsletter RSS feed built on
+          # every run and never deployed (404 on preview and apex alike,
+          # 2026-06-16 → 2026-07-20). Anchoring is impossible: matchBase is
+          # hard-coded on, and any slash-containing pattern fails to match
+          # the root-relative path 'feed.xml', dropping root protection.
+          # The negated re-include below is the only fix that unblocks the
+          # build-owned feed with root protection untouched.
+          #
+          # /!\ ADD ANOTHER FEED AT DEPTH (e.g. blog/feed.xml) AND YOU MUST
+          # ADD A MATCHING `!<path>` LINE OR IT WILL BUILD AND NEVER DEPLOY.
+          # Keep in sync with deploy-prod.yml.
+          # ──────────────────────────────────────────────────────────────────
           exclude: |
             **/.DS_Store
             **/._*
@@ -196,6 +223,7 @@ jobs:
             cgi-bin/**
             .well-known/**
             .ftpquota
+            !newsletter/feed.xml
 
       # ──────────────────────────────────────────────────────────────────
       # Step B — Sveltia CMS-uploaded media sync.

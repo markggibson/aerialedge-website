@@ -177,6 +177,42 @@ jobs:
           # the hardened script's PROTECTED_PATHS/ASTRO_OWNED_TOPLEVEL predate
           # the newsletter build section and need the same reconciliation —
           # see runbook.)
+          #
+          # ─── THE BASENAME TRAP (task #1449, fixed 2026-07-20) ─────────────
+          # The four v1 root-file patterns below (feed.xml, manifest.json,
+          # favicon.ico, browserconfig.xml) are matched by
+          # @samkirkland/ftp-deploy's applyExcludeFilter() via
+          # multimatch(path, filters, { matchBase: true, dot: true }).
+          # `matchBase: true` means a pattern WITHOUT a slash is matched
+          # against the BASENAME of every path, AT ANY DEPTH. So the bare
+          # `feed.xml` entry — intended only for v1's leftover ROOT feed —
+          # also silently blocked dist/newsletter/feed.xml from 2026-06-16
+          # (#745) until 2026-07-20. The newsletter RSS feed built correctly
+          # on every run and never once deployed: 404 on apex and preview.
+          #
+          # Anchoring these four to the root is NOT possible here: matchBase
+          # is hard-coded on, and any pattern containing a slash
+          # ('./feed.xml', '/feed.xml') fails to match the root-relative path
+          # 'feed.xml' — which would silently DROP the root-file protection
+          # altogether (verified against the library, 2026-07-20). A negated
+          # re-include is therefore the only fix that unblocks the
+          # build-owned feed while leaving root protection exactly as it was.
+          #
+          # /!\ IF YOU EVER ADD ANOTHER FEED AT DEPTH (e.g. blog/feed.xml),
+          # YOU MUST ADD A MATCHING `!<path>` LINE BELOW OR IT WILL BUILD
+          # FINE AND NEVER DEPLOY. Same for any nested manifest.json,
+          # favicon.ico or browserconfig.xml.
+          #
+          # Verified 2026-07-20 against the real dist/ tree (1475 entries):
+          # adding the negation uploads exactly ONE additional file,
+          # newsletter/feed.xml, and removes nothing. Every co-tenant path
+          # and all four root files stay excluded.
+          #
+          # NB the equivalent fix in deploy-prod.sh / deploy-staging.sh uses
+          # an ANCHORED REGEX instead (lftp --exclude '^feed\.xml$'), because
+          # lftp CAN anchor where multimatch cannot. Different technique,
+          # identical effect. Keep the two in sync.
+          # ──────────────────────────────────────────────────────────────────
           exclude: |
             **/.DS_Store
             **/._*
@@ -203,6 +239,7 @@ jobs:
             cgi-bin/**
             .well-known/**
             .ftpquota
+            !newsletter/feed.xml
 
       # ──────────────────────────────────────────────────────────────────
       # Step B — vendored-JS root-asset sync (carries forward from
