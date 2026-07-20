@@ -16,16 +16,21 @@ Trapeze is one of the most rewarding ways to get fit you'll ever try. You don't 
 
 Aerial Edge is a not-for-profit circus school in Glasgow with students from age one to people in their seventies. Whatever your starting point, there's a place for you in the air.
 
-##### The class to book
+##### The classes to book
 
 **Static Trapeze — Wednesdays, 7:00pm**
 An open-level class on the still bar with Freya Morton — beginners welcome, and more experienced students will be pushed too. Learn balances, drops and shapes, and build trapeze skills at your own pace.
 
 <a href="https://goteamup.com/p/3751555-aerial-edge/" target="_blank" class="button small">Book Static Trapeze (Wed 7pm)</a>
 
+**Static & Doubles Trapeze — Sundays, 4:00pm** (first class 26 July 2026)
+A weekly class with Mark that runs static solo and doubles trapeze side by side. You don't need a partner — bring one if you've got one (be prepared to share), or train static solo. Nobody has to pair up who doesn't want to. Drop-in £25, or £17 on an aerial 8-class pass.
+
+<a href="https://goteamup.com/p/3751555-aerial-edge/" target="_blank" class="button small">Book Static & Doubles Trapeze (Sun 4pm)</a>
+
 ##### How booking works
 
-The button takes you to TeamUp, our booking system. Open the **Schedule** tab, find the class on Wednesday at 7:00pm, and book your spot. You can pay as a drop-in or with a class pass.
+Either button takes you to TeamUp, our booking system. Open the **Schedule** tab, find the class you want — Wednesday at 7:00pm or Sunday at 4:00pm — and book your spot. You can pay as a drop-in or with a class pass.
 
 ##### Questions?
 

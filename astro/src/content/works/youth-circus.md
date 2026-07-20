@@ -69,7 +69,7 @@ Children will enjoy activities involving silks and silks hammocks in ways that t
 
 <p>Young children create pathways along their nervous systems to their brains which are essential for the normal progression of coordination, balance, concentration and more. The variation of circus activities and the inherent fun of them is ideal for stimulating these pathways to help them develop properly. </p>
 
-### Youth Circus Holiday Schools (ages 7+)
+### Youth Circus Holiday Camps (ages 7+)
 Looking to banish boredom during school breaks? We've got just the thing! Aerial Edge Youth Circus holiday camps – each one is five full days of high-flying fun and epic excitement!
 
 Even if you’ve never tried circus arts before, you’ll dive headfirst into the world of aerial and acrobatic skills, along with tightwire, trampoline, object manipulation and more.
@@ -78,15 +78,13 @@ Anyone who’s got experience of circus training will confirm that giving it com
 You can book individual days but there’s a sweet discount when you book all five, you get a day for free.
 As always at Aerial Edge, the emphasis is on fun – learning techniques is something that happens as you whizz through each day with flying trapeze, static trapeze, aerial rope, silks and hoop, trampoline, tumbling, acrobatic balancing of people pyramids, and more.
 
-Our holiday schools run from 10am to 4pm each day and on the last day we have showing from 3-4pm of what we've been working onduring the week.
+Our holiday camps run from 10am to 4pm each day and on the last day we have showing from 3-4pm of what we've been working on during the week.
 
 It’s never mundane – this is where happy memories are made.
 And the best part? Everyone goes home tired, guaranteeing a good night's sleep. Let the adventures begin!
 
-Our holiday schools are for ages 7-18 years
+Our holiday camps are for ages 7-18 years
 
-Our next holiday schools:
-- Youth Circus Easter School: 7th to 11th April 2025
-- Youth Circus Summer School 1: 14th to 18th July 2025 **- £220 for 5 days, or £60/day**
-- Youth Circus Summer School 2: 4th to 8th August 2025 **- £220 for 5 days, or £60/day**
-- Youth Circus October School: 13th to 17th October 2025 **- £220 for 5 days, or £60/day**
+Our next holiday camps:
+- August Summer Camp: 3rd to 7th August 2026 **- £60 per day, or £240 for all five days (book all five and one day is free)**
+- Youth Circus Camp (October half-term): 12th to 16th October 2026
