@@ -1,0 +1,545 @@
+<div class="ae-newsletter-shell">
+<style>
+.ae-newsletter-shell{
+  --bg: #292929;
+  --gold: #edb713;
+  
+  --yellow: #edb713;
+  --text: #ffffff;
+  --text-muted: #cccccc;
+  --black: #000000;
+}
+.ae-newsletter-shell *{ box-sizing: border-box; }
+.ae-newsletter-shell{
+  margin: 0;
+  background: #1a1a1a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  line-height: 1.55;
+  font-weight: 400;
+}
+.ae-newsletter-shell .newsletter{
+  max-width: 600px;
+  margin: 6px auto 40px auto;
+  background: #292929;
+  border: 1px solid #111;
+}
+.ae-newsletter-shell .browser-link{ padding: 12px 24px; text-align: right; font-size: 11px; }
+.ae-newsletter-shell .browser-link a{ color: #cccccc; text-decoration: underline; }
+
+.ae-newsletter-shell .logo-block{ text-align: center; padding: 8px 24px 24px 24px; }
+.ae-newsletter-shell .logo-block img{ display: inline-block; max-width: 100%; width: 520px; height: auto; }
+
+.ae-newsletter-shell .hero{
+  background: #000;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .hero img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .hero-caption{
+  padding: 20px 32px 0 32px;
+  font-size: 14px;
+  color: #ffffff;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.45;
+}
+
+
+.ae-newsletter-shell .hero-carousel{
+  margin: 0;
+  background-color: #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  line-height: 0;
+  position: relative;
+}
+.ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+  
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN{
+  
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN.s1{
+  
+  opacity: 1;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-captions{
+  position: relative;
+  min-height: 0;
+  line-height: 1.45;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption{
+  display: block;
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  padding: 8px 16px 12px 16px;
+  text-align: left;
+  font-style: italic;
+  background: #000;
+  
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+  margin-top: 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0), screen and (min-resolution: 0.001dpcm) {
+  .ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+    
+    visibility: hidden;
+  }
+  .ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+  }
+}
+
+.ae-newsletter-shell .menu{ padding: 30px 32px 22px 32px; background: #292929; }
+.ae-newsletter-shell .menu-intro{ font-size: 14px; color: #ffffff; margin: 0 0 16px 0; }
+.ae-newsletter-shell .menu ul{ margin: 0; padding-left: 22px; }
+.ae-newsletter-shell .menu li{ margin: 7px 0; font-size: 14px; color: #ffffff; }
+.ae-newsletter-shell .menu li strong{ color: #edb713; font-weight: 700; }
+.ae-newsletter-shell .menu li a, .ae-newsletter-shell .menu li a:link, .ae-newsletter-shell .menu li a:visited, .ae-newsletter-shell .menu li a:hover, .ae-newsletter-shell .menu li a:active{ color: inherit; text-decoration: none; }
+
+.ae-newsletter-shell .divider{ border-top: 1px solid #edb713; margin: 16px 32px; opacity: 0.6; }
+
+
+.ae-newsletter-shell .timeline-img{ display: block; width: 100%; height: auto; margin: 0 0 20px 0; }
+
+
+.ae-newsletter-shell .timeline-fallback{
+  display: block;
+  width: 100%;
+  margin: 0 0 20px 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .timeline-fallback svg{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ae-newsletter-shell .block{ padding: 26px 32px 28px 32px; }
+.ae-newsletter-shell .block .subtitle{
+  color: #edb713;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .block h2{
+  color: #edb713;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h3{
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin: -8px 0 16px 0;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h4{
+  color: #cccccc;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 14px 0;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block blockquote{
+  margin: 0 0 14px 0;
+  padding: 10px 16px;
+  border-left: 3px solid rgba(237, 183, 19, 0.6);
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.5;
+}
+.ae-newsletter-shell .block blockquote p{ margin: 0 0 8px 0; }
+.ae-newsletter-shell .block blockquote p:last-child{ margin-bottom: 0; }
+.ae-newsletter-shell .block p{ margin: 0 0 14px 0; font-size: 15px; color: #ffffff; }
+
+.ae-newsletter-shell .block p.spacer{ margin: 0 0 14px 0; line-height: 1.55; font-size: 15px; }
+.ae-newsletter-shell .block p a, .ae-newsletter-shell .block p a:link, .ae-newsletter-shell .block p a:visited, .ae-newsletter-shell .block p a:hover, .ae-newsletter-shell .block p a:active, .ae-newsletter-shell .block li a, .ae-newsletter-shell .block li a:link, .ae-newsletter-shell .block li a:visited, .ae-newsletter-shell .block li a:hover, .ae-newsletter-shell .block li a:active{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .cta{
+  display: inline-block;
+  background: #edb713;
+  color: #000000 !important;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 25px;
+  border-radius: 0;
+  margin: 16px 0 0 0;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .cta-row{ text-align: center; }
+
+.ae-newsletter-shell .opener .subtitle{ color: #edb713; }
+.ae-newsletter-shell .opener h2{ color: #edb713; }
+.ae-newsletter-shell .opener .sign-off{
+  margin-top: 22px;
+  color: #edb713;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+
+.ae-newsletter-shell .section-band-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .section-band-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-2up{ display: table; width: 100%; table-layout: fixed; border-spacing: 0; }
+.ae-newsletter-shell .shop-2up .col{ display: table-cell; vertical-align: top; padding: 10px 20px; }
+.ae-newsletter-shell .shop-2up .col a{ display: block; line-height: 0; text-decoration: none; }
+.ae-newsletter-shell .shop-2up .col img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-heading{ padding: 0 24px; }
+.ae-newsletter-shell .shop-heading h2{
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .shop-heading p{
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  line-height: 1;
+  font-family: arial, helvetica, sans-serif;
+}
+
+.ae-newsletter-shell .full-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .full-img a, .ae-newsletter-shell .full-img > img{ display: block; line-height: 0; }
+.ae-newsletter-shell .full-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .social-row{
+  text-align: center;
+  padding: 16px 20px 20px 20px;
+  background: #292929;
+}
+.ae-newsletter-shell .social-row a{ display: inline-block; margin: 0 4px; text-decoration: none; }
+.ae-newsletter-shell .social-row img{ width: 25px; height: 25px; vertical-align: middle; border-radius: 3px; }
+
+.ae-newsletter-shell .contact-band{ padding: 4px 32px 4px 32px; }
+.ae-newsletter-shell .contact-row{ display: table; width: 100%; table-layout: fixed; }
+.ae-newsletter-shell .contact-row .col{ display: table-cell; vertical-align: top; padding: 0 8px; }
+.ae-newsletter-shell .contact-row .col-video{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-text{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-video a{ display: block; position: relative; line-height: 0; }
+.ae-newsletter-shell .contact-row .col-video img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .play-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.ae-newsletter-shell .play-overlay span{
+  display: inline-block;
+  padding: 6px 15px;
+  background: rgba(0, 173, 239, 1);
+  border-radius: 6px;
+  position: relative;
+  line-height: 0;
+}
+.ae-newsletter-shell .play-overlay span::after{
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  border-width: 9px 0 9px 18px;
+  border-color: transparent transparent transparent #ffffff;
+  vertical-align: middle;
+}
+.ae-newsletter-shell .contact-row h3{
+  color: #edb713;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.ae-newsletter-shell .contact-row p{ font-size: 13px; margin: 0 0 10px 0; color: #ffffff; line-height: 1.5; }
+.ae-newsletter-shell .contact-row a.tel{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .map-row{ padding: 20px 32px 0 32px; line-height: 0; }
+.ae-newsletter-shell .map-row img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .footer{
+  padding: 20px 24px 24px 24px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cccccc;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .footer p{ margin: 0 0 10px 0; }
+.ae-newsletter-shell .footer a{ color: #cccccc; text-decoration: underline; }
+.ae-newsletter-shell .footer .legal{ color: #cccccc; font-size: 14px; }
+
+</style>
+<style>@keyframes hcr-events-cgf-s-1 { 0% { opacity: 1; } 8% { opacity: 1; } 14% { opacity: 0; } 94% { opacity: 0; } 100% { opacity: 1; } }@keyframes hcr-events-cgf-s-2 { 0% { opacity: 0; } 8% { opacity: 0; } 14% { opacity: 1; } 22% { opacity: 1; } 28% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-events-cgf-s-3 { 0% { opacity: 0; } 22% { opacity: 0; } 28% { opacity: 1; } 36% { opacity: 1; } 42% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-events-cgf-s-4 { 0% { opacity: 0; } 36% { opacity: 0; } 42% { opacity: 1; } 51% { opacity: 1; } 57% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-events-cgf-s-5 { 0% { opacity: 0; } 51% { opacity: 0; } 57% { opacity: 1; } 65% { opacity: 1; } 71% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-events-cgf-s-6 { 0% { opacity: 0; } 65% { opacity: 0; } 71% { opacity: 1; } 79% { opacity: 1; } 85% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-events-cgf-s-7 { 0% { opacity: 0; } 79% { opacity: 0; } 85% { opacity: 1; } 100% { opacity: 1; } }@keyframes hcr-events-cgf-cap-1 { 0% { opacity: 1; } 8% { opacity: 1; } 14% { opacity: 0; } 94% { opacity: 0; } 100% { opacity: 1; } }@keyframes hcr-events-cgf-cap-2 { 0% { opacity: 0; } 8% { opacity: 0; } 14% { opacity: 1; } 22% { opacity: 1; } 28% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-events-cgf-cap-3 { 0% { opacity: 0; } 22% { opacity: 0; } 28% { opacity: 1; } 36% { opacity: 1; } 42% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-events-cgf-cap-4 { 0% { opacity: 0; } 36% { opacity: 0; } 42% { opacity: 1; } 51% { opacity: 1; } 57% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-events-cgf-cap-5 { 0% { opacity: 0; } 51% { opacity: 0; } 57% { opacity: 1; } 65% { opacity: 1; } 71% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-events-cgf-cap-6 { 0% { opacity: 0; } 65% { opacity: 0; } 71% { opacity: 1; } 79% { opacity: 1; } 85% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-events-cgf-cap-7 { 0% { opacity: 0; } 79% { opacity: 0; } 85% { opacity: 1; } 100% { opacity: 1; } }@media screen and (-webkit-min-device-pixel-ratio:0), screen and (min-resolution: 0.001dpcm) { .ae-newsletter-shell .hcr-events-cgf .hero-carousel-slide-sN.s1{ animation: hcr-events-cgf-s-1 28s linear infinite; } .ae-newsletter-shell .hcr-events-cgf .hero-carousel-slide-sN.s2{ animation: hcr-events-cgf-s-2 28s linear infinite; } .ae-newsletter-shell .hcr-events-cgf .hero-carousel-slide-sN.s3{ animation: hcr-events-cgf-s-3 28s linear infinite; } .ae-newsletter-shell .hcr-events-cgf .hero-carousel-slide-sN.s4{ animation: hcr-events-cgf-s-4 28s linear infinite; } .ae-newsletter-shell .hcr-events-cgf .hero-carousel-slide-sN.s5{ animation: hcr-events-cgf-s-5 28s linear infinite; } .ae-newsletter-shell .hcr-events-cgf .hero-carousel-slide-sN.s6{ animation: hcr-events-cgf-s-6 28s linear infinite; } .ae-newsletter-shell .hcr-events-cgf .hero-carousel-slide-sN.s7{ animation: hcr-events-cgf-s-7 28s linear infinite; } .ae-newsletter-shell .hcr-events-cgf .hero-carousel-caption.s1{ animation: hcr-events-cgf-cap-1 28s linear infinite; } .ae-newsletter-shell .hcr-events-cgf .hero-carousel-caption.s2{ animation: hcr-events-cgf-cap-2 28s linear infinite; } .ae-newsletter-shell .hcr-events-cgf .hero-carousel-caption.s3{ animation: hcr-events-cgf-cap-3 28s linear infinite; } .ae-newsletter-shell .hcr-events-cgf .hero-carousel-caption.s4{ animation: hcr-events-cgf-cap-4 28s linear infinite; } .ae-newsletter-shell .hcr-events-cgf .hero-carousel-caption.s5{ animation: hcr-events-cgf-cap-5 28s linear infinite; } .ae-newsletter-shell .hcr-events-cgf .hero-carousel-caption.s6{ animation: hcr-events-cgf-cap-6 28s linear infinite; } .ae-newsletter-shell .hcr-events-cgf .hero-carousel-caption.s7{ animation: hcr-events-cgf-cap-7 28s linear infinite; } }</style>
+<style>@keyframes hcr-courses-8c130a-s-1 { 0% { opacity: 1; } 27% { opacity: 1; } 33% { opacity: 0; } 94% { opacity: 0; } 100% { opacity: 1; } }@keyframes hcr-courses-8c130a-s-2 { 0% { opacity: 0; } 27% { opacity: 0; } 33% { opacity: 1; } 60% { opacity: 1; } 66% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-courses-8c130a-s-3 { 0% { opacity: 0; } 60% { opacity: 0; } 66% { opacity: 1; } 100% { opacity: 1; } }@keyframes hcr-courses-8c130a-cap-1 { 0% { opacity: 1; } 27% { opacity: 1; } 33% { opacity: 0; } 94% { opacity: 0; } 100% { opacity: 1; } }@keyframes hcr-courses-8c130a-cap-2 { 0% { opacity: 0; } 27% { opacity: 0; } 33% { opacity: 1; } 60% { opacity: 1; } 66% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-courses-8c130a-cap-3 { 0% { opacity: 0; } 60% { opacity: 0; } 66% { opacity: 1; } 100% { opacity: 1; } }@media screen and (-webkit-min-device-pixel-ratio:0), screen and (min-resolution: 0.001dpcm) { .ae-newsletter-shell .hcr-courses-8c130a .hero-carousel-slide-sN.s1{ animation: hcr-courses-8c130a-s-1 12s linear infinite; } .ae-newsletter-shell .hcr-courses-8c130a .hero-carousel-slide-sN.s2{ animation: hcr-courses-8c130a-s-2 12s linear infinite; } .ae-newsletter-shell .hcr-courses-8c130a .hero-carousel-slide-sN.s3{ animation: hcr-courses-8c130a-s-3 12s linear infinite; } .ae-newsletter-shell .hcr-courses-8c130a .hero-carousel-caption.s1{ animation: hcr-courses-8c130a-cap-1 12s linear infinite; } .ae-newsletter-shell .hcr-courses-8c130a .hero-carousel-caption.s2{ animation: hcr-courses-8c130a-cap-2 12s linear infinite; } .ae-newsletter-shell .hcr-courses-8c130a .hero-carousel-caption.s3{ animation: hcr-courses-8c130a-cap-3 12s linear infinite; } }</style>
+<div style="font-family:Roboto, Arial;font-size:14px">
+
+<div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden">PLUS New Saturday classes + Sunday static &amp; doubles trapeze class</div>
+
+<div class="newsletter"><div class="browser-link"><a href="#">View this email in browser</a></div><div class="logo-block"><img src="/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-01.png" alt="Aerial Edge, Glasgow" width="520"></div>
+<div class="hero"><img src="/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-02.jpg" alt="FALLING IS NOT FAILING"></div>
+<div class="block opener" id="opener">
+  
+  <h2>FALLING IS NOT FAILING</h2>
+  <h3>GETTING UP IS THE WHOLE POINT</h3><p>Nana korobi ya oki. It's not a greeting from a cheerfully swaying Glaswegian, it's an old Japanese proverb: fall down seven times, get up eight.</p><p>Everyone in last Saturday's Commonwealth Games Festival show has lived experience of that proverb, they've all learned through their circus journey that failing at the first few attempts isn't failing at all. And four-year-old Lydia, performing with mum Joanne, led the way.</p><p>The people who tried our circus taster classes for the first time straight after the show got the idea inside their half-hour sessions. We hope to see more of them at the rig, falling down figuratively, and getting back up to try again.</p><p>The cast of the show ranged from Lydia through former students turned Aerial Edge instructors, to students performing for the first time, and at least one person who's been drawing their pension for years 👀.</p><p>They've all been through the phase of falling off things, looking clumsy in front of people, and they kept coming back anyway. That's the part of the proverb that actually matters. Everyone falls. What counts is getting up again on purpose, often enough that it stops being falling and starts being practice.</p><p>Mark Gibson<br>Aerial Edge Founder</p>
+  
+</div>
+<div class="divider"></div>
+
+
+<div class="block" id="fringe">
+  <h2>AE PEOPLE AT THE FRINGE</h2>
+  <p>Two of our own are on stage at the Edinburgh Fringe this year. Jonah, who trains and teaches at Aerial Edge, is in <em>Tell Me</em>, Sadiq Ali's show. It's part of the Made in Scotland showcase, running 6th to 31st August at Summerhall Arts. Sadiq Ali Company previously made the five-star <em>The Chosen Haram</em>, and his funding appeal for this year's show went out on Instagram earlier this year – good to see the money came through.</p><p>Ninon Noiret, who also trains here, is in <em>The Raft of the Crab</em>, a solo show at Assembly Roxy, 18th to 31st August. Both pieces are drawn from real, lived experience, and we're glad to see two of our own carrying that onto a Fringe stage.</p><p>Meanwhile Michelle, who has been director in numerous Aerial Edge shows, is spending the Fringe as Front of House Manager at Zoo venues, where the acts include some contemporary circus.</p><p>Next week we'll have Vee's Fringe Picks - her now-traditional reviews of the circus shows you shouldn't miss.</p>
+  
+</div>
+<div class="divider"></div>
+<div class="menu"><p>To make life easier, you can use this menu to go direct to articles. Above each section, you'll find a timeline of relevant dates, and there are direct booking links throughout.</p><ul><li><strong>AE at the Fringe:</strong> Two familiar names, two new shows, one Instagram appeal that paid off</li><li><a href="#section-events"><strong>Events:</strong> How wide did one circus bill actually get? + Four performers, four elements, on stage at Kelvingrove Park tonight</a></li><li><a href="#section-classes"><strong>Classes:</strong> Why your splits stretch isn't working + Sunday's new class needs zero plus-ones + What's worth setting a Saturday alarm for, and a Monday night too</a></li><li><a href="#section-courses"><strong>Courses:</strong> What's actually waiting on the other side of nervous? + What happens when a straps act swaps music for Shakespeare</a></li><li><strong>Rigging:</strong> Where that number on the tag actually comes from</li><li><a href="#section-youth"><strong>Youth Circus:</strong> What five days at camp actually leaves behind + Why the rig's going quiet one Monday night</a></li><li><a href="#section-shop"><strong>Store:</strong> Buy clothing, gift vouchers and Pay It Forward</a></li><li><a href="#section-services"><strong>Our services for you:</strong> </a></li><li><a href="#section-contact"><strong>Contact us:</strong> </a></li></ul></div><div class="divider"></div>
+<img class="timeline-img" id="section-events" src="/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-03.png" alt="IN THEIR ELEMENTS timeline">
+<div class="hero"><img src="/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-04.jpg" alt="IN THEIR ELEMENTS"></div>
+<div class="block events" id="block-events-kelvingrove">
+  
+  <h2>IN THEIR ELEMENTS</h2>
+  <h3>UNITY IN DIVERSITY SHOW IN KELVINGROVE PARK TONIGHT</h3><p>Air, fire, earth and metal share a stage tonight, and none of them stay on the ground for long. Aerial Edge presents <em>Unity in Diversity</em>, a one-off show at Kelvingrove Park's Performance Zone, and it's free for you to enjoy.</p><p>Four performers carry one element each: Yara, Clara, Pegg and Elke, working through air, fire, earth and metal across silks, hoop, duo rope and flying pole. The choreography moves between ground and air to connect the four of them into one piece.</p><p>The Performance Zone is one of several spots inside the Game On Kelvingrove Park Live Site.It's a free, family-friendly stretch of park that's running daily during the Games period through to Sunday 2nd August. Turn up any day and there's something different on. Acts change across the bill, with big screens showing the Games live and food and drink stalls dotted round the rest of the site.</p><p>Tonight, that something different was created in Aerial Edge by our four talented instructor-performers specially for the Commonwealth Games Festival.</p><p>The stage in the Performance Zone gets going mid-afternoon. Brass, Aye? play at 5pm, and we take over at 6.30pm for the half-hour show.</p><p>Stick around after <em>Unity in Diversity</em> is done, too. OMD play Kelvingrove Bandstand later that evening, a separate ticketed gig, but same park, same night.</p><p>You may have seen social media snippets of Sam, Julia, Robyn, Michelle, Lizzie and others during the Commonwealth Games Festival and Merchant City Festival. They've been slipping walkabouts, flash mobs and bits of acrobatics into all sorts of places to make them stages – a train station concourse, the middle of a queue that had no idea what it was standing next to, park benches. If someone near you did something unexpected this week, there's a decent chance it was one of us.</p><p class="spacer">&nbsp;</p><p>Aerial Edge presents <strong><em>Unity in Diversity</em></strong><br>Friday 31st July | 6.30pm-7pm<br>Kelvingrove Park, Performance Zone, Commonwealth Games Festival programme<br>Free</p>
+  <div class="cta-row"><a class="cta" href="https://email.contact.aerialedge.co.uk/c/eJx0VMuO6jgU_BpnM7qtxM5zkQUBQvN-NdBhgxzbBJPEdjsONHz9COgZjXTvbCvnlCp1qkwOnMaLHe7n4--8-OyttElD_xp-WzQm1EbEtqisMRcxkcJgYt4w0xxXjBbsjci3tvz5fpBXwXRz4upgborFlSTYcPnCqcViJwg9N_JsO7BYjXl1qFnT4II9BAzKXXbJqslgNOm1bLbMNMl_pp5kBNcK80L8B3us-dgnAXb9I0ae56OQYRj4zHctJi5cS1EzYWKlJW3JQ4p1iqMchQh7jksQcVAQwsin0M5tRknEbAdaPIY29O0AOY790Prm5rnrYOo5eWC7iIXAtf_XiSo-GaMagDoApgCmWPHfhgBMnz_xy2hMSi4KANOQhW7gITs6MoDSH_ohBajXRO6iM911Tpfc20ZmuJxyDKDfmvrQyFYTBlDvSfcD1ozytv4H_KvGumSGi8KqyOHlHReGaYGreAPThg625acDYLJsFEK2nd1rr7ycq5pif1iqpOvqXZAAmJTT98kxcVDWCddw2mH0NAcwnYg7Me69tzUj-eWt6FeeqY8Kr2YAJl-5e-6JaJEWLy-oU5w26rG0CcyiClu6X18NgOlgtRFr8d79XI4uH3Y4GLoTrm80lYWNOvNvr9unVbaiVWLOw6BqQqcbnft36QCYmrXqp7hux9vxcG7S8yyToUO_xLdS8747UJslm0UfpA707JOfTgsA070PYEIqr1kej2a_mr4vbyhfH0Xu4Wa_5dfp0c_8Yj6H2Fv259G63478DK4W5Z7416TbRS4xIcr74TjZfWS31RUjANNuq_bhUO2mOwDT93dou-NsW403pWlHU37jZJsuAeoB1LMq-axcGjkDhViI14PKHNFGdO5bq2bmJGmMFbek5gUXcd5W5a_n4Syl5YVTpuOKYUqkEIwYqS0dP44MXPu3NL4CEr_SxpvLr6vUJdOWeXTz8EcBJiayPvzxOTAxM4d_e3iJ4d8BAAD__34xapg" target="_blank" rel="noopener noreferrer">See other Commonwealth Games Festival events</a></div>
+</div>
+<div class="divider"></div>
+
+
+<div class="hero-carousel hcr-events-cgf"><img class="hero-carousel-fallback" src="/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-05.jpg" alt="TINY TOTS TO SENIORS" loading="eager" decoding="async"><div class="hero-carousel-slide-sN s1" style="background-image:url('/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-05.jpg')"></div><div class="hero-carousel-slide-sN s2" style="background-image:url('https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/038d990e-358a-44f0-80fe-5637871a7736.jpg')"></div><div class="hero-carousel-slide-sN s3" style="background-image:url('https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/600d5f41-e5cf-41e1-8c35-29baef32e325.jpg')"></div><div class="hero-carousel-slide-sN s4" style="background-image:url('https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/6c5510f3-1af5-45a2-a662-fe5d2c7c7f7f.jpg')"></div><div class="hero-carousel-slide-sN s5" style="background-image:url('https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/8b100698-b05c-446d-ac23-16e24a3165c7.jpg')"></div><div class="hero-carousel-slide-sN s6" style="background-image:url('https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/2d56c6ea-e445-4226-9c4c-f7740c05cba6.jpg')"></div><div class="hero-carousel-slide-sN s7" style="background-image:url('https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/e33f17a7-7845-4adb-bc6b-8783819f9a3a.jpg')"></div></div>
+<div class="block events" id="block-events-cgf">
+  
+  <h2>TINY TOTS TO SENIORS</h2>
+  <h3>PERFORMERS IN LAST WEEK'S FREE SHOW INSPIRE</h3><p>Cathy thought she was coming to watch her daughter and granddaughter try some circus at last Saturday's Commonwealth Games Festival show and taster sessions...and it took hardly any persuasion at all before the 66-year-old was upside down on the silks herself!</p><p>Cathy had been sitting on the sidelines when she turned to one of our team and said: "Thank you for doing this, it's so lovely to see people of all ages looking so happy, I could cry." We asked if she fancied trying it too. She said she was too old. Well, that doesn't fly at Aerial Edge – we're for all ages and abilities, as anyone who's been here knows.</p><p>Earlier that afternoon, the ticketed show had a cast which demonstrated the age range – from tiny tot to someone who's been drawing her pension for some years now.</p><p>Four-year-old Lydia performed with her mum Joanne, followed by 12-year-old Abbie from Youth Circus. Ellie and Kirsty both came at it from the audience side once, one from YC, one as a silks student, and both teach here now.</p><p>Andrea, Pegg and Emer represented our former full-time course students on trapeze, hoop and rope. Yara and Clara hooped from our pro side – Yara hula hooping and Clara aerial hooping.</p><p>And Moira, 69, a retired engineer who took up trapeze at 66, performed alongside regular flying trapeze students Lily, Nea, Sam and Sammy.</p><p>If you missed out on a ticket to the show, bag one for Open Rig Night on 17 October, and it tends to sell out the same way this show did.</p><p class="spacer">&nbsp;</p><p>Open Rig Night<br>Saturday 17th October<br>Tickets £10 / £5</p>
+  <div class="cta-row"><a class="cta" href="https://email.contact.aerialedge.co.uk/c/eJx0VF2TqjgU_DXhZetOQRK-HngQFcdx_B518MUKScAIJEwIOvrrt9TZra26d1-bc7qaPt2hB8GixY4Ms8l3VnwOVtokgXcJvi0WUWYjaltM1UTIiCppCDUvhGtBKs4K_kLVS1f-fD-oi-S6PYrmYK4NjypFiRHqiTOLR44fuDh0bdu3eE1Edah525KC3wWMyl16Tqv30dv7oOOzZapp9jP1IKOkbogo5H-w-5pHPOoT7OUEua6HAk6g73EPW1yehVay5tJEjVaso3cp1jHCDoGOH9iuz3HowxxlTpij3LHDkJAce5aIoA0920eOY9-1vuAsww5hrpP5NkY8ANj-Xyeq6GhM0wLUAzABMCGN-G0IwOTxE7-MJrQUsrgDOcI-Dl1GMEDJD_2YATRoQ7zoTXe94zlzt6EZL6eCAOh1pj60qtOUAzR40P2ANWeiq_8B_6qJLrkRsrAqenh6J6ThWpIq2sCkZaNt-ekAGC_bBiHbTm-1W55PVc2INy6buI_1zo8BjMvp63seOyjtBWs47XF2nAOYvMsbNfg22Jo39eWu2FeWNh8VWc0AjL8yfBrIcJEUTy-YUxw3zX1p45tFFXRsv74YAJPRaiPX8rX_uXw7f9jBaIzfhb6yRBU26s2_3f6QVemKVbE5jf2qDZx-eBrelANgYtbNMCF1N9lOxnOTnGapChz2Jb-bZj7Eo2az5LPwg9a-nn2K43EBYLL3AIxp5bbLPDf71fR1eUXZOpeZS9r9VlymuZd6xXwOibsczsP1sHvzUrhalHvqXeJ-H2FqApQNg0m8-0ivqwtBACb9rtkH42Y33QGYvL5CG0_SbTXZlKZ7m4qroNtkCdAAoIFVqUflktAZNYgHZD2qTI42snfbWjU3R8Ui0ghLaVEIGWVdVf56HM5qtDoLxnVUccKokpJTo7Slo_uRAbZ_S-MzINEzbaI9_7ooXXJtmXs3D38UYCKq6sMfnwMTcXP4t4fnCP4dAAD__4Y3aqI" target="_blank" rel="noopener noreferrer">Get in early this time: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-classes" src="/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-06.png" alt="HOW TO GET YOUR FRONT SPLIT timeline">
+
+<div class="block classes" id="block-classes-5b3abd">
+  
+  <h2>HOW TO GET YOUR FRONT SPLIT</h2>
+  <h3>STEP-BY-STEP GUIDE IN THE BLOG</h3><p>A year of pigeon pose, and your front split looks pretty much like it did when you started. Most advice can't explain why. It hands out the same three stretches whether you're tight or not, and never asks what's actually stopping you.</p><p>Our new blog starts with a five-minute check instead, before you stretch a single muscle. Is it tightness, or weakness in the exact position you're reaching for? Is your front leg ready while your back leg isn't, or the other way round?</p><p>From there, it's practical – which stretches match which limiter, which strength work closes the gap, and how to tell a stretch that's working from one that's just familiar.</p><p>Train the challenge that's actually there, not a routine by rote.</p>
+  <div class="cta-row"><a class="cta" href="https://email.contact.aerialedge.co.uk/c/eJx0VFuTsjgU_DXhZWumIAkXH3gQFe_3UQdfrJBEjEDChKCjv35Lnd3aqm_2tTmnq-nTHXoQLFzsSC8df6fZZ3elTRx41-DbYiFlNqK2xVRJhAypkoZQ8064FqTgLOPvVL03-c_3g7pKruuTqA7mVvGwUJQYoV44s3jo-IGLW65t-xYviSgOJa9rkvGHgH6-Sy5JMemPJt2Gz5aJpunP1JOMkrIiIpP_wR5rHvGoT7B3JMh1PRRwAn2Pe9ji8iK0kiWXJqy0Yg19SLFOIcMY-54PMfcC5mLXTTkPPMf2OYacBKklQmhDz_aR49gPre84TbFDmOukvo0RDwC2_9eJIjwZU9UAtQGMAYxJJf4YAjB-_sSb0YTmQmYAxo5HA4wpDlwboPiHfsgA6tYtvGhPd-3TJXW3LTNcTgUB0GtMeahVoykHqPuk-wFLzkRT_gP-VRKdcyNkZhX08PJOSMO1JEW4gXHN-tv80wEwWtYVQrad3Es3v5yLkhFvmFdRB-udHwEY5dPB5Bg5KGkHazhtc3aaAxhP5J0afO9uzUh9uSv2lSbVR0FWMwCjrxSfu7K1iLOXF8zJTpvqsbTxzaIIGrZfXw2AcX-1kWs56HwuR5cPO-gP8UToG4tVZqP2_Nvt9FiRrFgRmfPQL-rA6bTOvbtyAIzNuurFpGzG2_FwbuLzLFGBw77kd1XNe7hfbZZ81vqgpa9nn-J0WgAY7z0AI1q49fJ4NPvVdLC8oXR9lKlL6v1WXKdHL_Gy-RwSd9mbt9a9ZuQlcLXI99S7Rp0OwtQEKO0F42j3kdxWV4IAjDtNtQ-G1W66AzAeDKCNx8m2GG9y04ym4iboNl4C1AWoaxXqWbm45fQrxAOy7hfmiDayfd9aJTcnxUJSCUtpkQkZpk2Rvz0PZ1VaXQTjOiw4YVRJyalR2tLh48gA23-k8RWQ8JU2UV_erkrnXFvm0c3DrwJMSFV5-PU5MCE3h397eAnh3wEAAP__LKhqdQ" target="_blank" rel="noopener noreferrer">Chase the right thing: read here</a></div>
+</div>
+<div class="divider"></div>
+
+
+<div class="hero"></div>
+<div class="block classes" id="block-classes">
+  
+  <h2>ON, TWO...YOU!</h2>
+  <h3>SUNDAY STATIC &amp; DOUBLES TRAPEZE IS UP AND RUNNING</h3><p>Sunday mornings mean brunch, and now Sunday afternoons mean trapeze again. Happy days!</p><p>Mark's new class is built with a bonus – as well as solo work, it gives you the chance to try the tricks you can only do with someone else holding the other end of them. Doubles work opens up catches, counterbalances and shapes a solo routine can't touch, and it's one of Mark's areas of expertise.</p><p>You don't need to bring a plus-one, turning up alone still gets you a full session. Pair up with someone in the class when a doubles shape wants two hands, or stay solo and build your own material the whole time. Nobody's a partner short just because they came by themselves.</p><p>Solo or duo, the rig doesn't mind, and neither do we.</p><p class="spacer">&nbsp;</p><p><strong>Static &amp; Doubles Trapeze</strong><br>Sundays, 4pm | ages 13+<br>Drop-in £25, or £17 on an 8-class aerial pass</p>
+  <div class="cta-row"><a class="cta" href="https://email.contact.aerialedge.co.uk/c/eJx0VE1zqzgQ_DXisuUUSCDgwMFfOI7j-Cu2gy8uIQmsABIRwo7z67ewvVu79d470qMZeqZnmh4Fi5Z7Mk5n32n-MVprEwf4EnxbLKLMRtS2mKqIkBFV0hBqngjXgpSc5fyJqqe2eMSP6iK5bk6iPpprzaNSUWKEuuPM4pHjB54berbtW7wiojxWvGlIzjsCk2KfnJPydfLyOmr52yrRNH28uhWjpKqJyOV_sC4NE0x94uKMIM_DKOAE-phj1-LyLLSSFZcmqrViLe2oWKcIMhs6zA94GiA7hAzjkEJkO4yzEGEUWCKCNsS2jxzH7rg-uWnqOoR5TurbLuIBcO0_TqKMTsbUDUB9AGMAY1KLXx4BGN-a6BlNaCFkDmAcMJeiNKOcYoDiR_kpA2jUhO6yP9_3T-fU24VmupoLAiBuDNGGEcMBGnV8ezbuwRBAzCX7Hxz0bAggPnPZ8gagEYCYEsNzpa_3LyEbo1tqlH6EVZZxLWR-G_ID61TSvDFa3Ob4QLu_ODbGnu94AYC4NdWxUa2mXeDW4wOsOBNt9Q_4V0V0wY2QuVXS411QIQ3XkpTRFsYNm-yKDwfAwaqpEbLt5KfyivNnWTGCp0U9GLp67w8AHBTz59ds4KCkH2zgvM_ZaQFg_Cp_qHF_Rjvzor68NftKk_q9JOs3AAdfqfs5kuEyzu8CMSc_besuaeubZRm07LC5GADjyXorN_J5-LF6Ob_bwWTqvgp9ZbHKbdRffHvDMSuTNSsH5nPql03gDMPP8Y9yAIzNph7HpGpnu9l0YeLPt0QFDvuS33W9GLuTervib-E7rXz99iFOpyWA8QEDOKCl16yyzBzW8-fVFaWbTKYeaQ47cZlnOMH5YgGJtxovws24fcEJXC-LA8WXwXCIXGoClI6D2WD_nlzXF4IAjIdtfQim9X6-BzB-foa2O0t25WxbmPZlLq6C7uJVpyQaWaW6-UAcOpMa8YBsJqXJ0Fb2f3ZWxc1JsYjUwlJa5EJGaVsWvZtwVq3VWTCuo5ITRpWUvFslS0edyMC1fzmR-4JE9xMQzbl3Ubrg2jKdYRx_S8BEVFXH33qUibg5_msO5wj-HQAA__9EUJiP" target="_blank" rel="noopener noreferrer">Show up solo: book here</a></div>
+</div>
+<div class="divider"></div>
+
+
+
+<div class="block classes" id="block-classes-september">
+  
+  <h2>WARM UP, THEN TAKE OFF</h2>
+  <h3>NEW SATURDAY AND MONDAY CLASSES, BOTH BUILD STRAIGHT INTO FLYING TRAPEZE</h3><p>You have two new classes landing this September with the same runway – an hour to complete a Circus Fitness warm up, then into flying trapeze. Which end of the week you catch it on is up to you.</p><p>Circus Fitness moves into Saturdays for the first time. From 5th September, Aerial Conditioning opens the morning at 9am, an hour built around the strength and control that makes everything that follows in the air feel less like a fight. And Circus Fitness is the cheapest way into aerial and acro arts.</p><p>At 10am, open level flying trapeze picks up directly from it, with Mark teaching both back to back. First attempt at flying trapeze or years of it behind you, you train in the same session, at your own pace.</p><p>Monday night runs the same rhythm. Erica's new beginner flying trapeze class opens for adults from September, running 7.30pm-9pm and replacing the old class that started at 8.30pm.</p><p>Same idea again on the prep side. Circus Fitness Flexibility runs 6pm-7pm the same evening, an hour that leaves your shoulders and hips loose just in time for Erica's class. Come for both back to back, or just the one that suits your Monday.</p><p>Same shape, opposite ends of the week, worth clearing space for either one.</p><p class="spacer">&nbsp;</p><p><strong>Aerial Conditioning + Open Level Flying Trapeze</strong><br>Saturdays from 5th September, 9am-10am then 10am-11.30am<br>Conditioning: £7.50 on an 8-class pass or £10 drop-in | Flying Trapeze: £25 drop-in or £17 on an 8-class aerial pass</p><p><strong>Adult Flying Trapeze (Beginner) with Erica</strong><br>Mondays from September (exact date to follow), 7.30pm-9pm<br>Drop-in £25, or £17 on an 8-class aerial pass</p><p><strong>Circus Fitness Flexibility</strong><br>Mondays, 6pm-7pm<br>Drop-in £10, or £7.50 on an 8-class pass</p>
+  <div class="cta-row"><a class="cta" href="https://email.contact.aerialedge.co.uk/c/eJx0VF2TqjgQ_TXhZcspSCDgAw-i4jiO49eogy9WSAJmgIQJQcf59Vuou7Vb997HnP7I6T7dTY-Chcs9Gaez7zT_GK21iQN8Cb4tFlJmI2pbTFVEyJAqaQg1T4RrQUrOcv5E1VNbPOxHdZFcNydRH8215mGpKDFC3XFm8dDxA8_te7btW7wiojxWvGlIzjsCk2KfnJPydfLyOmr52yrRNH143ZJRUtVE5PI_WBeGCaY-cXFGkOdhFHACfcyxa3F5FlrJiksT1lqxlnZUrFOIsQ-5l5GMeJAHns8hxNjDxEepS32cWiKENsS2jxzH7rg-uWnqOoR5TurbLuIBcO0_dqIMT8bUDUADAGMAY1KLX5wAjG9F9IwmtBAyBzD2076TIuRiCgGKH-mnDKBR03eXg_l-cDqn3q5vpqu5IADixhBtGDEcoFHHt2fjHuwDiLlk_4ODng0BxGcuW94ANAIQU2J4rvT1_hKyMbqlRumHWWUZ10LmtyY_sE4lzRujxa2PD7Q11bFRrabdd7eaHmDFmWirf8C_KqILboTMrZIe7wIKabiWpAy3MG7YZFd8OABGq6ZGyLaTn8orzp9lxQieFnU0dPXejwCMivnzaxY5KBkEGzgfcHZaABi_yh9q3J_RzryoL2_NvtKkfi_J-g3A6Ct1P0eyv4zzuyDMyU_bugva-mZZBi07bC4GwHiy3sqNfB5-rF7O73YwmbqvQl9ZrHIbDRbf3nDMymTNysh8Tv2yCZxh_3P8oxwAY7OpxzGp2tluNl2Y-PMtUYHDvuR3XS_G7qTervhb_51Wvn77EKfTEsD4gAGMaOk1qywzh_X8eXVF6SaTqUeaw05c5hlOcL5YQOKtxov-Zty-4ASul8WB4ks0HCKXmgCl42AW7d-T6_pCEIDxsK0PwbTez_cAxs_P0HZnya6cbQvTvszFVdBdvOqUQyOrVLe9j_vOpEY8IJtJaTK0lYOfnVVxc1IsJLWwlBa5kGHalkXvJpxVa3UWjOuw5IRRJSXvRsfSYScycO1fVuI-IOF95EVz7l2ULri2THcgjr8lYEKqquNvb5IJuTn-ewzOIfw7AAD___qJlNA" target="_blank" rel="noopener noreferrer">Take your pick: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-courses" src="/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-08.png" alt="EVERYONE'S BEGINNING SOMETHING timeline">
+
+<div class="block courses" id="block-courses">
+  
+  <h2>EVERYONE'S BEGINNING SOMETHING</h2>
+  <h3>4-WEEK INTENSIVE, FC &amp; PDP ALL START THE SAME MORNING</h3><p>You know that feeling when you walk to a room and everyone seems to know each other, and what to do, so you hover at the door wondering if it's too late to still be a beginner in there? Rest assured, it's not too late at Aerial Edge. Never.</p><p>At the start of each full-time course, and plenty of classes, it's full of people exactly as new to it as you'd be.</p><p>Everyone comes with different life experiences, some with skills in physical activities that could be dance, circus, theatre - and some come with none of these. But they're all meant to be there, and they'll all finish with a skillset and experience that's unique to them.</p><p>The Four-Week Intensive is where you start when you want to try training all day every day, or when you can't commit any more time to it. By the end of it you'll know things about your own body you didn't know a month before. Some people finish there and go back to their old life, a new layer of experiences to colour their day-to-day tasks.</p><p>Others want more. The Four-Week Intensive runs alongside the start of the Foundation Course, so you're already in the room and can simply keep going. Those 16 weeks are transformative, building toward an ensemble show with a professional director, performing something you helped make.</p><p>Go further again and the Professional Development Programme picks up from there. Seven more weeks with specialists in act creation, character work, lighting and projection, ending with a professionally shot showreel that's actually yours to use.</p><p>Nobody in that room started already good at everything, they were all there to learn.</p><p><strong>Foundation Course, Four-Week Intensive and Professional Development Programme</strong><br>All start Monday 10th August<br>4-Week Intensive £795 | Foundation Course £2,999 | Professional Development Programme £4,499</p>
+  <div class="cta-row"><a class="cta" href="https://email.contact.aerialedge.co.uk/c/eJx0VFuTsjgU_DXhZWumIOH6wIOoeL-POvhihSRgBBImBB399Vvq7NZWfbOvzTldTZ_ukCOn4XKP--nkO80_e2ulY9-9-t8GDQk1ETENKivMRUik0Jjod8wUxyWjOXsn8r0tfr4f5VUw1Zx4fdS3moWlJFhz-cKpwULL8x07cEzTM1iFeXmsWNPgnD0EDIp9cknK6WA87bVsvkoUSX-mnmQEVzXmufgP9lhzsUs8bLsZRo7jIp9h6LnMtQ0mLlxJUTGhw1pJ2pKHFOMUOpCRzIQwoDZNiesQRB0r8DMUUMbMgBg8hCZ0TQ9ZlvnQ-m6nqW1h6lipZ9qI-cA2_9eJMjxpXTcAdQCMAYxxzf8YAjB-_sSbVpgUXOQAxsjCNEVmRgIfoPiHfkQB6jWBvezM9p3TJXV2gR6tZhwD6La6OjayVYQB1HvS_YAVo7yt_gH_qrAqmOYiN0pyfHnHhWZK4DLcwrihg13xaQEYrZoaIdNM7pVTXM5lRbE7Kuqoa6u9FwEYFbPhNIsslHT8DZx1GD0tAIyn4k60fe_t9Fh-OWv6lSb1R4nXcwCjr9Q-90SwjPOXF9TKT9v6sbT19LL0W3rYXDWA8WC9FRsx7H6uxpcP0x-M7ClXNxrL3ESdxbfT7dMyWdMy0ueRVza-1Q3O_bu0AIz1pu7HuGonu8looePzPJG-Rb_Ed10v-vag3q7YPPgglafmn_x0WgIYH1wAI1I6zSrL9GE9G65uKN1kInVwc9jx6yxzEzdfLCB2Vv1FsOm3YzeB62VxIO416naRTbSP0r4_ifYfyW19xQjAuNvWB39U72d7AOPhEJr2JNmVk22h2_GM3zjZxSuAegD1jFI-KxcH1qBGzMebQakztBWd-86omD5JGuKaG1LxnIswbcvi7Xk4o1bywilTYckwJVIIRrRUhgofRwa2-UcaXwEJX2njzeXtKlXBlKEf3Tz-KkCHRFbHX58DHTJ9_LeHlxD-HQAA___8fmu5" target="_blank" rel="noopener noreferrer">Walk in anyway: book here</a></div>
+</div>
+<div class="divider"></div>
+
+
+<div class="hero-carousel hcr-courses-8c130a"><img class="hero-carousel-fallback" src="/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-09.png" alt="SHAKESPEARE 'N' STRAPS" loading="eager" decoding="async"><div class="hero-carousel-slide-sN s1" style="background-image:url('/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-09.png')"></div><div class="hero-carousel-slide-sN s2" style="background-image:url('https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/af7a809d-59bd-46cb-a081-91b5a37dabb5.png')"></div><div class="hero-carousel-slide-sN s3" style="background-image:url('https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/07009210-59cb-4e58-8d00-784f4c04cbd6.jpg')"></div></div>
+<div class="block courses" id="block-courses-8c130a">
+  
+  <h2>SHAKESPEARE 'N' STRAPS</h2>
+  <h3>INNOVATION IN FOUR-WEEK INTENSIVE SHOWING</h3><p>People arrive at circus training with all sorts of things in their back pocket. Sprite was a professional actor when he joined the Four-Week Intensive, and he&nbsp;brought it out for the end-of-course showing last Friday. He swapped the usual soundtrack for a soliloquy from A Midsummer Night's Dream.</p><p>Nobody suggested it. Sprite just decided the straps act needed a soliloquy more than it needed music, and it totally worked.</p><p>That's the whole pitch for the Four-Week Intensive, really, in one image. Four weeks in, and people already have enough command of what they're doing to make creative choices about it.</p><p>Cerys and Domitilla used music for their rope and hoop showing performances, and looked like they'd been airborne for years, not just a month of training.</p><p>You don't need to quit your job for this course. Four weeks fits round a full-time one, if you use your holiday days for it, and it's long enough that you walk out actually capable of something.</p><p>There's time to try two or three different arts before your favourite properly clicks. Finishing an intensive at all, whatever you end up best at, is a real achievement.</p><p><strong>Four-Week Intensive</strong><br>Next intake starts Monday 10th August, then Monday 28th September<br>£795</p>
+  <div class="cta-row"><a class="cta" href="https://email.contact.aerialedge.co.uk/c/eJx0VMuO6jgU_BpnM7qtxM5zkQUBQvN-NdBhgxzbBJPEdjsONHz9COgZjXTvbCvnlCp1qkwOnMaLHe7n4--8-OyttElD_xp-WzQm1EbEtqisMRcxkcJgYt4w0xxXjBbsjci3tvz5fpBXwXRz4upgborFlSTYcPnCqcViJwg9N_JsO7BYjXl1qFnT4II9BAzKXXbJqslgNOm1bLbMNMl_pp5kBNcK80L8B3us-dgnAXb9I0ae56OQYRj4zHctJi5cS1EzYWKlJW3JQ4p1ih3qoQh7gRcF_pHktuNT30OB5-BjyCLXtXgMbejbAXIc-6H1zc1z18HUc_LAdhELgWv_rxNVfDJGNQB1AEwBTLHivw0BmD5_4pfRmJRcFACmXugEDkWhh0KA0h_6IQWo10TuojPddU6X3NtGZriccgyg35r60MhWEwZQ70n3A9aM8rb-B_yrxrpkhovCqsjh5R0XhmmBq3gD04YOtuWnA2CybBRCtp3da6-8nKuaYn9YqqTr6l2QAJiU0_fJMXFQ1gnXcNph9DQHMJ2IOzHuvbc1I_nlrehXnqmPCq9mACZfuXvuiWiRFi8vqFOcNuqxtAnMogpbul9fDYDpYLURa_He_VyOLh92OBi6E65vNJWFjTrzb6_bp1W2olVizsOgakKnG537d-kAmJq16qe4bsfb8XBu0vMsk6FDv8S3UvO-O1CbJZtFH6QO9OyTn04LANO9D2BCKq9ZHo9mv5q-L28oXx9F7uFmv-XX6dHP_GI-h9hb9ufRut-O_AyuFuWe-Nek20UuMSHK--E42X1kt9UVIwDTbqv24VDtpjsA0_d3aLvjbFuNN6VpR1N-42SbLgHqAdSzKvmsXBo5A4VYiNeDyhzRRnTuW6tm5iRpjBW3pOYFF3HeVuWv5-EspeWFU6bjimFKpBCMGKktHT-ODFz7tzS-AhK_0saby6-r1CXTlnl08_BHASYmsj788TkwMTOHf3t4ieHfAQAA__8xn2of" target="_blank" rel="noopener noreferrer">Give it four weeks: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<div class="hero"><img src="/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-10.png" alt="DON'T CUT THIS TAG OFF"></div>
+<div class="block" id="custom">
+  <h2>DON'T CUT THIS TAG OFF</h2>
+  <h3>WHAT THE BREAKING LOAD NUMBER ACTUALLY MEANS, AND DOESN'T</h3><p>You know the tag on a new jumper, the one you cut off the second you get home because it's itchy and nobody needs to know your size? Do NOT do that with rigging kit, no matter how annoying it is.</p><p>Every rope, strop and piece of rigging hardware carries a tag, and unlike your jumper's, this one's not just about the materials used. It has essential details about how you can use it, and you need to reference it for regular inspections.</p><p>Here's the part worth slowing down for...don't take the number on it entirely at face value.</p><p>Some people picture a Minimum Breaking Load rating as the exact force at which one unlucky sample snapped in a lab somewhere. It isn't.</p><p>The newest article on circusrigging.info explains what it really is – a manufacturer tests a whole batch of the same part to failure, works out the mean breaking force across that batch, then subtracts three standard deviations from it. That's the three-sigma method, and whatever's left over is the number stamped on the tag.</p><p>It's a deliberately pessimistic number. Because it sits three standard deviations below average, almost every individual part actually breaks at a higher force than its own rating, sometimes a lot higher. That margin isn't bolted on afterward. It's built into the maths from the start.</p><p>12 minutes of reading, and you'll never look at a tag the same way again, let alone take it off.</p>
+  <div class="cta-row"><a class="cta" href="https://email.contact.aerialedge.co.uk/c/eJx0VF2TqjgU_DXhZetOQRICPvAgKo7j-D3q4IsVkogRSJgQdPTXb6mzW1t1774253Q1fbrD9pJH8y0dZOPvLP_sL41NQnIJvx0eMe4i5jpcV1SqiGllKbMvVBhJS8Fz8cL0S1v8fN_rixKmOcp6b6-1iErNqJX6iXNHRF4Q-rjju27giIrKcl-JpqG5uAsYFtv0nJbvw7f3fiumi9Sw7GfqQcZoVVOZq_9g9zVCCQsoJgeKfJ-gUFAYEEGwI9RZGq0qoWxUG81bdpfiHCOODigLQ-xiTlHGOhBjxhlCBLqEhDxwZARdSNwAeZ571_qCswx7lPteFrgYiRBg93-dKKOjtXUDUBfABMCE1vK3IQCTx0_8soayQqocwCSEB84gEYIggJIf-hEHqN908Lw72XaP58zfdOxoMZEUQNLaat_o1jABUP9B9wNWgsu2-gf8q6KmEFaq3CnZ_umdVFYYRctoDZOGDzfFpwdgvGhqhFw3vVV-cT6VFadkVNRxD5ttEAMYF5PX90PsobQbruCkK_hxBmDyrm7M4lt_Y9_0l7_kX1laf5R0OQUw_srwqa868yR_esG9_Liu70vrwM7LsOW71cUCmAyXa7VSr73Pxdv5ww2HI_wuzZUnOndRd_bt9wa8TJe8jO1pFJRN6PU6p8FNewAmdlUPElq14814NLPJaZrq0ONf6ruuZwM8rNcLMe18sCow0095PM4BTHYEwJiVfrM4HOxuOXldXFG2OqjMp81uIy-TA0lJPptB6i8Gs85q0L6RFC7nxY6RS9zrIcxsiLJBOI63H-l1eaEIwKTX1rtwVG8nWwCT11fo4nG6KcfrwrZvE3mVbJMsAOoD1HdK_ahc0vGGNRIhXQ1Le0Br1b1tnErYo-YRraWjjcylirK2LH49DufURp8lFyYqBeVMKyWY1cYx0f3IALu_pfEZkOiZNtmcf120KYRx7L2b-z8KsBHT1f6Pz4GNhN3_28NzBP8OAAD__yw4ayk" target="_blank" rel="noopener noreferrer">Read the number: read here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-youth" src="/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-11.png" alt="THE CALENDAR HAS A GAP timeline">
+
+<div class="block youth" id="block-youth">
+  
+  <h2>THE CALENDAR HAS A GAP</h2>
+  <h3>AUGUST SUMMER CAMP FILLS THE WEEK YOU HAVEN'T PLANNED YET</h3><p>By the third week of the school holidays, most households have run out of ideas that don't involve a screen and a sigh.</p><p>July's Summer Camp already came and went. Five days of upside-down adventures, and on the Friday, an informal showing where campers got to show family and friends everything they'd picked up that week. Watching them queue up to go again said plenty about how the week had landed.</p><p>August Summer Camp runs next, Monday 3rd to Friday 7th, same format. Full days, all the usual apparatus, and its own Friday showing at pickup time for whoever comes to watch.</p><p>A full day side by side does something a weekly class can't: most campers are onto proper friendships by day two or three, built over six hours together rather than 90 minutes once a week.</p><p>It won't fill the gap in your calendar with a screen. It'll fill it with something they'll talk about for the rest of the holidays.</p><p>One more week, one more excuse to watch them show off.</p><p class="spacer">&nbsp;</p><p><strong>August Summer Camp</strong><br>Monday 3rd August til Friday 7th<br>10am-4pm daily | £60 per day or £240 for the week (5 days for the price of 4)</p>
+  <div class="cta-row"><a class="cta" href="https://email.contact.aerialedge.co.uk/c/eJx0VF2TqjgU_DXhZetOQQIBH3gQFcfvr1EHX6yQBIxAwoSgo79-S53d2qp797U5p6vp0x16FCxc7skgnXyn-Wd_rU0c4GvwbbGQMhtR22KqIkKGVElDqHkjXAtScpbzN6re2uLn-1FdJdfNSdRHc6t5WCpKjFAvnFk8dPzAczuebfsWr4gojxVvGpLzh4BhsU8uSTkdjqf9ls9Xiabpz9STjJKqJiKX_8Eea5hg6hMXZwR5HkYBJ9DHHLsWlxehlay4NGGtFWvpQ4p1ClGW-jbxkG3bGGM3IxRmJKA-QcjvYM-3RAhtiG0fOY790PrmpqnrEOY5qW-7iAfAtf_XiTI8GVM3AHUBjAGMSS1-GwIwfv7EL6MJLYTMAYw93wto5mAKPYDiH_oRA6jfdNxld7bvni6pt-uY0WomCIC4NdWxUa2mHKD-k-4HrDgTbfUP-FdFdMGNkLlV0uPLOyEN15KU4RbGDRvuik8HwGjV1AjZdnKvvOJyLitG8Kioo56r934EYFTM3qdZ5KCkG2zgrMvZaQFgPJV3atx7f2fG6stbs680qT9Ksp4DGH2l7rkvO8s4f3nBnPy0rR9LW98sy6Blh83VABgP11u5ke-9z9X48mEHw5E7FfrGYpXbqLv49noDViZrVkbmPPLLJnB6nfPgrhwAY7OpBzGp2sluMlqY-DxPVOCwL_ld14uBO6y3Kz7vfNDK1_NPcTotAYwPGMCIll6zyjJzWM_eVzeUbjKZeqQ57MR1luEE54sFJN5qsOhsBu0YJ3C9LA4UX6NeD7nUBCgdBJNo_5Hc1leCAIx7bX0IRvV-tgcwfn-HtjtJduVkW5h2PBM3QXfxCqA-QH2rVM_KxR1nWCMekM2wNBnayu59Z1XcnBQLSS0spUUuZJi2ZfHreTir1uoiGNdhyQmjSkpOjdKWDh9HBq79WxpfAQlfaRPN5ddV6YJryzy6efyjABNSVR3_-ByYkJvjvz28hPDvAAAA__-Hl2qY" target="_blank" rel="noopener noreferrer">Fill the gap: book here</a></div>
+</div>
+<div class="divider"></div>
+
+
+
+<div class="block youth" id="block-youth-fly">
+  
+  <h2>YOUTH FLY TAKES A BREATHER</h2>
+  <h3>OFF ONE MONDAY, BACK IN THE AIR THE WEEK AFTER</h3><p>Quick note for Youth Fly enthusiasts – there's no class Monday 3rd August. Flyers are back the following Monday, 10th August, same slot, same rig.</p><p>One week off, then straight back up in the air.</p><p class="spacer">&nbsp;</p><p><strong>Youth Fly</strong><br>Off Monday 3rd August | Back Monday 10th August, usual slot</p>
+  <div class="cta-row"><a class="cta" href="https://email.contact.aerialedge.co.uk/c/eJx0VE1zqzgQ_DXisuUUSCDgwMFfOI7j-Cu2gy8uIQmsABIRwo7z67ewvVv76r09qkfS9EzPND0KFi33ZJzOvtP8Y7TWJg7wJfi2WESZjahtMVURISOqpCHUPBGuBSk5y_kTVU9t8Ygf1UVy3ZxEfTTXmkelosQIdceZxSPHDzw39Gzbt3hFRHmseNOQnHcEJsU-OSfl6-TlddTyt1Wiafq4dfuMkqomIpf_wbpnmGDqExdnBHkeRgEn0MccuxaXZ6GVrLg0Ua0Va2lHxTpFLMUwsKGLPOyEPk555voOszHLWMhTwiwRQRti20eOY3dcn9w0dR3CPCf1bRfxALj2_3aijE7G1A1AfQBjAGNSi98uARjfiugZTWghZA5gnNo-s1M3dRgFKH58P2UAjZrQXfbn-_7pnHq70ExXc0EAxI0h2jBiOECjjm_P9nvQBxBzyX6Bw56NAcRnLlveADQCEFNieK709X4SsjG6pUbpR1hlGddC5rcmP7BOJc0bo8Wtjw_0l0TBPX9rqmOjWk27yK3OB1hxJtrqH_CviuiCGyFzq6THu6hCGq4lKaMtjBs22RUfDoCDVVMjZNvJT-UV58-yYgRPi3owdPXeHwA4KObPr9nAQUk_2MB5n7PTAsD4Vf5Q4_6MduZFfXlr9pUm9XtJ1m8ADr5S93Mkw2Wc30ViTn7a1t2jrW-WZdCyw-ZiAIwn663cyOfhx-rl_G4Hk6n7KvSVxSq3UX_x7Q3HrEzWrByYz6lfNoEzDD_HP8oBMDabehyTqp3tZtOFiT_fEhU47Et-1_Vi7E7q7Yq_he-08vXbhzidlgDGBwzggJZes8oyc1jPn1dXlG4ymXqkOezEZZ7hBOeLBSTearwIN-P2BSdwvSwOFF8GwyFyqQlQOg5mg_17cl1fCAIwHrb1IZjW-_kewPj5GdruLNmVs21h2pe5uAq6i1edmmhklermBXHoTGrEA7KZlCZDW9n_2VkVNyfFIlILS2mRCxmlbVn0bsJZtVZnwbiOSk4YVVLybpwsHXUiA9f-bU3uAxLd10A0595F6YJry3SmcfwjARNRVR3_6FMm4ub4r0GcI_h3AAAA__-5yZpq" target="_blank" rel="noopener noreferrer">Get ahead: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-shows" src="/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-12.png" alt="SHOWS timeline">
+<div class="hero"></div>
+<div class="block shows" id="block-shows-auto">
+  <div class="subtitle">Open Rig Night — 2026-10-17</div>
+  <h2>SHOWS</h2>
+  <p>A live show falls inside this send's planning window. See the timeline above and the event details below.</p>
+  
+</div>
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-shop">
+  
+</div>
+
+
+<div class="shop-2up">
+  <div class="col">
+    <a href="https://email.contact.aerialedge.co.uk/c/eJx0VE1z6jgQ_DXyZeulZMmWzcGHGGxCCOErQMyFkiVhhG3JkWUI_PotILu1Ve_ttTXT1TPTLbaTPJptaJKPv_Pic7AwNg3JOfx2eMQ4xAw6XNdUqohpZSmzT1QYSSvBC_HE9FNX_rzv9FkJ0x5ks7OXRkSVZtRK_cC5IyI3CH2v50MYOKKmstrVom1pIW4ChuUmO2XV2_D1bdCJ93lmWP5TdSdjtG6oLNR_sFsboYQF1CN7in2f4FBQFBBBPEeokzRa1ULZqDGad-wmxTlEPcoQ8THzEKfMgwL6UPiui3vE86mXE0dGCCICA-y68Kb1yctzz6Xcd_MAeliEwIP_u4kqOljbtAA_A5QClNJG_lYEUHof4pc1lJVSFQClkOc-wZAQjgBOf-hHHODBbJGsR8kGINLZetfqzjAB8ODO8APWgsuu_gf8q6amFFaqwqnY7rEuqawwilbRCqUtH67LTxegeN42GEOYXWu_PB2rmlMyKpu475lNEAMUl5OXt33s4uw5XKLJs-CHKUDpm7oy610Ha_uqv_wF_8qz5qOii3eA4q_cOw5Ub5YWj_G5WxxWza1pFdhZFXZ8uzxbgNLhYqWW6qX_OX89fcBwOPLepLnwVBcQP0-__X7Cq2zBq9geR0HVhm6_d0yu2gUotcsmSWndjdfj0dSmx_dMhy7_Ut9NM028YbOai_feB6sD8_4pD4cZQOmWABSzym_n-73dLiYv8wvOl3uV-7TdruV5sicZKaZTRP15Mu0tk-6VZGgxK7eMnON-H3vMhjhPwnG8-cguizPFAKX9rtmGo2Yz2QCUvrwg6I2zdTVelbZ7nciLZOt0DvAA4IFT6XvK0p47bLAI6XJY2T1eqefr2qmFPWge0UY62shCqijvqvLX_XBOY_RJcmGiSlDOtFKCWW0cE92ODDz4mwEfBokeBpPt6ddZm1IYx97iuPujABsxXe_--APYSNjdv9E7RejvAAAA___0RGYf" target="_blank">
+      
+    </a>
+  </div>
+  <div class="col">
+    <a href="https://email.contact.aerialedge.co.uk/c/eJx0VEuPszgQ_DXmsvpGYPM8cBgSyPs9SYZcImMb4gA2Y0wyya9fJZldrfR9ey13l6q7q0yOnIbLPY6zyXdWfPbXSie-e_W_DRoSaiJiGlTWmIuQSKEx0W-YKY4rRgv2RuRbV_68H-VVMNWeeHPUt4aFlSRYc_nCqcFCy_MdO3BM0zNYjXl1rFnb4oI9BAzKfXpJq-lgPO13bL5KFcl-qp5kBNcN5oX4D_Zoc7FLPGy7OUaO4yKfYei5zLUNJi5cSVEzocNGSdqRhxTjFELbzQNmU4YRdAOXBAE0iY0cZOUoz3Jk8BCa0DU9ZFnmQ-ubnWW2haljZZ5pI-YD2_zfTVThSeumBegdwATABDf8tyIAk-cQv7TCpOSiADBxchzQwMwCbAGU_NCPKED95TrejeI9gG6n62MrO0UYQP0nww9YM8q7-h_wrxqrkmkuCqMix9e6uNBMCVyFW5i0dLArPy0Ao1XbIGSa6b12ysu5qil2R2UT9Wy19yIAo3I2nOaRhdJ3fwNn74yeFgAmU3En2r73d3osv5w1_crS5qPC6zmA0Vdmn_siWCbFa3xqFadt82jaenpZ-R09bK4awGSw3oqNGPY-V-PLh-kPRvaUqxtNZGGi98W304tpla5pFenzyKta3-oF5_guLQATvWniBNfdZDcZLXRynqfSt-iX-G6aRWwPmu2KzYMPUntq_slPpyWAycEFMCKV067yXB_Ws-HqhrJNLjIHt4cdv85yN3WLxQJiZxUvgk3cjd0UrpflgbjXqNdDNtE-ymJ_Eu0_0tv6ihGASa9rDv6o2c_2ACbDITTtSbqrJttSd-MZv3GyS1YA9QHqG5V8piwJrEGDmI83g0rnaCve7zujZvokaYgbbkjFCy7CrKvKX8_DGY2SF06ZCiuGKZFCMKKlMlT4ODKwzd8M-DJI-DIYby-_rlKVTBn6EcfjHwXokMj6-McfQIdMH_-N3iWEfwcAAP__9ghm1A" target="_blank">
+      
+    </a>
+  </div>
+</div>
+
+
+<div class="shop-heading">
+  <h2>TAP IMAGE TO BUY YOUR GOODIES</h2>
+  <p>EACH IMAGE HAS A SEPARATE LINK</p>
+</div>
+
+
+<div class="full-img">
+  <a href="https://email.contact.aerialedge.co.uk/c/eJx0VEuPszgQ_DXmsvpGYPM8cBgSyPs9SYZcImMb4gA2Y0wyya9fJZldrfR9ey13l6q7q0yOnIbLPY6zyXdWfPbXSie-e_W_DRoSaiJiGlTWmIuQSKEx0W-YKY4rRgv2RuRbV_68H-VVMNWeeHPUt4aFlSRYc_nCqcFCy_MdO3BM0zNYjXl1rFnb4oI9BAzKfXpJq-lgPO13bL5KFcl-qp5kBNcN5oX4D_Zoc7FLPGy7OUaO4yKfYei5zLUNJi5cSVEzocNGSdqRhxTjFELbzQNmU4YRdAOXBAE0iY0cZOUoz3Jk8BCa0DU9ZFnmQ-ubnWW2haljZZ5pI-YD2_zfTVThSeumBegdwATABDf8tyIAk-cQv7TCpOSiADBxchzQwMwCbAGU_NCPKED95TrejeI9gG6n62MrO0UYQP0nww9YM8q7-h_wrxqrkmkuCqMix9e6uNBMCVyFW5i0dLArPy0Ao1XbIGSa6b12ysu5qil2R2UT9Wy19yIAo3I2nOaRhdJ3fwNn74yeFgAmU3En2r73d3osv5w1_crS5qPC6zmA0Vdmn_siWCbFa3xqFadt82jaenpZ-R09bK4awGSw3oqNGPY-V-PLh-kPRvaUqxtNZGGi98W304tpla5pFenzyKta3-oF5_guLQATvWniBNfdZDcZLXRynqfSt-iX-G6aRWwPmu2KzYMPUntq_slPpyWAycEFMCKV067yXB_Ws-HqhrJNLjIHt4cdv85yN3WLxQJiZxUvgk3cjd0UrpflgbjXqNdDNtE-ymJ_Eu0_0tv6ihGASa9rDv6o2c_2ACbDITTtSbqrJttSd-MZv3GyS1YA9QHqG5V8piwJrEGDmI83g0rnaCve7zujZvokaYgbbkjFCy7CrKvKX8_DGY2SF06ZCiuGKZFCMKKlMlT4ODKwzd8M-DJI-DIYby-_rlKVTBn6EcfjHwXokMj6-McfQIdMH_-N3iWEfwcAAP__9ghm1A" target="_blank">
+    
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-services">
+  
+</div>
+
+
+<div class="full-img">
+  <a href="https://email.contact.aerialedge.co.uk/c/eJx0VE1z6jgQ_DXyZeulbMmWxcGHGGxCCOErQMyFkiXZKLYlR5Yh4ddvAdmtrXpvr62Zrp6ZbrGD5NFiR5N8-pWX76OVsSnBZ_Ll8IhxFzHX4bqhUkVMK0uZfaDCSFoLXooHph_66uf9oM9KmO4o24P9bkVUa0at1HecOyLyQhL4g8B1Q0c0VNaHRnQdLcVVwLjaZaesfhk_v4x68brMDMt_qm5kjDYtlaX6D3ZtwxSzkPq4oCgIMCKCwhAL7DtCnaTRqhHKRq3RvGdXKc4xoi4KISU-D2CBMWGwIIMBKmiAiecWIXdkBF2I3RB5nnvV-uDnue9RHnh56PpIEOC7_7uJOjpa23YAPQKYApjSVv5WBGB6G-KXNZRVUpUAppjkBcQBJWEOUPpDP-EAjRarZDtJdgDi3jaHTveGCYBGN4YfsBFc9s0_4F8NNZWwUpVOzQ73dUllhVG0jjYw7fh4W717AMbLrkXIdbNLE1Snj7rhFE-qNh76ZhfGAMbV7OmliD2UPZI1nD0KfpwDmL6oC7P-ZbS1z_ozWPHPPGvfarp6BTD-zP2PkRos0vI-PvfK46a9Nm1Cu6hJz_frswUwHa82aq2ehu_L59ObS8YT_0Wab57q0kWP869gmPA6W_E6th-TsO6INxx8JBftAZjadZuktOmn2-lkbtOP10wTj3-qr7adJ_643SzF6-CNNaF5fZfH4wLAdI8BjFkddMuisPvV7Gn5jfJ1ofKAdvutPM8KnOFyPoc0WCbzwTrpn3EGV4tqz_A5Hg6RzyxBeUKm8e4t-16dKQIwHfbtnkza3WwHYPr0BF1_mm3r6aay_fNMfku2TZcAjQAaObW-pSwdeOMWCULX49oWaKMeL1unEfaoeURb6WgjS6mivK-rX7fDOa3RJ8mFiWpBOdNKCWa1cUx0PTLw3d8MeDdIdDeY7E6_ztpUwjj2GsfDHwXYiOnm8McfwEbCHv6N3imCfwcAAP__A5JmgQ" target="_blank">
+    
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="social-row">
+  <a href="https://email.contact.aerialedge.co.uk/c/eJx0VEtz8jgQ_DXyZSspW_Lz4AMGm_c7QMyFkiVhhG3JkWUI_PotILu1VV_22prp6pnpFjlwGi52OM7G31n-2Vspnfju1f82aEioiYhpUFlhLkIihcZEv2OmOC4Zzdk7ke9t8fN-kFfBVHPi9UHfahaWkmDN5QunBgstz3fswDFNz2AV5uWhYk2Dc_YQ0C926SUtJ_3RpNey2TJVJPupepIRXNWY5-I_2KPNxS7xsO0eMXIcF_kMQ89lrm0wceFKiooJHdZK0pY8pBinEGY-gyhwM4ZsbHoB9gIWHJkHMw9ZtoUNHkITuqaHLMt8aH23s8y2MHWszDNtxHxgm_-7iTI8aV03AHUATABMcM3_KAIweQ7xphUmBRc5gAnyPcfyoEM8H6Dkh35IAeotVvF2GO8AdFtdHRrZKsIA6j0ZfsCKUd5W_4B_VVgVTHORGyU5vNbFhWZK4DLcwKSh_W3xaQEYLZsaIdNM75VTXM5lRbE7LOqoa6udFwEYFdPB5BhZKO34azjtMHqaA5hMxJ1o-97b6pH8clb0K0vrjxKvZgBGX5l97olgkeSv8amVnzb1o2nj6UXpt3S_vmoAk_5qI9Zi0P1cji4fpt8f2hOubjSRuYk682-nG9MyXdEy0uehVza-1Q3O8V1aACZ6XccJrtrxdjyc6-Q8S6Vv0S_xXdfz2O7XmyWbBR-k8tTsk59OCwCTvQtgREqnWR6Per-aDpY3lK2PInNws9_y6_Topm4-n0PsLON5sI7bkZvC1aLYE_cadbvIJtpHWeyPo91HeltdMQIw6bb13h_Wu-kOwGQwgKY9TrfleFPodjTlN062yRKgHkA9o5TPlCWB1a8R8_G6X-oj2ojOfWtUTJ8kDXHNDal4zkWYtWXx9jycUSt54ZSpsGSYEikEI1oqQ4WPIwPb_MOAL4OEL4Px5vJ2lapgytCPOB5-FaBDIqvDrz-ADpk-_Bu9Swj_DgAA__8OQmYb"></a>
+  <a href="https://email.contact.aerialedge.co.uk/c/eJx0VE2TqjgU_TVhM_W6IIGACxaNgt_frTZurJBEjEBCh6Ctv35K7Zmaqvdme3LvqXPvPSf0IFi42JE4G39n-WdvpU0S4GvwbbGQMhtR22KqIkKGVElDqHkjXAtScpbzN6re2uLn_aCukuvmJOqDudU8LBUlRqgXziweOn7guR3Ptn2LV0SUh4o3Dcn5Q0C_2KWXtJz0R5Ney2fLVNPsp-pJRklVE5HL_2CPNkww9YmLjwR5HkYBJ9DHHLsWlxehlay4NGGtFWvpQ4p1Co8YdwjOaBB4zLYziBDu4IDYPvQx9h3PEiG0IbZ95Dj2Q-ubm2WuQ5jnZL7tIh4A1_7fTZThyZi6AegdwATAhNTityIAk-cQv4wmtBAyBzBxMTwiz3Eh5wAlP_RDBlBvsYq3w3gHIG5NdWhUqykHqPdk-AErzkRb_QP-VRFdcCNkbpX08FqXkIZrScpwA5OG9bfFpwNgtGxqhGw7vVdecTmXFSN4WNRR19U7PwIwKqaDyTFyUPoerOH0nbPTHMBkIu_UuPfe1ozUl7diX1laf5RkNQMw-srcc092Fkn-Gp85-WlTP5o2vlmUQcv266sBMOmvNnItB93P5ejyYQf9oTsR-sYSldvoff7tdWNWpitWRuY89MsmcLqdc3xXDoCJWddxQqp2vB0P5yY5z1IVOOxLftf1PHb79WbJZ50PWvl69ilOpwWAyR4DGNHSa5bHo9mvpoPlDWXro8w80uy34jo94hTn8zkk3jKed9ZxO8IpXC2KPcXXqNtFLjUByuJgHO0-0tvqShCASbet98Gw3k13ACaDAbTdcbotx5vCtKOpuAm6TZYA9QDqWaV6pizpOP0a8YCs-6U5oo18v2-tipuTYiGphaW0yIUMs7Ysfj0PZ9VaXQTjOiw5YVRJyalR2tLh48jAtX8z4Msg4ctgorn8uipdcG2ZRxwPfxRgQqqqwx9_ABNyc_g3epcQ_h0AAP__o0NltQ"></a>
+  <a href="https://email.contact.aerialedge.co.uk/c/eJx0VEuP8jgQ_DXOZfWNEjsvDjlMIOH9HmDCBTm2CSaJ7XEcGPj1K2B2tdL37bXcXarurjI5cBotdjjJx9958dlbaZOG_jX8tmhEqI2IbVFZYy4iIoXBxLxhpjmuGC3YG5FvbfnzfpBXwXRz4upgbopFlSTYcPnCqcUiJwg9t-PZdmCxGvPqULOmwQV7COiXu-ySVZP-aNJr2WyZaZL_VD3JCK4V5oX4D_Zo87FPAuz6R4w8z0chwzDwme9aTFy4lqJmwkRKS9qShxTrFHkh9QOYdwIaMjtnTugw13Pd3GEOOsKcWTyCNvTtADmO_dD65ua562DqOXlgu4iFwLX_dxNVdDJGNQC9A5gCmGLFfysCMH0O8ctoTEouCgDTo0egb-PQDn2A0h_6IQWot1gl22GyA9BvTX1oZKsJA6j3ZPgBa0Z5W_8D_lVjXTLDRWFV5PBaFxeGaYGraAPThva35acDYLxsFEK2nd1rr7ycq5pif1iquOvqXRADGJfTweQYOyh7D9dw-s7oaQ5gOhF3Ytx7b2tG8stb0a88Ux8VXs0AjL9y99wTnUVavManTnHaqEfTJjCLKmzpfn01AKb91UasxaD7uRxdPuywP3QnXN9oKgsbvc-_vW5Cq2xFq9ich0HVhE63c07u0gEwNWuVpLhux9vxcG7S8yyToUO_xLdS88Ttq82SzTofpA707JOfTgsA070PYEwqr1kej2a_mg6WN5SvjyL3cLPf8uv06Gd-MZ9D7C2TeWedtCM_g6tFuSf-Ne52kUtMiPIkHMe7j-y2umIEYNpt1T4cqt10B2A6GEDbHWfbarwpTTua8hsn23QJUA-gnlXJZ8rSjtNXiIV43a_MEW3E-31r1cycJI2w4pbUvOAiytuq_PU8nKW0vHDKdFQxTIkUghEjtaWjx5GBa_9mwJdBopfBeHP5dZW6ZNoyjzge_ijARETWhz_-ACZi5vBv9C4R_DsAAP__dKpmmw"></a>
+  <a href="https://email.contact.aerialedge.co.uk/c/eJx0VEuP8jgQ_DXOZfWNEjsvDjlMIOH9HmDCBTm2CSaJ7XEcGPj1K2B2tdL37bXcXarurjI5cBotdjjJx9958dlbaZOG_jX8tmhEqI2IbVFZYy4iIoXBxLxhpjmuGC3YG5FvbfnzfpBXwXRz4upgbopFlSTYcPnCqcUiJwg9t-PZdmCxGvPqULOmwQV7COiXu-ySVZP-aNJr2WyZaZL_VD3JCK4V5oX4D_Zo87FPAuz6R4w8z0chwzDwme9aTFy4lqJmwkRKS9qShxTrFHm2R1mQ5_TInBB7Psa2jx0KsQ896FDf4hG0oW8HyHHsh9Y3N89dB1PPyQPbRSwErv2_m6iikzGqAegdwBTAFCv-WxGA6XOIX0ZjUnJRAJjaAWYupAFzAoDSH_ohBai3WCXbYbID0G9NfWhkqwkDqPdk-AFrRnlb_wP-VWNdMsNFYVXk8FoXF4ZpgatoA9OG9rflpwNgvGwUQrad3WuvvJyrmmJ_WKq46-pdEAMYl9PB5Bg7KHsP13D6zuhpDmA6EXdi3Htva0byy1vRrzxTHxVezQCMv3L33BOdRVq8xqdOcdqoR9MmMIsqbOl-fTUApv3VRqzFoPu5HF0-7LA_dCdc32gqCxu9z7-9bkKrbEWr2JyHQdWETrdzTu7SATA1a5WkuG7H2_FwbtLzLJOhQ7_Et1LzxO2rzZLNOh-kDvTsk59OCwDTvQ9gTCqvWR6PZr-aDpY3lK-PIvdws9_y6_ToZ34xn0PsLZN5Z520Iz-Dq0W5J_417naRS0yI8iQcx7uP7La6YgRg2m3VPhyq3XQHYDoYQNsdZ9tqvClNO5ryGyfbdAlQD6CeVclnytKO01eIhXjdr8wRbcT7fWvVzJwkjbDiltS84CLK26r89TycpbS8cMp0VDFMiRSCESO1paPHkYFr_2bAl0Gil8F4c_l1lbpk2jKPOB7-KMBERNaHP_4AJmLm8G_0LhH8OwAA___bDGcR"></a>
+  <a href="https://email.contact.aerialedge.co.uk/c/eJx0VE1z6jgQ_DXyZeulbMmWxcGHGGxCCOErQMyFkiXZKLYlR5Yh4ddvAdmtrXpvr62Zrp6ZbrGD5NFiR5N8-pWX76OVsSnBZ_Ll8IhxFzHX4bqhUkVMK0uZfaDCSFoLXooHph_66uf9oM9KmO4o24P9bkVUa0at1HecOyLyQhL4g8B1Q0c0VNaHRnQdLcVVwLjaZaesfhk_v4x68brMDMt_qm5kjDYtlaX6D3ZtwxSzkPq4oCgIMCKCwhAL7DtCnaTRqhHKRq3RvGdXKc4xoi4KISU-D2CBMWGwIIMBKmiAiecWIXdkBF2I3RB5nnvV-uDnue9RHnh56PpIEOC7_7uJOjpa23YAPQKYApjSVv5WBGB6G-KXNZRVUpUAppjkBcQBJWEOUPpDP-EAjRarZDtJdgDi3jaHTveGCYBGN4YfsBFc9s0_4F8NNZWwUpVOzQ73dUllhVG0jjYw7fh4W717AMbLrkXIdbNLE1Snj7rhFE-qNh76ZhfGAMbV7OmliD2UPZI1nD0KfpwDmL6oC7P-ZbS1z_ozWPHPPGvfarp6BTD-zP2PkRos0vI-PvfK46a9Nm1Cu6hJz_frswUwHa82aq2ehu_L59ObS8YT_0Wab57q0kWP869gmPA6W_E6th-TsO6INxx8JBftAZjadZuktOmn2-lkbtOP10wTj3-qr7adJ_643SzF6-CNNaF5fZfH4wLAdI8BjFkddMuisPvV7Gn5jfJ1ofKAdvutPM8KnOFyPoc0WCbzwTrpn3EGV4tqz_A5Hg6RzyxBeUKm8e4t-16dKQIwHfbtnkza3WwHYPr0BF1_mm3r6aay_fNMfku2TZcAjQAaObW-pSwdeOMWCULX49oWaKMeL1unEfaoeURb6WgjS6mivK-rX7fDOa3RJ8mFiWpBOdNKCWa1cUx0PTLw3d8MeDdIdDeY7E6_ztpUwjj2GsfDHwXYiOnm8McfwEbCHv6N3imCfwcAAP__A5JmgQ"></a>
+</div>
+
+
+<div class="contact-band" id="section-contact">
+  <div class="contact-row">
+    <div class="col col-video">
+      <a href="https://email.contact.aerialedge.co.uk/c/eJx0VEuP8jgQ_DXOZfWNHDsvDjlMIOH9HmDCBTm2CSaJnXEcGPj1K2B2tdL37bXcXarurjI9CBYudiTOxt9Z_tlbaZME3jX4tlhIGcQUWkxVRMiQKmkINW-Ea0FKznL-RtVbW_y8H9RVct2cRH0wt5qHpaLECPXCmcVD2w9cp-NC6Fu8IqI8VLxpSM4fAvrFLr2k5aQ_mvRaPlummmY_VU8ySqqaiFz-B3u0ecSjPnG8I8Gu6-GAE-R73HMsLi9CK1lxacJaK9bShxTrFCKHHAMCHY_CDLqc-zbDLmPQpSRzGOtYIkQQedDHtg0fWt-cLHNswlw786GDeQAc-L-bKMOTMXUD8DtACUAJqcVvRQAlzyF-GU1oIWT-AFyXYNfuwGMGcPJDP2QA9xareDuMdwB5rakOjWo15QD3ngw_YMWZaKt_wL8qogtuhMytkh5e6xLScC1JGW5Q0rD-tvi0AYqWTY0xhOm9covLuawY8YZFHXUdvfMjgKJiOpgcIxun78EaTd85O80BSibyTo1z723NSH25K_aVpfVHSVYzgKKvzDn3ZGeR5K_xmZ2fNvWjaeObRRm0bL--GoCS_moj13LQ_VyOLh8w6A-didA3lqgc4vf5t9uNWZmuWBmZ89Avm8Duds7xXdkAJWZdxwmp2vF2PJyb5DxLVWCzL_ld1_PY6debJZ91Pmjl69mnOJ0WACV7D6CIlm6zPB7NfjUdLG84Wx9l5pJmvxXX6dFLvXw-R8RdxvPOOm5HXopWi2JPvWvU7WKHmgBncTCOdh_pbXUlGKCk29b7YFjvpjuAksEAQWecbsvxpjDtaCpugm6TJcA9gHtWqZ4pSzp2v8Y8IOt-aY54I9_vW6vi5qRYSGphKS1yIcOsLYtfz8NZtVYXwbgOS04YVVJyapS2dPg4MnDgbwZ8GSR8GUw0l19XpQuuLfOI4-GPAkxIVXX44w9gQm4O_0bvEqK_AwAA__9vvmdD">
+        
+        <span class="play-overlay"><span></span></span>
+      </a>
+    </div>
+    <div class="col col-text">
+      <h3>How To Get In Touch With Us</h3>
+      <p>The best ways to talk to us are through email and text on <a class="tel" href="tel: 447414438501">(+44) 07414 438 501</a> — or just drop in and have a coffee in reception.</p>
+      <p>We monitor social media DMs too, they just might not be answered as quickly.</p>
+      <p>Tap the video on the left for a quick guide to our front door at 240 Edmiston Drive, Glasgow G51 2YU.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="map-row">
+  
+</div>
+
+
+<div class="footer">
+  <div class="legal">
+    <em>Copyright © 2026&nbsp; Aerial Edge, All rights reserved.</em><br><br>
+    <strong>Our e-mail address is:</strong><br>
+    <a href="mailto:info@aerialedge.co.uk">info@aerialedge.co.uk</a><br><br>
+    Want to change how you receive these emails?<br>
+    You can <a href="https://email.contact.aerialedge.co.uk/c/eJx0VM1y8jgQfBr5spWULcl_Bx8w2IQQwl-AmAslS7JRbEuOLEPC028B2a2tyrfX1syo1dMtehAsWuxIkk-_8vJ9tNImDbxz8GWxiDIbUdtiqiFCRlRJQ6h5JFwLUnNW8keqHvvq5_ygzpLr7ijag_lueVQrSoxQd5xZPHL8wMWha9u-xRsi6kPDu46U_EpgXO2yU1a_jJ9fRj1_XWaa5j9Vt2GUNC0RpfwPdm3ziEd9gr2CINf1UMAJ9D3uYYvLk9BKNlyaqNWK9fRKxTpGPgx97MAQ217AA-wwj5CAcYhCWODCCy0RQRt6to8cx75yfcR5jh3CXCf3bYx4ALD9v0rU0dGYtgNoAGAKYEpa8asIwPT2iAejCa2ELK91jBa4QITSAqD0Z_yEATTqQrwYzHaD4yl3t6GZLGeCAOjdJgA0WqyS7STZAehi-_dFXm-aQ6d6TTlAo3vPHWw4E33zD_hXQ3TFjZClVdPDXWIhDdeS1NEGph0bb6t3B8B42bUI2XZ2adzq9FE3jHiTqo2HWO_8GMC4mj29FLGDskGwhrMBZ8c5gOmLvFCDL6OteVaf7op95ln7VpPVK4DxZ44_RjJcpOVdMuaUx017bdr4ZlEHPduvzwbAdLzayLV8Gr4vn09vdjCe4Behv1mqShsN5l_uMGF1tmJ1bD4mft0FzjD8SC7KATA16zZJSdNPt9PJ3KQfr5kKHPYpv9p2nuBxu1ny1_CNNr5-fRfH4wLAdO8BGNPa7ZZFYfar2dPyG-XrQuYu6fZbcZ4VXuaV8zkk7jKZh-ukf_YyuFpUe-qd4-EQYWoClCfBNN69Zd-rM0EApsO-3QeTdjfbAZg-PUEbT7NtPd1Upn-eiW9Bt-kSoBFAI6tWt2SmoTNuEQ_IelybAm3k4LK1Gm6OikWkFZbSohQyyvu6ergtzmq1OgnGdVRzwqiSklOjtKWj65LBb5tYd4NEd1OK7vRwVrri2jLXCB_-SMBEVDWHP_4aJuLm8G9cTxH8OwAA__-8KXe7">unsubscribe from this list</a>.
+  </div>
+</div>
+</div>
+
+<br><p>If you no longer wish to receive these emails you may <a style="color:#000000;margin:0;text-decoration:underline" href="https://email.contact.aerialedge.co.uk/c/eJx0VM2SsrwavJqwGwsSQFiwEBBGHXH8g4GNFZKIkfAzEHT06k8x89Z5T51vvm2S7up0P0-TE6fOe4Ln-eorLz78XScDy7xbXwp1CFURURXaVJjXDmlqiYmcYNZxLBgt2IQ0k6H8c39q7jXr-gtvT_LRMkc0BEve_JxThTna1DJ021DVqcIqzMWpYn2PCzYKCMskvaXiLVy--QOLtmlH8j-vvskIrlrMi_p_zkaYiU0yxbp5xsgwTGQxDKcmM3WF1TfeNXXFaum0XUMHMkpRLo4BLaphZufIUHNdU231bE2xajFk2LlNbYU7UIWmOkWapo5aJ3qe6xqmhpZPVR0xC-jqvzohnIuUbQ_QDMAAwKBn3Y0T1k-qvuhr2k1IUwEYfH-iBzDIBy4o6wAMhrof8p50PGcvN87uAAaBrYUtYhbeh0Ke0bGePeOR09bfZ-tkdrnlRmzLxXbNMUA_nAD5Fe5KAA1d_X9xAJqSVa3AcrQOIH80z9RVBE2oGUhnNrTsXM0JgObfZADyf8tmJOMVO_USVy1A_t9stak5XjYlqwHy2WN5yUPCN3y5OD4XWsQX_aLeGcRbmIuy_Yi9pT1hj2WPk-34KNwcglfiR2ITBocd_FKzaxTnZWDGI7CK2mwE1msjClz3EFMXv2Y8ilODzsXukIjLgt95lqgjl0w_lt02DASpxCUP4zKDxyGF1kCTnr95y2cK7Xu2H_ncR5ZkglTxkML4OXLgJFAX1-YrehZa5Jfa2p-h83ayeZwiD3nQer9uEu1FXD8L7_NhruzT47wqIPp42mF79jaFelcEOf1MK68l62osnCMMehrG5YcGoLvtW4RUNX1WRnm7iori0RHX07tk6gLoluvXt7OroXRm7eF6xuhlA2DwVj-J1J9-LJfNp7Gjn3naHgTeRQC6n7l-9Wv7PSh-po9qxeXYjqDjVL4La6DZ_i4BDMLdsd7Xr97Hdnk7qFa40N9496BBU6hotvkyvDkV6Y4KV14XU9Fbmmdf589GAzCQ-3Ye4GpYxavFRgbXKG0sjX7WX227methe9yyyD6QatpFH_xyeQcwyEwAXSKMfns-y2y3ft0-UL4_17mB-yzm9_XZTM1is4HY2M439n4-LM0U7t7LjJh31_OQTqSF8rm1cpND-tjdMQIw8IY2sxZtsk4ADF5foaqv0lisjqUclmv-4CQOtgD5APmKaL5L7rd9UiomLw11cMuVpuMFr518EOXLd3BK2zU3TlnnCIYpaeqaEdl0Sud8L9k_V0zpm6EjzPlGv_D-9nJvupJ1ihzb8PSrAOmQpjr9WsDSYfL03-a7OfA_AQAA___bLOK1">unsubscribe</a></p></div>
+</div>
