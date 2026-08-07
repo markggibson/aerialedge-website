@@ -3,7 +3,7 @@ title: "Dance trapeze, static trapeze, and why Andrea keeps coming back to the b
 date: 2026-08-07
 author: Aerial Edge
 images:
-  - /assets/images/cms/andrea-cwg-show-2U8A0891.jpg
+  - /assets/images/cms/andrea-dance-trapeze-red-standing.jpg
 categories:
   - Circus Training
 tags:
@@ -18,7 +18,7 @@ Andrea had already done a fair amount of aerial before she ever set foot in Aeri
 
 That changed on the PDC, Aerial Edge's one-year professional course (now delivered in two six-month blocks). Like everyone who starts it, she spent the first section training broadly across every discipline on offer, whether or not it was something she planned to perform. "It's good to have an experience with everything," she says, "even the classes you're not necessarily going to use." She's kept up plenty of that range since. But if you ask her which apparatus she never gets tired of, the answer doesn't change: trapeze.
 
-![Andrea walking on stage in costume during the Commonwealth Games show](/assets/images/cms/andrea-cwg-show-2U8A0882.jpg)
+![Andrea in a red costume reclining across the bar of a dance trapeze, lit in teal haze](/assets/images/cms/andrea-dance-trapeze-red-recline.jpg)
 
 ### Why trapeze, out of everything
 
@@ -32,8 +32,6 @@ Trapeze translates well to other apparatus too. Andrea uses it a lot when workin
 
 There's a performance instinct behind the preference as well as a technical one. Andrea describes herself as more the actory type of aerialist than an athletic one – drawn to expressive movement over stacking tricks.
 
-![Andrea arching back in an aerial hammock with her arms spread, performing at the Commonwealth Games show](/assets/images/cms/andrea-cwg-show-2U8A0912.jpg)
-
 She reckons that's a harder thing to find done well now that aerial training is more widely available than it's ever been, particularly on silks, where a lot of very good athletes rack up a long line of tricks, which leans more into awe than expression. Trapeze, for Andrea, leaves more room for the latter.
 
 It also comes with one small practical perk verticals don't offer: "You can wear shoes or heels on trapeze. You can't do that in silks."
@@ -46,7 +44,7 @@ The two look different in the air too. "The nice thing to watch on dance trapeze
 
 Spin technique specifically was new to her when she arrived at Aerial Edge. "I trained the tricks before, but I'd never trained spin," she says. Once she had it, it opened up a different way of moving around the ropes and the bar altogether – something she's still finding new ways to use.
 
-![Andrea balancing horizontally in an aerial hammock above a crash mat, with the audience watching behind](/assets/images/cms/andrea-cwg-show-2U8A0884.jpg)
+![Andrea holding a horizontal plank behind the bar of a trapeze in front of a green curtain](/assets/images/cms/andrea-trapeze-plank.jpg)
 
 ### Teaching, performing, and one bad afternoon with a pole
 
@@ -54,10 +52,8 @@ Performance is where Andrea's focus sits now, though she's taught kids for three
 
 Her performance in the Commonwealth Games show at the end of July was in jeopardy when a training session went wrong as she collided with a pole – an apparatus that, as she points out, doesn't move at all. She'd moved around it in a way she wasn't supposed to, and that meant that her end-of-course showreel shoot had to be postponed. The show went ahead and Andrea's theatrical performance was met with wild applause. In the end, she chose aerial hammock, which just goes to show how versatile you can be after a full-time course.
 
-![Andrea flying horizontally in an aerial hammock with her arms outstretched during the Commonwealth Games show](/assets/images/cms/andrea-cwg-show-2U8A0908.jpg)
+![Andrea in an arabesque above the trapeze bar in front of a green curtain](/assets/images/cms/andrea-trapeze-arabesque.jpg)
 
 ### Where to try trapeze
 
 You don't need a year on the PDC to find out what she's talking about. Static trapeze runs weekly at Aerial Edge – Wednesdays with Freya, Sundays with Mark, doubles work optional both days. Nobody's asking you to hit Andrea's level on day one. The apparatus does the same thing for you either way: it moves with you, not the other way round.
-
-![Andrea standing beneath the aerial hammock, reaching up to the ropes](/assets/images/cms/andrea-cwg-show-2U8A0939.jpg)
