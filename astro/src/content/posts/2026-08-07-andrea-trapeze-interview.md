@@ -56,4 +56,4 @@ Her performance in the Commonwealth Games show at the end of July was in jeopard
 
 ### Where to try trapeze
 
-You don't need a year on the PDC to find out what she's talking about. Static trapeze runs weekly at Aerial Edge – Wednesdays with Freya, Sundays with Mark, doubles work optional both days. Nobody's asking you to hit Andrea's level on day one. The apparatus does the same thing for you either way: it moves with you, not the other way round.
+You don't need a year on the PDC to find out what she's talking about. Static trapeze runs weekly at Aerial Edge – Wednesdays with Freya, Sundays with Mark, doubles work optional on Sundays. Nobody's asking you to hit Andrea's level on day one. The apparatus does the same thing for you either way: it moves with you, not the other way round.
