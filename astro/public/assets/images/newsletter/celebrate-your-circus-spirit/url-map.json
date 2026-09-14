@@ -1,9 +1,12 @@
 {
   "slug": "2026-04-11-celebrate-your-circus-spirit",
+  "source": "corpus html-bodies/2026-04-11-celebrate-your-circus-spirit.html (as-sent mailbox copy), full-image rebuild \u2014 task #1911",
   "min_image_bytes": 0,
   "max_images_per_email": 999,
   "tracking_pixel_bytes": 100,
-  "max_image_bytes": 2097152,
+  "max_image_bytes": 0,
+  "compress_above_bytes": 2097152,
+  "source_image_count": 23,
   "rows": [
     {
       "pos": null,
@@ -48,10 +51,12 @@
     {
       "pos": 5,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/69d952f99a68c417bd0144b7.gif",
-      "file": null,
-      "size": 15580480,
+      "file": "img-05.webp",
+      "size": 3702778,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 15580480,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 15215 KB \u2192 3615 KB"
     },
     {
       "pos": 6,
@@ -88,10 +93,12 @@
     {
       "pos": 10,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/69da1ea2b30bc52371deec7d.gif",
-      "file": null,
-      "size": 6012413,
+      "file": "img-10.webp",
+      "size": 620544,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 6012413,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 5871 KB \u2192 606 KB"
     },
     {
       "pos": 11,
@@ -112,10 +119,12 @@
     {
       "pos": 13,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
-      "file": null,
-      "size": 2397485,
+      "file": "img-13.webp",
+      "size": 66490,
       "alt": "Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at \u00a315 or a whole term at \u00a3132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2397485,
+      "transform": "re-encoded still PNG\u2192WebP at quality 55; full resolution and frame rate kept, 2341 KB \u2192 64 KB"
     },
     {
       "pos": 14,
