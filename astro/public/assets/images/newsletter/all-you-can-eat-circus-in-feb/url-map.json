@@ -1,9 +1,12 @@
 {
   "slug": "2025-12-20-all-you-can-eat-circus-in-feb",
+  "source": "corpus html-bodies/2025-12-20-all-you-can-eat-circus-in-feb.html (as-sent mailbox copy), full-image rebuild \u2014 task #1911",
   "min_image_bytes": 0,
   "max_images_per_email": 999,
   "tracking_pixel_bytes": 100,
-  "max_image_bytes": 2097152,
+  "max_image_bytes": 0,
+  "compress_above_bytes": 2097152,
+  "source_image_count": 22,
   "rows": [
     {
       "pos": null,
@@ -80,10 +83,12 @@
     {
       "pos": 9,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/6946d17d8cae8f78e91571af.gif",
-      "file": null,
-      "size": 5321873,
+      "file": "img-09.webp",
+      "size": 1808156,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 5321873,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 5197 KB \u2192 1765 KB"
     },
     {
       "pos": 10,
@@ -104,10 +109,12 @@
     {
       "pos": 12,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
-      "file": null,
-      "size": 2397485,
+      "file": "img-12.webp",
+      "size": 66490,
       "alt": "Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at \u00a315 or a whole term at \u00a3132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2397485,
+      "transform": "re-encoded still PNG\u2192WebP at quality 55; full resolution and frame rate kept, 2341 KB \u2192 64 KB"
     },
     {
       "pos": 13,
