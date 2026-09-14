@@ -1,0 +1,531 @@
+<div class="ae-newsletter-shell">
+<style>
+.ae-newsletter-shell{
+  --bg: #292929;
+  --gold: #edb713;
+  
+  --yellow: #edb713;
+  --text: #ffffff;
+  --text-muted: #cccccc;
+  --black: #000000;
+}
+.ae-newsletter-shell *{ box-sizing: border-box; }
+.ae-newsletter-shell{
+  margin: 0;
+  background: #1a1a1a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  line-height: 1.55;
+  font-weight: 400;
+}
+.ae-newsletter-shell .newsletter{
+  max-width: 600px;
+  margin: 6px auto 40px auto;
+  background: #292929;
+  border: 1px solid #111;
+}
+.ae-newsletter-shell .browser-link{ padding: 12px 24px; text-align: right; font-size: 11px; }
+.ae-newsletter-shell .browser-link a{ color: #cccccc; text-decoration: underline; }
+
+.ae-newsletter-shell .logo-block{ text-align: center; padding: 8px 24px 24px 24px; }
+.ae-newsletter-shell .logo-block img{ display: inline-block; max-width: 100%; width: 520px; height: auto; }
+
+.ae-newsletter-shell .hero{
+  background: #000;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .hero img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .hero-caption{
+  padding: 20px 32px 0 32px;
+  font-size: 14px;
+  color: #ffffff;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.45;
+}
+
+
+.ae-newsletter-shell .hero-carousel{
+  margin: 0;
+  background-color: #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  line-height: 0;
+  position: relative;
+}
+.ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+  
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN{
+  
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN.s1{
+  
+  opacity: 1;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-captions{
+  position: relative;
+  min-height: 0;
+  line-height: 1.45;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption{
+  display: block;
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  padding: 8px 16px 12px 16px;
+  text-align: left;
+  font-style: italic;
+  background: #000;
+  
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+  margin-top: 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0), screen and (min-resolution: 0.001dpcm) {
+  .ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+    
+    visibility: hidden;
+  }
+  .ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+  }
+}
+
+.ae-newsletter-shell .menu{ padding: 30px 32px 22px 32px; background: #292929; }
+.ae-newsletter-shell .menu-intro{ font-size: 14px; color: #ffffff; margin: 0 0 16px 0; }
+.ae-newsletter-shell .menu ul{ margin: 0; padding-left: 22px; }
+.ae-newsletter-shell .menu li{ margin: 7px 0; font-size: 14px; color: #ffffff; }
+.ae-newsletter-shell .menu li strong{ color: #edb713; font-weight: 700; }
+.ae-newsletter-shell .menu li a, .ae-newsletter-shell .menu li a:link, .ae-newsletter-shell .menu li a:visited, .ae-newsletter-shell .menu li a:hover, .ae-newsletter-shell .menu li a:active{ color: inherit; text-decoration: none; }
+
+.ae-newsletter-shell .divider{ border-top: 1px solid #edb713; margin: 16px 32px; opacity: 0.6; }
+
+
+.ae-newsletter-shell .timeline-img{ display: block; width: 100%; height: auto; margin: 0 0 20px 0; }
+
+
+.ae-newsletter-shell .timeline-fallback{
+  display: block;
+  width: 100%;
+  margin: 0 0 20px 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .timeline-fallback svg{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ae-newsletter-shell .block{ padding: 26px 32px 28px 32px; }
+.ae-newsletter-shell .block .subtitle{
+  color: #edb713;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .block h2{
+  color: #edb713;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h3{
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin: -8px 0 16px 0;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h4{
+  color: #cccccc;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 14px 0;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block blockquote{
+  margin: 0 0 14px 0;
+  padding: 10px 16px;
+  border-left: 3px solid rgba(237, 183, 19, 0.6);
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.5;
+}
+.ae-newsletter-shell .block blockquote p{ margin: 0 0 8px 0; }
+.ae-newsletter-shell .block blockquote p:last-child{ margin-bottom: 0; }
+.ae-newsletter-shell .block p{ margin: 0 0 14px 0; font-size: 15px; color: #ffffff; }
+
+.ae-newsletter-shell .block p.spacer{ margin: 0 0 14px 0; line-height: 1.55; font-size: 15px; }
+.ae-newsletter-shell .block p a, .ae-newsletter-shell .block p a:link, .ae-newsletter-shell .block p a:visited, .ae-newsletter-shell .block p a:hover, .ae-newsletter-shell .block p a:active, .ae-newsletter-shell .block li a, .ae-newsletter-shell .block li a:link, .ae-newsletter-shell .block li a:visited, .ae-newsletter-shell .block li a:hover, .ae-newsletter-shell .block li a:active{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .cta{
+  display: inline-block;
+  background: #edb713;
+  color: #000000 !important;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 25px;
+  border-radius: 0;
+  margin: 16px 0 0 0;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .cta-row{ text-align: center; }
+
+.ae-newsletter-shell .opener .subtitle{ color: #edb713; }
+.ae-newsletter-shell .opener h2{ color: #edb713; }
+.ae-newsletter-shell .opener .sign-off{
+  margin-top: 22px;
+  color: #edb713;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+
+.ae-newsletter-shell .section-band-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .section-band-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-2up{ display: table; width: 100%; table-layout: fixed; border-spacing: 0; }
+.ae-newsletter-shell .shop-2up .col{ display: table-cell; vertical-align: top; padding: 10px 20px; }
+.ae-newsletter-shell .shop-2up .col a{ display: block; line-height: 0; text-decoration: none; }
+.ae-newsletter-shell .shop-2up .col img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-heading{ padding: 0 24px; }
+.ae-newsletter-shell .shop-heading h2{
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .shop-heading p{
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  line-height: 1;
+  font-family: arial, helvetica, sans-serif;
+}
+
+.ae-newsletter-shell .full-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .full-img a, .ae-newsletter-shell .full-img > img{ display: block; line-height: 0; }
+.ae-newsletter-shell .full-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .social-row{
+  text-align: center;
+  padding: 16px 20px 20px 20px;
+  background: #292929;
+}
+.ae-newsletter-shell .social-row a{ display: inline-block; margin: 0 4px; text-decoration: none; }
+.ae-newsletter-shell .social-row img{ width: 25px; height: 25px; vertical-align: middle; border-radius: 3px; }
+
+.ae-newsletter-shell .contact-band{ padding: 4px 32px 4px 32px; }
+.ae-newsletter-shell .contact-row{ display: table; width: 100%; table-layout: fixed; }
+.ae-newsletter-shell .contact-row .col{ display: table-cell; vertical-align: top; padding: 0 8px; }
+.ae-newsletter-shell .contact-row .col-video{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-text{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-video a{ display: block; position: relative; line-height: 0; }
+.ae-newsletter-shell .contact-row .col-video img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .play-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.ae-newsletter-shell .play-overlay span{
+  display: inline-block;
+  padding: 6px 15px;
+  background: rgba(0, 173, 239, 1);
+  border-radius: 6px;
+  position: relative;
+  line-height: 0;
+}
+.ae-newsletter-shell .play-overlay span::after{
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  border-width: 9px 0 9px 18px;
+  border-color: transparent transparent transparent #ffffff;
+  vertical-align: middle;
+}
+.ae-newsletter-shell .contact-row h3{
+  color: #edb713;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.ae-newsletter-shell .contact-row p{ font-size: 13px; margin: 0 0 10px 0; color: #ffffff; line-height: 1.5; }
+.ae-newsletter-shell .contact-row a.tel{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .map-row{ padding: 20px 32px 0 32px; line-height: 0; }
+.ae-newsletter-shell .map-row img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .footer{
+  padding: 20px 24px 24px 24px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cccccc;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .footer p{ margin: 0 0 10px 0; }
+.ae-newsletter-shell .footer a{ color: #cccccc; text-decoration: underline; }
+.ae-newsletter-shell .footer .legal{ color: #cccccc; font-size: 14px; }
+
+</style>
+<div style="font-family:Roboto, Arial;font-size:14px">
+
+<div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden">PLUS the next four-week intensive opens soon + five daytime classes are bookable this week</div>
+
+<div class="newsletter"><div class="browser-link"><a href="#">View this email in browser</a></div><div class="logo-block"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-01.png" alt="Aerial Edge, Glasgow" width="520"></div>
+<div class="hero"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-02.jpg" alt="FOUR WEEKS THAT DON'T NEED TO LEAD ANYWHERE "></div>
+<div class="block opener" id="opener">
+  
+  <h2>FOUR WEEKS THAT DON'T NEED TO LEAD ANYWHERE </h2>
+  <h3>IT'S MORE THAN JUST WHAT YOU CAN DO</h3><p>We often talk about the Four-Week Intensive Course as a first step. Do the four weeks, see how it feels, carry on to the Foundation Course if it grabs you.</p><p>But that framing can sell it short. It's more than an audition for something bigger, it's very much worth doing on its own. Training all day, every weekday for a month changes how you move, what you can achieve, and how you feel about all. It stays changed, too.</p><p>This Friday the current course finishes and one student will go on the Foundation Course, while others go back to their jobs and their families and their weekly classes, carrying that month with them. It brings a new sense of what's possible.</p><p>The next course starts 28 September. A month of training is more than it sounds.</p><p>Mark Gibson<br>Aerial Edge Founder</p>
+  
+</div>
+<div class="divider"></div>
+<div class="menu"><p>To make life easier, you can use this menu to go direct to articles. Above each section, you'll find a timeline of relevant dates, and there are direct booking links throughout.</p><ul><li><a href="#section-workshops"><strong>Workshops:</strong> Three sessions sort you by level, the fourth by curiosity + Three hours on a mat with no lesson plan</a></li><li><a href="#section-courses"><strong>Courses:</strong> Four weeks in September, or the longer courses from March</a></li><li><a href="#section-shows"><strong>Shows:</strong> The people you train next to, under the lights</a></li><li><a href="#section-events"><strong>Events:</strong> Robyn joins the October Edge line-up, and why waiting to book could ruin your happiness</a></li><li><a href="#section-classes"><strong>Classes:</strong> Five daytime classes are bookable this week</a></li><li><a href="#section-classes"><strong>Classes:</strong> Hardcore! is on next Saturday, plus a new Tuesday hour for flying trapeze</a></li><li><strong>Vee's Fringe Picks:</strong> Four shows still catchable before the Fringe closes</li><li><a href="#section-shop"><strong>Store:</strong> Buy clothing, gift vouchers and Pay It Forward</a></li><li><a href="#section-services"><strong>Our services for you:</strong> </a></li><li><a href="#section-contact"><strong>Contact us:</strong> </a></li></ul></div><div class="divider"></div>
+<img class="timeline-img" id="section-workshops" src="/assets/images/newsletter/robyn-s-at-october-edge/img-03.png" alt="THREE SESSIONS SORT YOU BY LEVEL timeline">
+<div class="hero"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-04.jpg" alt="THREE SESSIONS SORT YOU BY LEVEL"></div>
+<div class="block workshops" id="block-workshops-fly-pole">
+  
+  <h2>THREE SESSIONS SORT YOU BY LEVEL</h2>
+  <h3>THE FOURTH ONE SORTS YOU BY CURIOSITY</h3><p>Advanced, Intermediate and Beginner do what those words say. You look at where you are on a fly pole, you pick the one that matches, and you book it.</p><p>Creative Signature Tricks works differently. Elke opened it to high beginner, intermediate and advanced students together, because what it sorts for is appetite.</p><p>Unusual contact points, tricks held on spin, the ones she describes as running from elegant to plain weird. Whatever level you came in at, you are in the room for the same reason as everyone else.</p><p>It sits second in the running order of the day's workshops, from 11.30am, which puts it right after Advanced and just before Intermediate. Worth configuring your day around it!</p><p>And if you're down for the Advanced workshop, you might fancy turning up an hour early for Circus Fitness: Hardcore!</p><p>It's a pacy conditioning class that covers aerial and acro needs, including some emphasis on core strength.</p><p class="spacer">&nbsp;</p><p><strong>Elke's Fly Pole Workshops</strong><br>Saturday 12 September<br>10am-11.30am Advanced | 11.30am-1pm Creative Signature Tricks | 1.30pm-3pm Intermediate | 3pm-4.30pm Beginner<br>£25 each or £17 on an 8-class aerial pass<br>Circus Fitness: Hardcore! 9am-10am | £10 drop-in or £7.50 on an 8-class pass</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/81aecba7fad?contactId={{contact.id}}&amp;startdate=2026-09-07&amp;enddate=2026-09-13&amp;venues=&amp;category=&amp;instructors=165283&amp;offering_types=&amp;age_restrictions=&amp;date=2026-09-12&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Create your signature: book here</a></div>
+</div>
+<div class="divider"></div>
+
+
+
+<div class="block workshops" id="block-workshops-acro-jam">
+  
+  <h2>THREE HOURS, ONE MAT, NO SYLLABUS</h2>
+  <h3>ACRO JAM IS NEXT SATURDAY, JULIA AND ROBYN HOSTING</h3><p>Three hours is a long time to be on a mat with no lesson plan...and that's the beauty of Acro Jam.</p><p>It's a different proposition from a class. A 90-minute class has to get somewhere. Acro Jam runs 12.30pm-3.30pm and gets wherever the room takes it.</p><p>You have time to fail at a lift 11 times and land it on the 12th, which is roughly how many attempts a new lift actually takes. You also have time to stand about and watch, which is fun in itself as well as educational in its own way.</p><p>Julia and Robyn open the doors, pull the lines and keep an eye on things. Bring a partner, or turn up on your own and find some people to play with.</p><p class="spacer">&nbsp;</p><p><strong>Acro Jam with Julia and Robyn</strong><br>Saturday 5 September | 12.30pm-3.30pm<br>£12</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/854bc2f43e9?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Take the afternoon: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-courses" src="/assets/images/newsletter/robyn-s-at-october-edge/img-05.png" alt="ARE YOU UP FOUR IT? timeline">
+<div class="hero"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-06.jpg" alt="ARE YOU UP FOUR IT?"></div>
+<div class="block courses" id="block-courses-four-week-intensive">
+  
+  <h2>ARE YOU UP FOUR IT?</h2>
+  <h3>THE NEXT INTENSIVE OPENS AT THE END OF SEPTEMBER</h3><p>The Four-Week Intensive is what you do when you want to find out what full-time training feels like without signing away months to get the answer. Or when you need a meaningful break from your day job, without quitting.</p><p>You might come in with one apparatus in mind and spend the first fortnight discovering that you are falling in love with something else. That opens your options for what you will perform at the showing of your work on the last afternoon of your course, which friends and family can come watch.</p><p>By the end of the month, you have a body that works differently and a clearer idea of what you want to do next. It might be the Foundation Course, or going back to your old life with new perspective and confidence.</p><p>The current cohort finishes this Friday – a moment of sadness, pride, and maybe decision-making about how life after circus changes. The next course starts Monday 28 September and runs til Friday 23 October.</p><p>If the thing you are actually weighing is four months rather than four weeks, the next Foundation Course starts in March, along with the six-month Professional Development Programme. People with forward planning skills (we love you) are already booking on to those.</p><p class="spacer">&nbsp;</p><p><strong>Four-Week Intensive</strong><br>Monday 28 September to Friday 23 October<br>£795 | £200 deposit on application, £595 balance before you start<br>Four-week Intensive, Four-month Foundation Course &amp; Six-month Professional Development Programme all start Monday 1st March 2027</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/66bd55ba1cd?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Give it four weeks: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<span id="section-shows"></span>
+<div class="hero"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-07.jpg" alt="YOU ALREADY KNOW HALF THE CAST"></div>
+<div class="block shows" id="block-shows-open-rig">
+  
+  <h2>YOU ALREADY KNOW HALF THE CAST</h2>
+  <h3>OPEN RIG NIGHT LETS YOU SEE THEM IN A DIFFERENT LIGHT</h3><p>The person who's sometimes on the hoop next to you, the one working the same silks drop every week, the people you say hello to on the way through reception...they might be performing at Open Rig Night.</p><p>On Saturday 10th October, some of them walk out under the lights to do the thing they've been practising, but this time in front of 100 or so people.</p><p>At Open Rig Night, somebody's first ever act could be followed by somebody's 20th –&nbsp;it's an eclectic and electric mix of people, arts, emotions and excitement.</p><p>You'll recognise faces, and you might watch someone you thought you knew do something that reframes them entirely, which is one of the joys of a circus community performance rather than a touring cast you'll never see again.</p><p>Since the last two Open Rig Nights sold out, it's wise to book before they all go. Tickets are £10, or £5 for children and concessions, so it's a great value family night out.</p><p>And if you have a feeling that watching will no longer satisfy your inner circus artist, registration for acts is open until Friday 3rd October. There's till plenty of time to get your act together.</p><p class="spacer">&nbsp;</p><p><strong>Open Rig Night</strong><br>Saturday 10 October | Doors 6.30pm, youth circus performers first, then everyone else<br>Tickets £10 / £5 children and concessions</p><p>Save your seat: <a href="https://api.aerialedge.co.uk/email-tracking/17cadb268a4?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">book here</a></p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/7ea781a52f2?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Performing? Register your act</a></div>
+</div>
+<div class="divider"></div>
+
+<span id="section-events"></span>
+<div class="hero"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-08.jpg" alt="TURNS OUT YOU CAN BUY HAPPINESS"></div>
+<div class="block events" id="block-events-october-edge">
+  
+  <h2>TURNS OUT YOU CAN BUY HAPPINESS</h2>
+  <h3>THREE DAYS AT THE EDGE IS YOURS FOR THE TAKING...FOR NOW</h3><p>There's a stretch of autumn where nothing much is asked of you, roughly from now until Jingle Bells becomes the irritating backdrop to every supermarket sweep. Summer's done. The Fringe is a memory. The nights are fair drawing in and there are sirens on your sofa luring you into the snuggly depths.</p><p>Save yourself! Book October Edge to give yourself a powerful reason to close your ears to the sofa sirens' seductive songs, and steer away from them.</p><p>October Edge is three days over the weekend of the 23rd, built so you can pick four arts and stick with them for three days straight. We switched it from Halloween weekend so that those of you who are forcibly or willingly committed to guising can do both.</p><p>You don't have to choose a grand goal, you can find your happiness in tiny tickable achievable targets. It could be a skill you've been toying with, an apparatus you keep thinking maybe you'd like to try, a shape that's never quite worked. Pick the thing, give it the weekend, see where it gets to.</p><p>You choose four workshops a day and do them every day, so something that felt impossible on Friday is merely difficult by Sunday.</p><p>Now, some may say it's hard to pick the goal when you don't know all the arts that are going to be in the Edge. True, they haven't all been announced yet, so here's the latest reveal: Robyn will teach group and partner acro.</p><p>This discipline has been gaining popularity at Aerial Edge since Robyn and Julia specialised in it during their Foundation Course and Professional Development Course. Their acts in the shows were always fan favourites, and they've been leading the instruction in the Monday class they launched.</p><p>Even if you've never tried group or partner acro, you'll make satisfying progress over the three days of October Edge with Robyn, who is just finishing performing at the Fringe.</p><p>The tracks will be open for booking two weeks before the event, and before that, you'll know exactly what's on the schedule.</p><p>Whether you're a gambler who will wait for the full line-up and potentially lose your spot is up to you – there are only 36 tickets for this event, and nearly half have been sold.</p><p>Waiting for the timetable before you buy your weekend of happiness is the thing most likely to cost you a place.</p><p>What we know so far – flying trapeze will be in every time slot, Sam is teaching trampoline and acrobatics, and Kerri will take tippy hoop and hammock.</p><p>The sofa will still be there on Sunday evening, and you'll have earned the right to sink into it with as many snacks as you can carry.</p><p class="spacer">&nbsp;</p><p><strong>October Edge</strong><br>Friday 23 to Sunday 25 October | 10am-5.15pm<br>£200 for the three days, four credits</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/d45cce651ea?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Get the weekend in: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-classes" src="/assets/images/newsletter/robyn-s-at-october-edge/img-09.png" alt="SUPER SATURDAYS START NEXT WEEK timeline">
+<div class="hero"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-10.gif" alt="SUPER SATURDAYS START NEXT WEEK"></div>
+<div class="block classes" id="block-classes">
+  
+  <h2>SUPER SATURDAYS START NEXT WEEK</h2>
+  <h3>HARDCORE! PLUS FLY SET UP YOUR WEEKEND</h3><p>From next Saturday, Circus Fitness gets its hardest hour back, and the hardest thing about it isn't that it starts at 9am. That will be challenging for some, and ideal for others.</p><p>Hardcore! is faster and more intense than a standard Circus Fitness class, with conditioning built in for the strength, range of movement and mobility that aerial and acro demand. The exclamation mark is part of the official name, and you'll feel it as you spend an hour watching the clock move slower than it should.</p><p>Then the morning opens up. From 10am you carry that straight into open level flying trapeze with Mark, or into open training — the new weekend slot for anyone whose instructor has signed off solo practice on aerial or acro.</p><p class="spacer">&nbsp;</p><p><strong>Circus Fitness: Hardcore! + Open Level Flying Trapeze + Open Training</strong><br>Saturdays from 5th September | 9am-10am, then 10am-11.30am<br>Hardcore!: £7.50 on an 8-class pass or £10 drop-in | Flying Trapeze: £25 drop-in or £17 on an 8-class aerial pass | Aerial/acro open training: teacher sign-off required</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/cfcc8da15b4?contactId={{contact.id}}&amp;startdate=2026-08-31&amp;enddate=2026-10-04&amp;venues=&amp;category=&amp;instructors=&amp;offering_types=&amp;age_restrictions=&amp;date=2026-09-12&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Get Hardcore! Book it with fly or OT here</a></div>
+</div>
+<div class="divider"></div>
+
+
+
+<div class="block classes" id="block-classes-60835f">
+  
+  <h2>REFINE YOUR FLIGHT PATH</h2>
+  <h3>WHAT FLYING TRAPEZE IS ACTUALLY BUILT ON</h3><p>The bits of flying trapeze that decide whether a trick works — the shape in the air, the timing of the release, holding your body tight through a rotation — mostly get built somewhere other than the flying trapeze.</p><p>From Tuesday 8th September, that's a class. Circus Fitness: Flying Trapeze, 6pm-7pm, taught by Gabe and Mark together.</p><p>You play on the trampoline, building air awareness, then work up to full rotations and twists, then into swing work. There's a kill and build section. And there's conditioning aimed squarely at fly: leg lifts, pull-ups, and the specific kind of body tension that makes you lighter to catch and more likely to make it there.</p><p>It won't be a gentle hour. But it will be excellent value.</p><p>If you can keep yourself amused through the 90-minute gap that follows (rope, hoop or Chinese pole?), Nea's Fly Fundamentals picks up at 8.30pm the same evening.</p><p>Have you spotted the pattern? We're giving you options to refine your flying technique in all sorts of ways, so that you get even more out of a flying trapeze class.</p><p class="spacer">&nbsp;</p><p><strong>Circus Fitness: Flying Trapeze with Gabe &amp; Mark</strong><br>Tuesdays 6pm-7pm from 8th September | Ages 16+<br>£7.50 on an 8-class pass or £10 drop-in</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/5877cdf0526?contactId={{contact.id}}&amp;startdate=2026-08-31&amp;enddate=2026-10-04&amp;venues=&amp;category=&amp;instructors=&amp;offering_types=&amp;age_restrictions=&amp;date=2026-09-12&amp;e=108331631&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Fly better: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<div class="hero"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-11.jpg" alt=" "></div>
+<div class="block" id="timetable-evenings-weekends">
+  <h2> </h2>
+  <p></p>
+  
+</div>
+<div class="divider"></div>
+
+<span id="section-classes"></span>
+<div class="hero"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-12.webp" alt="WEDNESDAY AND THURSDAY DOUBLE UP"></div>
+<div class="block classes" id="block-classes-daytime">
+  
+  <h2>WEDNESDAY AND THURSDAY DOUBLE UP</h2>
+  <h3>FIVE DAYTIME CLASSES ARE BOOKABLE THIS WEEK</h3><p>The daytime timetable never looks the same twice, and that's not because we're trying to satisfy your need for something different – although if that works for you, great.</p><p>It's decided by whatever the full-time course students are working on that week. So you get to train alongside them (useful taster if you're tempted by the next four-week Intensive).</p><p>Wednesday and Thursday this week both offer two classes back to back with no gap. Wednesday is silks with Nea at 10am, straight into trampoline with Sam at 11.30am. Thursday is contemporary dance with Amber at 10am, straight into acrobatics with Sam at 11.30am. Friday finishes the week with rope, with Nea, at 10am.</p><p>Contemporary dance is the new one on that list. It is worth a look even if you have never thought of yourself as a dancer, because most of what makes an act watchable is the stuff between the tricks. We make sure it's on the schedule for all our pro courses because it's crucial to build their movement vocabulary.</p><p>The Aerial Edge Instagram is where Yara posts what is running each week, so keep checking.</p><p class="spacer">&nbsp;</p><p><strong>This week's daytime classes (w/c 31 August)</strong><br>Wednesday: <a href="https://api.aerialedge.co.uk/email-tracking/ef9f398afa2?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">Open Level Silks with Nea 10am-11.30am</a> | <a href="https://api.aerialedge.co.uk/email-tracking/2e58ee2199d?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">Trampoline Open Level with Sam 11.30am-1pm</a><br>Thursday: <a href="https://api.aerialedge.co.uk/email-tracking/6bd12255c32?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">Contemporary Dance with Amber 10am-11.30am</a> | <a href="https://api.aerialedge.co.uk/email-tracking/b7755ed9392?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">Acrobatics Open Level with Sam 11.30am-1pm</a><br>Friday: <a href="https://api.aerialedge.co.uk/email-tracking/efb0707e3ce?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">Aerial Rope Class with Nea 10am-11.30am</a><br>Your multi-class passes cover these.</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/c3bdbf1fbdf?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Check what's on: Aerial Edge's Instagram</a></div>
+</div>
+<div class="divider"></div>
+
+<div class="hero"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-13.jpg" alt=" "></div>
+<div class="block" id="timetable-daytime">
+  <h2> </h2>
+  <p></p>
+  
+</div>
+<div class="divider"></div>
+
+<div class="hero"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-14.png" alt="CATCH 'EM WHILE YOU CAN"></div>
+<div class="block" id="custom">
+  <h2>CATCH 'EM WHILE YOU CAN</h2>
+  <h3>FOUR FRINGE SHOWS WORTH SEEING BEFORE THEY CLOSE THIS WEEKEND</h3><p>With most shows closing over the weekend after an epic August, this is the list of shows there's still time to catch in Edinburgh this weekend.</p><p><strong>Tell Me</strong><br><em>Sadiq Ali Company</em></p><p>Your last chance to catch this show that has captivated Edinburgh audiences, received multiple 5-star reviews and won a Bragi Award! Featuring Aerial Edge's Jonah Russell, this show is on at Summerhall right up until Monday 31st.</p><p><em>7pm at Summerhall (Dissection Room), running until Monday 31st August, 1hr 5min, age 14+. Book <a href="https://api.aerialedge.co.uk/email-tracking/0dfa81a84a6?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">here</a></em></p><p><strong>Poles</strong><br><em>Corpo Máquina</em></p><p>Edinburgh this year has been dominated by pole shows and the aptly named 'Poles' is no exception. Performed by international Chinese and Shiny Pole legend Yvonne Smink, Poles is a choreographic exploration set to live mixed electronic music. On at Dance Base until Sunday 30th.</p><p><em>12.45pm at Dance Base, running until Sunday 30th August, 45min, age 12+. Book <a href="https://api.aerialedge.co.uk/email-tracking/818eed16f97?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">here</a></em></p><p><strong>Soft Spot</strong><br><em>OLO Company</em></p><p>Playing until Sunday 30th, Soft Spot is a tender duet between a handbalancer and a juggler… with over 300 wine glasses. Delicately playing with risk and possibility, Soft Spot is a great way to finish a Fringe day on a chilled note — just don't try it at home with your good family crystal!</p><p><em>8.30pm at Zoo Southside, running until Sunday 30th August, 1hr, age 8+. Book <a href="https://api.aerialedge.co.uk/email-tracking/a4ad9e14a92?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">here</a></em></p><p><strong>Tale of the Firebird</strong><br><em>Freestyle Orchestra</em></p><p>Circus? Check! Classical music? Check! Fire? Check! When acrobatics is no longer enough, how about doing it playing an instrument while someone above you spins fire? The ultimate in multidisciplinary overachieving, Tale of the Firebird is an impressive combination of forms that will leave you catching your breath. On until Sunday 30th.</p><p><em>6.15pm at Assembly Roxy, running until Sunday 30th August, 1hr, age 5+. Book <a href="https://api.aerialedge.co.uk/email-tracking/e7471bc1397?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">here</a></em></p><p>Vee Smith (she/her)</p>
+  
+</div>
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-shop">
+  <img src="/assets/images/newsletter/robyn-s-at-october-edge/img-15.png" alt="SHOP — clothing, gift vouchers and Pay It Forward" width="520">
+</div>
+
+
+<div class="shop-2up">
+  <div class="col">
+    <a href="https://api.aerialedge.co.uk/email-tracking/c58cd324f81?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+      <img src="/assets/images/newsletter/robyn-s-at-october-edge/img-16.jpg" alt="Aerial Edge Gift Vouchers" width="240">
+    </a>
+  </div>
+  <div class="col">
+    <a href="https://api.aerialedge.co.uk/email-tracking/eb449a09404?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+      <img src="/assets/images/newsletter/robyn-s-at-october-edge/img-17.webp" alt="Aerial Edge Pay It Forward" width="240">
+    </a>
+  </div>
+</div>
+
+
+<div class="shop-heading">
+  <h2>TAP IMAGE TO BUY YOUR GOODIES</h2>
+  <p>EACH IMAGE HAS A SEPARATE LINK</p>
+</div>
+
+
+<div class="full-img">
+  <a href="https://api.aerialedge.co.uk/email-tracking/eb449a09404?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+    <img src="/assets/images/newsletter/robyn-s-at-october-edge/img-18.png" alt="Aerial Edge clothing store" width="520">
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-services">
+  <img src="/assets/images/newsletter/robyn-s-at-october-edge/img-19.png" alt="SERVICES — what you can do at Aerial Edge" width="520">
+</div>
+
+
+<div class="full-img">
+  <a href="https://api.aerialedge.co.uk/email-tracking/44e9d5f769d?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+    <img src="/assets/images/newsletter/robyn-s-at-october-edge/img-20.png" alt="What we offer at Aerial Edge" width="520">
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="social-row">
+  <a href="https://api.aerialedge.co.uk/email-tracking/e324e51259d?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-21.png" alt="Facebook"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/f34e735951d?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-22.png" alt="Instagram"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/7dbcfd380c2?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-23.png" alt="TikTok"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/f173514918f?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-24.png" alt="YouTube"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/44e9d5f769d?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/robyn-s-at-october-edge/img-25.png" alt="Website"></a>
+</div>
+
+
+<div class="contact-band" id="section-contact">
+  <div class="contact-row">
+    <div class="col col-video">
+      <a href="https://api.aerialedge.co.uk/email-tracking/7dc7b97122d?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing">
+        <img src="/assets/images/newsletter/robyn-s-at-october-edge/img-26.jpg" alt="Find us — quick video tour of the front door at 240 Edmiston Drive">
+        <span class="play-overlay"><span></span></span>
+      </a>
+    </div>
+    <div class="col col-text">
+      <h3>How To Get In Touch With Us</h3>
+      <p>The best ways to talk to us are through email and text on <a class="tel" href="tel: 447414438501">(+44) 07414 438 501</a> — or just drop in and have a coffee in reception.</p>
+      <p>We monitor social media DMs too, they just might not be answered as quickly.</p>
+      <p>Tap the video on the left for a quick guide to our front door at 240 Edmiston Drive, Glasgow G51 2YU.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="map-row">
+  <img src="/assets/images/newsletter/robyn-s-at-october-edge/img-27.png" alt="Route map to Aerial Edge, 240 Edmiston Drive, Glasgow G51 2YU">
+</div>
+
+
+<div class="footer">
+  <div class="legal">
+    <em>Copyright © 2026&nbsp; Aerial Edge, All rights reserved.</em><br><br>
+    <strong>Our e-mail address is:</strong><br>
+    <a href="mailto:info@aerialedge.co.uk">info@aerialedge.co.uk</a><br><br>
+    Want to change how you receive these emails?<br>
+    You can <a href="https://api.aerialedge.co.uk/email-tracking/32373edcfe8?contactId={{contact.id}}&amp;email=PREVIEW%40aerialedge.co.uk&amp;utm_source=email&amp;utm_medium=email marketing">unsubscribe from this list</a>.
+  </div>
+</div>
+</div>
+
+</div>
+</div>

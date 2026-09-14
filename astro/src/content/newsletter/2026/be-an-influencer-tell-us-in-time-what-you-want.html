@@ -1,0 +1,493 @@
+<div class="ae-newsletter-shell">
+<style>
+.ae-newsletter-shell{
+  --bg: #292929;
+  --gold: #edb713;
+  
+  --yellow: #edb713;
+  --text: #ffffff;
+  --text-muted: #cccccc;
+  --black: #000000;
+}
+.ae-newsletter-shell *{ box-sizing: border-box; }
+.ae-newsletter-shell{
+  margin: 0;
+  background: #1a1a1a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  line-height: 1.55;
+  font-weight: 400;
+}
+.ae-newsletter-shell .newsletter{
+  max-width: 600px;
+  margin: 6px auto 40px auto;
+  background: #292929;
+  border: 1px solid #111;
+}
+.ae-newsletter-shell .browser-link{ padding: 12px 24px; text-align: right; font-size: 11px; }
+.ae-newsletter-shell .browser-link a{ color: #cccccc; text-decoration: underline; }
+
+.ae-newsletter-shell .logo-block{ text-align: center; padding: 8px 24px 24px 24px; }
+.ae-newsletter-shell .logo-block img{ display: inline-block; max-width: 100%; width: 520px; height: auto; }
+
+.ae-newsletter-shell .hero{
+  background: #000;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .hero img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .hero-caption{
+  padding: 20px 32px 0 32px;
+  font-size: 14px;
+  color: #ffffff;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.45;
+}
+
+
+.ae-newsletter-shell .hero-carousel{
+  margin: 0;
+  background-color: #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  line-height: 0;
+  position: relative;
+}
+.ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+  
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN{
+  
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN.s1{
+  
+  opacity: 1;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-captions{
+  position: relative;
+  min-height: 0;
+  line-height: 1.45;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption{
+  display: block;
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  padding: 8px 16px 12px 16px;
+  text-align: left;
+  font-style: italic;
+  background: #000;
+  
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+  margin-top: 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0), screen and (min-resolution: 0.001dpcm) {
+  .ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+    
+    visibility: hidden;
+  }
+  .ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+  }
+}
+
+.ae-newsletter-shell .menu{ padding: 30px 32px 22px 32px; background: #292929; }
+.ae-newsletter-shell .menu-intro{ font-size: 14px; color: #ffffff; margin: 0 0 16px 0; }
+.ae-newsletter-shell .menu ul{ margin: 0; padding-left: 22px; }
+.ae-newsletter-shell .menu li{ margin: 7px 0; font-size: 14px; color: #ffffff; }
+.ae-newsletter-shell .menu li strong{ color: #edb713; font-weight: 700; }
+.ae-newsletter-shell .menu li a, .ae-newsletter-shell .menu li a:link, .ae-newsletter-shell .menu li a:visited, .ae-newsletter-shell .menu li a:hover, .ae-newsletter-shell .menu li a:active{ color: inherit; text-decoration: none; }
+
+.ae-newsletter-shell .divider{ border-top: 1px solid #edb713; margin: 16px 32px; opacity: 0.6; }
+
+
+.ae-newsletter-shell .timeline-img{ display: block; width: 100%; height: auto; margin: 0 0 20px 0; }
+
+
+.ae-newsletter-shell .timeline-fallback{
+  display: block;
+  width: 100%;
+  margin: 0 0 20px 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .timeline-fallback svg{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ae-newsletter-shell .block{ padding: 26px 32px 28px 32px; }
+.ae-newsletter-shell .block .subtitle{
+  color: #edb713;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .block h2{
+  color: #edb713;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h3{
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin: -8px 0 16px 0;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h4{
+  color: #cccccc;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 14px 0;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block blockquote{
+  margin: 0 0 14px 0;
+  padding: 10px 16px;
+  border-left: 3px solid rgba(237, 183, 19, 0.6);
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.5;
+}
+.ae-newsletter-shell .block blockquote p{ margin: 0 0 8px 0; }
+.ae-newsletter-shell .block blockquote p:last-child{ margin-bottom: 0; }
+.ae-newsletter-shell .block p{ margin: 0 0 14px 0; font-size: 15px; color: #ffffff; }
+
+.ae-newsletter-shell .block p.spacer{ margin: 0 0 14px 0; line-height: 1.55; font-size: 15px; }
+.ae-newsletter-shell .block p a, .ae-newsletter-shell .block p a:link, .ae-newsletter-shell .block p a:visited, .ae-newsletter-shell .block p a:hover, .ae-newsletter-shell .block p a:active, .ae-newsletter-shell .block li a, .ae-newsletter-shell .block li a:link, .ae-newsletter-shell .block li a:visited, .ae-newsletter-shell .block li a:hover, .ae-newsletter-shell .block li a:active{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .cta{
+  display: inline-block;
+  background: #edb713;
+  color: #000000 !important;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 25px;
+  border-radius: 0;
+  margin: 16px 0 0 0;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .cta-row{ text-align: center; }
+
+.ae-newsletter-shell .opener .subtitle{ color: #edb713; }
+.ae-newsletter-shell .opener h2{ color: #edb713; }
+.ae-newsletter-shell .opener .sign-off{
+  margin-top: 22px;
+  color: #edb713;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+
+.ae-newsletter-shell .section-band-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .section-band-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-2up{ display: table; width: 100%; table-layout: fixed; border-spacing: 0; }
+.ae-newsletter-shell .shop-2up .col{ display: table-cell; vertical-align: top; padding: 10px 20px; }
+.ae-newsletter-shell .shop-2up .col a{ display: block; line-height: 0; text-decoration: none; }
+.ae-newsletter-shell .shop-2up .col img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-heading{ padding: 0 24px; }
+.ae-newsletter-shell .shop-heading h2{
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .shop-heading p{
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  line-height: 1;
+  font-family: arial, helvetica, sans-serif;
+}
+
+.ae-newsletter-shell .full-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .full-img a, .ae-newsletter-shell .full-img > img{ display: block; line-height: 0; }
+.ae-newsletter-shell .full-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .social-row{
+  text-align: center;
+  padding: 16px 20px 20px 20px;
+  background: #292929;
+}
+.ae-newsletter-shell .social-row a{ display: inline-block; margin: 0 4px; text-decoration: none; }
+.ae-newsletter-shell .social-row img{ width: 25px; height: 25px; vertical-align: middle; border-radius: 3px; }
+
+.ae-newsletter-shell .contact-band{ padding: 4px 32px 4px 32px; }
+.ae-newsletter-shell .contact-row{ display: table; width: 100%; table-layout: fixed; }
+.ae-newsletter-shell .contact-row .col{ display: table-cell; vertical-align: top; padding: 0 8px; }
+.ae-newsletter-shell .contact-row .col-video{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-text{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-video a{ display: block; position: relative; line-height: 0; }
+.ae-newsletter-shell .contact-row .col-video img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .play-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.ae-newsletter-shell .play-overlay span{
+  display: inline-block;
+  padding: 6px 15px;
+  background: rgba(0, 173, 239, 1);
+  border-radius: 6px;
+  position: relative;
+  line-height: 0;
+}
+.ae-newsletter-shell .play-overlay span::after{
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  border-width: 9px 0 9px 18px;
+  border-color: transparent transparent transparent #ffffff;
+  vertical-align: middle;
+}
+.ae-newsletter-shell .contact-row h3{
+  color: #edb713;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.ae-newsletter-shell .contact-row p{ font-size: 13px; margin: 0 0 10px 0; color: #ffffff; line-height: 1.5; }
+.ae-newsletter-shell .contact-row a.tel{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .map-row{ padding: 20px 32px 0 32px; line-height: 0; }
+.ae-newsletter-shell .map-row img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .footer{
+  padding: 20px 24px 24px 24px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cccccc;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .footer p{ margin: 0 0 10px 0; }
+.ae-newsletter-shell .footer a{ color: #cccccc; text-decoration: underline; }
+.ae-newsletter-shell .footer .legal{ color: #cccccc; font-size: 14px; }
+
+</style>
+<div style="font-family:Roboto, Arial;font-size:14px">
+
+<div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden">PLUS Robyn teaching straps &amp; loops at October Edge + Surprise yourself on a course</div>
+
+<div class="newsletter"><div class="browser-link"><a href="#">View this email in browser</a></div><div class="logo-block"><img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-01.png" alt="Aerial Edge, Glasgow" width="520"></div>
+<div class="hero"><img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-02.jpg" alt="BE AN INFLUENCER"></div>
+<div class="block opener" id="opener">
+  
+  <h2>BE AN INFLUENCER</h2>
+  <h3>WHY PLANNING TRUMPS LAST MINUTE DECISIONS</h3><p>We'll take applications for the 4-week Intensive Course right up until the night before it begins on 28th September. But I'd much rather you told us sooner.</p><p>We do a fair bit of work beyond plain admin putting the course schedule together to make it relevant and challenging for the students.</p><p>Four weeks is long enough to try a broad range of aerial, acrobatic and other disciplines properly, and to make you capable of the informal showing of a short act on the last afternoon, like the one in the photo above.</p><p>The sooner you tell us you're interested, the better the chance that your goals can influence the curriculum. Come and find out what you'd choose to show, given four weeks to properly try.</p><p>Mark Gibson<br>Aerial Edge Founder</p>
+  
+</div>
+<div class="divider"></div>
+<div class="menu"><p class="menu-intro">To make life easier, you can use this menu to go direct to articles. Above each section, you'll find a timeline of relevant dates, and there are direct booking links throughout.</p><ul><li><a href="#block-classes"><strong>Classes:</strong> THE ULTIMATE WARM-UP</a></li><li><a href="#block-courses"><strong>Courses:</strong> SURPRISE YOURSELF</a></li><li><a href="#block-shows"><strong>Shows:</strong> THIS ISN'T A CLASS ANY MORE</a></li><li><a href="#block-events"><strong>Events:</strong> STOP STARTING FROM SCRATCH</a></li><li><a href="#block-youth"><strong>Youth Circus:</strong> DON'T BE BOORRRRRED</a></li><li><a href="#section-shop"><strong>Store:</strong> Buy clothing, gift vouchers and Pay It Forward</a></li><li><a href="#section-services"><strong>Our services for you</strong></a></li><li><a href="#section-contact"><strong>Contact us</strong></a></li></ul></div><div class="divider"></div>
+<img class="timeline-img" id="section-classes" src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-03.png" alt="THE ULTIMATE WARM-UP timeline">
+<div class="hero"><img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-04.webp" alt="THE ULTIMATE WARM-UP"></div>
+<div class="block classes" id="block-classes">
+  
+  <h2>THE ULTIMATE WARM-UP</h2>
+  <p></p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/65a2b0d9b12?contactId={{contact.id}}&amp;startdate=2026-09-14&amp;enddate=2026-09-20&amp;venues=&amp;category=&amp;instructors=&amp;offering_types=&amp;age_restrictions=&amp;date=2026-09-19&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Warm up like you mean it: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-courses" src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-05.png" alt="SURPRISE YOURSELF timeline">
+<div class="hero"><img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-06.jpg" alt="SURPRISE YOURSELF"></div>
+<div class="block courses" id="block-courses">
+  
+  <h2>SURPRISE YOURSELF</h2>
+  <h3>ANKIE'S EXPERIENCE ON 4-WEEK INTENSIVE</h3><p>Ankie signed up for the summer 4-Week Intensive without a fixed plan, but she knew that trampoline she could take or leave, and if she was honest it looked a little dangerous.</p><p>Four weeks later it was one of her favourite things in the building. "It makes me feel like a kid again," she said. "I surprised myself, just doing it every time, and seeing progress kind of fast."</p><p>That can happen in any of our courses, even in the short Intensive. And that's why we start all three of them with a broad range of arts on the schedule.</p><p>You know what your mum said when trying to talk you out of many mini-rebellions that had your arms crossed and your eyebrows heavy: you don't know if you'll like it til you try it.</p><p>Ankie says: "I didn't know what to expect, and it was really nice to do something different every day. For example, back-somersaulting in different kinds of apparatus.</p><p>"I didn't expect to like acrobatics and trampolining as much as I did. Actually I really enjoyed everything. It's hard to choose one thing that I didn't like!"</p><p>You may arrive thinking you know which discipline is yours. But you leave having tested it against the others.</p><p>Ankie also confirmed that even on the shortest course, you get a lot out of the group experience.</p><p>She says: "I really liked the atmosphere. I felt the group was really close. You get to know people in a very different way, without even talking that much, it's really nice to get to know each other physically.</p><p>"All the teachers were very nice, and it felt more like peer-to-peer learning – I didn't feel intimidated by the teachers, which is good.</p><p>"I felt very respected and they knew how to change the class according to my level and things I wanted to do. I also liked that they asked to give suggestions on what we wanted to learn and then we could do that in the next class."</p><p>And before you know it, you've learned enough to present a short act to friends, family and fellow students on the last afternoon of your course.</p><p>Ankie's showing had her on doubles trapeze with fellow student Esther, proving her point that closeness and trust can be built in a short time.</p><p><strong>4-Week Intensive</strong><br>Monday 28th September til Thursday 22nd October | 10am-5pm<br>£795 | £200 deposit on application, £595 balance before you start</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/323be9b2d39?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Find your apparatus: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-shows" src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-07.png" alt="THIS ISN'T A CLASS ANY MORE timeline">
+<div class="hero"><img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-08.jpg" alt="THIS ISN'T A CLASS ANY MORE"></div>
+<div class="block shows" id="block-shows">
+  
+  <h2>THIS ISN'T A CLASS ANY MORE</h2>
+  <h3>OPEN RIG NIGHT IS WHEN TRAINING GETS AN AUDIENCE</h3><p>You may have watched them do this before, or done it yourself. The drill, three failed attempts before the fourth one lands, the look of disbelief when a trick that wasn't there in August is suddenly there in September.</p><p>Open Rig Night is where all of that gets an audience. The people you train alongside, or queue behind for the kettle, or nod to on the rig on a Tuesday, get up on the school's stage and turn training into something you can actually sit down and watch.</p><p>Expect aerial. Expect acro. Expect at least one thing you've never seen before, and at least one person you know doing something you didn't know they could do.</p><p>The last two Open Rig Nights sold out. If you want to be in the room for this one, it's worth booking rather than counting on a spare seat turning up.</p><p><strong>Open Rig Night</strong><br>Saturday 10th October | Doors 6.30pm, youth circus performers first<br>Tickets to watch £10 / £5 children and concessions</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/d38b1abbbc0?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Get in the room: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-events" src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-09.png" alt="STOP STARTING FROM SCRATCH timeline">
+<div class="hero"><img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-10.jpg" alt="STOP STARTING FROM SCRATCH"></div>
+<div class="block events" id="block-events">
+  
+  <h2>STOP STARTING FROM SCRATCH</h2>
+  <h3>OCTOBER EDGE GIVES YOU THREE DAYS ON THE SAME THING, NOT ONE</h3><p>Sign up for October Edge curious about something you've never tried, and three days is oddly long enough to go from can't to can, in a discipline you'd never have called yours on the Friday morning.</p><p>This year, one of your disciplines could be straps or loops, taught by Robyn.</p><p>Robyn is a graduate of our one-year course, and has been a devotee of both of the related arts for a long time. The pic above is from one of her performances of loops.</p><p>She's also teaching partner acro at the Edge, as she does in the weekly class.</p><p>There's a specific frustration that belongs to one-off workshops or even weekly classes, which you can overcome at the Edge.</p><p>You spend an hour getting somewhere with a new grip, a new shape, a new nerve you didn't know you had, and then the session ends. You go home. Life happens. By the time you're back in the building, it could feel like you're starting from the same place you started before.</p><p>October Edge doesn't do that to you. Pick a track and you're on it for all three days, same group, same coach, which means you're picking up exactly where you left off. Nothing you learn evaporates overnight, and when you build on that next day, the learning sticks.</p><p>And you do this in four time slots every day.  They could be for the first time, or you might have tried them all before at some point. But one thing is for sure, that's four arts you'll make progress in.</p><p>Full schedule will be announced soon!</p><p><strong>October Edge</strong><br>Friday 23rd October til Sunday 25th | 10am-5.15pm<br>£200 for the three days, four credits</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/74858f77ae7?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Don't start over: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-youth" src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-11.png" alt="DON'T BE BOORRRRRED timeline">
+
+<div class="block youth" id="block-youth">
+  
+  <h2>DON'T BE BOORRRRRED</h2>
+  <h3>A WEEK OF YOUTH CIRCUS CAMP, BOOKABLE BY THE DAY OR THE WEEK</h3><p>Half-term always arrives faster than the diary suggests it will. And it always creates boredom issues. We have five days with somewhere for them to be that isn't on your nerves.</p><p>Youth Circus Camp is a week of swinging, tumbling, balancing and the occasional dramatic wobble. Turn up a little early on the Friday and you'll catch the last half hour, which turns into an informal showing for whoever's come to collect them.</p><p>Book by the day at £60, or the whole week for £240 — which, if you do the sums, means the fifth day is free.</p><p><strong>October Half-Term Youth Circus Camp</strong><br>Monday 12th October til Friday 16th | 10am-4pm<br>£60 per day or £240 for the week</p><p>And a note for anyone with a Youth Circus performer at home: Open Rig Night on Saturday 10th October opens with the Youth Circus performers. Nea's handling all of that in class and will be in touch with parents directly — this is just so you know it's coming.</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/5ca26e38611?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Beat the boredom: book camp here</a></div>
+</div>
+<div class="divider"></div>
+
+
+<div class="block" id="timetable-daytime">
+  <h2> </h2>
+  <p></p>
+  
+</div>
+<div class="divider"></div>
+
+
+<div class="block" id="timetable-evenings-weekends">
+  <h2> </h2>
+  <p></p>
+  
+</div>
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-shop">
+  <img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-12.png" alt="SHOP — clothing, gift vouchers and Pay It Forward" width="520">
+</div>
+
+
+<div class="shop-2up">
+  <div class="col">
+    <a href="https://api.aerialedge.co.uk/email-tracking/86c20498fdb?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+      <img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-13.jpg" alt="Aerial Edge Gift Vouchers" width="240">
+    </a>
+  </div>
+  <div class="col">
+    <a href="https://api.aerialedge.co.uk/email-tracking/f995d594b0a?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+      <img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-14.webp" alt="Aerial Edge Pay It Forward" width="240">
+    </a>
+  </div>
+</div>
+
+
+<div class="shop-heading">
+  <h2>TAP IMAGE TO BUY YOUR GOODIES</h2>
+  <p>EACH IMAGE HAS A SEPARATE LINK</p>
+</div>
+
+
+<div class="full-img">
+  <a href="https://api.aerialedge.co.uk/email-tracking/f995d594b0a?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+    <img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-15.png" alt="Aerial Edge clothing store" width="520">
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-services">
+  <img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-16.png" alt="SERVICES — what you can do at Aerial Edge" width="520">
+</div>
+
+
+<div class="full-img">
+  <a href="https://api.aerialedge.co.uk/email-tracking/2093efb3633?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+    <img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-17.png" alt="What we offer at Aerial Edge" width="520">
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="social-row">
+  <a href="https://api.aerialedge.co.uk/email-tracking/b0b60a2eada?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-18.png" alt="Facebook"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/8cd665794b6?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-19.png" alt="Instagram"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/8e73863623a?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-20.png" alt="TikTok"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/f00f2b971fe?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-21.png" alt="YouTube"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/2093efb3633?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-22.png" alt="Website"></a>
+</div>
+
+
+<div class="contact-band" id="section-contact">
+  <div class="contact-row">
+    <div class="col col-video">
+      <a href="https://api.aerialedge.co.uk/email-tracking/d89cbefa10f?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing">
+        <img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-23.jpg" alt="Find us — quick video tour of the front door at 240 Edmiston Drive">
+        <span class="play-overlay"><span></span></span>
+      </a>
+    </div>
+    <div class="col col-text">
+      <h3>How To Get In Touch With Us</h3>
+      <p>The best ways to talk to us are through email and text on <a class="tel" href="tel: 447414438501">(+44) 07414 438 501</a> — or just drop in and have a coffee in reception.</p>
+      <p>We monitor social media DMs too, they just might not be answered as quickly.</p>
+      <p>Tap the video on the left for a quick guide to our front door at 240 Edmiston Drive, Glasgow G51 2YU.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="map-row">
+  <img src="/assets/images/newsletter/be-an-influencer-tell-us-in-time-what-you-want/img-24.png" alt="Route map to Aerial Edge, 240 Edmiston Drive, Glasgow G51 2YU">
+</div>
+
+
+<div class="footer">
+  <div class="legal">
+    <em>Copyright © 2026&nbsp; Aerial Edge, All rights reserved.</em><br><br>
+    <strong>Our e-mail address is:</strong><br>
+    <a href="mailto:info@aerialedge.co.uk">info@aerialedge.co.uk</a><br><br>
+    Want to change how you receive these emails?<br>
+    You can <a href="https://api.aerialedge.co.uk/email-tracking/fa188bdc265?contactId={{contact.id}}&amp;email=PREVIEW%40aerialedge.co.uk&amp;utm_source=email&amp;utm_medium=email marketing">unsubscribe from this list</a>.
+  </div>
+</div>
+</div>
+
+</div>
+</div>
