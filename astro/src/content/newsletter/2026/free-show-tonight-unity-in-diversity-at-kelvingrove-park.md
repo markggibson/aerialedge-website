@@ -10,8 +10,8 @@ draft: false
 
 - **Sent:** 2026-07-31
 - **From:** info@contact.aerialedge.co.uk
-- **Folder:** INBOX
-- **Images saved:** 11
+- **Folder:** INBOX (full-image rebuild, task #1911)
+- **Images saved:** 26
 - **Images dir:** `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/`
 
 ---
@@ -367,8 +367,23 @@ If you no longer wish to receive these emails you may [unsubscribe](https://emai
 - `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-04.jpg` (181 KB) — alt: IN THEIR ELEMENTS
 - `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-05.jpg` (158 KB) — alt: TINY TOTS TO SENIORS
 - `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-06.png` (16 KB) — alt: HOW TO GET YOUR FRONT SPLIT timeline
+- `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-07.webp` (3095 KB) — alt: ON, TWO...YOU!
 - `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-08.png` (10 KB) — alt: EVERYONE'S BEGINNING SOMETHING timeline
 - `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-09.png` (756 KB) — alt: SHAKESPEARE 'N' STRAPS
 - `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-10.png` (8 KB) — alt: DON'T CUT THIS TAG OFF
 - `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-11.png` (11 KB) — alt: THE CALENDAR HAS A GAP timeline
 - `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-12.png` (13 KB) — alt: SHOWS timeline
+- `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-13.png` (34 KB) — alt: SHOWS
+- `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-14.png` (8 KB) — alt: SHOP — clothing, gift vouchers and Pay It Forward
+- `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-15.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers
+- `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-16.webp` (64 KB) — alt: Aerial Edge Pay It Forward
+- `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-17.png` (678 KB) — alt: Aerial Edge clothing store
+- `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-18.png` (8 KB) — alt: SERVICES — what you can do at Aerial Edge
+- `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-19.png` (234 KB) — alt: What we offer at Aerial Edge
+- `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-20.png` (1 KB) — alt: Facebook
+- `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-21.png` (1 KB) — alt: Instagram
+- `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-22.png` (0 KB) — alt: TikTok
+- `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-23.png` (1 KB) — alt: YouTube
+- `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-24.png` (1 KB) — alt: Website
+- `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-25.jpg` (19 KB) — alt: Find us — quick video tour of the front door at 240 Edmiston Drive
+- `/assets/images/newsletter/free-show-tonight-unity-in-diversity-at-kelvingrove-park/img-26.png` (761 KB) — alt: Route map to Aerial Edge, 240 Edmiston Drive, Glasgow G51 2YU
