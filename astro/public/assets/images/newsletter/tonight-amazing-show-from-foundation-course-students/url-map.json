@@ -1,9 +1,12 @@
 {
   "slug": "2025-11-28-tonight-amazing-show-from-foundation-course-students",
+  "source": "corpus html-bodies/2025-11-28-tonight-amazing-show-from-foundation-course-students.html (as-sent mailbox copy), full-image rebuild \u2014 task #1911",
   "min_image_bytes": 0,
   "max_images_per_email": 999,
   "tracking_pixel_bytes": 100,
-  "max_image_bytes": 2097152,
+  "max_image_bytes": 0,
+  "compress_above_bytes": 2097152,
+  "source_image_count": 27,
   "rows": [
     {
       "pos": null,
@@ -104,10 +107,12 @@
     {
       "pos": 12,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/6928c5b0362bfe7879bc8fb7.gif",
-      "file": null,
-      "size": 6520658,
+      "file": "img-12.webp",
+      "size": 1049834,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 6520658,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 6367 KB \u2192 1025 KB"
     },
     {
       "pos": 13,
@@ -120,10 +125,12 @@
     {
       "pos": 14,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/69299c744a688079d671ff54.gif",
-      "file": null,
-      "size": 2584469,
+      "file": "img-14.webp",
+      "size": 789966,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2584469,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 2523 KB \u2192 771 KB"
     },
     {
       "pos": 15,
@@ -144,10 +151,12 @@
     {
       "pos": 17,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
-      "file": null,
-      "size": 2397485,
+      "file": "img-17.webp",
+      "size": 66490,
       "alt": "Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at \u00a315 or a whole term at \u00a3132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2397485,
+      "transform": "re-encoded still PNG\u2192WebP at quality 55; full resolution and frame rate kept, 2341 KB \u2192 64 KB"
     },
     {
       "pos": 18,
