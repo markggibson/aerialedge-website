@@ -22,8 +22,9 @@
 //   - Strip <meta http-equiv="refresh"> and similar
 //   - Strip tracking pixels (1x1 images, *.list-manage.com, *.mailchimp.com,
 //     /open.gif, /beacon, etc.)
-//   - Strip mailchimp/GHL unsubscribe-rewriter wrapper anchors? No — leave
-//     anchors intact (they're harmless and the unsubscribe link is data).
+//   - Unwrap unsubscribe / manage-preferences anchors (task #1907). They are
+//     NOT harmless: in a mailbox-sourced issue the link is the recipient's
+//     (Mark's) personal one-click unsubscribe, live on a public page.
 //   - Keep <style> blocks (email styling lives there + inline; without it
 //     the layout breaks).
 //
@@ -363,6 +364,28 @@ function sanitiseAndRewrite(html: string, urlMap: UrlMap): { out: string; refs: 
   let mapped = 0;
   let tracking = 0;
   let noFile = 0;
+
+  // Stage 1b (task #1907, 2026-09-14): remove unsubscribe / preference links.
+  // Mailbox-sourced issues are Mark's own received copy, so their
+  // "unsubscribe from this list" link is Mark's personal one-click
+  // unsubscribe. On a public archive page any visitor who clicks it
+  // unsubscribes Mark in GoHighLevel — and Mark's contact was found marked
+  // "User clicked on the unsubscribe link" after 22 Aug 2026, which is what
+  // stopped newsletters reaching the mailbox the archive poller reads.
+  // Archive readers are not subscribers, so the link has no legitimate use
+  // here. The anchor is unwrapped: its text stays, the link goes, so the
+  // footer layout is unchanged.
+  const UNSUBSCRIBE_TEXT =
+    /\bunsubscribe\b|\bopt[\s-]?out\b|\b(manage|update|change)\s+(your\s+)?(email\s+|subscription\s+)?preferences\b/i;
+  const UNSUBSCRIBE_HREF = /unsubscribe|\/preferences\b/i;
+  $('a').each((_, el) => {
+    const $a = $(el);
+    const text = $a.text().replace(/\s+/g, ' ').trim();
+    const href = $a.attr('href') ?? '';
+    if (UNSUBSCRIBE_TEXT.test(text) || UNSUBSCRIBE_HREF.test(href)) {
+      $a.replaceWith($a.html() ?? '');
+    }
+  });
 
   $('img').each((_, el) => {
     total++;

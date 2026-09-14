@@ -251,7 +251,9 @@ async function processIssue(
       }
       imageCount += 1;
       bytes += stat.size;
-      if (!heroImage) {
+      // Only a real image can be the hero — an issue with no images used to
+      // get `url-map.json` as its hero_image (task #1907).
+      if (!heroImage && /\.(png|jpe?g|gif|webp|avif|svg)$/i.test(img)) {
         heroImage = `/assets/images/newsletter/${slugOnly}/${img}`;
       }
     }

@@ -17,3 +17,12 @@
 
 2026-02-27-old-firm-match-traffic-delays
 2026-04-21-deadline-tomorrow
+
+# Task #1907 (2026-09-14): GoHighLevel system alerts, not newsletters. All four
+# share one Astro slug; the 28 July one was live in the archive. Mirrored in
+# poll.sh as ASTRO_ONLY_DELETED_SLUGS — scrubbed from the website only, the
+# corpus copies are left alone (the corpus has other readers).
+2026-07-28-action-required-your-zoom-integration-is-disconnected-for-ae
+2026-07-31-action-required-your-zoom-integration-is-disconnected-for-ae
+2026-08-04-action-required-your-zoom-integration-is-disconnected-for-ae
+2026-08-11-action-required-your-zoom-integration-is-disconnected-for-ae
