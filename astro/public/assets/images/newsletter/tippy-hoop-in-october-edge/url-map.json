@@ -1,9 +1,12 @@
 {
   "slug": "2025-09-13-tippy-hoop-in-october-edge",
+  "source": "corpus html-bodies/2025-09-13-tippy-hoop-in-october-edge.html (as-sent mailbox copy), full-image rebuild \u2014 task #1911",
   "min_image_bytes": 0,
   "max_images_per_email": 999,
   "tracking_pixel_bytes": 100,
-  "max_image_bytes": 2097152,
+  "max_image_bytes": 0,
+  "compress_above_bytes": 2097152,
+  "source_image_count": 28,
   "rows": [
     {
       "pos": null,
@@ -48,10 +51,12 @@
     {
       "pos": 5,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68c34488462dd34c52a82142.gif",
-      "file": null,
-      "size": 3315765,
+      "file": "img-05.webp",
+      "size": 368834,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 3315765,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 3238 KB \u2192 360 KB"
     },
     {
       "pos": 6,
@@ -88,10 +93,12 @@
     {
       "pos": 10,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/67ae3c029a20fd4ba0ff3130.gif",
-      "file": null,
-      "size": 5867848,
+      "file": "img-10.webp",
+      "size": 637056,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 5867848,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 5730 KB \u2192 622 KB"
     },
     {
       "pos": 11,
@@ -120,18 +127,22 @@
     {
       "pos": 14,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68c488bb9bf28900913be320.gif",
-      "file": null,
-      "size": 4429136,
+      "file": "img-14.webp",
+      "size": 497548,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 4429136,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 4325 KB \u2192 485 KB"
     },
     {
       "pos": 15,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68c3341b4bcc512f1538b6b7.gif",
-      "file": null,
-      "size": 3250823,
+      "file": "img-15.webp",
+      "size": 560118,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 3250823,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 3174 KB \u2192 546 KB"
     },
     {
       "pos": 16,
@@ -152,10 +163,12 @@
     {
       "pos": 18,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
-      "file": null,
-      "size": 2397485,
+      "file": "img-18.webp",
+      "size": 66490,
       "alt": "Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at \u00a315 or a whole term at \u00a3132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2397485,
+      "transform": "re-encoded still PNG\u2192WebP at quality 55; full resolution and frame rate kept, 2341 KB \u2192 64 KB"
     },
     {
       "pos": 19,
