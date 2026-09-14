@@ -10,8 +10,8 @@ draft: false
 
 - **Sent:** 2025-08-09
 - **From:** info@contact.aerialedge.co.uk
-- **Folder:** INBOX.Archive
-- **Images saved:** 12
+- **Folder:** INBOX.Archive (full-image rebuild, task #1911)
+- **Images saved:** 26
 - **Images dir:** `/assets/images/newsletter/vee-s-fringe-top-picks/`
 
 ---
@@ -20,7 +20,7 @@ PLUS still time to join full-time courses if you're quick
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k0tzwjYUhX-NvAtjy--FFgYqIElpAuGRbjyydI3ll1xZYODXdyCZTGdCt1dHmqPvnMtTKcjbjv2RvZyzw3660oZGwRCdLUG4sF1uW0I1TLaEq9YwbkYMtGQ1iAOMuBodq-_zVA0t6L6QXWouHZBacWak-poLC4gT-l4Y-I6DLWiYrNMG-p4d4GbgwiefsvblMDHPU51M8_FZf6vuj3HWdEwe2v_MbteCKA69gMcud9wos2MR8jgSHFvQnqRWbQOtIZ1W4shvVqyC-JjjgAUhZjwPnSwSAWMxcJGHoQiE61iSYBv7dmTHTuT5Dh5FXNgsxywMMoadLEOe_b8kalIY0_XITRCmCFPWyV8ihOn9E0-dhpOEAWFKY2fWuRCx9aw2ubtpk-sWYfoICnKpkQ2kvWFNh9zpD1QnCmyr5ukXINka0C2ryQbTXsy21d5BeKzK7rBvlqGNMG3L2W5JP7j7ulm8XK8i6Zrjm8zjIV9lWX75873yEKYlbLNn96_d5e_x_HNTlQiPbbFZLAr8vOBHhMeifg28w2U1LfLuXOxkRGEuoJwUSV4taESXy_KT5rw0wjHxO9WD7t_9bdOHcvDL-RpPZbJ9pfstNPU6mXjrxelj3P8TnqNlONdv12q7mK0AYSqTM1i1urf1ES6rAVMoQVgnLaXlQbYkO9bV0x2H1Wl1kgI0qYEJrtoWuFHa0qRhukKe_SvIXh01B_IVlOxPT4PSFWjL3GqdPjRgCFdN-nCTDAGT_lT4RPC_AQAA__9kVS1U)
 
-![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/vee-s-fringe-top-picks/img-01.png)
+      [image: Logo for Aerial Edge, Glasgow's Circus School]
 
 Vee & Sadiq perform at the Fringe
 
@@ -218,15 +218,21 @@ Of course, you'll be able to do more of what you love for longer if you increase
 
 See more mobility sequences from [@vanja.moves](https://email.contact.aerialedge.co.uk/c/eJx0k1tzqzYUhX-NeOkkAwJzedADjiuHnMTN5RgnfWGEtAFxkagQvuTXd-y4nc6c9HVpa83St5d4IQV53rHfyx_Hsn5fvRpL4_AQHx1BuHB97jpCD0wqwrWyjNtbBkayHkQNt1zfzt31vNAHBWZq5FjY0wik15xZqb904QDxokUQhQvPww4MTPbFANPEajgHOPG7D9kv5OHOPqxMuqqWR3OduphxNoxM1uo_2vlaGCdREPLE554fl24iIp7EgmMH1F4arQZQloxGi5mfozgN4YHvJ15VhT4PAQOufA4QRLwKcRUEAhxJsIsXbuwmXhwsPHwbc-GyCrMoLBn2yhIF7v-S6Elj7TghP0WYIkzZKH8ZQpheHnFjDeOdVDXC1K3AYywOIx4in17tM4H81ZQEz-nTLm325SJPbPbyJBnC4WyHYtKz4YD81cXuKg4g5Dz8I_42MNOBlap2el58sZPKglGsJ1tMJ7HOu3cP4aVux_p92EQuwlS1692G_uT-4zb78fkp0nGYn2WVHKrXsqxOTy9dgDBtIS8f_D92pz-X9x_brkV46YptljX4IeMzwkvRP4ZBfXpdNdV4bHYypnAvoL1r0qrLaEw3m_aDVry1wrPJCzUHM70s8mGK5GHR3r_hlUzzR_qew9C_pXfBW7b_uZz-io7xJro3z59dnq1fAWEq0yM4vb4UmSbeevQhZm_r3lb-VqWfuTOAbbQgbJSONrKWipRz391ccDij0XspwJAemOBaKeBWG8eQMzoUuL_s-As7-dqhnPY3B206MI49N774NoAlXA_Ft5_MErDFv-3eE_x3AAAA___r-jiY)for beginners and experts.
 
+        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
+        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
+        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
+        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
+                  [image: Aerial Edge TikTok]
 
+                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -248,28 +254,29 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-![](/assets/images/newsletter/vee-s-fringe-top-picks/img-02.jpg)
-
-![](/assets/images/newsletter/vee-s-fringe-top-picks/img-03.png)
-
-![](/assets/images/newsletter/vee-s-fringe-top-picks/img-04.gif)
-
-![](/assets/images/newsletter/vee-s-fringe-top-picks/img-05.gif)
-
-![](/assets/images/newsletter/vee-s-fringe-top-picks/img-06.png)
-
-![](/assets/images/newsletter/vee-s-fringe-top-picks/img-07.jpg)
-
-![](/assets/images/newsletter/vee-s-fringe-top-picks/img-08.jpg)
-
-![](/assets/images/newsletter/vee-s-fringe-top-picks/img-09.png)
-
-![](/assets/images/newsletter/vee-s-fringe-top-picks/img-10.png)
-
-![](/assets/images/newsletter/vee-s-fringe-top-picks/img-11.png)
-
-![](/assets/images/newsletter/vee-s-fringe-top-picks/img-12.gif)
-
-### Already referenced inline above
-
-- _Rendered inline:_ `/assets/images/newsletter/vee-s-fringe-top-picks/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-02.jpg` (184 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-03.png` (23 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-04.webp` (711 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-05.webp` (1529 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-06.png` (27 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-07.jpg` (254 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-08.jpg` (209 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-09.png` (26 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-10.webp` (57 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-11.png` (6 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-12.webp` (1089 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-13.webp` (1019 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-14.png` (8 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-15.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-16.webp` (64 KB) — alt: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-17.png` (678 KB) — alt: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-18.png` (8 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-19.png` (234 KB) — alt: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-20.png` (1 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-21.png` (1 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-22.png` (0 KB) — alt: Aerial Edge TikTok
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-23.png` (1 KB) — alt: Aerial Edge YouTube channel
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-24.png` (1 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-25.jpg` (19 KB) — alt: (none)
+- `/assets/images/newsletter/vee-s-fringe-top-picks/img-26.png` (761 KB) — alt: (none)
