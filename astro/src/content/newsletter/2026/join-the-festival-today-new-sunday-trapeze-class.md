@@ -10,8 +10,8 @@ draft: false
 
 - **Sent:** 2026-07-18
 - **From:** info@contact.aerialedge.co.uk
-- **Folder:** INBOX
-- **Images saved:** 9
+- **Folder:** INBOX (full-image rebuild, task #1911)
+- **Images saved:** 23
 - **Images dir:** `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/`
 
 ---
@@ -261,11 +261,25 @@ If you no longer wish to receive these emails you may [unsubscribe](https://emai
 ## Images
 
 - `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-01.png` (56 KB) — alt: Aerial Edge, Glasgow
+- `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-02.webp` (3095 KB) — alt: SORRY FOR THE SAD FACES
 - `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-03.png` (8 KB) — alt: TURN UP AND TAKE OFF timeline
+- `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-04.webp` (556 KB) — alt: TURN UP AND TAKE OFF
 - `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-05.png` (12 KB) — alt: FROM CAST TO CLASS timeline
 - `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-06.jpg` (408 KB) — alt: FROM CAST TO CLASS
 - `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-07.png` (14 KB) — alt: DOUBLES ON DEMAND timeline
 - `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-08.png` (10 KB) — alt: PERMISSION TO PROCRASTINATE  timeline
+- `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-09.webp` (986 KB) — alt: PERMISSION TO PROCRASTINATE
 - `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-10.png` (11 KB) — alt: NOBODY WANTS PICKED UP ON TIME timeline
 - `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-11.png` (8 KB) — alt: SHOP — clothing, gift vouchers and Pay It Forward
 - `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-12.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers
+- `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-13.webp` (64 KB) — alt: Aerial Edge Pay It Forward
+- `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-14.png` (678 KB) — alt: Aerial Edge clothing store
+- `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-15.png` (8 KB) — alt: SERVICES — what you can do at Aerial Edge
+- `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-16.png` (234 KB) — alt: What we offer at Aerial Edge
+- `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-17.png` (1 KB) — alt: Facebook
+- `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-18.png` (1 KB) — alt: Instagram
+- `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-19.png` (0 KB) — alt: TikTok
+- `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-20.png` (1 KB) — alt: YouTube
+- `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-21.png` (1 KB) — alt: Website
+- `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-22.jpg` (19 KB) — alt: Find us — quick video tour of the front door at 240 Edmiston Drive
+- `/assets/images/newsletter/join-the-festival-today-new-sunday-trapeze-class/img-23.png` (761 KB) — alt: Route map to Aerial Edge, 240 Edmiston Drive, Glasgow G51 2YU
