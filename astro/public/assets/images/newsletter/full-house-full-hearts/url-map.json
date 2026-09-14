@@ -1,9 +1,12 @@
 {
   "slug": "2025-11-01-full-house-full-hearts",
+  "source": "corpus html-bodies/2025-11-01-full-house-full-hearts.html (as-sent mailbox copy), full-image rebuild \u2014 task #1911",
   "min_image_bytes": 0,
   "max_images_per_email": 999,
   "tracking_pixel_bytes": 100,
-  "max_image_bytes": 2097152,
+  "max_image_bytes": 0,
+  "compress_above_bytes": 2097152,
+  "source_image_count": 25,
   "rows": [
     {
       "pos": null,
@@ -40,10 +43,12 @@
     {
       "pos": 4,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/69060ae5d4acd10f18810c58.gif",
-      "file": null,
-      "size": 6321057,
+      "file": "img-04.webp",
+      "size": 2053908,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 6321057,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 6172 KB \u2192 2005 KB"
     },
     {
       "pos": 5,
@@ -80,10 +85,12 @@
     {
       "pos": 9,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/6906479d3081bc11843cfaf6.gif",
-      "file": null,
-      "size": 3701463,
+      "file": "img-09.webp",
+      "size": 1367618,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 3701463,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 3614 KB \u2192 1335 KB"
     },
     {
       "pos": 10,
@@ -96,18 +103,22 @@
     {
       "pos": 11,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/69064980894d7f49f985545d.gif",
-      "file": null,
-      "size": 2721193,
+      "file": "img-11.webp",
+      "size": 970436,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2721193,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 2657 KB \u2192 947 KB"
     },
     {
       "pos": 12,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/6906499c3081bc480c3d4f65.gif",
-      "file": null,
-      "size": 7095440,
+      "file": "img-12.webp",
+      "size": 2344164,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 7095440,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 6929 KB \u2192 2289 KB"
     },
     {
       "pos": 13,
@@ -128,10 +139,12 @@
     {
       "pos": 15,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
-      "file": null,
-      "size": 2397485,
+      "file": "img-15.webp",
+      "size": 66490,
       "alt": "Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at \u00a315 or a whole term at \u00a3132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2397485,
+      "transform": "re-encoded still PNG\u2192WebP at quality 55; full resolution and frame rate kept, 2341 KB \u2192 64 KB"
     },
     {
       "pos": 16,
