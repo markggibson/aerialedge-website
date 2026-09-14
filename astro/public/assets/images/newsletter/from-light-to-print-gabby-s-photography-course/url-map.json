@@ -1,9 +1,12 @@
 {
   "slug": "2026-02-06-from-light-to-print-gabby-s-photography-course",
+  "source": "corpus html-bodies/2026-02-06-from-light-to-print-gabby-s-photography-course.html (as-sent mailbox copy), full-image rebuild \u2014 task #1911",
   "min_image_bytes": 0,
   "max_images_per_email": 999,
   "tracking_pixel_bytes": 100,
-  "max_image_bytes": 2097152,
+  "max_image_bytes": 0,
+  "compress_above_bytes": 2097152,
+  "source_image_count": 25,
   "rows": [
     {
       "pos": null,
@@ -35,7 +38,7 @@
       "file": null,
       "size": 0,
       "alt": "",
-      "status": "fetch-fail:HTTPError"
+      "status": "source-gone-404"
     },
     {
       "pos": 4,
@@ -64,18 +67,22 @@
     {
       "pos": 7,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/67cb5ff9456f01a4bd3db77c.gif",
-      "file": null,
-      "size": 8737869,
+      "file": "img-07.webp",
+      "size": 1726084,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 8737869,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55 (method 4); full resolution and frame rate kept, 8533 KB \u2192 1685 KB"
     },
     {
       "pos": 8,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/67cb61f2f770c46fbc4b1848.gif",
-      "file": null,
-      "size": 10144232,
+      "file": "img-08.webp",
+      "size": 1116646,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 10144232,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55 (method 4); full resolution and frame rate kept, 9906 KB \u2192 1090 KB"
     },
     {
       "pos": 9,
@@ -88,10 +95,12 @@
     {
       "pos": 10,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68f3f3ea8e5daa3b318d0fb2.gif",
-      "file": null,
-      "size": 3789432,
+      "file": "img-10.webp",
+      "size": 884338,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 3789432,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55 (method 4); full resolution and frame rate kept, 3700 KB \u2192 863 KB"
     },
     {
       "pos": 11,
@@ -128,10 +137,12 @@
     {
       "pos": 15,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
-      "file": null,
-      "size": 2397485,
+      "file": "img-15.webp",
+      "size": 67390,
       "alt": "Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at \u00a315 or a whole term at \u00a3132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2397485,
+      "transform": "re-encoded still PNG\u2192WebP at quality 55 (method 4); full resolution and frame rate kept, 2341 KB \u2192 65 KB"
     },
     {
       "pos": 16,
