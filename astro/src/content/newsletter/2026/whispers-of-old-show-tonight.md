@@ -10,8 +10,8 @@ draft: false
 
 - **Sent:** 2026-06-20
 - **From:** info@contact.aerialedge.co.uk
-- **Folder:** INBOX.Archive
-- **Images saved:** 9
+- **Folder:** INBOX.Archive (full-image rebuild, task #1911)
+- **Images saved:** 24
 - **Images dir:** `/assets/images/newsletter/whispers-of-old-show-tonight/`
 
 ---
@@ -393,10 +393,25 @@ If you no longer wish to receive these emails you may [unsubscribe](https://emai
 
 - `/assets/images/newsletter/whispers-of-old-show-tonight/img-01.png` (56 KB) — alt: Aerial Edge, Glasgow
 - `/assets/images/newsletter/whispers-of-old-show-tonight/img-02.png` (1028 KB) — alt: BIG MOMENTS, BIG EVENTS
+- `/assets/images/newsletter/whispers-of-old-show-tonight/img-03.webp` (1756 KB) — alt: TONIGHT: WHISPERS OF OLD COME ALIVE
 - `/assets/images/newsletter/whispers-of-old-show-tonight/img-04.png` (11 KB) — alt: HANG OUT AT DIFFERENT BARS timeline
 - `/assets/images/newsletter/whispers-of-old-show-tonight/img-05.jpg` (2022 KB) — alt: YOU CAN'T KEEP CIRCUS TO YOURSELF
 - `/assets/images/newsletter/whispers-of-old-show-tonight/img-06.jpg` (288 KB) — alt: TAKE IT EASY WITH TRAPEZE
 - `/assets/images/newsletter/whispers-of-old-show-tonight/img-07.png` (15 KB) — alt: SET UP A SUMMER TO REMEMBER timeline
 - `/assets/images/newsletter/whispers-of-old-show-tonight/img-08.jpg` (1213 KB) — alt: SET UP A SUMMER TO REMEMBER
+- `/assets/images/newsletter/whispers-of-old-show-tonight/img-09.webp` (2090 KB) — alt: CHINESE POLE POLL — ARE YOU CHOREO-AVERSE?
 - `/assets/images/newsletter/whispers-of-old-show-tonight/img-10.png` (13 KB) — alt: IN-CLASS SHOWINGS TOMORROW timeline
+- `/assets/images/newsletter/whispers-of-old-show-tonight/img-11.webp` (60 KB) — alt: HAPPY CAMPER, OR SUMMER INTENSIVE?
 - `/assets/images/newsletter/whispers-of-old-show-tonight/img-12.png` (8 KB) — alt: SHOP — clothing, gift vouchers and Pay It Forward
+- `/assets/images/newsletter/whispers-of-old-show-tonight/img-13.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers
+- `/assets/images/newsletter/whispers-of-old-show-tonight/img-14.webp` (64 KB) — alt: Aerial Edge Pay It Forward
+- `/assets/images/newsletter/whispers-of-old-show-tonight/img-15.png` (678 KB) — alt: Aerial Edge clothing store
+- `/assets/images/newsletter/whispers-of-old-show-tonight/img-16.png` (8 KB) — alt: SERVICES — what you can do at Aerial Edge
+- `/assets/images/newsletter/whispers-of-old-show-tonight/img-17.png` (234 KB) — alt: What we offer at Aerial Edge
+- `/assets/images/newsletter/whispers-of-old-show-tonight/img-18.png` (1 KB) — alt: Facebook
+- `/assets/images/newsletter/whispers-of-old-show-tonight/img-19.png` (1 KB) — alt: Instagram
+- `/assets/images/newsletter/whispers-of-old-show-tonight/img-20.png` (0 KB) — alt: TikTok
+- `/assets/images/newsletter/whispers-of-old-show-tonight/img-21.png` (1 KB) — alt: YouTube
+- `/assets/images/newsletter/whispers-of-old-show-tonight/img-22.png` (1 KB) — alt: Website
+- `/assets/images/newsletter/whispers-of-old-show-tonight/img-23.jpg` (19 KB) — alt: Find us — quick video tour of the front door at 240 Edmiston Drive
+- `/assets/images/newsletter/whispers-of-old-show-tonight/img-24.png` (761 KB) — alt: Route map to Aerial Edge, 240 Edmiston Drive, Glasgow G51 2YU
