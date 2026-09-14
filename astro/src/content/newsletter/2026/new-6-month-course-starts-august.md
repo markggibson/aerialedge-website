@@ -10,8 +10,8 @@ draft: false
 
 - **Sent:** 2026-06-13
 - **From:** info@contact.aerialedge.co.uk
-- **Folder:** INBOX
-- **Images saved:** 25
+- **Folder:** INBOX (full-image rebuild, task #1911)
+- **Images saved:** 29
 - **Images dir:** `/assets/images/newsletter/new-6-month-course-starts-august/`
 
 ---
@@ -403,20 +403,24 @@ If you no longer wish to receive these emails you may [unsubscribe](https://emai
 ## Images
 
 - `/assets/images/newsletter/new-6-month-course-starts-august/img-01.png` (56 KB) — alt: Aerial Edge, Glasgow
-- `/assets/images/newsletter/new-6-month-course-starts-august/img-02.jpg` (3659 KB) — alt: WHY SMALL IS VALUABLE
+- `/assets/images/newsletter/new-6-month-course-starts-august/img-02.webp` (2015 KB) — alt: WHY SMALL IS VALUABLE
 - `/assets/images/newsletter/new-6-month-course-starts-august/img-03.png` (13 KB) — alt: THE ART OF FALLING BEAUTIFULLY timeline
 - `/assets/images/newsletter/new-6-month-course-starts-august/img-04.jpg` (61 KB) — alt: THE ART OF FALLING BEAUTIFULLY
+- `/assets/images/newsletter/new-6-month-course-starts-august/img-05.webp` (904 KB) — alt: IT'S JUST A ROPE. UNTIL IT ISN'T.
 - `/assets/images/newsletter/new-6-month-course-starts-august/img-06.png` (17 KB) — alt: NEW 6-MONTH COURSE STARTS AUGUST timeline
+- `/assets/images/newsletter/new-6-month-course-starts-august/img-07.webp` (455 KB) — alt: NEW 6-MONTH COURSE STARTS AUGUST
 - `/assets/images/newsletter/new-6-month-course-starts-august/img-08.png` (13 KB) — alt: WHY YOU'LL LOVE ELKE'S FLY POLE timeline
 - `/assets/images/newsletter/new-6-month-course-starts-august/img-09.jpg` (170 KB) — alt: WHY YOU'LL LOVE ELKE'S FLY POLE
 - `/assets/images/newsletter/new-6-month-course-starts-august/img-10.png` (18 KB) — alt: MYTH IN MOTION timeline
 - `/assets/images/newsletter/new-6-month-course-starts-august/img-11.jpg` (223 KB) — alt: MYTH IN MOTION
 - `/assets/images/newsletter/new-6-month-course-starts-august/img-12.png` (16 KB) — alt: GOVAN WAS GREAT timeline
-- `/assets/images/newsletter/new-6-month-course-starts-august/img-13.jpg` (5094 KB) — alt: GOVAN WAS GREAT
+- `/assets/images/newsletter/new-6-month-course-starts-august/img-13.webp` (3038 KB) — alt: GOVAN WAS GREAT
 - `/assets/images/newsletter/new-6-month-course-starts-august/img-14.png` (17 KB) — alt: COME SEE WHAT THEY'VE LEARNT timeline
+- `/assets/images/newsletter/new-6-month-course-starts-august/img-15.webp` (891 KB) — alt: COME SEE WHAT THEY'VE LEARNT
+- `/assets/images/newsletter/new-6-month-course-starts-august/img-16.webp` (560 KB) — alt: LESS SCREEN, MORE STORIES
 - `/assets/images/newsletter/new-6-month-course-starts-august/img-17.png` (8 KB) — alt: SHOP — clothing, gift vouchers and Pay It Forward
 - `/assets/images/newsletter/new-6-month-course-starts-august/img-18.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers
-- `/assets/images/newsletter/new-6-month-course-starts-august/img-19.png` (2341 KB) — alt: Aerial Edge Pay It Forward
+- `/assets/images/newsletter/new-6-month-course-starts-august/img-19.webp` (64 KB) — alt: Aerial Edge Pay It Forward
 - `/assets/images/newsletter/new-6-month-course-starts-august/img-20.png` (678 KB) — alt: Aerial Edge clothing store
 - `/assets/images/newsletter/new-6-month-course-starts-august/img-21.png` (8 KB) — alt: SERVICES — what you can do at Aerial Edge
 - `/assets/images/newsletter/new-6-month-course-starts-august/img-22.png` (234 KB) — alt: What we offer at Aerial Edge

@@ -1,9 +1,12 @@
 {
   "slug": "2026-06-13-new-6-month-course-starts-august",
+  "source": "corpus html-bodies/2026-06-13-new-6-month-course-starts-august.html (as-sent mailbox copy), full-image rebuild \u2014 task #1911",
   "min_image_bytes": 0,
   "max_images_per_email": 999,
   "tracking_pixel_bytes": 100,
-  "max_image_bytes": 10485760,
+  "max_image_bytes": 0,
+  "compress_above_bytes": 2097152,
+  "source_image_count": 29,
   "rows": [
     {
       "pos": null,
@@ -24,10 +27,12 @@
     {
       "pos": 2,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/858d5740-e5f2-468c-a84e-03ff327cab24.jpg",
-      "file": "img-02.jpg",
-      "size": 3747671,
+      "file": "img-02.webp",
+      "size": 2063558,
       "alt": "WHY SMALL IS VALUABLE",
-      "status": "ok"
+      "status": "ok",
+      "source_bytes": 3747671,
+      "transform": "re-encoded still JPG\u2192WebP at quality 55; full resolution and frame rate kept, 3659 KB \u2192 2015 KB"
     },
     {
       "pos": 3,
@@ -48,10 +53,12 @@
     {
       "pos": 5,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/e6d5627f-c498-4b1a-b364-32f27406288e.jpg",
-      "file": null,
-      "size": 20988356,
+      "file": "img-05.webp",
+      "size": 925750,
       "alt": "IT'S JUST A ROPE. UNTIL IT ISN'T.",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 20988356,
+      "transform": "re-encoded still JPG\u2192WebP at quality 55; full resolution and frame rate kept, 20496 KB \u2192 904 KB"
     },
     {
       "pos": 6,
@@ -64,10 +71,12 @@
     {
       "pos": 7,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/f61a5b36-a53d-436b-9f94-c4c2aa974e8d.jpg",
-      "file": null,
-      "size": 13138786,
+      "file": "img-07.webp",
+      "size": 466012,
       "alt": "NEW 6-MONTH COURSE STARTS AUGUST",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 13138786,
+      "transform": "re-encoded still JPG\u2192WebP at quality 55; full resolution and frame rate kept, 12830 KB \u2192 455 KB"
     },
     {
       "pos": 8,
@@ -112,10 +121,12 @@
     {
       "pos": 13,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/36d8e8a5-7a36-4d06-bb88-449485668b9f.jpg",
-      "file": "img-13.jpg",
-      "size": 5217006,
+      "file": "img-13.webp",
+      "size": 3111116,
       "alt": "GOVAN WAS GREAT",
-      "status": "ok"
+      "status": "ok",
+      "source_bytes": 5217006,
+      "transform": "re-encoded still JPG\u2192WebP at quality 55; full resolution and frame rate kept, 5094 KB \u2192 3038 KB"
     },
     {
       "pos": 14,
@@ -128,18 +139,22 @@
     {
       "pos": 15,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/0ac55d56-a8be-4972-9a99-a937a9481c0a.jpg",
-      "file": null,
-      "size": 19242864,
+      "file": "img-15.webp",
+      "size": 912580,
       "alt": "COME SEE WHAT THEY'VE LEARNT",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 19242864,
+      "transform": "re-encoded still JPG\u2192WebP at quality 55; full resolution and frame rate kept, 18791 KB \u2192 891 KB"
     },
     {
       "pos": 16,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/022d6e3e-d77b-41da-962f-d2710a11debd.jpg",
-      "file": null,
-      "size": 13894610,
+      "file": "img-16.webp",
+      "size": 574110,
       "alt": "LESS SCREEN, MORE STORIES",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 13894610,
+      "transform": "re-encoded still JPG\u2192WebP at quality 55; full resolution and frame rate kept, 13568 KB \u2192 560 KB"
     },
     {
       "pos": 17,
@@ -160,10 +175,12 @@
     {
       "pos": 19,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
-      "file": "img-19.png",
-      "size": 2397485,
+      "file": "img-19.webp",
+      "size": 66490,
       "alt": "Aerial Edge Pay It Forward",
-      "status": "ok"
+      "status": "ok",
+      "source_bytes": 2397485,
+      "transform": "re-encoded still PNG\u2192WebP at quality 55; full resolution and frame rate kept, 2341 KB \u2192 64 KB"
     },
     {
       "pos": 20,
