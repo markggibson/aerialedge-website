@@ -1,9 +1,12 @@
 {
   "slug": "2025-10-04-dance-yourself-dizzy",
+  "source": "corpus html-bodies/2025-10-04-dance-yourself-dizzy.html (as-sent mailbox copy), full-image rebuild \u2014 task #1911",
   "min_image_bytes": 0,
   "max_images_per_email": 999,
   "tracking_pixel_bytes": 100,
-  "max_image_bytes": 2097152,
+  "max_image_bytes": 0,
+  "compress_above_bytes": 2097152,
+  "source_image_count": 30,
   "rows": [
     {
       "pos": null,
@@ -40,18 +43,22 @@
     {
       "pos": 4,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68e10ea9f462ee65cbcd845f.gif",
-      "file": null,
-      "size": 6911379,
+      "file": "img-04.webp",
+      "size": 858716,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 6911379,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 6749 KB \u2192 838 KB"
     },
     {
       "pos": 5,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68e10ea9f462ee3997cd8460.gif",
-      "file": null,
-      "size": 6041182,
+      "file": "img-05.webp",
+      "size": 1287360,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 6041182,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 5899 KB \u2192 1257 KB"
     },
     {
       "pos": 6,
@@ -75,7 +82,7 @@
       "file": null,
       "size": 0,
       "alt": "",
-      "status": "fetch-fail:HTTPError"
+      "status": "source-gone-404"
     },
     {
       "pos": 9,
@@ -96,10 +103,12 @@
     {
       "pos": 11,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68d2a611fd1a28211095d771.jpeg",
-      "file": null,
-      "size": 9290936,
+      "file": "img-11.webp",
+      "size": 433638,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 9290936,
+      "transform": "re-encoded still JPG\u2192WebP at quality 55; full resolution and frame rate kept, 9073 KB \u2192 423 KB"
     },
     {
       "pos": 12,
@@ -112,18 +121,22 @@
     {
       "pos": 13,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68e10eef21898c1ae4fda518.gif",
-      "file": null,
-      "size": 5504079,
+      "file": "img-13.webp",
+      "size": 960132,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 5504079,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 5375 KB \u2192 937 KB"
     },
     {
       "pos": 14,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/671241906eaed9f8a689179c.gif",
-      "file": null,
-      "size": 2153449,
+      "file": "img-14.webp",
+      "size": 795476,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2153449,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 2102 KB \u2192 776 KB"
     },
     {
       "pos": 15,
@@ -136,18 +149,22 @@
     {
       "pos": 16,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68e10eef30a9a935e83d4f87.gif",
-      "file": null,
-      "size": 2709008,
+      "file": "img-16.webp",
+      "size": 632920,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2709008,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 2645 KB \u2192 618 KB"
     },
     {
       "pos": 17,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68e10ea92f0e7fd0794bd437.gif",
-      "file": null,
-      "size": 7569492,
+      "file": "img-17.webp",
+      "size": 1653120,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 7569492,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 7392 KB \u2192 1614 KB"
     },
     {
       "pos": 18,
@@ -168,10 +185,12 @@
     {
       "pos": 20,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
-      "file": null,
-      "size": 2397485,
+      "file": "img-20.webp",
+      "size": 66490,
       "alt": "Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at \u00a315 or a whole term at \u00a3132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2397485,
+      "transform": "re-encoded still PNG\u2192WebP at quality 55; full resolution and frame rate kept, 2341 KB \u2192 64 KB"
     },
     {
       "pos": 21,
