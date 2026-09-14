@@ -1,9 +1,12 @@
 {
   "slug": "2025-08-30-jason-br-gger-guest-instructor-at-october-edge",
+  "source": "corpus html-bodies/2025-08-30-jason-br-gger-guest-instructor-at-october-edge.html (as-sent mailbox copy), full-image rebuild \u2014 task #1911",
   "min_image_bytes": 0,
   "max_images_per_email": 999,
   "tracking_pixel_bytes": 100,
-  "max_image_bytes": 2097152,
+  "max_image_bytes": 0,
+  "compress_above_bytes": 2097152,
+  "source_image_count": 29,
   "rows": [
     {
       "pos": null,
@@ -32,10 +35,12 @@
     {
       "pos": 3,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68b2080d16f5c56b69b6419c.png",
-      "file": null,
-      "size": 4036499,
+      "file": "img-03.webp",
+      "size": 124730,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 4036499,
+      "transform": "re-encoded still PNG\u2192WebP at quality 55; full resolution and frame rate kept, 3941 KB \u2192 121 KB"
     },
     {
       "pos": 4,
@@ -64,10 +69,12 @@
     {
       "pos": 7,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68977c22e2eb0c22c94d46a3.gif",
-      "file": null,
-      "size": 6951203,
+      "file": "img-07.webp",
+      "size": 1566196,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 6951203,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 6788 KB \u2192 1529 KB"
     },
     {
       "pos": 8,
@@ -83,15 +90,17 @@
       "file": null,
       "size": 0,
       "alt": "",
-      "status": "fetch-fail:HTTPError"
+      "status": "source-gone-404"
     },
     {
       "pos": 10,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/687a96d3797fb8de2905477c.gif",
-      "file": null,
-      "size": 4197079,
+      "file": "img-10.webp",
+      "size": 1241322,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 4197079,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 4098 KB \u2192 1212 KB"
     },
     {
       "pos": 11,
@@ -104,10 +113,12 @@
     {
       "pos": 12,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68b2131d34f2b60c55875e79.gif",
-      "file": null,
-      "size": 6503595,
+      "file": "img-12.webp",
+      "size": 1376490,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 6503595,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 6351 KB \u2192 1344 KB"
     },
     {
       "pos": 13,
@@ -128,18 +139,22 @@
     {
       "pos": 15,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68b221cc142d741292a74c3a.gif",
-      "file": null,
-      "size": 3175437,
+      "file": "img-15.webp",
+      "size": 1278014,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 3175437,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 3101 KB \u2192 1248 KB"
     },
     {
       "pos": 16,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68b22061b40ac6bec28a9c04.gif",
-      "file": null,
-      "size": 3408200,
+      "file": "img-16.webp",
+      "size": 460878,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 3408200,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 3328 KB \u2192 450 KB"
     },
     {
       "pos": 17,
@@ -160,10 +175,12 @@
     {
       "pos": 19,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
-      "file": null,
-      "size": 2397485,
+      "file": "img-19.webp",
+      "size": 66490,
       "alt": "Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at \u00a315 or a whole term at \u00a3132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2397485,
+      "transform": "re-encoded still PNG\u2192WebP at quality 55; full resolution and frame rate kept, 2341 KB \u2192 64 KB"
     },
     {
       "pos": 20,
