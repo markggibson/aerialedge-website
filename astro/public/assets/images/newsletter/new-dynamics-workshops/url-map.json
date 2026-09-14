@@ -1,9 +1,12 @@
 {
   "slug": "2025-10-18-new-dynamics-workshops",
+  "source": "corpus html-bodies/2025-10-18-new-dynamics-workshops.html (as-sent mailbox copy), full-image rebuild \u2014 task #1911",
   "min_image_bytes": 0,
   "max_images_per_email": 999,
   "tracking_pixel_bytes": 100,
-  "max_image_bytes": 2097152,
+  "max_image_bytes": 0,
+  "compress_above_bytes": 2097152,
+  "source_image_count": 25,
   "rows": [
     {
       "pos": null,
@@ -40,10 +43,12 @@
     {
       "pos": 4,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68f3c3f77b55a75c85852fbd.gif",
-      "file": null,
-      "size": 5117187,
+      "file": "img-04.webp",
+      "size": 1235360,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 5117187,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 4997 KB \u2192 1206 KB"
     },
     {
       "pos": 5,
@@ -64,10 +69,12 @@
     {
       "pos": 7,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68f3f3ea8e5daa3b318d0fb2.gif",
-      "file": null,
-      "size": 3789432,
+      "file": "img-07.webp",
+      "size": 673758,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 3789432,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 3700 KB \u2192 657 KB"
     },
     {
       "pos": 8,
@@ -96,18 +103,22 @@
     {
       "pos": 11,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68f3ef261e167452c2e5064d.gif",
-      "file": null,
-      "size": 6786130,
+      "file": "img-11.webp",
+      "size": 861280,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 6786130,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 6627 KB \u2192 841 KB"
     },
     {
       "pos": 12,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/68f3e8c77b55a719cc8b09bd.gif",
-      "file": null,
-      "size": 2180995,
+      "file": "img-12.webp",
+      "size": 610858,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2180995,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 2129 KB \u2192 596 KB"
     },
     {
       "pos": 13,
@@ -128,10 +139,12 @@
     {
       "pos": 15,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
-      "file": null,
-      "size": 2397485,
+      "file": "img-15.webp",
+      "size": 66490,
       "alt": "Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at \u00a315 or a whole term at \u00a3132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2397485,
+      "transform": "re-encoded still PNG\u2192WebP at quality 55; full resolution and frame rate kept, 2341 KB \u2192 64 KB"
     },
     {
       "pos": 16,
