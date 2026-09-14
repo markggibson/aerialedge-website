@@ -10,8 +10,8 @@ draft: false
 
 - **Sent:** 2026-01-09
 - **From:** info@contact.aerialedge.co.uk
-- **Folder:** INBOX.Archive
-- **Images saved:** 12
+- **Folder:** INBOX.Archive (full-image rebuild, task #1911)
+- **Images saved:** 24
 - **Images dir:** `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/`
 
 ---
@@ -20,7 +20,7 @@ PLUS! New deals for the new year
 
 [View this email in browser](https://email.contact.aerialedge.co.uk/c/eJx0k8ty4jwQhZ9G3iVly1cttOASEWCSeCAhwMYlS7IRtiUjy4bh6f8imZr6q4bZtrqlo6_PYZnkOP2kT_nykpfb6cpYkkTn5OJwzLjrM9fhuqFSYaaVpcw-UmEkrQUvxSPTj331-zzTZyVMd5BtZn-1AteaUSv1d507AntxFCMUJ3HoiIbKOmtE19FS3ATQGUGrxQntqz4weyP9dBn_7vq6jNGmpbJU_6vdxiIUuSKMoiIUuctRXFAEPcSQI9QgjVaNUBa3RvOe3aQ4B8wSX8CcoTDxgjAOAxQlUchCPw7cxCuK0JEYujByPRdB6Hte-Mi9AgU5EyLhkIdeAQL3nyRqfLC27YA_ApAASGgr_2oCkHx94qE1YpDiDCAhyJu1vkjoelbbwv9Qo-vmNn0HCvCJlY3IOkubFvjTP1ADFHpOzbJvQFJZYRSt8QckHZ9tqq2HrFk-89fjdvdyse_r6QjA8eYtDc2P68sEQPJj-VmRS_NcMK4TBTcnNA1CAMkWzugsLbZplC52AI6DOrTRT88eTqsFLOz8-PpSpGuzB5AMAJJlf92JKDxPT2-Ty8fhjZfTcpM8jeV8TAEkk4H_2nfjvTLXJXovfZJzmPer147IxFcpGuXHn9XpeZpMYr9bn5qR2Pl9ejn3w7Hd5ZOFOl0W-6f2sArmpVc-rW9PdlcAx3MAx5_eYTd_997fqiOav6auCoA_dWr95fF7kJ1G2IPmmLbS0UaWUuG8r6uHL4hOa_QguTC4FpQzrZRgVhvH4IaaCgTuX-vvdG-YwN_rld3wcNamEsaxtzBkdwVYzHST3c2fxcJmf4w_YPhfAAAA__9Rhjoh)
 
-![Logo for Aerial Edge, Glasgow's Circus School](/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-01.png)
+      [image: Logo for Aerial Edge, Glasgow's Circus School]
 
 Get dynamic with Freya's workshops tomorrow
 
@@ -220,15 +220,21 @@ These nights will offer the full professional experience – staging, lighting, 
 
 This pathway isn't just for Wednesdays; our Sunday students are also encouraged to prepare acts for the Open Rig Nights if they have the performance itch. Whether you want to master a move or tell a story in the air, the stage is set.
 
+        [image: Aerial Edge Gift Vouchers come in various values, tap the image to buy one]
 
+        [image: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus]
 
 ## TAP IMAGE TO BUY YOUR GOODIES
 
 EACH IMAGE HAS A SEPARATE LINK
 
+        [image: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours]
 
+        [image: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training]
 
+                  [image: Aerial Edge TikTok]
 
+                  [image: Aerial Edge YouTube channel]
 
 HOW TO GET IN TOUCH WITH US
 
@@ -250,28 +256,27 @@ Tap the map on the left to play a quick vid that guides you to our front door at
 
 ## Images
 
-![](/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-02.gif)
-
-![](/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-03.png)
-
-![](/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-04.gif)
-
-![](/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-05.png)
-
-![](/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-06.jpg)
-
-![](/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-07.png)
-
-![](/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-08.png)
-
-![](/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-09.png)
-
-![](/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-10.png)
-
-![](/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-11.gif)
-
-![](/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-12.png)
-
-### Already referenced inline above
-
-- _Rendered inline:_ `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-01.png` (56 KB, alt: Logo for Aerial Edge, Glasgow's Circus School)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-01.png` (56 KB) — alt: Logo for Aerial Edge, Glasgow's Circus School
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-02.webp` (1114 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-03.png` (27 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-04.webp` (924 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-05.png` (25 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-06.jpg` (245 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-07.png` (31 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-08.png` (258 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-09.png` (220 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-10.png` (27 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-11.webp` (1297 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-12.png` (8 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-13.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers come in various values, tap the image to buy one
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-14.webp` (65 KB) — alt: Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at £15 or a whole term at £132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-15.png` (678 KB) — alt: Composite image of Aerial Edge clothing store items branded with the logo on the front and the words Glasgow's Circus School on the back, including hoodies, crew-neck sweatshirts and tank tops in grey, black, chocolate, sand and heather colours
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-16.png` (8 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-17.png` (234 KB) — alt: Aerial Edge offers training programmes including recreational classes, Youth Circus, Professional Training, Full-time courses, part-time courses and weekend workshops. Other options include parties, private lessons, mentoring and rigging training
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-18.png` (1 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-19.png` (1 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-20.png` (0 KB) — alt: Aerial Edge TikTok
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-21.png` (1 KB) — alt: Aerial Edge YouTube channel
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-22.png` (1 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-23.jpg` (19 KB) — alt: (none)
+- `/assets/images/newsletter/tomorrow-turbo-charge-your-movement-with-freya/img-24.png` (761 KB) — alt: (none)

@@ -1,9 +1,12 @@
 {
   "slug": "2026-01-09-tomorrow-turbo-charge-your-movement-with-freya",
+  "source": "corpus html-bodies/2026-01-09-tomorrow-turbo-charge-your-movement-with-freya.html (as-sent mailbox copy), full-image rebuild \u2014 task #1911",
   "min_image_bytes": 0,
   "max_images_per_email": 999,
   "tracking_pixel_bytes": 100,
-  "max_image_bytes": 2097152,
+  "max_image_bytes": 0,
+  "compress_above_bytes": 2097152,
+  "source_image_count": 24,
   "rows": [
     {
       "pos": null,
@@ -24,10 +27,12 @@
     {
       "pos": 2,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/69583032edb8a2b5c34ce428.gif",
-      "file": null,
-      "size": 4812489,
+      "file": "img-02.webp",
+      "size": 1141744,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 4812489,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55 (method 4); full resolution and frame rate kept, 4699 KB \u2192 1114 KB"
     },
     {
       "pos": 3,
@@ -40,10 +45,12 @@
     {
       "pos": 4,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/696113ce15e9b59ecf702873.gif",
-      "file": null,
-      "size": 3967910,
+      "file": "img-04.webp",
+      "size": 946842,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 3967910,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55 (method 4); full resolution and frame rate kept, 3874 KB \u2192 924 KB"
     },
     {
       "pos": 5,
@@ -96,10 +103,12 @@
     {
       "pos": 11,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/6958446ef0b9cf306913e702.gif",
-      "file": null,
-      "size": 4548882,
+      "file": "img-11.webp",
+      "size": 1328806,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 4548882,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55 (method 4); full resolution and frame rate kept, 4442 KB \u2192 1297 KB"
     },
     {
       "pos": 12,
@@ -120,10 +129,12 @@
     {
       "pos": 14,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
-      "file": null,
-      "size": 2397485,
+      "file": "img-14.webp",
+      "size": 67390,
       "alt": "Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at \u00a315 or a whole term at \u00a3132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2397485,
+      "transform": "re-encoded still PNG\u2192WebP at quality 55 (method 4); full resolution and frame rate kept, 2341 KB \u2192 65 KB"
     },
     {
       "pos": 15,
