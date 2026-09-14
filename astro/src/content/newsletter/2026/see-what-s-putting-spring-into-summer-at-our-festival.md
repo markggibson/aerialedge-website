@@ -10,8 +10,8 @@ draft: false
 
 - **Sent:** 2026-06-27
 - **From:** info@contact.aerialedge.co.uk
-- **Folder:** INBOX
-- **Images saved:** 10
+- **Folder:** INBOX (full-image rebuild, task #1911)
+- **Images saved:** 21
 - **Images dir:** `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/`
 
 ---
@@ -268,6 +268,7 @@ If you no longer wish to receive these emails you may [unsubscribe](https://emai
 ## Images
 
 - `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-01.png` (56 KB) — alt: Aerial Edge, Glasgow
+- `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-02.webp` (1131 KB) — alt: AFTER THE SHOW
 - `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-03.png` (16 KB) — alt: PUT SOME SPRING IN YOUR SUMMER timeline
 - `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-04.png` (19 KB) — alt: MAGICAL MYTHICAL MOMENTS timeline
 - `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-05.jpg` (309 KB) — alt: MAGICAL MYTHICAL MOMENTS
@@ -276,4 +277,14 @@ If you no longer wish to receive these emails you may [unsubscribe](https://emai
 - `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-08.png` (17 KB) — alt: THEY'LL LOVE THE FAMILY HOLIDAY timeline
 - `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-09.png` (8 KB) — alt: SHOP — clothing, gift vouchers and Pay It Forward
 - `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-10.jpg` (741 KB) — alt: Aerial Edge Gift Vouchers
+- `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-11.webp` (64 KB) — alt: Aerial Edge Pay It Forward
 - `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-12.png` (678 KB) — alt: Aerial Edge clothing store
+- `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-13.png` (8 KB) — alt: SERVICES — what you can do at Aerial Edge
+- `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-14.png` (234 KB) — alt: What we offer at Aerial Edge
+- `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-15.png` (1 KB) — alt: Facebook
+- `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-16.png` (1 KB) — alt: Instagram
+- `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-17.png` (0 KB) — alt: TikTok
+- `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-18.png` (1 KB) — alt: YouTube
+- `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-19.png` (1 KB) — alt: Website
+- `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-20.jpg` (19 KB) — alt: Find us — quick video tour of the front door at 240 Edmiston Drive
+- `/assets/images/newsletter/see-what-s-putting-spring-into-summer-at-our-festival/img-21.png` (761 KB) — alt: Route map to Aerial Edge, 240 Edmiston Drive, Glasgow G51 2YU
