@@ -1,9 +1,12 @@
 {
   "slug": "2026-02-21-four-fly-tracks-at-easter-edge",
+  "source": "corpus html-bodies/2026-02-21-four-fly-tracks-at-easter-edge.html (as-sent mailbox copy), full-image rebuild \u2014 task #1911",
   "min_image_bytes": 0,
   "max_images_per_email": 999,
   "tracking_pixel_bytes": 100,
-  "max_image_bytes": 2097152,
+  "max_image_bytes": 0,
+  "compress_above_bytes": 2097152,
+  "source_image_count": 24,
   "rows": [
     {
       "pos": null,
@@ -56,18 +59,22 @@
     {
       "pos": 6,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/6998e6efdf9bdfd14372deea.gif",
-      "file": null,
-      "size": 7512244,
+      "file": "img-06.webp",
+      "size": 1045058,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 7512244,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 7336 KB \u2192 1020 KB"
     },
     {
       "pos": 7,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/67cb5ff9456f01a4bd3db77c.gif",
-      "file": null,
-      "size": 8737869,
+      "file": "img-07.webp",
+      "size": 1588096,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 8737869,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 8533 KB \u2192 1550 KB"
     },
     {
       "pos": 8,
@@ -80,10 +87,12 @@
     {
       "pos": 9,
       "url": "https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/6906479d3081bc11843cfaf6.gif",
-      "file": null,
-      "size": 3701463,
+      "file": "img-09.webp",
+      "size": 1367618,
       "alt": "",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 3701463,
+      "transform": "re-encoded animated\u2192animated WebP at quality 55; full resolution and frame rate kept, 3614 KB \u2192 1335 KB"
     },
     {
       "pos": 10,
@@ -120,10 +129,12 @@
     {
       "pos": 14,
       "url": "https://storage.googleapis.com/msgsndr/F91Gp3e8aSGltf3UnAzV/media/66bcd08d08a2a158b9825939.png",
-      "file": null,
-      "size": 2397485,
+      "file": "img-14.webp",
+      "size": 66490,
       "alt": "Aerial Edge Pay It Forward system allows you to buy one Youth Circus class at \u00a315 or a whole term at \u00a3132. These are contributed to the Sponsored Places scheme which allows young people with barriers to participation join the Youth Circus",
-      "status": "too-large"
+      "status": "ok",
+      "source_bytes": 2397485,
+      "transform": "re-encoded still PNG\u2192WebP at quality 55; full resolution and frame rate kept, 2341 KB \u2192 64 KB"
     },
     {
       "pos": 15,
