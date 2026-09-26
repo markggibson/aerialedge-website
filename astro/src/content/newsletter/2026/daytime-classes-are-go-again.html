@@ -1,0 +1,503 @@
+<div class="ae-newsletter-shell">
+<style>
+.ae-newsletter-shell{
+  --bg: #292929;
+  --gold: #edb713;
+  
+  --yellow: #edb713;
+  --text: #ffffff;
+  --text-muted: #cccccc;
+  --black: #000000;
+}
+.ae-newsletter-shell *{ box-sizing: border-box; }
+.ae-newsletter-shell{
+  margin: 0;
+  background: #1a1a1a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  line-height: 1.55;
+  font-weight: 400;
+}
+.ae-newsletter-shell .newsletter{
+  max-width: 600px;
+  margin: 6px auto 40px auto;
+  background: #292929;
+  border: 1px solid #111;
+}
+.ae-newsletter-shell .browser-link{ padding: 12px 24px; text-align: right; font-size: 11px; }
+.ae-newsletter-shell .browser-link a{ color: #cccccc; text-decoration: underline; }
+
+.ae-newsletter-shell .logo-block{ text-align: center; padding: 8px 24px 24px 24px; }
+.ae-newsletter-shell .logo-block img{ display: inline-block; max-width: 100%; width: 520px; height: auto; }
+
+.ae-newsletter-shell .hero{
+  background: #000;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .hero img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .hero-caption{
+  padding: 20px 32px 0 32px;
+  font-size: 14px;
+  color: #ffffff;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.45;
+}
+
+
+.ae-newsletter-shell .hero-carousel{
+  margin: 0;
+  background-color: #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  line-height: 0;
+  position: relative;
+}
+.ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+  
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN{
+  
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN.s1{
+  
+  opacity: 1;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-captions{
+  position: relative;
+  min-height: 0;
+  line-height: 1.45;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption{
+  display: block;
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  padding: 8px 16px 12px 16px;
+  text-align: left;
+  font-style: italic;
+  background: #000;
+  
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+  margin-top: 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0), screen and (min-resolution: 0.001dpcm) {
+  .ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+    
+    visibility: hidden;
+  }
+  .ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+  }
+}
+
+.ae-newsletter-shell .menu{ padding: 30px 32px 22px 32px; background: #292929; }
+.ae-newsletter-shell .menu-intro{ font-size: 14px; color: #ffffff; margin: 0 0 16px 0; }
+.ae-newsletter-shell .menu ul{ margin: 0; padding-left: 22px; }
+.ae-newsletter-shell .menu li{ margin: 7px 0; font-size: 14px; color: #ffffff; }
+.ae-newsletter-shell .menu li strong{ color: #edb713; font-weight: 700; }
+.ae-newsletter-shell .menu li a, .ae-newsletter-shell .menu li a:link, .ae-newsletter-shell .menu li a:visited, .ae-newsletter-shell .menu li a:hover, .ae-newsletter-shell .menu li a:active{ color: inherit; text-decoration: none; }
+
+.ae-newsletter-shell .divider{ border-top: 1px solid #edb713; margin: 16px 32px; opacity: 0.6; }
+
+
+.ae-newsletter-shell .timeline-img{ display: block; width: 100%; height: auto; margin: 0 0 20px 0; }
+
+
+.ae-newsletter-shell .timeline-fallback{
+  display: block;
+  width: 100%;
+  margin: 0 0 20px 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .timeline-fallback svg{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ae-newsletter-shell .block{ padding: 26px 32px 28px 32px; }
+.ae-newsletter-shell .block .subtitle{
+  color: #edb713;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .block h2{
+  color: #edb713;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h3{
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin: -8px 0 16px 0;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h4{
+  color: #cccccc;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 14px 0;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block blockquote{
+  margin: 0 0 14px 0;
+  padding: 10px 16px;
+  border-left: 3px solid rgba(237, 183, 19, 0.6);
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.5;
+}
+.ae-newsletter-shell .block blockquote p{ margin: 0 0 8px 0; }
+.ae-newsletter-shell .block blockquote p:last-child{ margin-bottom: 0; }
+.ae-newsletter-shell .block p{ margin: 0 0 14px 0; font-size: 15px; color: #ffffff; }
+
+.ae-newsletter-shell .block p.spacer{ margin: 0 0 14px 0; line-height: 1.55; font-size: 15px; }
+.ae-newsletter-shell .block p a, .ae-newsletter-shell .block p a:link, .ae-newsletter-shell .block p a:visited, .ae-newsletter-shell .block p a:hover, .ae-newsletter-shell .block p a:active, .ae-newsletter-shell .block li a, .ae-newsletter-shell .block li a:link, .ae-newsletter-shell .block li a:visited, .ae-newsletter-shell .block li a:hover, .ae-newsletter-shell .block li a:active{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .cta{
+  display: inline-block;
+  background: #edb713;
+  color: #000000 !important;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 25px;
+  border-radius: 0;
+  margin: 16px 0 0 0;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .cta-row{ text-align: center; }
+
+.ae-newsletter-shell .opener .subtitle{ color: #edb713; }
+.ae-newsletter-shell .opener h2{ color: #edb713; }
+.ae-newsletter-shell .opener .sign-off{
+  margin-top: 22px;
+  color: #edb713;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+
+.ae-newsletter-shell .section-band-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .section-band-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-2up{ display: table; width: 100%; table-layout: fixed; border-spacing: 0; }
+.ae-newsletter-shell .shop-2up .col{ display: table-cell; vertical-align: top; padding: 10px 20px; }
+.ae-newsletter-shell .shop-2up .col a{ display: block; line-height: 0; text-decoration: none; }
+.ae-newsletter-shell .shop-2up .col img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-heading{ padding: 0 24px; }
+.ae-newsletter-shell .shop-heading h2{
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .shop-heading p{
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  line-height: 1;
+  font-family: arial, helvetica, sans-serif;
+}
+
+.ae-newsletter-shell .full-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .full-img a, .ae-newsletter-shell .full-img > img{ display: block; line-height: 0; }
+.ae-newsletter-shell .full-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .social-row{
+  text-align: center;
+  padding: 16px 20px 20px 20px;
+  background: #292929;
+}
+.ae-newsletter-shell .social-row a{ display: inline-block; margin: 0 4px; text-decoration: none; }
+.ae-newsletter-shell .social-row img{ width: 25px; height: 25px; vertical-align: middle; border-radius: 3px; }
+
+.ae-newsletter-shell .contact-band{ padding: 4px 32px 4px 32px; }
+.ae-newsletter-shell .contact-row{ display: table; width: 100%; table-layout: fixed; }
+.ae-newsletter-shell .contact-row .col{ display: table-cell; vertical-align: top; padding: 0 8px; }
+.ae-newsletter-shell .contact-row .col-video{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-text{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-video a{ display: block; position: relative; line-height: 0; }
+.ae-newsletter-shell .contact-row .col-video img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .play-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.ae-newsletter-shell .play-overlay span{
+  display: inline-block;
+  padding: 6px 15px;
+  background: rgba(0, 173, 239, 1);
+  border-radius: 6px;
+  position: relative;
+  line-height: 0;
+}
+.ae-newsletter-shell .play-overlay span::after{
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  border-width: 9px 0 9px 18px;
+  border-color: transparent transparent transparent #ffffff;
+  vertical-align: middle;
+}
+.ae-newsletter-shell .contact-row h3{
+  color: #edb713;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.ae-newsletter-shell .contact-row p{ font-size: 13px; margin: 0 0 10px 0; color: #ffffff; line-height: 1.5; }
+.ae-newsletter-shell .contact-row a.tel{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .map-row{ padding: 20px 32px 0 32px; line-height: 0; }
+.ae-newsletter-shell .map-row img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .footer{
+  padding: 20px 24px 24px 24px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cccccc;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .footer p{ margin: 0 0 10px 0; }
+.ae-newsletter-shell .footer a{ color: #cccccc; text-decoration: underline; }
+.ae-newsletter-shell .footer .legal{ color: #cccccc; font-size: 14px; }
+
+</style>
+<div style="font-family:Roboto, Arial;font-size:14px">
+
+<div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden">Only 5 performance spots left at Open Rig Night + 3 Youth ones - register fast if you want to be on stage</div>
+
+<div class="newsletter"><div class="browser-link"><a href="#">View this email in browser</a></div><div class="logo-block"><img src="/assets/images/newsletter/daytime-classes-are-go-again/img-01.png" alt="Aerial Edge, Glasgow" width="520"></div>
+
+<div class="block opener" id="opener">
+  
+  <h2>THE SURPRISING WINTER WARM-UP</h2>
+  <h3>YOU, CLASSES AND A COSY ROOM</h3><p>The nights are fair drawing in, as the nation's grannies love to say. Which means that while people may not be shivering yet, pretty soon nobody's going to be quick to take their coat off either.</p><p>We're looking for a better way to heat the place – something that actually works, doesn't cost a fortune to run, and doesn't make the planet wince every time we turn it on.</p><p>Green energy may yet turn out to be our friend, but in the meantime, the most effective heating system is actually a room full of circus people. Not kidding. It's appreciably warmer when more people are training, we've been in this building long enough to notice.</p><p>It's also the tidiest kind of arrangement. More people through the door means more warmth in the room, and more income to spend on heating it when there aren't so many people around. Enough of that, and the thermostat might actually get to a place that feels indulgently cosy.</p><p>So if you've been considering adding another class to your schedule, or bringing a friend, you'll be doing yourself and all of us a favour this winter.</p><p>Eventually, if enough of us do it, we all get the sort of life we deserve.</p><p>Mark Gibson<br>Aerial Edge Founder</p>
+  
+</div>
+<div class="divider"></div>
+<div class="menu"><p class="menu-intro">To make life easier, you can use this menu to go direct to articles. Above each section, you'll find a timeline of relevant dates, and there are direct booking links throughout.</p><ul><li><a href="#block-courses"><strong>Courses:</strong> GET THE SUNDAY SCARIES TO WORK</a></li><li><a href="#block-classes-daytime"><strong>Classes:</strong> DAYTIME HAS LOST THE PLOT</a></li><li><a href="#block-classes"><strong>Classes:</strong> ANOTHER DOUBLE FLY DAY</a></li><li><a href="#block-shows"><strong>Shows:</strong> SHOWS</a></li><li><a href="#block-events"><strong>Events:</strong> EDGE SCHEDULE REVEALED</a></li><li><a href="#block-youth"><strong>Youth Circus:</strong> BUSY DAYS AND NIGHT IN THE SPOTLIGHT</a></li><li><a href="#section-shop"><strong>Store:</strong> Buy clothing, gift vouchers and Pay It Forward</a></li><li><a href="#section-services"><strong>Our services for you</strong></a></li><li><a href="#section-contact"><strong>Contact us</strong></a></li></ul></div><div class="divider"></div>
+<img class="timeline-img" id="section-courses" src="/assets/images/newsletter/daytime-classes-are-go-again/img-02.png" alt="GET THE SUNDAY SCARIES TO WORK timeline">
+
+<div class="block courses" id="block-courses">
+  
+  <h2>GET THE SUNDAY SCARIES TO WORK</h2>
+  <h3>USE THEM TO TAKE ACTION ON A NEW EXPERIENCE</h3><p>Somewhere tomorrow, somebody will realise that Monday will come into existence very soon. Usually the Sunday Scaries are spectacularly unhelpful. You want the weekend to linger longer. This weekend, they have a job.</p><p>The Autumn 4-Week Intensive starts Monday morning. Luckily there's no audition and no complicated entrance requirements, so a last-minute burst of decisive action can get you on board. Just be 16 or over and be up for spending your days doing very little other than circus.</p><p>Whatever you've been considering doing with the next four weeks, this will be better. And this is the moment where thinking stops and doing begins.</p><p class="spacer">&nbsp;</p><p><strong>Autumn 4-Week Intensive</strong><br>Monday 28th September til Thursday 22nd October | 10am-5pm<br>£795</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/a0521ef5381?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Decide now: get on board here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-classes" src="/assets/images/newsletter/daytime-classes-are-go-again/img-03.png" alt="DAYTIME HAS LOST THE PLOT timeline">
+<div class="hero"><img src="/assets/images/newsletter/daytime-classes-are-go-again/img-04.jpg" alt="DAYTIME HAS LOST THE PLOT"></div>
+<div class="block classes" id="block-classes-daytime">
+  
+  <h2>DAYTIME HAS LOST THE PLOT</h2>
+  <h3>SO MANY CHOICES, SO LITTLE TIME</h3><p>You look at the daytime schedule and think you've got it figured out. But somebody keeps moving the furniture. Suddenly Pilates appears out of nowhere. And flow arts. Wait, what?!</p><p>That's because the daytime programme isn't running on a fixed weekly pattern. It's responsive to the full-time courses. There's an abundance of options while we run a 4-Week Intensive, because those students are all doing a wide range of arts.</p><p>As the Foundation Course and Professional Development Programme progress, students need more input at a higher level in their dedicated classes, as they begin to specialise.</p><p>The important bit is to keep eyes on the published schedule to see what's available to book. Don't try to memorise this article. Check each week on Instagram, in the newsletter, on the projection above reception, and of course on TeamUp.</p><p class="spacer">&nbsp;</p><p><strong>Daytime classes</strong><br>Monday 28th September til Thursday 22nd October | days and times vary weekly<br>£25 drop-in or £17 on an 8-class pass for aerial, £20 drop-in or £12.50 per class on an 8-class pass</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/3e4c638a419?contactId={{contact.id}}&amp;startdate=2026-09-28&amp;enddate=2026-10-04&amp;venues=&amp;category=&amp;instructors=&amp;offering_types=&amp;age_restrictions=&amp;date=2026-10-03&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Make it your lucky day: book classes here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-classes" src="/assets/images/newsletter/daytime-classes-are-go-again/img-05.png" alt="ANOTHER DOUBLE FLY DAY timeline">
+
+<div class="block classes" id="block-classes">
+  
+  <h2>ANOTHER DOUBLE FLY DAY</h2>
+  <h3>FLYING TRAPEZE NOW RUNS TWICE ON SATURDAYS</h3><p>Saturday mornings perked up a couple of weeks ago with a new flying trapeze class. But for some people's schedules, that was all the flying they could do. So, see ya next week. Not any more.</p><p>Now you can do the double espresso – fly classes at 10am and 11.30am. People seem to love the back-to-back fly option, on Sundays, Wednesdays and Fridays, but of course you can also come for just one of the two.</p><p>Hoop, meanwhile, remains stubbornly indifferent to change, and that's rather the point of a class you can rely on. Beginners with Clara on Monday, Open Level with Kerri on Tuesday and Freya on Thursday, all 7pm-8.30pm.</p><p class="spacer">&nbsp;</p><p><strong>Evening &amp; weekend classes</strong><br>Beginner Hoop | Mondays, 7pm-8.30pm<br>Open Level Hoop | Tuesdays &amp; Thursdays, 7pm-8.30pm<br>Flying Trapeze | Saturdays, 10am-11.30am and 11.30am-1pm; Sundays 2pm-3.30pm and 30.30pm-5pm; Mondays 8.30pm-10pm; Tuesdays 8.30pm-10pm; Wednesdays 7pm-8.30pm and 8.30pm-10pm; Fridays 6pm-7.30pm and 7.30pm-9pm<br>£25 drop-in or £17 on an 8-class pass</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/3e4c638a419?contactId={{contact.id}}&amp;startdate=2026-09-28&amp;enddate=2026-10-04&amp;venues=&amp;category=&amp;instructors=&amp;offering_types=&amp;age_restrictions=&amp;date=2026-10-03&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Double measures: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-shows" src="/assets/images/newsletter/daytime-classes-are-go-again/img-06.png" alt="SHOWS timeline">
+<div class="hero"><img src="/assets/images/newsletter/daytime-classes-are-go-again/img-07.jpg" alt="SHOWS"></div>
+<div class="block shows" id="block-shows">
+  
+  <h2>SHOWS</h2>
+  <h3>CAP ON OPEN RIG NIGHT ACTS – REGISTER SOON TO BE ON STAGE</h3><p>For years, Open Rig Night has operated on a fairly simple principle: if someone wants to perform, we'll find them somewhere to do it.</p><p>There may be a physical limit to this theory. At some point, the audience would like to go home. The Subway would like its passengers back. And the people running the evening would quite like to know what time they are finishing.</p><p>It's a measure of student success that the numbers have been growing both on stage and in the audience. So for the first time, we'll have to cap the number of acts.</p><p>There are five adult performer slots left, and three for Youth Circus. First people to register get on the bill.</p><p>The support we can give you won't change. If you've got an idea but aren't sure whether it's ready, talk to your instructor, Mark or Yara. We'll help you work out what it needs.</p><p>And if you'd rather be on the other side of the lights, tickets are on sale too. The last two Open Rig Nights sold out, so this is probably not the evening to practise your ability to make decisions at the last possible moment.</p><p class="spacer">&nbsp;</p><p><strong>Open Rig Night</strong><br>Saturday 10th October | 6.30pm-9pm<br>£10 general admission, £5 children &amp; concessions</p><p><strong>GET YOUR NAME ON THE BILL</strong><br><a href="https://api.aerialedge.co.uk/email-tracking/bae927bfdf0?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">Five slots left: register here</a></p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/433e62ff288?contactId={{contact.id}}&amp;date=2026-10-10&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Secure your seat: book tickets here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-events" src="/assets/images/newsletter/daytime-classes-are-go-again/img-08.png" alt="EDGE SCHEDULE REVEALED timeline">
+<div class="hero"><img src="/assets/images/newsletter/daytime-classes-are-go-again/img-09.jpg" alt="EDGE SCHEDULE REVEALED"></div>
+<div class="block events" id="block-events">
+  
+  <h2>EDGE SCHEDULE REVEALED</h2>
+  <h3>EVERYTHING INCLUDING WARM-UP AND COOL-DOWN NOW LOCKED IN</h3><p>Here it is...the full October Edge schedule. In between warm up and cool down sessions, there are enough circus disciplines to send anyone into a spin of excited indecision. It's a child in a sweetie shop moment.</p><p>The first time slot choices are flying trapeze with Hamish and Kirsty, rope with Nea, tippy hoop with Kerri, or acrobatics with Sam. Pick one and settle in for three days of visible progress.</p><p>After the break, flying trapeze keeps the same pair, while Robyn takes straps and loops, Michelle brings Chinese pole and Kerri gives you aerial hammock.</p><p>Straps and loops comes with a little bit of circus history. The swinging version we teach today grew out of a static circus trick, developed into something much more airborne by twin brothers Yuri and Valery Panteleenko in Soviet circus in the early 1970s. Pick it, and you're in on a slightly obscure bit of circus history too.</p><p>Then comes lunch, after which flying trapeze changes shape. Gabe, Hamish and Nea take over, with cradle work in the mix. In the same time slot, Helen has fly pole, Kirsty has silks and Sam has handstands.</p><p>The final stretch brings Gabe and Kirsty back to flying trapeze, Sam on trampoline, Robyn on partner and group acrobatics, and Mark with doubles trapeze.</p><p>The bit that makes October and Easter Edge work is that whatever four arts you choose for Friday are the same four arts you work on every day of the festival.</p><p>You have three days getting properly into the four things you've picked, finding the awkward bits, trying them again, discovering they aren't quite so impossible any more, and doing them again because now you want to.</p><p>All of which happens in a fun-fuelled atmosphere full of people in the same boat regardless of their level of expertise – trying to nail moves that matter to them.</p><p class="spacer">&nbsp;</p><p><strong>October Edge</strong><br>Friday 23rd October til Sunday 25th<br>£200 for the three-day pass</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/1839d7a7554?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Get the edge: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-youth" src="/assets/images/newsletter/daytime-classes-are-go-again/img-10.png" alt="BUSY DAYS AND NIGHT IN THE SPOTLIGHT timeline">
+<div class="hero"><img src="/assets/images/newsletter/daytime-classes-are-go-again/img-11.jpg" alt="BUSY DAYS AND NIGHT IN THE SPOTLIGHT"></div>
+<div class="block youth" id="block-youth">
+  
+  <h2>BUSY DAYS AND NIGHT IN THE SPOTLIGHT</h2>
+  <h3>OPEN RIG NIGHT THEN HALF-TERM CAMP</h3><p>Sometime in October you walk into Aerial Edge in the daytime and realise the shoes by the door have got considerably smaller.</p><p>Half-term has arrived.</p><p>From Monday 12th to Friday 16th, Youth Circus Camp takes over from 10am-4pm, with five days of aerial, acro, flying trapeze and whatever else gets thrown into the mix. The rig gets busy, the mats get busy, and the volume gets considerably louder.</p><p>You can come for a single day or stay for the whole week – £60 for a day, £240 for all five. That's one full day free.</p><p>Friday afternoon ends with the bit everyone secretly likes best: the final half hour opens up to family and friends, so the students can show off what they've been learning while they've been out the house all week.</p><p>Showing off isn't just socially acceptable at Aerial Edge, it's actively encouraged.</p><p>Open Rig Night on Saturday 10th opens with Youth Circus students. If your young performer wants to get on the bill, they just need to speak to Nea in class. But do it quick –&nbsp;there are only three spots left.</p><p>And whether they're performing or watching, family and friends are very much encouraged to make an unreasonable amount of noise.</p><p class="spacer">&nbsp;</p><p><strong>October Half-Term Youth Circus Camp</strong><br>Monday 12th October til Friday 16th | 10am-4pm<br>£60 per day or £240 for the week</p><p><strong>Open Rig Night – Youth Circus performers</strong><br>Saturday 10th October | 6.30pm-9pm<br>Register with Nea in class</p><p><strong>MAKE SOME NOISE</strong><br><a href="https://api.aerialedge.co.uk/email-tracking/433e62ff288?contactId={{contact.id}}&amp;date=2026-10-10&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">Come and cheer performers: book Open Rig Night tickets here</a></p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/edb66bbaf40?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Come to camp: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<div class="hero"><img src="/assets/images/newsletter/daytime-classes-are-go-again/img-12.jpg" alt=" "></div>
+<div class="block" id="timetable-daytime">
+  <h2> </h2>
+  <p></p>
+  
+</div>
+<div class="divider"></div>
+
+<div class="hero"><img src="/assets/images/newsletter/daytime-classes-are-go-again/img-13.jpg" alt=" "></div>
+<div class="block" id="timetable-evenings-weekends">
+  <h2> </h2>
+  <p></p>
+  
+</div>
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-shop">
+  <img src="/assets/images/newsletter/daytime-classes-are-go-again/img-14.png" alt="SHOP — clothing, gift vouchers and Pay It Forward" width="520">
+</div>
+
+
+<div class="shop-2up">
+  <div class="col">
+    <a href="https://api.aerialedge.co.uk/email-tracking/fb659fe3f65?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+      <img src="/assets/images/newsletter/daytime-classes-are-go-again/img-15.jpg" alt="Aerial Edge Gift Vouchers" width="240">
+    </a>
+  </div>
+  <div class="col">
+    <a href="https://api.aerialedge.co.uk/email-tracking/c8e1981e0e1?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+      <img src="/assets/images/newsletter/daytime-classes-are-go-again/img-16.webp" alt="Aerial Edge Pay It Forward" width="240">
+    </a>
+  </div>
+</div>
+
+
+<div class="shop-heading">
+  <h2>TAP IMAGE TO BUY YOUR GOODIES</h2>
+  <p>EACH IMAGE HAS A SEPARATE LINK</p>
+</div>
+
+
+<div class="full-img">
+  <a href="https://api.aerialedge.co.uk/email-tracking/c8e1981e0e1?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+    <img src="/assets/images/newsletter/daytime-classes-are-go-again/img-17.png" alt="Aerial Edge clothing store" width="520">
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-services">
+  <img src="/assets/images/newsletter/daytime-classes-are-go-again/img-18.png" alt="SERVICES — what you can do at Aerial Edge" width="520">
+</div>
+
+
+<div class="full-img">
+  <a href="https://api.aerialedge.co.uk/email-tracking/35fb5847cb4?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+    <img src="/assets/images/newsletter/daytime-classes-are-go-again/img-19.png" alt="What we offer at Aerial Edge" width="520">
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="social-row">
+  <a href="https://api.aerialedge.co.uk/email-tracking/6c1840be047?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/daytime-classes-are-go-again/img-20.png" alt="Facebook"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/50465a920f2?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/daytime-classes-are-go-again/img-21.png" alt="Instagram"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/f7ea306c808?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/daytime-classes-are-go-again/img-22.png" alt="TikTok"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/2a9073625d1?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/daytime-classes-are-go-again/img-23.png" alt="YouTube"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/35fb5847cb4?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/daytime-classes-are-go-again/img-24.png" alt="Website"></a>
+</div>
+
+
+<div class="contact-band" id="section-contact">
+  <div class="contact-row">
+    <div class="col col-video">
+      <a href="https://api.aerialedge.co.uk/email-tracking/b8d97c3681b?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing">
+        <img src="/assets/images/newsletter/daytime-classes-are-go-again/img-25.jpg" alt="Find us — quick video tour of the front door at 240 Edmiston Drive">
+        <span class="play-overlay"><span></span></span>
+      </a>
+    </div>
+    <div class="col col-text">
+      <h3>How To Get In Touch With Us</h3>
+      <p>The best ways to talk to us are through email and text on <a class="tel" href="tel: 447414438501">(+44) 07414 438 501</a> — or just drop in and have a coffee in reception.</p>
+      <p>We monitor social media DMs too, they just might not be answered as quickly.</p>
+      <p>Tap the video on the left for a quick guide to our front door at 240 Edmiston Drive, Glasgow G51 2YU.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="map-row">
+  <img src="/assets/images/newsletter/daytime-classes-are-go-again/img-26.png" alt="Route map to Aerial Edge, 240 Edmiston Drive, Glasgow G51 2YU">
+</div>
+
+
+<div class="footer">
+  <div class="legal">
+    <em>Copyright © 2026&nbsp; Aerial Edge, All rights reserved.</em><br><br>
+    <strong>Our e-mail address is:</strong><br>
+    <a href="mailto:info@aerialedge.co.uk">info@aerialedge.co.uk</a><br><br>
+    Want to change how you receive these emails?<br>
+    You can unsubscribe from this list.
+  </div>
+</div>
+</div>
+
+</div>
+</div>
