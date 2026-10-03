@@ -4,9 +4,9 @@ slug: rope-and-silks-classes-glasgow
 category: Adult Classes
 seo_title: Aerial Rope & Silks Classes in Glasgow | Aerial Edge
 description: >-
-  Beginner-friendly aerial rope and silks classes at Aerial Edge, Glasgow's
-  not-for-profit circus school. Rope on Tuesdays, silks on Sundays and
-  Wednesdays. Book a drop-in or class pass.
+  Beginner aerial rope and silks classes in Glasgow. Rope Tuesdays, silks
+  Wednesdays and Sundays, and a Sunday Mixed Aerial class on rope, silks and
+  straps.
 hero_image: /assets/images/cms/rope-and-silks-header.jpg
 hero_alt: Rope and Silks Classes — aerial silks performer at Aerial Edge, Glasgow
 # No frontmatter CTA on purpose (Marlow #1241): only the three named per-class
