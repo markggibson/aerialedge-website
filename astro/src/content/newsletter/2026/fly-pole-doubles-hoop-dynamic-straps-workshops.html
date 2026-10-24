@@ -1,0 +1,495 @@
+<div class="ae-newsletter-shell">
+<style>
+.ae-newsletter-shell{
+  --bg: #292929;
+  --gold: #edb713;
+  
+  --yellow: #edb713;
+  --text: #ffffff;
+  --text-muted: #cccccc;
+  --black: #000000;
+}
+.ae-newsletter-shell *{ box-sizing: border-box; }
+.ae-newsletter-shell{
+  margin: 0;
+  background: #1a1a1a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  line-height: 1.55;
+  font-weight: 400;
+}
+.ae-newsletter-shell .newsletter{
+  max-width: 600px;
+  margin: 6px auto 40px auto;
+  background: #292929;
+  border: 1px solid #111;
+}
+.ae-newsletter-shell .browser-link{ padding: 12px 24px; text-align: right; font-size: 11px; }
+.ae-newsletter-shell .browser-link a{ color: #cccccc; text-decoration: underline; }
+
+.ae-newsletter-shell .logo-block{ text-align: center; padding: 8px 24px 24px 24px; }
+.ae-newsletter-shell .logo-block img{ display: inline-block; max-width: 100%; width: 520px; height: auto; }
+
+.ae-newsletter-shell .hero{
+  background: #000;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .hero img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .hero-caption{
+  padding: 20px 32px 0 32px;
+  font-size: 14px;
+  color: #ffffff;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.45;
+}
+
+
+.ae-newsletter-shell .hero-carousel{
+  margin: 0;
+  background-color: #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  line-height: 0;
+  position: relative;
+}
+.ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+  
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN{
+  
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN.s1{
+  
+  opacity: 1;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-captions{
+  position: relative;
+  min-height: 0;
+  line-height: 1.45;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption{
+  display: block;
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  padding: 8px 16px 12px 16px;
+  text-align: left;
+  font-style: italic;
+  background: #000;
+  
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+  margin-top: 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0), screen and (min-resolution: 0.001dpcm) {
+  .ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+    
+    visibility: hidden;
+  }
+  .ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+  }
+}
+
+.ae-newsletter-shell .menu{ padding: 30px 32px 22px 32px; background: #292929; }
+.ae-newsletter-shell .menu-intro{ font-size: 14px; color: #ffffff; margin: 0 0 16px 0; }
+.ae-newsletter-shell .menu ul{ margin: 0; padding-left: 22px; }
+.ae-newsletter-shell .menu li{ margin: 7px 0; font-size: 14px; color: #ffffff; }
+.ae-newsletter-shell .menu li strong{ color: #edb713; font-weight: 700; }
+.ae-newsletter-shell .menu li a, .ae-newsletter-shell .menu li a:link, .ae-newsletter-shell .menu li a:visited, .ae-newsletter-shell .menu li a:hover, .ae-newsletter-shell .menu li a:active{ color: inherit; text-decoration: none; }
+
+.ae-newsletter-shell .divider{ border-top: 1px solid #edb713; margin: 16px 32px; opacity: 0.6; }
+
+
+.ae-newsletter-shell .timeline-img{ display: block; width: 100%; height: auto; margin: 0 0 20px 0; }
+
+
+.ae-newsletter-shell .timeline-fallback{
+  display: block;
+  width: 100%;
+  margin: 0 0 20px 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .timeline-fallback svg{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ae-newsletter-shell .block{ padding: 26px 32px 28px 32px; }
+.ae-newsletter-shell .block .subtitle{
+  color: #edb713;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .block h2{
+  color: #edb713;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h3{
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin: -8px 0 16px 0;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h4{
+  color: #cccccc;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 14px 0;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block blockquote{
+  margin: 0 0 14px 0;
+  padding: 10px 16px;
+  border-left: 3px solid rgba(237, 183, 19, 0.6);
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.5;
+}
+.ae-newsletter-shell .block blockquote p{ margin: 0 0 8px 0; }
+.ae-newsletter-shell .block blockquote p:last-child{ margin-bottom: 0; }
+.ae-newsletter-shell .block p{ margin: 0 0 14px 0; font-size: 15px; color: #ffffff; }
+
+.ae-newsletter-shell .block p.spacer{ margin: 0 0 14px 0; line-height: 1.55; font-size: 15px; }
+.ae-newsletter-shell .block p a, .ae-newsletter-shell .block p a:link, .ae-newsletter-shell .block p a:visited, .ae-newsletter-shell .block p a:hover, .ae-newsletter-shell .block p a:active, .ae-newsletter-shell .block li a, .ae-newsletter-shell .block li a:link, .ae-newsletter-shell .block li a:visited, .ae-newsletter-shell .block li a:hover, .ae-newsletter-shell .block li a:active{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .cta{
+  display: inline-block;
+  background: #edb713;
+  color: #000000 !important;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 25px;
+  border-radius: 0;
+  margin: 16px 0 0 0;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .cta-row{ text-align: center; }
+
+.ae-newsletter-shell .opener .subtitle{ color: #edb713; }
+.ae-newsletter-shell .opener h2{ color: #edb713; }
+.ae-newsletter-shell .opener .sign-off{
+  margin-top: 22px;
+  color: #edb713;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+
+.ae-newsletter-shell .section-band-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .section-band-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-2up{ display: table; width: 100%; table-layout: fixed; border-spacing: 0; }
+.ae-newsletter-shell .shop-2up .col{ display: table-cell; vertical-align: top; padding: 10px 20px; }
+.ae-newsletter-shell .shop-2up .col a{ display: block; line-height: 0; text-decoration: none; }
+.ae-newsletter-shell .shop-2up .col img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-heading{ padding: 0 24px; }
+.ae-newsletter-shell .shop-heading h2{
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .shop-heading p{
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  line-height: 1;
+  font-family: arial, helvetica, sans-serif;
+}
+
+.ae-newsletter-shell .full-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .full-img a, .ae-newsletter-shell .full-img > img{ display: block; line-height: 0; }
+.ae-newsletter-shell .full-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .social-row{
+  text-align: center;
+  padding: 16px 20px 20px 20px;
+  background: #292929;
+}
+.ae-newsletter-shell .social-row a{ display: inline-block; margin: 0 4px; text-decoration: none; }
+.ae-newsletter-shell .social-row img{ width: 25px; height: 25px; vertical-align: middle; border-radius: 3px; }
+
+.ae-newsletter-shell .contact-band{ padding: 4px 32px 4px 32px; }
+.ae-newsletter-shell .contact-row{ display: table; width: 100%; table-layout: fixed; }
+.ae-newsletter-shell .contact-row .col{ display: table-cell; vertical-align: top; padding: 0 8px; }
+.ae-newsletter-shell .contact-row .col-video{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-text{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-video a{ display: block; position: relative; line-height: 0; }
+.ae-newsletter-shell .contact-row .col-video img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .play-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.ae-newsletter-shell .play-overlay span{
+  display: inline-block;
+  padding: 6px 15px;
+  background: rgba(0, 173, 239, 1);
+  border-radius: 6px;
+  position: relative;
+  line-height: 0;
+}
+.ae-newsletter-shell .play-overlay span::after{
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  border-width: 9px 0 9px 18px;
+  border-color: transparent transparent transparent #ffffff;
+  vertical-align: middle;
+}
+.ae-newsletter-shell .contact-row h3{
+  color: #edb713;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.ae-newsletter-shell .contact-row p{ font-size: 13px; margin: 0 0 10px 0; color: #ffffff; line-height: 1.5; }
+.ae-newsletter-shell .contact-row a.tel{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .map-row{ padding: 20px 32px 0 32px; line-height: 0; }
+.ae-newsletter-shell .map-row img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .footer{
+  padding: 20px 24px 24px 24px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cccccc;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .footer p{ margin: 0 0 10px 0; }
+.ae-newsletter-shell .footer a{ color: #cccccc; text-decoration: underline; }
+.ae-newsletter-shell .footer .legal{ color: #cccccc; font-size: 14px; }
+
+</style>
+<div style="font-family:Roboto, Arial;font-size:14px">
+
+<div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden">PLUS: When the wait is part of the fun</div>
+
+<div class="newsletter"><div class="browser-link"><a href="#">View this email in browser</a></div><div class="logo-block"><img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-01.png" alt="Aerial Edge, Glasgow" width="520"></div>
+
+<div class="block opener" id="opener">
+  
+  <h2>THE PRICE OF PROGRESS</h2>
+  <h3>YOU'VE GOT MORE IN YOU THAN YOU REALISE</h3><p>Today is day two of October Edge, and that's when day one sends its energy bill.</p><p>It's delivered first thing in the morning, itemised by muscle, and some of the line items may be for parts of you that you hadn't realised you owned. You're counting the cost of energy expended on activities which were either completely new or approached in a new way. And you're about to discover that you've got more reserves than you'd realised.</p><p>In our experience, gentle movement in the post-pillow, pre-caffeine phase helps. The warm-up before any class definitely mobilises reluctant members of your muscle groups, and sitting very still in the hope that the bill gets lost in the post has a poor record.</p><p>If anything hurts in a way that feels like it's costing too much, tell your instructor. We can always find ways to support you. And you might find that full-time training works better for you than you'd imagined.</p><p>Mark Gibson<br>Aerial Edge Founder</p>
+  
+</div>
+<div class="divider"></div>
+<div class="menu"><ul><li><a href="#section-events"><strong>Events:</strong> When anticipation is fun </a></li><li><a href="#section-workshops"><strong>Workshops:</strong> The sweet feeling of swing</a></li><li><a href="#section-workshops"><strong>Workshops:</strong> Working with the pole not against it</a></li><li>Youth: Why it's good to be bad at things</li></ul></div><div class="divider"></div>
+<img class="timeline-img" id="section-events" src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-02.png" alt="WHY WAITING IS SO WORTH IT timeline">
+<div class="hero"><img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-03.png" alt="WHY WAITING IS SO WORTH IT"></div>
+<div class="block events" id="block-events">
+  
+  <h2>WHY WAITING IS SO WORTH IT</h2>
+  <h3>HOW OCTOBER EDGE AND EASTER EDGE BRING OUT THE BEST IN YOU</h3><p>Apparently the wait for an upcoming experience feels better than waiting for a new gadget to be released. Makes sense. Pretty sure anyone currently at the October Edge or looking forward to the Easter Edge would tell you there's loads more joy to be had in that experience than a new iPhone.</p><p>A <a href="https://api.aerialedge.co.uk/email-tracking/9bcc3858413?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">report</a> about the 2014 <a href="https://api.aerialedge.co.uk/email-tracking/903d15a5a59?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">study</a> that looked into experience vs gadget wait times said that people in the queue for the experience also behaved better than people waiting for their new gadget.</p><p>What can we deduce from this? The anticipation of an experience like those we offer at Aerial Edge means there's a part of you that's already enjoying it before it even happens. Whereas somehow waiting for the tech upgrade mirrors your experience of the new phone, laptop or whatever: it generates frustration and annoyance.</p><p>Humans thrive with connection to people, not things (despite the connectivity of a new smart phone).</p><p>If you haven't already noticed, circus brings out the best in you. Online connections are convenient but less satisfying.</p><p>You can feel it in your body, and not just from the aches and pains of training. Compare and contrast the short-term dopamine jolt of consumerist pleasure you get from any purchase to the lingering sense of satisfaction, achievement and belonging you get from what you manage to do in the air and the happy memories of laughs and mutual support with classmates.</p><p>You probably know where we're going with this...looking forward to the Easter Edge!</p><p>It's so much more than a long weekend of training, as lush as that truly is in its own right. The concerted effort in four different arts with the same community of people over several days makes it a unique experience.</p><p>You will make progress in your chosen arts. You will make friends. You will make the most of your time on this planet.</p><p>If you're at October Edge, please take a moment to leave a <a href="https://api.aerialedge.co.uk/email-tracking/378ec25f1ea?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">Google review</a> so that other people can understand what you get from it, and what they might get from Easter Edge 2027. Feel free to leave a review of any feelgood experience at Aerial Edge...if there's anything that felt less than good, then please DM or <a href="mailto:info@contact.aerialedge.co.uk" target="_blank" rel="noopener">email us</a> so we can figure out how to make that better.</p><p>Tickets on sale now – and you can be sure that the wait will feel better when you've fully committed to the experience by buying the ticket.</p><p><strong>Easter Edge 2027</strong><br>Friday 26th til Monday 29th March | four 90-minute slots a day, from 10am<br>£269 for the pass · Ages 16+</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/54c527ab907?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Wait for it: buy Easter Edge tickets here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-workshops" src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-04.png" alt="FLY &amp; SPIN WITH ELKE timeline">
+<div class="hero"><img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-05.jpg" alt="FLY &amp; SPIN WITH ELKE"></div>
+<div class="block workshops" id="block-workshops">
+  
+  <h2>FLY &amp; SPIN WITH ELKE</h2>
+  <h3>FOUR FLY POLE WORKSHOPS WITH ELKE BUCHER, WITH A LEVEL FOR EVERYONE</h3><p>On a fixed pole, the steel stays where it is and you work against it. A fly pole goes the other way. It shifts when you push and pull, pivots around you for front-to-back spins, and glides into position. That's why Elke Bucher says it moves WITH you.</p><p>On Saturday 21st November, Elke teaches four fly pole workshops, and they are the first where more of the space is used for big, arena-style circus spins.</p><p>Advanced is for people with experience on regular pole and the strength moves to match, and Intermediate for confident inverters with some time on regular or fly pole.</p><p>The Beginners workshop is an invitation: if you've never tried fly pole and haven't done much on regular pole, it has gentle climbs and no inverts.</p><p>Group is open to all levels, so bring your aerial besties and try group-assisted or mirrored shapes, with regressions and progressions on offer, in a session about getting creative rather than performing.</p><p>Elke's favourite tricks are the pegasus and the dragontail, with new ideas for surviving both at speed.</p><p>Fly pole is also tougher on the bottom arm than a regular pole, so there are breaks between the heavy pushes and conditioning tips.</p><p><strong>Fly pole workshops with Elke Bucher</strong><br>Saturday 21st November | Advanced 10am · Intermediate 11.30am · Beginners 1.30pm · Group 3pm | each 90 minutes<br>£25 drop-in or £17 on an 8-class pass, for each workshop</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/c8f3930d085?contactId={{contact.id}}&amp;startdate=2026-11-16&amp;enddate=2026-11-22&amp;date=2026-11-21&amp;venues=&amp;category=&amp;instructors=165283&amp;offering_types=&amp;age_restrictions=&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Take the room: book here</a></div>
+</div>
+<div class="divider"></div>
+
+
+
+<div class="block workshops" id="block-workshops-4d9790">
+  
+  <h2>GET INTO THE WORKSHOP SWING</h2>
+  <h3>FREYA TEACHES DOUBLES HOOP AND DYNAMIC STRAPS, NEW TO AERIAL EDGE</h3><p>Rowers have a word for the moment eight people with eight oars stop being eight people and become one boat and everything flows beautifully. The word is swing.</p><p>Freya Pellie's two workshops on Saturday 14th November are both about getting hold of that feeling. Doubles Hoop is swing for two, with duo synchro choreography, tips on staying in time with your partner, and a few base-flyer tricks where one of you lifts or assists the other.</p><p>Dynamic Straps is swing in the literal sense: beats, turns, elbow beats and chest beats, switching grips in the air, and joining those swinging pathways to the static shapes you already know.</p><p>Both these workshops are new to Aerial Edge, and both give you a fresh perspective on apparatus that you may be familiar with.</p><p>Dynamic Straps also suits anyone who already swings on rope, hoop or flying trapeze and wants to try it on different kit. You can sign up for Doubles Hoop on your own and play with other people on the day.</p><p><strong>Doubles Hoop and Dynamic Straps with Freya Pellie</strong><br>Saturday 14th November | Doubles Hoop 2pm-3.30pm · Dynamic Straps 3.45pm-5.15pm<br>£25 drop-in or £17 on an 8-class pass, for each workshop</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/6daeb5cfb98?contactId={{contact.id}}&amp;startdate=2026-11-09&amp;enddate=2026-11-15&amp;date=2026-11-14&amp;venues=&amp;category=&amp;instructors=133151&amp;offering_types=&amp;age_restrictions=&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Find your swing: book here</a></div>
+</div>
+<div class="divider"></div>
+
+
+
+<div class="block workshops" id="block-workshops-1beb60">
+  
+  <h2>ACRO JAM IS GO</h2>
+  <h3>ROBYN HOSTS ON NOVEMBER 7th</h3><p>In music, a jam session has no set list. People turn up with an instrument, someone starts something, and the rest find a way in. Acro Jam with Robyn is the same idea with tumbling and balancing.</p><p>On the first Saturday of the month, acrobatics enthusiasts get three hours to collaborate, experiment and play, so bring a handstand, a half-formed idea for a lift, or the thing you've been meaning to try with other people someday.</p><p>The tumble track, the soft acro floored area and the safety harness with lines will all be available, which gives the experimenting somewhere to land.</p><p>It runs as part of the school's not-for-profit aims to build community and collaboration, and to run at all it needs 10 people booked by noon the day before. For this one that means noon on Friday 6th November, which is a practical reason to book ahead and a good one to bring a friend.</p><p><strong>Details box:</strong></p><p><strong>Acro Jam with Robyn</strong><br>Saturday 7th November | 12.30pm-3.30pm · first Saturday of every month<br>[Kay: price, age and prerequisites]<br>Needs 10 people booked by noon on the day before to run</p>
+  
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-youth" src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-06.png" alt="PERSISTENCE IS VERY TRYING timeline">
+
+<div class="block youth" id="block-youth">
+  
+  <h2>PERSISTENCE IS VERY TRYING</h2>
+  <h3>THE VALUE OF BEING GOOD AT BEING BAD AT SOMETHING</h3><p>If you're doing any DIY this weekend, don't lose the head in front of your kids when the parts inevitably don't fit together quite as they should. Same goes for what you say if you come back from the Aerial Edge talking about what you managed and didn't in your workshops. Because research shows that even babies are clocking how you cope with failure, and copying you. And with no Youth Circus tomorrow morning while October Edge is on, more eyes may be on your efforts.</p><p>One of the goals of Youth Circus instructors is having students see and feel that "failure" is just a step on the way to achieving something – a move, a trick, a sequence or a performance.</p><p>When you accept that you might need to get it wrong a few times before you get it right, you're more likely to rise to all kinds of challenges in life.</p><p>So here's what you want to model whenever something goes not quite right:</p><ol><li>Deep breath (also inhale any sweary words that are on the brink of escape).</li><li>Say something like "Oh, that didn't work out as it should have. Let me try it again, maybe another way".</li><li>Repeat as often as you can before you need to remove yourself to a place where you can carry out a controlled explosion without anyone seeing or hearing.</li></ol><p>One of the studies about this concept was at <a href="https://api.aerialedge.co.uk/email-tracking/13cb0ec8580?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">MIT</a>, with researchers having a woman struggle for 30 seconds to get a toy frog out of a container, and they observed that 15-month-old babies who watched her then tried nearly twice as much on a toy of their own.</p><p>A later <a href="https://api.aerialedge.co.uk/email-tracking/4c291ff555a?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">study</a> of persistence in four and five year olds added a twist: an adult's visible effort helped when they got there in the end.</p><p>Both were lab studies, and nobody has run one at a circus school. But a weekend of October Edge looks a lot like the method: a building full of adults taking on four arts in a day, each of them bound to wobble somewhere on the way to nearly getting it. Any parent among them is doing what the woman with the frog did. Youth Circus classes work the same way, with beginners at every level, and falling over as the usual thing to see.</p><p><strong>Youth Circus</strong><br>Sunday 1st November | 10am and 11.30am (ages 7-13), 1pm (ages 13-18) · Wednesday 28th October, 5.30pm (ages 7-18)<br>Little Circus Stars (ages 1-6) Monday 26th October, 5pm · Youth Flying Trapeze Monday 26th October, 6pm · No classes Sunday 25th October<br>£48 a month for Sunday Youth Circus</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/fcd28051e09?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Wobble on: book here</a></div>
+</div>
+<div class="divider"></div>
+
+
+
+<div class="block youth" id="block-youth-87bb40">
+  
+  <h2>CBBC LOOKING FOR TALENT</h2>
+  <h3>CHANCE TO PERFORM ON SATURDAY MASH-UP!</h3><p>CBBC's live Saturday Mash-Up! is looking for children aged 9 to 12 to take part in a live TV show filmed at BBC Scotland, with music guests, celebrities and games, and the chance for children to show off a talent and perform alongside the celebrities live. It's a call-out we've been sent, so we're passing it on.</p><p>Filming is on Saturday mornings until 13th December. Adults register with their child by choosing a date and filling in the form together. The team casts fun roles from the answers and says it reads every application.</p><p><strong>CBBC Saturday Mash-Up! call-out</strong><br>Saturday 7th, 14th and 21st November | call time 7.45am-11.30am<br>Ages 9-12 · BBC Scotland, Glasgow<br>Audition form for November 7th <a href="https://api.aerialedge.co.uk/email-tracking/d0a38b79f7b?contactId={{contact.id}}&amp;id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAEwuqm1URVgzOUU5UUVVUjMwTk5QSEpQTE9QU0U2Ry4u&amp;route=shorturl&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">here</a><br>Audition form for November 14th <a href="https://api.aerialedge.co.uk/email-tracking/2a14d95cfff?contactId={{contact.id}}&amp;id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAEwuqm1UQTVZNzJHRUxZSDhOMllQWVpaSFFOR0tRMC4u&amp;route=shorturl&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">here</a><br>Audition form for November 21st <a href="https://api.aerialedge.co.uk/email-tracking/75930239896?contactId={{contact.id}}&amp;id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAEwuqm1UNVYwUERIUVdEM1pQTVhKVTVLS0xERFpHTS4u&amp;route=shorturl&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener">here</a></p>
+  
+</div>
+<div class="divider"></div>
+
+<div class="hero"><img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-07.jpg" alt=" "></div>
+<div class="block" id="timetable-evenings-weekends">
+  <h2> </h2>
+  <p></p>
+  
+</div>
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-shop">
+  <img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-08.png" alt="SHOP — clothing, gift vouchers and Pay It Forward" width="520">
+</div>
+
+
+<div class="shop-2up">
+  <div class="col">
+    <a href="https://api.aerialedge.co.uk/email-tracking/56fa24136e1?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+      <img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-09.jpg" alt="Aerial Edge Gift Vouchers" width="240">
+    </a>
+  </div>
+  <div class="col">
+    <a href="https://api.aerialedge.co.uk/email-tracking/1fb706c25e1?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+      <img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-10.webp" alt="Aerial Edge Pay It Forward" width="240">
+    </a>
+  </div>
+</div>
+
+
+<div class="shop-heading">
+  <h2>TAP IMAGE TO BUY YOUR GOODIES</h2>
+  <p>EACH IMAGE HAS A SEPARATE LINK</p>
+</div>
+
+
+<div class="full-img">
+  <a href="https://api.aerialedge.co.uk/email-tracking/1fb706c25e1?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+    <img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-11.png" alt="Aerial Edge clothing store" width="520">
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-services">
+  <img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-12.png" alt="SERVICES — what you can do at Aerial Edge" width="520">
+</div>
+
+
+<div class="full-img">
+  <a href="https://api.aerialedge.co.uk/email-tracking/ee56e204d9d?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+    <img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-13.png" alt="What we offer at Aerial Edge" width="520">
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="social-row">
+  <a href="https://api.aerialedge.co.uk/email-tracking/9de9eadd045?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-14.png" alt="Facebook"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/3416563faee?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-15.png" alt="Instagram"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/673c8efaf55?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-16.png" alt="TikTok"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/272e7653a9f?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-17.png" alt="YouTube"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/ee56e204d9d?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-18.png" alt="Website"></a>
+</div>
+
+
+<div class="contact-band" id="section-contact">
+  <div class="contact-row">
+    <div class="col col-video">
+      <a href="https://api.aerialedge.co.uk/email-tracking/c73ea367517?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing">
+        <img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-19.jpg" alt="Find us — quick video tour of the front door at 240 Edmiston Drive">
+        <span class="play-overlay"><span></span></span>
+      </a>
+    </div>
+    <div class="col col-text">
+      <h3>How To Get In Touch With Us</h3>
+      <p>The best ways to talk to us are through email and text on <a class="tel" href="tel: 447414438501">(+44) 07414 438 501</a> — or just drop in and have a coffee in reception.</p>
+      <p>We monitor social media DMs too, they just might not be answered as quickly.</p>
+      <p>Tap the video on the left for a quick guide to our front door at 240 Edmiston Drive, Glasgow G51 2YU.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="map-row">
+  <img src="/assets/images/newsletter/fly-pole-doubles-hoop-dynamic-straps-workshops/img-20.png" alt="Route map to Aerial Edge, 240 Edmiston Drive, Glasgow G51 2YU">
+</div>
+
+
+<div class="footer">
+  <div class="legal">
+    <em>Copyright © 2026&nbsp; Aerial Edge, All rights reserved.</em><br><br>
+    <strong>Our e-mail address is:</strong><br>
+    <a href="mailto:info@aerialedge.co.uk">info@aerialedge.co.uk</a><br><br>
+    Want to change how you receive these emails?<br>
+    You can unsubscribe from this list.
+  </div>
+</div>
+</div>
+
+</div>
+</div>
