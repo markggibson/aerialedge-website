@@ -1,0 +1,514 @@
+<div class="ae-newsletter-shell">
+<style>
+.ae-newsletter-shell{
+  --bg: #292929;
+  --gold: #edb713;
+  
+  --yellow: #edb713;
+  --text: #ffffff;
+  --text-muted: #cccccc;
+  --black: #000000;
+}
+.ae-newsletter-shell *{ box-sizing: border-box; }
+.ae-newsletter-shell{
+  margin: 0;
+  background: #1a1a1a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  line-height: 1.55;
+  font-weight: 400;
+}
+.ae-newsletter-shell .newsletter{
+  max-width: 600px;
+  margin: 6px auto 40px auto;
+  background: #292929;
+  border: 1px solid #111;
+}
+.ae-newsletter-shell .browser-link{ padding: 12px 24px; text-align: right; font-size: 11px; }
+.ae-newsletter-shell .browser-link a{ color: #cccccc; text-decoration: underline; }
+
+.ae-newsletter-shell .logo-block{ text-align: center; padding: 8px 24px 24px 24px; }
+.ae-newsletter-shell .logo-block img{ display: inline-block; max-width: 100%; width: 520px; height: auto; }
+
+.ae-newsletter-shell .hero{
+  background: #000;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .hero img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .hero-caption{
+  padding: 20px 32px 0 32px;
+  font-size: 14px;
+  color: #ffffff;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.45;
+}
+
+
+.ae-newsletter-shell .hero-carousel{
+  margin: 0;
+  background-color: #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  line-height: 0;
+  position: relative;
+}
+.ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+  
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN{
+  
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN.s1{
+  
+  opacity: 1;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-captions{
+  position: relative;
+  min-height: 0;
+  line-height: 1.45;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption{
+  display: block;
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  padding: 8px 16px 12px 16px;
+  text-align: left;
+  font-style: italic;
+  background: #000;
+  
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+  margin-top: 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0), screen and (min-resolution: 0.001dpcm) {
+  .ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+    
+    visibility: hidden;
+  }
+  .ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+  }
+}
+
+.ae-newsletter-shell .menu{ padding: 30px 32px 22px 32px; background: #292929; }
+.ae-newsletter-shell .menu-intro{ font-size: 14px; color: #ffffff; margin: 0 0 16px 0; }
+.ae-newsletter-shell .menu ul{ margin: 0; padding-left: 22px; }
+.ae-newsletter-shell .menu li{ margin: 7px 0; font-size: 14px; color: #ffffff; }
+.ae-newsletter-shell .menu li strong{ color: #edb713; font-weight: 700; }
+.ae-newsletter-shell .menu li a, .ae-newsletter-shell .menu li a:link, .ae-newsletter-shell .menu li a:visited, .ae-newsletter-shell .menu li a:hover, .ae-newsletter-shell .menu li a:active{ color: inherit; text-decoration: none; }
+
+.ae-newsletter-shell .divider{ border-top: 1px solid #edb713; margin: 16px 32px; opacity: 0.6; }
+
+
+.ae-newsletter-shell .timeline-img{ display: block; width: 100%; height: auto; margin: 0 0 20px 0; }
+
+
+.ae-newsletter-shell .timeline-fallback{
+  display: block;
+  width: 100%;
+  margin: 0 0 20px 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .timeline-fallback svg{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ae-newsletter-shell .block{ padding: 26px 32px 28px 32px; }
+.ae-newsletter-shell .block .subtitle{
+  color: #edb713;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .block h2{
+  color: #edb713;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h3{
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin: -8px 0 16px 0;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h4{
+  color: #cccccc;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 14px 0;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block blockquote{
+  margin: 0 0 14px 0;
+  padding: 10px 16px;
+  border-left: 3px solid rgba(237, 183, 19, 0.6);
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.5;
+}
+.ae-newsletter-shell .block blockquote p{ margin: 0 0 8px 0; }
+.ae-newsletter-shell .block blockquote p:last-child{ margin-bottom: 0; }
+.ae-newsletter-shell .block p{ margin: 0 0 14px 0; font-size: 15px; color: #ffffff; }
+
+.ae-newsletter-shell .block p.spacer{ margin: 0 0 14px 0; line-height: 1.55; font-size: 15px; }
+.ae-newsletter-shell .block p a, .ae-newsletter-shell .block p a:link, .ae-newsletter-shell .block p a:visited, .ae-newsletter-shell .block p a:hover, .ae-newsletter-shell .block p a:active, .ae-newsletter-shell .block li a, .ae-newsletter-shell .block li a:link, .ae-newsletter-shell .block li a:visited, .ae-newsletter-shell .block li a:hover, .ae-newsletter-shell .block li a:active{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .cta{
+  display: inline-block;
+  background: #edb713;
+  color: #000000 !important;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 25px;
+  border-radius: 0;
+  margin: 16px 0 0 0;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .cta-row{ text-align: center; }
+
+.ae-newsletter-shell .opener .subtitle{ color: #edb713; }
+.ae-newsletter-shell .opener h2{ color: #edb713; }
+.ae-newsletter-shell .opener .sign-off{
+  margin-top: 22px;
+  color: #edb713;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+
+.ae-newsletter-shell .section-band-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .section-band-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-2up{ display: table; width: 100%; table-layout: fixed; border-spacing: 0; }
+.ae-newsletter-shell .shop-2up .col{ display: table-cell; vertical-align: top; padding: 10px 20px; }
+.ae-newsletter-shell .shop-2up .col a{ display: block; line-height: 0; text-decoration: none; }
+.ae-newsletter-shell .shop-2up .col img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-heading{ padding: 0 24px; }
+.ae-newsletter-shell .shop-heading h2{
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .shop-heading p{
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  line-height: 1;
+  font-family: arial, helvetica, sans-serif;
+}
+
+.ae-newsletter-shell .full-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .full-img a, .ae-newsletter-shell .full-img > img{ display: block; line-height: 0; }
+.ae-newsletter-shell .full-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .social-row{
+  text-align: center;
+  padding: 16px 20px 20px 20px;
+  background: #292929;
+}
+.ae-newsletter-shell .social-row a{ display: inline-block; margin: 0 4px; text-decoration: none; }
+.ae-newsletter-shell .social-row img{ width: 25px; height: 25px; vertical-align: middle; border-radius: 3px; }
+
+.ae-newsletter-shell .contact-band{ padding: 4px 32px 4px 32px; }
+.ae-newsletter-shell .contact-row{ display: table; width: 100%; table-layout: fixed; }
+.ae-newsletter-shell .contact-row .col{ display: table-cell; vertical-align: top; padding: 0 8px; }
+.ae-newsletter-shell .contact-row .col-video{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-text{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-video a{ display: block; position: relative; line-height: 0; }
+.ae-newsletter-shell .contact-row .col-video img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .play-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.ae-newsletter-shell .play-overlay span{
+  display: inline-block;
+  padding: 6px 15px;
+  background: rgba(0, 173, 239, 1);
+  border-radius: 6px;
+  position: relative;
+  line-height: 0;
+}
+.ae-newsletter-shell .play-overlay span::after{
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  border-width: 9px 0 9px 18px;
+  border-color: transparent transparent transparent #ffffff;
+  vertical-align: middle;
+}
+.ae-newsletter-shell .contact-row h3{
+  color: #edb713;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.ae-newsletter-shell .contact-row p{ font-size: 13px; margin: 0 0 10px 0; color: #ffffff; line-height: 1.5; }
+.ae-newsletter-shell .contact-row a.tel{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .map-row{ padding: 20px 32px 0 32px; line-height: 0; }
+.ae-newsletter-shell .map-row img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .footer{
+  padding: 20px 24px 24px 24px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cccccc;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .footer p{ margin: 0 0 10px 0; }
+.ae-newsletter-shell .footer a{ color: #cccccc; text-decoration: underline; }
+.ae-newsletter-shell .footer .legal{ color: #cccccc; font-size: 14px; }
+
+</style>
+<style>@keyframes hcr-shows-f024b6-s-1 { 0% { opacity: 1; } 6% { opacity: 1; } 12% { opacity: 0; } 94% { opacity: 0; } 100% { opacity: 1; } }@keyframes hcr-shows-f024b6-s-2 { 0% { opacity: 0; } 6% { opacity: 0; } 12% { opacity: 1; } 19% { opacity: 1; } 25% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-shows-f024b6-s-3 { 0% { opacity: 0; } 19% { opacity: 0; } 25% { opacity: 1; } 31% { opacity: 1; } 37% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-shows-f024b6-s-4 { 0% { opacity: 0; } 31% { opacity: 0; } 37% { opacity: 1; } 44% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-shows-f024b6-s-5 { 0% { opacity: 0; } 44% { opacity: 0; } 50% { opacity: 1; } 56% { opacity: 1; } 62% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-shows-f024b6-s-6 { 0% { opacity: 0; } 56% { opacity: 0; } 62% { opacity: 1; } 69% { opacity: 1; } 75% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-shows-f024b6-s-7 { 0% { opacity: 0; } 69% { opacity: 0; } 75% { opacity: 1; } 81% { opacity: 1; } 87% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-shows-f024b6-s-8 { 0% { opacity: 0; } 81% { opacity: 0; } 87% { opacity: 1; } 100% { opacity: 1; } }@keyframes hcr-shows-f024b6-cap-1 { 0% { opacity: 1; } 6% { opacity: 1; } 12% { opacity: 0; } 94% { opacity: 0; } 100% { opacity: 1; } }@keyframes hcr-shows-f024b6-cap-2 { 0% { opacity: 0; } 6% { opacity: 0; } 12% { opacity: 1; } 19% { opacity: 1; } 25% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-shows-f024b6-cap-3 { 0% { opacity: 0; } 19% { opacity: 0; } 25% { opacity: 1; } 31% { opacity: 1; } 37% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-shows-f024b6-cap-4 { 0% { opacity: 0; } 31% { opacity: 0; } 37% { opacity: 1; } 44% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-shows-f024b6-cap-5 { 0% { opacity: 0; } 44% { opacity: 0; } 50% { opacity: 1; } 56% { opacity: 1; } 62% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-shows-f024b6-cap-6 { 0% { opacity: 0; } 56% { opacity: 0; } 62% { opacity: 1; } 69% { opacity: 1; } 75% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-shows-f024b6-cap-7 { 0% { opacity: 0; } 69% { opacity: 0; } 75% { opacity: 1; } 81% { opacity: 1; } 87% { opacity: 0; } 100% { opacity: 0; } }@keyframes hcr-shows-f024b6-cap-8 { 0% { opacity: 0; } 81% { opacity: 0; } 87% { opacity: 1; } 100% { opacity: 1; } }@media screen and (-webkit-min-device-pixel-ratio:0), screen and (min-resolution: 0.001dpcm) { .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-slide-sN.s1{ animation: hcr-shows-f024b6-s-1 32s linear infinite; } .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-slide-sN.s2{ animation: hcr-shows-f024b6-s-2 32s linear infinite; } .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-slide-sN.s3{ animation: hcr-shows-f024b6-s-3 32s linear infinite; } .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-slide-sN.s4{ animation: hcr-shows-f024b6-s-4 32s linear infinite; } .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-slide-sN.s5{ animation: hcr-shows-f024b6-s-5 32s linear infinite; } .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-slide-sN.s6{ animation: hcr-shows-f024b6-s-6 32s linear infinite; } .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-slide-sN.s7{ animation: hcr-shows-f024b6-s-7 32s linear infinite; } .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-slide-sN.s8{ animation: hcr-shows-f024b6-s-8 32s linear infinite; } .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-caption.s1{ animation: hcr-shows-f024b6-cap-1 32s linear infinite; } .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-caption.s2{ animation: hcr-shows-f024b6-cap-2 32s linear infinite; } .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-caption.s3{ animation: hcr-shows-f024b6-cap-3 32s linear infinite; } .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-caption.s4{ animation: hcr-shows-f024b6-cap-4 32s linear infinite; } .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-caption.s5{ animation: hcr-shows-f024b6-cap-5 32s linear infinite; } .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-caption.s6{ animation: hcr-shows-f024b6-cap-6 32s linear infinite; } .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-caption.s7{ animation: hcr-shows-f024b6-cap-7 32s linear infinite; } .ae-newsletter-shell .hcr-shows-f024b6 .hero-carousel-caption.s8{ animation: hcr-shows-f024b6-cap-8 32s linear infinite; } }</style>
+<div style="font-family:Roboto, Arial;font-size:14px">
+
+<div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden">A new workshop is as good as a rest</div>
+
+<div class="newsletter"><div class="browser-link"><a href="#">View this email in browser</a></div><div class="logo-block"><img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-01.png" alt="Aerial Edge, Glasgow" width="520"></div>
+
+<div class="block opener" id="opener">
+  
+  <h2>A HOLIDAY FOR A RESTLESS MIND</h2>
+  <h3>A CHANGE OF ARTS IS AS GOOD AS A REFRESH</h3><p>If you've trained here for a few months you might have a route. You come in, find your apparatus, do your class and head home the way you came, with the contented stride of a commuter who has never once missed a stop.</p><p>Not that it's a bad thing, but it could mean you're missing a fair bit of circus that you could be enjoying.</p><p>Circus people tend to be curious, not known for sitting still...some may say easily bored. Which is why one-off workshops are a treat that we all need.</p><p>In my view, trying a different art is a short holiday for a restless mind. It can send you back to your favourite apparatus with better questions for yourself about how you approach things because of the similarities and differences in equipment and instructors.  It's a useful souvenir.</p><p>Doubles hoop, dynamic straps and the fly pole workshops this month aren't on the weekly class schedule, so your curiosity isn't ignited as you're passing them on the way to your class. I encourage you to look them up and give them a go.</p><p>Taking a new route can bring unexpected joy.  I recommend it.</p><p>Mark Gibson<br>Aerial Edge Founder</p>
+  
+</div>
+<div class="divider"></div>
+<div class="menu"><p class="menu-intro">To make life easier, you can use this menu to go direct to articles. Above each section, you'll find a timeline of relevant dates, and there are direct booking links throughout.</p><ul><li><a href="#block-workshops-1beb60"><strong>Workshops:</strong> NO SUPERHERO SHOULDERS REQUIRED</a></li><li><a href="#block-workshops-4d9790"><strong>Workshops:</strong> THE PARTNER WHO HAS NO SYMPATHY</a></li><li><a href="#block-workshops"><strong>Workshops:</strong> WHICH FLY POLE WORKSHOP IS YOURS</a></li><li><a href="#block-shows"><strong>Shows:</strong> NO TWO SEASONS ARE THE SAME</a></li><li><a href="#block-shows-f024b6"><strong>Shows:</strong> THE ONES WE COULDN'T LEAVE OUT</a></li><li><a href="#block-youth"><strong>Youth Circus:</strong> THE DISHWASHER IS STILL FULL</a></li><li><a href="#block-classes"><strong>Classes:</strong> UNDER THE SKY, THEN UNDER A ROOF</a></li><li><a href="#section-shop"><strong>Store:</strong> Buy clothing, gift vouchers and Pay It Forward</a></li><li><a href="#section-services"><strong>Our services for you</strong></a></li><li><a href="#section-contact"><strong>Contact us</strong></a></li></ul></div><div class="divider"></div>
+<img class="timeline-img" id="section-workshops" src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-02.png" alt="NO SUPERHERO SHOULDERS REQUIRED timeline">
+<div class="hero"><img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-03.webp" alt="NO SUPERHERO SHOULDERS REQUIRED"></div>
+<div class="block workshops" id="block-workshops-1beb60">
+  
+  <h2>NO SUPERHERO SHOULDERS REQUIRED</h2>
+  <h3>A DYNAMIC STRAPS WORKSHOP FOR AERIALISTS WHO ALREADY SWING FROM SOMETHING</h3><p>Mention straps and you might picture people who seem invincible, super-strong, who show no sign of ever having struggled with a jar lid. It is an excellent reason to stay on the hoop.</p><p>Freya's dynamic straps workshop is built around the beat, not the muscle. When you find the moment that you send your weight where the straps will carry it, it suddenly becomes possible to execute the turns and pathways into shapes which you already know.</p><p>So is it for you? If you already work dynamically on hoop, rope or flying trapeze, this is your chance to find out what comes with you to a different piece of kit. If you've done some straps, Circus Fitness classes included, you are in the right room. The level is improver to intermediate.</p><p>People with action-figure shaped shoulders are welcome too. They'll be learning the beat alongside everyone else.</p><p><strong>Dynamic Straps workshop with Freya Pellie</strong><br>Saturday 14th November | 3.45pm-5.15pm<br>£25 or £17 on an 8-class pass</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/c0aae6afbf4?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Get with the beat: book here</a></div>
+</div>
+<div class="divider"></div>
+
+
+<div class="hero"><img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-04.jpg" alt="THE PARTNER WHO HAS NO SYMPATHY"></div>
+<div class="block workshops" id="block-workshops-4d9790">
+  
+  <h2>THE PARTNER WHO HAS NO SYMPATHY</h2>
+  <h3>HOW TO CHOOSE WHO SHARES YOUR HOOP</h3><p>You can tell a good doubles partner by what happens when you get it wrong. The sympathetic one says "that was nearly it" and lets you try the same thing six more times. The more useful one says "you were late on the count" and can point to the exact half second where you left them behind.</p><p>Freya's doubles hoop workshop is a good place to find out which end of that arrangement you are. You'll work on timing and weight, and on base and flyer shapes where one of you lifts or assists the other.</p><p>It's pitched at strong beginners to intermediate aerialists, and you can come with a friend or sign up solo and meet someone there.</p><p>Sympathy can be served afterwards, near the kettle.</p><p><strong>Doubles Hoop workshop with Freya Pellie</strong><br>Saturday 14th November | 2pm-3.30pm<br>£25 or £17 on an 8-class pass</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/903507c147b?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Be told you're late: book here</a></div>
+</div>
+<div class="divider"></div>
+
+
+<div class="hero"><img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-05.jpg" alt="WHICH FLY POLE WORKSHOP IS YOURS"></div>
+<div class="block workshops" id="block-workshops">
+  
+  <h2>WHICH FLY POLE WORKSHOP IS YOURS</h2>
+  <h3>FOUR SESSIONS, AND ONE THAT IS EVERYONE'S</h3><p>Of Elke's four fly pole workshops this month, three ask a question before you book, and one invites you to do it on trust.</p><p>The questions are fair ones, about what level you can work at. The other workshop of the day is for everyone because it's about group moves, and Elke says the thing students often say they love is the way trust is built with new friends as three or four people get on the pole.</p><p>Elke says: "When there are two, three or four on the pole, it slows you down because of the weight, but there is so much more room for play. You are relearning spin in a way, because you really rotate and learn how to enter with multiple people.</p><p>"Once you catch a good spin, it will stay really good because the number of people rotating will keep it circular and fast."</p><p>The most fun thing is building trust with new friends. Elke says: "That's often brought up by students. You go from sitting or lying on each other then cranking it up to three or four on there, someone holding someone's foot or you holding by someone's elbow. It's not just about holding it and making it look pretty, but the trust that goes into learning it feels very special.</p><p>"So instead of learning tricks and transitions, it's more about learning to work with other people and new pathways.</p><p>"There are a lot of things in groups that look unexpectedly great, like balances. We see them more in rope and hoop but there are lots of lovely ways to balance on pole with several people because someone can create a shelf or support. Pretty back balances are not hard but feel fun and look amazing."</p><p>There will be regressions and progressions on offer so everyone gets a version that suits them. The aim is to get creative together.</p><p>In the other workshops, going into the right one is your first task. It makes teaching and participating much better if everyone in the workshop is in the same range.</p><p>The workshop for Advanced pole flyers asks if you have three years on regular pole (ideally some fly pole too), inverts that you trust, good control in spin pole, and if you know your way around ayeshas, iguanas and matrix walks.</p><p>Intermediate needs confident inverts and some time on either a regular pole or a fly pole. For Beginners there's no need for fly pole experience and not much on regular pole, and it offers gentle climbs and no inverts.</p><p>If you are unsure, ask how you feel about going upside down. If the answer is "only with my friends", you have your session.</p><p><strong>Fly pole workshops with Elke Bucher</strong><br>Saturday 21st November | 10am Advanced, 11.30am Intermediate, 1.30pm Group, 3pm Beginners, each 90 minutes<br>£25 or £17 on an 8-class pass</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/d420ea0a0de?contactId={{contact.id}}&amp;startdate=2026-11-16&amp;enddate=2026-11-22&amp;venues=&amp;category=&amp;instructors=165283&amp;offering_types=&amp;age_restrictions=&amp;date=2026-11-21&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Choose your pole: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-shows" src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-06.png" alt="NO TWO SEASONS ARE THE SAME timeline">
+<div class="hero"><img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-07.jpg" alt="NO TWO SEASONS ARE THE SAME"></div>
+<div class="block shows" id="block-shows">
+  
+  <h2>NO TWO SEASONS ARE THE SAME</h2>
+  <h3>THE FOUNDATION COURSE GRADUATION SHOW REFLECTS THEIR JOURNEYS</h3><p>Ask any group of people on a Foundation Course where they began and you will get entirely different answers. Everyone arrives with their own roots, their own habits and their own idea of what they can and cannot do.</p><p>Four months later they share a stage, moving together like a shoal of fish as if they had all grown up in the same coral reef.</p><p>Director Michelle Ross says about the upcoming show, These Roots of Ours: "It highlights and celebrates what the students have learnt through their past four months of training, performing solo disciplines and group numbers as they take you on a journey through the cycle of the seasons from the first leaf of spring to the dark depths of winter."</p><p>In any cohort, one person could be in full leaf on one part of their experience, while the person beside them is still waiting for the sun to shine on them, and somebody else has decided this is the week to let go of everything that was not helping.</p><p>Michelle is currently directing this group to connect their different journeys in one circus story that evolves in front of your eyes in exciting and emotional ways.</p><p><strong>These Roots of Ours</strong><br>Saturday 28th November | 8pm<br>£15/£10/£5</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/2f73673c9ce?contactId={{contact.id}}&amp;date=2026-11-28&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Book tickets here</a></div>
+</div>
+<div class="divider"></div>
+
+
+<div class="hero-carousel hcr-shows-f024b6"><img class="hero-carousel-fallback" src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-08.jpg" alt="THE ONES WE COULDN'T LEAVE OUT" loading="eager" decoding="async"><div class="hero-carousel-slide-sN s1" style="background-image:url('/assets/images/newsletter/a-holiday-for-a-restless-mind/img-08.jpg')"></div><div class="hero-carousel-slide-sN s2" style="background-image:url('https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/09375d4a-50eb-417b-8c94-b1230c7c83da.jpg')"></div><div class="hero-carousel-slide-sN s3" style="background-image:url('https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/2b115361-4196-4ddc-9b7d-4cf25ee53f8f.jpg')"></div><div class="hero-carousel-slide-sN s4" style="background-image:url('https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/f66c67a9-d367-4cba-ab1b-470a8bcd36ee.jpg')"></div><div class="hero-carousel-slide-sN s5" style="background-image:url('https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/edbda640-396a-4b42-ace0-2304b916d7b0.jpg')"></div><div class="hero-carousel-slide-sN s6" style="background-image:url('https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/e94df393-aa2c-49c5-ae74-cf8d3a3c6167.jpg')"></div><div class="hero-carousel-slide-sN s7" style="background-image:url('https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/c8cd3d79-ae92-4e8a-a73c-508e4bd52134.jpg')"></div><div class="hero-carousel-slide-sN s8" style="background-image:url('https://assets.cdn.filesafe.space/F91Gp3e8aSGltf3UnAzV/media/ade2fb9b-6e00-4024-b184-74018cc0cd22.jpg')"></div></div>
+<div class="block shows" id="block-shows-f024b6">
+  
+  <h2>THE ONES WE COULDN'T LEAVE OUT</h2>
+  <h3>MORE OPEN RIG NIGHT PICTURES FROM STEPHEN KELLY</h3><p>We said there would be more. Stephen Kelly's photo folder from Open Rig Night is spilling over with glorious moments, and last week's pictures left a queue of good ones standing at the door.</p><p>Here is the next lot.</p><p>Photos: Stephen Kelly</p>
+  
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-youth" src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-09.png" alt="THE DISHWASHER IS STILL FULL timeline">
+
+<div class="block youth" id="block-youth">
+  
+  <h2>THE DISHWASHER IS STILL FULL</h2>
+  <h3>WHY CHILDREN DO FOR A COACH WHAT THEY WON'T DO AT HOME</h3><p>Your child will happily hold a handstand for as long as a coach asks, then stubbornly walk past the dishwasher at home for a week as if it were modern art.</p><p>Every parent knows some version of this. The same child who waits for a turn on the rig with a patience that would impress a bank clerk will meet the suggestion that shoes might come off at the door with a long look at the ceiling.</p><p>There may not be much to explain. A teacher who isn't Mum or Dad has a certain amount of borrowed authority, and a room full of other students doing the same thing makes any request look reasonable, even one that involves carrying a heavy mat.</p><p>Youth Circus is a room like that. They take turns, they try again, and they leave tired and a little pleased with themselves, which is as good a moment as any to ask about the dishwasher.</p><p><strong>Youth Circus</strong><br>Sunday 8th November | 10am and 11.30am (ages 7-13), 1pm (ages 13-18)<br>Wednesday 11th November | 5.30pm (ages 7-18)<br>£48 a month</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/cd55c059fb8?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Pass the mat: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-classes" src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-10.png" alt="UNDER THE SKY, THEN UNDER A ROOF timeline">
+<div class="hero"><img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-11.webp" alt="UNDER THE SKY, THEN UNDER A ROOF"></div>
+<div class="block classes" id="block-classes">
+  
+  <h2>UNDER THE SKY, THEN UNDER A ROOF</h2>
+  <h3>HELP HAMISH FILL HIS DAYS UNDER THE CONCRETE SKY</h3><p>All summer, Hamish taught flying trapeze in London parks, working under the largest and least predictable ceiling there is. Yet that sky was fabulously blue all season.</p><p>Back in Glasgow for winter, he's making the most of the sky that mostly looks like concrete, and you get the benefit, with a new daytime flying trapeze class.</p><p>The open level class is on Wednesday afternoons, and beginners are as welcome as anyone who has done it for years.</p><p>For those who like to keep their feet (and hands) on the ground, Sam also has a new handstands class on Monday mornings. Anyone who wants to hold a handstand knows that regular practice – ideally corrected by instructors – is the only way forward. So this extra Circus Fitness session is invaluable, and affordable as part of the Circus Fitness family of classes.</p><p>Always on the daytime schedule is Yara's Aerial Conditioning on Tuesdays.</p><p>Daytime classes are usually bonus sessions when we have a four-week Intensive course running, but these ones are here for keeps, if you keep coming. Use it or lose it.</p><p><strong>Circus Fitness: Handstands with Sam</strong><br>Mondays 11.30am-12.30pm<br>£10 drop-in or £7.50 on an 8-class pass</p><p><strong>Circus Fitness: Aerial Conditioning</strong><br>Tuesdays 10am-11am<br>£25 drop-in or £17 on an 8-class pass</p><p><strong>Flying Trapeze Open Level with Hamish</strong><br>Wednesdays | 2pm-3.30pm<br>£25 drop-in or £17 on an 8-class pass</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/23514b0de2c?contactId={{contact.id}}&amp;startdate=2026-11-09&amp;enddate=2026-11-15&amp;date=2026-11-11&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Fly indoors: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<div class="hero"><img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-12.jpg" alt=" "></div>
+<div class="block" id="timetable-daytime">
+  <h2> </h2>
+  <p></p>
+  
+</div>
+<div class="divider"></div>
+
+<div class="hero"><img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-13.jpg" alt=" "></div>
+<div class="block" id="timetable-evenings-weekends">
+  <h2> </h2>
+  <p></p>
+  
+</div>
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-shop">
+  <img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-14.png" alt="SHOP — clothing, gift vouchers and Pay It Forward" width="520">
+</div>
+
+
+<div class="shop-2up">
+  <div class="col">
+    <a href="https://api.aerialedge.co.uk/email-tracking/52852e651f0?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+      <img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-15.jpg" alt="Aerial Edge Gift Vouchers" width="240">
+    </a>
+  </div>
+  <div class="col">
+    <a href="https://api.aerialedge.co.uk/email-tracking/c0be6630548?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+      <img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-16.webp" alt="Aerial Edge Pay It Forward" width="240">
+    </a>
+  </div>
+</div>
+
+
+<div class="shop-heading">
+  <h2>TAP IMAGE TO BUY YOUR GOODIES</h2>
+  <p>EACH IMAGE HAS A SEPARATE LINK</p>
+</div>
+
+
+<div class="full-img">
+  <a href="https://api.aerialedge.co.uk/email-tracking/c0be6630548?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+    <img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-17.png" alt="Aerial Edge clothing store" width="520">
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-services">
+  <img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-18.png" alt="SERVICES — what you can do at Aerial Edge" width="520">
+</div>
+
+
+<div class="full-img">
+  <a href="https://api.aerialedge.co.uk/email-tracking/a3379be002c?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+    <img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-19.png" alt="What we offer at Aerial Edge" width="520">
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="social-row">
+  <a href="https://api.aerialedge.co.uk/email-tracking/9ba57702a9e?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-20.png" alt="Facebook"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/9b65bf679a4?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-21.png" alt="Instagram"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/03a49fe6c2a?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-22.png" alt="TikTok"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/8bb752038d6?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-23.png" alt="YouTube"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/a3379be002c?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-24.png" alt="Website"></a>
+</div>
+
+
+<div class="contact-band" id="section-contact">
+  <div class="contact-row">
+    <div class="col col-video">
+      <a href="https://api.aerialedge.co.uk/email-tracking/9dc02842fdf?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing">
+        <img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-25.jpg" alt="Find us — quick video tour of the front door at 240 Edmiston Drive">
+        <span class="play-overlay"><span></span></span>
+      </a>
+    </div>
+    <div class="col col-text">
+      <h3>How To Get In Touch With Us</h3>
+      <p>The best ways to talk to us are through email and text on <a class="tel" href="tel: 447414438501">(+44) 07414 438 501</a> — or just drop in and have a coffee in reception.</p>
+      <p>We monitor social media DMs too, they just might not be answered as quickly.</p>
+      <p>Tap the video on the left for a quick guide to our front door at 240 Edmiston Drive, Glasgow G51 2YU.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="map-row">
+  <img src="/assets/images/newsletter/a-holiday-for-a-restless-mind/img-26.png" alt="Route map to Aerial Edge, 240 Edmiston Drive, Glasgow G51 2YU">
+</div>
+
+
+<div class="footer">
+  <div class="legal">
+    <em>Copyright © 2026&nbsp; Aerial Edge, All rights reserved.</em><br><br>
+    <strong>Our e-mail address is:</strong><br>
+    <a href="mailto:info@aerialedge.co.uk">info@aerialedge.co.uk</a><br><br>
+    Want to change how you receive these emails?<br>
+    You can unsubscribe from this list.
+  </div>
+</div>
+</div>
+
+</div>
+</div>
