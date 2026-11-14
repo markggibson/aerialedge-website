@@ -1,0 +1,513 @@
+<div class="ae-newsletter-shell">
+<style>
+.ae-newsletter-shell{
+  --bg: #292929;
+  --gold: #edb713;
+  
+  --yellow: #edb713;
+  --text: #ffffff;
+  --text-muted: #cccccc;
+  --black: #000000;
+}
+.ae-newsletter-shell *{ box-sizing: border-box; }
+.ae-newsletter-shell{
+  margin: 0;
+  background: #1a1a1a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  line-height: 1.55;
+  font-weight: 400;
+}
+.ae-newsletter-shell .newsletter{
+  max-width: 600px;
+  margin: 6px auto 40px auto;
+  background: #292929;
+  border: 1px solid #111;
+}
+.ae-newsletter-shell .browser-link{ padding: 12px 24px; text-align: right; font-size: 11px; }
+.ae-newsletter-shell .browser-link a{ color: #cccccc; text-decoration: underline; }
+
+.ae-newsletter-shell .logo-block{ text-align: center; padding: 8px 24px 24px 24px; }
+.ae-newsletter-shell .logo-block img{ display: inline-block; max-width: 100%; width: 520px; height: auto; }
+
+.ae-newsletter-shell .hero{
+  background: #000;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .hero img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .hero-caption{
+  padding: 20px 32px 0 32px;
+  font-size: 14px;
+  color: #ffffff;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.45;
+}
+
+
+.ae-newsletter-shell .hero-carousel{
+  margin: 0;
+  background-color: #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  line-height: 0;
+  position: relative;
+}
+.ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+  
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN{
+  
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.ae-newsletter-shell .hero-carousel div.hero-carousel-slide-sN.s1{
+  
+  opacity: 1;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-captions{
+  position: relative;
+  min-height: 0;
+  line-height: 1.45;
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption{
+  display: block;
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  padding: 8px 16px 12px 16px;
+  text-align: left;
+  font-style: italic;
+  background: #000;
+  
+}
+.ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+  margin-top: 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0), screen and (min-resolution: 0.001dpcm) {
+  .ae-newsletter-shell .hero-carousel img.hero-carousel-fallback{
+    
+    visibility: hidden;
+  }
+  .ae-newsletter-shell .hero-carousel .hero-carousel-caption + .hero-carousel-caption{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+  }
+}
+
+.ae-newsletter-shell .menu{ padding: 30px 32px 22px 32px; background: #292929; }
+.ae-newsletter-shell .menu-intro{ font-size: 14px; color: #ffffff; margin: 0 0 16px 0; }
+.ae-newsletter-shell .menu ul{ margin: 0; padding-left: 22px; }
+.ae-newsletter-shell .menu li{ margin: 7px 0; font-size: 14px; color: #ffffff; }
+.ae-newsletter-shell .menu li strong{ color: #edb713; font-weight: 700; }
+.ae-newsletter-shell .menu li a, .ae-newsletter-shell .menu li a:link, .ae-newsletter-shell .menu li a:visited, .ae-newsletter-shell .menu li a:hover, .ae-newsletter-shell .menu li a:active{ color: inherit; text-decoration: none; }
+
+.ae-newsletter-shell .divider{ border-top: 1px solid #edb713; margin: 16px 32px; opacity: 0.6; }
+
+
+.ae-newsletter-shell .timeline-img{ display: block; width: 100%; height: auto; margin: 0 0 20px 0; }
+
+
+.ae-newsletter-shell .timeline-fallback{
+  display: block;
+  width: 100%;
+  margin: 0 0 20px 0;
+  line-height: 0;
+}
+.ae-newsletter-shell .timeline-fallback svg{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ae-newsletter-shell .block{ padding: 26px 32px 28px 32px; }
+.ae-newsletter-shell .block .subtitle{
+  color: #edb713;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .block h2{
+  color: #edb713;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h3{
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin: -8px 0 16px 0;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block h4{
+  color: #cccccc;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 14px 0;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ae-newsletter-shell .block blockquote{
+  margin: 0 0 14px 0;
+  padding: 10px 16px;
+  border-left: 3px solid rgba(237, 183, 19, 0.6);
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.5;
+}
+.ae-newsletter-shell .block blockquote p{ margin: 0 0 8px 0; }
+.ae-newsletter-shell .block blockquote p:last-child{ margin-bottom: 0; }
+.ae-newsletter-shell .block p{ margin: 0 0 14px 0; font-size: 15px; color: #ffffff; }
+
+.ae-newsletter-shell .block p.spacer{ margin: 0 0 14px 0; line-height: 1.55; font-size: 15px; }
+.ae-newsletter-shell .block p a, .ae-newsletter-shell .block p a:link, .ae-newsletter-shell .block p a:visited, .ae-newsletter-shell .block p a:hover, .ae-newsletter-shell .block p a:active, .ae-newsletter-shell .block li a, .ae-newsletter-shell .block li a:link, .ae-newsletter-shell .block li a:visited, .ae-newsletter-shell .block li a:hover, .ae-newsletter-shell .block li a:active{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .cta{
+  display: inline-block;
+  background: #edb713;
+  color: #000000 !important;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 25px;
+  border-radius: 0;
+  margin: 16px 0 0 0;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+.ae-newsletter-shell .cta-row{ text-align: center; }
+
+.ae-newsletter-shell .opener .subtitle{ color: #edb713; }
+.ae-newsletter-shell .opener h2{ color: #edb713; }
+.ae-newsletter-shell .opener .sign-off{
+  margin-top: 22px;
+  color: #edb713;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+
+.ae-newsletter-shell .section-band-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .section-band-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-2up{ display: table; width: 100%; table-layout: fixed; border-spacing: 0; }
+.ae-newsletter-shell .shop-2up .col{ display: table-cell; vertical-align: top; padding: 10px 20px; }
+.ae-newsletter-shell .shop-2up .col a{ display: block; line-height: 0; text-decoration: none; }
+.ae-newsletter-shell .shop-2up .col img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .shop-heading{ padding: 0 24px; }
+.ae-newsletter-shell .shop-heading h2{
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .shop-heading p{
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  line-height: 1;
+  font-family: arial, helvetica, sans-serif;
+}
+
+.ae-newsletter-shell .full-img{ padding: 10px 20px; line-height: 0; }
+.ae-newsletter-shell .full-img a, .ae-newsletter-shell .full-img > img{ display: block; line-height: 0; }
+.ae-newsletter-shell .full-img img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .social-row{
+  text-align: center;
+  padding: 16px 20px 20px 20px;
+  background: #292929;
+}
+.ae-newsletter-shell .social-row a{ display: inline-block; margin: 0 4px; text-decoration: none; }
+.ae-newsletter-shell .social-row img{ width: 25px; height: 25px; vertical-align: middle; border-radius: 3px; }
+
+.ae-newsletter-shell .contact-band{ padding: 4px 32px 4px 32px; }
+.ae-newsletter-shell .contact-row{ display: table; width: 100%; table-layout: fixed; }
+.ae-newsletter-shell .contact-row .col{ display: table-cell; vertical-align: top; padding: 0 8px; }
+.ae-newsletter-shell .contact-row .col-video{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-text{ width: 50%; }
+.ae-newsletter-shell .contact-row .col-video a{ display: block; position: relative; line-height: 0; }
+.ae-newsletter-shell .contact-row .col-video img{ display: block; width: 100%; height: auto; }
+.ae-newsletter-shell .play-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.ae-newsletter-shell .play-overlay span{
+  display: inline-block;
+  padding: 6px 15px;
+  background: rgba(0, 173, 239, 1);
+  border-radius: 6px;
+  position: relative;
+  line-height: 0;
+}
+.ae-newsletter-shell .play-overlay span::after{
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  border-width: 9px 0 9px 18px;
+  border-color: transparent transparent transparent #ffffff;
+  vertical-align: middle;
+}
+.ae-newsletter-shell .contact-row h3{
+  color: #edb713;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.ae-newsletter-shell .contact-row p{ font-size: 13px; margin: 0 0 10px 0; color: #ffffff; line-height: 1.5; }
+.ae-newsletter-shell .contact-row a.tel{ color: #edb713; text-decoration: underline; }
+
+.ae-newsletter-shell .map-row{ padding: 20px 32px 0 32px; line-height: 0; }
+.ae-newsletter-shell .map-row img{ display: block; width: 100%; height: auto; }
+
+.ae-newsletter-shell .footer{
+  padding: 20px 24px 24px 24px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cccccc;
+  font-family: arial, helvetica, sans-serif;
+}
+.ae-newsletter-shell .footer p{ margin: 0 0 10px 0; }
+.ae-newsletter-shell .footer a{ color: #cccccc; text-decoration: underline; }
+.ae-newsletter-shell .footer .legal{ color: #cccccc; font-size: 14px; }
+
+</style>
+<div style="font-family:Roboto, Arial;font-size:14px">
+
+<div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden">PLUS new shows for you to see</div>
+
+<div class="newsletter"><div class="browser-link"><a href="#">View this email in browser</a></div><div class="logo-block"><img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-01.png" alt="Aerial Edge, Glasgow" width="520"></div>
+
+<div class="block opener" id="opener">
+  
+  <h2>CAUGHT IN THE ACT</h2>
+  <h3>NOT ALL OF THE CATCHING AT AERIAL EDGE IS IN THE AIR</h3><p>On flying trapeze, the catch is the attention grabber. There's the drama of the release, the flight then the whole room exhales at once, loudly. It deserves its applause.</p><p>There's a lot less photogenic catching going on all the time, and it's a form of kindness that holds this circus community together.</p><p>It could be a long-standing silks student holding the fabric steady for a newcomer and admitting their own first climb looked very much like that. Or crash mats arriving in the right place at the right moment. Someone washing the dishes!</p><p>In any class, the cheer for a slightly wonky first attempt comes out every bit as heartfelt as the one for the trick everybody is in awe of. No one is orchestrating this like a conductor, it's happening organically because of the people who are drawn to the same place with the same interests and the same good intentions.</p><p>There's a fair bit of kindness and mutual catching of emotions and fears among the full-time students, with their show being just two weeks away, and we see it all the time throughout the school.</p><p>Tomorrow you might be learning a new skill. Today you might be the person helping someone else get there. It all feels good.</p><p>Mark Gibson<br>Aerial Edge Founder</p>
+  
+</div>
+<div class="divider"></div>
+<div class="menu"><p class="menu-intro">To make life easier, you can use this menu to go direct to articles. Above each section, you'll find a timeline of relevant dates, and there are direct booking links throughout.</p><ul><li><a href="#block-workshops-4d9790"><strong>Workshops:</strong> SHARING THE CIRCLE</a></li><li><a href="#block-workshops-1beb60"><strong>Workshops:</strong> BE DYNAMIC TODAY</a></li><li><a href="#block-workshops"><strong>Workshops:</strong> A FIELD GUIDE TO POLE BIRDS</a></li><li><a href="#block-shows"><strong>Shows:</strong> THE SHOW BEFORE THE SHOW</a></li><li><a href="#block-shows-f024b6"><strong>Shows:</strong> STORY TIME WITH A HUNGRY QUEEN</a></li><li><a href="#block-youth"><strong>Youth Circus:</strong> ELF HATS OPTIONAL</a></li><li><a href="#block-classes"><strong>Classes:</strong> FLY OVER THE HUMP </a></li><li><a href="#section-shop"><strong>Store:</strong> Buy clothing, gift vouchers and Pay It Forward</a></li><li><a href="#section-services"><strong>Our services for you</strong></a></li><li><a href="#section-contact"><strong>Contact us</strong></a></li></ul></div><div class="divider"></div>
+<img class="timeline-img" id="section-workshops" src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-02.png" alt="SHARING THE CIRCLE timeline">
+<div class="hero"><img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-03.jpg" alt="SHARING THE CIRCLE"></div>
+<div class="block workshops" id="block-workshops-4d9790">
+  
+  <h2>SHARING THE CIRCLE</h2>
+  <h3>FREYA'S DOUBLES HOOP WORKSHOP OPENS CREATIVE CHANNELS</h3><p>A hoop seats one person comfortably and two companionably, so how many ways can you share that space today with someone you've just met? Or how cosy could you get with a pal?</p><p>Either challenge will be possible at Freya's one-off workshop. While there may be some moves that could come from doubles trapeze, there's a multitude of other possibilities with an apparatus that's entirely differently shaped and rigged. And it spins!</p><p>There's synchro choreography, partner synchronisation, and the satisfying conundrums of base-and-flyer work, lifts and assists. You'll work explore the timing, communication and coordination that make two people move as one.</p><p>It's a different way of thinking about hoop. Instead of concentrating entirely on what your own body is doing, you read somebody else's movement too. A shift in weight, a change in timing, a tiny adjustment are all part of making the two of you work together. There are different places to hold – both on the hoop and each other – and new shapes to hold and move through.</p><p>You don't need to become a regular doubles partner. You just need to be ready to work with someone new.</p><p>If you've read about it for three weeks running and thought "maybe", today is the day that maybe was waiting for.</p><p><strong>Doubles Hoop workshop with Freya Pellie</strong><br>Saturday 14th November | 2pm-3.30pm<br>£25 or £17 on an 8-class pass</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/d5ab91e7e9a?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Share a hoop: book here</a></div>
+</div>
+<div class="divider"></div>
+
+
+<div class="hero"><img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-04.webp" alt="BE DYNAMIC TODAY"></div>
+<div class="block workshops" id="block-workshops-1beb60">
+  
+  <h2>BE DYNAMIC TODAY</h2>
+  <h3>JOIN FREYA'S STRAPS WORKSHOP TODAY</h3><p>Change your body position at just the right moment and you can increase the energy of its movement. Engineers study this principle when looking at how to control moving structures such as cranes. The same sort of thinking comes into play with dynamic straps.</p><p>It's not simply about having enough strength to pull yourself around. It's about understanding the rhythm of the movement, knowing when to generate momentum, and when to let it carry you.</p><p>Beats, turns, grip changes and pathways into familiar static shapes can all become part of your movement vocabulary.</p><p>The trick is learning when to put the effort in. Get the timing right and a movement that seemed to demand enormous strength can suddenly feel much more fluid.</p><p>There's just 15 minutes after Freya's doubles hoop workshop before the dynamic straps one, and that's time enough to catch your breath and rehydrate (or recaffeinate), and not quite long enough to talk yourself out of it.</p><p>These workshops are two excitingly different challenges for your brain and body in one day.</p><p>There's still room for improvers to intermediates, including anyone who swings on hoop, rope or flying trapeze and is curious what comes with them to straps.</p><p><strong>Dynamic Straps workshop with Freya Pellie</strong><br>Saturday 14th November | 3.45pm-5.15pm<br>£25 or £17 on an 8-class pass</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/90e7ce1ed28?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Swing straight over: book here</a></div>
+</div>
+<div class="divider"></div>
+
+
+<div class="hero"><img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-05.jpg" alt="A FIELD GUIDE TO POLE BIRDS"></div>
+<div class="block workshops" id="block-workshops">
+  
+  <h2>A FIELD GUIDE TO POLE BIRDS</h2>
+  <h3>FLY POLE TRICK NAMES HINT AT THE SHAPE, NOT THE DIFFICULTY</h3><p>At some point in the history of pole, somebody opened a book of myths and a bird guide at the same time and started naming tricks. The result reads like the character list of an ambitious pantomime: flamingo, pegasus, dragontail, angel, stargazer, eagle, mermaid, vortex –&nbsp;or twisted scorpio, in the photo above.</p><p>Elke, whose fly pole workshops are next Saturday, has noticed it too. "There's a lot of very funky trick names," she says, "with a lot of folklore and bird names for some reason." We went looking for the reason and came back with nothing but more funky wildlife.</p><p>What a name does give you, sometimes, is the shape. The mermaid hints at the fish-tailed diva lying not the rocks. It's a big favourite of Elke's on the flying pole because that long line works so nicely on the spin.</p><p>What a name never gives you is the difficulty. "You would never guess that a pegasus is quite tough to execute," Elke says. You'd expect a creature with wings to take some of the weight off, but it does mean you move towards pole legend status if you pull off a pegasus.</p><p>Then there's the bird of paradise, which Elke calls one of the most coveted pole shapes ever. It won't be making an appearance next Saturday unless there's special demand. "Plenty of interesting birds to pick from!" says Elke.</p><p>In the workshops, Elke takes some of these shapes and blends them together through interesting transitions, so you learn how to do them on a flying pole and add emotion and storytelling as you go. So each mythical creature gets somewhere to fly to, and a reason for going.</p><p>Any birdwatcher would have a fine photo session in Aerial Edge next Saturday. Though the better view is from the pole.</p><p><strong>Fly pole workshops with Elke Bucher</strong><br>Saturday 21st November | 10am Advanced, 11.30am Intermediate, 1.30pm Group, 3pm Beginners, each 90 minutes<br>£25 or £17 on an 8-class pass</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/bf5a36d0aa4?contactId={{contact.id}}&amp;startdate=2026-11-16&amp;enddate=2026-11-22&amp;venues=&amp;category=&amp;instructors=165283&amp;offering_types=&amp;age_restrictions=&amp;date=2026-11-21&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Fly like you're a bird: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-shows" src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-06.png" alt="THE SHOW BEFORE THE SHOW timeline">
+<div class="hero"><img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-07.jpg" alt="THE SHOW BEFORE THE SHOW"></div>
+<div class="block shows" id="block-shows">
+  
+  <h2>THE SHOW BEFORE THE SHOW</h2>
+  <h3>IT'S A REAL PERFORMANCE PUTTING A PERFORMANCE TOGETHER</h3><p>A circus act is one thing. A circus show is something else entirely. And <em>These Roots of Ours</em> has something that no one four months ago expected, to make it unique: Keryn plays the cello, having written music for the show.</p><p>Most of us view a circus show the way we see a grand cake at a wedding, for example, or a fabulous plate of food served up at a fancy restaurant. It's beautifully balanced and aesthetically pleasing in a way that doesn't reveal the thought, care, craft and creativity that went into making it.</p><p>Circus schools take the kitchen phase seriously. An ensemble show has to be much more than a collection of solo acts, whether or not it has a unique feature like an original score from a cello player who is also in the circus part of the performance.</p><p>The construction begins with a rough idea which is discussed and developed. Along the way, decisions are made about music and costume as well as who's doing what on which apparatus. An ensemble has to flow as a storytelling experience so transitions are choreographed between the set pieces in ways which carry the sense of the story.</p><p>There are many ideas to explore, sequences to develop, transitions to solve and decisions to make. Sometimes a brilliant individual moment doesn't quite work in the bigger picture. Sometimes an unexpected experiment opens up an entirely new possibility.</p><p>A major part of this whole enterprise is that students get used to receiving feedback and direction, so that they can integrate it to their creativity. It's not always easy when you're attached to a particular move or moment, to be told that it has to change or go.</p><p>Throughout it all, a director guides, and the performers do all they can to make the show work as well as it can, until it's ready to be peformed.</p><p><em>These Roots of Ours</em> is in its last fortnight of being made. Director Michelle Ross is shaping the students' solo disciplines and group numbers into a show that celebrates what they've learnt over four months of training, travelling through the cycle of the seasons from the first leaf of spring to the dark depths of winter.</p><p>There's a plenty of work to do together. Watching, listening, adapting and finding ways to make one person's moment connect with another's.</p><p>It's the graduation event for the Foundation Course, and a crossroads for the Professional Development Course students. After this show, they will decide which solo direction they will take for the next two months, and they will be tutored in how to make the most of the performance which will be filmed by Gabriel Stella for their showreel.</p><p>On the night of <em>These Roots of Ours</em>, the kitchen stays out of sight. The prep work done there will still be in the show somewhere, in the timing of a group number or the stillness before a solo begins. And it will look gloriously impressive, like the finished wedding cake.</p><p><em><strong>These Roots of Ours</strong></em><br>Saturday 28th November | 8pm<br>£15, £10 concession, £5 child</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/f7bef8e47d5?contactId={{contact.id}}&amp;date=2026-11-28&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">See the finished piece: book here</a></div>
+</div>
+<div class="divider"></div>
+
+
+<div class="hero"><img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-08.jpg" alt="STORY TIME WITH A HUNGRY QUEEN"></div>
+<div class="block shows" id="block-shows-f024b6">
+  
+  <h2>STORY TIME WITH A HUNGRY QUEEN</h2>
+  <h3>WE'RE OPENING THE SPACE TO CHAOS COLLECTIVE'S FAMILY CHRISTMAS SHOW</h3><p>Many first days in a new job involve a security pass and someone pointing out where the mugs live. Very few carry a real risk of being eaten by the boss.</p><p>Queen Miseranda's new servants aren't so lucky. In <em>Down The Hatch!</em>, a family show by Chaos Collective, it's training day for the Queen's new staff, and the new staff are the audience. Story time is the tricky part.</p><p>If the Queen doesn't like the story her servants tell, she gobbles them up, so everyone has to rally round and come up with a tale filling enough to satisfy her. Get it wrong and you go down the hatch with the rest, or end up training the next batch of recruits, which might be the longer sentence.</p><p>Aerial Edge is opening its space to another performance group, and Chaos Collective are calling this one their alternative Christmas show.</p><p>Alongside the adult, child and family tickets there's a pay-what-you-can option and some free tickets, part of Chaos Collective's mission to make the arts accessible to everyone.</p><p>It might be worth working on a story on the way there. Preferably one where the servant gets home in time for tea.</p><p>***Down The Hatch!* by Chaos Collective**<br>Saturday 19th December | 1pm-2pm<br>£14 adults, £10 children (under 16), £38 family (two adults and two children, or one adult and three children); pay what you can; free tickets</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/b2578e85ee4?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Storytime special: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-youth" src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-09.png" alt="ELF HATS OPTIONAL timeline">
+<div class="hero"><img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-10.jpg" alt="ELF HATS OPTIONAL"></div>
+<div class="block youth" id="block-youth">
+  
+  <h2>ELF HATS OPTIONAL</h2>
+  <h3>ALL CLASSES PERFORM AT CHRISTMAS SHOWING, THEN YOU HAVE A GO</h3><p>Most of what a parent learns about Youth Circus is delivered on the journey home after a class, and can be hard to picture especially when it's followed swiftly by a request for a snack.</p><p>This year you get the full experience. For the first time, Aerial Edge is staging a Youth Christmas showing for all classes which will be followed by a chance for friends and family to have a go at circus arts. That's you!</p><p>Nobody needs to be up past midnight stitching sequins. Performers wear whatever they can move in, and anyone who'd like to arrive in an elf hat or some other festive accessory is more than welcome to. Whether an elf hat stays on when you're upside down is one of the things we'll all be finding out together.</p><p>This is where youth students show you just a few of the things they can do rather than telling you. It's a low-stakes shot at performance, no pressure to come up with a full act, like the Open Rig Night one in the photo above.</p><p>Then they get to show you how you can do it too! There will be some circus stations set up for you sample some aerial and acrobatic arts. It will of course be enormous fun for you and the students, and it will also give you plenty more to talk about on the way home, and an appreciation for their skills, talents and resilience from a different perspective.</p><p>All three Sunday classes and the Wednesday one should arrive at 10am so everyone can practice together. Little Circus Stars from Mondays should come at 11.30am, and audience members can take a seat from 11.50am.</p><p>After a year of asking "what did you do today?", you get to find out for yourself, and to come up with an answer of your own for the drive home.</p><p><strong>Youth Christmas Showing</strong><br>Sunday 13th December | 12pm<br>Performers arrive 10am; Little Circus Stars practice 11.30am; audience from 11.50am</p><p><strong>Youth Circus</strong><br>Sundays | 10am and 11.30am (ages 7-13), 1pm (ages 13-18)<br>Wednesdays | 5.30pm (ages 7-18)<br>£48 a month</p><p><strong>Little Circus Stars</strong><br>Mondays | 5pm (ages 1-6)</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/cd56309c47a?contactId={{contact.id}}&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Join the troupe: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<img class="timeline-img" id="section-classes" src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-11.png" alt="FLY OVER THE HUMP  timeline">
+<div class="hero"><img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-12.gif" alt="FLY OVER THE HUMP "></div>
+<div class="block classes" id="block-classes">
+  
+  <h2>FLY OVER THE HUMP </h2>
+  <h3>A MIDWEEK AFTERNOON FLYING CLASS FOR GETTING OVER WEDNESDAY</h3><p>Wednesday has the bad luck to sit in the middle. Monday gets to be a fresh start and Friday gets all the affection, while Wednesday is stuck at the top of the week being called hump day by people who'd like it to hurry up.</p><p>Most people get over the hump by waiting. Hamish's Flying Trapeze Open Level class is a more direct route, from 2pm to 3.30pm on Wednesday 18th November, taking the middle of the week at the far end of a swing. Open level means just that: beginners are as welcome as anyone who has been flying for years.</p><p>The daytime schedule has two Circus Fitness regular classes for anyone who prefers their feet nearer the floor: Sam's Handstands on Monday mornings and Yara's Aerial Conditioning on Tuesday mornings.</p><p>Fly over Wednesday afternoon and you may find Thursday has a pleasantly downhill feel to it.</p><p><strong>Circus Fitness: Handstands with Sam</strong><br>Mondays 11.30am-12.30pm<br>£10 drop-in or £7.50 on an 8-class pass</p><p><strong>Circus Fitness: Aerial Conditioning with Yara</strong><br>Tuesdays 10am-11am<br>£10 drop-in or £7.50 on an 8-class pass</p><p><strong>Flying Trapeze Open Level with Hamish</strong><br>Wednesdays | 2pm-3.30pm<br>£25 drop-in or £17 on an 8-class pass</p>
+  <div class="cta-row"><a class="cta" href="https://api.aerialedge.co.uk/email-tracking/ea42f941a10?contactId={{contact.id}}&amp;startdate=2026-11-16&amp;enddate=2026-11-22&amp;date=2026-11-18&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank" rel="noopener noreferrer">Get over hump day: book here</a></div>
+</div>
+<div class="divider"></div>
+
+<div class="hero"><img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-13.jpg" alt=" "></div>
+<div class="block" id="timetable-daytime">
+  <h2> </h2>
+  <p></p>
+  
+</div>
+<div class="divider"></div>
+
+<div class="hero"><img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-14.jpg" alt=" "></div>
+<div class="block" id="timetable-evenings-weekends">
+  <h2> </h2>
+  <p></p>
+  
+</div>
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-shop">
+  <img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-15.png" alt="SHOP — clothing, gift vouchers and Pay It Forward" width="520">
+</div>
+
+
+<div class="shop-2up">
+  <div class="col">
+    <a href="https://api.aerialedge.co.uk/email-tracking/9969e7041cb?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+      <img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-16.jpg" alt="Aerial Edge Gift Vouchers" width="240">
+    </a>
+  </div>
+  <div class="col">
+    <a href="https://api.aerialedge.co.uk/email-tracking/fa96e6cd470?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+      <img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-17.webp" alt="Aerial Edge Pay It Forward" width="240">
+    </a>
+  </div>
+</div>
+
+
+<div class="shop-heading">
+  <h2>TAP IMAGE TO BUY YOUR GOODIES</h2>
+  <p>EACH IMAGE HAS A SEPARATE LINK</p>
+</div>
+
+
+<div class="full-img">
+  <a href="https://api.aerialedge.co.uk/email-tracking/fa96e6cd470?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+    <img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-18.png" alt="Aerial Edge clothing store" width="520">
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="section-band-img" id="section-services">
+  <img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-19.png" alt="SERVICES — what you can do at Aerial Edge" width="520">
+</div>
+
+
+<div class="full-img">
+  <a href="https://api.aerialedge.co.uk/email-tracking/d46ea68e691?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing" target="_blank">
+    <img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-20.png" alt="What we offer at Aerial Edge" width="520">
+  </a>
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="social-row">
+  <a href="https://api.aerialedge.co.uk/email-tracking/5c17102a0ba?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-21.png" alt="Facebook"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/1734848374f?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-22.png" alt="Instagram"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/48cba228a05?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-23.png" alt="TikTok"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/d0a57a66139?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-24.png" alt="YouTube"></a>
+  <a href="https://api.aerialedge.co.uk/email-tracking/d46ea68e691?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing"><img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-25.png" alt="Website"></a>
+</div>
+
+
+<div class="contact-band" id="section-contact">
+  <div class="contact-row">
+    <div class="col col-video">
+      <a href="https://api.aerialedge.co.uk/email-tracking/7f574876dfc?contactId=PREVIEW&amp;utm_source=email&amp;utm_medium=email marketing">
+        <img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-26.jpg" alt="Find us — quick video tour of the front door at 240 Edmiston Drive">
+        <span class="play-overlay"><span></span></span>
+      </a>
+    </div>
+    <div class="col col-text">
+      <h3>How To Get In Touch With Us</h3>
+      <p>The best ways to talk to us are through email and text on <a class="tel" href="tel: 447414438501">(+44) 07414 438 501</a> — or just drop in and have a coffee in reception.</p>
+      <p>We monitor social media DMs too, they just might not be answered as quickly.</p>
+      <p>Tap the video on the left for a quick guide to our front door at 240 Edmiston Drive, Glasgow G51 2YU.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="map-row">
+  <img src="/assets/images/newsletter/double-up-and-be-dynamic-today-in-freya-s-workshops/img-27.png" alt="Route map to Aerial Edge, 240 Edmiston Drive, Glasgow G51 2YU">
+</div>
+
+
+<div class="footer">
+  <div class="legal">
+    <em>Copyright © 2026&nbsp; Aerial Edge, All rights reserved.</em><br><br>
+    <strong>Our e-mail address is:</strong><br>
+    <a href="mailto:info@aerialedge.co.uk">info@aerialedge.co.uk</a><br><br>
+    Want to change how you receive these emails?<br>
+    You can unsubscribe from this list.
+  </div>
+</div>
+</div>
+
+</div>
+</div>
